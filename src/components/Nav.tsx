@@ -93,6 +93,12 @@ export default function Nav() {
               {label}
             </Link>
           ))}
+          <Link href={`${APP_URL}/login`} onClick={() => setOpen(false)} style={{
+            textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#4b5563",
+            textAlign: "center",
+          }}>
+            Sign in
+          </Link>
           <Link href={`${APP_URL}/signup`} onClick={() => setOpen(false)} style={{
             textDecoration: "none", fontSize: 16, fontWeight: 600, color: "#fff",
             background: "#10b981", padding: "12px 24px", borderRadius: 8, textAlign: "center",
