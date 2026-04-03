@@ -52,7 +52,7 @@ const jsonLdString = JSON.stringify({
       "@id": `${BASE_URL}/#organization`,
       name: "CueQuote",
       url: BASE_URL,
-      logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.png` },
+      logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.svg` },
       foundingDate: "2026",
       description: "AI-powered AV proposal generation for event production professionals.",
     },

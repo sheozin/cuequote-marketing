@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
+import ContactForm from "../../components/ContactForm";
 import { Mail, MapPin, Clock } from "lucide-react";
 
 const APP_URL = "https://app.cuequote.com";
@@ -33,81 +34,7 @@ export default function ContactPage() {
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48 }}>
             {/* Contact Form */}
-            <form style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-              <div>
-                <label style={{ display: "block", fontSize: 14, fontWeight: 600, color: "#374151", marginBottom: 6 }}>
-                  Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  style={{
-                    width: "100%", padding: "12px 16px", borderRadius: 10, border: "1px solid #d1d5db",
-                    fontSize: 15, outline: "none", fontFamily: "inherit", boxSizing: "border-box",
-                  }}
-                />
-              </div>
-
-              <div>
-                <label style={{ display: "block", fontSize: 14, fontWeight: 600, color: "#374151", marginBottom: 6 }}>
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="you@company.com"
-                  style={{
-                    width: "100%", padding: "12px 16px", borderRadius: 10, border: "1px solid #d1d5db",
-                    fontSize: 15, outline: "none", fontFamily: "inherit", boxSizing: "border-box",
-                  }}
-                />
-              </div>
-
-              <div>
-                <label style={{ display: "block", fontSize: 14, fontWeight: 600, color: "#374151", marginBottom: 6 }}>
-                  Subject
-                </label>
-                <select
-                  style={{
-                    width: "100%", padding: "12px 16px", borderRadius: 10, border: "1px solid #d1d5db",
-                    fontSize: 15, outline: "none", fontFamily: "inherit", background: "#fff",
-                    boxSizing: "border-box",
-                  }}
-                >
-                  <option value="">Select a topic</option>
-                  <option value="general">General inquiry</option>
-                  <option value="support">Technical support</option>
-                  <option value="sales">Sales &amp; pricing</option>
-                  <option value="partnership">Partnership</option>
-                  <option value="feedback">Product feedback</option>
-                </select>
-              </div>
-
-              <div>
-                <label style={{ display: "block", fontSize: 14, fontWeight: 600, color: "#374151", marginBottom: 6 }}>
-                  Message
-                </label>
-                <textarea
-                  rows={5}
-                  placeholder="Tell us how we can help..."
-                  style={{
-                    width: "100%", padding: "12px 16px", borderRadius: 10, border: "1px solid #d1d5db",
-                    fontSize: 15, outline: "none", fontFamily: "inherit", resize: "vertical",
-                    boxSizing: "border-box",
-                  }}
-                />
-              </div>
-
-              <button
-                type="submit"
-                style={{
-                  background: "#10b981", color: "#fff", padding: "14px 28px", borderRadius: 10,
-                  fontWeight: 600, fontSize: 16, border: "none", cursor: "pointer",
-                  alignSelf: "flex-start",
-                }}
-              >
-                Send Message
-              </button>
-            </form>
+            <ContactForm />
 
             {/* Contact Info */}
             <div style={{ display: "flex", flexDirection: "column", gap: 32, paddingTop: 8 }}>

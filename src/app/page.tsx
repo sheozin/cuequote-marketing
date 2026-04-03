@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import SubscribeForm from "../components/SubscribeForm";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
   MessageSquare, Mic, MonitorPlay, Lightbulb, Zap, ArrowRight,
@@ -389,18 +390,7 @@ export default function HomePage() {
           <p style={{ fontSize: 15, color: "#6b7280", marginBottom: 24 }}>
             Get tips on AV quoting, product updates, and industry insights. No spam.
           </p>
-          <form style={{ display: "flex", gap: 8, maxWidth: 420, margin: "0 auto" }} className="email-form">
-            <input type="email" placeholder="you@company.com" style={{
-              flex: 1, padding: "12px 16px", borderRadius: 8, border: "1px solid #e5e7eb",
-              fontSize: 14, outline: "none",
-            }} />
-            <button type="submit" style={{
-              background: "#10b981", color: "#fff", padding: "12px 24px", borderRadius: 8,
-              fontWeight: 600, fontSize: 14, border: "none", cursor: "pointer",
-            }}>
-              Subscribe
-            </button>
-          </form>
+          <SubscribeForm />
         </div>
       </section>
 
