@@ -34,7 +34,7 @@ const plans = [
     period: "/month",
     desc: "For growing AV businesses.",
     features: ["25 proposals/month", "Full branding", "Equipment catalog", "Client management", "5 users", "Priority support"],
-    cta: "Start 14-day Trial",
+    cta: "Start 3-day Trial",
     popular: true,
   },
   {
@@ -43,7 +43,7 @@ const plans = [
     period: "/month",
     desc: "For established production companies.",
     features: ["Unlimited proposals", "Custom templates", "API access", "Advanced analytics", "10 users", "Dedicated support", "Custom integrations"],
-    cta: "Start 14-day Trial",
+    cta: "Start 3-day Trial",
   },
 ];
 
@@ -53,7 +53,7 @@ const faqs = [
   { q: "What payment methods do you accept?", a: "We accept all major credit cards (Visa, Mastercard, Amex) through Stripe. For Enterprise plans, we also support invoicing." },
   { q: "Do you offer annual pricing?", a: "Yes. Annual plans save 20%. Contact us for details." },
   { q: "What happens when I hit my proposal limit?", a: "You can upgrade your plan or purchase individual proposals at €9 each." },
-  { q: "Is there a free trial for paid plans?", a: "Yes. Starter and Pro plans come with a 14-day free trial. No credit card required to start." },
+  { q: "Is there a free trial for paid plans?", a: "Yes. Starter and Pro plans come with a 3-day free trial. No credit card required to start." },
 ];
 
 export default function PricingPage() {
