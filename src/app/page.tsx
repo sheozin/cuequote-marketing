@@ -273,10 +273,10 @@ export default function HomePage() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 20, maxWidth: 1100, margin: "0 auto" }}>
             {[
-              { name: "Free", price: "€0", period: "forever", features: ["3 proposals/month", "Basic PDF export", "Share links", "1 user"], cta: "Start Free" },
-              { name: "Pay-per-proposal", price: "€9", period: "/proposal", features: ["No monthly fee", "Branded PDFs", "Client tracking", "3 users"], cta: "Get Started" },
-              { name: "Starter", price: "€59", period: "/month", features: ["25 proposals/month", "Full branding", "Priority support", "5 users"], cta: "Start Trial", popular: true },
-              { name: "Pro", price: "€99", period: "/month", features: ["Unlimited proposals", "Custom templates", "API access", "Analytics", "10 users"], cta: "Start Trial" },
+              { name: "Free", price: "€0", period: "forever", features: ["3 proposals/month", "Basic PDF (with watermark)", "Share links", "1 user"], cta: "Start Free" },
+              { name: "Starter", price: "€39", period: "/month", features: ["15 proposals/month", "Full branding (logo + colors)", "Client management", "3 users"], cta: "Start 3-day Trial", popular: true },
+              { name: "Pro", price: "€99", period: "/month", features: ["50 proposals/month", "Custom templates", "Advanced analytics", "10 users"], cta: "Start 3-day Trial" },
+              { name: "Business", price: "€199", period: "/month", features: ["Unlimited proposals", "API access", "Custom integrations", "25 users"], cta: "Start 3-day Trial" },
             ].map(({ name, price, period, features, cta, popular }) => (
               <div key={name} style={{
                 background: "#fff", borderRadius: 16, padding: 32,

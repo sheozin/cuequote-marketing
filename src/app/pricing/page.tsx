@@ -17,23 +17,15 @@ const plans = [
     price: "€0",
     period: "forever",
     desc: "Try CueQuote with no commitment.",
-    features: ["3 proposals/month", "Basic PDF export", "Share links", "1 user", "Email support"],
+    features: ["3 proposals/month", "Basic PDF (with watermark)", "Share links", "1 user"],
     cta: "Start Free",
   },
   {
-    name: "Pay-per-proposal",
-    price: "€9",
-    period: "/proposal",
-    desc: "Pay only when you need it.",
-    features: ["No monthly fee", "Branded PDFs", "Client tracking", "3 users", "Priority email support"],
-    cta: "Get Started",
-  },
-  {
     name: "Starter",
-    price: "€59",
+    price: "€39",
     period: "/month",
     desc: "For growing AV businesses.",
-    features: ["25 proposals/month", "Full branding", "Equipment catalog", "Client management", "5 users", "Priority support"],
+    features: ["15 proposals/month", "Full branding (logo + colors)", "Client management", "3 users", "Email support"],
     cta: "Start 3-day Trial",
     popular: true,
   },
@@ -42,7 +34,15 @@ const plans = [
     price: "€99",
     period: "/month",
     desc: "For established production companies.",
-    features: ["Unlimited proposals", "Custom templates", "API access", "Advanced analytics", "10 users", "Dedicated support", "Custom integrations"],
+    features: ["50 proposals/month", "Custom templates", "Advanced analytics", "10 users", "Priority support"],
+    cta: "Start 3-day Trial",
+  },
+  {
+    name: "Business",
+    price: "€199",
+    period: "/month",
+    desc: "For teams that need more.",
+    features: ["Unlimited proposals", "API access", "Dedicated support", "Custom integrations", "25 users"],
     cta: "Start 3-day Trial",
   },
 ];
@@ -52,8 +52,9 @@ const faqs = [
   { q: "Is there a contract or commitment?", a: "No. All plans are month-to-month with no long-term commitment. Cancel anytime." },
   { q: "What payment methods do you accept?", a: "We accept all major credit cards (Visa, Mastercard, Amex) through Stripe. For Enterprise plans, we also support invoicing." },
   { q: "Do you offer annual pricing?", a: "Yes. Annual plans save 20%. Contact us for details." },
-  { q: "What happens when I hit my proposal limit?", a: "You can upgrade your plan or purchase individual proposals at €9 each." },
-  { q: "Is there a free trial for paid plans?", a: "Yes. Starter and Pro plans come with a 3-day free trial. No credit card required to start." },
+  { q: "What happens when I hit my proposal limit?", a: "You can upgrade your plan or purchase credit packs starting at €19 for 3 proposals." },
+  { q: "Is there a free trial?", a: "Yes. Starter, Pro, and Business plans come with a 3-day free trial. No credit card required to start." },
+  { q: "What are credit packs?", a: "Credit packs let you buy proposals without a monthly subscription. Buy a 3-pack for €19 or a 10-pack for €49. Credits never expire and include branded PDFs." },
 ];
 
 export default function PricingPage() {
@@ -122,11 +123,18 @@ export default function PricingPage() {
       <section style={{ padding: "64px 24px", background: "#08172E" }}>
         <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 28, color: "#fff", marginBottom: 12 }}>
-            Need an Enterprise plan?
+            Enterprise
           </h2>
-          <p style={{ fontSize: 16, color: "#94a3b8", marginBottom: 24 }}>
-            Custom pricing for large teams with SSO, dedicated support, and custom integrations.
+          <p style={{ fontSize: 16, color: "#94a3b8", marginBottom: 8 }}>
+            Everything in Business, plus:
           </p>
+          <ul style={{ listStyle: "none", padding: 0, margin: "0 auto 28px", maxWidth: 360, textAlign: "left" }}>
+            {["SSO & SAML", "SLA guarantee", "Unlimited users", "On-boarding support"].map((f) => (
+              <li key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 15, color: "#cbd5e1", marginBottom: 10 }}>
+                <Check size={16} style={{ color: "#10b981", flexShrink: 0 }} /> {f}
+              </li>
+            ))}
+          </ul>
           <Link href="/contact" style={{
             textDecoration: "none", display: "inline-block", padding: "14px 32px",
             borderRadius: 10, fontWeight: 600, fontSize: 15,
@@ -134,6 +142,35 @@ export default function PricingPage() {
           }}>
             Contact Sales
           </Link>
+        </div>
+      </section>
+
+      {/* Credit Packs */}
+      <section style={{ padding: "64px 24px" }}>
+        <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 28, color: "#08172E", marginBottom: 8 }}>
+            Credit Packs
+          </h2>
+          <p style={{ fontSize: 16, color: "#6b7280", marginBottom: 32 }}>
+            Need a few proposals without a subscription?
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20, maxWidth: 520, margin: "0 auto 24px" }}>
+            <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 16, padding: 28, textAlign: "center" }}>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>3-Pack</h3>
+              <div style={{ marginBottom: 8 }}>
+                <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€19</span>
+              </div>
+              <p style={{ fontSize: 13, color: "#6b7280" }}>€6.33/proposal</p>
+            </div>
+            <div style={{ background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 16, padding: 28, textAlign: "center" }}>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>10-Pack</h3>
+              <div style={{ marginBottom: 8 }}>
+                <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€49</span>
+              </div>
+              <p style={{ fontSize: 13, color: "#6b7280" }}>€4.90/proposal</p>
+            </div>
+          </div>
+          <p style={{ fontSize: 14, color: "#6b7280" }}>No monthly fee. No expiry. Includes branded PDFs.</p>
         </div>
       </section>
 
