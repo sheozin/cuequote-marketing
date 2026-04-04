@@ -5,7 +5,7 @@ import SubscribeForm from "../components/SubscribeForm";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
   MessageSquare, Mic, MonitorPlay, Lightbulb, Zap, ArrowRight,
-  Check, ChevronDown,
+  Check, ChevronDown, CreditCard, Crown, Rocket,
 } from "lucide-react";
 
 const APP_URL = "https://app.cuequote.com";
@@ -92,11 +92,11 @@ export default function HomePage() {
         }} className="hero-grid">
           <div style={{ position: "relative", zIndex: 1 }}>
             <div style={{
-              display: "inline-block", fontSize: 12, fontWeight: 600, color: "#10b981",
-              background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.2)",
-              padding: "4px 12px", borderRadius: 20, marginBottom: 24,
+              display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: "#10b981",
+              background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.15)",
+              padding: "6px 14px", borderRadius: 20, marginBottom: 24,
             }}>
-              AI-Powered AV Quoting
+              <Sparkles size={14} /> AI-Powered AV Quoting
             </div>
             <h1 style={{
               fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 48,
@@ -271,51 +271,72 @@ export default function HomePage() {
             <p style={{ fontSize: 18, color: "#6b7280" }}>Start free. Upgrade as you grow.</p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 20, maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
             {[
-              { name: "Free", price: "€0", period: "forever", features: ["3 proposals/month", "Basic PDF (with watermark)", "Share links", "1 user"], cta: "Start Free" },
-              { name: "Starter", price: "€39", period: "/month", features: ["15 proposals/month", "Full branding (logo + colors)", "Client management", "3 users"], cta: "Start 3-day Trial", popular: true },
-              { name: "Pro", price: "€99", period: "/month", features: ["50 proposals/month", "Custom templates", "Advanced analytics", "10 users"], cta: "Start 3-day Trial" },
-              { name: "Business", price: "€199", period: "/month", features: ["Unlimited proposals", "API access", "Custom integrations", "25 users"], cta: "Start 3-day Trial" },
-            ].map(({ name, price, period, features, cta, popular }) => (
+              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: ["3 proposals/month", "Basic PDF (with watermark)", "Share links", "1 user"], cta: "Start Free", ctaStyle: "outline" as const, popular: false },
+              { name: "Starter", price: "€39", period: "/mo", icon: <CreditCard size={20} />, features: ["15 proposals/month", "Full branding (logo + colors)", "Client management", "3 users"], cta: "Start 3-day Trial", ctaStyle: "primary" as const, popular: true },
+              { name: "Pro", price: "€99", period: "/mo", icon: <Crown size={20} />, features: ["50 proposals/month", "Custom templates", "Advanced analytics", "10 users"], cta: "Start 3-day Trial", ctaStyle: "primary" as const, popular: false },
+              { name: "Business", price: "€199", period: "/mo", icon: <Rocket size={20} />, features: ["Unlimited proposals", "API access", "Dedicated support", "25 users"], cta: "Start 3-day Trial", ctaStyle: "primary" as const, popular: false },
+            ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
               <div key={name} style={{
-                background: "#fff", borderRadius: 16, padding: 32,
+                background: "#fff", borderRadius: 20, padding: "32px 28px",
                 border: popular ? "2px solid #10b981" : "1px solid #e5e7eb",
                 position: "relative",
+                boxShadow: popular ? "0 16px 48px rgba(16,185,129,0.12)" : "0 2px 12px rgba(0,0,0,0.04)",
+                display: "flex", flexDirection: "column",
+                transform: popular ? "scale(1.03)" : "none",
+                zIndex: popular ? 2 : 1,
               }}>
                 {popular && (
                   <div style={{
-                    position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)",
-                    background: "#10b981", color: "#fff", fontSize: 12, fontWeight: 700,
-                    padding: "4px 16px", borderRadius: 20,
+                    position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)",
+                    background: "linear-gradient(135deg, #10b981, #059669)", color: "#fff", fontSize: 12, fontWeight: 700,
+                    padding: "6px 20px", borderRadius: 20, whiteSpace: "nowrap",
                   }}>
-                    Popular
+                    Most Popular
                   </div>
                 )}
-                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 8 }}>{name}</h3>
-                <div style={{ marginBottom: 24 }}>
-                  <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>{price}</span>
-                  <span style={{ fontSize: 14, color: "#6b7280" }}>{period}</span>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                  <div style={{ color: "#10b981" }}>{icon}</div>
+                  <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 20, color: "#08172E" }}>{name}</h3>
                 </div>
-                <ul style={{ listStyle: "none", padding: 0, margin: "0 0 28px" }}>
+                <div style={{ marginBottom: 24 }}>
+                  <span style={{ fontSize: 44, fontWeight: 800, color: "#08172E", letterSpacing: -1 }}>{price}</span>
+                  <span style={{ fontSize: 15, color: "#9ca3af", fontWeight: 500 }}>{period}</span>
+                </div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
                   {features.map((f) => (
-                    <li key={f} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: "#4b5563", marginBottom: 10 }}>
-                      <Check size={16} style={{ color: "#10b981", flexShrink: 0 }} /> {f}
+                    <li key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#4b5563", marginBottom: 13 }}>
+                      <div style={{ width: 20, height: 20, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                        <Check size={12} style={{ color: "#10b981" }} />
+                      </div>
+                      {f}
                     </li>
                   ))}
                 </ul>
                 <Link href={`${APP_URL}/signup`} style={{
-                  textDecoration: "none", display: "block", textAlign: "center", padding: "12px 24px",
-                  borderRadius: 10, fontWeight: 600, fontSize: 14,
-                  background: popular ? "#10b981" : "transparent",
-                  color: popular ? "#fff" : "#08172E",
-                  border: popular ? "none" : "1px solid #e5e7eb",
+                  textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+                  padding: "14px 24px", borderRadius: 10, fontWeight: 600, fontSize: 15, marginTop: 24,
+                  background: ctaStyle === "primary" ? "#10b981" : "transparent",
+                  color: ctaStyle === "primary" ? "#fff" : "#08172E",
+                  border: ctaStyle === "primary" ? "none" : "1px solid #e5e7eb",
+                  transition: "all 0.2s",
                 }}>
                   {cta}
+                  {ctaStyle === "primary" && <ArrowRight size={16} />}
                 </Link>
               </div>
             ))}
           </div>
+
+          <style>{`
+            @media (max-width: 900px) {
+              .home-pricing-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            }
+            @media (max-width: 560px) {
+              .home-pricing-grid { grid-template-columns: 1fr !important; }
+            }
+          `}</style>
         </div>
       </section>
 
@@ -363,6 +384,8 @@ export default function HomePage() {
             { q: "Is my data secure?", a: "Yes. We use Supabase with row-level security. Your equipment catalog, pricing, and client data are isolated to your company. No other user can access your data." },
             { q: "Can I use my own branding?", a: "Yes. Upload your logo, set your brand colors, and all PDFs and share pages will use your branding. Your clients see your company, not CueQuote." },
             { q: "Do you offer a free plan?", a: "Yes. The free plan includes 3 proposals per month with basic PDF export and share links. No credit card required." },
+            { q: "Is there a free trial?", a: "Yes. Starter, Pro, and Business plans come with a 3-day free trial. No credit card required to start." },
+            { q: "What happens when I hit my proposal limit?", a: "You can upgrade your plan or purchase credit packs starting at €19 for 3 proposals. Credits never expire." },
           ].map(({ q, a }, i) => (
             <details key={i} style={{
               borderBottom: "1px solid #e5e7eb", padding: "20px 0",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Check, ArrowRight } from "lucide-react";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -19,10 +19,10 @@ export default function AboutPage() {
       <section style={{ padding: "96px 24px" }}>
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div style={{
-            display: "inline-block", fontSize: 12, fontWeight: 600, color: "#10b981",
+            display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: "#10b981",
             background: "#ecfdf5", padding: "4px 12px", borderRadius: 20, marginBottom: 24,
           }}>
-            Our Story
+            <Sparkles size={12} /> Our Story
           </div>
 
           <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 44, color: "#08172E", marginBottom: 24, lineHeight: 1.15, letterSpacing: -1 }}>
@@ -58,8 +58,10 @@ export default function AboutPage() {
                   "We understand the AV rental workflow, not just generic quoting",
                   "European-first: multi-currency, VAT support, GDPR compliant",
                 ].map((item) => (
-                  <li key={item} style={{ display: "flex", gap: 12, marginBottom: 12, fontSize: 15 }}>
-                    <span style={{ color: "#10b981", fontWeight: 700, flexShrink: 0 }}>→</span>
+                  <li key={item} style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12, fontSize: 15 }}>
+                    <div style={{ width: 20, height: 20, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <Check size={12} style={{ color: "#10b981" }} />
+                    </div>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -76,7 +78,7 @@ export default function AboutPage() {
             background: "#10b981", color: "#fff", padding: "14px 28px", borderRadius: 10,
             fontWeight: 600, fontSize: 16,
           }}>
-            <Sparkles size={18} /> Try CueQuote Free
+            <Sparkles size={18} /> Try CueQuote Free <ArrowRight size={16} />
           </Link>
         </div>
       </section>

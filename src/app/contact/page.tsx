@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import ContactForm from "../../components/ContactForm";
-import { Mail, MapPin, Clock } from "lucide-react";
+import { Mail, MapPin, Clock, Sparkles } from "lucide-react";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -19,10 +19,10 @@ export default function ContactPage() {
       <section style={{ padding: "96px 24px" }}>
         <div style={{ maxWidth: 960, margin: "0 auto" }}>
           <div style={{
-            display: "inline-block", fontSize: 12, fontWeight: 600, color: "#10b981",
+            display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: "#10b981",
             background: "#ecfdf5", padding: "4px 12px", borderRadius: 20, marginBottom: 24,
           }}>
-            Get in Touch
+            <Sparkles size={12} /> Get in Touch
           </div>
 
           <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 44, color: "#08172E", marginBottom: 16, lineHeight: 1.15, letterSpacing: -1 }}>
@@ -47,7 +47,9 @@ export default function ContactPage() {
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   <div style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <Mail size={18} style={{ color: "#10b981", marginTop: 2, flexShrink: 0 }} />
+                    <div style={{ width: 32, height: 32, borderRadius: 10, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <Mail size={16} style={{ color: "#10b981" }} />
+                    </div>
                     <div>
                       <div style={{ fontSize: 14, fontWeight: 600, color: "#374151" }}>Email</div>
                       <div style={{ fontSize: 15, color: "#6b7280" }}>hello@cuequote.com</div>
@@ -55,7 +57,9 @@ export default function ContactPage() {
                   </div>
 
                   <div style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <MapPin size={18} style={{ color: "#10b981", marginTop: 2, flexShrink: 0 }} />
+                    <div style={{ width: 32, height: 32, borderRadius: 10, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <MapPin size={16} style={{ color: "#10b981" }} />
+                    </div>
                     <div>
                       <div style={{ fontSize: 14, fontWeight: 600, color: "#374151" }}>Location</div>
                       <div style={{ fontSize: 15, color: "#6b7280" }}>Europe (Remote)</div>
@@ -63,7 +67,9 @@ export default function ContactPage() {
                   </div>
 
                   <div style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                    <Clock size={18} style={{ color: "#10b981", marginTop: 2, flexShrink: 0 }} />
+                    <div style={{ width: 32, height: 32, borderRadius: 10, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <Clock size={16} style={{ color: "#10b981" }} />
+                    </div>
                     <div>
                       <div style={{ fontSize: 14, fontWeight: 600, color: "#374151" }}>Response Time</div>
                       <div style={{ fontSize: 15, color: "#6b7280" }}>Within 24 hours</div>
