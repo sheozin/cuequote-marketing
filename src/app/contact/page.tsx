@@ -3,6 +3,7 @@ import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import ContactForm from "../../components/ContactForm";
 import { Mail, MapPin, Clock, Sparkles } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const t = await getTranslations("contact");
+
   return (
     <>
       <Nav />
@@ -23,14 +26,14 @@ export default function ContactPage() {
             display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: "#10b981",
             background: "#ecfdf5", padding: "4px 12px", borderRadius: 20, marginBottom: 24,
           }}>
-            <Sparkles size={12} /> Get in Touch
+            <Sparkles size={12} /> {t("badge")}
           </div>
 
           <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 44, color: "#08172E", marginBottom: 16, lineHeight: 1.15, letterSpacing: -1 }}>
-            We&apos;d love to hear from you
+            {t("heading")}
           </h1>
           <p style={{ fontSize: 17, color: "#6b7280", marginBottom: 48, maxWidth: 560 }}>
-            Whether you have a question about CueQuote, need help getting started, or want to discuss a partnership — drop us a line.
+            {t("headingSubtitle")}
           </p>
 
           <style>{`
@@ -47,7 +50,7 @@ export default function ContactPage() {
                 background: "#f9fafb", borderRadius: 16, padding: 32, border: "1px solid #e5e7eb",
               }}>
                 <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 20 }}>
-                  Contact Details
+                  {t("detailsTitle")}
                 </h3>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
@@ -56,7 +59,7 @@ export default function ContactPage() {
                       <Mail size={16} style={{ color: "#10b981" }} />
                     </div>
                     <div>
-                      <div style={{ fontSize: 14, fontWeight: 600, color: "#374151" }}>Email</div>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: "#374151" }}>{t("emailLabel")}</div>
                       <div style={{ fontSize: 15, color: "#6b7280" }}>hello@cuequote.com</div>
                     </div>
                   </div>
@@ -66,8 +69,8 @@ export default function ContactPage() {
                       <MapPin size={16} style={{ color: "#10b981" }} />
                     </div>
                     <div>
-                      <div style={{ fontSize: 14, fontWeight: 600, color: "#374151" }}>Location</div>
-                      <div style={{ fontSize: 15, color: "#6b7280" }}>Europe (Remote)</div>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: "#374151" }}>{t("location")}</div>
+                      <div style={{ fontSize: 15, color: "#6b7280" }}>{t("locationValue")}</div>
                     </div>
                   </div>
 
@@ -76,8 +79,8 @@ export default function ContactPage() {
                       <Clock size={16} style={{ color: "#10b981" }} />
                     </div>
                     <div>
-                      <div style={{ fontSize: 14, fontWeight: 600, color: "#374151" }}>Response Time</div>
-                      <div style={{ fontSize: 15, color: "#6b7280" }}>Within 24 hours</div>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: "#374151" }}>{t("responseTime")}</div>
+                      <div style={{ fontSize: 15, color: "#6b7280" }}>{t("responseTimeValue")}</div>
                     </div>
                   </div>
                 </div>
@@ -88,10 +91,10 @@ export default function ContactPage() {
                 borderRadius: 16, padding: 32, color: "#fff",
               }}>
                 <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, marginBottom: 12 }}>
-                  Ready to get started?
+                  {t("readyTitle")}
                 </h3>
                 <p style={{ fontSize: 15, color: "#94a3b8", marginBottom: 20, lineHeight: 1.6 }}>
-                  Skip the form and jump straight into CueQuote. Your first 3 proposals are free — no credit card required.
+                  {t("readySubtitle")}
                 </p>
                 <a
                   href={`${APP_URL}/signup`}
@@ -101,7 +104,7 @@ export default function ContactPage() {
                     textDecoration: "none",
                   }}
                 >
-                  Start Free
+                  {t("readyCta")}
                 </a>
               </div>
             </div>

@@ -2,8 +2,10 @@
 
 import { useActionState } from "react";
 import { subscribeEmail, type SubscribeFormState } from "../app/actions";
+import { useTranslations } from "next-intl";
 
 export default function SubscribeForm() {
+  const t = useTranslations("subscribe");
   const [state, formAction, isPending] = useActionState<SubscribeFormState, FormData>(
     subscribeEmail,
     null
@@ -25,7 +27,7 @@ export default function SubscribeForm() {
             margin: "0 auto",
           }}
         >
-          {state.message}
+          {t("success")}
         </div>
       ) : (
         <>
@@ -37,7 +39,7 @@ export default function SubscribeForm() {
             <input
               type="email"
               name="email"
-              placeholder="you@company.com"
+              placeholder={t("placeholder")}
               required
               style={{
                 flex: 1,
@@ -64,7 +66,7 @@ export default function SubscribeForm() {
                 transition: "opacity 0.2s",
               }}
             >
-              {isPending ? "..." : "Subscribe"}
+              {isPending ? "..." : t("button")}
             </button>
           </form>
           {state && !state.success && (

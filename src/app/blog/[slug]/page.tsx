@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { ArrowLeft } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 /* ─── Blog post data ────────────────────────────────────────────────────────── */
 
@@ -161,6 +162,7 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   const cat = CATEGORY_COLORS[post.category] || CATEGORY_COLORS.Guides;
+  const t = await getTranslations("blog");
 
   return (
     <>
@@ -182,7 +184,7 @@ export default async function BlogPostPage({
               marginBottom: 32,
             }}
           >
-            <ArrowLeft size={16} /> Back to blog
+            <ArrowLeft size={16} /> {t("backToBlock")}
           </Link>
 
           {/* Meta row */}
@@ -285,7 +287,7 @@ export default async function BlogPostPage({
                 textDecoration: "none",
               }}
             >
-              <ArrowLeft size={14} /> All posts
+              <ArrowLeft size={14} /> {t("allPosts")}
             </Link>
           </div>
         </div>

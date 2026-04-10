@@ -6,7 +6,7 @@ import { POSTS as ALL_BLOG_POSTS } from "../lib/blog-posts";
 import { getTranslations } from "next-intl/server";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
-  MessageSquare, Mic, MonitorPlay, Lightbulb, Zap, ArrowRight,
+  MessageSquare, Mic, MonitorPlay, Zap, ArrowRight,
   Check, ChevronDown, CreditCard, Crown, Rocket,
 } from "lucide-react";
 
@@ -78,6 +78,13 @@ export default async function HomePage() {
   const tFeatures = await getTranslations("features");
   const tPricing = await getTranslations("pricing");
   const tSubscribe = await getTranslations("subscribe");
+  const tSocial = await getTranslations("socialProof");
+  const tUseCases = await getTranslations("useCases");
+  const tHowItWorks = await getTranslations("howItWorks");
+  const tHomePricing = await getTranslations("homePricing");
+  const tHomeFaq = await getTranslations("homeFaq");
+  const tHomeBlog = await getTranslations("homeBlog");
+  const tHomeCta = await getTranslations("homeCta");
 
   return (
     <>
@@ -154,7 +161,7 @@ export default async function HomePage() {
       <section style={{ padding: "48px 24px", background: "#f9fafb", borderBottom: "1px solid #e5e7eb" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
           <p style={{ fontSize: 13, fontWeight: 600, color: "#6b7280", textTransform: "uppercase", letterSpacing: 2, marginBottom: 24 }}>
-            Trusted by AV professionals
+            {tSocial("trusted")}
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 48, flexWrap: "wrap", opacity: 0.7 }}>
             {["AV Production Co.", "EventTech GmbH", "Sound & Vision", "ProStage Europe", "LiveTech ME"].map((name) => (
@@ -169,28 +176,28 @@ export default async function HomePage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", marginBottom: 12 }}>
-              Built for AV professionals
+              {tUseCases("title")}
             </h2>
             <p style={{ fontSize: 18, color: "#6b7280", maxWidth: 600, margin: "0 auto" }}>
-              Whether you run a rental house, freelance, or manage an agency — CueQuote fits your workflow.
+              {tUseCases("subtitle")}
             </p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
             {[
-              { icon: <Mic size={24} />, title: "AV Production Companies", desc: "Generate accurate proposals from your equipment catalog. Send branded PDFs that match your company identity." },
-              { icon: <Zap size={24} />, title: "Freelance AV Technicians", desc: "Quote faster than your competitors. Go from WhatsApp inquiry to professional proposal in 2 minutes." },
-              { icon: <MonitorPlay size={24} />, title: "Event Agencies", desc: "Scope AV requirements for client events without deep technical knowledge. AI handles the equipment selection." },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} style={{
+              { icon: <Mic size={24} />, titleKey: "avProductionTitle" as const, descKey: "avProductionDesc" as const },
+              { icon: <Zap size={24} />, titleKey: "freelanceTitle" as const, descKey: "freelanceDesc" as const },
+              { icon: <MonitorPlay size={24} />, titleKey: "agencyTitle" as const, descKey: "agencyDesc" as const },
+            ].map(({ icon, titleKey, descKey }) => (
+              <div key={titleKey} style={{
                 background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 32,
                 transition: "box-shadow 0.3s, transform 0.3s",
               }}>
                 <div style={{ width: 48, height: 48, borderRadius: 12, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981", marginBottom: 20 }}>
                   {icon}
                 </div>
-                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 20, color: "#08172E", marginBottom: 8 }}>{title}</h3>
-                <p style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.6 }}>{desc}</p>
+                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 20, color: "#08172E", marginBottom: 8 }}>{tUseCases(titleKey)}</h3>
+                <p style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.6 }}>{tUseCases(descKey)}</p>
               </div>
             ))}
           </div>
@@ -211,21 +218,21 @@ export default async function HomePage() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
             {[
-              { icon: <Sparkles size={22} />, title: "AI Proposal Generation", desc: "Describe your event in plain language. AI generates a complete, scoped equipment list with quantities and pricing." },
-              { icon: <FileText size={22} />, title: "Branded PDF Export", desc: "One-click PDF with your logo, colors, and layout. Professional proposals your clients will trust." },
-              { icon: <Share2 size={22} />, title: "Share Links", desc: "Send a link. Track views. Know when they open it. Get notified when they accept or decline." },
-              { icon: <Package size={22} />, title: "Equipment Catalog", desc: "Manage your inventory with default pricing. AI pulls from your catalog for accurate, consistent quoting." },
-              { icon: <Globe size={22} />, title: "Multi-Currency", desc: "Quote in EUR, USD, GBP, CHF, PLN, AED, or EGP. Set per-company defaults or override per-proposal." },
-              { icon: <TrendingUp size={22} />, title: "Win Tracking", desc: "Dashboard with pipeline value, win rate, and proposal analytics. Know what's working." },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} style={{
+              { icon: <Sparkles size={22} />, titleKey: "aiTitle" as const, descKey: "aiDesc" as const },
+              { icon: <FileText size={22} />, titleKey: "pdfTitle" as const, descKey: "pdfDesc" as const },
+              { icon: <Share2 size={22} />, titleKey: "shareTitle" as const, descKey: "shareDesc" as const },
+              { icon: <Package size={22} />, titleKey: "catalogTitle" as const, descKey: "catalogDesc" as const },
+              { icon: <Globe size={22} />, titleKey: "currencyTitle" as const, descKey: "currencyDesc" as const },
+              { icon: <TrendingUp size={22} />, titleKey: "analyticsTitle" as const, descKey: "analyticsDesc" as const },
+            ].map(({ icon, titleKey, descKey }) => (
+              <div key={titleKey} style={{
                 background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 28,
               }}>
                 <div style={{ width: 44, height: 44, borderRadius: 10, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981", marginBottom: 16 }}>
                   {icon}
                 </div>
-                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 6 }}>{title}</h3>
-                <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6 }}>{desc}</p>
+                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 6 }}>{tFeatures(titleKey)}</h3>
+                <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6 }}>{tFeatures(descKey)}</p>
               </div>
             ))}
           </div>
@@ -237,17 +244,17 @@ export default async function HomePage() {
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", marginBottom: 12 }}>
-              Three steps. Two minutes.
+              {tHowItWorks("title")}
             </h2>
-            <p style={{ fontSize: 18, color: "#6b7280" }}>From event brief to sent proposal.</p>
+            <p style={{ fontSize: 18, color: "#6b7280" }}>{tHowItWorks("subtitle")}</p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 40 }} className="steps-grid">
             {[
-              { step: "1", title: "Describe", desc: "Type or paste your event brief. Include venue, attendees, AV needs — as much or as little as you want." },
-              { step: "2", title: "Review", desc: "AI generates a complete equipment list. Edit quantities, prices, add or remove items. Everything is editable." },
-              { step: "3", title: "Send", desc: "Export a branded PDF or share a link. Track when your client views it. Get notified when they respond." },
-            ].map(({ step, title, desc }) => (
+              { step: "1", titleKey: "step1Title" as const, descKey: "step1Desc" as const },
+              { step: "2", titleKey: "step2Title" as const, descKey: "step2Desc" as const },
+              { step: "3", titleKey: "step3Title" as const, descKey: "step3Desc" as const },
+            ].map(({ step, titleKey, descKey }) => (
               <div key={step} style={{ textAlign: "center" }}>
                 <div style={{
                   width: 56, height: 56, borderRadius: "50%", background: "#10b981", color: "#fff",
@@ -257,8 +264,8 @@ export default async function HomePage() {
                 }}>
                   {step}
                 </div>
-                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 22, color: "#08172E", marginBottom: 8 }}>{title}</h3>
-                <p style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.6 }}>{desc}</p>
+                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 22, color: "#08172E", marginBottom: 8 }}>{tHowItWorks(titleKey)}</h3>
+                <p style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.6 }}>{tHowItWorks(descKey)}</p>
               </div>
             ))}
           </div>
@@ -282,10 +289,10 @@ export default async function HomePage() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
             {[
-              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: ["3 proposals/month", "Basic PDF (with watermark)", "Share links", "1 user"], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: false },
-              { name: "Starter", price: "€39", period: "/mo", icon: <CreditCard size={20} />, features: ["15 proposals/month", "Full branding (logo + colors)", "Client management", "3 users"], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: true },
-              { name: "Pro", price: "€99", period: "/mo", icon: <Crown size={20} />, features: ["50 proposals/month", "Custom templates", "Advanced analytics", "10 users"], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
-              { name: "Business", price: "€199", period: "/mo", icon: <Rocket size={20} />, features: ["Unlimited proposals", "API access", "Dedicated support", "25 users"], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
+              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tHomePricing("freeF1"), tHomePricing("freeF2"), tHomePricing("freeF3"), tHomePricing("freeF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: false },
+              { name: "Starter", price: "€39", period: "/mo", icon: <CreditCard size={20} />, features: [tHomePricing("starterF1"), tHomePricing("starterF2"), tHomePricing("starterF3"), tHomePricing("starterF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: true },
+              { name: "Pro", price: "€99", period: "/mo", icon: <Crown size={20} />, features: [tHomePricing("proF1"), tHomePricing("proF2"), tHomePricing("proF3"), tHomePricing("proF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
+              { name: "Business", price: "€199", period: "/mo", icon: <Rocket size={20} />, features: [tHomePricing("businessF1"), tHomePricing("businessF2"), tHomePricing("businessF3"), tHomePricing("businessF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
             ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
               <div key={name} style={{
                 background: "#fff", borderRadius: 20, padding: "32px 28px",
@@ -353,10 +360,10 @@ export default async function HomePage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 48 }}>
             <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E" }}>
-              From the blog
+              {tHomeBlog("title")}
             </h2>
             <Link href="/blog" style={{ textDecoration: "none", fontSize: 14, fontWeight: 600, color: "#10b981", display: "flex", alignItems: "center", gap: 4 }}>
-              View all <ArrowRight size={14} />
+              {tHomeBlog("viewAll")} <ArrowRight size={14} />
             </Link>
           </div>
 
@@ -381,19 +388,19 @@ export default async function HomePage() {
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", marginBottom: 12 }}>
-              Frequently asked questions
+              {tHomeFaq("title")}
             </h2>
           </div>
 
           {[
-            { q: "How does the AI generate proposals?", a: "You describe your event in plain language — type of event, venue, attendee count, AV needs. CueQuote's AI analyzes the requirements and generates a complete equipment list with quantities and pricing based on your catalog." },
-            { q: "Can I customize the generated proposals?", a: "Absolutely. Everything is editable — add, remove, or modify line items, adjust quantities and prices, set discounts and VAT. The AI gives you a starting point; you have full control." },
-            { q: "What equipment categories does CueQuote cover?", a: "Audio, video, lighting, simultaneous interpretation, streaming, digital signage, staging, labor, and transport. We seed your catalog with 30 common AV items, and you can add your own." },
-            { q: "Is my data secure?", a: "Yes. We use Supabase with row-level security. Your equipment catalog, pricing, and client data are isolated to your company. No other user can access your data." },
-            { q: "Can I use my own branding?", a: "Yes. Upload your logo, set your brand colors, and all PDFs and share pages will use your branding. Your clients see your company, not CueQuote." },
-            { q: "Do you offer a free plan?", a: "Yes. The free plan includes 3 proposals per month with basic PDF export and share links. No credit card required." },
-            { q: "Is there a free trial?", a: "Yes. Starter, Pro, and Business plans come with a 3-day free trial. No credit card required to start." },
-            { q: "What happens when I hit my proposal limit?", a: "You can upgrade your plan or purchase credit packs starting at €19 for 3 proposals. Credits never expire." },
+            { q: tHomeFaq("q1"), a: tHomeFaq("a1") },
+            { q: tHomeFaq("q2"), a: tHomeFaq("a2") },
+            { q: tHomeFaq("q3"), a: tHomeFaq("a3") },
+            { q: tHomeFaq("q4"), a: tHomeFaq("a4") },
+            { q: tHomeFaq("q5"), a: tHomeFaq("a5") },
+            { q: tHomeFaq("q6"), a: tHomeFaq("a6") },
+            { q: tHomeFaq("q7"), a: tHomeFaq("a7") },
+            { q: tHomeFaq("q8"), a: tHomeFaq("a8") },
           ].map(({ q, a }, i) => (
             <details key={i} style={{
               borderBottom: "1px solid #e5e7eb", padding: "20px 0",
@@ -437,19 +444,19 @@ export default async function HomePage() {
       }}>
         <div style={{ maxWidth: 600, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 40, color: "#fff", marginBottom: 16, lineHeight: 1.2 }}>
-            Start creating proposals today
+            {tHomeCta("title")}
           </h2>
           <p style={{ fontSize: 18, color: "#94a3b8", marginBottom: 32 }}>
-            Join AV professionals who quote faster and win more deals with CueQuote.
+            {tHomeCta("subtitle")}
           </p>
           <Link href={`${APP_URL}/signup`} style={{
             textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
             background: "#10b981", color: "#fff", padding: "16px 36px", borderRadius: 12,
             fontWeight: 700, fontSize: 18,
           }}>
-            <Sparkles size={20} /> Get Started Free
+            <Sparkles size={20} /> {tHomeCta("cta")}
           </Link>
-          <p style={{ fontSize: 13, color: "#64748b", marginTop: 16 }}>No credit card required</p>
+          <p style={{ fontSize: 13, color: "#64748b", marginTop: 16 }}>{tHomeCta("noCreditCard")}</p>
         </div>
       </section>
 

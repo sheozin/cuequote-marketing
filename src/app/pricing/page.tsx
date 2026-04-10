@@ -3,6 +3,7 @@ import Link from "next/link";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { Check, ChevronDown, Package, Sparkles, ArrowRight, Zap, CreditCard, Crown, Rocket, Building2 } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -12,62 +13,64 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pricing" },
 };
 
-const plans = [
-  {
-    name: "Free",
-    price: "€0",
-    period: "",
-    desc: "Try CueQuote with no commitment.",
-    icon: <Zap size={20} />,
-    features: ["3 proposals/month", "Basic PDF (with watermark)", "Share links", "1 user"],
-    cta: "Start Free",
-    ctaStyle: "outline" as const,
-  },
-  {
-    name: "Starter",
-    price: "€39",
-    period: "/mo",
-    desc: "For freelancers and small teams.",
-    icon: <CreditCard size={20} />,
-    features: ["15 proposals/month", "Full branding (logo + colors)", "Client management", "3 users", "Email support"],
-    cta: "Start 3-day Trial",
-    ctaStyle: "primary" as const,
-    popular: true,
-    save: "Most chosen by AV professionals",
-  },
-  {
-    name: "Pro",
-    price: "€99",
-    period: "/mo",
-    desc: "For growing production companies.",
-    icon: <Crown size={20} />,
-    features: ["50 proposals/month", "Custom templates", "Advanced analytics", "10 users", "Priority support"],
-    cta: "Start 3-day Trial",
-    ctaStyle: "primary" as const,
-  },
-  {
-    name: "Business",
-    price: "€199",
-    period: "/mo",
-    desc: "For teams that quote at scale.",
-    icon: <Rocket size={20} />,
-    features: ["Unlimited proposals", "API access", "Dedicated support", "Custom integrations", "25 users"],
-    cta: "Start 3-day Trial",
-    ctaStyle: "primary" as const,
-  },
-];
+export default async function PricingPage() {
+  const t = await getTranslations("pricing");
 
-const faqs = [
-  { q: "Can I change plans at any time?", a: "Yes. Upgrade or downgrade at any time. Changes take effect on your next billing cycle." },
-  { q: "Is there a contract or commitment?", a: "No. All plans are month-to-month with no long-term commitment. Cancel anytime." },
-  { q: "What payment methods do you accept?", a: "We accept all major credit cards (Visa, Mastercard, Amex) through Stripe. For Enterprise plans, we also support invoicing." },
-  { q: "Do you offer annual pricing?", a: "Yes. Annual plans save 20%. The discount is applied automatically when you choose annual billing in the app." },
-  { q: "What happens when I hit my proposal limit?", a: "You can upgrade your plan or purchase credit packs starting at €19 for 3 proposals." },
-  { q: "Is there a free trial?", a: "Yes. Starter, Pro, and Business plans come with a 3-day free trial. No credit card required to start." },
-  { q: "What are credit packs?", a: "Credit packs let you buy proposals without a monthly subscription. Buy a 3-pack for €19 or a 10-pack for €49. Credits never expire and include branded PDFs." },
-];
+  const plans = [
+    {
+      name: t("freeName"),
+      price: "€0",
+      period: "",
+      desc: t("freeDesc"),
+      icon: <Zap size={20} />,
+      features: [t("freeF1"), t("freeF2"), t("freeF3"), t("freeF4")],
+      cta: t("startFree"),
+      ctaStyle: "outline" as const,
+    },
+    {
+      name: t("starterName"),
+      price: "€39",
+      period: t("perMonth"),
+      desc: t("starterDesc"),
+      icon: <CreditCard size={20} />,
+      features: [t("starterF1"), t("starterF2"), t("starterF3"), t("starterF4"), t("starterF5")],
+      cta: t("startTrial"),
+      ctaStyle: "primary" as const,
+      popular: true,
+      save: t("starterSave"),
+    },
+    {
+      name: t("proName"),
+      price: "€99",
+      period: t("perMonth"),
+      desc: t("proDesc"),
+      icon: <Crown size={20} />,
+      features: [t("proF1"), t("proF2"), t("proF3"), t("proF4"), t("proF5")],
+      cta: t("startTrial"),
+      ctaStyle: "primary" as const,
+    },
+    {
+      name: t("businessName"),
+      price: "€199",
+      period: t("perMonth"),
+      desc: t("businessDesc"),
+      icon: <Rocket size={20} />,
+      features: [t("businessF1"), t("businessF2"), t("businessF3"), t("businessF4"), t("businessF5")],
+      cta: t("startTrial"),
+      ctaStyle: "primary" as const,
+    },
+  ];
 
-export default function PricingPage() {
+  const faqs = [
+    { q: t("faqQ1"), a: t("faqA1") },
+    { q: t("faqQ2"), a: t("faqA2") },
+    { q: t("faqQ3"), a: t("faqA3") },
+    { q: t("faqQ4"), a: t("faqA4") },
+    { q: t("faqQ5"), a: t("faqA5") },
+    { q: t("faqQ6"), a: t("faqA6") },
+    { q: t("faqQ7"), a: t("faqA7") },
+  ];
+
   return (
     <>
       <Nav />
@@ -81,13 +84,13 @@ export default function PricingPage() {
           display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "#10b981",
           background: "#ecfdf5", border: "1px solid rgba(16,185,129,0.15)", padding: "6px 14px", borderRadius: 20, marginBottom: 20,
         }}>
-          <Sparkles size={14} /> Save 20% with annual billing
+          <Sparkles size={14} /> {t("heroBadge")}
         </div>
         <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 48, color: "#08172E", marginBottom: 14, letterSpacing: -1.5, lineHeight: 1.1 }}>
-          Plans that grow with you
+          {t("heroTitle")}
         </h1>
         <p style={{ fontSize: 18, color: "#6b7280", maxWidth: 520, margin: "0 auto", lineHeight: 1.6 }}>
-          Start free. Upgrade when you need more. No contracts, no surprises.
+          {t("heroSubtitle")}
         </p>
       </section>
 
@@ -109,7 +112,7 @@ export default function PricingPage() {
                   background: "linear-gradient(135deg, #10b981, #059669)", color: "#fff", fontSize: 12, fontWeight: 700,
                   padding: "6px 20px", borderRadius: 20, whiteSpace: "nowrap",
                 }}>
-                  Most Popular
+                  {t("popular")}
                 </div>
               )}
 
@@ -180,14 +183,14 @@ export default function PricingPage() {
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: 16 }}>
             <Building2 size={24} style={{ color: "#10b981" }} />
             <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 30, color: "#fff" }}>
-              Enterprise
+              {t("enterpriseTitle")}
             </h2>
           </div>
           <p style={{ fontSize: 17, color: "#94a3b8", marginBottom: 28, lineHeight: 1.6 }}>
-            Custom pricing for large teams with advanced security and dedicated support.
+            {t("enterpriseDesc")}
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, marginBottom: 32 }}>
-            {["Everything in Business", "SSO & SAML", "SLA guarantee", "Unlimited users", "On-boarding support"].map((f) => (
+            {[t("enterpriseF1"), t("enterpriseF2"), t("enterpriseF3"), t("enterpriseF4"), t("enterpriseF5")].map((f) => (
               <div key={f} style={{
                 display: "flex", alignItems: "center", gap: 6, fontSize: 14, color: "#cbd5e1",
                 background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)",
@@ -203,7 +206,7 @@ export default function PricingPage() {
             background: "rgba(16,185,129,0.15)", border: "1px solid rgba(16,185,129,0.3)", color: "#10b981",
             transition: "all 0.2s",
           }}>
-            Contact Sales <ArrowRight size={16} />
+            {t("contactSales")} <ArrowRight size={16} />
           </Link>
         </div>
       </section>
@@ -215,11 +218,11 @@ export default function PricingPage() {
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: 12 }}>
               <Package size={22} style={{ color: "#10b981" }} />
               <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 30, color: "#08172E" }}>
-                Credit Packs
+                {t("creditPacksTitle")}
               </h2>
             </div>
             <p style={{ fontSize: 17, color: "#6b7280", maxWidth: 480, margin: "0 auto", lineHeight: 1.6 }}>
-              Need a few proposals without a subscription? Buy credits, use anytime.
+              {t("creditPacksSubtitle")}
             </p>
           </div>
 
@@ -236,17 +239,17 @@ export default function PricingPage() {
               }}>
                 <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>3</span>
               </div>
-              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>3 Proposals</h3>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>{t("threeProposals")}</h3>
               <div style={{ marginBottom: 4 }}>
                 <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€19</span>
               </div>
-              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>€6.33 per proposal</p>
+              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>{t("perProposal3")}</p>
               <Link href={`${APP_URL}/signup`} style={{
                 textDecoration: "none", display: "block", width: "100%", textAlign: "center", padding: "12px 20px",
                 borderRadius: 10, fontWeight: 600, fontSize: 14,
                 border: "1px solid #e5e7eb", color: "#08172E", transition: "all 0.2s",
               }}>
-                Buy 3-Pack
+                {t("buy3Pack")}
               </Link>
             </div>
 
@@ -260,7 +263,7 @@ export default function PricingPage() {
                 position: "absolute", top: -12, background: "#10b981", color: "#fff",
                 fontSize: 11, fontWeight: 700, padding: "4px 14px", borderRadius: 12,
               }}>
-                Best Value
+                {t("bestValue")}
               </div>
               <div style={{
                 width: 56, height: 56, borderRadius: 16, background: "#ecfdf5",
@@ -268,26 +271,26 @@ export default function PricingPage() {
               }}>
                 <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>10</span>
               </div>
-              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>10 Proposals</h3>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>{t("tenProposals")}</h3>
               <div style={{ marginBottom: 4 }}>
                 <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€49</span>
               </div>
-              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>€4.90 per proposal</p>
+              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>{t("perProposal10")}</p>
               <Link href={`${APP_URL}/signup`} style={{
                 textDecoration: "none", display: "block", width: "100%", textAlign: "center", padding: "12px 20px",
                 borderRadius: 10, fontWeight: 600, fontSize: 14,
                 background: "#10b981", color: "#fff", transition: "all 0.2s",
               }}>
-                Buy 10-Pack
+                {t("buy10Pack")}
               </Link>
             </div>
           </div>
 
           {/* Trust badges */}
           <div style={{ display: "flex", justifyContent: "center", gap: 24, flexWrap: "wrap" }}>
-            {["No monthly fee", "Credits never expire", "Branded PDFs included"].map((t) => (
-              <div key={t} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "#6b7280" }}>
-                <Check size={14} style={{ color: "#10b981" }} /> {t}
+            {[t("noMonthlyFee"), t("creditsNeverExpire"), t("brandedPdfsIncluded")].map((badge) => (
+              <div key={badge} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "#6b7280" }}>
+                <Check size={14} style={{ color: "#10b981" }} /> {badge}
               </div>
             ))}
           </div>
@@ -304,7 +307,7 @@ export default function PricingPage() {
       <section style={{ padding: "96px 24px" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 32, color: "#08172E", marginBottom: 48, textAlign: "center" }}>
-            Frequently asked questions
+            {t("faq")}
           </h2>
           {faqs.map(({ q, a }, i) => (
             <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "20px 0" }}>
@@ -333,19 +336,19 @@ export default function PricingPage() {
       }}>
         <div style={{ maxWidth: 520, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 32, color: "#fff", marginBottom: 12, lineHeight: 1.2 }}>
-            Ready to quote faster?
+            {t("readyTitle")}
           </h2>
           <p style={{ fontSize: 16, color: "#94a3b8", marginBottom: 28 }}>
-            Join AV professionals who create proposals in minutes, not hours.
+            {t("readySubtitle")}
           </p>
           <Link href={`${APP_URL}/signup`} style={{
             textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
             background: "#10b981", color: "#fff", padding: "16px 36px", borderRadius: 12,
             fontWeight: 700, fontSize: 17,
           }}>
-            <Sparkles size={18} /> Start Free
+            <Sparkles size={18} /> {t("startFree")}
           </Link>
-          <p style={{ fontSize: 13, color: "#64748b", marginTop: 14 }}>No credit card required</p>
+          <p style={{ fontSize: 13, color: "#64748b", marginTop: 14 }}>{t("noCreditCard")}</p>
         </div>
       </section>
 

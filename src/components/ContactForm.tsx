@@ -2,8 +2,10 @@
 
 import { useActionState, useRef, useEffect } from "react";
 import { submitContactForm, type ContactFormState } from "../app/contact/actions";
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
+  const t = useTranslations("contact");
   const [state, formAction, isPending] = useActionState<ContactFormState, FormData>(
     submitContactForm,
     null
@@ -30,7 +32,7 @@ export default function ContactForm() {
             border: `1px solid ${state.success ? "#a7f3d0" : "#fecaca"}`,
           }}
         >
-          {state.message}
+          {state.success ? t("success") : (state.message || t("error"))}
         </div>
       )}
 
@@ -44,12 +46,12 @@ export default function ContactForm() {
             marginBottom: 6,
           }}
         >
-          Name
+          {t("nameLabel")}
         </label>
         <input
           type="text"
           name="name"
-          placeholder="Your name"
+          placeholder={t("namePlaceholder")}
           required
           style={{
             width: "100%",
@@ -74,12 +76,12 @@ export default function ContactForm() {
             marginBottom: 6,
           }}
         >
-          Email
+          {t("emailLabel")}
         </label>
         <input
           type="email"
           name="email"
-          placeholder="you@company.com"
+          placeholder={t("emailPlaceholder")}
           required
           style={{
             width: "100%",
@@ -104,7 +106,7 @@ export default function ContactForm() {
             marginBottom: 6,
           }}
         >
-          Subject
+          {t("subjectLabel")}
         </label>
         <select
           name="subject"
@@ -120,12 +122,12 @@ export default function ContactForm() {
             boxSizing: "border-box",
           }}
         >
-          <option value="">Select a topic</option>
-          <option value="general">General inquiry</option>
-          <option value="support">Technical support</option>
-          <option value="sales">Sales &amp; pricing</option>
-          <option value="partnership">Partnership</option>
-          <option value="feedback">Product feedback</option>
+          <option value="">{t("selectTopic")}</option>
+          <option value="general">{t("optGeneral")}</option>
+          <option value="support">{t("optSupport")}</option>
+          <option value="sales">{t("optSales")}</option>
+          <option value="partnership">{t("optPartnership")}</option>
+          <option value="feedback">{t("optFeedback")}</option>
         </select>
       </div>
 
@@ -139,12 +141,12 @@ export default function ContactForm() {
             marginBottom: 6,
           }}
         >
-          Message
+          {t("messageLabel")}
         </label>
         <textarea
           name="message"
           rows={5}
-          placeholder="Tell us how we can help..."
+          placeholder={t("messagePlaceholder")}
           required
           style={{
             width: "100%",
@@ -177,7 +179,7 @@ export default function ContactForm() {
           transition: "opacity 0.2s",
         }}
       >
-        {isPending ? "Sending..." : "Send Message"}
+        {isPending ? t("sending") : t("send")}
       </button>
     </form>
   );

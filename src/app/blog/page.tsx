@@ -4,6 +4,7 @@ import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { ArrowRight } from "lucide-react";
 import { POSTS } from "../../lib/blog-posts";
+import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -18,7 +19,9 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
   Business: { bg: "#fef3c7", text: "#d97706" },
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const t = await getTranslations("blog");
+
   return (
     <>
       <Nav />
@@ -29,14 +32,14 @@ export default function BlogPage() {
             display: "inline-block", fontSize: 12, fontWeight: 600, color: "#10b981",
             background: "#ecfdf5", padding: "4px 12px", borderRadius: 20, marginBottom: 24,
           }}>
-            Blog
+            {t("badge")}
           </div>
 
           <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 44, color: "#08172E", marginBottom: 16, lineHeight: 1.15, letterSpacing: -1 }}>
-            Insights for AV professionals
+            {t("heading")}
           </h1>
           <p style={{ fontSize: 17, color: "#6b7280", marginBottom: 48, maxWidth: 560 }}>
-            Tips, guides, and industry perspectives to help you win more proposals and grow your AV business.
+            {t("headingSubtitle")}
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 32 }}>
@@ -86,7 +89,7 @@ export default function BlogPage() {
                           fontSize: 14, fontWeight: 600, color: "#10b981",
                         }}
                       >
-                        Read more <ArrowRight size={14} />
+                        {t("readMore")} <ArrowRight size={14} />
                       </span>
                     </div>
                   </article>
