@@ -1,88 +1,88 @@
 {
   "nav": {
-    "home": "Strona g\u0142\u00f3wna",
+    "home": "Strona główna",
     "features": "Funkcje",
     "about": "O nas",
     "pricing": "Cennik",
     "blog": "Blog",
     "contact": "Kontakt",
-    "login": "Zaloguj si\u0119",
+    "login": "Zaloguj się",
     "startFree": "Zacznij za darmo",
-    "privacy": "Prywatno\u015b\u0107",
+    "privacy": "Prywatność",
     "terms": "Regulamin",
-    "signIn": "Zaloguj si\u0119"
+    "signIn": "Zaloguj się"
   },
   "hero": {
-    "badge": "Wyceny AV z pomoc\u0105 AI",
-    "title": "Zamie\u0144 opisy wydarze\u0144 w",
+    "badge": "Wyceny AV z pomocą AI",
+    "title": "Zamień opisy wydarzeń w",
     "titleHighlight": "profesjonalne oferty AV",
     "titleEnd": "w kilka sekund",
-    "subtitle": "Opisz swoje wydarzenie, a CueQuote wygeneruje kompletn\u0105 list\u0119 sprz\u0119tu z dok\u0142adn\u0105 wycen\u0105 \u2014 gotow\u0105 do wys\u0142ania jako markowy PDF.",
+    "subtitle": "Opisz swoje wydarzenie, a CueQuote wygeneruje kompletną listę sprzętu z dokładną wyceną — gotową do wysłania jako markowy PDF.",
     "cta": "Zacznij za darmo",
-    "ctaSecondary": "Zobacz jak to dzia\u0142a",
+    "ctaSecondary": "Zobacz jak to działa",
     "noCreditCard": "Bez karty kredytowej",
-    "freeProposals": "3 darmowe oferty/miesi\u0105c"
+    "freeProposals": "3 darmowe oferty/miesiąc"
   },
   "features": {
-    "title": "Wszystko, czego potrzebujesz, by wycenia\u0107 szybciej",
-    "subtitle": "Od generowania AI po eksport PDF \u2014 wszystko na jednej platformie."
+    "title": "Wszystko, czego potrzebujesz, by wyceniać szybciej",
+    "subtitle": "Od generowania AI po eksport PDF — wszystko na jednej platformie."
   },
   "pricing": {
     "title": "Prosty, przejrzysty cennik",
-    "subtitle": "Zacznij za darmo. Rozwijaj si\u0119 w swoim tempie.",
-    "monthly": "Miesi\u0119cznie",
+    "subtitle": "Zacznij za darmo. Rozwijaj się w swoim tempie.",
+    "monthly": "Miesięcznie",
     "annual": "Rocznie",
-    "save": "Oszcz\u0119d\u017a 20%",
+    "save": "Oszczędź 20%",
     "perMonth": "/mies.",
     "startFree": "Zacznij za darmo",
-    "startTrial": "Rozpocznij 3-dniowy okres pr\u00f3bny",
+    "startTrial": "Rozpocznij 3-dniowy okres próbny",
     "popular": "Najpopularniejszy",
-    "faq": "Cz\u0119sto zadawane pytania"
+    "faq": "Często zadawane pytania"
   },
   "about": {
     "title": "O CueQuote",
-    "subtitle": "Stworzone przez profesjonalist\u00f3w AV, dla profesjonalist\u00f3w AV."
+    "subtitle": "Stworzone przez profesjonalistów AV, dla profesjonalistów AV."
   },
   "contact": {
-    "title": "Skontaktuj si\u0119",
-    "subtitle": "Masz pytania? Ch\u0119tnie pomo\u017cemy.",
-    "name": "Twoje imi\u0119",
+    "title": "Skontaktuj się",
+    "subtitle": "Masz pytania? Chętnie pomożemy.",
+    "name": "Twoje imię",
     "email": "Adres e-mail",
     "subject": "Temat",
-    "message": "Wiadomo\u015b\u0107",
-    "send": "Wy\u015blij wiadomo\u015b\u0107",
-    "sending": "Wysy\u0142anie...",
-    "success": "Wiadomo\u015b\u0107 wys\u0142ana! Odezwiemy si\u0119 wkr\u00f3tce.",
+    "message": "Wiadomość",
+    "send": "Wyślij wiadomość",
+    "sending": "Wysyłanie...",
+    "success": "Wiadomość wysłana! Odezwiemy się wkrótce.",
     "location": "Lokalizacja",
     "responseTime": "Czas odpowiedzi",
     "emailLabel": "E-mail"
   },
   "footer": {
-    "tagline": "Automatyzacja ofert AV dla profesjonalist\u00f3w eventowych.",
+    "tagline": "Oferty AV wspierane przez AI dla profesjonalistów eventowych.",
     "product": "Produkt",
     "company": "Firma",
     "legal": "Prawne",
-    "copyright": "Wszelkie prawa zastrze\u017cone.",
+    "copyright": "Wszelkie prawa zastrzeżone.",
     "features": "Funkcje",
-    "howItWorks": "Jak to dzia\u0142a",
+    "howItWorks": "Jak to działa",
     "faq": "FAQ",
     "about": "O nas",
     "blog": "Blog",
     "contact": "Kontakt",
-    "privacy": "Polityka prywatno\u015bci",
+    "privacy": "Polityka prywatności",
     "terms": "Regulamin",
     "by": "Od"
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Porady, przewodniki i spostrze\u017cenia dla profesjonalist\u00f3w AV.",
-    "readMore": "Czytaj wi\u0119cej",
-    "backToBlog": "Powr\u00f3t do bloga",
+    "subtitle": "Porady, przewodniki i spostrzeżenia dla profesjonalistów AV.",
+    "readMore": "Czytaj więcej",
+    "backToBlog": "Powrót do bloga",
     "allPosts": "Wszystkie wpisy"
   },
   "subscribe": {
-    "title": "B\u0105d\u017a na bie\u017c\u0105co",
-    "subtitle": "Otrzymuj porady dotycz\u0105ce wycen AV, aktualizacje produktu i bran\u017cowe informacje. Bez spamu.",
+    "title": "Bądź na bieżąco",
+    "subtitle": "Otrzymuj porady dotyczące wycen AV, aktualizacje produktu i branżowe informacje. Bez spamu.",
     "placeholder": "ty@firma.com",
     "button": "Subskrybuj",
     "success": "Zasubskrybowano!"

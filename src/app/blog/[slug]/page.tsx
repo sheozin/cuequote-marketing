@@ -240,8 +240,8 @@ export default async function BlogPostPage({
               color: "#4b5563",
               lineHeight: 1.7,
               marginBottom: 40,
-              borderLeft: "3px solid #10b981",
-              paddingLeft: 20,
+              borderInlineStart: "3px solid #10b981",
+              paddingInlineStart: 20,
             }}
           >
             {post.excerpt}

@@ -52,7 +52,7 @@ function ProposalMockup() {
                 <div style={{ fontSize: 11, color: "#9ca3af" }}>{item.cat}</div>
               </div>
             </div>
-            <div style={{ textAlign: "right" }}>
+            <div style={{ textAlign: "end" }}>
               <div style={{ fontWeight: 600, color: "#111827" }}>€{(item.qty * item.price).toLocaleString()}</div>
               <div style={{ fontSize: 11, color: "#9ca3af" }}>{item.qty} × €{item.price}</div>
             </div>
