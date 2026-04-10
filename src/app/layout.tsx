@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, DM_Sans } from "next/font/google";
+import { Inter, DM_Sans, Cairo } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", weight: ["500", "600", "700", "800"] });
+const cairo = Cairo({ subsets: ["arabic"], variable: "--font-cairo", weight: ["500", "600", "700", "800"] });
 
 const BASE_URL = "https://cuequote.com";
 
@@ -81,15 +84,22 @@ const jsonLdString = JSON.stringify({
   ],
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+  const dir = locale === "ar" ? "rtl" : "ltr";
+
   return (
-    <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
+    <html lang={locale} dir={dir} className={`${inter.variable} ${dmSans.variable} ${cairo.variable}`}>
       <head>
         <meta name="theme-color" content="#08172E" />
-        {/* JSON-LD: static trusted content, safe for dangerouslySetInnerHTML */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

@@ -34,3 +34,12 @@ html {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* RTL support for Arabic */
+[dir="rtl"] {
+  font-family: var(--font-cairo), system-ui, sans-serif;
+}
+
+[dir="rtl"] * {
+  letter-spacing: 0 !important;
+}

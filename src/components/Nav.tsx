@@ -1,11 +1,23 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const APP_URL = "https://app.cuequote.com";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("nav");
+  const locale = useLocale();
+
+  const links = [
+    { label: t("features"), href: "/#features" },
+    { label: t("pricing"), href: "/pricing" },
+    { label: t("about"), href: "/about" },
+    { label: t("blog"), href: "/blog" },
+    { label: t("contact"), href: "/contact" },
+  ];
 
   return (
     <nav style={{
@@ -30,13 +42,7 @@ export default function Nav() {
 
         {/* Desktop links */}
         <div style={{ display: "flex", alignItems: "center", gap: 32 }} className="hide-mobile">
-          {[
-            { label: "Features", href: "/#features" },
-            { label: "Pricing", href: "/pricing" },
-            { label: "About", href: "/about" },
-            { label: "Blog", href: "/blog" },
-            { label: "Contact", href: "/contact" },
-          ].map(({ label, href }) => (
+          {links.map(({ label, href }) => (
             <Link key={label} href={href} style={{
               textDecoration: "none", fontSize: 14, fontWeight: 500,
               color: "#4b5563", transition: "color 0.2s",
@@ -46,19 +52,20 @@ export default function Nav() {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA + Language Switcher */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }} className="hide-mobile">
+          <LanguageSwitcher currentLocale={locale} />
           <Link href={`${APP_URL}/login`} style={{
             textDecoration: "none", fontSize: 14, fontWeight: 500, color: "#4b5563",
           }}>
-            Log in
+            {t("login")}
           </Link>
           <Link href={`${APP_URL}/signup`} style={{
             textDecoration: "none", fontSize: 14, fontWeight: 600, color: "#fff",
             background: "#10b981", padding: "8px 20px", borderRadius: 8,
             transition: "background 0.2s",
           }}>
-            Start Free
+            {t("startFree")}
           </Link>
         </div>
 
@@ -85,25 +92,28 @@ export default function Nav() {
           padding: "16px 24px", borderTop: "1px solid #e5e7eb",
           display: "flex", flexDirection: "column", gap: 16,
         }}>
-          {["Features", "Pricing", "About", "Blog", "Contact"].map((label) => (
-            <Link key={label} href={label === "Features" ? "/#features" : `/${label.toLowerCase()}`}
+          {links.map(({ label, href }) => (
+            <Link key={label} href={href}
               onClick={() => setOpen(false)}
               style={{ textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#08172E" }}
             >
               {label}
             </Link>
           ))}
+          <div style={{ padding: "8px 0" }}>
+            <LanguageSwitcher currentLocale={locale} />
+          </div>
           <Link href={`${APP_URL}/login`} onClick={() => setOpen(false)} style={{
             textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#4b5563",
             textAlign: "center",
           }}>
-            Sign in
+            {t("signIn")}
           </Link>
           <Link href={`${APP_URL}/signup`} onClick={() => setOpen(false)} style={{
             textDecoration: "none", fontSize: 16, fontWeight: 600, color: "#fff",
             background: "#10b981", padding: "12px 24px", borderRadius: 8, textAlign: "center",
           }}>
-            Start Free
+            {t("startFree")}
           </Link>
         </div>
       )}

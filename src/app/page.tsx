@@ -3,6 +3,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import SubscribeForm from "../components/SubscribeForm";
 import { POSTS as ALL_BLOG_POSTS } from "../lib/blog-posts";
+import { getTranslations } from "next-intl/server";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
   MessageSquare, Mic, MonitorPlay, Lightbulb, Zap, ArrowRight,
@@ -72,7 +73,12 @@ function ProposalMockup() {
 }
 
 // ─── Page ──────────────────────────────────────────────────────────────────────
-export default function HomePage() {
+export default async function HomePage() {
+  const t = await getTranslations("hero");
+  const tFeatures = await getTranslations("features");
+  const tPricing = await getTranslations("pricing");
+  const tSubscribe = await getTranslations("subscribe");
+
   return (
     <>
       <Nav />
@@ -100,18 +106,18 @@ export default function HomePage() {
               background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.15)",
               padding: "6px 14px", borderRadius: 20, marginBottom: 24,
             }}>
-              <Sparkles size={14} /> AI-Powered AV Quoting
+              <Sparkles size={14} /> {t("badge")}
             </div>
             <h1 style={{
               fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: "clamp(2rem, 8vw, 3rem)",
               color: "#fff", lineHeight: 1.1, marginBottom: 20, letterSpacing: -1,
             }}>
-              Turn event descriptions into{" "}
-              <span style={{ color: "#10b981" }}>professional AV proposals</span>{" "}
-              in seconds
+              {t("title")}{" "}
+              <span style={{ color: "#10b981" }}>{t("titleHighlight")}</span>{" "}
+              {t("titleEnd")}
             </h1>
             <p style={{ fontSize: 18, color: "#94a3b8", lineHeight: 1.7, marginBottom: 32, maxWidth: 500 }}>
-              Describe your event, and CueQuote generates a complete equipment list with accurate pricing — ready to send as a branded PDF.
+              {t("subtitle")}
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <Link href={`${APP_URL}/signup`} style={{
@@ -119,17 +125,17 @@ export default function HomePage() {
                 background: "#10b981", color: "#fff", padding: "14px 28px", borderRadius: 10,
                 fontWeight: 600, fontSize: 16, transition: "background 0.2s",
               }}>
-                <Sparkles size={18} /> Start Free
+                <Sparkles size={18} /> {t("cta")}
               </Link>
               <Link href="#how-it-works" style={{
                 textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
                 border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "14px 28px", borderRadius: 10,
                 fontWeight: 500, fontSize: 16,
               }}>
-                See How It Works <ArrowRight size={16} />
+                {t("ctaSecondary")} <ArrowRight size={16} />
               </Link>
             </div>
-            <p style={{ fontSize: 13, color: "#64748b", marginTop: 16 }}>No credit card required • 3 free proposals/month</p>
+            <p style={{ fontSize: 13, color: "#64748b", marginTop: 16 }}>{t("noCreditCard")} &bull; {t("freeProposals")}</p>
           </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
@@ -196,10 +202,10 @@ export default function HomePage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", marginBottom: 12 }}>
-              Everything you need to quote faster
+              {tFeatures("title")}
             </h2>
             <p style={{ fontSize: 18, color: "#6b7280", maxWidth: 600, margin: "0 auto" }}>
-              From AI generation to PDF export — all in one platform.
+              {tFeatures("subtitle")}
             </p>
           </div>
 
@@ -269,17 +275,17 @@ export default function HomePage() {
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", marginBottom: 12 }}>
-              Simple, transparent pricing
+              {tPricing("title")}
             </h2>
-            <p style={{ fontSize: 18, color: "#6b7280" }}>Start free. Upgrade as you grow.</p>
+            <p style={{ fontSize: 18, color: "#6b7280" }}>{tPricing("subtitle")}</p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
             {[
-              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: ["3 proposals/month", "Basic PDF (with watermark)", "Share links", "1 user"], cta: "Start Free", ctaStyle: "outline" as const, popular: false },
-              { name: "Starter", price: "€39", period: "/mo", icon: <CreditCard size={20} />, features: ["15 proposals/month", "Full branding (logo + colors)", "Client management", "3 users"], cta: "Start 3-day Trial", ctaStyle: "primary" as const, popular: true },
-              { name: "Pro", price: "€99", period: "/mo", icon: <Crown size={20} />, features: ["50 proposals/month", "Custom templates", "Advanced analytics", "10 users"], cta: "Start 3-day Trial", ctaStyle: "primary" as const, popular: false },
-              { name: "Business", price: "€199", period: "/mo", icon: <Rocket size={20} />, features: ["Unlimited proposals", "API access", "Dedicated support", "25 users"], cta: "Start 3-day Trial", ctaStyle: "primary" as const, popular: false },
+              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: ["3 proposals/month", "Basic PDF (with watermark)", "Share links", "1 user"], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: false },
+              { name: "Starter", price: "€39", period: "/mo", icon: <CreditCard size={20} />, features: ["15 proposals/month", "Full branding (logo + colors)", "Client management", "3 users"], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: true },
+              { name: "Pro", price: "€99", period: "/mo", icon: <Crown size={20} />, features: ["50 proposals/month", "Custom templates", "Advanced analytics", "10 users"], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
+              { name: "Business", price: "€199", period: "/mo", icon: <Rocket size={20} />, features: ["Unlimited proposals", "API access", "Dedicated support", "25 users"], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
             ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
               <div key={name} style={{
                 background: "#fff", borderRadius: 20, padding: "32px 28px",
@@ -295,7 +301,7 @@ export default function HomePage() {
                     background: "linear-gradient(135deg, #10b981, #059669)", color: "#fff", fontSize: 12, fontWeight: 700,
                     padding: "6px 20px", borderRadius: 20, whiteSpace: "nowrap",
                   }}>
-                    Most Popular
+                    {tPricing("popular")}
                   </div>
                 )}
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
@@ -415,10 +421,10 @@ export default function HomePage() {
         <div style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
           <MessageSquare size={32} style={{ color: "#10b981", margin: "0 auto 16px" }} />
           <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 22, color: "#08172E", marginBottom: 8 }}>
-            Stay in the loop
+            {tSubscribe("title")}
           </h3>
           <p style={{ fontSize: 15, color: "#6b7280", marginBottom: 24 }}>
-            Get tips on AV quoting, product updates, and industry insights. No spam.
+            {tSubscribe("subtitle")}
           </p>
           <SubscribeForm />
         </div>

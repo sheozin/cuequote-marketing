@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "about": "About",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Log in",
+    "startFree": "Start Free",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "signIn": "Sign in"
+  },
+  "hero": {
+    "badge": "AI-Powered AV Quoting",
+    "title": "Turn event descriptions into",
+    "titleHighlight": "professional AV proposals",
+    "titleEnd": "in seconds",
+    "subtitle": "Describe your event, and CueQuote generates a complete equipment list with accurate pricing — ready to send as a branded PDF.",
+    "cta": "Start Free",
+    "ctaSecondary": "See How It Works",
+    "noCreditCard": "No credit card required",
+    "freeProposals": "3 free proposals/month"
+  },
+  "features": {
+    "title": "Everything you need to quote faster",
+    "subtitle": "From AI generation to PDF export — all in one platform."
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Start free. Upgrade as you grow.",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save": "Save 20%",
+    "perMonth": "/mo",
+    "startFree": "Start Free",
+    "startTrial": "Start 3-day Trial",
+    "popular": "Most Popular",
+    "faq": "Frequently Asked Questions"
+  },
+  "about": {
+    "title": "About CueQuote",
+    "subtitle": "Built by AV professionals, for AV professionals."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions? We'd love to hear from you.",
+    "name": "Your name",
+    "email": "Email address",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! We'll get back to you soon.",
+    "location": "Location",
+    "responseTime": "Response Time",
+    "emailLabel": "Email"
+  },
+  "footer": {
+    "tagline": "AI-powered AV proposals for event production professionals.",
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "copyright": "All rights reserved.",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "by": "By"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tips, guides, and insights for AV professionals.",
+    "readMore": "Read more",
+    "backToBlog": "Back to Blog",
+    "allPosts": "All Posts"
+  },
+  "subscribe": {
+    "title": "Stay in the loop",
+    "subtitle": "Get tips on AV quoting, product updates, and industry insights. No spam.",
+    "placeholder": "you@company.com",
+    "button": "Subscribe",
+    "success": "Subscribed!"
+  }
+}

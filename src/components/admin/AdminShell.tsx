@@ -359,6 +359,7 @@ export function useData<T>(table: string, orderBy: string = 'created_at', ascend
 
   useEffect(() => {
     refresh();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { data, loading, refresh };
