@@ -2,6 +2,7 @@ import Link from "next/link";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import SubscribeForm from "../components/SubscribeForm";
+import { POSTS as ALL_BLOG_POSTS } from "../lib/blog-posts";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
   MessageSquare, Mic, MonitorPlay, Lightbulb, Zap, ArrowRight,
@@ -38,7 +39,7 @@ function ProposalMockup() {
       {/* Items */}
       <div style={{ padding: "8px 0" }}>
         {items.map((item, i) => (
-          <div key={i} style={{
+          <div key={i} className="mockup-fade" style={{
             display: "flex", alignItems: "center", justifyContent: "space-between",
             padding: "10px 20px", fontSize: 13,
             animation: `fadeSlideUp 0.4s ease ${i * 0.12}s both`,
@@ -61,6 +62,9 @@ function ProposalMockup() {
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(8px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .mockup-fade { animation: none !important; opacity: 1 !important; }
         }
       `}</style>
     </div>
@@ -146,7 +150,7 @@ export default function HomePage() {
           <p style={{ fontSize: 13, fontWeight: 600, color: "#6b7280", textTransform: "uppercase", letterSpacing: 2, marginBottom: 24 }}>
             Trusted by AV professionals
           </p>
-          <div style={{ display: "flex", justifyContent: "center", gap: 48, flexWrap: "wrap", opacity: 0.5 }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: 48, flexWrap: "wrap", opacity: 0.7 }}>
             {["AV Production Co.", "EventTech GmbH", "Sound & Vision", "ProStage Europe", "LiveTech ME"].map((name) => (
               <span key={name} style={{ fontSize: 16, fontWeight: 700, color: "#9ca3af", whiteSpace: "nowrap" }}>{name}</span>
             ))}
@@ -351,16 +355,16 @@ export default function HomePage() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
-            {[
-              { title: "How to Write an AV Proposal That Wins", excerpt: "The anatomy of proposals that close deals — from structure to pricing psychology.", date: "Mar 2026" },
-              { title: "The True Cost of Manual AV Quoting", excerpt: "Hours of spreadsheet work per quote. Here's what it actually costs your business.", date: "Mar 2026" },
-              { title: "AI in Event Production: What's Real vs. Hype", excerpt: "Separating practical AI tools from marketing buzzwords in the events industry.", date: "Mar 2026" },
-            ].map(({ title, excerpt, date }) => (
-              <div key={title} style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 28 }}>
-                <div style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginBottom: 12 }}>{date}</div>
-                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 8, lineHeight: 1.3 }}>{title}</h3>
-                <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6 }}>{excerpt}</p>
-              </div>
+            {ALL_BLOG_POSTS.slice(0, 3).map(({ slug, title, excerpt, date }) => (
+              <Link key={slug} href={`/blog/${slug}`} style={{ textDecoration: "none", cursor: "pointer" }}>
+                <article style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 28, height: "100%" }}>
+                  <div style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginBottom: 12 }}>
+                    {new Date(date).toLocaleDateString("en-US", { month: "short", year: "numeric" })}
+                  </div>
+                  <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 8, lineHeight: 1.3 }}>{title}</h3>
+                  <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6 }}>{excerpt}</p>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -400,6 +404,11 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <style>{`
+        summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+      `}</style>
 
       {/* ── 9. Email Capture ────────────────────────────────────────────────── */}
       <section style={{ padding: "64px 24px", background: "#fff" }}>

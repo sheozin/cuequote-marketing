@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useRef, useEffect } from "react";
 import { submitContactForm, type ContactFormState } from "../app/contact/actions";
 
 export default function ContactForm() {
@@ -8,9 +8,16 @@ export default function ContactForm() {
     submitContactForm,
     null
   );
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state?.success) {
+      formRef.current?.reset();
+    }
+  }, [state]);
 
   return (
-    <form action={formAction} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+    <form ref={formRef} action={formAction} style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       {state && (
         <div
           style={{

@@ -321,6 +321,11 @@ export default function PricingPage() {
         </div>
       </section>
 
+      <style>{`
+        summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+      `}</style>
+
       {/* Final CTA */}
       <section style={{
         padding: "80px 24px", textAlign: "center",

@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import {
   LayoutDashboard,
   FileText,
@@ -65,10 +64,6 @@ const sections: NavSection[] = [
 export default function AdminSidebar({ userEmail }: { userEmail: string }) {
   const pathname = usePathname();
   const router = useRouter();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
   async function handleSignOut() {
     const supabase = createClient();
     await supabase.auth.signOut();
@@ -171,7 +166,7 @@ export default function AdminSidebar({ userEmail }: { userEmail: string }) {
             whiteSpace: 'nowrap',
           }}
         >
-          {mounted ? userEmail : ''}
+          {userEmail}
         </div>
         <button
           onClick={handleSignOut}

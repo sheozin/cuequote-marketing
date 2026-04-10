@@ -258,9 +258,11 @@ export function Modal({
 export function RowActions({
   onEdit,
   onDelete,
+  itemName,
 }: {
   onEdit: () => void;
   onDelete: () => void;
+  itemName?: string;
 }) {
   return (
     <div style={{ display: 'flex', gap: '6px', justifyContent: 'flex-end' }}>
@@ -280,7 +282,7 @@ export function RowActions({
       </button>
       <button
         onClick={() => {
-          if (confirm('Delete this item? This cannot be undone.')) onDelete();
+          if (confirm(itemName ? `Delete "${itemName}"? This cannot be undone.` : 'Delete this item? This cannot be undone.')) onDelete();
         }}
         title="Delete"
         style={{
