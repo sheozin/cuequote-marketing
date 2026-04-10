@@ -9,6 +9,7 @@ const APP_URL = "https://app.cuequote.com";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with the CueQuote team. We'd love to hear from you — whether you have a question, feedback, or want to explore a partnership.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -32,7 +33,11 @@ export default function ContactPage() {
             Whether you have a question about CueQuote, need help getting started, or want to discuss a partnership — drop us a line.
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48 }}>
+          <style>{`
+            .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+            @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr !important; gap: 32px !important; } }
+          `}</style>
+          <div className="contact-grid">
             {/* Contact Form */}
             <ContactForm />
 

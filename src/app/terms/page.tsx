@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "CueQuote terms of service — the rules and guidelines for using our platform.",
+  alternates: { canonical: "/terms" },
 };
 
 const SECTIONS = [

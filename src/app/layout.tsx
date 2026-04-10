@@ -72,8 +72,9 @@ const jsonLdString = JSON.stringify({
       offers: [
         { "@type": "Offer", name: "Free", price: "0", priceCurrency: "EUR" },
         { "@type": "Offer", name: "Pay-per-proposal", price: "9", priceCurrency: "EUR" },
-        { "@type": "Offer", name: "Starter", price: "59", priceCurrency: "EUR", billingIncrement: "month" },
-        { "@type": "Offer", name: "Pro", price: "99", priceCurrency: "EUR", billingIncrement: "month" },
+        { "@type": "Offer", name: "Starter", price: "39", priceCurrency: "EUR" },
+        { "@type": "Offer", name: "Pro", price: "99", priceCurrency: "EUR" },
+        { "@type": "Offer", name: "Business", price: "199", priceCurrency: "EUR" },
       ],
       description: "AI-powered AV proposal generator for event production professionals.",
     },

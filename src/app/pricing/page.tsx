@@ -9,6 +9,7 @@ const APP_URL = "https://app.cuequote.com";
 export const metadata: Metadata = {
   title: "Pricing",
   description: "Simple, transparent pricing for AV proposal generation. Start free, upgrade as you grow.",
+  alternates: { canonical: "/pricing" },
 };
 
 const plans = [
@@ -98,9 +99,8 @@ export default function PricingPage() {
               background: "#fff", borderRadius: 20, padding: "32px 28px",
               border: popular ? "2px solid #10b981" : "1px solid #e5e7eb",
               position: "relative",
-              boxShadow: popular ? "0 16px 48px rgba(16,185,129,0.12)" : "0 2px 12px rgba(0,0,0,0.04)",
+              boxShadow: popular ? "0 8px 24px rgba(16,185,129,0.15)" : "0 2px 12px rgba(0,0,0,0.04)",
               display: "flex", flexDirection: "column",
-              transform: popular ? "scale(1.03)" : "none",
               zIndex: popular ? 2 : 1,
             }}>
               {popular && (

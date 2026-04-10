@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "CueQuote privacy policy — how we collect, use, and protect your data.",
+  alternates: { canonical: "/privacy" },
 };
 
 const SECTIONS = [

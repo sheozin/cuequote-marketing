@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { POSTS } from '../lib/blog-posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://cuequote.com'
@@ -10,5 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 },
     { url: `${base}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${base}/terms`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    ...POSTS.map((p) => ({
+      url: `${base}/blog/${p.slug}`,
+      lastModified: new Date(p.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
   ]
 }

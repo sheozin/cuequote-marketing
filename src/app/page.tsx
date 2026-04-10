@@ -99,7 +99,7 @@ export default function HomePage() {
               <Sparkles size={14} /> AI-Powered AV Quoting
             </div>
             <h1 style={{
-              fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 48,
+              fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: "clamp(2rem, 8vw, 3rem)",
               color: "#fff", lineHeight: 1.1, marginBottom: 20, letterSpacing: -1,
             }}>
               Turn event descriptions into{" "}
@@ -136,7 +136,6 @@ export default function HomePage() {
         <style>{`
           @media (max-width: 768px) {
             .hero-grid { grid-template-columns: 1fr !important; text-align: center; }
-            .hero-grid h1 { font-size: 36px !important; }
           }
         `}</style>
       </section>
@@ -282,9 +281,8 @@ export default function HomePage() {
                 background: "#fff", borderRadius: 20, padding: "32px 28px",
                 border: popular ? "2px solid #10b981" : "1px solid #e5e7eb",
                 position: "relative",
-                boxShadow: popular ? "0 16px 48px rgba(16,185,129,0.12)" : "0 2px 12px rgba(0,0,0,0.04)",
+                boxShadow: popular ? "0 8px 24px rgba(16,185,129,0.15)" : "0 2px 12px rgba(0,0,0,0.04)",
                 display: "flex", flexDirection: "column",
-                transform: popular ? "scale(1.03)" : "none",
                 zIndex: popular ? 2 : 1,
               }}>
                 {popular && (

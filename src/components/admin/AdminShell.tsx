@@ -5,7 +5,7 @@ import { Plus, X, Trash2, Pencil, Save } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 
 export const S = {
-  page: { maxWidth: '1200px' },
+  page: { maxWidth: '1200px', margin: '0 auto' },
   header: { marginBottom: '24px' },
   h1: { fontSize: '24px', fontWeight: 700, color: '#f1f5f9', marginBottom: '4px' },
   sub: { color: '#64748b', fontSize: '14px' },
@@ -204,14 +204,29 @@ export function Modal({
   saving?: boolean;
   children: ReactNode;
 }) {
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
+
   if (!open) return null;
   return (
     <div style={S.modalBackdrop} onClick={onClose}>
-      <div style={S.modal} onClick={(e) => e.stopPropagation()}>
+      <div
+        style={S.modal}
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+      >
         <div style={S.modalHeader}>
           <div style={S.modalTitle}>{title}</div>
           <button
             onClick={onClose}
+            aria-label="Close"
             style={{
               background: 'transparent',
               border: 'none',
