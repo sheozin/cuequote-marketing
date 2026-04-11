@@ -10,7 +10,9 @@
     "startFree": "Start Free",
     "privacy": "Privacy",
     "terms": "Terms",
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "docs": "Docs",
+    "tutorials": "Tutorials"
   },
   "hero": {
     "badge": "AI-Powered AV Quoting",
@@ -277,7 +279,8 @@
     "terms": "Terms of Service",
     "by": "By",
     "changelog": "Changelog",
-    "docs": "Documentation"
+    "docs": "Documentation",
+    "tutorials": "Tutorials"
   },
   "posts": {
     "how-to-write-av-proposal-that-wins": {
@@ -352,5 +355,34 @@
         "Mistakes four and five are related: no follow-up and no differentiation. Sending a proposal and waiting is not a strategy — it is hope. Follow up within 48 hours to ask if the client has questions. If you can track when they view your proposal, use that insight to time your follow-up. As for differentiation, your proposal should include at least one element that competitors likely will not — a site visit summary, a diagram of the AV layout, a case study from a similar event, or a brief note explaining why you recommended specific equipment. The proposal is not just a price list; it is your first opportunity to demonstrate expertise and care."
       ]
     }
+  },
+  "tutorials": {
+    "badge": "Tutorials",
+    "heading": "Learn CueQuote in Minutes",
+    "subtitle": "Step-by-step video guides to help you master every feature",
+    "comingSoon": "Video coming soon",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "t1Title": "Getting Started",
+    "t1Desc": "Create your first proposal in under 5 minutes",
+    "t2Title": "AI Proposal Generation",
+    "t2Desc": "How the AI builds your equipment list from an event description",
+    "t3Title": "Customizing PDF Templates",
+    "t3Desc": "Switch between Modern, Bold, Classic, and Minimal styles",
+    "t4Title": "Managing Your Equipment Catalog",
+    "t4Desc": "Import gear, set prices, and organize by category",
+    "t5Title": "Client Management",
+    "t5Desc": "Add clients, track proposals, and manage relationships",
+    "t6Title": "Terms & Details Editor",
+    "t6Desc": "Customize inclusions, exclusions, payment terms, and T&C per proposal",
+    "t7Title": "Sharing & Tracking Proposals",
+    "t7Desc": "Send proposals, track views, and get client responses",
+    "t8Title": "Billing & Subscription Management",
+    "t8Desc": "Upgrade plans, manage billing, and download invoices",
+    "ctaTitle": "Can't find what you're looking for?",
+    "ctaSubtitle": "Check our documentation or reach out to us",
+    "viewDocs": "View Documentation",
+    "contactUs": "Contact Us"
   }
 }

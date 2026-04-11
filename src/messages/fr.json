@@ -10,7 +10,9 @@
     "startFree": "Commencer gratuitement",
     "privacy": "Confidentialité",
     "terms": "CGV",
-    "signIn": "Se connecter"
+    "signIn": "Se connecter",
+    "docs": "Documentation",
+    "tutorials": "Tutoriels"
   },
   "hero": {
     "badge": "Devis AV assistés par IA",
@@ -277,7 +279,8 @@
     "terms": "Conditions d'utilisation",
     "by": "Par",
     "changelog": "Journal des modifications",
-    "docs": "Documentation"
+    "docs": "Documentation",
+    "tutorials": "Tutoriels"
   },
   "posts": {
     "how-to-write-av-proposal-that-wins": {
@@ -352,5 +355,34 @@
         "Les erreurs quatre et cinq sont liées : pas de suivi et pas de différenciation. Envoyer un devis et attendre n'est pas une stratégie — c'est de l'espoir. Faites un suivi dans les 48 heures pour demander si le client a des questions. Si vous pouvez suivre quand il consulte votre devis, utilisez cette information pour planifier votre relance. Quant à la différenciation, votre devis devrait inclure au moins un élément que les concurrents n'auront probablement pas — un résumé de visite de site, un schéma de l'agencement AV, une étude de cas d'un événement similaire, ou une brève note expliquant pourquoi vous avez recommandé un équipement spécifique. Le devis n'est pas qu'une liste de prix ; c'est votre première opportunité de démontrer votre expertise et votre attention."
       ]
     }
+  },
+  "tutorials": {
+    "badge": "Tutoriels",
+    "heading": "Apprenez CueQuote en quelques minutes",
+    "subtitle": "Des guides vidéo étape par étape pour maîtriser chaque fonctionnalité",
+    "comingSoon": "Vidéo à venir",
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé",
+    "t1Title": "Premiers pas",
+    "t1Desc": "Créez votre premier devis en moins de 5 minutes",
+    "t2Title": "Génération de devis par IA",
+    "t2Desc": "Comment l'IA construit votre liste d'équipement à partir d'une description d'événement",
+    "t3Title": "Personnalisation des modèles PDF",
+    "t3Desc": "Basculez entre les styles Modern, Bold, Classic et Minimal",
+    "t4Title": "Gestion du catalogue d'équipement",
+    "t4Desc": "Importez du matériel, définissez les prix et organisez par catégorie",
+    "t5Title": "Gestion des clients",
+    "t5Desc": "Ajoutez des clients, suivez les devis et gérez les relations",
+    "t6Title": "Éditeur de conditions et détails",
+    "t6Desc": "Personnalisez les inclusions, exclusions, conditions de paiement et CGV par devis",
+    "t7Title": "Partage et suivi des devis",
+    "t7Desc": "Envoyez des devis, suivez les vues et recevez les réponses des clients",
+    "t8Title": "Facturation et gestion d'abonnement",
+    "t8Desc": "Changez de forfait, gérez la facturation et téléchargez les factures",
+    "ctaTitle": "Vous ne trouvez pas ce que vous cherchez ?",
+    "ctaSubtitle": "Consultez notre documentation ou contactez-nous",
+    "viewDocs": "Voir la documentation",
+    "contactUs": "Nous contacter"
   }
 }

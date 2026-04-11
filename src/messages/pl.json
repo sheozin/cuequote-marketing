@@ -10,7 +10,9 @@
     "startFree": "Zacznij za darmo",
     "privacy": "Prywatność",
     "terms": "Regulamin",
-    "signIn": "Zaloguj się"
+    "signIn": "Zaloguj się",
+    "docs": "Dokumentacja",
+    "tutorials": "Poradniki"
   },
   "hero": {
     "badge": "Wyceny AV z pomocą AI",
@@ -277,7 +279,8 @@
     "terms": "Regulamin",
     "by": "Od",
     "changelog": "Historia zmian",
-    "docs": "Dokumentacja"
+    "docs": "Dokumentacja",
+    "tutorials": "Poradniki"
   },
   "posts": {
     "how-to-write-av-proposal-that-wins": {
@@ -352,5 +355,34 @@
         "Błędy czwarty i piąty są powiązane: brak kontaktu zwrotnego i brak wyróżnienia. Wysyłanie oferty i czekanie to nie strategia — to nadzieja. Skontaktuj się w ciągu 48 godzin, aby zapytać, czy klient ma pytania. Jeśli możesz śledzić, kiedy przeglądają Twoją ofertę, wykorzystaj tę wiedzę do odpowiedniego momentu kontaktu. Jeśli chodzi o wyróżnienie, Twoja oferta powinna zawierać co najmniej jeden element, którego konkurenci prawdopodobnie nie uwzględnią — podsumowanie wizji lokalnej, schemat rozmieszczenia AV, studium przypadku z podobnego wydarzenia lub krótką notatkę wyjaśniającą, dlaczego zarekomendowałeś konkretny sprzęt. Oferta to nie tylko cennik; to Twoja pierwsza okazja do zademonstrowania ekspertyzy i troski."
       ]
     }
+  },
+  "tutorials": {
+    "badge": "Poradniki",
+    "heading": "Naucz się CueQuote w kilka minut",
+    "subtitle": "Przewodniki wideo krok po kroku, które pomogą Ci opanować każdą funkcję",
+    "comingSoon": "Film wkrótce",
+    "beginner": "Początkujący",
+    "intermediate": "Średniozaawansowany",
+    "advanced": "Zaawansowany",
+    "t1Title": "Pierwsze kroki",
+    "t1Desc": "Stwórz swoją pierwszą ofertę w mniej niż 5 minut",
+    "t2Title": "Generowanie ofert z AI",
+    "t2Desc": "Jak AI tworzy listę sprzętu na podstawie opisu wydarzenia",
+    "t3Title": "Personalizacja szablonów PDF",
+    "t3Desc": "Przełączaj między stylami Modern, Bold, Classic i Minimal",
+    "t4Title": "Zarządzanie katalogiem sprzętu",
+    "t4Desc": "Importuj sprzęt, ustal ceny i organizuj według kategorii",
+    "t5Title": "Zarządzanie klientami",
+    "t5Desc": "Dodawaj klientów, śledź oferty i zarządzaj relacjami",
+    "t6Title": "Edytor warunków i szczegółów",
+    "t6Desc": "Dostosuj zawartości, wyłączenia, warunki płatności i regulamin per oferta",
+    "t7Title": "Udostępnianie i śledzenie ofert",
+    "t7Desc": "Wysyłaj oferty, śledź wyświetlenia i otrzymuj odpowiedzi klientów",
+    "t8Title": "Rozliczenia i zarządzanie subskrypcją",
+    "t8Desc": "Zmień plan, zarządzaj rozliczeniami i pobieraj faktury",
+    "ctaTitle": "Nie możesz znaleźć tego, czego szukasz?",
+    "ctaSubtitle": "Sprawdź naszą dokumentację lub skontaktuj się z nami",
+    "viewDocs": "Zobacz dokumentację",
+    "contactUs": "Skontaktuj się"
   }
 }

@@ -16,7 +16,8 @@ export default function Nav() {
     { label: t("pricing"), href: "/pricing" },
     { label: t("about"), href: "/about" },
     { label: t("blog"), href: "/blog" },
-    { label: "Docs", href: "/docs" },
+    { label: t("docs"), href: "/docs" },
+    { label: t("tutorials"), href: "/tutorials" },
     { label: t("contact"), href: "/contact" },
   ];
 

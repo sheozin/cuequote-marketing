@@ -10,7 +10,9 @@
     "startFree": "Kostenlos starten",
     "privacy": "Datenschutz",
     "terms": "AGB",
-    "signIn": "Anmelden"
+    "signIn": "Anmelden",
+    "docs": "Dokumentation",
+    "tutorials": "Tutorials"
   },
   "hero": {
     "badge": "KI-gestützte AV-Angebotserstellung",
@@ -277,7 +279,8 @@
     "terms": "Nutzungsbedingungen",
     "by": "Von",
     "changelog": "Änderungsprotokoll",
-    "docs": "Dokumentation"
+    "docs": "Dokumentation",
+    "tutorials": "Tutorials"
   },
   "posts": {
     "how-to-write-av-proposal-that-wins": {
@@ -352,5 +355,34 @@
         "Fehler vier und fünf hängen zusammen: kein Nachfassen und keine Differenzierung. Ein Angebot zu senden und zu warten ist keine Strategie — es ist Hoffnung. Fassen Sie innerhalb von 48 Stunden nach und fragen Sie, ob der Kunde Fragen hat. Wenn Sie verfolgen können, wann er Ihr Angebot ansieht, nutzen Sie diese Erkenntnis für das Timing Ihrer Nachfassaktion. Was die Differenzierung betrifft: Ihr Angebot sollte mindestens ein Element enthalten, das Wettbewerber wahrscheinlich nicht bieten — eine Besichtigungszusammenfassung, ein Diagramm des AV-Layouts, eine Fallstudie von einer ähnlichen Veranstaltung oder eine kurze Notiz, die erklärt, warum Sie bestimmte Ausrüstung empfohlen haben. Das Angebot ist nicht nur eine Preisliste; es ist Ihre erste Gelegenheit, Expertise und Sorgfalt zu demonstrieren."
       ]
     }
+  },
+  "tutorials": {
+    "badge": "Tutorials",
+    "heading": "Lernen Sie CueQuote in Minuten",
+    "subtitle": "Schritt-für-Schritt-Videoanleitungen, die Ihnen helfen, jede Funktion zu meistern",
+    "comingSoon": "Video kommt bald",
+    "beginner": "Anfänger",
+    "intermediate": "Fortgeschritten",
+    "advanced": "Experte",
+    "t1Title": "Erste Schritte",
+    "t1Desc": "Erstellen Sie Ihr erstes Angebot in unter 5 Minuten",
+    "t2Title": "KI-Angebotserstellung",
+    "t2Desc": "Wie die KI Ihre Ausrüstungsliste aus einer Veranstaltungsbeschreibung erstellt",
+    "t3Title": "PDF-Vorlagen anpassen",
+    "t3Desc": "Wechseln Sie zwischen den Stilen Modern, Bold, Classic und Minimal",
+    "t4Title": "Ausrüstungskatalog verwalten",
+    "t4Desc": "Ausrüstung importieren, Preise festlegen und nach Kategorie organisieren",
+    "t5Title": "Kundenverwaltung",
+    "t5Desc": "Kunden hinzufügen, Angebote verfolgen und Beziehungen verwalten",
+    "t6Title": "Bedingungen- und Detail-Editor",
+    "t6Desc": "Leistungen, Ausschlüsse, Zahlungsbedingungen und AGB pro Angebot anpassen",
+    "t7Title": "Angebote teilen und verfolgen",
+    "t7Desc": "Angebote senden, Aufrufe verfolgen und Kundenantworten erhalten",
+    "t8Title": "Abrechnung und Abonnementverwaltung",
+    "t8Desc": "Pläne upgraden, Abrechnung verwalten und Rechnungen herunterladen",
+    "ctaTitle": "Nicht gefunden, was Sie suchen?",
+    "ctaSubtitle": "Sehen Sie unsere Dokumentation oder kontaktieren Sie uns",
+    "viewDocs": "Dokumentation ansehen",
+    "contactUs": "Kontakt aufnehmen"
   }
 }
