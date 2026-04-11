@@ -20,22 +20,31 @@ export default async function ContactPage() {
     <>
       <Nav />
 
-      <section style={{ padding: "96px 24px" }}>
+      {/* Hero */}
+      <section style={{
+        padding: "100px 24px 60px",
+        background: "linear-gradient(180deg, #f0fdf4 0%, #fff 100%)",
+      }}>
         <div style={{ maxWidth: 960, margin: "0 auto" }}>
           <div style={{
-            display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: "#10b981",
-            background: "#ecfdf5", padding: "4px 12px", borderRadius: 20, marginBottom: 24,
+            display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "#10b981",
+            background: "#ecfdf5", border: "1px solid rgba(16,185,129,0.15)", padding: "6px 14px", borderRadius: 20, marginBottom: 20,
           }}>
-            <Sparkles size={12} /> {t("badge")}
+            <Sparkles size={14} /> {t("badge")}
           </div>
 
-          <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 44, color: "#08172E", marginBottom: 16, lineHeight: 1.15, letterSpacing: -1 }}>
+          <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 44, color: "#08172E", marginBottom: 14, lineHeight: 1.15, letterSpacing: -1 }}>
             {t("heading")}
           </h1>
-          <p style={{ fontSize: 17, color: "#6b7280", marginBottom: 48, maxWidth: 560 }}>
+          <p style={{ fontSize: 18, color: "#6b7280", marginBottom: 0, maxWidth: 560, lineHeight: 1.6 }}>
             {t("headingSubtitle")}
           </p>
+        </div>
+      </section>
 
+      {/* Form + Info */}
+      <section style={{ padding: "64px 24px 96px" }}>
+        <div style={{ maxWidth: 960, margin: "0 auto" }}>
           <style>{`
             .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
             @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr !important; gap: 32px !important; } }
