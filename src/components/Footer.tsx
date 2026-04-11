@@ -64,7 +64,7 @@ export default async function Footer() {
         <div style={{ borderTop: "1px solid #1e293b", paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
           <p style={{ fontSize: 13 }}>&copy; {new Date().getFullYear()} CueQuote. {t("copyright")}</p>
           <p style={{ fontSize: 13 }}>
-            {t("by")} <Link href="https://ave.events" style={{ color: "#10b981", textDecoration: "none" }}>AVE Events</Link>
+            {t("by")} <span style={{ color: "#10b981" }}>AVE Events</span>
           </p>
         </div>
       </div>
