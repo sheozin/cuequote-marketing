@@ -275,7 +275,9 @@
     "contact": "Contact",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "by": "By"
+    "by": "By",
+    "changelog": "Changelog",
+    "docs": "Documentation"
   },
   "posts": {
     "how-to-write-av-proposal-that-wins": {

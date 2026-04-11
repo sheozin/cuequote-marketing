@@ -275,7 +275,9 @@
     "contact": "اتصل بنا",
     "privacy": "سياسة الخصوصية",
     "terms": "شروط الخدمة",
-    "by": "بواسطة"
+    "by": "بواسطة",
+    "changelog": "سجل التغييرات",
+    "docs": "التوثيق"
   },
   "posts": {
     "how-to-write-av-proposal-that-wins": {

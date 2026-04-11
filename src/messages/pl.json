@@ -275,7 +275,9 @@
     "contact": "Kontakt",
     "privacy": "Polityka prywatności",
     "terms": "Regulamin",
-    "by": "Od"
+    "by": "Od",
+    "changelog": "Historia zmian",
+    "docs": "Dokumentacja"
   },
   "posts": {
     "how-to-write-av-proposal-that-wins": {
