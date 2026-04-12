@@ -385,5 +385,122 @@
     "ctaSubtitle": "Sehen Sie unsere Dokumentation oder kontaktieren Sie uns",
     "viewDocs": "Dokumentation ansehen",
     "contactUs": "Kontakt aufnehmen"
+  },
+  "docs": {
+    "badge": "Dokumentation",
+    "heading": "Erste Schritte mit",
+    "headingHighlight": "CueQuote",
+    "subtitle": "Erfahren Sie, wie Sie in wenigen Minuten professionelle AV-Angebote erstellen",
+    "toc": "Auf dieser Seite",
+    "tip": "Tipp",
+    "quickStart": {
+      "title": "Schnellstart",
+      "content1": "Der Einstieg in CueQuote dauert nur wenige Minuten. Befolgen Sie diese fünf Schritte und Ihr erstes professionelles AV-Angebot ist bereit zum Versenden.",
+      "step1": "Registrieren Sie sich kostenlos auf app.cuequote.com",
+      "step2": "Erstellen Sie Ihr Unternehmensprofil und laden Sie Ihr Logo hoch",
+      "step3": "Legen Sie Ihre Markenfarbe fest — sie wird automatisch auf alle Ihre Angebote angewendet",
+      "step4": "Navigieren Sie zu Angebote und klicken Sie auf ‚Neues Angebot'",
+      "step5": "Beschreiben Sie die Veranstaltung in einfacher Sprache und lassen Sie CueQuotes KI eine vollständige Ausrüstungsliste mit Preisen generieren",
+      "tip": "Im kostenlosen Plan können Sie bis zu 3 Angebote pro Monat erstellen — keine Kreditkarte erforderlich."
+    },
+    "creatingProposals": {
+      "title": "Angebote erstellen",
+      "content1": "CueQuotes KI-gestützte Angebots-Engine verwandelt eine einfache Veranstaltungsbeschreibung in ein detailliertes, professionelles Angebot in Sekunden.",
+      "content2": "Beginnen Sie mit der Beschreibung der Veranstaltung: Veranstaltungsort, Publikumsgröße, Art der benötigten Produktion (Ton, Licht, Video, Bühne) und etwaige besondere Anforderungen. Je mehr Details Sie angeben, desto genauer wird die generierte Ausrüstungsliste.",
+      "step1": "Klicken Sie auf ‚Neues Angebot' in Ihrem Dashboard",
+      "step2": "Geben Sie die Veranstaltungsbeschreibung ein — seien Sie so spezifisch wie möglich über den Veranstaltungsort und die Anforderungen",
+      "step3": "CueQuotes KI generiert eine vollständige Ausrüstungsliste mit Mengen und Preisen",
+      "step4": "Überprüfen und bearbeiten: Positionen hinzufügen, entfernen oder anpassen",
+      "step5": "Als gebrandetes PDF herunterladen oder über einen einzigartigen Link teilen",
+      "tip": "Nutzen Sie die Teilen-Link-Funktion, damit Kunden Angebote online einsehen können — sie können direkt über den Link genehmigen."
+    },
+    "equipmentCatalog": {
+      "title": "Ausrüstungskatalog",
+      "content1": "Ihr Ausrüstungskatalog ist die Grundlage genauer Angebote. CueQuote ermöglicht Ihnen, ein detailliertes Inventar Ihrer Geräte mit Standardpreisen zu pflegen.",
+      "content2": "Die Ausrüstung ist in Kategorien organisiert: Audio, Beleuchtung, Video, Bühne, Rigging, Strom & Verteilung und Benutzerdefiniert. Jedes Element kann einen Namen, eine Beschreibung, einen Standard-Mietpreis und interne Notizen haben.",
+      "step1": "Gehen Sie zu Einstellungen → Ausrüstungskatalog",
+      "step2": "Fügen Sie Elemente manuell hinzu oder importieren Sie sie aus einer CSV-Tabelle",
+      "step3": "Legen Sie Standard-Mietpreise pro Artikel fest — diese werden bei der KI-Angebotserstellung verwendet",
+      "step4": "Organisieren Sie Elemente in Kategorien für einfaches Durchsuchen",
+      "tip": "Beim CSV-Import verwenden Sie die Spalten: Name, Kategorie, Preis, Beschreibung. CueQuote ordnet sie automatisch zu."
+    },
+    "clients": {
+      "title": "Kunden",
+      "content1": "Bewahren Sie alle Kundeninformationen an einem Ort auf. CueQuote unterstützt verschiedene Kundentypen, um Ihre Geschäftsbeziehungen zu kategorisieren.",
+      "content2": "Jeder Kundendatensatz speichert Kontaktdaten, Unternehmensinformationen und ist mit allen Angeboten verknüpft — so haben Sie eine vollständige Historie Ihrer Angebotsbeziehung.",
+      "step1": "Navigieren Sie zu Kunden und klicken Sie auf ‚Kunde hinzufügen'",
+      "step2": "Füllen Sie Kontakt- und Unternehmensdaten aus",
+      "step3": "Wählen Sie den Kundentyp: Direkt, Agentur, Veranstaltungsort oder Unternehmen",
+      "step4": "Verknüpfen Sie den Kunden mit neuen Angeboten im Angebotserstellungsbildschirm",
+      "tip": "Kundentypen helfen Ihnen zu verfolgen, woher Ihr Geschäft kommt. Verwenden Sie den Typ ‚Agentur' für Produktionsunternehmen, die Ihre Dienste unterbeauftragen."
+    },
+    "pdfTemplates": {
+      "title": "PDF-Vorlagen",
+      "content1": "CueQuote bietet vier professionell gestaltete PDF-Vorlagen, damit Ihre Angebote immer elegant und markenkonform aussehen.",
+      "content2": "Jede Vorlage wendet automatisch Ihr Firmenlogo, Ihre Markenfarbe und Kontaktinformationen an. Sie können Vorlagen jederzeit wechseln — bestehende Angebote werden beim erneuten Download aktualisiert.",
+      "step1": "Modern — Klare Linien, großzügiger Weißraum, zeitgemäßes Gefühl. Am besten für technikaffine Kunden.",
+      "step2": "Bold — Starke Typografie, kontrastreicher Aufbau. Ideal um einen starken Eindruck zu machen.",
+      "step3": "Classic — Traditionelles Angebotsformat mit strukturierten Abschnitten. Ideal für Unternehmenskunden.",
+      "step4": "Minimal — Reduziertes Design mit Fokus auf Inhalt. Perfekt wenn Einfachheit zählt.",
+      "tip": "Sie können eine Standard-Vorlage in den Einstellungen festlegen, aber sie pro Angebot überschreiben. Ihre Markenfarbe wird auf Überschriften, Akzente und Rahmen angewendet."
+    },
+    "termsDetails": {
+      "title": "Bedingungen & Details",
+      "content1": "Jedes Angebot kann anpassbare Geschäftsbedingungen, Zahlungsbedingungen sowie Listen mit Ein- und Ausschlüssen enthalten. Diese Abschnitte bauen Vertrauen auf und schaffen klare Erwartungen.",
+      "content2": "Sie können Standardwerte festlegen, die für alle neuen Angebote gelten, und diese dann pro Angebot anpassen.",
+      "step1": "Gehen Sie zu Einstellungen → Angebotsstandards, um Ihre Standardbedingungen festzulegen",
+      "step2": "Bearbeiten Sie Einschlüsse: was im angebotenen Preis enthalten ist (z. B. Lieferung, Aufbau, Bediener)",
+      "step3": "Bearbeiten Sie Ausschlüsse: was nicht enthalten ist (z. B. Stromversorgung, Zugangsgebühren)",
+      "step4": "Legen Sie Zahlungsbedingungen fest: Anzahlungsprozentsatz, Zahlungsplan, akzeptierte Methoden",
+      "step5": "Fügen Sie Ihre vollständigen AGB hinzu — diese erscheinen auf der letzten Seite des PDF",
+      "tip": "Jedes Angebot hat seine eigene Kopie dieser Bedingungen. Änderungen an den Standards betreffen keine bestehenden Angebote — nur neue."
+    },
+    "billingPlans": {
+      "title": "Abrechnung & Pläne",
+      "content1": "CueQuote bietet flexible Pläne passend zu Ihrer Unternehmensgröße. Starten Sie kostenlos und wachsen Sie.",
+      "step1": "Free — 3 Angebote/Monat, 1 Benutzer, einfache PDF-Vorlage",
+      "step2": "Starter (19 $/Monat) — 20 Angebote/Monat, 2 Benutzer, alle Vorlagen, Kundenverwaltung",
+      "step3": "Pro (49 $/Monat) — Unbegrenzte Angebote, 5 Benutzer, individuelles Branding, Prioritäts-Support",
+      "step4": "Business (99 $/Monat) — Alles aus Pro + Teamverwaltung, API-Zugang, dedizierter Support",
+      "tip": "Sie können Ihren Plan jederzeit unter Einstellungen → Abrechnung ändern. Änderungen treten zu Beginn des nächsten Abrechnungszyklus in Kraft."
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "content1": "Auf der Einstellungsseite konfigurieren Sie alles in Ihrem CueQuote-Workspace. Aktuelle Einstellungen stellen sicher, dass jedes Angebot Ihre Marke genau widerspiegelt.",
+      "step1": "Firmenprofil — Firmenname, Adresse, Telefon, E-Mail und Website",
+      "step2": "Logo — Laden Sie Ihr Firmenlogo hoch (PNG oder SVG empfohlen, max. 2 MB)",
+      "step3": "Markenfarbe — Wählen Sie einen Hex-Farbcode passend zu Ihrer Marke; wird auf alle PDF-Vorlagen angewendet",
+      "step4": "Währung — Legen Sie Ihre Standardwährung fest (USD, EUR, GBP, PLN und mehr)",
+      "step5": "Sprache — Legen Sie die Angebotssprache fest (betrifft PDF-Überschriften und -Beschriftungen)",
+      "step6": "Angebotsstandards — Standardvorlage, Bedingungen, Einschlüsse, Ausschlüsse und Zahlungsbedingungen",
+      "tip": "Ihr Logo sieht am besten bei einer Mindestbreite von 400 px aus. CueQuote passt die Größe automatisch für das PDF an."
+    }
+  },
+  "changelog": {
+    "badge": "Änderungsprotokoll",
+    "heading": "Was ist",
+    "headingHighlight": "Neu",
+    "subtitle": "Die neuesten Aktualisierungen, Verbesserungen und Fehlerbehebungen für CueQuote",
+    "empty": "Noch keine Einträge im Änderungsprotokoll. Schauen Sie bald wieder vorbei!",
+    "typeNew": "Neu",
+    "typeImproved": "Verbessert",
+    "typeFixed": "Behoben",
+    "typeDeprecated": "Veraltet"
+  },
+  "tutorialDetail": {
+    "backToTutorials": "Zurück zu den Tutorials",
+    "whatYouLearn": "Was Sie lernen werden",
+    "proTip": "Profi-Tipp:",
+    "nextTutorial": "Nächstes Tutorial",
+    "allTutorials": "Alle Tutorials",
+    "beginner": "Anfänger",
+    "intermediate": "Fortgeschritten",
+    "advanced": "Experte"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "subtitle": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "goHome": "Zur Startseite",
+    "contactUs": "Kontakt"
   }
 }

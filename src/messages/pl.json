@@ -385,5 +385,122 @@
     "ctaSubtitle": "Sprawdź naszą dokumentację lub skontaktuj się z nami",
     "viewDocs": "Zobacz dokumentację",
     "contactUs": "Skontaktuj się"
+  },
+  "docs": {
+    "badge": "Dokumentacja",
+    "heading": "Pierwsze kroki z",
+    "headingHighlight": "CueQuote",
+    "subtitle": "Dowiedz się, jak tworzyć profesjonalne oferty AV w kilka minut",
+    "toc": "Na tej stronie",
+    "tip": "Wskazówka",
+    "quickStart": {
+      "title": "Szybki start",
+      "content1": "Rozpoczęcie pracy z CueQuote zajmuje tylko kilka minut. Wykonaj pięć poniższych kroków, a Twoja pierwsza profesjonalna oferta AV będzie gotowa do wysłania.",
+      "step1": "Załóż darmowe konto na app.cuequote.com",
+      "step2": "Uzupełnij profil firmy i prześlij logo",
+      "step3": "Ustaw kolor marki — zostanie automatycznie zastosowany do wszystkich Twoich ofert",
+      "step4": "Przejdź do sekcji Oferty i kliknij «Nowa oferta»",
+      "step5": "Opisz wydarzenie prostym językiem i pozwól AI CueQuote wygenerować kompletną listę sprzętu z cenami",
+      "tip": "Na darmowym planie możesz utworzyć do 3 ofert miesięcznie — karta kredytowa nie jest wymagana."
+    },
+    "creatingProposals": {
+      "title": "Tworzenie ofert",
+      "content1": "Silnik ofertowy CueQuote oparty na AI zamienia prosty opis wydarzenia w szczegółową, profesjonalną ofertę w kilka sekund.",
+      "content2": "Zacznij od opisania wydarzenia: typ miejsca, wielkość widowni, rodzaj potrzebnej produkcji (dźwięk, oświetlenie, wideo, scena) i wszelkie specjalne wymagania. Im więcej szczegółów podasz, tym dokładniejsza będzie wygenerowana lista sprzętu.",
+      "step1": "Kliknij «Nowa oferta» na panelu głównym",
+      "step2": "Wpisz opis wydarzenia — podaj jak najwięcej szczegółów o miejscu i wymaganiach",
+      "step3": "AI CueQuote generuje kompletną listę sprzętu z ilościami i cenami",
+      "step4": "Przejrzyj i edytuj: dodaj, usuń lub zmień dowolne pozycje",
+      "step5": "Pobierz jako markowy PDF lub udostępnij przez unikalny link",
+      "tip": "Użyj funkcji linku udostępniania, aby klienci mogli przeglądać oferty online — mogą zatwierdzić je bezpośrednio z linku."
+    },
+    "equipmentCatalog": {
+      "title": "Katalog sprzętu",
+      "content1": "Katalog sprzętu to podstawa dokładnych ofert. CueQuote pozwala prowadzić szczegółowy inwentarz sprzętu z domyślnymi cenami.",
+      "content2": "Sprzęt jest podzielony na kategorie: Audio, Oświetlenie, Wideo, Scena, Rigging, Zasilanie i dystrybucja oraz Własne. Każdy element może mieć nazwę, opis, domyślną cenę wynajmu i wewnętrzne notatki.",
+      "step1": "Przejdź do Ustawienia → Katalog sprzętu",
+      "step2": "Dodaj pozycje ręcznie lub zaimportuj z arkusza CSV",
+      "step3": "Ustaw domyślne ceny wynajmu dla każdego elementu — będą one używane przy generowaniu ofert przez AI",
+      "step4": "Uporządkuj elementy w kategorie dla łatwego przeglądania",
+      "tip": "Podczas importu z CSV użyj kolumn: Nazwa, Kategoria, Cena, Opis. CueQuote zmapuje je automatycznie."
+    },
+    "clients": {
+      "title": "Klienci",
+      "content1": "Przechowuj wszystkie informacje o klientach w jednym miejscu. CueQuote obsługuje różne typy klientów, aby pomóc Ci kategoryzować relacje biznesowe.",
+      "content2": "Każdy rekord klienta przechowuje dane kontaktowe, informacje o firmie i jest powiązany ze wszystkimi ofertami — dając pełną historię współpracy ofertowej.",
+      "step1": "Przejdź do Klienci i kliknij «Dodaj klienta»",
+      "step2": "Wypełnij dane kontaktowe i firmowe",
+      "step3": "Wybierz typ klienta: Bezpośredni, Agencja, Miejsce lub Korporacja",
+      "step4": "Powiąż klienta z nowymi ofertami z ekranu tworzenia oferty",
+      "tip": "Typy klientów pomagają śledzić źródło Twojego biznesu. Użyj typu «Agencja» dla firm produkcyjnych, które podzlecają Twoje usługi."
+    },
+    "pdfTemplates": {
+      "title": "Szablony PDF",
+      "content1": "CueQuote oferuje cztery profesjonalnie zaprojektowane szablony PDF, aby Twoje oferty zawsze wyglądały elegancko i zgodnie z marką.",
+      "content2": "Każdy szablon automatycznie stosuje logo firmy, kolor marki i dane kontaktowe. Możesz zmienić szablon w dowolnym momencie — istniejące oferty zaktualizują się po ponownym pobraniu.",
+      "step1": "Modern — Czyste linie, dużo białej przestrzeni, współczesny charakter. Najlepszy dla klientów technologicznych.",
+      "step2": "Bold — Wyrazista typografia, kontrastowy układ. Świetny do robienia wrażenia.",
+      "step3": "Classic — Tradycyjny format oferty ze strukturalnymi sekcjami. Idealny dla klientów korporacyjnych.",
+      "step4": "Minimal — Oszczędny design skupiony na treści. Idealny gdy liczy się prostota.",
+      "tip": "Możesz ustawić domyślny szablon w Ustawieniach, ale nadpisać go dla poszczególnych ofert. Kolor marki jest stosowany do nagłówków, akcentów i obramowań."
+    },
+    "termsDetails": {
+      "title": "Warunki i szczegóły",
+      "content1": "Każda oferta może zawierać konfigurowalne warunki, terminy płatności oraz listy tego, co jest i nie jest wliczone. Te sekcje budują zaufanie i jasno określają oczekiwania.",
+      "content2": "Możesz ustawić domyślne wartości dla wszystkich nowych ofert, a następnie dostosować je indywidualnie.",
+      "step1": "Przejdź do Ustawienia → Domyślne oferty, aby ustawić standardowe warunki",
+      "step2": "Edytuj wliczenia: co jest objęte ceną (np. dostawa, montaż, operator)",
+      "step3": "Edytuj wyłączenia: co nie jest wliczone (np. zasilanie, opłaty za dostęp do miejsca)",
+      "step4": "Ustaw warunki płatności: procent zaliczki, harmonogram płatności, akceptowane metody",
+      "step5": "Dodaj pełne Warunki — pojawią się na ostatniej stronie PDF",
+      "tip": "Każda oferta ma własną kopię tych warunków. Zmiana domyślnych nie wpłynie na istniejące oferty — tylko na nowe."
+    },
+    "billingPlans": {
+      "title": "Rozliczenia i plany",
+      "content1": "CueQuote oferuje elastyczne plany dopasowane do wielkości Twojej firmy. Zacznij za darmo i rozwijaj się.",
+      "step1": "Free — 3 oferty/miesiąc, 1 użytkownik, podstawowy szablon PDF",
+      "step2": "Starter (19 $/mies.) — 20 ofert/miesiąc, 2 użytkowników, wszystkie szablony, zarządzanie klientami",
+      "step3": "Pro (49 $/mies.) — Nieograniczone oferty, 5 użytkowników, niestandardowy branding, priorytetowe wsparcie",
+      "step4": "Business (99 $/mies.) — Wszystko z Pro + zarządzanie zespołem, dostęp do API, dedykowane wsparcie",
+      "tip": "Możesz zmienić plan w dowolnym momencie w Ustawienia → Rozliczenia. Zmiany wchodzą w życie na początku następnego cyklu rozliczeniowego."
+    },
+    "settings": {
+      "title": "Ustawienia",
+      "content1": "Strona Ustawień to miejsce, gdzie konfigurujesz wszystko w swoim workspace CueQuote. Aktualne ustawienia zapewniają, że każda oferta dokładnie odzwierciedla Twoją markę.",
+      "step1": "Profil firmy — Nazwa firmy, adres, telefon, e-mail i strona internetowa",
+      "step2": "Logo — Prześlij logo firmy (zalecane PNG lub SVG, maks. 2 MB)",
+      "step3": "Kolor marki — Wybierz kolor hex pasujący do Twojej marki; stosowany do wszystkich szablonów PDF",
+      "step4": "Waluta — Ustaw domyślną walutę (USD, EUR, GBP, PLN i więcej)",
+      "step5": "Język — Ustaw język oferty (wpływa na nagłówki i etykiety PDF)",
+      "step6": "Domyślne oferty — Domyślny szablon, warunki, wliczenia, wyłączenia i warunki płatności",
+      "tip": "Logo wygląda najlepiej przy minimalnej szerokości 400 px. CueQuote automatycznie dostosuje rozmiar do PDF."
+    }
+  },
+  "changelog": {
+    "badge": "Historia zmian",
+    "heading": "Co",
+    "headingHighlight": "nowego",
+    "subtitle": "Najnowsze aktualizacje, ulepszenia i poprawki w CueQuote",
+    "empty": "Brak wpisów w historii zmian. Sprawdź ponownie wkrótce!",
+    "typeNew": "Nowe",
+    "typeImproved": "Ulepszone",
+    "typeFixed": "Naprawione",
+    "typeDeprecated": "Wycofane"
+  },
+  "tutorialDetail": {
+    "backToTutorials": "Powrót do poradników",
+    "whatYouLearn": "Czego się nauczysz",
+    "proTip": "Wskazówka:",
+    "nextTutorial": "Następny poradnik",
+    "allTutorials": "Wszystkie poradniki",
+    "beginner": "Początkujący",
+    "intermediate": "Średniozaawansowany",
+    "advanced": "Zaawansowany"
+  },
+  "notFound": {
+    "title": "Nie znaleziono strony",
+    "subtitle": "Strona, której szukasz, nie istnieje lub została przeniesiona.",
+    "goHome": "Strona główna",
+    "contactUs": "Kontakt"
   }
 }

@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-export default function NotFound() {
+export default async function NotFound() {
+  const t = await getTranslations("notFound");
+
   return (
     <div
       style={{
@@ -75,7 +78,7 @@ export default function NotFound() {
           letterSpacing: -0.5,
         }}
       >
-        Page not found
+        {t("title")}
       </h1>
 
       {/* Subtitle */}
@@ -88,7 +91,7 @@ export default function NotFound() {
           marginBottom: 40,
         }}
       >
-        The page you&apos;re looking for doesn&apos;t exist or has been moved.
+        {t("subtitle")}
       </p>
 
       {/* Buttons */}
@@ -117,7 +120,7 @@ export default function NotFound() {
             minWidth: 140,
           }}
         >
-          Go Home
+          {t("goHome")}
         </Link>
         <Link
           href="/contact"
@@ -137,7 +140,7 @@ export default function NotFound() {
             minWidth: 140,
           }}
         >
-          Contact Us
+          {t("contactUs")}
         </Link>
       </div>
     </div>

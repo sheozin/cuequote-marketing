@@ -385,5 +385,122 @@
     "ctaSubtitle": "Consultez notre documentation ou contactez-nous",
     "viewDocs": "Voir la documentation",
     "contactUs": "Nous contacter"
+  },
+  "docs": {
+    "badge": "Documentation",
+    "heading": "Premiers pas avec",
+    "headingHighlight": "CueQuote",
+    "subtitle": "Apprenez à créer des devis AV professionnels en quelques minutes",
+    "toc": "Sur cette page",
+    "tip": "Conseil",
+    "quickStart": {
+      "title": "Démarrage rapide",
+      "content1": "Commencer avec CueQuote ne prend que quelques minutes. Suivez ces cinq étapes et votre premier devis AV professionnel sera prêt à être partagé.",
+      "step1": "Créez un compte gratuit sur app.cuequote.com",
+      "step2": "Créez votre profil d'entreprise et téléchargez votre logo",
+      "step3": "Définissez votre couleur de marque — elle sera appliquée automatiquement à tous vos devis",
+      "step4": "Accédez à Devis et cliquez sur « Nouveau devis »",
+      "step5": "Décrivez l'événement en langage courant et laissez l'IA de CueQuote générer une liste complète d'équipements avec les prix",
+      "tip": "Vous pouvez créer jusqu'à 3 devis par mois avec le plan gratuit — aucune carte bancaire requise."
+    },
+    "creatingProposals": {
+      "title": "Créer des devis",
+      "content1": "Le moteur de devis de CueQuote, propulsé par l'IA, transforme une simple description d'événement en un devis détaillé et professionnel en quelques secondes.",
+      "content2": "Commencez par décrire l'événement : le type de lieu, la taille du public, le type de production nécessaire (son, éclairage, vidéo, scène) et toute exigence particulière. Plus vous fournissez de détails, plus la liste d'équipements générée sera précise.",
+      "step1": "Cliquez sur « Nouveau devis » depuis votre tableau de bord",
+      "step2": "Saisissez la description de l'événement — soyez aussi précis que possible sur le lieu et les exigences",
+      "step3": "L'IA de CueQuote génère une liste complète d'équipements avec quantités et prix",
+      "step4": "Vérifiez et modifiez : ajoutez, supprimez ou ajustez les lignes",
+      "step5": "Téléchargez en PDF à votre marque ou partagez via un lien unique",
+      "tip": "Utilisez la fonction de lien de partage pour permettre aux clients de consulter les devis en ligne — ils peuvent approuver directement depuis le lien."
+    },
+    "equipmentCatalog": {
+      "title": "Catalogue d'équipements",
+      "content1": "Votre catalogue d'équipements est la base de devis précis. CueQuote vous permet de maintenir un inventaire détaillé de votre matériel avec des prix par défaut.",
+      "content2": "L'équipement est organisé en catégories : Audio, Éclairage, Vidéo, Scène, Rigging, Alimentation & Distribution et Personnalisé. Chaque élément peut avoir un nom, une description, un prix de location par défaut et des notes internes.",
+      "step1": "Allez dans Paramètres → Catalogue d'équipements",
+      "step2": "Ajoutez des éléments manuellement ou importez depuis un fichier CSV",
+      "step3": "Définissez les prix de location par défaut par élément — ils seront utilisés lors de la génération de devis par l'IA",
+      "step4": "Organisez les éléments en catégories pour faciliter la navigation",
+      "tip": "Lors de l'import CSV, utilisez les colonnes : Nom, Catégorie, Prix, Description. CueQuote les associera automatiquement."
+    },
+    "clients": {
+      "title": "Clients",
+      "content1": "Conservez toutes les informations de vos clients en un seul endroit. CueQuote prend en charge différents types de clients pour vous aider à catégoriser vos relations commerciales.",
+      "content2": "Chaque fiche client stocke les coordonnées, les informations de l'entreprise et est liée à tous leurs devis — vous offrant un historique complet de votre relation de devis.",
+      "step1": "Accédez à Clients et cliquez sur « Ajouter un client »",
+      "step2": "Remplissez les coordonnées et les informations de l'entreprise",
+      "step3": "Sélectionnez le type de client : Direct, Agence, Lieu ou Entreprise",
+      "step4": "Liez le client aux nouveaux devis depuis l'écran de création de devis",
+      "tip": "Les types de clients vous aident à suivre d'où vient votre activité. Utilisez le type « Agence » pour les sociétés de production qui sous-traitent vos services."
+    },
+    "pdfTemplates": {
+      "title": "Modèles PDF",
+      "content1": "CueQuote propose quatre modèles PDF conçus professionnellement pour que vos devis soient toujours élégants et conformes à votre marque.",
+      "content2": "Chaque modèle applique automatiquement votre logo, votre couleur de marque et vos coordonnées. Vous pouvez changer de modèle à tout moment — les devis existants seront mis à jour lors du prochain téléchargement.",
+      "step1": "Modern — Lignes épurées, espace blanc généreux, style contemporain. Idéal pour les clients technophiles.",
+      "step2": "Bold — Typographie forte, mise en page à fort contraste. Parfait pour marquer les esprits.",
+      "step3": "Classic — Format de devis traditionnel avec des sections structurées. Idéal pour les clients d'entreprise.",
+      "step4": "Minimal — Design épuré axé sur le contenu. Parfait quand la simplicité compte.",
+      "tip": "Vous pouvez définir un modèle par défaut dans les Paramètres, mais le remplacer par devis si nécessaire. Votre couleur de marque est appliquée aux titres, accents et bordures."
+    },
+    "termsDetails": {
+      "title": "Conditions et détails",
+      "content1": "Chaque devis peut inclure des conditions générales personnalisables, des modalités de paiement et des listes d'inclusions/exclusions. Ces sections renforcent la confiance et définissent des attentes claires avec vos clients.",
+      "content2": "Vous pouvez définir des valeurs par défaut pour tous les nouveaux devis, puis les personnaliser par devis selon les besoins.",
+      "step1": "Allez dans Paramètres → Valeurs par défaut des devis pour définir vos conditions standard",
+      "step2": "Modifiez les inclusions : ce qui est couvert par le prix (ex. : livraison, installation, opérateur)",
+      "step3": "Modifiez les exclusions : ce qui n'est pas inclus (ex. : alimentation électrique, frais d'accès au lieu)",
+      "step4": "Définissez les modalités de paiement : pourcentage d'acompte, échéancier, méthodes acceptées",
+      "step5": "Ajoutez vos conditions générales complètes — elles apparaissent sur la dernière page du PDF",
+      "tip": "Chaque devis a sa propre copie de ces conditions. Modifier les valeurs par défaut n'affectera pas les devis existants — seulement les nouveaux."
+    },
+    "billingPlans": {
+      "title": "Facturation et forfaits",
+      "content1": "CueQuote propose des forfaits flexibles adaptés à la taille de votre entreprise. Commencez gratuitement et évoluez selon vos besoins.",
+      "step1": "Gratuit — 3 devis/mois, 1 utilisateur, modèle PDF de base",
+      "step2": "Starter (19 $/mois) — 20 devis/mois, 2 utilisateurs, tous les modèles, gestion des clients",
+      "step3": "Pro (49 $/mois) — Devis illimités, 5 utilisateurs, branding personnalisé, support prioritaire",
+      "step4": "Business (99 $/mois) — Tout de Pro + gestion d'équipe, accès API, support dédié",
+      "tip": "Vous pouvez changer de forfait à tout moment depuis Paramètres → Facturation. Les modifications prennent effet au début du prochain cycle de facturation."
+    },
+    "settings": {
+      "title": "Paramètres",
+      "content1": "La page Paramètres est l'endroit où vous configurez tout dans votre espace CueQuote. Des paramètres à jour garantissent que chaque devis reflète fidèlement votre marque.",
+      "step1": "Profil de l'entreprise — Nom, adresse, téléphone, e-mail et site web",
+      "step2": "Logo — Téléchargez votre logo d'entreprise (PNG ou SVG recommandé, max 2 Mo)",
+      "step3": "Couleur de marque — Choisissez un code couleur hex correspondant à votre marque ; appliqué à tous les modèles PDF",
+      "step4": "Devise — Définissez votre devise par défaut (USD, EUR, GBP, PLN et plus)",
+      "step5": "Langue — Définissez la langue des devis (affecte les titres et libellés du PDF)",
+      "step6": "Valeurs par défaut des devis — Modèle par défaut, conditions, inclusions, exclusions et modalités de paiement",
+      "tip": "Votre logo est optimal à une largeur minimale de 400 px. CueQuote le redimensionnera automatiquement pour le PDF."
+    }
+  },
+  "changelog": {
+    "badge": "Journal des modifications",
+    "heading": "Quoi de",
+    "headingHighlight": "neuf",
+    "subtitle": "Les dernières mises à jour, améliorations et corrections de CueQuote",
+    "empty": "Aucune entrée dans le journal des modifications pour le moment. Revenez bientôt !",
+    "typeNew": "Nouveau",
+    "typeImproved": "Amélioré",
+    "typeFixed": "Corrigé",
+    "typeDeprecated": "Obsolète"
+  },
+  "tutorialDetail": {
+    "backToTutorials": "Retour aux tutoriels",
+    "whatYouLearn": "Ce que vous apprendrez",
+    "proTip": "Astuce :",
+    "nextTutorial": "Tutoriel suivant",
+    "allTutorials": "Tous les tutoriels",
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "subtitle": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "goHome": "Retour à l'accueil",
+    "contactUs": "Nous contacter"
   }
 }

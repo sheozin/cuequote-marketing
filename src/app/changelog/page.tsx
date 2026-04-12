@@ -3,6 +3,7 @@ import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { Sparkles } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
+import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Changelog — What's New",
@@ -10,23 +11,24 @@ export const metadata: Metadata = {
   alternates: { canonical: "/changelog" },
 };
 
-const TYPE_COLORS: Record<
-  string,
-  { bg: string; text: string; label: string }
-> = {
-  new: { bg: "#ecfdf5", text: "#10b981", label: "New" },
-  improved: { bg: "#eff6ff", text: "#3b82f6", label: "Improved" },
-  fixed: { bg: "#fffbeb", text: "#d97706", label: "Fixed" },
-  deprecated: { bg: "#fef2f2", text: "#ef4444", label: "Deprecated" },
-};
-
 export default async function ChangelogPage() {
+  const t = await getTranslations("changelog");
   const supabase = await createClient();
   const { data: entries } = await supabase
     .from("cms_changelog")
     .select("*")
     .eq("is_published", true)
     .order("published_at", { ascending: false });
+
+  const TYPE_COLORS: Record<
+    string,
+    { bg: string; text: string; labelKey: string }
+  > = {
+    new: { bg: "#ecfdf5", text: "#10b981", labelKey: "typeNew" },
+    improved: { bg: "#eff6ff", text: "#3b82f6", labelKey: "typeImproved" },
+    fixed: { bg: "#fffbeb", text: "#d97706", labelKey: "typeFixed" },
+    deprecated: { bg: "#fef2f2", text: "#ef4444", labelKey: "typeDeprecated" },
+  };
 
   return (
     <>
@@ -80,7 +82,7 @@ export default async function ChangelogPage() {
               marginBottom: 28,
             }}
           >
-            <Sparkles size={12} /> Changelog
+            <Sparkles size={12} /> {t("badge")}
           </div>
           <h1
             style={{
@@ -93,7 +95,7 @@ export default async function ChangelogPage() {
               letterSpacing: -1,
             }}
           >
-            What&apos;s <span style={{ color: "#10b981" }}>New</span>
+            {t("heading")} <span style={{ color: "#10b981" }}>{t("headingHighlight")}</span>
           </h1>
           <p
             style={{
@@ -104,7 +106,7 @@ export default async function ChangelogPage() {
               margin: "0 auto",
             }}
           >
-            The latest updates, improvements, and fixes to CueQuote
+            {t("subtitle")}
           </p>
         </div>
       </section>
@@ -121,7 +123,7 @@ export default async function ChangelogPage() {
                 fontSize: 17,
               }}
             >
-              No changelog entries yet. Check back soon!
+              {t("empty")}
             </div>
           ) : (
             <div
@@ -220,7 +222,7 @@ export default async function ChangelogPage() {
                               letterSpacing: 0.5,
                             }}
                           >
-                            {typeInfo.label}
+                            {t(typeInfo.labelKey)}
                           </span>
 
                           {/* Date */}

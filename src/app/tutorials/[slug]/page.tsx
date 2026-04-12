@@ -4,6 +4,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { TUTORIALS } from '@/lib/tutorials'
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 
 export async function generateStaticParams() {
   return TUTORIALS.map(t => ({ slug: t.slug }))
@@ -27,6 +28,7 @@ const DIFFICULTY_COLORS: Record<string, { bg: string; text: string }> = {
 }
 
 export default async function TutorialPage({ params }: { params: Promise<{ slug: string }> }) {
+  const t = await getTranslations('tutorialDetail')
   const { slug } = await params
   const tutorial = TUTORIALS.find(t => t.slug === slug)
   if (!tutorial) notFound()
@@ -34,6 +36,8 @@ export default async function TutorialPage({ params }: { params: Promise<{ slug:
   const currentIndex = TUTORIALS.findIndex(t => t.slug === slug)
   const nextTutorial = currentIndex < TUTORIALS.length - 1 ? TUTORIALS[currentIndex + 1] : null
   const diff = DIFFICULTY_COLORS[tutorial.difficulty]
+
+  const difficultyLabel = t(tutorial.difficulty as 'beginner' | 'intermediate' | 'advanced')
 
   return (
     <>
@@ -45,7 +49,7 @@ export default async function TutorialPage({ params }: { params: Promise<{ slug:
             display: 'inline-flex', alignItems: 'center', gap: 6,
             fontSize: 14, color: '#10b981', textDecoration: 'none', marginBottom: 32, fontWeight: 500,
           }}>
-            ← Back to Tutorials
+            &larr; {t('backToTutorials')}
           </Link>
 
           {/* Header */}
@@ -55,10 +59,10 @@ export default async function TutorialPage({ params }: { params: Promise<{ slug:
                 fontSize: 12, fontWeight: 600, color: diff.text,
                 background: diff.bg, padding: '4px 12px', borderRadius: 12,
               }}>
-                {tutorial.difficulty.charAt(0).toUpperCase() + tutorial.difficulty.slice(1)}
+                {difficultyLabel}
               </span>
               <span style={{ fontSize: 13, color: '#9ca3af' }}>{tutorial.duration}</span>
-              <span style={{ fontSize: 13, color: '#d1d5db' }}>•</span>
+              <span style={{ fontSize: 13, color: '#d1d5db' }}>&bull;</span>
               <span style={{ fontSize: 13, color: '#9ca3af' }}>{tutorial.category}</span>
             </div>
 
@@ -83,7 +87,7 @@ export default async function TutorialPage({ params }: { params: Promise<{ slug:
               fontFamily: 'var(--font-dm-sans)', fontWeight: 700, fontSize: 16,
               color: '#08172E', marginBottom: 16,
             }}>
-              What you&apos;ll learn
+              {t('whatYouLearn')}
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {tutorial.whatYouLearn.map((item, i) => (
@@ -91,7 +95,7 @@ export default async function TutorialPage({ params }: { params: Promise<{ slug:
                   display: 'flex', alignItems: 'flex-start', gap: 10,
                   marginBottom: 10, fontSize: 15, color: '#374151',
                 }}>
-                  <span style={{ color: '#10b981', fontWeight: 700, flexShrink: 0, marginTop: 1 }}>✓</span>
+                  <span style={{ color: '#10b981', fontWeight: 700, flexShrink: 0, marginTop: 1 }}>&#10003;</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -126,9 +130,9 @@ export default async function TutorialPage({ params }: { params: Promise<{ slug:
                       background: '#ecfdf5', borderRadius: 12,
                       borderLeft: '3px solid #10b981',
                     }}>
-                      <span style={{ fontSize: 16, flexShrink: 0 }}>💡</span>
+                      <span style={{ fontSize: 16, flexShrink: 0 }}>&#128161;</span>
                       <p style={{ fontSize: 14, color: '#065f46', lineHeight: 1.6, margin: 0 }}>
-                        <strong>Pro tip:</strong> {step.tip}
+                        <strong>{t('proTip')}</strong> {step.tip}
                       </p>
                     </div>
                   )}
@@ -146,7 +150,7 @@ export default async function TutorialPage({ params }: { params: Promise<{ slug:
             }}>
               <div>
                 <span style={{ fontSize: 12, color: '#9ca3af', textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600 }}>
-                  Next Tutorial
+                  {t('nextTutorial')}
                 </span>
                 <h4 style={{
                   fontFamily: 'var(--font-dm-sans)', fontWeight: 700, fontSize: 18,
@@ -155,14 +159,14 @@ export default async function TutorialPage({ params }: { params: Promise<{ slug:
                   {nextTutorial.title}
                 </h4>
               </div>
-              <span style={{ color: '#10b981', fontSize: 20 }}>→</span>
+              <span style={{ color: '#10b981', fontSize: 20 }}>&rarr;</span>
             </Link>
           )}
 
           {/* Back to all */}
           <div style={{ textAlign: 'center', marginTop: 32 }}>
             <Link href="/tutorials" style={{ fontSize: 14, color: '#10b981', textDecoration: 'none', fontWeight: 500 }}>
-              ← All Tutorials
+              &larr; {t('allTutorials')}
             </Link>
           </div>
         </div>

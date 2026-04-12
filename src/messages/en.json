@@ -385,5 +385,122 @@
     "ctaSubtitle": "Check our documentation or reach out to us",
     "viewDocs": "View Documentation",
     "contactUs": "Contact Us"
+  },
+  "docs": {
+    "badge": "Documentation",
+    "heading": "Getting Started with",
+    "headingHighlight": "CueQuote",
+    "subtitle": "Learn how to create professional AV proposals in minutes",
+    "toc": "On this page",
+    "tip": "Tip",
+    "quickStart": {
+      "title": "Quick Start",
+      "content1": "Getting started with CueQuote takes just a few minutes. Follow these five steps and you'll have your first professional AV proposal ready to share.",
+      "step1": "Sign up for a free account at app.cuequote.com",
+      "step2": "Create your company profile and upload your logo",
+      "step3": "Set your brand color — this will be applied to all your proposals automatically",
+      "step4": "Navigate to Proposals and click \"New Proposal\"",
+      "step5": "Describe the event in plain language and let CueQuote's AI generate a complete equipment list with pricing",
+      "tip": "You can create up to 3 proposals per month on the free plan — no credit card required."
+    },
+    "creatingProposals": {
+      "title": "Creating Proposals",
+      "content1": "CueQuote's AI-powered proposal engine turns a simple event description into a detailed, professional quote in seconds.",
+      "content2": "Start by describing the event: the venue type, audience size, what kind of production is needed (sound, lighting, video, staging), and any special requirements. The more detail you provide, the more accurate the generated equipment list will be.",
+      "step1": "Click \"New Proposal\" from your dashboard",
+      "step2": "Enter the event description — be as specific as possible about the venue and requirements",
+      "step3": "CueQuote's AI generates a complete equipment list with quantities and pricing",
+      "step4": "Review and edit: add, remove, or adjust any line items",
+      "step5": "Download as a branded PDF or share via a unique link",
+      "tip": "Use the share link feature to let clients view proposals online — they can approve directly from the link."
+    },
+    "equipmentCatalog": {
+      "title": "Equipment Catalog",
+      "content1": "Your equipment catalog is the backbone of accurate proposals. CueQuote lets you maintain a detailed inventory of your gear with default pricing.",
+      "content2": "Equipment is organized into categories: Audio, Lighting, Video, Staging, Rigging, Power & Distribution, and Custom. Each item can have a name, description, default rental price, and internal notes.",
+      "step1": "Go to Settings → Equipment Catalog",
+      "step2": "Add items manually or import from a CSV spreadsheet",
+      "step3": "Set default rental prices per item — these will be used when AI generates proposals",
+      "step4": "Organize items into categories for easy browsing",
+      "tip": "When you import from CSV, use columns: Name, Category, Price, Description. CueQuote will map them automatically."
+    },
+    "clients": {
+      "title": "Clients",
+      "content1": "Keep all your client information organized in one place. CueQuote supports different client types to help you categorize your business relationships.",
+      "content2": "Each client record stores contact details, company information, and is linked to all their proposals — giving you a complete history of your quoting relationship.",
+      "step1": "Navigate to Clients and click \"Add Client\"",
+      "step2": "Fill in contact and company details",
+      "step3": "Select the client type: Direct, Agency, Venue, or Corporate",
+      "step4": "Link the client to new proposals from the proposal creation screen",
+      "tip": "Client types help you track where your business comes from. Use the \"Agency\" type for production companies that subcontract your services."
+    },
+    "pdfTemplates": {
+      "title": "PDF Templates",
+      "content1": "CueQuote offers four professionally designed PDF templates so your proposals always look polished and on-brand.",
+      "content2": "Each template automatically applies your company logo, brand color, and contact information. You can switch templates at any time — existing proposals will update to use the new template when re-downloaded.",
+      "step1": "Modern — Clean lines, generous white space, contemporary feel. Best for tech-forward clients.",
+      "step2": "Bold — Strong typography, high-contrast layout. Great for making a statement.",
+      "step3": "Classic — Traditional proposal format with structured sections. Ideal for corporate clients.",
+      "step4": "Minimal — Stripped-back design focused on content. Perfect when simplicity matters.",
+      "tip": "You can set a default template in Settings, but override it per proposal if needed. Your brand color is applied to headings, accents, and borders."
+    },
+    "termsDetails": {
+      "title": "Terms & Details",
+      "content1": "Every proposal can include customizable terms and conditions, payment terms, and inclusion/exclusion lists. These sections build trust and set clear expectations with your clients.",
+      "content2": "You can set defaults that apply to all new proposals, then customize per proposal as needed.",
+      "step1": "Go to Settings → Proposal Defaults to set your standard terms",
+      "step2": "Edit inclusions: what's covered in the quoted price (e.g., delivery, setup, operator)",
+      "step3": "Edit exclusions: what's not included (e.g., power supply, venue access fees)",
+      "step4": "Set payment terms: deposit percentage, payment schedule, accepted methods",
+      "step5": "Add your full Terms & Conditions — these appear on the last page of the PDF",
+      "tip": "Each proposal has its own copy of these terms. Changing the defaults won't affect existing proposals — only new ones."
+    },
+    "billingPlans": {
+      "title": "Billing & Plans",
+      "content1": "CueQuote offers flexible plans to match your business size. Start free and upgrade as you grow.",
+      "step1": "Free — 3 proposals/month, 1 user, basic PDF template",
+      "step2": "Starter ($19/mo) — 20 proposals/month, 2 users, all templates, client management",
+      "step3": "Pro ($49/mo) — Unlimited proposals, 5 users, custom branding, priority support",
+      "step4": "Business ($99/mo) — Everything in Pro + team management, API access, dedicated support",
+      "tip": "You can upgrade or downgrade at any time from Settings → Billing. Changes take effect at the start of the next billing cycle."
+    },
+    "settings": {
+      "title": "Settings",
+      "content1": "The Settings page is where you configure everything about your CueQuote workspace. Keeping your settings up-to-date ensures every proposal reflects your brand accurately.",
+      "step1": "Company Profile — Business name, address, phone, email, and website",
+      "step2": "Logo — Upload your company logo (PNG or SVG recommended, max 2MB)",
+      "step3": "Brand Color — Choose a hex color that matches your brand; applied to all PDF templates",
+      "step4": "Currency — Set your default currency (USD, EUR, GBP, PLN, and more)",
+      "step5": "Language — Set the proposal language (affects PDF headings and labels)",
+      "step6": "Proposal Defaults — Default template, terms, inclusions, exclusions, and payment terms",
+      "tip": "Your logo looks best at a minimum of 400px wide. CueQuote will automatically resize it for the PDF."
+    }
+  },
+  "changelog": {
+    "badge": "Changelog",
+    "heading": "What's",
+    "headingHighlight": "New",
+    "subtitle": "The latest updates, improvements, and fixes to CueQuote",
+    "empty": "No changelog entries yet. Check back soon!",
+    "typeNew": "New",
+    "typeImproved": "Improved",
+    "typeFixed": "Fixed",
+    "typeDeprecated": "Deprecated"
+  },
+  "tutorialDetail": {
+    "backToTutorials": "Back to Tutorials",
+    "whatYouLearn": "What you'll learn",
+    "proTip": "Pro tip:",
+    "nextTutorial": "Next Tutorial",
+    "allTutorials": "All Tutorials",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Go Home",
+    "contactUs": "Contact Us"
   }
 }
