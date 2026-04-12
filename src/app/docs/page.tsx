@@ -61,6 +61,12 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
   },
+  {
+    id: "invoicing",
+    key: "invoicing",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
+  },
 ];
 
 export default async function DocsPage() {

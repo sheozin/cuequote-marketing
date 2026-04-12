@@ -222,6 +222,7 @@ export default async function HomePage() {
               { icon: <Sparkles size={22} />, titleKey: "aiTitle" as const, descKey: "aiDesc" as const },
               { icon: <FileText size={22} />, titleKey: "pdfTitle" as const, descKey: "pdfDesc" as const },
               { icon: <Share2 size={22} />, titleKey: "shareTitle" as const, descKey: "shareDesc" as const },
+              { icon: <CreditCard size={22} />, titleKey: "invoicingTitle" as const, descKey: "invoicingDesc" as const },
               { icon: <Package size={22} />, titleKey: "catalogTitle" as const, descKey: "catalogDesc" as const },
               { icon: <Globe size={22} />, titleKey: "currencyTitle" as const, descKey: "currencyDesc" as const },
               { icon: <TrendingUp size={22} />, titleKey: "analyticsTitle" as const, descKey: "analyticsDesc" as const },

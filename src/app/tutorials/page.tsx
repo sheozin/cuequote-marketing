@@ -28,6 +28,7 @@ const TUTORIALS: {
   { titleKey: "t6Title", descKey: "t6Desc", difficulty: "intermediate", duration: "4 min", category: "Proposals" },
   { titleKey: "t7Title", descKey: "t7Desc", difficulty: "beginner", duration: "3 min", category: "Sharing" },
   { titleKey: "t8Title", descKey: "t8Desc", difficulty: "intermediate", duration: "3 min", category: "Billing" },
+  { titleKey: "t9Title", descKey: "t9Desc", difficulty: "intermediate", duration: "4 min", category: "Billing" },
 ];
 
 const DIFFICULTY_STYLES: Record<Difficulty, { background: string; color: string }> = {
