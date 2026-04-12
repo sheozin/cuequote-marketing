@@ -27,8 +27,20 @@ export default async function Footer() {
               { label: t("howItWorks"), href: "/#how-it-works" },
               { label: t("faq"), href: "/#faq" },
               { label: t("changelog"), href: "/changelog" },
+            ].map(({ label, href }) => (
+              <Link key={href} href={href} style={{ display: "block", textDecoration: "none", color: "#94a3b8", fontSize: 14, marginBottom: 10 }}>
+                {label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 style={{ color: "#fff", fontSize: 13, fontWeight: 600, marginBottom: 16, textTransform: "uppercase", letterSpacing: 1 }}>{t("resources")}</h4>
+            {[
               { label: t("docs"), href: "/docs" },
               { label: t("tutorials"), href: "/tutorials" },
+              { label: t("blog"), href: "/blog" },
             ].map(({ label, href }) => (
               <Link key={href} href={href} style={{ display: "block", textDecoration: "none", color: "#94a3b8", fontSize: 14, marginBottom: 10 }}>
                 {label}
@@ -41,7 +53,6 @@ export default async function Footer() {
             <h4 style={{ color: "#fff", fontSize: 13, fontWeight: 600, marginBottom: 16, textTransform: "uppercase", letterSpacing: 1 }}>{t("company")}</h4>
             {[
               { label: t("about"), href: "/about" },
-              { label: t("blog"), href: "/blog" },
               { label: t("contact"), href: "/contact" },
             ].map(({ label, href }) => (
               <Link key={href} href={href} style={{ display: "block", textDecoration: "none", color: "#94a3b8", fontSize: 14, marginBottom: 10 }}>
