@@ -2,17 +2,27 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { TUTORIALS } from '@/lib/tutorials'
+import {
+  getAllSlugs,
+  getTutorialBySlug,
+  getTutorialNeighbors,
+} from '@/lib/tutorials'
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 
 export async function generateStaticParams() {
-  return TUTORIALS.map(t => ({ slug: t.slug }))
+  // Slugs are identical across languages (English URL paths). Return the EN list.
+  return getAllSlugs().map((slug) => ({ slug }))
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
   const { slug } = await params
-  const tutorial = TUTORIALS.find(t => t.slug === slug)
+  const locale = await getLocale()
+  const tutorial = getTutorialBySlug(slug, locale)
   if (!tutorial) return { title: 'Tutorial' }
   return {
     title: `${tutorial.title} — CueQuote Tutorials`,
@@ -27,14 +37,18 @@ const DIFFICULTY_COLORS: Record<string, { bg: string; text: string }> = {
   advanced: { bg: '#f5f3ff', text: '#8b5cf6' },
 }
 
-export default async function TutorialPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function TutorialPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
   const t = await getTranslations('tutorialDetail')
+  const locale = await getLocale()
   const { slug } = await params
-  const tutorial = TUTORIALS.find(t => t.slug === slug)
+  const tutorial = getTutorialBySlug(slug, locale)
   if (!tutorial) notFound()
 
-  const currentIndex = TUTORIALS.findIndex(t => t.slug === slug)
-  const nextTutorial = currentIndex < TUTORIALS.length - 1 ? TUTORIALS[currentIndex + 1] : null
+  const { next: nextTutorial } = getTutorialNeighbors(slug, locale)
   const diff = DIFFICULTY_COLORS[tutorial.difficulty]
 
   const difficultyLabel = t(tutorial.difficulty as 'beginner' | 'intermediate' | 'advanced')

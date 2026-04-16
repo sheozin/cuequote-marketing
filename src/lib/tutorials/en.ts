@@ -1,21 +1,6 @@
-export interface TutorialStep {
-  title: string
-  content: string
-  tip?: string
-}
+import type { Tutorial } from './types'
 
-export interface Tutorial {
-  slug: string
-  title: string
-  description: string
-  duration: string
-  difficulty: 'beginner' | 'intermediate' | 'advanced'
-  category: string
-  whatYouLearn: string[]
-  steps: TutorialStep[]
-}
-
-export const TUTORIALS: Tutorial[] = [
+export const TUTORIALS_EN: Tutorial[] = [
   {
     slug: 'getting-started',
     title: 'Getting Started',
@@ -74,6 +59,7 @@ export const TUTORIALS: Tutorial[] = [
     whatYouLearn: [
       'How to write effective event descriptions for the AI',
       'How the AI selects equipment based on your catalog',
+      'Your monthly AI generation quota and how to avoid wasting it',
       'Understanding the streaming generation process',
       'How event context affects the generated terms',
     ],
@@ -99,6 +85,11 @@ export const TUTORIALS: Tutorial[] = [
       {
         title: 'Choose the currency',
         content: 'Select the currency for this proposal from the dropdown (EUR, USD, GBP, PLN, AED, EGP, CHF). This can differ from your company default — useful when quoting international clients.',
+      },
+      {
+        title: 'Confirm before the AI runs',
+        content: 'Before CueQuote generates your proposal, it shows a confirmation dialog: "This will use 1 of your X AI proposals this month. You have Y remaining on your <plan> plan." Each plan has a monthly AI quota — Free: 3, Starter: 15, Pro: 50, Business: unlimited. Every generation (including retries) counts against that quota, so double-check your description before confirming. On unlimited plans the dialog is skipped.',
+        tip: 'Spending 30 extra seconds tightening your description usually saves a whole slot — the AI rewards specificity, and a wasted generation costs you a full proposal from your monthly cap.',
       },
       {
         title: 'Watch the AI generate',

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
+import { getTutorials, type Tutorial } from "@/lib/tutorials";
 
 export const metadata: Metadata = {
   title: "Tutorials — Learn CueQuote",
@@ -11,27 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/tutorials" },
 };
 
-type Difficulty = "beginner" | "intermediate" | "advanced";
-
-const TUTORIALS: {
-  titleKey: string;
-  descKey: string;
-  difficulty: Difficulty;
-  duration: string;
-  category: string;
-}[] = [
-  { titleKey: "t1Title", descKey: "t1Desc", difficulty: "beginner", duration: "3 min", category: "Onboarding" },
-  { titleKey: "t2Title", descKey: "t2Desc", difficulty: "beginner", duration: "4 min", category: "AI" },
-  { titleKey: "t3Title", descKey: "t3Desc", difficulty: "beginner", duration: "2 min", category: "PDF" },
-  { titleKey: "t4Title", descKey: "t4Desc", difficulty: "intermediate", duration: "5 min", category: "Catalog" },
-  { titleKey: "t5Title", descKey: "t5Desc", difficulty: "beginner", duration: "3 min", category: "Clients" },
-  { titleKey: "t6Title", descKey: "t6Desc", difficulty: "intermediate", duration: "4 min", category: "Proposals" },
-  { titleKey: "t7Title", descKey: "t7Desc", difficulty: "beginner", duration: "3 min", category: "Sharing" },
-  { titleKey: "t8Title", descKey: "t8Desc", difficulty: "intermediate", duration: "3 min", category: "Billing" },
-  { titleKey: "t9Title", descKey: "t9Desc", difficulty: "intermediate", duration: "4 min", category: "Billing" },
-];
-
-const DIFFICULTY_STYLES: Record<Difficulty, { background: string; color: string }> = {
+const DIFFICULTY_STYLES: Record<Tutorial["difficulty"], { background: string; color: string }> = {
   beginner: { background: "rgba(16,185,129,0.1)", color: "#059669" },
   intermediate: { background: "rgba(59,130,246,0.1)", color: "#2563eb" },
   advanced: { background: "rgba(139,92,246,0.1)", color: "#7c3aed" },
@@ -39,6 +20,8 @@ const DIFFICULTY_STYLES: Record<Difficulty, { background: string; color: string 
 
 export default async function TutorialsPage() {
   const t = await getTranslations("tutorials");
+  const locale = await getLocale();
+  const tutorials = getTutorials(locale);
 
   return (
     <>
@@ -110,14 +93,18 @@ export default async function TutorialsPage() {
             gap: 32,
           }}
         >
-          {TUTORIALS.map((tut, i) => {
+          {tutorials.map((tut) => {
             const diffStyle = DIFFICULTY_STYLES[tut.difficulty];
             const diffLabel = t(tut.difficulty);
             return (
-              <div
-                key={i}
+              <Link
+                key={tut.slug}
+                href={`/tutorials/${tut.slug}`}
                 className="tutorial-card"
                 style={{
+                  display: "block",
+                  textDecoration: "none",
+                  color: "inherit",
                   border: "1px solid #e5e7eb",
                   borderRadius: 16,
                   overflow: "hidden",
@@ -220,7 +207,7 @@ export default async function TutorialsPage() {
                     marginBottom: 8,
                     fontFamily: "var(--font-dm-sans)",
                   }}>
-                    {t(tut.titleKey)}
+                    {tut.title}
                   </h3>
                   <p style={{
                     fontSize: 14,
@@ -228,10 +215,10 @@ export default async function TutorialsPage() {
                     lineHeight: 1.6,
                     margin: 0,
                   }}>
-                    {t(tut.descKey)}
+                    {tut.description}
                   </p>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
