@@ -22,6 +22,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      // /features is not a standalone page — features live as a section on the homepage.
+      // Catch stale inbound links (external sites, old social shares, mistyped app-side
+      // layout links) and send them to the homepage features anchor.
+      { source: "/features", destination: "/#features", permanent: true },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
