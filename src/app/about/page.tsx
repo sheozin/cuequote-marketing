@@ -3,7 +3,7 @@ import Link from "next/link";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { Sparkles, Check, ArrowRight, Globe, Calendar, BarChart3, Zap } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
+  const locale = await getLocale();
   const t = await getTranslations("about");
 
   const diffItems = [
@@ -186,7 +187,7 @@ export default async function AboutPage() {
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.65)", marginBottom: 32, lineHeight: 1.7 }}>
             Join AV professionals who close deals faster with CueQuote.
           </p>
-          <Link href={`${APP_URL}/signup`} style={{
+          <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
             textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
             background: "#10b981", color: "#fff", padding: "16px 32px", borderRadius: 12,
             fontWeight: 600, fontSize: 16, transition: "background 0.2s",

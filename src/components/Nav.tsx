@@ -5,6 +5,8 @@ import { useTranslations, useLocale } from "next-intl";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const APP_URL = "https://app.cuequote.com";
+const appLink = (path: string, locale: string) =>
+  `${APP_URL}${path}${locale !== 'en' ? `?lang=${locale}` : ''}`;
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -54,12 +56,12 @@ export default function Nav() {
         {/* CTA + Language Switcher */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }} className="hide-mobile">
           <LanguageSwitcher currentLocale={locale} />
-          <Link href={`${APP_URL}/login`} style={{
+          <Link href={appLink('/login', locale)} style={{
             textDecoration: "none", fontSize: 14, fontWeight: 500, color: "#4b5563",
           }}>
             {t("login")}
           </Link>
-          <Link href={`${APP_URL}/signup`} style={{
+          <Link href={appLink('/signup', locale)} style={{
             textDecoration: "none", fontSize: 14, fontWeight: 600, color: "#fff",
             background: "#10b981", padding: "8px 20px", borderRadius: 8,
             transition: "background 0.2s",
@@ -102,13 +104,13 @@ export default function Nav() {
           <div style={{ padding: "8px 0" }}>
             <LanguageSwitcher currentLocale={locale} dropDirection="up" />
           </div>
-          <Link href={`${APP_URL}/login`} onClick={() => setOpen(false)} style={{
+          <Link href={appLink('/login', locale)} onClick={() => setOpen(false)} style={{
             textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#4b5563",
             textAlign: "center",
           }}>
             {t("signIn")}
           </Link>
-          <Link href={`${APP_URL}/signup`} onClick={() => setOpen(false)} style={{
+          <Link href={appLink('/signup', locale)} onClick={() => setOpen(false)} style={{
             textDecoration: "none", fontSize: 16, fontWeight: 600, color: "#fff",
             background: "#10b981", padding: "12px 24px", borderRadius: 8, textAlign: "center",
           }}>

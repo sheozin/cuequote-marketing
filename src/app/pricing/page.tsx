@@ -3,7 +3,7 @@ import Link from "next/link";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { Check, ChevronDown, Package, Sparkles, ArrowRight, Zap, CreditCard, Crown, Rocket, Building2 } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function PricingPage() {
+  const locale = await getLocale();
   const t = await getTranslations("pricing");
 
   const plans = [
@@ -145,7 +146,7 @@ export default async function PricingPage() {
               </ul>
 
               {/* CTA */}
-              <Link href={`${APP_URL}/signup`} style={{
+              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
                 textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
                 padding: "14px 24px", borderRadius: 10, fontWeight: 600, fontSize: 15, marginTop: 24,
                 background: ctaStyle === "primary" ? "#10b981" : "transparent",
@@ -244,7 +245,7 @@ export default async function PricingPage() {
                 <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€19</span>
               </div>
               <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>{t("perProposal3")}</p>
-              <Link href={`${APP_URL}/signup`} style={{
+              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
                 textDecoration: "none", display: "block", width: "100%", textAlign: "center", padding: "12px 20px",
                 borderRadius: 10, fontWeight: 600, fontSize: 14,
                 border: "1px solid #e5e7eb", color: "#08172E", transition: "all 0.2s",
@@ -276,7 +277,7 @@ export default async function PricingPage() {
                 <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€49</span>
               </div>
               <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>{t("perProposal10")}</p>
-              <Link href={`${APP_URL}/signup`} style={{
+              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
                 textDecoration: "none", display: "block", width: "100%", textAlign: "center", padding: "12px 20px",
                 borderRadius: 10, fontWeight: 600, fontSize: 14,
                 background: "#10b981", color: "#fff", transition: "all 0.2s",
@@ -341,7 +342,7 @@ export default async function PricingPage() {
           <p style={{ fontSize: 16, color: "#94a3b8", marginBottom: 28 }}>
             {t("readySubtitle")}
           </p>
-          <Link href={`${APP_URL}/signup`} style={{
+          <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
             textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
             background: "#10b981", color: "#fff", padding: "16px 36px", borderRadius: 12,
             fontWeight: 700, fontSize: 17,

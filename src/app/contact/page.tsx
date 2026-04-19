@@ -3,7 +3,7 @@ import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import ContactForm from "../../components/ContactForm";
 import { Mail, MapPin, Clock, Sparkles } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ContactPage() {
+  const locale = await getLocale();
   const t = await getTranslations("contact");
 
   return (
@@ -106,7 +107,7 @@ export default async function ContactPage() {
                   {t("readySubtitle")}
                 </p>
                 <a
-                  href={`${APP_URL}/signup`}
+                  href={`${APP_URL}/signup?lang=${locale}`}
                   style={{
                     display: "inline-block", background: "#10b981", color: "#fff",
                     padding: "12px 24px", borderRadius: 10, fontWeight: 600, fontSize: 15,

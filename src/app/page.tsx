@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import SubscribeForm from "../components/SubscribeForm";
 import { POSTS as ALL_BLOG_POSTS } from "../lib/blog-posts";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
   MessageSquare, Mic, MonitorPlay, Zap, ArrowRight,
@@ -74,6 +74,7 @@ function ProposalMockup() {
 
 // ─── Page ──────────────────────────────────────────────────────────────────────
 export default async function HomePage() {
+  const locale = await getLocale();
   const t = await getTranslations("hero");
   const tFeatures = await getTranslations("features");
   const tPricing = await getTranslations("pricing");
@@ -128,7 +129,7 @@ export default async function HomePage() {
               {t("subtitle")}
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <Link href={`${APP_URL}/signup`} style={{
+              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
                 textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
                 background: "#10b981", color: "#fff", padding: "14px 28px", borderRadius: 10,
                 fontWeight: 600, fontSize: 16, transition: "background 0.2s",
@@ -331,7 +332,7 @@ export default async function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <Link href={`${APP_URL}/signup`} style={{
+                <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
                   textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
                   padding: "14px 24px", borderRadius: 10, fontWeight: 600, fontSize: 15, marginTop: 24,
                   background: ctaStyle === "primary" ? "#10b981" : "transparent",
@@ -451,7 +452,7 @@ export default async function HomePage() {
           <p style={{ fontSize: 18, color: "#94a3b8", marginBottom: 32 }}>
             {tHomeCta("subtitle")}
           </p>
-          <Link href={`${APP_URL}/signup`} style={{
+          <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
             textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
             background: "#10b981", color: "#fff", padding: "16px 36px", borderRadius: 12,
             fontWeight: 700, fontSize: 18,
