@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/docs" },
 };
 
+// Ordered by user journey: onboarding → create → customize → send → track → bill → configure
 const ARTICLE_KEYS = [
   {
     id: "quick-start",
@@ -20,8 +21,8 @@ const ARTICLE_KEYS = [
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
   },
   {
-    id: "creating-proposals",
-    key: "creatingProposals",
+    id: "getting-started-checklist",
+    key: "gettingStartedChecklist",
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
   },
@@ -32,44 +33,8 @@ const ARTICLE_KEYS = [
     stepKeys: ["step1", "step2", "step3", "step4"],
   },
   {
-    id: "clients",
-    key: "clients",
-    contentKeys: ["content1", "content2"],
-    stepKeys: ["step1", "step2", "step3", "step4"],
-  },
-  {
-    id: "pdf-templates",
-    key: "pdfTemplates",
-    contentKeys: ["content1", "content2"],
-    stepKeys: ["step1", "step2", "step3", "step4"],
-  },
-  {
-    id: "terms-details",
-    key: "termsDetails",
-    contentKeys: ["content1", "content2"],
-    stepKeys: ["step1", "step2", "step3", "step4", "step5"],
-  },
-  {
-    id: "billing-plans",
-    key: "billingPlans",
-    contentKeys: ["content1"],
-    stepKeys: ["step1", "step2", "step3", "step4"],
-  },
-  {
-    id: "settings",
-    key: "settings",
-    contentKeys: ["content1"],
-    stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
-  },
-  {
-    id: "invoicing",
-    key: "invoicing",
-    contentKeys: ["content1", "content2"],
-    stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
-  },
-  {
-    id: "proposal-language",
-    key: "proposalLanguage",
+    id: "creating-proposals",
+    key: "creatingProposals",
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
   },
@@ -80,10 +45,46 @@ const ARTICLE_KEYS = [
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
   },
   {
-    id: "getting-started-checklist",
-    key: "gettingStartedChecklist",
+    id: "proposal-language",
+    key: "proposalLanguage",
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
+  },
+  {
+    id: "terms-details",
+    key: "termsDetails",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5"],
+  },
+  {
+    id: "pdf-templates",
+    key: "pdfTemplates",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
+  {
+    id: "clients",
+    key: "clients",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
+  {
+    id: "billing-plans",
+    key: "billingPlans",
+    contentKeys: ["content1"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
+  {
+    id: "invoicing",
+    key: "invoicing",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
+  },
+  {
+    id: "settings",
+    key: "settings",
+    contentKeys: ["content1"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
   },
 ];
 
