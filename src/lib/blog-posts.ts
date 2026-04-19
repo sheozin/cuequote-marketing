@@ -35,4 +35,34 @@ export const POSTS: BlogPostSummary[] = [
     category: "Business",
     date: "2026-02-25",
   },
+  {
+    slug: "ai-av-proposal-generator-how-it-works",
+    category: "Technology",
+    date: "2026-04-15",
+  },
+  {
+    slug: "av-proposal-template-guide",
+    category: "Guides",
+    date: "2026-04-12",
+  },
+  {
+    slug: "multi-language-av-proposals",
+    category: "Business",
+    date: "2026-04-10",
+  },
+  {
+    slug: "av-rental-pricing-per-day-vs-per-event",
+    category: "Guides",
+    date: "2026-04-08",
+  },
+  {
+    slug: "proposal-tracking-know-when-clients-view",
+    category: "Business",
+    date: "2026-04-05",
+  },
+  {
+    slug: "av-invoice-from-proposal",
+    category: "Guides",
+    date: "2026-04-02",
+  },
 ];

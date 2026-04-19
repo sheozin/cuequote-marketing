@@ -71,9 +71,25 @@ export default async function BlogPostPage({
   const readTime = tp(`${slug}.readTime`);
   const contentArray = tp.raw(`${slug}.content`) as string[];
 
+  // Article JSON-LD for rich search results — content is static/trusted (not user input)
+  const articleLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description: excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { '@type': 'Person', name: 'Sherif Abdalazeem', url: 'https://cuequote.com/about' },
+    publisher: { '@type': 'Organization', name: 'CueQuote', url: 'https://cuequote.com' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://cuequote.com/blog/${slug}` },
+    articleSection: post.category,
+  })
+
   return (
     <>
       <Nav />
+      {/* Safe: articleLd is built from trusted static data (post titles/dates), not user input */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: articleLd }} />
 
       {/* ── Article header ──────────────────────────────────────────── */}
       <section style={{

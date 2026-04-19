@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
@@ -70,6 +71,16 @@ function ProposalMockup() {
       `}</style>
     </div>
   );
+}
+
+export const metadata: Metadata = {
+  title: 'CueQuote — AI-Powered AV Proposals in Seconds',
+  description: 'Generate professional AV equipment proposals with AI. Describe your event, get a complete equipment list with accurate pricing. Free to start — no credit card required.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    title: 'CueQuote — AI-Powered AV Proposals in Seconds',
+    description: 'Turn event descriptions into professional AV proposals with AI. Equipment lists, pricing, branded PDFs — in under 5 minutes.',
+  },
 }
 
 // ─── Page ──────────────────────────────────────────────────────────────────────
