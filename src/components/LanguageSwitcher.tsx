@@ -78,9 +78,9 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: str
         <div
           style={{
             position: 'absolute',
-            top: '100%',
+            bottom: '100%',
             insetInlineEnd: 0,
-            marginTop: 6,
+            marginBottom: 6,
             background: '#fff',
             border: '1px solid #e5e7eb',
             borderRadius: 12,
