@@ -10,7 +10,14 @@ const LANGUAGES = [
   { code: 'fr', flag: '🇫🇷', nativeName: 'Français' },
 ]
 
-export default function LanguageSwitcher({ currentLocale }: { currentLocale: string }) {
+interface Props {
+  currentLocale: string
+  /** 'down' = desktop nav (dropdown below trigger, right-aligned)
+   *  'up'   = mobile menu (dropdown above trigger, left-aligned) */
+  dropDirection?: 'down' | 'up'
+}
+
+export default function LanguageSwitcher({ currentLocale, dropDirection = 'down' }: Props) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -30,6 +37,12 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: str
     setOpen(false)
     window.location.reload()
   }
+
+  // Desktop: open below, aligned to end (right in LTR)
+  // Mobile: open above, aligned to start (left in LTR)
+  const dropdownPosition = dropDirection === 'up'
+    ? { bottom: '100%', insetInlineStart: 0, marginBottom: 6 }
+    : { top: '100%', insetInlineEnd: 0, marginTop: 6 }
 
   return (
     <div ref={ref} style={{ position: 'relative' }}>
@@ -78,9 +91,7 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: str
         <div
           style={{
             position: 'absolute',
-            bottom: '100%',
-            insetInlineStart: 0,
-            marginBottom: 6,
+            ...dropdownPosition,
             background: '#fff',
             border: '1px solid #e5e7eb',
             borderRadius: 12,

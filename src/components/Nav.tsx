@@ -100,7 +100,7 @@ export default function Nav() {
             </Link>
           ))}
           <div style={{ padding: "8px 0" }}>
-            <LanguageSwitcher currentLocale={locale} />
+            <LanguageSwitcher currentLocale={locale} dropDirection="up" />
           </div>
           <Link href={`${APP_URL}/login`} onClick={() => setOpen(false)} style={{
             textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#4b5563",
