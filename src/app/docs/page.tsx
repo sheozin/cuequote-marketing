@@ -71,18 +71,43 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4"],
   },
-  // ── Send & invoice ──
+  // ── Send & track ──
+  {
+    id: "sharing-tracking",
+    key: "sharingTracking",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5"],
+  },
   {
     id: "invoicing",
     key: "invoicing",
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
   },
+  // ── Team & templates ──
+  {
+    id: "team-management",
+    key: "teamManagement",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5"],
+  },
+  {
+    id: "scope-templates",
+    key: "scopeTemplates",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5"],
+  },
   // ── Account & configuration ──
   {
     id: "billing-plans",
     key: "billingPlans",
     contentKeys: ["content1"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
+  {
+    id: "account-profile",
+    key: "accountProfile",
+    contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4"],
   },
   {

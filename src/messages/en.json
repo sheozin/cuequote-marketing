@@ -607,6 +607,49 @@
       "step6": "Send the invoice to your client via email and track its status: Draft, Sent, Viewed, or Paid",
       "tip": "Add at least one bank account in Settings — most B2B clients prefer bank transfer for AV equipment payments. Include the invoice number as the payment reference for easy reconciliation."
     },
+    "sharingTracking": {
+      "title": "Sharing & Tracking Proposals",
+      "content1": "CueQuote lets you share proposals with clients via unique links — no PDFs to email back and forth. When a client opens the link, you see exactly when they viewed it, how many times, and whether they accepted or declined.",
+      "content2": "Every proposal gets a shareable link that shows a professional, branded view of your proposal. Clients can review equipment, pricing, and terms, then accept or decline with one click. You get notified instantly when they respond.",
+      "step1": "Open any proposal and click the \"Share\" button in the header",
+      "step2": "Copy the unique share link and send it to your client via email, WhatsApp, or any messaging tool",
+      "step3": "Track views in real-time — see when the client opens the proposal and how many times they viewed it",
+      "step4": "When the client clicks \"Accept\" or \"Decline\" on the shared page, you receive an instant notification on your dashboard",
+      "step5": "Follow up strategically — if a client viewed but hasn't responded within 48 hours, it's time to reach out",
+      "tip": "Use the \"Send Proposal\" button to email the share link directly from CueQuote with a personal message. The email includes a summary of the proposal with a branded CTA button."
+    },
+    "teamManagement": {
+      "title": "Team Management",
+      "content1": "CueQuote supports multi-user teams with role-based access. The company owner can invite team members and assign roles that control what each person can see and do.",
+      "content2": "There are four roles: Owner (full access, can manage billing and team), Admin (full access except billing), Sales (can create and manage proposals, clients, and catalog), and Viewer (read-only access to proposals and dashboard).",
+      "step1": "Go to Team from the sidebar — you'll see all current team members with their roles",
+      "step2": "Click \"Invite Member\" and enter their email address and select a role",
+      "step3": "The invited person receives an email with a link to join your CueQuote workspace",
+      "step4": "Once they accept, they appear on your team page and can access the dashboard based on their assigned role",
+      "step5": "You can change roles or remove team members at any time from the Team page",
+      "tip": "Use the Sales role for your quoting team — they can create proposals and manage clients but can't change billing or company settings."
+    },
+    "scopeTemplates": {
+      "title": "Scope Templates",
+      "content1": "Scope templates let you save and reuse proposal configurations for recurring event types. Instead of describing the same conference setup from scratch every time, save it as a template with pre-configured line items, quantities, and pricing.",
+      "content2": "Templates come in two types: scope-only templates (just the event description and settings, AI still generates the equipment list) and full templates (complete with pre-configured line items that skip AI generation entirely).",
+      "step1": "Go to Templates from the sidebar to view and manage your saved templates",
+      "step2": "To create a template from scratch, click \"New Template\" and configure the event type, description, attendee range, and optionally add line items",
+      "step3": "To save an existing proposal as a template, open the proposal editor and click \"Save as Template\" — all line items are captured",
+      "step4": "When creating a new proposal, your templates appear as quick-start cards — click one to pre-fill the event description and settings",
+      "step5": "Full templates (with line items) let you skip AI generation entirely — click \"Use Template\" to create an instant proposal",
+      "tip": "Create templates for your most common event types: conference, gala dinner, product launch, hybrid event. Each template speeds up quoting by 80% for repeat event formats."
+    },
+    "accountProfile": {
+      "title": "Account & Profile",
+      "content1": "Your account page lets you manage your personal profile and security settings. This is separate from company settings — account settings are per-user, not shared with your team.",
+      "content2": "You can update your display name (shown in the sidebar and on team pages), change your password, and view your account email. Your profile photo can be updated from the account page as well.",
+      "step1": "Click your name at the bottom of the sidebar to open the Account page",
+      "step2": "Edit your full name — this is displayed to your team members and in activity logs",
+      "step3": "Change your password — enter your current password, then your new password (minimum 8 characters)",
+      "step4": "Your email address is shown for reference but cannot be changed directly — contact support if you need to update it",
+      "tip": "Use a professional full name — it appears on proposals and invoices when you're the assigned creator."
+    },
     "proposalLanguage": {
       "title": "Per-Proposal Language",
       "content1": "CueQuote supports creating proposals in 5 languages: English, Polish, Arabic, German, and French. Each proposal can be generated in a different language — independent of your dashboard language.",
