@@ -79,7 +79,7 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: str
           style={{
             position: 'absolute',
             bottom: '100%',
-            insetInlineEnd: 0,
+            insetInlineStart: 0,
             marginBottom: 6,
             background: '#fff',
             border: '1px solid #e5e7eb',
