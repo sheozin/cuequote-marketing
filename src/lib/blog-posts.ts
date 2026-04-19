@@ -5,31 +5,31 @@ export interface BlogPostSummary {
 }
 
 export const POSTS: BlogPostSummary[] = [
-  // Newest first — published every ~3 days for consistent Google signals
+  // Newest first — published every 2 days within the current month
   {
     slug: "av-invoice-from-proposal",
     category: "Guides",
-    date: "2026-05-04",
+    date: "2026-04-29",
   },
   {
     slug: "proposal-tracking-know-when-clients-view",
     category: "Business",
-    date: "2026-05-01",
+    date: "2026-04-27",
   },
   {
     slug: "av-rental-pricing-per-day-vs-per-event",
     category: "Guides",
-    date: "2026-04-28",
+    date: "2026-04-25",
   },
   {
     slug: "multi-language-av-proposals",
     category: "Business",
-    date: "2026-04-25",
+    date: "2026-04-23",
   },
   {
     slug: "av-proposal-template-guide",
     category: "Guides",
-    date: "2026-04-22",
+    date: "2026-04-21",
   },
   {
     slug: "ai-av-proposal-generator-how-it-works",
