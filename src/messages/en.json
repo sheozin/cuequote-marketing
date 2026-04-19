@@ -606,6 +606,39 @@
       "step5": "Download the invoice PDF — it includes your branding, line items, VAT, payment instructions, and reference number",
       "step6": "Send the invoice to your client via email and track its status: Draft, Sent, Viewed, or Paid",
       "tip": "Add at least one bank account in Settings — most B2B clients prefer bank transfer for AV equipment payments. Include the invoice number as the payment reference for easy reconciliation."
+    },
+    "proposalLanguage": {
+      "title": "Per-Proposal Language",
+      "content1": "CueQuote supports creating proposals in 5 languages: English, Polish, Arabic, German, and French. Each proposal can be generated in a different language — independent of your dashboard language.",
+      "content2": "This is designed for AV companies working with international clients. An Arabic-speaking user can create an English proposal for an English-speaking client, and vice versa. The AI generates all content (item names, descriptions, inclusions, exclusions) in the chosen language, while keeping brand names and equipment model numbers untranslated.",
+      "step1": "When creating a new proposal, select the language from the dropdown next to the Currency selector",
+      "step2": "The language defaults to your dashboard language but can be changed per proposal",
+      "step3": "Click Generate — the AI outputs all proposal text in the selected language",
+      "step4": "The PDF also renders labels (Subtotal, Total, Terms, Payment Schedule, etc.) in the proposal's language",
+      "step5": "You can always edit the generated text in the proposal editor after generation",
+      "tip": "Catalog item brand names (Sennheiser, Shure, etc.) are kept untranslated regardless of the proposal language. The AI translates descriptive text while preserving product identifiers."
+    },
+    "aiQuota": {
+      "title": "AI Generation Quota",
+      "content1": "Each CueQuote plan includes a monthly AI proposal generation quota. Every time you generate a proposal using AI (including retries), it counts against your monthly limit.",
+      "content2": "Before generating, CueQuote shows a confirmation dialog telling you how many generations you have remaining this month. This helps you avoid wasting a slot on an incomplete description. The dialog is skipped for unlimited plans (Business and Enterprise).",
+      "step1": "Free plan: 3 AI generations per month",
+      "step2": "Starter plan: 15 AI generations per month",
+      "step3": "Pro plan: 50 AI generations per month",
+      "step4": "Business plan: Unlimited AI generations",
+      "step5": "Manual edits to generated proposals are always free — only new AI generations count",
+      "tip": "Write a detailed event description before clicking Generate. The more specific you are, the better the AI output — and the less likely you'll need to regenerate."
+    },
+    "gettingStartedChecklist": {
+      "title": "Getting Started Checklist",
+      "content1": "When you first log in after signing up, the dashboard shows a Getting Started checklist at the top. This guides you through the essential setup steps to get your first proposal out the door.",
+      "content2": "Each step auto-completes as you perform the action — no manual checkboxes needed. Once all steps are done, the checklist shows a celebration message and can be dismissed permanently.",
+      "step1": "Create your account — automatically completed after signup",
+      "step2": "Set up your company — completed during onboarding (company name, address, brand color)",
+      "step3": "Upload your logo — go to Settings and upload your company logo (appears on every PDF)",
+      "step4": "Add equipment to your catalog — import your gear and prices for accurate AI proposals",
+      "step5": "Create your first proposal — describe an event and generate your first AI-powered quote",
+      "tip": "You can dismiss the checklist at any time by clicking the X button. It won't come back once dismissed."
     }
   },
   "changelog": {

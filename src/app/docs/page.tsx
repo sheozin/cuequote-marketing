@@ -67,6 +67,24 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
   },
+  {
+    id: "proposal-language",
+    key: "proposalLanguage",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5"],
+  },
+  {
+    id: "ai-quota",
+    key: "aiQuota",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5"],
+  },
+  {
+    id: "getting-started-checklist",
+    key: "gettingStartedChecklist",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5"],
+  },
 ];
 
 export default async function DocsPage() {
