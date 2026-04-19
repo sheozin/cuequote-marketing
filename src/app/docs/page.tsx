@@ -12,8 +12,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/docs" },
 };
 
-// Ordered by user journey: onboarding → create → customize → send → track → bill → configure
+// Ordered by user journey: onboard → set up → create proposals → customize → send → invoice → account
 const ARTICLE_KEYS = [
+  // ── Getting started ──
   {
     id: "quick-start",
     key: "quickStart",
@@ -26,12 +27,20 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
   },
+  // ── Set up your equipment ──
   {
     id: "equipment-catalog",
     key: "equipmentCatalog",
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4"],
   },
+  {
+    id: "clients",
+    key: "clients",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
+  // ── Create & customize proposals ──
   {
     id: "creating-proposals",
     key: "creatingProposals",
@@ -62,23 +71,19 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4"],
   },
-  {
-    id: "clients",
-    key: "clients",
-    contentKeys: ["content1", "content2"],
-    stepKeys: ["step1", "step2", "step3", "step4"],
-  },
-  {
-    id: "billing-plans",
-    key: "billingPlans",
-    contentKeys: ["content1"],
-    stepKeys: ["step1", "step2", "step3", "step4"],
-  },
+  // ── Send & invoice ──
   {
     id: "invoicing",
     key: "invoicing",
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
+  },
+  // ── Account & configuration ──
+  {
+    id: "billing-plans",
+    key: "billingPlans",
+    contentKeys: ["content1"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
   },
   {
     id: "settings",
