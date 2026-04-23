@@ -15,9 +15,8 @@ export default async function ChangelogPage() {
   const t = await getTranslations("changelog");
   const supabase = await createClient();
   const { data: entries } = await supabase
-    .from("cms_changelog")
+    .from("changelog_combined")
     .select("*")
-    .eq("is_published", true)
     .order("published_at", { ascending: false });
 
   const TYPE_COLORS: Record<
