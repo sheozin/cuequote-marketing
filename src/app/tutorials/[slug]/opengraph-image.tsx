@@ -15,9 +15,10 @@ const TITLES: Record<string, { t: string; d: string }> = {
   'billing-subscription': { t: 'Billing & Subscription', d: 'Choose the right plan for your team and manage your subscription.' },
 }
 
-export default function Image({ params }: { params: { slug: string } }) {
-  const data = TITLES[params.slug]
-  const title = data?.t ?? params.slug.replace(/-/g, ' ')
+export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const data = TITLES[slug]
+  const title = data?.t ?? slug.replace(/-/g, ' ')
   const desc = data?.d ?? ''
 
   return new ImageResponse(
