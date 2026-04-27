@@ -6,9 +6,6 @@ export const runtime = 'edge'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-export function generateStaticParams() {
-  return getTutorials('en').map((t) => ({ slug: t.slug }))
-}
 
 export default function Image({ params }: { params: { slug: string } }) {
   const tutorial = getTutorials('en').find((t) => t.slug === params.slug)
