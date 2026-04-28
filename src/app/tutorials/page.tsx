@@ -83,8 +83,121 @@ export default async function TutorialsPage() {
         </div>
       </section>
 
+      {/* Master Walkthrough — Featured */}
+      <section style={{
+        padding: "0 24px 60px",
+        maxWidth: 1000,
+        margin: "-40px auto 0",
+        position: "relative",
+        zIndex: 10,
+      }}>
+        <div style={{
+          background: "#fff",
+          borderRadius: 20,
+          overflow: "hidden",
+          boxShadow: "0 20px 60px rgba(0,0,0,0.15)",
+          border: "1px solid #e5e7eb",
+        }}>
+          {/* Video embed */}
+          <div style={{
+            position: "relative",
+            paddingBottom: "56.25%",
+            height: 0,
+            background: "linear-gradient(135deg, #08172E, #0f2d50)",
+          }}>
+            {/* Replace YOUTUBE_VIDEO_ID with actual ID after upload */}
+            <div style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+              gap: 16,
+            }}>
+              <div style={{
+                width: 80,
+                height: 80,
+                borderRadius: "50%",
+                background: "rgba(16,185,129,0.9)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 0 0 8px rgba(16,185,129,0.15), 0 0 0 16px rgba(16,185,129,0.05)",
+              }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                  <polygon points="8,5 20,12 8,19" />
+                </svg>
+              </div>
+              <span style={{ color: "rgba(255,255,255,0.5)", fontSize: 14, fontWeight: 500 }}>
+                Video coming soon
+              </span>
+            </div>
+          </div>
+          {/* Info bar */}
+          <div style={{
+            padding: "24px 32px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: 16,
+          }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 6 }}>
+                <span style={{
+                  background: "rgba(16,185,129,0.1)",
+                  color: "#059669",
+                  fontSize: 12,
+                  fontWeight: 700,
+                  padding: "4px 12px",
+                  borderRadius: 100,
+                }}>
+                  PRODUCT TOUR
+                </span>
+                <span style={{ color: "#9ca3af", fontSize: 13 }}>8 min</span>
+              </div>
+              <h2 style={{
+                fontFamily: "var(--font-dm-sans)",
+                fontSize: 22,
+                fontWeight: 800,
+                color: "#08172E",
+                margin: 0,
+              }}>
+                Complete Product Walkthrough
+              </h2>
+              <p style={{ color: "#6b7280", fontSize: 14, margin: "6px 0 0", maxWidth: 500 }}>
+                See every feature end-to-end — from signup to a fully priced, professional AV proposal in under 5 minutes.
+              </p>
+            </div>
+            <a
+              href="https://app.cuequote.com/signup"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: "#10b981",
+                color: "#fff",
+                fontSize: 14,
+                fontWeight: 600,
+                padding: "12px 24px",
+                borderRadius: 10,
+                textDecoration: "none",
+                transition: "background 0.2s",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Try It Free
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Tutorial Grid */}
-      <section style={{ padding: "80px 24px", maxWidth: 1200, margin: "0 auto" }}>
+      <section style={{ padding: "40px 24px 80px", maxWidth: 1200, margin: "0 auto" }}>
         <div
           className="tutorials-grid"
           style={{
