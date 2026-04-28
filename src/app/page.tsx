@@ -304,9 +304,9 @@ export default async function HomePage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
             {[
               { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tHomePricing("freeF1"), tHomePricing("freeF2"), tHomePricing("freeF3"), tHomePricing("freeF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: false },
-              { name: "Starter", price: "€39", period: "/mo", icon: <CreditCard size={20} />, features: [tHomePricing("starterF1"), tHomePricing("starterF2"), tHomePricing("starterF3"), tHomePricing("starterF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: true },
-              { name: "Pro", price: "€99", period: "/mo", icon: <Crown size={20} />, features: [tHomePricing("proF1"), tHomePricing("proF2"), tHomePricing("proF3"), tHomePricing("proF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
-              { name: "Business", price: "€199", period: "/mo", icon: <Rocket size={20} />, features: [tHomePricing("businessF1"), tHomePricing("businessF2"), tHomePricing("businessF3"), tHomePricing("businessF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
+              { name: "Starter", price: "€29", period: "/mo", icon: <CreditCard size={20} />, features: [tHomePricing("starterF1"), tHomePricing("starterF2"), tHomePricing("starterF3"), tHomePricing("starterF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: true },
+              { name: "Pro", price: "€79", period: "/mo", icon: <Crown size={20} />, features: [tHomePricing("proF1"), tHomePricing("proF2"), tHomePricing("proF3"), tHomePricing("proF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
+              { name: "Business", price: "€179", period: "/mo", icon: <Rocket size={20} />, features: [tHomePricing("businessF1"), tHomePricing("businessF2"), tHomePricing("businessF3"), tHomePricing("businessF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
             ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
               <div key={name} style={{
                 background: "#fff", borderRadius: 20, padding: "32px 28px",

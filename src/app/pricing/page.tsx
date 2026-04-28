@@ -30,7 +30,7 @@ export default async function PricingPage() {
     },
     {
       name: t("starterName"),
-      price: "€39",
+      price: "€29",
       period: t("perMonth"),
       desc: t("starterDesc"),
       icon: <CreditCard size={20} />,
@@ -42,7 +42,7 @@ export default async function PricingPage() {
     },
     {
       name: t("proName"),
-      price: "€99",
+      price: "€79",
       period: t("perMonth"),
       desc: t("proDesc"),
       icon: <Crown size={20} />,
@@ -52,7 +52,7 @@ export default async function PricingPage() {
     },
     {
       name: t("businessName"),
-      price: "€199",
+      price: "€179",
       period: t("perMonth"),
       desc: t("businessDesc"),
       icon: <Rocket size={20} />,
@@ -238,13 +238,13 @@ export default async function PricingPage() {
                 width: 56, height: 56, borderRadius: 16, background: "#ecfdf5",
                 display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16,
               }}>
-                <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>3</span>
+                <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>5</span>
               </div>
-              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>{t("threeProposals")}</h3>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>5 Proposals</h3>
               <div style={{ marginBottom: 4 }}>
-                <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€19</span>
+                <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€25</span>
               </div>
-              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>{t("perProposal3")}</p>
+              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>€5.00 each</p>
               <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
                 textDecoration: "none", display: "block", width: "100%", textAlign: "center", padding: "12px 20px",
                 borderRadius: 10, fontWeight: 600, fontSize: 14,
@@ -270,13 +270,13 @@ export default async function PricingPage() {
                 width: 56, height: 56, borderRadius: 16, background: "#ecfdf5",
                 display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16,
               }}>
-                <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>10</span>
+                <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>15</span>
               </div>
-              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>{t("tenProposals")}</h3>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>15 Proposals</h3>
               <div style={{ marginBottom: 4 }}>
-                <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€49</span>
+                <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€59</span>
               </div>
-              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>{t("perProposal10")}</p>
+              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>€3.93 each</p>
               <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
                 textDecoration: "none", display: "block", width: "100%", textAlign: "center", padding: "12px 20px",
                 borderRadius: 10, fontWeight: 600, fontSize: 14,
