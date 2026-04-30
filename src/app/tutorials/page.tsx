@@ -105,34 +105,13 @@ export default async function TutorialsPage() {
             height: 0,
             background: "linear-gradient(135deg, #08172E, #0f2d50)",
           }}>
-            {/* Replace YOUTUBE_VIDEO_ID with actual ID after upload */}
-            <div style={{
-              position: "absolute",
-              inset: 0,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-              gap: 16,
-            }}>
-              <div style={{
-                width: 80,
-                height: 80,
-                borderRadius: "50%",
-                background: "rgba(16,185,129,0.9)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: "0 0 0 8px rgba(16,185,129,0.15), 0 0 0 16px rgba(16,185,129,0.05)",
-              }}>
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
-                  <polygon points="8,5 20,12 8,19" />
-                </svg>
-              </div>
-              <span style={{ color: "rgba(255,255,255,0.5)", fontSize: 14, fontWeight: 500 }}>
-                Video coming soon
-              </span>
-            </div>
+            <iframe
+              src="https://www.youtube.com/embed/z0Pn10CDPMY"
+              title="CueQuote — Complete Product Walkthrough"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+            />
           </div>
           {/* Info bar */}
           <div style={{
@@ -257,20 +236,22 @@ export default async function TutorialsPage() {
                       <polygon points="8,5 20,12 8,19" />
                     </svg>
                   </div>
-                  {/* "Coming soon" overlay */}
-                  <span style={{
-                    position: "absolute",
-                    top: 8,
-                    left: 8,
-                    background: "rgba(0,0,0,0.6)",
-                    color: "#94a3b8",
-                    fontSize: 11,
-                    fontWeight: 500,
-                    padding: "3px 10px",
-                    borderRadius: 6,
-                  }}>
-                    {t("comingSoon")}
-                  </span>
+                  {/* "Coming soon" overlay — only if no video */}
+                  {!tut.videoUrl && (
+                    <span style={{
+                      position: "absolute",
+                      top: 8,
+                      left: 8,
+                      background: "rgba(0,0,0,0.6)",
+                      color: "#94a3b8",
+                      fontSize: 11,
+                      fontWeight: 500,
+                      padding: "3px 10px",
+                      borderRadius: 6,
+                    }}>
+                      {t("comingSoon")}
+                    </span>
+                  )}
                   {/* Duration badge */}
                   <span style={{
                     position: "absolute",

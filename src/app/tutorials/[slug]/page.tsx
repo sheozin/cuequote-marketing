@@ -92,6 +92,23 @@ export default async function TutorialPage({
             </p>
           </div>
 
+          {/* Video */}
+          {tutorial.videoUrl && (
+            <div style={{
+              position: 'relative', paddingBottom: '56.25%', height: 0,
+              borderRadius: 16, overflow: 'hidden', marginBottom: 40,
+              boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+            }}>
+              <iframe
+                src={tutorial.videoUrl}
+                title={tutorial.title}
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+              />
+            </div>
+          )}
+
           {/* What you'll learn */}
           <div style={{
             background: '#f0fdf4', border: '1px solid #d1fae5', borderRadius: 16,

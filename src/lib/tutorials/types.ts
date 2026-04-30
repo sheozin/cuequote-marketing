@@ -13,6 +13,7 @@ export interface Tutorial {
   duration: string
   difficulty: TutorialDifficulty
   category: string
+  videoUrl?: string
   whatYouLearn: string[]
   steps: TutorialStep[]
 }

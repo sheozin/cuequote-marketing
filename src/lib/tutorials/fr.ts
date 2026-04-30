@@ -8,6 +8,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '5 min',
     difficulty: 'beginner',
     category: 'Bases',
+    videoUrl: 'https://www.youtube.com/embed/z0Pn10CDPMY',
     whatYouLearn: [
       'Comment créer votre compte CueQuote',
       'Configurer votre profil d\'entreprise et votre image de marque',
@@ -301,8 +302,8 @@ export const TUTORIALS_FR: Tutorial[] = [
         content: 'Depuis l\'éditeur de devis, cliquez sur le bouton vert « Envoyer » dans le coin supérieur droit. Une fenêtre s\'ouvre dans laquelle vous pouvez composer l\'e-mail qui accompagnera votre devis. Si un client est associé, son e-mail est pré-rempli.',
       },
       {
-        title: 'Rédigez un message personnel',
-        content: 'Ajoutez une note personnelle qui apparaîtra dans le corps de l\'e-mail — par exemple, « Bonjour Jake, voici le devis AV pour la conférence de Varsovie. Je suis à votre disposition pour tout ajustement. » Cette touche personnelle fait une grande différence par rapport à l\'envoi d\'un simple lien. L\'e-mail inclut le logo de votre entreprise, le titre du devis, les détails de l\'événement, le prix total et un bouton « Voir le devis » bien visible.',
+        title: 'Message d\'accueil personnalisé — pré-rempli',
+        content: 'CueQuote remplit automatiquement un message personnalisé adressé au nom de votre client, avec référence au titre du devis. Il indique au client d\'utiliser le lien pour consulter et répondre, et se termine par le nom de votre entreprise. Vous pouvez modifier ou supprimer le message avant l\'envoi. L\'e-mail inclut le logo de votre entreprise, les détails du devis, le prix total et un bouton « Voir le devis » bien visible.',
       },
       {
         title: 'Envoyez ou copiez le lien',

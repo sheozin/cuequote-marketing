@@ -8,6 +8,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '5 min',
     difficulty: 'beginner',
     category: 'Basics',
+    videoUrl: 'https://www.youtube.com/embed/z0Pn10CDPMY',
     whatYouLearn: [
       'How to create your CueQuote account',
       'Setting up your company profile and branding',
@@ -301,8 +302,9 @@ export const TUTORIALS_EN: Tutorial[] = [
         content: 'From the proposal editor, click the green "Send" button in the top-right corner. A modal opens where you can compose the email that accompanies your proposal. If a client is linked, their email is pre-filled.',
       },
       {
-        title: 'Write a personal message',
-        content: 'Add a personal note that will appear in the email body — for example, "Hi Jake, here\'s the AV proposal for the Warsaw conference. Happy to adjust anything." This personal touch makes a big difference compared to sending a bare link. The email includes your company logo, proposal title, event details, total price, and a prominent "View Proposal" button.',
+        title: 'Personalized greeting — auto-filled',
+        content: 'CueQuote automatically fills in a personalized greeting addressed to your client by name, referencing the proposal title. It tells the client to review and respond using the link, and signs off with your company name. You can edit or clear this message before sending. The email also includes your company logo, proposal details, total price, and a prominent "View Proposal" button.',
+        tip: 'Make sure your client records have a contact name for the best personalization. You can always tweak the message before hitting Send.',
       },
       {
         title: 'Send or copy link',

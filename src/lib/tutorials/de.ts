@@ -8,6 +8,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '5 Min.',
     difficulty: 'beginner',
     category: 'Grundlagen',
+    videoUrl: 'https://www.youtube.com/embed/z0Pn10CDPMY',
     whatYouLearn: [
       'Wie Sie Ihr CueQuote-Konto erstellen',
       'Einrichtung Ihres Unternehmensprofils und Brandings',
@@ -301,8 +302,8 @@ export const TUTORIALS_DE: Tutorial[] = [
         content: 'Klicken Sie im Angebots-Editor oben rechts auf die grüne Schaltfläche "Senden". Es öffnet sich ein Dialog, in dem Sie die E-Mail zu Ihrem Angebot verfassen können. Ist ein Kunde verknüpft, wird dessen E-Mail-Adresse vorausgefüllt.',
       },
       {
-        title: 'Persönliche Nachricht verfassen',
-        content: 'Ergänzen Sie eine persönliche Notiz, die im E-Mail-Text erscheint — zum Beispiel: "Hallo Jake, anbei das AV-Angebot für die Warschauer Konferenz. Gerne passe ich Details an." Diese persönliche Note macht einen großen Unterschied im Vergleich zu einem bloßen Link. Die E-Mail enthält Ihr Firmenlogo, den Angebotstitel, Eventdetails, den Gesamtpreis und eine auffällige Schaltfläche "Angebot ansehen".',
+        title: 'Personalisierte Begrüßung — automatisch ausgefüllt',
+        content: 'CueQuote füllt automatisch eine personalisierte Begrüßung aus, die Ihren Kunden namentlich anspricht und den Angebotstitel erwähnt. Die E-Mail weist den Kunden darauf hin, den Link zur Überprüfung und Beantwortung zu nutzen, und wird mit Ihrem Firmennamen unterzeichnet. Sie können die Nachricht vor dem Senden bearbeiten oder löschen. Die E-Mail enthält Ihr Firmenlogo, Angebotsdetails, den Gesamtpreis und eine auffällige Schaltfläche „Angebot ansehen".',
       },
       {
         title: 'Senden oder Link kopieren',

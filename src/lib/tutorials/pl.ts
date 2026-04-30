@@ -8,6 +8,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '5 min',
     difficulty: 'beginner',
     category: 'Podstawy',
+    videoUrl: 'https://www.youtube.com/embed/z0Pn10CDPMY',
     whatYouLearn: [
       'Jak założyć konto CueQuote',
       'Konfiguracja profilu firmy i brandingu',
@@ -301,8 +302,8 @@ export const TUTORIALS_PL: Tutorial[] = [
         content: 'W edytorze oferty kliknij zielony przycisk „Wyślij” w prawym górnym rogu. Otworzy się okno, w którym możesz napisać e-mail towarzyszący ofercie. Jeśli klient jest powiązany, jego adres e-mail zostanie wstępnie wpisany.',
       },
       {
-        title: 'Napisz osobistą wiadomość',
-        content: 'Dodaj osobistą notatkę, która pojawi się w treści e-maila — np. „Cześć Jakub, w załączniku oferta AV na konferencję w Warszawie. Chętnie dostosuję cokolwiek”. Ten osobisty akcent robi dużą różnicę w porównaniu do wysłania samego linku. E-mail zawiera logo firmy, tytuł oferty, szczegóły wydarzenia, łączną cenę oraz wyróżniony przycisk „Zobacz ofertę”.',
+        title: 'Spersonalizowane powitanie — wypełniane automatycznie',
+        content: 'CueQuote automatycznie wypełnia spersonalizowane powitanie skierowane do klienta po imieniu, z odwołaniem do tytułu oferty. Informuje klienta, aby użył linku do przeglądu i odpowiedzi, a podpis zawiera nazwę Twojej firmy. Możesz edytować lub wyczyścić wiadomość przed wysłaniem. E-mail zawiera logo firmy, szczegóły oferty, łączną cenę oraz wyróżniony przycisk „Zobacz ofertę”.',
       },
       {
         title: 'Wyślij lub skopiuj link',
