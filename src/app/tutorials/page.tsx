@@ -103,15 +103,16 @@ export default async function TutorialsPage() {
             position: "relative",
             paddingBottom: "56.25%",
             height: 0,
-            background: "linear-gradient(135deg, #08172E, #0f2d50)",
+            background: "#000",
           }}>
-            <iframe
-              src="https://www.youtube.com/embed/z0Pn10CDPMY"
-              title="CueQuote — Complete Product Walkthrough"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
-            />
+            <video
+              controls
+              preload="metadata"
+              poster=""
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "contain" }}
+            >
+              <source src="/videos/cuequote-walkthrough-master.mp4" type="video/mp4" />
+            </video>
           </div>
           {/* Info bar */}
           <div style={{

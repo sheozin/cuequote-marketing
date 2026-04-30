@@ -8,7 +8,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '5 min',
     difficulty: 'beginner',
     category: 'Bases',
-    videoUrl: 'https://www.youtube.com/embed/z0Pn10CDPMY',
+    videoUrl: '/videos/cuequote-walkthrough-master.mp4',
     whatYouLearn: [
       'Comment créer votre compte CueQuote',
       'Configurer votre profil d\'entreprise et votre image de marque',

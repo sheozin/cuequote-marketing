@@ -8,7 +8,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '5 دقائق',
     difficulty: 'beginner',
     category: 'الأساسيات',
-    videoUrl: 'https://www.youtube.com/embed/z0Pn10CDPMY',
+    videoUrl: '/videos/cuequote-walkthrough-master.mp4',
     whatYouLearn: [
       'كيفية إنشاء حسابك على CueQuote',
       'إعداد ملف شركتك وهويتك البصرية',
