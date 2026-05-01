@@ -19,7 +19,10 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
 /* ─── Static params ─────────────────────────────────────────────────────────── */
 
 export function generateStaticParams() {
-  return POSTS.map((post) => ({ slug: post.slug }));
+  const locales = ['en', 'pl', 'ar', 'de', 'fr'];
+  return locales.flatMap((locale) =>
+    POSTS.map((post) => ({ locale, slug: post.slug }))
+  );
 }
 
 

@@ -11,8 +11,10 @@ import type { Metadata } from 'next'
 import { getLocale, getTranslations } from 'next-intl/server'
 
 export async function generateStaticParams() {
-  // Slugs are identical across languages (English URL paths). Return the EN list.
-  return getAllSlugs().map((slug) => ({ slug }))
+  const locales = ['en', 'pl', 'ar', 'de', 'fr'];
+  return locales.flatMap((locale) =>
+    getAllSlugs().map((slug) => ({ locale, slug }))
+  );
 }
 
 export async function generateMetadata({
