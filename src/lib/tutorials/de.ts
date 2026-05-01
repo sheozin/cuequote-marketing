@@ -323,6 +323,14 @@ export const TUTORIALS_DE: Tutorial[] = [
         content: 'Am Ende der Share-Seite sieht der Kunde die Schaltflächen "Angebot annehmen" und "Ablehnen". Klickt er auf Annehmen, wechselt der Angebotsstatus in Ihrem Dashboard auf "Gewonnen". Lehnt er ab, wird er zu "Verloren". Sie werden über beide Antworten informiert, und der Status ist in der Angebotsliste sichtbar.',
       },
       {
+        title: 'E-Signatur bei der Annahme',
+        content: 'Bei der Annahme zeichnet der Kunde seine Unterschrift auf einer Zeichenfläche, gibt seinen vollständigen Namen ein und bestätigt, dass er den Bedingungen zustimmt. Die gezeichnete Unterschrift, der Zeitstempel und die Geräteinformationen werden als rechtlicher Nachweis gespeichert und erscheinen im heruntergeladenen PDF.',
+      },
+      {
+        title: 'Kundenengagement verfolgen',
+        content: 'Nachdem ein Kunde Ihr Angebot angesehen hat, zeigt der Angebots-Editor ein Analyse-Panel mit der Gesamtverweildauer, Scrolltiefe, Aufrufen, PDF-Downloads und einer Aufschlüsselung der Zeit pro Abschnitt. Nutzen Sie diese Erkenntnisse für eine effektive Nachverfolgung.',
+      },
+      {
         title: 'Jederzeit das PDF herunterladen',
         content: 'Klicken Sie auf das Download-Symbol in der Angebotskopfzeile, um das PDF zu erstellen. Das PDF enthält alles: Deckblatt mit Firmen-Branding, Leistungsumfang, Equipment-Tabellen nach Kategorie, Summen-Karte, Einschlüsse/Ausschlüsse, Zahlungsplan, Unterschriftenblock und vollständige AGB. Teilen Sie das PDF als Anhang oder drucken Sie es für persönliche Termine aus.',
       },
@@ -370,6 +378,34 @@ export const TUTORIALS_DE: Tutorial[] = [
       {
         title: 'Nutzung überwachen',
         content: 'Die Abrechnungsseite zeigt, wie viele Angebote Sie in diesem Monat verbraucht haben. Der Angebotszähler wird an Ihrem Abrechnungsdatum zurückgesetzt. Wenn Sie Ihr Limit erreichen, können Sie entweder auf einen höheren Tarif upgraden oder ein Credit-Paket kaufen, um weitere Angebote zu erstellen.',
+      },
+    ],
+  },
+  {
+    slug: 'client-portal',
+    title: 'Kundenportal',
+    description: 'Bieten Sie Ihren Kunden einen eigenen Zugang, um alle ihre Angebote und Rechnungen einzusehen.',
+    duration: '2 Min.',
+    difficulty: 'intermediate',
+    category: 'Angebote',
+    whatYouLearn: [
+      'Wie sich Kunden für das Portal registrieren',
+      'Was Kunden in ihrem Portal-Dashboard sehen',
+      'Kundenzugang und Berechtigungen verwalten',
+      'Kundenzugang bei Bedarf widerrufen',
+    ],
+    steps: [
+      {
+        title: 'Kundenregistrierung',
+        content: 'Wenn Sie ein Angebot senden, erhält der Kunde eine Einladung zur Erstellung eines Portal-Kontos. Er klickt auf den Link in der E-Mail, legt ein Passwort fest und erhält Zugang zu seinem persönlichen Dashboard. Hat der Kunde bereits ein Konto, erscheint das neue Angebot automatisch.',
+      },
+      {
+        title: 'Was Kunden sehen',
+        content: 'Im Portal sehen Kunden ein Dashboard mit allen Angeboten und Rechnungen, die Sie mit ihnen geteilt haben. Jeder Eintrag zeigt Titel, Datum, Status und Gesamtbetrag. Kunden können jedes Angebot öffnen, um es zu prüfen, anzunehmen oder abzulehnen, das PDF herunterzuladen und Rechnungen einzusehen — alles an einem Ort.',
+      },
+      {
+        title: 'Kundenzugang verwalten',
+        content: 'Gehen Sie in Ihrem CueQuote-Dashboard zu Kunden und wählen Sie einen Kunden aus, um seinen Portal-Status zu sehen. Sie können die Einladung erneut senden, das Passwort zurücksetzen oder den Zugang vollständig widerrufen. Das Widerrufen des Zugangs deaktiviert die Anmeldung sofort — der Kunde kann Angebote und Rechnungen erst wieder einsehen, wenn Sie den Zugang wiederherstellen.',
       },
     ],
   },

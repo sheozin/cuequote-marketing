@@ -324,6 +324,14 @@ export const TUTORIALS_EN: Tutorial[] = [
         content: 'At the bottom of the share page, the client sees "Accept Proposal" and "Decline" buttons. When they click Accept, the proposal status updates to "Won" in your dashboard. If they decline, it becomes "Lost". You\'re notified of either response, and the status is visible on the proposals list.',
       },
       {
+        title: 'E-signature on acceptance',
+        content: 'When accepting, clients draw their signature on a canvas, type their full name, and confirm they agree to the terms. The drawn signature, timestamp, and device info are stored as legal proof and appear on the downloaded PDF.',
+      },
+      {
+        title: 'Track client engagement',
+        content: 'After a client views your proposal, the proposal editor shows an analytics panel with total time spent, scroll depth, visits, PDF downloads, and time per section breakdown. Use these insights to follow up effectively.',
+      },
+      {
         title: 'Download the PDF anytime',
         content: 'Click the download icon in the proposal header to generate the PDF. The PDF includes everything: cover section with company branding, scope of work, equipment tables by category, totals card, inclusions/exclusions, payment schedule, signature block, and full T&C. Share the PDF as an attachment or print it for in-person meetings.',
       },
@@ -371,6 +379,34 @@ export const TUTORIALS_EN: Tutorial[] = [
       {
         title: 'Monitor your usage',
         content: 'The billing page shows how many proposals you\'ve used this month. The proposal counter resets on your billing date. If you hit your limit, you can either upgrade to a higher plan or buy a credit pack to continue creating proposals.',
+      },
+    ],
+  },
+  {
+    slug: 'client-portal',
+    title: 'Client Portal',
+    description: 'Give your clients a dedicated login to view all their proposals and invoices.',
+    duration: '2 min',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    whatYouLearn: [
+      'How clients register for the portal',
+      'What clients see in their portal dashboard',
+      'Managing client access and permissions',
+      'Revoking client access when needed',
+    ],
+    steps: [
+      {
+        title: 'Client registration flow',
+        content: 'When you send a proposal, the client receives an invitation to create a portal account. They click the link in the email, set a password, and gain access to their personal dashboard. If a client already has an account, the new proposal appears automatically.',
+      },
+      {
+        title: 'What clients see',
+        content: 'Inside the portal, clients see a dashboard listing all proposals and invoices you\'ve shared with them. Each entry shows the title, date, status, and total amount. Clients can open any proposal to review it, accept or decline, download the PDF, and view invoices — all from one place.',
+      },
+      {
+        title: 'Managing client access',
+        content: 'In your CueQuote dashboard, go to Clients and select a client to see their portal status. You can resend the invitation, reset their password, or revoke access entirely. Revoking access disables their login immediately — they can no longer view proposals or invoices until you restore access.',
       },
     ],
   },

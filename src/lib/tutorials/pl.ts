@@ -323,6 +323,14 @@ export const TUTORIALS_PL: Tutorial[] = [
         content: 'Na dole strony udostępniania klient widzi przyciski „Zaakceptuj ofertę” oraz „Odrzuć”. Gdy kliknie Zaakceptuj, status oferty w Twoim pulpicie zmieni się na „Wygrana”. Jeśli odrzuci, stanie się „Przegrana”. Otrzymasz powiadomienie o każdej odpowiedzi, a status będzie widoczny na liście ofert.',
       },
       {
+        title: 'E-podpis przy akceptacji',
+        content: 'Podczas akceptacji klient rysuje podpis na płótnie, wpisuje imię i nazwisko oraz potwierdza, że zgadza się z warunkami. Narysowany podpis, znacznik czasu i dane urządzenia są zapisywane jako dowód prawny i pojawiają się w pobranym pliku PDF.',
+      },
+      {
+        title: 'Śledź zaangażowanie klienta',
+        content: 'Po tym, jak klient obejrzy Twoją ofertę, edytor oferty wyświetla panel analityczny z łącznym czasem przeglądania, głębokością przewijania, liczbą wizyt, pobraniami PDF oraz rozbiciem czasu na poszczególne sekcje. Wykorzystaj te dane, aby skutecznie kontynuować rozmowy.',
+      },
+      {
         title: 'Pobierz PDF w dowolnym momencie',
         content: 'Kliknij ikonę pobierania w nagłówku oferty, aby wygenerować PDF. PDF zawiera wszystko: okładkę z brandingiem firmy, zakres prac, tabele sprzętu według kategorii, kartę podsumowań, pozycje w cenie/wykluczenia, harmonogram płatności, blok podpisu oraz pełny regulamin. Udostępniaj PDF jako załącznik lub drukuj na spotkania osobiste.',
       },
@@ -370,6 +378,34 @@ export const TUTORIALS_PL: Tutorial[] = [
       {
         title: 'Monitoruj zużycie',
         content: 'Strona rozliczeń pokazuje, ile ofert wykorzystałeś w tym miesiącu. Licznik ofert resetuje się w dniu rozliczeniowym. Jeśli osiągniesz limit, możesz albo ulepszyć plan, albo kupić pakiet kredytów, aby dalej tworzyć oferty.',
+      },
+    ],
+  },
+  {
+    slug: 'client-portal',
+    title: 'Portal klienta',
+    description: 'Daj swoim klientom dedykowane logowanie do przeglądania wszystkich ofert i faktur.',
+    duration: '2 min',
+    difficulty: 'intermediate',
+    category: 'Oferty',
+    whatYouLearn: [
+      'Jak klienci rejestrują się w portalu',
+      'Co klienci widzą w swoim pulpicie portalu',
+      'Zarządzanie dostępem i uprawnieniami klientów',
+      'Odbieranie dostępu klientom w razie potrzeby',
+    ],
+    steps: [
+      {
+        title: 'Proces rejestracji klienta',
+        content: 'Gdy wysyłasz ofertę, klient otrzymuje zaproszenie do utworzenia konta w portalu. Klika link w e-mailu, ustawia hasło i uzyskuje dostęp do swojego osobistego pulpitu. Jeśli klient ma już konto, nowa oferta pojawia się automatycznie.',
+      },
+      {
+        title: 'Co widzą klienci',
+        content: 'W portalu klienci widzą pulpit z listą wszystkich ofert i faktur, które im udostępniłeś. Każda pozycja pokazuje tytuł, datę, status i łączną kwotę. Klienci mogą otworzyć dowolną ofertę, aby ją przejrzeć, zaakceptować lub odrzucić, pobrać PDF i przeglądać faktury — wszystko z jednego miejsca.',
+      },
+      {
+        title: 'Zarządzanie dostępem klientów',
+        content: 'W pulpicie CueQuote przejdź do Klientów i wybierz klienta, aby zobaczyć status jego portalu. Możesz ponownie wysłać zaproszenie, zresetować hasło lub całkowicie odebrać dostęp. Odebranie dostępu natychmiast wyłącza logowanie — klient nie będzie mógł przeglądać ofert ani faktur, dopóki nie przywrócisz mu dostępu.',
       },
     ],
   },

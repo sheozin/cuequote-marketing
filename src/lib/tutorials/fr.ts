@@ -323,6 +323,14 @@ export const TUTORIALS_FR: Tutorial[] = [
         content: 'En bas de la page de partage, le client voit les boutons « Accepter le devis » et « Refuser ». Lorsqu\'il clique sur Accepter, le statut du devis passe à « Gagné » dans votre tableau de bord. S\'il refuse, il passe à « Perdu ». Vous êtes notifié dans les deux cas, et le statut est visible dans la liste des devis.',
       },
       {
+        title: 'Signature électronique à l\'acceptation',
+        content: 'Lors de l\'acceptation, le client dessine sa signature sur un canevas, saisit son nom complet et confirme son accord avec les conditions. La signature dessinée, l\'horodatage et les informations de l\'appareil sont enregistrés comme preuve légale et apparaissent sur le PDF téléchargé.',
+      },
+      {
+        title: 'Suivez l\'engagement client',
+        content: 'Après qu\'un client a consulté votre devis, l\'éditeur de devis affiche un panneau d\'analyse avec le temps total passé, la profondeur de défilement, les visites, les téléchargements PDF et la répartition du temps par section. Utilisez ces informations pour relancer efficacement.',
+      },
+      {
         title: 'Téléchargez le PDF à tout moment',
         content: 'Cliquez sur l\'icône de téléchargement dans l\'en-tête du devis pour générer le PDF. Le PDF inclut tout : section de couverture avec l\'image de marque de l\'entreprise, périmètre des prestations, tableaux de matériel par catégorie, carte des totaux, inclusions/exclusions, échéancier de paiement, bloc de signature et CGV complètes. Partagez le PDF en pièce jointe ou imprimez-le pour les réunions en présentiel.',
       },
@@ -370,6 +378,34 @@ export const TUTORIALS_FR: Tutorial[] = [
       {
         title: 'Suivez votre utilisation',
         content: 'La page de facturation indique combien de devis vous avez utilisés ce mois-ci. Le compteur de devis se réinitialise à votre date de facturation. Si vous atteignez votre limite, vous pouvez soit passer à un plan supérieur, soit acheter un pack de crédits pour continuer à créer des devis.',
+      },
+    ],
+  },
+  {
+    slug: 'client-portal',
+    title: 'Portail client',
+    description: 'Offrez à vos clients un accès dédié pour consulter tous leurs devis et factures.',
+    duration: '2 min',
+    difficulty: 'intermediate',
+    category: 'Devis',
+    whatYouLearn: [
+      'Comment les clients s\'inscrivent au portail',
+      'Ce que les clients voient dans leur tableau de bord',
+      'Gérer les accès et les permissions des clients',
+      'Révoquer l\'accès d\'un client si nécessaire',
+    ],
+    steps: [
+      {
+        title: 'Processus d\'inscription du client',
+        content: 'Lorsque vous envoyez un devis, le client reçoit une invitation à créer un compte sur le portail. Il clique sur le lien dans l\'e-mail, définit un mot de passe et accède à son tableau de bord personnel. Si le client possède déjà un compte, le nouveau devis apparaît automatiquement.',
+      },
+      {
+        title: 'Ce que voient les clients',
+        content: 'Dans le portail, les clients voient un tableau de bord listant tous les devis et factures que vous avez partagés avec eux. Chaque entrée affiche le titre, la date, le statut et le montant total. Les clients peuvent ouvrir n\'importe quel devis pour le consulter, l\'accepter ou le refuser, télécharger le PDF et consulter les factures — le tout depuis un seul endroit.',
+      },
+      {
+        title: 'Gérer l\'accès des clients',
+        content: 'Dans votre tableau de bord CueQuote, allez dans Clients et sélectionnez un client pour voir le statut de son portail. Vous pouvez renvoyer l\'invitation, réinitialiser son mot de passe ou révoquer entièrement son accès. La révocation désactive immédiatement sa connexion — il ne pourra plus consulter les devis ni les factures tant que vous n\'aurez pas rétabli son accès.',
       },
     ],
   },
