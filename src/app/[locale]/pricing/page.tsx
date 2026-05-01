@@ -20,6 +20,14 @@ export default async function PricingPage() {
   const locale = await getLocale();
   const t = await getTranslations("pricing");
 
+  const newFeatureLabels = new Set([
+    t("starterF4"), // E-signatures
+    t("proF3"),     // Proposal analytics
+    t("proF4"),     // Recurring proposals
+    t("proF5"),     // White-label PDFs
+    t("proF6"),     // Client portal
+  ]);
+
   const plans = [
     {
       name: t("freeName"),
@@ -40,7 +48,6 @@ export default async function PricingPage() {
       features: [t("starterF1"), t("starterF2"), t("starterF3"), t("starterF4"), t("starterF5"), t("starterF6")],
       cta: t("startTrial"),
       ctaStyle: "primary" as const,
-      popular: true,
       save: t("starterSave"),
     },
     {
@@ -49,9 +56,10 @@ export default async function PricingPage() {
       period: t("perMonth"),
       desc: t("proDesc"),
       icon: <Crown size={20} />,
-      features: [t("proF1"), t("proF2"), t("proF3"), t("proF4"), t("proF5"), t("proF6")],
+      features: [t("proF1"), t("proF2"), t("proF3"), t("proF4"), t("proF5"), t("proF6"), t("proF7"), t("proF8")],
       cta: t("startTrial"),
       ctaStyle: "primary" as const,
+      popular: true,
     },
     {
       name: t("businessName"),
@@ -144,6 +152,13 @@ export default async function PricingPage() {
                       <Check size={12} style={{ color: "#10b981" }} />
                     </div>
                     {f}
+                    {newFeatureLabels.has(f) && (
+                      <span style={{
+                        fontSize: 10, fontWeight: 700, color: "#fff", background: "#10b981",
+                        padding: "2px 6px", borderRadius: 4, lineHeight: 1, flexShrink: 0,
+                        textTransform: "uppercase", letterSpacing: 0.5,
+                      }}>NEW</span>
+                    )}
                   </li>
                 ))}
               </ul>

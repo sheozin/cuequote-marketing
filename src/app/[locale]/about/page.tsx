@@ -106,16 +106,16 @@ export default async function AboutPage() {
               fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E",
               marginBottom: 32, textTransform: "uppercase", letterSpacing: 1,
             }}>
-              At a Glance
+              {t("atAGlance", { defaultValue: "At a Glance" })}
             </h3>
 
             {[
-              { label: "Founded", value: "2026" },
-              { label: "Headquarters", value: "Warsaw, Poland" },
-              { label: "Industry", value: "AV & Event Production" },
-              { label: "Events Quoted", value: "10,000+" },
-              { label: "Countries Served", value: "15+" },
-              { label: "Team", value: "AVE Events" },
+              { label: t("statFounded", { defaultValue: "Founded" }), value: "2026" },
+              { label: t("statHq", { defaultValue: "Headquarters" }), value: t("statHqValue", { defaultValue: "Warsaw, Poland" }) },
+              { label: t("statIndustry", { defaultValue: "Industry" }), value: t("statIndustryValue", { defaultValue: "AV & Event Production" }) },
+              { label: t("statEventsQuoted", { defaultValue: "Events Quoted" }), value: "10,000+" },
+              { label: t("statCountries", { defaultValue: "Countries Served" }), value: "15+" },
+              { label: t("statTeam", { defaultValue: "Team" }), value: "AVE Events" },
             ].map((stat, i) => (
               <div key={i} style={{
                 display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -141,7 +141,7 @@ export default async function AboutPage() {
               {t("whyDifferent")}
             </h2>
             <p style={{ fontSize: 16, color: "#6b7280", maxWidth: 560, margin: "0 auto" }}>
-              Built from real-world AV production experience, not a generic template.
+              {t("whyDifferentSub", { defaultValue: "Built from real-world AV production experience, not a generic template." })}
             </p>
           </div>
 
@@ -185,10 +185,10 @@ export default async function AboutPage() {
             fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 32, color: "#fff",
             marginBottom: 16, letterSpacing: -0.5,
           }}>
-            Ready to transform your AV quoting?
+            {t("ctaTitle", { defaultValue: "Ready to transform your AV quoting?" })}
           </h2>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.65)", marginBottom: 32, lineHeight: 1.7 }}>
-            Join AV professionals who close deals faster with CueQuote.
+            {t("ctaSub", { defaultValue: "Join AV professionals who close deals faster with CueQuote." })}
           </p>
           <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
             textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,

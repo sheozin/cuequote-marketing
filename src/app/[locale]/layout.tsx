@@ -44,7 +44,17 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
   },
-  alternates: { canonical: BASE_URL },
+  alternates: {
+    canonical: BASE_URL,
+    languages: {
+      en: BASE_URL,
+      pl: `${BASE_URL}/pl`,
+      ar: `${BASE_URL}/ar`,
+      de: `${BASE_URL}/de`,
+      fr: `${BASE_URL}/fr`,
+      'x-default': BASE_URL,
+    },
+  },
   other: { "theme-color": "#08172E" },
 };
 
