@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
+import { Link } from "@/i18n/navigation";
+import Nav from "../../../components/Nav";
+import Footer from "../../../components/Footer";
 import { Sparkles } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 

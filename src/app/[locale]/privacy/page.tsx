@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
+import Nav from "../../../components/Nav";
+import Footer from "../../../components/Footer";
 import { Shield, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {

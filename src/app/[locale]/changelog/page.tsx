@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
+import Nav from "../../../components/Nav";
+import Footer from "../../../components/Footer";
 import { Sparkles } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { getTranslations } from "next-intl/server";

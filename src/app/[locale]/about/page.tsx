@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
+import { Link } from "@/i18n/navigation";
+import Nav from "../../../components/Nav";
+import Footer from "../../../components/Footer";
 import { Sparkles, Check, ArrowRight, Globe, Calendar, BarChart3, Zap } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 

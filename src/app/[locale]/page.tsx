@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
-import SubscribeForm from "../components/SubscribeForm";
-import { POSTS as ALL_BLOG_POSTS } from "../lib/blog-posts";
+import { Link } from "@/i18n/navigation";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import SubscribeForm from "../../components/SubscribeForm";
+import { POSTS as ALL_BLOG_POSTS } from "../../lib/blog-posts";
 import { getTranslations, getLocale } from "next-intl/server";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { useRouter, usePathname } from '@/i18n/navigation'
 
 const LANGUAGES = [
   { code: 'en', flag: '🇬🇧', nativeName: 'English' },
@@ -20,6 +21,8 @@ interface Props {
 export default function LanguageSwitcher({ currentLocale, dropDirection = 'down' }: Props) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     if (!open) return
@@ -33,9 +36,8 @@ export default function LanguageSwitcher({ currentLocale, dropDirection = 'down'
   const current = LANGUAGES.find(l => l.code === currentLocale) ?? LANGUAGES[0]
 
   const switchLocale = (code: string) => {
-    document.cookie = `locale=${code};path=/;max-age=${365 * 24 * 60 * 60}`
     setOpen(false)
-    window.location.reload()
+    router.replace(pathname, { locale: code as any })
   }
 
   // Desktop: open below, aligned to end (right in LTR)

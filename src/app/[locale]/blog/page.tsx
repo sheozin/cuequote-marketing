@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
+import { Link } from "@/i18n/navigation";
+import Nav from "../../../components/Nav";
+import Footer from "../../../components/Footer";
 import { ArrowRight } from "lucide-react";
-import { POSTS } from "../../lib/blog-posts";
+import { POSTS } from "../../../lib/blog-posts";
 import { getTranslations } from "next-intl/server";
 
 export const metadata: Metadata = {

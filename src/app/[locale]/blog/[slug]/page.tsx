@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
-import Nav from "../../../components/Nav";
-import Footer from "../../../components/Footer";
+import Nav from "../../../../components/Nav";
+import Footer from "../../../../components/Footer";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { POSTS } from "../../../lib/blog-posts";
+import { POSTS } from "../../../../lib/blog-posts";
 
 /* ─── Category colors ──────────────────────────────────────────────────────── */
 
@@ -22,12 +22,13 @@ export function generateStaticParams() {
   return POSTS.map((post) => ({ slug: post.slug }));
 }
 
+
 /* ─── Metadata ──────────────────────────────────────────────────────────────── */
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = POSTS.find((p) => p.slug === slug);
@@ -56,7 +57,7 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
   const { slug } = await params;
   const post = POSTS.find((p) => p.slug === slug);

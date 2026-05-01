@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import {
@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
   const locale = await getLocale()
@@ -40,7 +40,7 @@ const DIFFICULTY_COLORS: Record<string, { bg: string; text: string }> = {
 export default async function TutorialPage({
   params,
 }: {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: string; slug: string }>
 }) {
   const t = await getTranslations('tutorialDetail')
   const locale = await getLocale()

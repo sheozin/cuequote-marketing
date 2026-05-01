@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Nav from "../../components/Nav";
-import Footer from "../../components/Footer";
-import ContactForm from "../../components/ContactForm";
+import Nav from "../../../components/Nav";
+import Footer from "../../../components/Footer";
+import ContactForm from "../../../components/ContactForm";
 import { Mail, MapPin, Clock, Sparkles } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 
