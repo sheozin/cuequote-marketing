@@ -15,6 +15,8 @@
     "tutorials": "Tutorials"
   },
   "hero": {
+    "metaTitle": "CueQuote — KI-gestützte AV-Angebote in Sekunden",
+    "metaDescription": "Verwandeln Sie Veranstaltungsbeschreibungen in professionelle AV-Ausrüstungsangebote in unter 2 Minuten.",
     "badge": "KI-gestützte AV-Angebotserstellung",
     "title": "Verwandeln Sie Veranstaltungsbeschreibungen in",
     "titleHighlight": "professionelle AV-Angebote",
@@ -67,6 +69,8 @@
     "step3Desc": "Exportieren Sie ein gebrandetes PDF oder teilen Sie einen Link. Verfolgen Sie, wann Ihr Kunde es aufruft. Werden Sie benachrichtigt, wenn er antwortet."
   },
   "pricing": {
+    "metaTitle": "Preise",
+    "metaDescription": "Einfache, transparente Preise für die AV-Angebotserstellung.",
     "title": "Einfache, transparente Preise",
     "subtitle": "Starten Sie kostenlos. Upgraden Sie bei Bedarf.",
     "monthly": "Monatlich",
@@ -199,6 +203,8 @@
     "noCreditCard": "Keine Kreditkarte erforderlich"
   },
   "about": {
+    "metaTitle": "Über uns",
+    "metaDescription": "Die Geschichte hinter CueQuote.",
     "title": "Über CueQuote",
     "subtitle": "Von AV-Profis entwickelt, für AV-Profis.",
     "badge": "Unsere Geschichte",
@@ -217,6 +223,8 @@
     "cta": "CueQuote kostenlos testen"
   },
   "contact": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Nehmen Sie Kontakt mit CueQuote auf.",
     "title": "Kontakt",
     "subtitle": "Haben Sie Fragen? Wir freuen uns von Ihnen zu hören.",
     "badge": "Kontakt aufnehmen",
@@ -253,6 +261,8 @@
     "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
   },
   "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Tipps und Einblicke für AV-Profis.",
     "title": "Blog",
     "subtitle": "Tipps, Anleitungen und Einblicke für AV-Profis.",
     "readMore": "Mehr lesen",
@@ -511,6 +521,8 @@
     }
   },
   "tutorials": {
+    "metaTitle": "Tutorials — CueQuote lernen",
+    "metaDescription": "Schritt-für-Schritt-Anleitungen zur Beherrschung von CueQuote.",
     "badge": "Tutorials",
     "heading": "Lernen Sie CueQuote in Minuten",
     "subtitle": "Schritt-für-Schritt-Videoanleitungen, die Ihnen helfen, jede Funktion zu meistern",
@@ -542,6 +554,8 @@
     "contactUs": "Kontakt aufnehmen"
   },
   "docs": {
+    "metaTitle": "Dokumentation — Erste Schritte",
+    "metaDescription": "Erfahren Sie, wie Sie mit CueQuote professionelle AV-Angebote erstellen.",
     "badge": "Dokumentation",
     "heading": "Erste Schritte mit",
     "headingHighlight": "CueQuote",
@@ -720,6 +734,8 @@
     }
   },
   "changelog": {
+    "metaTitle": "Änderungsprotokoll — Neuigkeiten",
+    "metaDescription": "Neueste Updates und Verbesserungen von CueQuote.",
     "badge": "Änderungsprotokoll",
     "heading": "Was ist",
     "headingHighlight": "Neu",
@@ -745,5 +761,13 @@
     "subtitle": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
     "goHome": "Zur Startseite",
     "contactUs": "Kontakt"
+  },
+  "privacy": {
+    "metaTitle": "Datenschutzrichtlinie",
+    "metaDescription": "Wie CueQuote mit Ihren Daten umgeht."
+  },
+  "terms": {
+    "metaTitle": "Nutzungsbedingungen",
+    "metaDescription": "Bedingungen für die Nutzung von CueQuote."
   }
 }

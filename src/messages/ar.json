@@ -15,6 +15,8 @@
     "tutorials": "الدروس"
   },
   "hero": {
+    "metaTitle": "CueQuote — عروض أسعار AV بالذكاء الاصطناعي في ثوانٍ",
+    "metaDescription": "حوّل أوصاف الفعاليات إلى عروض أسعار احترافية لمعدات AV في أقل من دقيقتين.",
     "badge": "عروض أسعار AV بالذكاء الاصطناعي",
     "title": "حوّل أوصاف الفعاليات إلى",
     "titleHighlight": "عروض AV احترافية",
@@ -67,6 +69,8 @@
     "step3Desc": "صدّر PDF بعلامتك التجارية أو شارك رابطاً. تتبّع متى يطّلع عليه عميلك. احصل على إشعار عند الرد."
   },
   "pricing": {
+    "metaTitle": "الأسعار",
+    "metaDescription": "أسعار بسيطة وشفافة لإنشاء عروض أسعار AV.",
     "title": "أسعار بسيطة وشفافة",
     "subtitle": "ابدأ مجاناً. طوّر مع نموّك.",
     "monthly": "شهري",
@@ -199,6 +203,8 @@
     "noCreditCard": "لا حاجة لبطاقة ائتمان"
   },
   "about": {
+    "metaTitle": "عن CueQuote",
+    "metaDescription": "القصة وراء CueQuote.",
     "title": "عن CueQuote",
     "subtitle": "صُنع بواسطة محترفي AV، لمحترفي AV.",
     "badge": "قصتنا",
@@ -217,6 +223,8 @@
     "cta": "جرّب CueQuote مجاناً"
   },
   "contact": {
+    "metaTitle": "اتصل بنا",
+    "metaDescription": "تواصل مع CueQuote.",
     "title": "تواصل معنا",
     "subtitle": "لديك أسئلة؟ يسعدنا سماعك.",
     "badge": "تواصل معنا",
@@ -253,6 +261,8 @@
     "error": "حدث خطأ. يرجى المحاولة مرة أخرى."
   },
   "blog": {
+    "metaTitle": "المدوّنة",
+    "metaDescription": "نصائح ورؤى لمحترفي AV.",
     "title": "المدوّنة",
     "subtitle": "نصائح وأدلة ورؤى لمحترفي AV.",
     "readMore": "اقرأ المزيد",
@@ -511,6 +521,8 @@
     }
   },
   "tutorials": {
+    "metaTitle": "الدروس — تعلّم CueQuote",
+    "metaDescription": "أدلة خطوة بخطوة لإتقان CueQuote.",
     "badge": "الدروس",
     "heading": "تعلّم CueQuote في دقائق",
     "subtitle": "أدلة فيديو خطوة بخطوة لمساعدتك على إتقان كل ميزة",
@@ -542,6 +554,8 @@
     "contactUs": "اتصل بنا"
   },
   "docs": {
+    "metaTitle": "التوثيق — البدء",
+    "metaDescription": "تعلّم كيفية استخدام CueQuote لإنشاء عروض أسعار AV احترافية.",
     "badge": "التوثيق",
     "heading": "ابدأ مع",
     "headingHighlight": "CueQuote",
@@ -720,6 +734,8 @@
     }
   },
   "changelog": {
+    "metaTitle": "سجل التغييرات — ما الجديد",
+    "metaDescription": "أحدث التحديثات والتحسينات في CueQuote.",
     "badge": "سجل التغييرات",
     "heading": "ما",
     "headingHighlight": "الجديد",
@@ -745,5 +761,13 @@
     "subtitle": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
     "goHome": "الصفحة الرئيسية",
     "contactUs": "اتصل بنا"
+  },
+  "privacy": {
+    "metaTitle": "سياسة الخصوصية",
+    "metaDescription": "كيف يتعامل CueQuote مع بياناتك."
+  },
+  "terms": {
+    "metaTitle": "شروط الخدمة",
+    "metaDescription": "الشروط المنظمة لاستخدام CueQuote."
   }
 }

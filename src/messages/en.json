@@ -15,6 +15,8 @@
     "tutorials": "Tutorials"
   },
   "hero": {
+    "metaTitle": "CueQuote — AI-Powered AV Proposals in Seconds",
+    "metaDescription": "Turn event descriptions into professional AV equipment proposals in under 2 minutes.",
     "badge": "AI-Powered AV Quoting",
     "title": "Turn event descriptions into",
     "titleHighlight": "professional AV proposals",
@@ -67,6 +69,8 @@
     "step3Desc": "Export a branded PDF or share a link. Track when your client views it. Get notified when they respond."
   },
   "pricing": {
+    "metaTitle": "Pricing",
+    "metaDescription": "Simple, transparent pricing for AV proposal generation.",
     "title": "Simple, transparent pricing",
     "subtitle": "Start free. Upgrade as you grow.",
     "monthly": "Monthly",
@@ -199,6 +203,8 @@
     "noCreditCard": "No credit card required"
   },
   "about": {
+    "metaTitle": "About",
+    "metaDescription": "The story behind CueQuote.",
     "title": "About CueQuote",
     "subtitle": "Built by AV professionals, for AV professionals.",
     "badge": "Our Story",
@@ -217,6 +223,8 @@
     "cta": "Try CueQuote Free"
   },
   "contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Get in touch with CueQuote.",
     "title": "Get in Touch",
     "subtitle": "Have questions? We'd love to hear from you.",
     "badge": "Get in Touch",
@@ -253,6 +261,8 @@
     "error": "Something went wrong. Please try again."
   },
   "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Tips and insights for AV professionals.",
     "title": "Blog",
     "subtitle": "Tips, guides, and insights for AV professionals.",
     "readMore": "Read more",
@@ -511,6 +521,8 @@
     }
   },
   "tutorials": {
+    "metaTitle": "Tutorials — Learn CueQuote",
+    "metaDescription": "Step-by-step guides to master CueQuote.",
     "badge": "Tutorials",
     "heading": "Learn CueQuote in Minutes",
     "subtitle": "Step-by-step video guides to help you master every feature",
@@ -542,6 +554,8 @@
     "contactUs": "Contact Us"
   },
   "docs": {
+    "metaTitle": "Documentation — Getting Started",
+    "metaDescription": "Learn how to use CueQuote to create professional AV proposals.",
     "badge": "Documentation",
     "heading": "Getting Started with",
     "headingHighlight": "CueQuote",
@@ -720,6 +734,8 @@
     }
   },
   "changelog": {
+    "metaTitle": "Changelog — What's New",
+    "metaDescription": "Latest updates and improvements to CueQuote.",
     "badge": "Changelog",
     "heading": "What's",
     "headingHighlight": "New",
@@ -745,5 +761,13 @@
     "subtitle": "The page you're looking for doesn't exist or has been moved.",
     "goHome": "Go Home",
     "contactUs": "Contact Us"
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy",
+    "metaDescription": "How CueQuote handles your data."
+  },
+  "terms": {
+    "metaTitle": "Terms of Service",
+    "metaDescription": "Terms governing use of CueQuote."
   }
 }

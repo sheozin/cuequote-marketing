@@ -15,6 +15,8 @@
     "tutorials": "Tutoriels"
   },
   "hero": {
+    "metaTitle": "CueQuote — Devis AV par IA en quelques secondes",
+    "metaDescription": "Transformez les descriptions d'événements en devis professionnels d'équipement AV en moins de 2 minutes.",
     "badge": "Devis AV assistés par IA",
     "title": "Transformez les descriptions d'événements en",
     "titleHighlight": "devis AV professionnels",
@@ -67,6 +69,8 @@
     "step3Desc": "Exportez un PDF personnalisé ou partagez un lien. Suivez quand votre client le consulte. Soyez notifié quand il répond."
   },
   "pricing": {
+    "metaTitle": "Tarifs",
+    "metaDescription": "Des tarifs simples et transparents pour la génération de devis AV.",
     "title": "Des tarifs simples et transparents",
     "subtitle": "Commencez gratuitement. Évoluez selon vos besoins.",
     "monthly": "Mensuel",
@@ -199,6 +203,8 @@
     "noCreditCard": "Aucune carte de crédit requise"
   },
   "about": {
+    "metaTitle": "À propos",
+    "metaDescription": "L'histoire derrière CueQuote.",
     "title": "À propos de CueQuote",
     "subtitle": "Créé par des professionnels AV, pour des professionnels AV.",
     "badge": "Notre histoire",
@@ -217,6 +223,8 @@
     "cta": "Essayer CueQuote gratuitement"
   },
   "contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contactez CueQuote.",
     "title": "Nous contacter",
     "subtitle": "Des questions ? Nous serions ravis de vous entendre.",
     "badge": "Nous contacter",
@@ -253,6 +261,8 @@
     "error": "Une erreur s'est produite. Veuillez réessayer."
   },
   "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Conseils et perspectives pour les professionnels AV.",
     "title": "Blog",
     "subtitle": "Conseils, guides et perspectives pour les professionnels AV.",
     "readMore": "Lire la suite",
@@ -511,6 +521,8 @@
     }
   },
   "tutorials": {
+    "metaTitle": "Tutoriels — Apprenez CueQuote",
+    "metaDescription": "Guides pas à pas pour maîtriser CueQuote.",
     "badge": "Tutoriels",
     "heading": "Apprenez CueQuote en quelques minutes",
     "subtitle": "Des guides vidéo étape par étape pour maîtriser chaque fonctionnalité",
@@ -542,6 +554,8 @@
     "contactUs": "Nous contacter"
   },
   "docs": {
+    "metaTitle": "Documentation — Premiers pas",
+    "metaDescription": "Apprenez à utiliser CueQuote pour créer des devis AV professionnels.",
     "badge": "Documentation",
     "heading": "Premiers pas avec",
     "headingHighlight": "CueQuote",
@@ -720,6 +734,8 @@
     }
   },
   "changelog": {
+    "metaTitle": "Journal des modifications — Nouveautés",
+    "metaDescription": "Dernières mises à jour et améliorations de CueQuote.",
     "badge": "Journal des modifications",
     "heading": "Quoi de",
     "headingHighlight": "neuf",
@@ -745,5 +761,13 @@
     "subtitle": "La page que vous recherchez n'existe pas ou a été déplacée.",
     "goHome": "Retour à l'accueil",
     "contactUs": "Nous contacter"
+  },
+  "privacy": {
+    "metaTitle": "Politique de confidentialité",
+    "metaDescription": "Comment CueQuote gère vos données."
+  },
+  "terms": {
+    "metaTitle": "Conditions d'utilisation",
+    "metaDescription": "Conditions régissant l'utilisation de CueQuote."
   }
 }

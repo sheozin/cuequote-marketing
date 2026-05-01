@@ -15,6 +15,8 @@
     "tutorials": "Poradniki"
   },
   "hero": {
+    "metaTitle": "CueQuote — Oferty AV z AI w kilka sekund",
+    "metaDescription": "Zamień opisy wydarzeń w profesjonalne oferty sprzętowe AV w mniej niż 2 minuty.",
     "badge": "Wyceny AV z pomocą AI",
     "title": "Zamień opisy wydarzeń w",
     "titleHighlight": "profesjonalne oferty AV",
@@ -67,6 +69,8 @@
     "step3Desc": "Eksportuj markowy PDF lub udostępnij link. Śledź, kiedy klient go otworzy. Otrzymaj powiadomienie o odpowiedzi."
   },
   "pricing": {
+    "metaTitle": "Cennik",
+    "metaDescription": "Prosty, przejrzysty cennik generowania ofert AV.",
     "title": "Prosty, przejrzysty cennik",
     "subtitle": "Zacznij za darmo. Rozwijaj się w swoim tempie.",
     "monthly": "Miesięcznie",
@@ -199,6 +203,8 @@
     "noCreditCard": "Bez karty kredytowej"
   },
   "about": {
+    "metaTitle": "O nas",
+    "metaDescription": "Historia CueQuote.",
     "title": "O CueQuote",
     "subtitle": "Stworzone przez profesjonalistów AV, dla profesjonalistów AV.",
     "badge": "Nasza historia",
@@ -217,6 +223,8 @@
     "cta": "Wypróbuj CueQuote za darmo"
   },
   "contact": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Skontaktuj się z CueQuote.",
     "title": "Skontaktuj się",
     "subtitle": "Masz pytania? Chętnie pomożemy.",
     "badge": "Skontaktuj się",
@@ -253,6 +261,8 @@
     "error": "Coś poszło nie tak. Spróbuj ponownie."
   },
   "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Porady i spostrzeżenia dla profesjonalistów AV.",
     "title": "Blog",
     "subtitle": "Porady, przewodniki i spostrzeżenia dla profesjonalistów AV.",
     "readMore": "Czytaj więcej",
@@ -511,6 +521,8 @@
     }
   },
   "tutorials": {
+    "metaTitle": "Poradniki — Naucz się CueQuote",
+    "metaDescription": "Przewodniki krok po kroku do opanowania CueQuote.",
     "badge": "Poradniki",
     "heading": "Naucz się CueQuote w kilka minut",
     "subtitle": "Przewodniki wideo krok po kroku, które pomogą Ci opanować każdą funkcję",
@@ -542,6 +554,8 @@
     "contactUs": "Skontaktuj się"
   },
   "docs": {
+    "metaTitle": "Dokumentacja — Pierwsze kroki",
+    "metaDescription": "Dowiedz się, jak używać CueQuote do tworzenia profesjonalnych ofert AV.",
     "badge": "Dokumentacja",
     "heading": "Pierwsze kroki z",
     "headingHighlight": "CueQuote",
@@ -720,6 +734,8 @@
     }
   },
   "changelog": {
+    "metaTitle": "Historia zmian — Co nowego",
+    "metaDescription": "Najnowsze aktualizacje i ulepszenia CueQuote.",
     "badge": "Historia zmian",
     "heading": "Co",
     "headingHighlight": "nowego",
@@ -745,5 +761,13 @@
     "subtitle": "Strona, której szukasz, nie istnieje lub została przeniesiona.",
     "goHome": "Strona główna",
     "contactUs": "Kontakt"
+  },
+  "privacy": {
+    "metaTitle": "Polityka prywatności",
+    "metaDescription": "Jak CueQuote przetwarza Twoje dane."
+  },
+  "terms": {
+    "metaTitle": "Regulamin",
+    "metaDescription": "Warunki korzystania z CueQuote."
   }
 }
