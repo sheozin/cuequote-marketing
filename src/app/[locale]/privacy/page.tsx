@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { Shield, Sparkles } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "CueQuote privacy policy — how we collect, use, and protect your data.",
-  alternates: { canonical: "/privacy" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("privacy");
+  return {
+    title: t("metaTitle", { defaultValue: "Privacy Policy" }),
+    description: t("metaDescription", { defaultValue: "CueQuote privacy policy — how we collect, use, and protect your data." }),
+    alternates: { canonical: "/privacy" },
+  };
+}
 
 const SECTIONS = [
   {

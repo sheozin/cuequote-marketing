@@ -5,11 +5,14 @@ import { Sparkles } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Changelog — What's New",
-  description: "See the latest updates and improvements to CueQuote.",
-  alternates: { canonical: "/changelog" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("changelog");
+  return {
+    title: t("metaTitle", { defaultValue: "Changelog — What's New" }),
+    description: t("metaDescription", { defaultValue: "See the latest updates and improvements to CueQuote." }),
+    alternates: { canonical: "/changelog" },
+  };
+}
 
 export default async function ChangelogPage() {
   const t = await getTranslations("changelog");

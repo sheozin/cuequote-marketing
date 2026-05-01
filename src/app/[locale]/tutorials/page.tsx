@@ -5,12 +5,14 @@ import Footer from "../../../components/Footer";
 import { getTranslations, getLocale } from "next-intl/server";
 import { getTutorials, type Tutorial } from "@/lib/tutorials";
 
-export const metadata: Metadata = {
-  title: "Tutorials — Learn CueQuote",
-  description:
-    "Step-by-step video guides to master CueQuote's AV proposal automation features.",
-  alternates: { canonical: "/tutorials" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("tutorials");
+  return {
+    title: t("metaTitle", { defaultValue: "Tutorials — Learn CueQuote" }),
+    description: t("metaDescription", { defaultValue: "Step-by-step video guides to master CueQuote's AV proposal automation features." }),
+    alternates: { canonical: "/tutorials" },
+  };
+}
 
 const DIFFICULTY_STYLES: Record<Tutorial["difficulty"], { background: string; color: string }> = {
   beginner: { background: "rgba(16,185,129,0.1)", color: "#059669" },

@@ -5,12 +5,14 @@ import Footer from "../../../components/Footer";
 import { Sparkles } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Documentation — Getting Started",
-  description:
-    "Learn how to use CueQuote to create professional AV proposals.",
-  alternates: { canonical: "/docs" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("docs");
+  return {
+    title: t("metaTitle", { defaultValue: "Documentation — Getting Started" }),
+    description: t("metaDescription", { defaultValue: "Learn how to use CueQuote to create professional AV proposals." }),
+    alternates: { canonical: "/docs" },
+  };
+}
 
 // Ordered by user journey: onboard → set up → create proposals → customize → send → invoice → account
 const ARTICLE_KEYS = [

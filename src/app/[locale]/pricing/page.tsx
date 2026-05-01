@@ -7,11 +7,14 @@ import { getTranslations, getLocale } from "next-intl/server";
 
 const APP_URL = "https://app.cuequote.com";
 
-export const metadata: Metadata = {
-  title: "Pricing",
-  description: "Simple, transparent pricing for AV proposal generation. Start free, upgrade as you grow.",
-  alternates: { canonical: "/pricing" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("pricing");
+  return {
+    title: t("metaTitle", { defaultValue: "Pricing" }),
+    description: t("metaDescription", { defaultValue: "Simple, transparent pricing for AV proposal generation. Start free, upgrade as you grow." }),
+    alternates: { canonical: "/pricing" },
+  };
+}
 
 export default async function PricingPage() {
   const locale = await getLocale();

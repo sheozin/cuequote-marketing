@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { FileText, Sparkles } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "CueQuote terms of service — the rules and guidelines for using our platform.",
-  alternates: { canonical: "/terms" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("terms");
+  return {
+    title: t("metaTitle", { defaultValue: "Terms of Service" }),
+    description: t("metaDescription", { defaultValue: "CueQuote terms of service — the rules and guidelines for using our platform." }),
+    alternates: { canonical: "/terms" },
+  };
+}
 
 const SECTIONS = [
   {

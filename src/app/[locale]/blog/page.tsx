@@ -6,11 +6,14 @@ import { ArrowRight } from "lucide-react";
 import { POSTS } from "../../../lib/blog-posts";
 import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description: "Tips, guides, and insights for AV professionals — from proposal writing to equipment pricing and industry trends.",
-  alternates: { canonical: "/blog" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("blog");
+  return {
+    title: t("metaTitle", { defaultValue: "Blog" }),
+    description: t("metaDescription", { defaultValue: "Tips, guides, and insights for AV professionals — from proposal writing to equipment pricing and industry trends." }),
+    alternates: { canonical: "/blog" },
+  };
+}
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string }> = {
   Guides: { bg: "#ecfdf5", text: "#10b981", border: "#10b981" },
