@@ -21,11 +21,11 @@ export default async function PricingPage() {
   const t = await getTranslations("pricing");
 
   const newFeatureLabels = new Set([
-    t("starterF4"), // E-signatures
-    t("proF3"),     // Proposal analytics
-    t("proF4"),     // Recurring proposals
-    t("proF5"),     // White-label PDFs
-    t("proF6"),     // Client portal
+    t("starterF4"),
+    t("proF3"),
+    t("proF4"),
+    t("proF5"),
+    t("proF6"),
   ]);
 
   const plans = [
@@ -58,8 +58,9 @@ export default async function PricingPage() {
       icon: <Crown size={20} />,
       features: [t("proF1"), t("proF2"), t("proF3"), t("proF4"), t("proF5"), t("proF6"), t("proF7"), t("proF8")],
       cta: t("startTrial"),
-      ctaStyle: "primary" as const,
+      ctaStyle: "featured" as const,
       popular: true,
+      note: t("proNote", { defaultValue: "Best value for teams" }),
     },
     {
       name: t("businessName"),
@@ -83,115 +84,205 @@ export default async function PricingPage() {
     { q: t("faqQ7"), a: t("faqA7") },
   ];
 
+  const comparisonRows = [
+    { cat: t("compProposals", { defaultValue: "Proposals" }) },
+    { label: t("compAiPerMonth", { defaultValue: "AI proposals/month" }), free: "3", starter: "10", pro: "40", business: "120" },
+    { label: t("compBrandedPdf", { defaultValue: "Branded PDFs" }), free: false, starter: true, pro: true, business: true },
+    { label: t("compTemplates", { defaultValue: "PDF templates" }), free: "1", starter: "4", pro: "4", business: "4" },
+    { label: t("compRecurring", { defaultValue: "Recurring proposals" }), free: false, starter: false, pro: true, business: true },
+    { cat: t("compClientExp", { defaultValue: "Client Experience" }) },
+    { label: t("compShareLinks", { defaultValue: "Share links + tracking" }), free: true, starter: true, pro: true, business: true },
+    { label: t("compEsig", { defaultValue: "E-signatures" }), free: t("compNameOnly", { defaultValue: "Name only" }), starter: t("compFull", { defaultValue: "Full" }), pro: t("compFull", { defaultValue: "Full" }), business: t("compFull", { defaultValue: "Full" }) },
+    { label: t("compPortal", { defaultValue: "Client portal" }), free: false, starter: false, pro: true, business: true },
+    { label: t("compAnalytics", { defaultValue: "Proposal analytics" }), free: t("compViewsOnly", { defaultValue: "Views only" }), starter: t("compViewsOnly", { defaultValue: "Views only" }), pro: t("compFull", { defaultValue: "Full" }), business: t("compFull", { defaultValue: "Full" }) },
+    { cat: t("compCustomization", { defaultValue: "Customization" }) },
+    { label: t("compWhiteLabel", { defaultValue: "White-label PDFs" }), free: false, starter: false, pro: true, business: true },
+    { label: t("compTerms", { defaultValue: "Custom terms & T&C" }), free: true, starter: true, pro: true, business: true },
+    { label: t("compMultiLang", { defaultValue: "Multi-language" }), free: true, starter: true, pro: true, business: true },
+    { cat: t("compTeamSupport", { defaultValue: "Team & Support" }) },
+    { label: t("compTeamMembers", { defaultValue: "Team members" }), free: "1", starter: "1", pro: "5", business: "20" },
+    { label: t("compClients", { defaultValue: "Client management" }), free: false, starter: true, pro: true, business: true },
+    { label: t("compInvoicing", { defaultValue: "Invoicing" }), free: false, starter: true, pro: true, business: true },
+    { label: t("compApi", { defaultValue: "API access" }), free: false, starter: false, pro: false, business: true },
+    { label: t("compSupport", { defaultValue: "Support" }), free: t("compCommunity", { defaultValue: "Community" }), starter: t("compEmail", { defaultValue: "Email" }), pro: t("compPriority", { defaultValue: "Priority" }), business: t("compDedicated", { defaultValue: "Dedicated" }) },
+  ];
+
   return (
     <>
       <Nav />
 
-      {/* Hero */}
+      <style>{`
+        .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; max-width: 1140px; margin: -70px auto 0; position: relative; z-index: 2; }
+        @media (max-width: 900px) { .pricing-grid { grid-template-columns: repeat(2, 1fr) !important; } .feat-card { transform: none !important; } }
+        @media (max-width: 560px) { .pricing-grid { grid-template-columns: 1fr !important; } }
+        .packs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 580px; margin: 0 auto 32px; }
+        @media (max-width: 500px) { .packs-grid { grid-template-columns: 1fr !important; } }
+        .comp-table { width: 100%; border-collapse: collapse; }
+        .comp-table th, .comp-table td { padding: 14px 16px; font-size: 13px; text-align: center; }
+        .comp-table th:first-child, .comp-table td:first-child { text-align: start; }
+        .comp-table thead th { font-weight: 700; color: #08172E; border-bottom: 2px solid #e5e7eb; font-size: 14px; }
+        .comp-table tbody td { border-bottom: 1px solid #f3f4f6; color: #374151; }
+        .comp-table .pro-col { background: #f0fdf4; }
+        .comp-table thead .pro-col { border-radius: 12px 12px 0 0; }
+        summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+      `}</style>
+
+      {/* Hero — Dark */}
       <section style={{
-        padding: "100px 24px 20px", textAlign: "center",
-        background: "linear-gradient(180deg, #f0fdf4 0%, #fff 100%)",
+        background: "linear-gradient(135deg, #08172E 0%, #0f2d50 50%, #08172E 100%)",
+        padding: "100px 24px 120px", textAlign: "center",
       }}>
         <div style={{
-          display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600, color: "#10b981",
-          background: "#ecfdf5", border: "1px solid rgba(16,185,129,0.15)", padding: "6px 14px", borderRadius: 20, marginBottom: 20,
+          display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: "#10b981",
+          background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.2)", padding: "6px 16px", borderRadius: 100, marginBottom: 24,
         }}>
-          <Sparkles size={14} /> {t("heroBadge")}
+          <Sparkles size={13} /> {t("heroBadge")}
         </div>
-        <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 48, color: "#08172E", marginBottom: 14, letterSpacing: -1.5, lineHeight: 1.1 }}>
+        <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 48, color: "#fff", marginBottom: 14, letterSpacing: -1.5, lineHeight: 1.1 }}>
           {t("heroTitle")}
         </h1>
-        <p style={{ fontSize: 18, color: "#6b7280", maxWidth: 520, margin: "0 auto", lineHeight: 1.6 }}>
+        <p style={{ fontSize: 17, color: "rgba(255,255,255,0.5)", maxWidth: 480, margin: "0 auto", lineHeight: 1.6 }}>
           {t("heroSubtitle")}
         </p>
       </section>
 
-      {/* Plans */}
-      <section style={{ padding: "40px 24px 80px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="pricing-grid">
-          {plans.map(({ name, price, period, desc, icon, features, cta, ctaStyle, popular, save }) => (
-            <div key={name} style={{
-              background: "#fff", borderRadius: 20, padding: "32px 28px",
-              border: popular ? "2px solid #10b981" : "1px solid #e5e7eb",
-              position: "relative",
-              boxShadow: popular ? "0 8px 24px rgba(16,185,129,0.15)" : "0 2px 12px rgba(0,0,0,0.04)",
-              display: "flex", flexDirection: "column",
-              zIndex: popular ? 2 : 1,
-            }}>
-              {popular && (
-                <div style={{
-                  position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)",
-                  background: "linear-gradient(135deg, #10b981, #059669)", color: "#fff", fontSize: 12, fontWeight: 700,
-                  padding: "6px 20px", borderRadius: 20, whiteSpace: "nowrap",
-                }}>
-                  {t("popular")}
-                </div>
-              )}
-
-              {/* Plan icon + name */}
-              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                <div style={{ color: "#10b981" }}>{icon}</div>
-                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 20, color: "#08172E" }}>{name}</h3>
-              </div>
-              <p style={{ fontSize: 13, color: "#9ca3af", marginBottom: 20, lineHeight: 1.5 }}>{desc}</p>
-
-              {/* Price */}
-              <div style={{ marginBottom: 24 }}>
-                <span style={{ fontSize: 44, fontWeight: 800, color: "#08172E", letterSpacing: -1 }}>{price}</span>
-                <span style={{ fontSize: 15, color: "#9ca3af", fontWeight: 500 }}>{period}</span>
-                {save && (
-                  <p style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginTop: 4 }}>{save}</p>
-                )}
-              </div>
-
-              {/* Features */}
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
-                {features.map((f) => (
-                  <li key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#4b5563", marginBottom: 13 }}>
-                    <div style={{ width: 20, height: 20, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                      <Check size={12} style={{ color: "#10b981" }} />
-                    </div>
-                    {f}
-                    {newFeatureLabels.has(f) && (
-                      <span style={{
-                        fontSize: 10, fontWeight: 700, color: "#fff", background: "#10b981",
-                        padding: "2px 6px", borderRadius: 4, lineHeight: 1, flexShrink: 0,
-                        textTransform: "uppercase", letterSpacing: 0.5,
-                      }}>NEW</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
-                textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
-                padding: "14px 24px", borderRadius: 10, fontWeight: 600, fontSize: 15, marginTop: 24,
-                background: ctaStyle === "primary" ? "#10b981" : "transparent",
-                color: ctaStyle === "primary" ? "#fff" : "#08172E",
-                border: ctaStyle === "primary" ? "none" : "1px solid #e5e7eb",
-                transition: "all 0.2s",
+      {/* Plan Cards */}
+      <section style={{ padding: "0 24px 80px" }}>
+        <div className="pricing-grid" style={{ padding: "0 8px" }}>
+          {plans.map(({ name, price, period, desc, icon, features, cta, ctaStyle, popular, save, note }) => {
+            const isFeat = popular;
+            return (
+              <div key={name} className={isFeat ? "feat-card" : ""} style={{
+                background: isFeat ? "linear-gradient(135deg, #08172E 0%, #0f2d50 100%)" : "#fff",
+                borderRadius: 20, padding: isFeat ? "44px 28px 36px" : "32px 24px 28px",
+                border: isFeat ? "1.5px solid rgba(16,185,129,0.4)" : "1px solid #e5e7eb",
+                position: "relative",
+                transform: isFeat ? "scale(1.04)" : "none",
+                boxShadow: isFeat ? "0 20px 60px rgba(8,23,46,0.35)" : "0 2px 12px rgba(0,0,0,0.04)",
+                display: "flex", flexDirection: "column",
+                zIndex: isFeat ? 3 : 1,
               }}>
-                {cta}
-                {ctaStyle === "primary" && <ArrowRight size={16} />}
-              </Link>
-            </div>
-          ))}
-        </div>
+                {popular && (
+                  <div style={{
+                    position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)",
+                    background: "#10b981", color: "#fff", fontSize: 11, fontWeight: 700,
+                    padding: "6px 20px", borderRadius: 100, whiteSpace: "nowrap", letterSpacing: 0.5,
+                    textTransform: "uppercase",
+                  }}>
+                    {t("popular")}
+                  </div>
+                )}
 
-        <style>{`
-          @media (max-width: 900px) {
-            .pricing-grid { grid-template-columns: repeat(2, 1fr) !important; }
-          }
-          @media (max-width: 560px) {
-            .pricing-grid { grid-template-columns: 1fr !important; }
-          }
-        `}</style>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+                  <div style={{
+                    width: 40, height: 40, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center",
+                    background: isFeat ? "rgba(16,185,129,0.15)" : "#f0fdf4", color: "#10b981",
+                  }}>{icon}</div>
+                  <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: isFeat ? "#fff" : "#08172E", letterSpacing: -0.5 }}>{name}</h3>
+                </div>
+                <p style={{ fontSize: 13, color: isFeat ? "rgba(255,255,255,0.45)" : "#9ca3af", marginBottom: 20, lineHeight: 1.4 }}>{desc}</p>
+
+                <div style={{ marginBottom: 4 }}>
+                  <span style={{ fontSize: 48, fontWeight: 800, color: isFeat ? "#fff" : "#08172E", letterSpacing: -2 }}>{price}</span>
+                  <span style={{ fontSize: 16, fontWeight: 500, color: isFeat ? "rgba(255,255,255,0.35)" : "#9ca3af" }}>{period}</span>
+                </div>
+                <p style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginBottom: 20, minHeight: 18 }}>
+                  {save || note || "\u00A0"}
+                </p>
+
+                <div style={{ height: 1, background: isFeat ? "rgba(255,255,255,0.08)" : "#f3f4f6", marginBottom: 20 }} />
+
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
+                  {features.map((f) => (
+                    <li key={f} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: isFeat ? "rgba(255,255,255,0.8)" : "#4b5563", padding: "6px 0" }}>
+                      <Check size={15} style={{ color: "#10b981", flexShrink: 0 }} />
+                      <span>{f}</span>
+                      {newFeatureLabels.has(f) && (
+                        <span style={{
+                          fontSize: 9, fontWeight: 700, color: "#10b981",
+                          background: isFeat ? "rgba(16,185,129,0.2)" : "rgba(16,185,129,0.1)",
+                          padding: "2px 6px", borderRadius: 4, flexShrink: 0, letterSpacing: 0.5,
+                        }}>NEW</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
+                  textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+                  padding: "14px 24px", borderRadius: 12, fontWeight: 700, fontSize: 15, marginTop: 24,
+                  background: ctaStyle === "featured" ? "#10b981" : ctaStyle === "primary" ? "#08172E" : "transparent",
+                  color: ctaStyle === "outline" ? "#08172E" : "#fff",
+                  border: ctaStyle === "outline" ? "1.5px solid #e5e7eb" : "none",
+                  transition: "all 0.2s",
+                }}>
+                  {cta} {ctaStyle !== "outline" && <ArrowRight size={16} />}
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Feature Comparison Table */}
+      <section style={{ padding: "80px 24px", background: "#fff" }}>
+        <div style={{ maxWidth: 960, margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 28, color: "#08172E", textAlign: "center", marginBottom: 8, letterSpacing: -0.5 }}>
+            {t("compareTitle", { defaultValue: "Compare all features" })}
+          </h2>
+          <p style={{ textAlign: "center", color: "#6b7280", fontSize: 15, marginBottom: 40 }}>
+            {t("compareSubtitle", { defaultValue: "See exactly what's included in each plan" })}
+          </p>
+
+          <div style={{ overflowX: "auto" }}>
+            <table className="comp-table">
+              <thead>
+                <tr>
+                  <th style={{ width: "30%" }}></th>
+                  <th>{t("freeName")}</th>
+                  <th>{t("starterName")}</th>
+                  <th className="pro-col">{t("proName")}</th>
+                  <th>{t("businessName")}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row, i) => {
+                  if ('cat' in row && !('label' in row)) {
+                    return (
+                      <tr key={i}>
+                        <td style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, color: "#9ca3af", paddingTop: 28, borderBottom: "none" }}>{row.cat}</td>
+                        <td style={{ borderBottom: "none" }}></td>
+                        <td style={{ borderBottom: "none" }}></td>
+                        <td className="pro-col" style={{ borderBottom: "none" }}></td>
+                        <td style={{ borderBottom: "none" }}></td>
+                      </tr>
+                    );
+                  }
+                  const r = row as { label: string; free: boolean | string; starter: boolean | string; pro: boolean | string; business: boolean | string };
+                  const renderCell = (val: boolean | string, isPro?: boolean) => {
+                    if (val === true) return <td className={isPro ? "pro-col" : ""} style={{ color: "#10b981", fontSize: 16 }}>✓</td>;
+                    if (val === false) return <td className={isPro ? "pro-col" : ""} style={{ color: "#d1d5db" }}>—</td>;
+                    return <td className={isPro ? "pro-col" : ""} style={{ fontSize: 13, fontWeight: val === t("compFull", { defaultValue: "Full" }) ? 600 : 400, color: val === t("compFull", { defaultValue: "Full" }) ? "#10b981" : "#374151" }}>{val}</td>;
+                  };
+                  return (
+                    <tr key={i}>
+                      <td style={{ fontWeight: 500, color: "#6b7280" }}>{r.label}</td>
+                      {renderCell(r.free)}
+                      {renderCell(r.starter)}
+                      {renderCell(r.pro, true)}
+                      {renderCell(r.business)}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
       {/* Enterprise */}
       <section style={{ padding: "72px 24px", background: "#08172E", position: "relative", overflow: "hidden" }}>
-        {/* Glow */}
         <div style={{
           position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
           width: 500, height: 500, borderRadius: "50%",
@@ -223,7 +314,6 @@ export default async function PricingPage() {
             textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 32px",
             borderRadius: 10, fontWeight: 600, fontSize: 15,
             background: "rgba(16,185,129,0.15)", border: "1px solid rgba(16,185,129,0.3)", color: "#10b981",
-            transition: "all 0.2s",
           }}>
             {t("contactSales")} <ArrowRight size={16} />
           </Link>
@@ -240,86 +330,45 @@ export default async function PricingPage() {
                 {t("creditPacksTitle")}
               </h2>
             </div>
-            <p style={{ fontSize: 17, color: "#6b7280", maxWidth: 480, margin: "0 auto", lineHeight: 1.6 }}>
+            <p style={{ fontSize: 17, color: "#6b7280", maxWidth: 480, margin: "0 auto" }}>
               {t("creditPacksSubtitle")}
             </p>
           </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, maxWidth: 600, margin: "0 auto 32px" }} className="packs-grid">
-            {/* 3-Pack */}
-            <div style={{
-              background: "#fff", border: "1px solid #e5e7eb", borderRadius: 20, padding: "32px 28px",
-              display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center",
-              transition: "all 0.2s",
-            }}>
-              <div style={{
-                width: 56, height: 56, borderRadius: 16, background: "#ecfdf5",
-                display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16,
-              }}>
+          <div className="packs-grid">
+            <div style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 20, padding: "32px 28px", textAlign: "center" }}>
+              <div style={{ width: 56, height: 56, borderRadius: 16, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px" }}>
                 <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>5</span>
               </div>
-              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>5 Proposals</h3>
-              <div style={{ marginBottom: 4 }}>
-                <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€25</span>
-              </div>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, marginBottom: 4 }}>5 Proposals</h3>
+              <div><span style={{ fontSize: 36, fontWeight: 800 }}>€25</span></div>
               <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>€5.00 each</p>
-              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
-                textDecoration: "none", display: "block", width: "100%", textAlign: "center", padding: "12px 20px",
-                borderRadius: 10, fontWeight: 600, fontSize: 14,
-                border: "1px solid #e5e7eb", color: "#08172E", transition: "all 0.2s",
-              }}>
+              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{ textDecoration: "none", display: "block", padding: "12px", borderRadius: 10, fontWeight: 600, fontSize: 14, border: "1px solid #e5e7eb", color: "#08172E" }}>
                 {t("buy3Pack")}
               </Link>
             </div>
-
-            {/* 10-Pack */}
-            <div style={{
-              background: "#fff", border: "2px solid #10b981", borderRadius: 20, padding: "32px 28px",
-              display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center",
-              position: "relative", boxShadow: "0 8px 30px rgba(16,185,129,0.08)",
-            }}>
-              <div style={{
-                position: "absolute", top: -12, background: "#10b981", color: "#fff",
-                fontSize: 11, fontWeight: 700, padding: "4px 14px", borderRadius: 12,
-              }}>
+            <div style={{ background: "#fff", border: "2px solid #10b981", borderRadius: 20, padding: "32px 28px", textAlign: "center", position: "relative", boxShadow: "0 8px 30px rgba(16,185,129,0.08)" }}>
+              <div style={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", background: "#10b981", color: "#fff", fontSize: 11, fontWeight: 700, padding: "4px 14px", borderRadius: 12 }}>
                 {t("bestValue")}
               </div>
-              <div style={{
-                width: 56, height: 56, borderRadius: 16, background: "#ecfdf5",
-                display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16,
-              }}>
+              <div style={{ width: 56, height: 56, borderRadius: 16, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px" }}>
                 <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>15</span>
               </div>
-              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>15 Proposals</h3>
-              <div style={{ marginBottom: 4 }}>
-                <span style={{ fontSize: 36, fontWeight: 800, color: "#08172E" }}>€59</span>
-              </div>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, marginBottom: 4 }}>15 Proposals</h3>
+              <div><span style={{ fontSize: 36, fontWeight: 800 }}>€59</span></div>
               <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>€3.93 each</p>
-              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
-                textDecoration: "none", display: "block", width: "100%", textAlign: "center", padding: "12px 20px",
-                borderRadius: 10, fontWeight: 600, fontSize: 14,
-                background: "#10b981", color: "#fff", transition: "all 0.2s",
-              }}>
+              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{ textDecoration: "none", display: "block", padding: "12px", borderRadius: 10, fontWeight: 600, fontSize: 14, background: "#10b981", color: "#fff" }}>
                 {t("buy10Pack")}
               </Link>
             </div>
           </div>
-
-          {/* Trust badges */}
           <div style={{ display: "flex", justifyContent: "center", gap: 24, flexWrap: "wrap" }}>
-            {[t("noMonthlyFee"), t("creditsNeverExpire"), t("brandedPdfsIncluded")].map((badge) => (
-              <div key={badge} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "#6b7280" }}>
-                <Check size={14} style={{ color: "#10b981" }} /> {badge}
+            {[t("noMonthlyFee"), t("creditsNeverExpire"), t("brandedPdfsIncluded")].map((b) => (
+              <div key={b} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, color: "#6b7280" }}>
+                <Check size={14} style={{ color: "#10b981" }} /> {b}
               </div>
             ))}
           </div>
         </div>
-
-        <style>{`
-          @media (max-width: 500px) {
-            .packs-grid { grid-template-columns: 1fr !important; }
-          }
-        `}</style>
       </section>
 
       {/* FAQ */}
@@ -330,12 +379,8 @@ export default async function PricingPage() {
           </h2>
           {faqs.map(({ q, a }, i) => (
             <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "20px 0" }}>
-              <summary style={{
-                fontFamily: "var(--font-dm-sans)", fontWeight: 600, fontSize: 16, color: "#08172E",
-                cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center",
-              }}>
-                {q}
-                <ChevronDown size={18} style={{ color: "#9ca3af", flexShrink: 0 }} />
+              <summary style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 600, fontSize: 16, color: "#08172E", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                {q} <ChevronDown size={18} style={{ color: "#9ca3af", flexShrink: 0 }} />
               </summary>
               <p style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.7, marginTop: 12 }}>{a}</p>
             </details>
@@ -343,27 +388,16 @@ export default async function PricingPage() {
         </div>
       </section>
 
-      <style>{`
-        summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-      `}</style>
-
       {/* Final CTA */}
-      <section style={{
-        padding: "80px 24px", textAlign: "center",
-        background: "linear-gradient(135deg, #08172E 0%, #0f2d50 100%)",
-      }}>
+      <section style={{ padding: "80px 24px", textAlign: "center", background: "linear-gradient(135deg, #08172E 0%, #0f2d50 100%)" }}>
         <div style={{ maxWidth: 520, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 32, color: "#fff", marginBottom: 12, lineHeight: 1.2 }}>
             {t("readyTitle")}
           </h2>
-          <p style={{ fontSize: 16, color: "#94a3b8", marginBottom: 28 }}>
-            {t("readySubtitle")}
-          </p>
+          <p style={{ fontSize: 16, color: "#94a3b8", marginBottom: 28 }}>{t("readySubtitle")}</p>
           <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
             textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
-            background: "#10b981", color: "#fff", padding: "16px 36px", borderRadius: 12,
-            fontWeight: 700, fontSize: 17,
+            background: "#10b981", color: "#fff", padding: "16px 36px", borderRadius: 12, fontWeight: 700, fontSize: 17,
           }}>
             <Sparkles size={18} /> {t("startFree")}
           </Link>
