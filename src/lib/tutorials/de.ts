@@ -79,6 +79,11 @@ export const TUTORIALS_DE: Tutorial[] = [
         content: 'Unterhalb der Beschreibung legen Sie Eventdatum, Veranstaltungsort/Stadt, erwartete Teilnehmerzahl und Dauer in Tagen fest. Diese Angaben helfen der KI, klügere Entscheidungen zu treffen — mehrtägige Events werden beim Personal mit der Anzahl der Tage multipliziert, große Events (500+ Teilnehmer) erhalten zusätzliche Sicherheitsüberlegungen, und der Veranstaltungsort hilft bei der Bestimmung der Transportanforderungen.',
       },
       {
+        title: 'Anforderungsdateien anhängen',
+        content: 'Laden Sie technische Rider als PDF, Gerätelisten in Excel, Event-Briefs in Word oder Bilder von Raumplänen zusammen mit Ihrer Eventbeschreibung hoch. CueQuote extrahiert den Text und übergibt ihn der KI als zusätzlichen Kontext, was präzisere Angebote ermöglicht.',
+        tip: 'Kombinieren Sie eine kurze schriftliche Beschreibung mit einem angehängten Rider für beste Ergebnisse — die KI verbindet beide Quellen.',
+      },
+      {
         title: 'Kunden auswählen',
         content: 'Wählen Sie einen bestehenden Kunden aus oder überspringen Sie diesen Schritt. Wenn Sie einen Kunden auswählen, beeinflusst dessen Typ (Direct, Agency, Venue, Corporate) die von der KI generierten Zahlungsbedingungen. Agency-Kunden erhalten automatisch NET-30-Bedingungen, während Corporate-Kunden die Standard-Anzahlung von 50 % erhalten.',
         tip: 'Wenn Sie Kunden zuerst anlegen, werden deren Daten automatisch ins PDF übernommen — Name, Ansprechpartner, E-Mail, Telefon.',
@@ -264,6 +269,11 @@ export const TUTORIALS_DE: Tutorial[] = [
       {
         title: 'Zahlungsbedingungen festlegen',
         content: 'Zwei Felder steuern Ihren Zahlungsplan: Anzahlung in % (0–100) und Restzahlung (Tage vor dem Event). Eine Vorschauzeile zeigt genau, was im PDF stehen wird: "50 % Anzahlung bei Annahme, 50 % Restzahlung 7 Tage vor dem Event". Die KI setzt diese Werte anhand des Kundentyps — Agenturen erhalten 0 % Anzahlung mit 30-Tage-Bedingungen.',
+      },
+      {
+        title: 'Auf-/Abbautage-Preisgestaltung',
+        content: 'Konfigurieren Sie, wie Equipment an Auf- und Abbautagen berechnet wird. Wählen Sie 0 % (kostenlos), 50 % (halber Tarif) oder 100 % (voller Tarif) in den Einstellungen. Jedes Angebot kann den Standard überschreiben. Personal wird immer zum vollen Tagessatz für alle Tage berechnet.',
+        tip: 'Die meisten AV-Unternehmen berechnen 50 % für Auf-/Abbautage — Kunden erwarten es, und es deckt ab, dass Ihr Equipment gebunden ist, ohne im Showbetrieb genutzt zu werden.',
       },
       {
         title: 'AGB bearbeiten',

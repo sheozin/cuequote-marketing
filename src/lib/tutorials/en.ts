@@ -79,6 +79,11 @@ export const TUTORIALS_EN: Tutorial[] = [
         content: 'Below the description, set the event date, venue name/city, expected attendees, and duration in days. These details help the AI make smarter decisions — multi-day events get labor multiplied by days, large events (500+ attendees) get additional safety considerations, and the venue helps determine transport requirements.',
       },
       {
+        title: 'Attach requirement files',
+        content: 'Upload PDF technical riders, Excel equipment lists, Word event briefs, or venue floor plan images alongside your event description. CueQuote extracts the text and feeds it to the AI as additional context, producing more accurate proposals.',
+        tip: 'Combine a short written description with an attached rider for best results — the AI merges both sources.',
+      },
+      {
         title: 'Select a client',
         content: 'Choose an existing client or skip this step. If you select a client, their type (Direct, Agency, Venue, Corporate) influences the AI-generated payment terms. Agency clients get NET-30 terms automatically, while corporate clients get the standard 50% deposit.',
         tip: 'Creating clients first means their details auto-populate on the PDF — name, contact person, email, phone.',
@@ -264,6 +269,11 @@ export const TUTORIALS_EN: Tutorial[] = [
       {
         title: 'Set payment terms',
         content: 'Two fields control your payment schedule: Deposit % (0-100) and Balance due (days before event). A preview line shows exactly what the PDF will say: "50% deposit on acceptance, 50% balance due 7 days before event". The AI sets these based on client type — agencies get 0% deposit with 30-day terms.',
+      },
+      {
+        title: 'Setup & strike day pricing',
+        content: 'Configure how equipment is charged on setup and strike days. Choose 0% (free), 50% (half rate), or 100% (full rate) in Settings. Each proposal can override the default. Labor is always full rate for all days.',
+        tip: 'Most AV companies charge 50% for setup/strike days — clients expect it, and it covers your gear being tied up without full show usage.',
       },
       {
         title: 'Edit Terms & Conditions',

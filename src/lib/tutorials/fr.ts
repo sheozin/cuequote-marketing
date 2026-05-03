@@ -79,6 +79,11 @@ export const TUTORIALS_FR: Tutorial[] = [
         content: 'Sous la description, indiquez la date de l\'événement, le nom/la ville du lieu, le nombre de participants attendus et la durée en jours. Ces détails aident l\'IA à prendre des décisions plus pertinentes — les événements sur plusieurs jours voient leur main-d\'œuvre multipliée par le nombre de jours, les événements de grande ampleur (500+ participants) bénéficient de considérations de sécurité supplémentaires, et le lieu aide à déterminer les besoins en transport.',
       },
       {
+        title: 'Joindre des fichiers d\'exigences',
+        content: 'Téléchargez des fiches techniques PDF, des listes de matériel Excel, des briefs événementiels Word ou des images de plans de salle en complément de votre description d\'événement. CueQuote extrait le texte et le transmet à l\'IA comme contexte supplémentaire, ce qui produit des devis plus précis.',
+        tip: 'Combinez une courte description écrite avec une fiche technique jointe pour de meilleurs résultats — l\'IA fusionne les deux sources.',
+      },
+      {
         title: 'Sélectionnez un client',
         content: 'Choisissez un client existant ou passez cette étape. Si vous sélectionnez un client, son type (Direct, Agence, Lieu, Corporate) influence les conditions de paiement générées par l\'IA. Les clients de type Agence obtiennent automatiquement des conditions NET-30, tandis que les clients Corporate obtiennent l\'acompte standard de 50 %.',
         tip: 'Créer les clients au préalable permet que leurs informations se pré-remplissent sur le PDF — nom, personne de contact, e-mail, téléphone.',
@@ -264,6 +269,11 @@ export const TUTORIALS_FR: Tutorial[] = [
       {
         title: 'Définissez les conditions de paiement',
         content: 'Deux champs contrôlent votre échéancier de paiement : % d\'acompte (0-100) et solde dû (jours avant l\'événement). Une ligne d\'aperçu montre exactement ce qu\'indiquera le PDF : « 50 % d\'acompte à l\'acceptation, 50 % de solde dû 7 jours avant l\'événement ». L\'IA les fixe en fonction du type de client — les agences reçoivent 0 % d\'acompte avec des conditions à 30 jours.',
+      },
+      {
+        title: 'Tarification des jours de montage et démontage',
+        content: 'Configurez comment le matériel est facturé les jours de montage et de démontage. Choisissez 0 % (gratuit), 50 % (demi-tarif) ou 100 % (plein tarif) dans les Paramètres. Chaque devis peut remplacer la valeur par défaut. La main-d\'œuvre est toujours au plein tarif pour tous les jours.',
+        tip: 'La plupart des sociétés AV facturent 50 % pour les jours de montage/démontage — les clients s\'y attendent, et cela couvre le fait que votre matériel est mobilisé sans être utilisé en conditions de spectacle.',
       },
       {
         title: 'Modifiez les Conditions Générales',

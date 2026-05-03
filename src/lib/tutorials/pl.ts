@@ -79,6 +79,11 @@ export const TUTORIALS_PL: Tutorial[] = [
         content: 'Pod opisem ustaw datę wydarzenia, nazwę/miasto obiektu, spodziewaną liczbę uczestników oraz czas trwania w dniach. Te dane pomagają AI podejmować lepsze decyzje — wydarzenia wielodniowe mają pracę ludzką mnożoną przez liczbę dni, duże wydarzenia (500+ uczestników) otrzymują dodatkowe zabezpieczenia, a miejsce pomaga określić wymagania transportowe.',
       },
       {
+        title: 'Załącz pliki z wymaganiami',
+        content: 'Prześlij PDF-y z riderami technicznymi, arkusze Excel z listami sprzętu, briefy wydarzeń w formacie Word lub zdjęcia planów sal obok opisu wydarzenia. CueQuote wyodrębnia tekst i przekazuje go AI jako dodatkowy kontekst, generując dokładniejsze oferty.',
+        tip: 'Połącz krótki opis tekstowy z załączonym riderem, aby uzyskać najlepsze wyniki — AI łączy oba źródła.',
+      },
+      {
         title: 'Wybierz klienta',
         content: 'Wybierz istniejącego klienta lub pomiń ten krok. Jeśli wybierzesz klienta, jego typ (Direct, Agency, Venue, Corporate) wpływa na wygenerowane przez AI warunki płatności. Klienci typu Agency automatycznie otrzymują warunki NET-30, a klienci Corporate standardową zaliczkę 50%.',
         tip: 'Wcześniejsze utworzenie klientów oznacza, że ich dane automatycznie uzupełnią się w PDF-ie — nazwa, osoba kontaktowa, e-mail, telefon.',
@@ -264,6 +269,11 @@ export const TUTORIALS_PL: Tutorial[] = [
       {
         title: 'Ustaw warunki płatności',
         content: 'Dwa pola kontrolują harmonogram płatności: Zaliczka % (0-100) oraz Saldo płatne (dni przed wydarzeniem). Linia podglądu pokazuje dokładnie, co będzie w PDF-ie: „50% zaliczki przy akceptacji, 50% salda płatne 7 dni przed wydarzeniem”. AI ustawia je na podstawie typu klienta — agencje otrzymują 0% zaliczki z warunkami 30-dniowymi.',
+      },
+      {
+        title: 'Wycena dni montażu i demontażu',
+        content: 'Skonfiguruj, jak naliczany jest sprzęt w dni montażu i demontażu. Wybierz 0% (gratis), 50% (połowa stawki) lub 100% (pełna stawka) w Ustawieniach. Każda oferta może nadpisać wartość domyślną. Praca ludzka jest zawsze naliczana w pełnej stawce za wszystkie dni.',
+        tip: 'Większość firm AV nalicza 50% za dni montażu/demontażu — klienci tego oczekują, a pokrywa to czas, w którym sprzęt jest zajęty bez pełnego wykorzystania na pokazie.',
       },
       {
         title: 'Edytuj Regulamin',
