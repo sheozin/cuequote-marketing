@@ -9,10 +9,13 @@ const APP_URL = "https://app.cuequote.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("pricing");
+  const title = t("metaTitle", { defaultValue: "Pricing" });
+  const description = t("metaDescription", { defaultValue: "Simple, transparent pricing for AV proposal generation. Start free, upgrade as you grow." });
   return {
-    title: t("metaTitle", { defaultValue: "Pricing" }),
-    description: t("metaDescription", { defaultValue: "Simple, transparent pricing for AV proposal generation. Start free, upgrade as you grow." }),
+    title,
+    description,
     alternates: { canonical: "/pricing" },
+    openGraph: { title, description },
   };
 }
 
@@ -404,6 +407,17 @@ export default async function PricingPage() {
           <p style={{ fontSize: 13, color: "#64748b", marginTop: 14 }}>{t("noCreditCard")}</p>
         </div>
       </section>
+
+      {/* FAQ structured data for rich search results — content is from trusted i18n keys, not user input */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(({ q, a }) => ({
+          "@type": "Question",
+          "name": q,
+          "acceptedAnswer": { "@type": "Answer", "text": a }
+        }))
+      }) }} />
 
       <Footer />
     </>

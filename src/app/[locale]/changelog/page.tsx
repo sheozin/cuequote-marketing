@@ -7,10 +7,13 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("changelog");
+  const title = t("metaTitle", { defaultValue: "Changelog — What's New" });
+  const description = t("metaDescription", { defaultValue: "See the latest updates and improvements to CueQuote." });
   return {
-    title: t("metaTitle", { defaultValue: "Changelog — What's New" }),
-    description: t("metaDescription", { defaultValue: "See the latest updates and improvements to CueQuote." }),
+    title,
+    description,
     alternates: { canonical: "/changelog" },
+    openGraph: { title, description },
   };
 }
 

@@ -26,10 +26,13 @@ export async function generateMetadata({
   const locale = await getLocale()
   const tutorial = getTutorialBySlug(slug, locale)
   if (!tutorial) return { title: 'Tutorial' }
+  const title = `${tutorial.title} — CueQuote Tutorials`
+  const description = tutorial.description
   return {
-    title: `${tutorial.title} — CueQuote Tutorials`,
-    description: tutorial.description,
+    title,
+    description,
     alternates: { canonical: `/tutorials/${slug}` },
+    openGraph: { title, description },
   }
 }
 

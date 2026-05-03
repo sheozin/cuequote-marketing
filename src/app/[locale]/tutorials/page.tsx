@@ -7,10 +7,13 @@ import { getTutorials, type Tutorial } from "@/lib/tutorials";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("tutorials");
+  const title = t("metaTitle", { defaultValue: "Tutorials — Learn CueQuote" });
+  const description = t("metaDescription", { defaultValue: "Step-by-step video guides to master CueQuote's AV proposal automation features." });
   return {
-    title: t("metaTitle", { defaultValue: "Tutorials — Learn CueQuote" }),
-    description: t("metaDescription", { defaultValue: "Step-by-step video guides to master CueQuote's AV proposal automation features." }),
+    title,
+    description,
     alternates: { canonical: "/tutorials" },
+    openGraph: { title, description },
   };
 }
 

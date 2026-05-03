@@ -6,10 +6,13 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("privacy");
+  const title = t("metaTitle", { defaultValue: "Privacy Policy" });
+  const description = t("metaDescription", { defaultValue: "CueQuote privacy policy — how we collect, use, and protect your data." });
   return {
-    title: t("metaTitle", { defaultValue: "Privacy Policy" }),
-    description: t("metaDescription", { defaultValue: "CueQuote privacy policy — how we collect, use, and protect your data." }),
+    title,
+    description,
     alternates: { canonical: "/privacy" },
+    openGraph: { title, description },
   };
 }
 

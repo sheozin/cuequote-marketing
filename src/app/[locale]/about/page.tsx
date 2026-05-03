@@ -9,10 +9,13 @@ const APP_URL = "https://app.cuequote.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("about");
+  const title = t("metaTitle", { defaultValue: "About" });
+  const description = t("metaDescription", { defaultValue: "CueQuote is built by AVE Events — a team that has been in the AV production trenches. We built the tool we wished existed." });
   return {
-    title: t("metaTitle", { defaultValue: "About" }),
-    description: t("metaDescription", { defaultValue: "CueQuote is built by AVE Events — a team that has been in the AV production trenches. We built the tool we wished existed." }),
+    title,
+    description,
     alternates: { canonical: "/about" },
+    openGraph: { title, description },
   };
 }
 
