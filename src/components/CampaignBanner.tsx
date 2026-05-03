@@ -9,6 +9,8 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1cmF6aW5naGJmc2t1b2Vpa3dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMTI2MDAsImV4cCI6MjA5MDc4ODYwMH0.lWiRDtQdkYFzs_R1Rnvb9jMcdDpo_a68yDY_dEbwseU'
 )
 
+import { useLocale } from 'next-intl'
+
 interface ActiveCampaign {
   id: string
   title: string
@@ -18,6 +20,7 @@ interface ActiveCampaign {
   ends_at: string
   show_countdown: boolean
   banner_color: string
+  translations: Record<string, { banner_text?: string }> | null
 }
 
 const LS_KEY = 'cuequote_mkt_campaign_dismissed'
@@ -55,6 +58,7 @@ function CountdownBox({ value, label }: { value: number; label: string }) {
 }
 
 export default function CampaignBanner() {
+  const locale = useLocale()
   const [campaign, setCampaign] = useState<ActiveCampaign | null>(null)
   const [dismissed, setDismissed] = useState(false)
   const [parts, setParts] = useState<{ d: number; h: number; m: number; s: number } | null>(null)
@@ -103,7 +107,9 @@ export default function CampaignBanner() {
         gap: 16,
         flexWrap: 'wrap',
       }}>
-        <span style={{ fontSize: 14, fontWeight: 600 }}>{campaign.banner_text}</span>
+        <span style={{ fontSize: 14, fontWeight: 600 }}>
+          {(locale !== 'en' && campaign.translations?.[locale]?.banner_text) || campaign.banner_text}
+        </span>
         {campaign.promo_code && (
           <code style={{
             background: 'rgba(255,255,255,0.2)',
@@ -120,7 +126,9 @@ export default function CampaignBanner() {
         )}
         {campaign.show_countdown && parts && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 11, opacity: 0.7, fontWeight: 600, marginRight: 2 }}>Ends in</span>
+            <span style={{ fontSize: 11, opacity: 0.7, fontWeight: 600, marginRight: 2 }}>
+              {{ en: 'Ends in', ar: 'ينتهي خلال', pl: 'Kończy się za', de: 'Endet in', fr: 'Se termine dans' }[locale] || 'Ends in'}
+            </span>
             {parts.d > 0 && <CountdownBox value={parts.d} label="days" />}
             <CountdownBox value={parts.h} label="hrs" />
             <CountdownBox value={parts.m} label="min" />
