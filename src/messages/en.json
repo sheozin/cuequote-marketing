@@ -250,7 +250,19 @@
     "diff3": "We understand the AV rental workflow, not just generic quoting",
     "diff4": "European-first: multi-currency, VAT support, GDPR compliant",
     "p5": "CueQuote is part of the <strong>CueDeck ecosystem</strong> — tools purpose-built for the live event production industry. We're not a generic proposal tool with an AV skin. We built this from the ground up for our industry.",
-    "cta": "Try CueQuote Free"
+    "cta": "Try CueQuote Free",
+    "atAGlance": "At a Glance",
+    "statFounded": "Founded",
+    "statHq": "Headquarters",
+    "statHqValue": "Warsaw, Poland",
+    "statIndustry": "Industry",
+    "statIndustryValue": "AV & Event Production",
+    "statEventsQuoted": "Events Quoted",
+    "statCountries": "Countries Served",
+    "statTeam": "Team",
+    "whyDifferentSub": "Built from real-world AV production experience, not a generic template.",
+    "ctaTitle": "Ready to transform your AV quoting?",
+    "ctaSub": "Join AV professionals who close deals faster with CueQuote."
   },
   "contact": {
     "metaTitle": "Contact",

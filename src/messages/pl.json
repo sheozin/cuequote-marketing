@@ -250,7 +250,19 @@
     "diff3": "Rozumiemy workflow wypożyczalni AV, nie tylko ogólne wyceny",
     "diff4": "Europa na pierwszym miejscu: wiele walut, obsługa VAT, zgodność z RODO",
     "p5": "CueQuote jest częścią <strong>ekosystemu CueDeck</strong> — narzędzi stworzonych specjalnie dla branży produkcji eventów na żywo. Nie jesteśmy ogólnym narzędziem do ofert z nakładką AV. Zbudowaliśmy to od podstaw dla naszej branży.",
-    "cta": "Wypróbuj CueQuote za darmo"
+    "cta": "Wypróbuj CueQuote za darmo",
+    "atAGlance": "W skrócie",
+    "statFounded": "Założono",
+    "statHq": "Siedziba",
+    "statHqValue": "Warszawa, Polska",
+    "statIndustry": "Branża",
+    "statIndustryValue": "AV i produkcja eventów",
+    "statEventsQuoted": "Wycenionych eventów",
+    "statCountries": "Obsługiwanych krajów",
+    "statTeam": "Zespół",
+    "whyDifferentSub": "Zbudowane na bazie prawdziwego doświadczenia w produkcji AV, a nie ogólnego szablonu.",
+    "ctaTitle": "Gotowy na transformację swoich wycen AV?",
+    "ctaSub": "Dołącz do profesjonalistów AV, którzy zamykają transakcje szybciej z CueQuote."
   },
   "contact": {
     "metaTitle": "Kontakt",

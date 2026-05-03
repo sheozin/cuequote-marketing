@@ -250,7 +250,19 @@
     "diff3": "Nous comprenons le workflow de location AV, pas seulement la création de devis générique",
     "diff4": "Priorité européenne : multi-devises, TVA, conformité RGPD",
     "p5": "CueQuote fait partie de l'<strong>écosystème CueDeck</strong> — des outils conçus spécifiquement pour l'industrie de la production d'événements en direct. Nous ne sommes pas un outil de devis générique avec une couche AV. Nous avons tout construit de zéro pour notre industrie.",
-    "cta": "Essayer CueQuote gratuitement"
+    "cta": "Essayer CueQuote gratuitement",
+    "atAGlance": "En bref",
+    "statFounded": "Fondée en",
+    "statHq": "Siège social",
+    "statHqValue": "Varsovie, Pologne",
+    "statIndustry": "Secteur",
+    "statIndustryValue": "AV et production événementielle",
+    "statEventsQuoted": "Événements chiffrés",
+    "statCountries": "Pays desservis",
+    "statTeam": "Équipe",
+    "whyDifferentSub": "Construit à partir d'une expérience réelle en production AV, pas d'un modèle générique.",
+    "ctaTitle": "Prêt à transformer vos devis AV ?",
+    "ctaSub": "Rejoignez les professionnels AV qui concluent plus vite avec CueQuote."
   },
   "contact": {
     "metaTitle": "Contact",
