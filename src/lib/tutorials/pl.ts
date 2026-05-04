@@ -164,6 +164,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       'Jak dodawać i organizować pozycje sprzętu',
       'Zrozumienie kategorii sprzętu',
       'Jak katalog zasila oferty generowane przez AI',
+      'Śledzenie cen kosztowych i marż na sprzęt podnajmowany',
       'Masowy import z arkuszy kalkulacyjnych',
     ],
     steps: [
@@ -183,6 +184,10 @@ export const TUTORIALS_PL: Tutorial[] = [
       {
         title: 'Ustaw dokładne domyślne ceny',
         content: 'Domyślne ceny powinny odzwierciedlać Twoje standardowe stawki wynajmu. Kiedy AI generuje ofertę, dopasowuje pozycje z Twojego katalogu po nazwie i używa Twoich cen. Pozycje nieznalezione w katalogu otrzymują szacunkowe ceny rynkowe. Im więcej pozycji dodasz z dokładnymi cenami, tym mniej edycji po generacji AI.',
+      },
+      {
+        title: 'Śledź koszty i marże',
+        content: 'Dla pozycji podnajmowanych od innych dostawców dodaj cenę kosztową w katalogu. Edytor ofert wyświetla wewnętrzny panel marży z Przychodem, Kosztem, Zyskiem i Marżą % — nigdy niewidoczny dla klientów. Zostaw koszt pusty dla własnego sprzętu.',
       },
       {
         title: 'Importuj z arkusza',

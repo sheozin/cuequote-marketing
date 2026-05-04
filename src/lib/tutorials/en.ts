@@ -164,6 +164,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       'How to add and organize equipment items',
       'Understanding equipment categories',
       'How the catalog powers AI-generated proposals',
+      'Tracking cost prices and margins for sub-hired equipment',
       'Bulk importing from spreadsheets',
     ],
     steps: [
@@ -183,6 +184,10 @@ export const TUTORIALS_EN: Tutorial[] = [
       {
         title: 'Set accurate default prices',
         content: 'Default prices should reflect your standard rental rates. When the AI generates a proposal, it matches items from your catalog by name and uses your prices. Items not found in your catalog get estimated market-rate prices. The more items you add with accurate prices, the less editing you need after AI generation.',
+      },
+      {
+        title: 'Track costs and margins',
+        content: 'For items you sub-hire from other suppliers, add your cost price in the catalog. The proposal editor shows an internal margin panel with Revenue, Cost, Profit, and Margin % — never visible to clients. Leave cost empty for your own equipment.',
       },
       {
         title: 'Import from a spreadsheet',

@@ -164,6 +164,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       'Wie Sie Equipment-Artikel anlegen und organisieren',
       'Equipment-Kategorien verstehen',
       'Wie der Katalog KI-generierte Angebote antreibt',
+      'Einkaufspreise und Margen für zugekauftes Equipment nachverfolgen',
       'Massenimport aus Tabellenkalkulationen',
     ],
     steps: [
@@ -183,6 +184,10 @@ export const TUTORIALS_DE: Tutorial[] = [
       {
         title: 'Genaue Standardpreise festlegen',
         content: 'Die Standardpreise sollten Ihre üblichen Miettarife widerspiegeln. Wenn die KI ein Angebot generiert, gleicht sie Artikel aus Ihrem Katalog anhand des Namens ab und verwendet Ihre Preise. Artikel, die nicht in Ihrem Katalog gefunden werden, erhalten geschätzte Marktpreise. Je mehr Artikel Sie mit korrekten Preisen hinzufügen, desto weniger müssen Sie nach der KI-Generierung nachbearbeiten.',
+      },
+      {
+        title: 'Kosten und Margen verfolgen',
+        content: 'Für Equipment, das Sie von anderen Anbietern zumieten, hinterlegen Sie Ihren Einkaufspreis im Katalog. Der Angebotseditor zeigt ein internes Margenpanel mit Umsatz, Kosten, Gewinn und Marge % — für Kunden niemals sichtbar. Lassen Sie die Kosten leer für Ihr eigenes Equipment.',
       },
       {
         title: 'Aus einer Tabellenkalkulation importieren',

@@ -164,6 +164,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       'Comment ajouter et organiser des articles de matériel',
       'Comprendre les catégories de matériel',
       'Comment le catalogue alimente les devis générés par IA',
+      'Suivi des prix de revient et des marges pour le matériel sous-loué',
       'Importer en masse depuis des feuilles de calcul',
     ],
     steps: [
@@ -183,6 +184,10 @@ export const TUTORIALS_FR: Tutorial[] = [
       {
         title: 'Définissez des prix par défaut précis',
         content: 'Les prix par défaut doivent refléter vos tarifs de location habituels. Lorsque l\'IA génère un devis, elle associe les articles de votre catalogue par leur nom et utilise vos prix. Les articles absents de votre catalogue reçoivent des prix estimés au tarif du marché. Plus vous ajoutez d\'articles avec des prix justes, moins vous aurez de modifications à faire après la génération IA.',
+      },
+      {
+        title: 'Suivez les coûts et les marges',
+        content: 'Pour le matériel que vous sous-louez auprès d\'autres fournisseurs, ajoutez votre prix de revient dans le catalogue. L\'éditeur de devis affiche un panneau interne de marge avec Chiffre d\'affaires, Coût, Bénéfice et Marge % — jamais visible par les clients. Laissez le coût vide pour votre propre matériel.',
       },
       {
         title: 'Importez depuis une feuille de calcul',
