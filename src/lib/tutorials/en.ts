@@ -350,6 +350,14 @@ export const TUTORIALS_EN: Tutorial[] = [
         title: 'Download the PDF anytime',
         content: 'Click the download icon in the proposal header to generate the PDF. The PDF includes everything: cover section with company branding, scope of work, equipment tables by category, totals card, inclusions/exclusions, payment schedule, signature block, and full T&C. Share the PDF as an attachment or print it for in-person meetings.',
       },
+      {
+        title: 'Risk assessment plan',
+        content: 'Generate an AI-powered risk assessment for your event from the Risk Plan tab. The AI analyzes your equipment, venue, and attendee count to identify risks and mitigation plans across 8 categories: equipment failure, power outage, network, interpretation, weather, crew, timeline, and security. Starter plans get 3 basic categories; Pro unlocks all 8 with editing and PDF inclusion.',
+      },
+      {
+        title: 'Regenerate proposals',
+        content: 'Need to update a proposal? Use Regenerate from the More menu instead of creating a new one. Choose Full (replace all items), Smart (keep your edits), or From File (upload an updated spec). Your client, dates, venue, and terms are preserved. Regenerating does not count against your monthly proposal quota.',
+      },
     ],
   },
   {

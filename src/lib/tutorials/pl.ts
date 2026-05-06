@@ -349,6 +349,14 @@ export const TUTORIALS_PL: Tutorial[] = [
         title: 'Pobierz PDF w dowolnym momencie',
         content: 'Kliknij ikonę pobierania w nagłówku oferty, aby wygenerować PDF. PDF zawiera wszystko: okładkę z brandingiem firmy, zakres prac, tabele sprzętu według kategorii, kartę podsumowań, pozycje w cenie/wykluczenia, harmonogram płatności, blok podpisu oraz pełny regulamin. Udostępniaj PDF jako załącznik lub drukuj na spotkania osobiste.',
       },
+      {
+        title: 'Plan oceny ryzyka',
+        content: 'Wygeneruj opartą na AI ocenę ryzyka dla swojego wydarzenia z zakładki Plan ryzyka. AI analizuje Twój sprzęt, obiekt i liczbę uczestników, aby zidentyfikować zagrożenia i plany łagodzące w 8 kategoriach: awaria sprzętu, przerwa w zasilaniu, sieć, tłumaczenie, pogoda, ekipa, harmonogram i bezpieczeństwo. Plan Starter obejmuje 3 podstawowe kategorie; Pro odblokowuje wszystkie 8 z możliwością edycji i włączenia do PDF.',
+      },
+      {
+        title: 'Regeneracja ofert',
+        content: 'Musisz zaktualizować ofertę? Użyj opcji Regeneruj z menu Więcej zamiast tworzenia nowej. Wybierz Pełna (zamień wszystkie pozycje), Inteligentna (zachowaj swoje edycje) lub Z pliku (wgraj zaktualizowaną specyfikację). Twój klient, daty, obiekt i warunki zostają zachowane. Regeneracja nie wlicza się do miesięcznego limitu ofert.',
+      },
     ],
   },
   {

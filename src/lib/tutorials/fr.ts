@@ -349,6 +349,14 @@ export const TUTORIALS_FR: Tutorial[] = [
         title: 'Téléchargez le PDF à tout moment',
         content: 'Cliquez sur l\'icône de téléchargement dans l\'en-tête du devis pour générer le PDF. Le PDF inclut tout : section de couverture avec l\'image de marque de l\'entreprise, périmètre des prestations, tableaux de matériel par catégorie, carte des totaux, inclusions/exclusions, échéancier de paiement, bloc de signature et CGV complètes. Partagez le PDF en pièce jointe ou imprimez-le pour les réunions en présentiel.',
       },
+      {
+        title: 'Plan d\'évaluation des risques',
+        content: 'Générez une évaluation des risques alimentée par l\'IA pour votre événement depuis l\'onglet Plan de risques. L\'IA analyse votre équipement, le lieu et le nombre de participants pour identifier les risques et les plans d\'atténuation dans 8 catégories : panne d\'équipement, coupure de courant, réseau, interprétation, météo, équipe, planning et sécurité. Les plans Starter donnent accès à 3 catégories de base ; Pro débloque les 8 avec édition et inclusion dans le PDF.',
+      },
+      {
+        title: 'Régénérer les devis',
+        content: 'Besoin de mettre à jour un devis ? Utilisez Régénérer depuis le menu Plus au lieu d\'en créer un nouveau. Choisissez Complète (remplacer tous les articles), Intelligente (conserver vos modifications) ou Depuis un fichier (téléverser un cahier des charges mis à jour). Votre client, dates, lieu et conditions sont préservés. La régénération ne compte pas dans votre quota mensuel de devis.',
+      },
     ],
   },
   {

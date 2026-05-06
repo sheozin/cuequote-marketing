@@ -349,6 +349,14 @@ export const TUTORIALS_DE: Tutorial[] = [
         title: 'Jederzeit das PDF herunterladen',
         content: 'Klicken Sie auf das Download-Symbol in der Angebotskopfzeile, um das PDF zu erstellen. Das PDF enthält alles: Deckblatt mit Firmen-Branding, Leistungsumfang, Equipment-Tabellen nach Kategorie, Summen-Karte, Einschlüsse/Ausschlüsse, Zahlungsplan, Unterschriftenblock und vollständige AGB. Teilen Sie das PDF als Anhang oder drucken Sie es für persönliche Termine aus.',
       },
+      {
+        title: 'Risikobewertungsplan',
+        content: 'Erstellen Sie eine KI-gestützte Risikobewertung für Ihr Event im Tab Risikoplan. Die KI analysiert Ihr Equipment, den Veranstaltungsort und die Teilnehmerzahl, um Risiken und Maßnahmenpläne in 8 Kategorien zu identifizieren: Geräteausfall, Stromausfall, Netzwerk, Dolmetschen, Wetter, Crew, Zeitplan und Sicherheit. Starter-Tarife erhalten 3 Basiskategorien; Pro schaltet alle 8 mit Bearbeitung und PDF-Einbindung frei.',
+      },
+      {
+        title: 'Angebote regenerieren',
+        content: 'Müssen Sie ein Angebot aktualisieren? Nutzen Sie Regenerieren im Mehr-Menü, anstatt ein neues zu erstellen. Wählen Sie Vollständig (alle Positionen ersetzen), Intelligent (Ihre Bearbeitungen beibehalten) oder Aus Datei (aktualisierte Spezifikation hochladen). Ihr Kunde, Termine, Veranstaltungsort und Konditionen bleiben erhalten. Die Regenerierung wird nicht auf Ihr monatliches Angebotskontingent angerechnet.',
+      },
     ],
   },
   {
