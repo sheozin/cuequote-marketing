@@ -773,6 +773,72 @@
       "step4": "Dodaj sprzęt do katalogu — zaimportuj sprzęt i ceny, aby oferty AI były dokładne",
       "step5": "Utwórz pierwszą ofertę — opisz wydarzenie i wygeneruj pierwszą ofertę opartą na AI",
       "tip": "Listę kontrolną możesz zamknąć w dowolnym momencie, klikając przycisk X. Po zamknięciu nie pojawi się ponownie."
+    },
+    "regenerateProposals": {
+      "title": "Regenerowanie ofert",
+      "content1": "Zamiast tworzyć nową ofertę od podstaw, możesz zregenerować istniejącą. Aktualizuje to pozycje, zachowując klienta, daty, miejsce, warunki i wszystkie inne ustawienia. Regenerowanie nie jest odliczane od miesięcznego limitu ofert.",
+      "content2": "Dostępne są trzy tryby regenerowania: Pełne (zastępuje wszystkie pozycje nową generacją AI), Inteligentne (zachowuje ręcznie edytowane pozycje, zastępuje wygenerowane przez AI) oraz Z pliku (prześlij zaktualizowany dokument specyfikacji i regeneruj na jego podstawie).",
+      "step1": {
+        "title": "Otwórz okno regenerowania",
+        "text": "W edytorze oferty kliknij menu Więcej (\u22ef) i wybierz Regeneruj ofertę. Możesz również kliknąć Regeneruj z menu rozwijanego na liście ofert."
+      },
+      "step2": {
+        "title": "Wybierz tryb",
+        "text": "Wybierz Pełne, aby zacząć od nowa, Inteligentne, aby zachować ręczne edycje, lub Z pliku, aby przesłać zaktualizowany dokument specyfikacji. Opcja Z pliku pozwala załączyć pliki PDF, Word, Excel lub obrazy."
+      },
+      "step3": {
+        "title": "Wybierz zakres regenerowania",
+        "text": "Zdecyduj, czy chcesz również zregenerować podsumowanie zakresu i listę wliczonych/wykluczonych elementów, czy zachować istniejące. Domyślnie regenerowane są tylko pozycje."
+      },
+      "step4": {
+        "title": "Przejrzyj i dostosuj",
+        "text": "Po regenerowaniu przejrzyj nowe pozycje w zakładce Sprzęt. Możesz edytować ilości, ceny i opisy jak zwykle. Status oferty pozostaje bez zmian."
+      },
+      "tip": "Regenerowanie jest darmowe \u2014 nie zużywa kredytu ofertowego. Używaj go do szybkiej aktualizacji ofert, gdy zmieniają się wymagania."
+    },
+    "riskAssessment": {
+      "title": "Plan oceny ryzyka",
+      "content1": "CueQuote może wygenerować ocenę ryzyka opartą na AI dla Twoich wydarzeń. Plan ryzyka identyfikuje potencjalne problemy i dostarcza konkretne strategie łagodzenia na podstawie sprzętu, miejsca, liczby uczestników i czasu trwania wydarzenia.",
+      "content2": "Ocena ryzyka jest dostępna z zakładki Plan ryzyka w edytorze oferty. Plany Starter oferują 3 podstawowe kategorie (sprzęt, zasilanie, ekipa) w trybie tylko do odczytu. Plany Pro odblokowują wszystkie 8 kategorii z pełną edycją i dołączaniem do PDF. Plany Business dodają tworzenie niestandardowych ryzyk i regenerowanie.",
+      "step1": {
+        "title": "Otwórz zakładkę Plan ryzyka",
+        "text": "W edytorze oferty kliknij zakładkę Plan ryzyka obok Sprzęt oraz Warunki i szczegóły. Jeśli korzystasz z planu Free, zobaczysz monit o aktualizację."
+      },
+      "step2": {
+        "title": "Wygeneruj plan ryzyka",
+        "text": "Kliknij Generuj plan ryzyka. AI analizuje szczegóły wydarzenia, listę sprzętu, typ miejsca i liczbę uczestników, generując ryzyka w maksymalnie 8 kategoriach: awaria sprzętu, przerwa w zasilaniu, sieć, tłumaczenie, pogoda, ekipa, harmonogram i bezpieczeństwo."
+      },
+      "step3": {
+        "title": "Przejrzyj i edytuj ryzyka",
+        "text": "Każde ryzyko zawiera tytuł, opis, plan łagodzenia i poziom ważności (wysoki, średni, niski). Na planach Pro i wyższych możesz edytować dowolne pole, zmienić ważność lub usunąć ryzyka. Na planie Business możesz dodawać niestandardowe ryzyka."
+      },
+      "step4": {
+        "title": "Dołącz do PDF",
+        "text": "Na planach Pro i wyższych przełącz opcję \"Dołącz do PDF\", aby dodać ocenę ryzyka do PDF oferty. Pokazuje to klientom, że przemyślałeś sytuacje awaryjne \u2014 silny sygnał profesjonalizmu."
+      },
+      "tip": "AI generuje ryzyka pogodowe tylko dla wydarzeń na świeżym powietrzu, a ryzyka związane z tłumaczeniem tylko gdy w ofercie znajduje się sprzęt SI. AI inteligentnie dobiera, co jest istotne."
+    },
+    "clientPortal": {
+      "title": "Portal klienta",
+      "content1": "Portal klienta daje Twoim klientom dedykowany dostęp, gdzie mogą przeglądać wszystkie oferty i faktury, które im wysłałeś, w jednym miejscu. Koniec z szukaniem linków udostępniania w skrzynce e-mail \u2014 wszystko jest zorganizowane i dostępne.",
+      "content2": "Klienci rejestrują się samodzielnie ze strony udostępniania, używając tego samego adresu e-mail, na który wysłałeś oferty. Portal jest dostępny na planach Pro i wyższych. Możesz zarządzać dostępem klientów ze strony Klienci na panelu głównym.",
+      "step1": {
+        "title": "Jak klienci się rejestrują",
+        "text": "Gdy wysyłasz ofertę, strona udostępniania wyświetla link \"Otwórz portal klienta\" na dole. Klienci klikają go, aby utworzyć konto za pomocą swojego adresu e-mail i hasła. Nie jest wymagane zaproszenie z Twojej strony."
+      },
+      "step2": {
+        "title": "Co widzą klienci",
+        "text": "Portal wyświetla dwie zakładki: Oferty i Faktury. Klienci widzą wszystkie niebędące wersjami roboczymi oferty i faktury wysłane na ich adres e-mail, ze znacznikami statusu, kwotami i opcjami przeglądania lub pobierania PDF."
+      },
+      "step3": {
+        "title": "Zarządzanie dostępem",
+        "text": "Przejdź do Klienci w pasku bocznym. Klienci z kontami portalowymi mają zielony znacznik \"Portal\". Kliknij klienta, aby zobaczyć datę rejestracji i przycisk \"Cofnij dostęp\" do usunięcia ich dostępu."
+      },
+      "step4": {
+        "title": "Bezpieczeństwo",
+        "text": "Klienci mogą widzieć tylko oferty i faktury powiązane z ich adresem e-mail i Twoją firmą. Nie mogą widzieć danych innych klientów, Twoich wewnętrznych notatek ani wersji roboczych ofert. Cały dostęp jest wymuszany na poziomie bazy danych."
+      },
+      "tip": "Portal klienta sprawia, że wyglądasz bardziej profesjonalnie \u2014 klienci widzą markowy panel zamiast rozproszonych linków e-mailowych."
     }
   },
   "changelog": {

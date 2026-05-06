@@ -76,6 +76,18 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4"],
   },
+  {
+    id: "regenerate-proposals",
+    key: "regenerateProposals",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
+  {
+    id: "risk-assessment",
+    key: "riskAssessment",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
   // ── Send & track ──
   {
     id: "sharing-tracking",
@@ -88,6 +100,12 @@ const ARTICLE_KEYS = [
     key: "invoicing",
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
+  },
+  {
+    id: "client-portal",
+    key: "clientPortal",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
   },
   // ── Team & templates ──
   {

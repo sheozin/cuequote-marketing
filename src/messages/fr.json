@@ -773,6 +773,72 @@
       "step4": "Ajoutez de l'équipement à votre catalogue — importez votre matériel et vos tarifs pour des devis IA précis",
       "step5": "Créez votre premier devis — décrivez un événement et générez votre premier devis assisté par IA",
       "tip": "Vous pouvez fermer la liste de contrôle à tout moment en cliquant sur le bouton X. Elle ne réapparaîtra plus une fois fermée."
+    },
+    "regenerateProposals": {
+      "title": "Regénérer les devis",
+      "content1": "Au lieu de créer un nouveau devis de zéro, vous pouvez regénérer un devis existant. Cela met à jour les lignes tout en conservant votre client, les dates, le lieu, les conditions et tous les autres paramètres. La regénération ne compte pas dans votre quota mensuel de devis.",
+      "content2": "Il existe trois modes de regénération : Complète (remplace toutes les lignes par une nouvelle génération IA), Intelligente (conserve les éléments que vous avez modifiés manuellement, remplace ceux générés par l'IA) et Depuis un fichier (téléchargez un document de spécification mis à jour et regénérez à partir de celui-ci).",
+      "step1": {
+        "title": "Ouvrir la fenêtre de regénération",
+        "text": "Depuis l'éditeur de devis, cliquez sur le menu Plus (\u22ef) et sélectionnez Regénérer le devis. Vous pouvez également cliquer sur Regénérer depuis le menu déroulant de la page de liste des devis."
+      },
+      "step2": {
+        "title": "Choisir un mode",
+        "text": "Sélectionnez Complète pour repartir de zéro, Intelligente pour conserver vos modifications manuelles, ou Depuis un fichier pour télécharger un document de spécification mis à jour. L'option Depuis un fichier permet de joindre des fichiers PDF, Word, Excel ou image."
+      },
+      "step3": {
+        "title": "Sélectionner ce qu'il faut regénérer",
+        "text": "Choisissez si vous souhaitez également regénérer le résumé du périmètre et les inclusions/exclusions, ou conserver les existants. Seules les lignes sont regénérées par défaut."
+      },
+      "step4": {
+        "title": "Vérifier et ajuster",
+        "text": "Après la regénération, vérifiez les nouvelles lignes dans l'onglet Équipement. Vous pouvez modifier les quantités, les prix et les descriptions comme d'habitude. Le statut du devis reste inchangé."
+      },
+      "tip": "La regénération est gratuite \u2014 elle n'utilise pas de crédit de devis. Utilisez-la pour mettre à jour rapidement les devis lorsque les exigences changent."
+    },
+    "riskAssessment": {
+      "title": "Plan d'évaluation des risques",
+      "content1": "CueQuote peut générer une évaluation des risques alimentée par l'IA pour vos événements. Le plan de risque identifie les problèmes potentiels et fournit des stratégies d'atténuation spécifiques basées sur l'équipement, le lieu, le nombre de participants et la durée de votre événement.",
+      "content2": "L'évaluation des risques est disponible depuis l'onglet Plan de risque dans l'éditeur de devis. Les plans Starter offrent 3 catégories de base (équipement, alimentation, équipe) en mode lecture seule. Les plans Pro débloquent les 8 catégories avec édition complète et inclusion dans le PDF. Les plans Business ajoutent la création de risques personnalisés et la regénération.",
+      "step1": {
+        "title": "Ouvrir l'onglet Plan de risque",
+        "text": "Dans l'éditeur de devis, cliquez sur l'onglet Plan de risque à côté d'Équipement et Conditions & Détails. Si vous êtes sur un plan Free, vous verrez une invitation à mettre à niveau."
+      },
+      "step2": {
+        "title": "Générer le plan de risque",
+        "text": "Cliquez sur Générer le plan de risque. L'IA analyse les détails de votre événement, la liste d'équipement, le type de lieu et le nombre de participants pour produire des risques dans jusqu'à 8 catégories : défaillance d'équipement, panne de courant, réseau, interprétation, météo, équipe, chronologie et sécurité."
+      },
+      "step3": {
+        "title": "Vérifier et modifier les risques",
+        "text": "Chaque risque affiche un titre, une description, un plan d'atténuation et un niveau de gravité (élevé, moyen, faible). Sur Pro et au-dessus, vous pouvez modifier n'importe quel champ, changer la gravité ou supprimer des risques. Sur Business, vous pouvez ajouter des risques personnalisés."
+      },
+      "step4": {
+        "title": "Inclure dans le PDF",
+        "text": "Sur Pro et au-dessus, activez \"Inclure dans le PDF\" pour ajouter l'évaluation des risques à votre PDF de devis. Cela montre aux clients que vous avez anticipé les imprévus \u2014 un signal professionnel fort."
+      },
+      "tip": "L'IA ne génère des risques météorologiques que pour les événements en extérieur et des risques d'interprétation uniquement lorsque de l'équipement SI figure dans le devis. Elle est intelligente quant à ce qui est pertinent."
+    },
+    "clientPortal": {
+      "title": "Portail client",
+      "content1": "Le Portail client offre à vos clients un espace de connexion dédié où ils peuvent consulter tous les devis et factures que vous leur avez envoyés en un seul endroit. Plus besoin de chercher dans les e-mails les liens de partage \u2014 tout est organisé et accessible.",
+      "content2": "Les clients s'inscrivent eux-mêmes depuis la page de partage en utilisant la même adresse e-mail à laquelle vous avez envoyé les devis. Le portail est disponible sur les plans Pro et supérieurs. Vous pouvez gérer l'accès des clients depuis la page Clients de votre tableau de bord.",
+      "step1": {
+        "title": "Comment les clients s'inscrivent",
+        "text": "Lorsque vous envoyez un devis, la page de partage affiche un lien \"Ouvrir le portail client\" en bas. Les clients cliquent dessus pour créer un compte avec leur e-mail et un mot de passe. Aucune invitation de votre part n'est nécessaire."
+      },
+      "step2": {
+        "title": "Ce que les clients voient",
+        "text": "Le portail affiche deux onglets : Devis et Factures. Les clients voient tous les devis non brouillons et les factures envoyées à leur e-mail, avec des badges de statut, des totaux et des actions pour consulter ou télécharger les PDF."
+      },
+      "step3": {
+        "title": "Gérer l'accès",
+        "text": "Accédez à Clients dans la barre latérale. Les clients ayant un compte portail affichent un badge vert \"Portail\". Cliquez sur un client pour voir sa date d'inscription et un bouton \"Révoquer l'accès\" pour supprimer son accès."
+      },
+      "step4": {
+        "title": "Sécurité",
+        "text": "Les clients ne peuvent voir que les devis et factures liés à leur adresse e-mail et à votre entreprise. Ils ne peuvent pas voir les données des autres clients, vos notes internes ni les devis en brouillon. Tout l'accès est contrôlé au niveau de la base de données."
+      },
+      "tip": "Le Portail client vous donne une image plus professionnelle \u2014 les clients voient un tableau de bord à votre image au lieu de liens e-mail éparpillés."
     }
   },
   "changelog": {

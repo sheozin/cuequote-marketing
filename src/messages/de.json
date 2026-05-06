@@ -773,6 +773,72 @@
       "step4": "Fügen Sie Ausrüstung zu Ihrem Katalog hinzu — importieren Sie Ihre Geräte und Preise für präzise KI-Angebote",
       "step5": "Erstellen Sie Ihr erstes Angebot — beschreiben Sie eine Veranstaltung und generieren Sie Ihr erstes KI-gestütztes Angebot",
       "tip": "Sie können die Checkliste jederzeit durch Klicken auf die X-Schaltfläche schließen. Nach dem Schließen wird sie nicht erneut angezeigt."
+    },
+    "regenerateProposals": {
+      "title": "Angebote regenerieren",
+      "content1": "Anstatt ein neues Angebot von Grund auf zu erstellen, können Sie ein bestehendes regenerieren. Dabei werden die Positionen aktualisiert, während Ihr Kunde, Termine, Veranstaltungsort, Bedingungen und alle anderen Einstellungen erhalten bleiben. Die Regenerierung wird nicht auf Ihr monatliches Angebotskontingent angerechnet.",
+      "content2": "Es gibt drei Regenerierungsmodi: Vollständig (ersetzt alle Positionen durch eine neue KI-Generierung), Intelligent (behält manuell bearbeitete Positionen bei, ersetzt KI-generierte) und Aus Datei (laden Sie ein aktualisiertes Spezifikationsdokument hoch und regenerieren Sie darauf basierend).",
+      "step1": {
+        "title": "Regenerierungsdialog öffnen",
+        "text": "Klicken Sie im Angebotseditor auf das Mehr-Menü (\u22ef) und wählen Sie Angebot regenerieren. Sie können auch Regenerieren aus dem Dropdown-Menü der Angebotsliste klicken."
+      },
+      "step2": {
+        "title": "Modus wählen",
+        "text": "Wählen Sie Vollständig für einen Neustart, Intelligent zum Beibehalten Ihrer manuellen Änderungen oder Aus Datei zum Hochladen eines aktualisierten Spezifikationsdokuments. Die Option Aus Datei ermöglicht das Anhängen von PDF-, Word-, Excel- oder Bilddateien."
+      },
+      "step3": {
+        "title": "Auswählen, was regeneriert werden soll",
+        "text": "Wählen Sie, ob auch die Umfangszusammenfassung und Einschlüsse/Ausschlüsse regeneriert oder die bestehenden beibehalten werden sollen. Standardmäßig werden nur Positionen regeneriert."
+      },
+      "step4": {
+        "title": "Überprüfen und anpassen",
+        "text": "Überprüfen Sie nach der Regenerierung die neuen Positionen im Reiter Ausrüstung. Sie können Mengen, Preise und Beschreibungen wie gewohnt bearbeiten. Der Angebotsstatus bleibt unverändert."
+      },
+      "tip": "Regenerieren ist kostenlos \u2014 es verbraucht keinen Angebotskredit. Nutzen Sie es, um Angebote schnell zu aktualisieren, wenn sich Anforderungen ändern."
+    },
+    "riskAssessment": {
+      "title": "Risikobewertungsplan",
+      "content1": "CueQuote kann eine KI-gestützte Risikobewertung für Ihre Veranstaltungen erstellen. Der Risikoplan identifiziert potenzielle Probleme und liefert spezifische Minderungsstrategien basierend auf Ausrüstung, Veranstaltungsort, Teilnehmerzahl und Dauer Ihrer Veranstaltung.",
+      "content2": "Die Risikobewertung ist über den Reiter Risikoplan im Angebotseditor verfügbar. Starter-Pläne erhalten 3 Basiskategorien (Ausrüstung, Strom, Crew) im Nur-Lese-Modus. Pro-Pläne schalten alle 8 Kategorien mit vollständiger Bearbeitung und PDF-Einbindung frei. Business-Pläne ermöglichen zusätzlich das Erstellen eigener Risiken und die Regenerierung.",
+      "step1": {
+        "title": "Reiter Risikoplan öffnen",
+        "text": "Klicken Sie im Angebotseditor auf den Reiter Risikoplan neben Ausrüstung und Bedingungen & Details. Wenn Sie einen Free-Plan haben, sehen Sie eine Upgrade-Aufforderung."
+      },
+      "step2": {
+        "title": "Risikoplan generieren",
+        "text": "Klicken Sie auf Risikoplan generieren. Die KI analysiert Ihre Veranstaltungsdetails, Ausrüstungsliste, Veranstaltungsort und Teilnehmerzahl, um Risiken in bis zu 8 Kategorien zu erstellen: Ausrüstungsausfall, Stromausfall, Netzwerk, Dolmetschen, Wetter, Crew, Zeitplan und Sicherheit."
+      },
+      "step3": {
+        "title": "Risiken überprüfen und bearbeiten",
+        "text": "Jedes Risiko zeigt einen Titel, eine Beschreibung, einen Minderungsplan und einen Schweregrad (hoch, mittel, niedrig). Auf Pro und höher können Sie jedes Feld bearbeiten, den Schweregrad ändern oder Risiken entfernen. Auf Business können Sie eigene Risiken hinzufügen."
+      },
+      "step4": {
+        "title": "In PDF einbinden",
+        "text": "Auf Pro und höher schalten Sie \"In PDF einbinden\" um, um die Risikobewertung zu Ihrem Angebots-PDF hinzuzufügen. Dies zeigt Kunden, dass Sie Eventualitäten durchdacht haben \u2014 ein starkes professionelles Signal."
+      },
+      "tip": "Die KI generiert Wetterrisiken nur für Outdoor-Veranstaltungen und Dolmetscherrisiken nur, wenn SI-Ausrüstung im Angebot enthalten ist. Sie erkennt intelligent, was relevant ist."
+    },
+    "clientPortal": {
+      "title": "Kundenportal",
+      "content1": "Das Kundenportal bietet Ihren Kunden einen eigenen Login-Bereich, in dem sie alle Angebote und Rechnungen, die Sie ihnen gesendet haben, an einem Ort einsehen können. Kein Durchsuchen von E-Mails nach Freigabelinks mehr \u2014 alles ist organisiert und zugänglich.",
+      "content2": "Kunden registrieren sich selbst über die Freigabeseite mit derselben E-Mail-Adresse, an die Sie Angebote gesendet haben. Das Portal ist für Pro-Pläne und höher verfügbar. Sie können den Kundenzugang über die Kundenseite in Ihrem Dashboard verwalten.",
+      "step1": {
+        "title": "Wie sich Kunden registrieren",
+        "text": "Wenn Sie ein Angebot senden, zeigt die Freigabeseite unten einen Link \"Kundenportal öffnen\". Kunden klicken darauf, um ein Konto mit ihrer E-Mail-Adresse und einem Passwort zu erstellen. Keine Einladung von Ihnen erforderlich."
+      },
+      "step2": {
+        "title": "Was Kunden sehen",
+        "text": "Das Portal zeigt zwei Reiter: Angebote und Rechnungen. Kunden sehen alle nicht als Entwurf markierten Angebote und Rechnungen, die an ihre E-Mail-Adresse gesendet wurden, mit Statusabzeichen, Beträgen und Aktionen zum Ansehen oder Herunterladen von PDFs."
+      },
+      "step3": {
+        "title": "Zugang verwalten",
+        "text": "Gehen Sie zu Kunden in der Seitenleiste. Kunden mit Portalkonten zeigen ein grünes \"Portal\"-Abzeichen. Klicken Sie auf einen Kunden, um das Registrierungsdatum und eine Schaltfläche \"Zugang widerrufen\" zum Entfernen des Zugangs zu sehen."
+      },
+      "step4": {
+        "title": "Sicherheit",
+        "text": "Kunden können nur Angebote und Rechnungen sehen, die mit ihrer E-Mail-Adresse und Ihrem Unternehmen verknüpft sind. Sie können keine Daten anderer Kunden, Ihre internen Notizen oder Entwurfsangebote sehen. Der gesamte Zugriff wird auf Datenbankebene durchgesetzt."
+      },
+      "tip": "Das Kundenportal lässt Sie professioneller wirken \u2014 Kunden sehen ein gebrandetes Dashboard anstelle verstreuter E-Mail-Links."
     }
   },
   "changelog": {
