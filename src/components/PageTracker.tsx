@@ -45,16 +45,25 @@ export default function PageTracker() {
 
     const track = async () => {
       try {
-        // Get country from timezone (rough approximation, no API call needed)
-        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
         const lang = navigator.language?.split('-')[0] || 'en'
+
+        // Get country from free IP API (no key needed, ~50ms)
+        let country: string | null = null
+        try {
+          const geo = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(2000) })
+          const geoData = await geo.json()
+          country = geoData.country_name || geoData.country || null
+        } catch {
+          // Fallback to timezone region
+          country = Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[1]?.replace(/_/g, ' ') || null
+        }
 
         await supabase.from('page_views').insert({
           session_id: getSessionId(),
           page_url: window.location.href,
           page_path: pathname || '/',
           referrer: document.referrer || null,
-          country: tz.split('/')[0] || null,
+          country,
           device_type: getDeviceType(),
           browser: getBrowser(),
           screen_width: window.innerWidth,
