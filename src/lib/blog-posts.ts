@@ -7,6 +7,16 @@ export interface BlogPostSummary {
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2 days within the current month
   {
+    slug: "risk-assessment-av-events",
+    category: "Guides",
+    date: "2026-05-09",
+  },
+  {
+    slug: "regenerate-proposals-save-time",
+    category: "Business",
+    date: "2026-05-07",
+  },
+  {
     slug: "client-portal-av-proposals",
     category: "Business",
     date: "2026-05-05",
