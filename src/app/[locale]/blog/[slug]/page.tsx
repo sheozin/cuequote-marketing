@@ -6,6 +6,7 @@ import Footer from "../../../../components/Footer";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { POSTS } from "../../../../lib/blog-posts";
+import ShareButtons from "../../../../components/ShareButtons";
 
 /* ─── Category colors ──────────────────────────────────────────────────────── */
 
@@ -155,6 +156,9 @@ export default async function BlogPostPage({
               <Clock size={14} style={{ color: "#9ca3af" }} />
               {readTime}
             </span>
+            <div style={{ marginLeft: "auto" }}>
+              <ShareButtons url={`https://cuequote.com/blog/${slug}`} title={title} description={excerpt} />
+            </div>
           </div>
         </div>
       </section>
@@ -202,6 +206,7 @@ export default async function BlogPostPage({
             >
               <ArrowLeft size={14} /> {t("allPosts")}
             </Link>
+            <ShareButtons url={`https://cuequote.com/blog/${slug}`} title={title} description={excerpt} />
           </div>
         </div>
       </article>
