@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
 import CampaignBanner from "../../components/CampaignBanner";
+import PageTracker from "../../components/PageTracker";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -124,6 +125,7 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <CampaignBanner />
+          <PageTracker />
           {children}
         </NextIntlClientProvider>
       </body>
