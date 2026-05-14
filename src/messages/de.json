@@ -724,6 +724,37 @@
       "step6": "Senden Sie die Rechnung per E-Mail an Ihren Kunden und verfolgen Sie den Status: Entwurf, Gesendet, Angesehen oder Bezahlt",
       "tip": "Fugen Sie mindestens ein Bankkonto in den Einstellungen hinzu — die meisten B2B-Kunden bevorzugen Bankuberweisungen. Geben Sie die Rechnungsnummer als Zahlungsreferenz an, um den Abgleich zu erleichtern."
     },
+    "paymentTracking": {
+      "title": "Zahlungsverfolgung",
+      "content1": "Mit CueQuote können Sie vollständige und teilweise Zahlungen auf Rechnungen erfassen und den kompletten Zahlungsverlauf verfolgen. Wenn Sie eine Zahlung erfassen, wird der Rechnungsstatus automatisch aktualisiert — teilweise bei Teilzahlung, bezahlt bei vollständiger Deckung.",
+      "content2": "Jede Zahlung wird mit Betrag, Datum, Zahlungsmethode und optionaler Referenznummer protokolliert. Sie können Zahlungen jederzeit anzeigen, löschen oder hinzufügen. Falls Sie eine Rechnung versehentlich als bezahlt markiert haben, können Sie dies mit einem Klick rückgängig machen.",
+      "step1": "Öffnen Sie eine Rechnung und klicken Sie auf die grüne Schaltfläche \"Zahlung erfassen\" in der Zusammenfassungs-Seitenleiste",
+      "step2": "Geben Sie den erhaltenen Betrag, das Datum, die Zahlungsmethode (Banküberweisung, Bargeld, Karte, Scheck) und eine optionale Referenznummer ein",
+      "step3": "Sehen Sie alle Zahlungen im Abschnitt Zahlungsverlauf unterhalb der Rechnungsnotizen — jede zeigt Betrag, Datum, Methode und Referenz",
+      "step4": "Um eine bezahlte Rechnung zurückzusetzen, klicken Sie auf \"Rückgängig — als unbezahlt markieren\" unterhalb des Bezahlt-Badges — es wird basierend auf den tatsächlich erfassten Zahlungen neu berechnet",
+      "step5": "Ändern Sie den Rechnungsstatus manuell, indem Sie auf das Status-Badge in der Kopfzeile klicken — wählen Sie zwischen Entwurf, Gesendet, Angesehen, Teilweise, Bezahlt, Überfällig oder Storniert",
+      "tip": "Verwenden Sie das Status-Dropdown, um überfällige Rechnungen manuell zu markieren. Die Schaltfläche \"Zahlung erfassen\" in der Seitenleiste ist der schnellste Weg, eingegangene Zahlungen zu protokollieren."
+    },
+    "correctiveInvoices": {
+      "title": "Korrekturrechnungen",
+      "content1": "Wenn eine gesendete oder bezahlte Rechnung Korrekturen benötigt, können Sie mit CueQuote eine Korrekturrechnung erstellen, die auf die Originalrechnung verweist. Das Original bleibt für Prüfungszwecke unverändert, und die Korrektur zeigt genau, was sich geändert hat — mit Vorher-/Nachher-Werten.",
+      "content2": "Korrekturrechnungen entsprechen den professionellen Rechnungsstandards in der gesamten EU und sind kompatibel mit Polens KSeF-E-Rechnungssystem. Jede Korrektur ist mit ihrer Originalrechnung verknüpft und vollständig nachverfolgbar.",
+      "step1": "Öffnen Sie eine gesendete, angesehene oder bezahlte Rechnung und klicken Sie auf das Korrektur-Symbol (kreisförmiger Pfeil) in der Kopfzeilen-Werkzeugleiste",
+      "step2": "Das System erstellt eine neue Rechnung mit dem Suffix \"/COR\", vorausgefüllt mit allen ursprünglichen Positionen und deren als Snapshots gespeicherten Werten",
+      "step3": "Bearbeiten Sie die zu korrigierenden Positionen — geänderte Positionen zeigen die ursprüngliche Summe durchgestrichen neben der neuen Summe",
+      "step4": "Füllen Sie das Feld \"Korrekturgrund\" aus und senden Sie die Korrekturrechnung an Ihren Kunden",
+      "tip": "Die Originalrechnung zeigt ein bernsteinfarbenes Banner mit einem Link zur Korrektur, und die Korrekturrechnung zeigt ein blaues Banner mit einem Link zurück zum Original — so entsteht ein lückenloser Prüfpfad."
+    },
+    "smartSuggestions": {
+      "title": "Intelligente Vorschläge",
+      "content1": "Die intelligente Vorschlags-Engine von CueQuote analysiert die bisherigen Angebote Ihres Unternehmens, um smarte Empfehlungen zu geben. Sie erkennt Positionen, die Sie häufig einfügen, aber möglicherweise vergessen haben, weist auf Preisinkonsistenzen hin und identifiziert Positionen, die Sie oft verwenden, aber noch nicht in Ihren Katalog aufgenommen haben.",
+      "content2": "Intelligente Vorschläge lernen aus Ihren eigenen Daten — je mehr Angebote Sie erstellen, desto intelligenter werden sie. Es werden mindestens 3 gesendete Angebote benötigt, um aussagekräftige Empfehlungen zu generieren. Sie können die Funktion jederzeit ein- oder ausschalten.",
+      "step1": "Klicken Sie auf den \"Smart\"-Glühbirnen-Schalter in der Angebots-Tab-Leiste, um Vorschläge zu aktivieren — Ihre Einstellung wird sitzungsübergreifend gespeichert",
+      "step2": "Der Tab \"Fehlende Positionen\" zeigt Positionen, die Sie normalerweise einfügen, aber diesem Angebot noch nicht hinzugefügt haben — mit Konfidenzwerten und \"Hinzufügen\"-Buttons",
+      "step3": "Der Tab \"Neubepreisung\" markiert Positionen, deren Preis mehr als 15 % über oder unter Ihrem historischen Durchschnitt liegt, und zeigt den aktuellen Preis im Vergleich zum Durchschnittspreis mit Min-Max-Bereich",
+      "step4": "Der Tab \"Zum Katalog hinzufügen\" listet Positionen auf, die in 2+ Angeboten verwendet, aber nicht in Ihrem Geräte-Katalog vorhanden sind — klicken Sie, um Katalogeinträge mit Durchschnittspreisen zu erstellen",
+      "tip": "Intelligente Vorschläge sind besonders nützlich, um vergessene Positionen zu vermeiden und eine konsistente Preisgestaltung über Angebote hinweg beizubehalten. Der Neubepreisungs-Tab erkennt versehentliche Preisänderungen bei der Wiederverwendung von Positionen."
+    },
     "sharingTracking": {
       "title": "Angebote teilen und verfolgen",
       "content1": "Mit CueQuote können Sie Angebote über einzigartige Links mit Ihren Kunden teilen — kein Hin-und-Her-Senden von PDFs per E-Mail mehr. Wenn ein Kunde den Link öffnet, sehen Sie genau, wann er ihn angesehen hat, wie oft und ob er akzeptiert oder abgelehnt hat.",

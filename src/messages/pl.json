@@ -724,6 +724,37 @@
       "step6": "Wyslij fakture do klienta e-mailem i sledz jej status: Wersja robocza, Wyslana, Przeczytana lub Oplacona",
       "tip": "Dodaj co najmniej jedno konto bankowe w Ustawieniach — wiekszosc klientow B2B preferuje przelew bankowy. Dolacz numer faktury jako referencje platnosci dla latwego uzgadniania."
     },
+    "paymentTracking": {
+      "title": "Śledzenie płatności",
+      "content1": "CueQuote umożliwia rejestrowanie pełnych i częściowych płatności na fakturach oraz śledzenie kompletnej historii płatności. Po zarejestrowaniu płatności status faktury aktualizuje się automatycznie — częściowa przy częściowej wpłacie, opłacona przy pełnym pokryciu.",
+      "content2": "Każda płatność jest rejestrowana z kwotą, datą, metodą i opcjonalnym numerem referencyjnym. Możesz przeglądać, usuwać lub dodawać płatności w dowolnym momencie. Jeśli przypadkowo oznaczysz fakturę jako opłaconą, możesz to cofnąć jednym kliknięciem.",
+      "step1": "Otwórz fakturę i kliknij zielony przycisk \"Zarejestruj płatność\" w panelu Podsumowanie",
+      "step2": "Wprowadź otrzymaną kwotę, datę, metodę płatności (przelew bankowy, gotówka, karta, czek) i opcjonalny numer referencyjny",
+      "step3": "Wyświetl wszystkie płatności w sekcji Historia płatności poniżej notatek faktury — każda pokazuje kwotę, datę, metodę i numer referencyjny",
+      "step4": "Aby cofnąć opłaconą fakturę, kliknij \"Cofnij — oznacz jako nieopłaconą\" pod znaczkiem Opłacona — system przeliczy na podstawie faktycznie zarejestrowanych płatności",
+      "step5": "Zmień status faktury ręcznie, klikając znacznik statusu w nagłówku — wybierz spośród: Wersja robocza, Wysłana, Przeczytana, Częściowa, Opłacona, Przeterminowana lub Anulowana",
+      "tip": "Użyj listy rozwijanej statusu, aby ręcznie oznaczyć przeterminowane faktury. Przycisk Zarejestruj płatność w panelu bocznym to najszybszy sposób na zarejestrowanie otrzymanych środków."
+    },
+    "correctiveInvoices": {
+      "title": "Faktury korygujące",
+      "content1": "Gdy wysłana lub opłacona faktura wymaga poprawek, CueQuote pozwala wystawić fakturę korygującą, która odwołuje się do oryginału. Oryginalna faktura pozostaje nietknięta dla celów audytowych, a korekta pokazuje dokładnie, co się zmieniło z wartościami przed i po.",
+      "content2": "Faktury korygujące spełniają profesjonalne standardy fakturowania stosowane w całej UE i są kompatybilne z polskim systemem e-fakturowania KSeF. Każda korekta jest powiązana z fakturą oryginalną z pełną identyfikowalnością.",
+      "step1": "Otwórz wysłaną, przeczytaną lub opłaconą fakturę i kliknij ikonę korekty (okrągła strzałka) w pasku narzędzi nagłówka",
+      "step2": "System tworzy nową fakturę z przyrostkiem \"/KOR\", wstępnie wypełnioną wszystkimi oryginalnymi pozycjami i ich wartościami zapisanymi jako migawki",
+      "step3": "Edytuj pozycje wymagające korekty — zmienione pozycje pokazują oryginalną sumę przekreśloną obok nowej sumy",
+      "step4": "Wypełnij pole \"Powód korekty\" i wyślij fakturę korygującą do klienta",
+      "tip": "Oryginalna faktura wyświetla bursztynowy baner z linkiem do korekty, a faktura korygująca wyświetla niebieski baner z linkiem do oryginału — tworząc kompletną ścieżkę audytową."
+    },
+    "smartSuggestions": {
+      "title": "Inteligentne sugestie",
+      "content1": "Silnik Inteligentnych sugestii CueQuote analizuje wcześniejsze oferty Twojej firmy, aby dostarczać trafne rekomendacje. Wykrywa pozycje, które często dołączasz, ale mogłeś pominąć, sygnalizuje niespójności cenowe i identyfikuje często używane pozycje, których nie dodałeś jeszcze do katalogu.",
+      "content2": "Inteligentne sugestie uczą się z Twoich własnych danych — im więcej ofert tworzysz, tym trafniejsze stają się podpowiedzi. Wymagane są co najmniej 3 wysłane oferty, aby wygenerować wartościowe rekomendacje. Funkcję możesz włączyć lub wyłączyć w dowolnym momencie.",
+      "step1": "Kliknij przełącznik \"Smart\" z ikoną żarówki na pasku zakładek oferty, aby włączyć sugestie — Twoje preferencje są zapisywane między sesjami",
+      "step2": "Zakładka \"Brakujące pozycje\" pokazuje elementy, które zwykle dołączasz, ale nie dodałeś do tej oferty, z wynikami pewności i przyciskami \"Dodaj\" jednym kliknięciem",
+      "step3": "Zakładka \"Korekta cen\" sygnalizuje pozycje wycenione powyżej lub poniżej 15% Twojej średniej historycznej, pokazując cenę bieżącą vs średnią z zakresem min-maks",
+      "step4": "Zakładka \"Dodaj do katalogu\" wyświetla pozycje użyte w 2+ ofertach, ale brakujące w katalogu sprzętu — kliknij, aby utworzyć wpisy katalogowe ze średnimi cenami",
+      "tip": "Inteligentne sugestie są szczególnie przydatne do zapobiegania pominiętym pozycjom i utrzymywania spójnych cen w ofertach. Zakładka korekty cen wyłapuje przypadkowe zmiany cen przy ponownym użyciu pozycji."
+    },
     "sharingTracking": {
       "title": "Udostępnianie i śledzenie ofert",
       "content1": "CueQuote pozwala udostępniać oferty klientom za pomocą unikalnych linków — bez konieczności przesyłania PDF-ów e-mailem. Gdy klient otworzy link, widzisz dokładnie, kiedy go obejrzał, ile razy i czy zaakceptował, czy odrzucił.",

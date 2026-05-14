@@ -724,6 +724,37 @@
       "step6": "Envoyez la facture a votre client par e-mail et suivez son statut : Brouillon, Envoyee, Vue ou Payee",
       "tip": "Ajoutez au moins un compte bancaire dans les Parametres — la plupart des clients B2B preferent le virement bancaire. Incluez le numero de facture comme reference de paiement pour faciliter le rapprochement."
     },
+    "paymentTracking": {
+      "title": "Suivi des paiements",
+      "content1": "CueQuote vous permet d'enregistrer des paiements complets et partiels sur les factures et de suivre l'historique complet des paiements. Lorsque vous enregistrez un paiement, le statut de la facture se met à jour automatiquement — partiel en cas de paiement partiel, payé lorsque le montant est entièrement couvert.",
+      "content2": "Chaque paiement est enregistré avec le montant, la date, la méthode et un numéro de référence optionnel. Vous pouvez consulter, supprimer ou ajouter des paiements à tout moment. Si vous marquez accidentellement une facture comme payée, vous pouvez annuler l'action en un clic.",
+      "step1": "Ouvrez une facture et cliquez sur le bouton vert \"Enregistrer un paiement\" dans la barre latérale Résumé",
+      "step2": "Saisissez le montant reçu, la date, la méthode de paiement (virement bancaire, espèces, carte, chèque) et un numéro de référence optionnel",
+      "step3": "Consultez tous les paiements dans la section Historique des paiements sous les notes de la facture — chacun affiche le montant, la date, la méthode et la référence",
+      "step4": "Pour annuler une facture payée, cliquez sur \"Annuler — marquer comme impayée\" sous le badge Payée — le système recalcule en fonction des paiements réellement enregistrés",
+      "step5": "Modifiez manuellement le statut de la facture en cliquant sur le badge de statut dans l'en-tête — choisissez parmi Brouillon, Envoyée, Vue, Partielle, Payée, En retard ou Annulée",
+      "tip": "Utilisez le menu déroulant de statut pour marquer manuellement les factures en retard. Le bouton \"Enregistrer un paiement\" dans la barre latérale est le moyen le plus rapide de consigner les fonds reçus."
+    },
+    "correctiveInvoices": {
+      "title": "Factures correctives",
+      "content1": "Lorsqu'une facture envoyée ou payée nécessite des corrections, CueQuote vous permet d'émettre une facture corrective qui fait référence à l'originale. L'originale reste intacte à des fins d'audit, et la correction montre exactement ce qui a changé avec les valeurs avant/après.",
+      "content2": "Les factures correctives respectent les normes professionnelles de facturation utilisées dans toute l'UE et sont compatibles avec le système de facturation électronique KSeF de la Pologne. Chaque correction est liée à sa facture originale avec une traçabilité complète.",
+      "step1": "Ouvrez une facture envoyée, vue ou payée et cliquez sur l'icône de correction (flèche circulaire) dans la barre d'outils de l'en-tête",
+      "step2": "Le système crée une nouvelle facture avec le suffixe \"/COR\", pré-remplie avec toutes les lignes originales et leurs valeurs enregistrées comme instantanés",
+      "step3": "Modifiez les lignes à corriger — les lignes modifiées affichent le total original barré à côté du nouveau total",
+      "step4": "Remplissez le champ \"Motif de la correction\" et envoyez la facture corrective à votre client",
+      "tip": "La facture originale affiche une bannière ambrée avec un lien vers la correction, et la facture corrective affiche une bannière bleue avec un lien vers l'originale — créant ainsi une piste d'audit complète."
+    },
+    "smartSuggestions": {
+      "title": "Suggestions intelligentes",
+      "content1": "Le moteur de Suggestions intelligentes de CueQuote analyse les devis précédents de votre entreprise pour fournir des recommandations pertinentes. Il détecte les éléments que vous incluez fréquemment mais que vous avez peut-être oubliés, signale les incohérences de prix et identifie les éléments que vous utilisez souvent mais que vous n'avez pas ajoutés à votre catalogue.",
+      "content2": "Les Suggestions intelligentes apprennent de vos propres données — plus vous créez de devis, plus elles deviennent pertinentes. Il faut au moins 3 devis envoyés pour générer des recommandations significatives. Vous pouvez activer ou désactiver la fonctionnalité à tout moment.",
+      "step1": "Cliquez sur le bouton ampoule \"Smart\" dans la barre d'onglets du devis pour activer les suggestions — votre préférence est enregistrée d'une session à l'autre",
+      "step2": "L'onglet \"Éléments manquants\" affiche les éléments que vous incluez habituellement mais que vous n'avez pas ajoutés à ce devis, avec des scores de confiance et des boutons \"Ajouter\" en un clic",
+      "step3": "L'onglet \"Retarification\" signale les éléments dont le prix s'écarte de plus de 15 % de votre moyenne historique, en affichant le prix actuel par rapport au prix moyen avec la plage min-max",
+      "step4": "L'onglet \"Ajouter au catalogue\" liste les éléments utilisés dans 2+ devis mais absents de votre catalogue d'équipement — cliquez pour créer des entrées de catalogue avec les prix moyens",
+      "tip": "Les Suggestions intelligentes sont particulièrement utiles pour éviter les oublis et maintenir une tarification cohérente entre les devis. L'onglet Retarification détecte les changements de prix accidentels lors de la réutilisation d'éléments."
+    },
     "sharingTracking": {
       "title": "Partage et suivi des devis",
       "content1": "CueQuote vous permet de partager vos devis avec vos clients via des liens uniques — plus besoin d'envoyer des PDF par e-mail. Lorsqu'un client ouvre le lien, vous voyez exactement quand il l'a consulté, combien de fois, et s'il a accepté ou refusé.",

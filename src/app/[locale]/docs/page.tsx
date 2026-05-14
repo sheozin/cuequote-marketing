@@ -102,6 +102,24 @@ const ARTICLE_KEYS = [
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
   },
   {
+    id: "payment-tracking",
+    key: "paymentTracking",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5"],
+  },
+  {
+    id: "corrective-invoices",
+    key: "correctiveInvoices",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
+  {
+    id: "smart-suggestions",
+    key: "smartSuggestions",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
+  {
     id: "client-portal",
     key: "clientPortal",
     contentKeys: ["content1", "content2"],

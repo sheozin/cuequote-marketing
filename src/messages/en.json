@@ -724,6 +724,37 @@
       "step6": "Send the invoice to your client via email and track its status: Draft, Sent, Viewed, or Paid",
       "tip": "Add at least one bank account in Settings — most B2B clients prefer bank transfer for AV equipment payments. Include the invoice number as the payment reference for easy reconciliation."
     },
+    "paymentTracking": {
+      "title": "Payment Tracking",
+      "content1": "CueQuote lets you record full and partial payments on invoices and track the complete payment history. When you record a payment, the invoice status updates automatically — partial when partially paid, paid when fully covered.",
+      "content2": "Every payment is logged with the amount, date, method, and optional reference number. You can view, delete, or add payments at any time. If you accidentally mark an invoice as paid, you can revert it with one click.",
+      "step1": "Open an invoice and click the green \"Record Payment\" button in the Summary sidebar",
+      "step2": "Enter the amount received, date, payment method (bank transfer, cash, card, check), and optional reference number",
+      "step3": "View all payments in the Payment History section below the invoice notes — each shows amount, date, method, and reference",
+      "step4": "To revert a paid invoice, click \"Undo — mark as unpaid\" below the Paid badge — it recalculates based on actual recorded payments",
+      "step5": "Change invoice status manually by clicking the status badge in the header — select from Draft, Sent, Viewed, Partial, Paid, Overdue, or Cancelled",
+      "tip": "Use the status dropdown to manually mark overdue invoices. The Record Payment button in the sidebar is the quickest way to log received funds."
+    },
+    "correctiveInvoices": {
+      "title": "Corrective Invoices",
+      "content1": "When a sent or paid invoice needs corrections, CueQuote lets you issue a corrective invoice that references the original. The original stays untouched for audit purposes, and the correction shows exactly what changed with before/after values.",
+      "content2": "Corrective invoices follow professional invoicing standards used across the EU and are compatible with Poland's KSeF e-invoicing system. Each correction is linked to its original invoice with full traceability.",
+      "step1": "Open a sent, viewed, or paid invoice and click the correction icon (circular arrow) in the header toolbar",
+      "step2": "The system creates a new invoice with \"/COR\" suffix, pre-filled with all original line items and their values stored as snapshots",
+      "step3": "Edit the items that need correcting — modified items show the original total struck through next to the new total",
+      "step4": "Fill in the \"Reason for Correction\" field and send the corrective invoice to your client",
+      "tip": "The original invoice shows an amber banner linking to the correction, and the corrective invoice shows a blue banner linking back to the original — creating a complete audit trail."
+    },
+    "smartSuggestions": {
+      "title": "Smart Suggestions",
+      "content1": "CueQuote's Smart Suggestions engine analyzes your company's past proposals to provide intelligent recommendations. It detects items you frequently include but may have missed, flags pricing inconsistencies, and identifies items you use often but haven't added to your catalog.",
+      "content2": "Smart Suggestions learns from your own data — the more proposals you create, the smarter it gets. It requires at least 3 sent proposals to generate meaningful recommendations. You can toggle it on or off at any time.",
+      "step1": "Click the \"Smart\" lightbulb toggle in the proposal tab bar to enable suggestions — your preference is saved across sessions",
+      "step2": "The \"Missing Items\" tab shows items you usually include but haven't added to this proposal, with confidence scores and one-click \"Add\" buttons",
+      "step3": "The \"Repricing\" tab flags items priced more than 15% above or below your historical average, showing current vs average price with min-max range",
+      "step4": "The \"Add to Catalog\" tab lists items used in 2+ proposals but missing from your equipment catalog — click to create catalog entries with average pricing",
+      "tip": "Smart Suggestions is especially useful for preventing forgotten items and maintaining consistent pricing across proposals. The repricing tab catches accidental price changes when reusing items."
+    },
     "sharingTracking": {
       "title": "Sharing & Tracking Proposals",
       "content1": "CueQuote lets you share proposals with clients via unique links — no PDFs to email back and forth. When a client opens the link, you see exactly when they viewed it, how many times, and whether they accepted or declined.",
