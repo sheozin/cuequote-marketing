@@ -17,7 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function ChangelogPage() {
+export default async function ChangelogPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = await getTranslations("changelog");
   const supabase = await createClient();
   const { data: entries } = await supabase
@@ -147,15 +148,20 @@ export default async function ChangelogPage() {
                     description: string;
                     change_type: string;
                     published_at: string;
+                    translations?: Record<string, { title?: string; description?: string }>;
                   },
                   idx: number
                 ) => {
                   const typeInfo =
                     TYPE_COLORS[entry.change_type] || TYPE_COLORS.new;
+                  const localeMap: Record<string, string> = { en: "en-US", pl: "pl-PL", ar: "ar-EG", de: "de-DE", fr: "fr-FR" };
                   const date = new Date(entry.published_at).toLocaleDateString(
-                    "en-US",
+                    localeMap[locale] || "en-US",
                     { year: "numeric", month: "long", day: "numeric" }
                   );
+                  const tr = entry.translations?.[locale];
+                  const displayTitle = (locale !== "en" && tr?.title) ? tr.title : entry.title;
+                  const displayDesc = (locale !== "en" && tr?.description) ? tr.description : entry.description;
 
                   return (
                     <div
@@ -252,7 +258,7 @@ export default async function ChangelogPage() {
                             marginBottom: 8,
                           }}
                         >
-                          {entry.title}
+                          {displayTitle}
                         </h3>
 
                         {/* Description */}
@@ -264,7 +270,7 @@ export default async function ChangelogPage() {
                             margin: 0,
                           }}
                         >
-                          {entry.description}
+                          {displayDesc}
                         </p>
                       </div>
                     </div>
