@@ -432,4 +432,81 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'invoice-payments-corrections',
+    title: 'Zahlungen & Rechnungskorrekturen',
+    description: 'Teilzahlungen erfassen, Zahlungsverlauf verfolgen, Korrekturrechnungen ausstellen und Rechnungsstatus verwalten.',
+    duration: '4 Min.',
+    difficulty: 'intermediate',
+    category: 'Rechnungen',
+    whatYouLearn: [
+      'Voll- und Teilzahlungen auf Rechnungen erfassen',
+      'Zahlungsverlauf einsehen und Bezahlt-Status zurücksetzen',
+      'Korrekturrechnungen mit Vorher/Nachher-Nachverfolgung ausstellen',
+      'Rechnungsstatus manuell ändern',
+    ],
+    steps: [
+      {
+        title: 'Zahlung erfassen',
+        content: 'Öffnen Sie eine beliebige Rechnung und sehen Sie sich die Zusammenfassungs-Seitenleiste rechts an. Unter „Offener Betrag" klicken Sie auf die grüne Schaltfläche „Zahlung erfassen". Geben Sie den erhaltenen Betrag ein, wählen Sie das Datum, eine Zahlungsmethode (Überweisung, Bargeld, Karte, Scheck oder Sonstige) und optional eine Referenznummer. Klicken Sie auf „Zahlung speichern" — die Rechnung wird automatisch auf „Teilweise" gesetzt, wenn der Betrag unter dem Gesamtbetrag liegt, oder auf „Bezahlt", wenn vollständig beglichen.',
+        tip: 'Sie können mehrere Teilzahlungen über die Zeit erfassen. Jede wird separat im Zahlungsverlauf unterhalb der Notizen nachverfolgt.',
+      },
+      {
+        title: 'Zahlungsverlauf einsehen',
+        content: 'Scrollen Sie unter den Notizbereich, um die Zahlungsverlauf-Karte zu sehen. Jede erfasste Zahlung zeigt den Betrag, das Datum, ein Zahlungsmethoden-Badge und Referenznotizen. Die Summe aller Zahlungen wird unten angezeigt. Sie können einzelne Zahlungseinträge löschen, falls diese fehlerhaft eingegeben wurden — klicken Sie auf das Papierkorb-Symbol neben der jeweiligen Zahlung.',
+      },
+      {
+        title: 'Bezahlte Rechnung zurücksetzen',
+        content: 'Wenn Sie eine Rechnung versehentlich als bezahlt markiert haben, sehen Sie in der Zusammenfassungs-Seitenleiste unter dem grünen „Bezahlt"-Badge den Link „Rückgängig — als unbezahlt markieren". Klicken Sie darauf und bestätigen Sie. Die Rechnung wird auf den korrekten Status basierend auf den tatsächlich erfassten Zahlungen zurückgesetzt: „Teilweise" bei vorhandenen Zahlungen, „Gesendet" bei vorherigem Versand oder andernfalls „Entwurf".',
+      },
+      {
+        title: 'Rechnungsstatus ändern',
+        content: 'Klicken Sie auf das farbige Status-Badge neben der Rechnungsnummer (z. B. „Entwurf", „Gesendet"). Ein Dropdown erscheint mit allen verfügbaren Status: Entwurf, Gesendet, Angesehen, Teilweise, Bezahlt, Überfällig und Storniert. Wählen Sie den neuen Status — er wird sofort gespeichert. Bei Wechsel zu „Gesendet" wird der Versandzeitstempel automatisch erfasst.',
+        tip: 'Nutzen Sie dies, um Rechnungen manuell als „Überfällig" zu markieren oder einen Status bei Bedarf zurückzusetzen.',
+      },
+      {
+        title: 'Korrekturrechnung ausstellen',
+        content: 'Für Rechnungen, die bereits gesendet oder bezahlt wurden und Korrekturen benötigen, klicken Sie auf das Korrektursymbol (kreisförmiger Pfeil) in der Kopfzeilen-Toolbar. Bestätigen Sie die Aktion — eine neue Korrekturrechnung wird mit dem Suffix „/COR" erstellt (z. B. INV-0006/COR). Alle Positionen werden vom Original kopiert, wobei die ursprünglichen Werte als Snapshot gespeichert werden.',
+      },
+      {
+        title: 'Korrektur bearbeiten',
+        content: 'Bearbeiten Sie auf der Korrekturrechnung die zu korrigierenden Positionen — ändern Sie Mengen, Preise oder fügen Sie Positionen hinzu/entfernen Sie diese. Geänderte Positionen zeigen automatisch den ursprünglichen Betrag durchgestrichen neben dem neuen Betrag an, sodass der Kunde genau sehen kann, was sich geändert hat. Füllen Sie das Feld „Korrekturgrund" aus, um zu erläutern, warum die Rechnung angepasst wurde (z. B. „Preisanpassung gemäß Kundenvereinbarung"). Senden Sie die Korrekturrechnung an den Kunden.',
+        tip: 'Die Originalrechnung bleibt unverändert mit einem Banner, das auf die Korrektur verweist. Die Korrekturrechnung hat ein Banner, das zurück zum Original verlinkt — vollständiger Prüfpfad.',
+      },
+    ],
+  },
+  {
+    slug: 'smart-suggestions',
+    title: 'Intelligente Vorschläge',
+    description: 'CueQuote analysiert Ihre bisherigen Angebote, um fehlende Artikel vorzuschlagen, Preisinkonsistenzen zu erkennen und Kataloglücken zu identifizieren.',
+    duration: '3 Min.',
+    difficulty: 'intermediate',
+    category: 'Angebote',
+    whatYouLearn: [
+      'Intelligente Vorschläge in Angeboten aktivieren',
+      'Häufig verwendete Artikel hinzufügen, die möglicherweise fehlen',
+      'Preise anhand Ihrer historischen Durchschnittswerte anpassen',
+      'Ihren Katalog aus echten Angebotsdaten erweitern',
+    ],
+    steps: [
+      {
+        title: 'Intelligente Vorschläge aktivieren',
+        content: 'Öffnen Sie ein beliebiges Angebot und sehen Sie sich die Tab-Leiste an (Equipment | Bedingungen & Details | Risikoplan). Auf der rechten Seite finden Sie einen Glühbirnen-Toggle „Smart". Klicken Sie darauf, um Vorschläge zu aktivieren — er wird bernsteinfarben, wenn aktiv. Ihre Einstellung wird automatisch gespeichert und gilt für alle Angebote.',
+        tip: 'Intelligente Vorschläge benötigen mindestens 3 gesendete Angebote mit ähnlichen Artikeln, um aussagekräftige Empfehlungen zu generieren. Je mehr Angebote Sie erstellen, desto intelligenter wird es.',
+      },
+      {
+        title: 'Fehlende Artikel prüfen',
+        content: 'Klicken Sie auf das Banner „Intelligente Vorschläge" über der Equipment-Tabelle, um es aufzuklappen. Der Tab „Fehlende Artikel" zeigt Artikel, die Sie häufig in ähnlichen Angeboten verwenden, aber in diesem noch nicht hinzugefügt haben. Jeder Vorschlag zeigt einen Konfidenzprozentsatz (z. B. „85 %" bedeutet, dass Sie ihn in 85 % Ihrer vergangenen Angebote verwenden), durchschnittliche Preise aus Ihrer Historie und mit welchen aktuellen Artikeln er üblicherweise kombiniert wird. Klicken Sie auf „Hinzufügen", um einen Vorschlag mit seinem Durchschnittspreis einzufügen.',
+      },
+      {
+        title: 'Preishinweise prüfen',
+        content: 'Wechseln Sie zum Tab „Preisanpassung". Hier werden Artikel in Ihrem aktuellen Angebot markiert, die mehr als 15 % über oder unter Ihrem üblichen Preis liegen. Jeder Hinweis zeigt Ihren aktuellen Preis im Vergleich zum historischen Durchschnitt sowie die Min-Max-Spanne aus vergangenen Angeboten. Ein roter Pfeil bedeutet, dass Sie mehr als üblich berechnen; ein grüner weniger. Klicken Sie auf „Durchschnitt verwenden", um Ihren historischen Durchschnittspreis anzuwenden.',
+        tip: 'Dies ist besonders nützlich, wenn Sie Artikel über mehrere Angebote wiederverwenden — es erkennt versehentliche Preisänderungen oder veraltete Tarife.',
+      },
+      {
+        title: 'Kataloglücken füllen',
+        content: 'Der Tab „Zum Katalog hinzufügen" zeigt Artikel, die Sie in 2 oder mehr Angeboten verwendet, aber nie in Ihren Equipment-Katalog aufgenommen haben. Jeder Eintrag zeigt, wie oft Sie ihn verwendet haben, und den Durchschnittspreis. Klicken Sie auf „Zum Katalog hinzufügen", um einen Katalogeintrag mit dem vorausgefüllten Durchschnittspreis zu erstellen — beim nächsten Mal können Sie ihn aus Ihrem Katalog auswählen, anstatt ihn manuell einzugeben.',
+      },
+    ],
+  },
 ]

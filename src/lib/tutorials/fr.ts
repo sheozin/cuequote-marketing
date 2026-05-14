@@ -432,4 +432,81 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'invoice-payments-corrections',
+    title: 'Paiements et corrections de factures',
+    description: 'Enregistrez les paiements partiels, suivez l\'historique des paiements, émettez des factures correctives et gérez le statut des factures.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Factures',
+    whatYouLearn: [
+      'Enregistrer les paiements complets et partiels sur les factures',
+      'Consulter l\'historique des paiements et annuler le statut payé',
+      'Émettre des factures correctives avec suivi avant/après',
+      'Modifier manuellement le statut d\'une facture',
+    ],
+    steps: [
+      {
+        title: 'Enregistrer un paiement',
+        content: 'Ouvrez n\'importe quelle facture et regardez la barre latérale Résumé à droite. Sous « Montant dû », cliquez sur le bouton vert « Enregistrer un paiement ». Saisissez le montant reçu, sélectionnez la date, choisissez un mode de paiement (virement bancaire, espèces, carte, chèque ou autre) et ajoutez éventuellement un numéro de référence. Cliquez sur « Enregistrer le paiement » — la facture passe automatiquement au statut « partiel » si le montant est inférieur au total, ou « payé » si le montant couvre la totalité.',
+        tip: 'Vous pouvez enregistrer plusieurs paiements partiels au fil du temps. Chacun est suivi séparément dans la section Historique des paiements sous les notes.',
+      },
+      {
+        title: 'Consulter l\'historique des paiements',
+        content: 'Faites défiler sous la section Notes pour voir la carte Historique des paiements. Chaque paiement enregistré affiche le montant, la date, le badge du mode de paiement et les notes de référence. Le total de tous les paiements est affiché en bas. Vous pouvez supprimer des enregistrements de paiement saisis par erreur — cliquez sur l\'icône de corbeille à côté du paiement concerné.',
+      },
+      {
+        title: 'Annuler une facture payée',
+        content: 'Si vous avez marqué une facture comme payée par erreur, regardez la barre latérale Résumé — sous le badge vert « Payé », il y a un lien « Annuler — marquer comme impayé ». Cliquez dessus et confirmez. La facture reviendra à son statut correct en fonction des paiements réellement enregistrés : « partiel » si des paiements existent, « envoyé » si elle avait été précédemment envoyée, ou « brouillon » sinon.',
+      },
+      {
+        title: 'Modifier le statut de la facture',
+        content: 'Cliquez sur le badge de statut coloré à côté du numéro de facture (par ex. « Brouillon », « Envoyé »). Un menu déroulant apparaît avec tous les statuts disponibles : Brouillon, Envoyé, Vu, Partiel, Payé, En retard et Annulé. Sélectionnez le nouveau statut — il est enregistré immédiatement. Lorsque vous passez à « Envoyé », l\'horodatage d\'envoi est enregistré automatiquement.',
+        tip: 'Utilisez cette fonction pour marquer manuellement les factures comme « En retard » ou pour rétablir un statut si nécessaire.',
+      },
+      {
+        title: 'Émettre une facture corrective',
+        content: 'Pour les factures déjà envoyées ou payées nécessitant des corrections, cliquez sur l\'icône de correction (flèche circulaire) dans la barre d\'outils de l\'en-tête. Confirmez l\'action — une nouvelle facture corrective est créée avec le suffixe « /COR » (par ex. INV-0006/COR). Tous les postes sont copiés de l\'original avec leurs valeurs d\'origine conservées comme instantané.',
+      },
+      {
+        title: 'Modifier la correction',
+        content: 'Sur la facture corrective, modifiez les postes nécessitant une correction — changez les quantités, les prix, ou ajoutez/supprimez des articles. Les postes modifiés affichent automatiquement le total original barré à côté du nouveau total, pour que le client voie exactement ce qui a changé. Renseignez le champ « Motif de la correction » pour expliquer pourquoi la facture a été ajustée (par ex. « Prix ajusté selon accord client »). Envoyez la facture corrective au client.',
+        tip: 'La facture originale reste intacte avec une bannière renvoyant vers la correction. La facture corrective comporte une bannière renvoyant vers l\'originale — traçabilité complète.',
+      },
+    ],
+  },
+  {
+    slug: 'smart-suggestions',
+    title: 'Suggestions intelligentes',
+    description: 'CueQuote analyse vos devis précédents pour suggérer les éléments manquants, signaler les incohérences de prix et identifier les lacunes du catalogue.',
+    duration: '3 min',
+    difficulty: 'intermediate',
+    category: 'Devis',
+    whatYouLearn: [
+      'Activer les Suggestions intelligentes sur les devis',
+      'Ajouter les articles fréquemment utilisés que vous avez peut-être oubliés',
+      'Ajuster les prix en fonction de vos moyennes historiques',
+      'Enrichir votre catalogue à partir des données réelles de vos devis',
+    ],
+    steps: [
+      {
+        title: 'Activer les Suggestions intelligentes',
+        content: 'Ouvrez n\'importe quel devis et regardez la barre d\'onglets (Matériel | Conditions et détails | Plan de risques). Sur le côté droit, vous verrez un bouton à bascule « Smart » avec une ampoule. Cliquez dessus pour activer les suggestions — il devient ambre lorsqu\'il est actif. Votre préférence est enregistrée automatiquement, elle reste activée/désactivée sur tous vos devis.',
+        tip: 'Les Suggestions intelligentes nécessitent au moins 3 devis envoyés avec des articles similaires pour générer des recommandations pertinentes. Plus vous créez de devis, plus elles deviennent précises.',
+      },
+      {
+        title: 'Examiner les articles manquants',
+        content: 'Cliquez sur la bannière « Suggestions intelligentes » au-dessus du tableau de matériel pour la développer. L\'onglet « Articles manquants » affiche les articles que vous incluez fréquemment dans des devis similaires mais que vous n\'avez pas ajoutés à celui-ci. Chaque suggestion montre un pourcentage de confiance (par ex. « 85 % » signifie que vous l\'incluez dans 85 % de vos devis passés), le prix moyen issu de votre historique, et avec quels articles actuels il est habituellement associé. Cliquez sur « Ajouter » pour insérer une suggestion avec son prix moyen.',
+      },
+      {
+        title: 'Vérifier les alertes de tarification',
+        content: 'Passez à l\'onglet « Retarification ». Celui-ci signale les articles de votre devis actuel dont le prix est supérieur ou inférieur de plus de 15 % à votre tarif habituel. Chaque alerte indique votre prix actuel par rapport à la moyenne historique, ainsi que la fourchette min-max de vos devis passés. Une flèche rouge signifie que vous facturez plus que d\'habitude ; une flèche verte signifie moins. Cliquez sur « Utiliser la moyenne » pour appliquer votre prix moyen historique.',
+        tip: 'C\'est particulièrement utile lorsque vous réutilisez des articles d\'un devis à l\'autre — cela détecte les changements de prix accidentels ou les tarifs obsolètes.',
+      },
+      {
+        title: 'Combler les lacunes du catalogue',
+        content: 'L\'onglet « Ajouter au catalogue » affiche les articles que vous avez utilisés dans 2 devis ou plus mais que vous n\'avez jamais ajoutés à votre catalogue de matériel. Chaque entrée indique combien de fois vous l\'avez utilisé et le prix moyen. Cliquez sur « Ajouter au catalogue » pour créer une entrée de catalogue avec le prix moyen pré-rempli — la prochaine fois, vous pourrez le sélectionner depuis votre catalogue au lieu de le saisir manuellement.',
+      },
+    ],
+  },
 ]

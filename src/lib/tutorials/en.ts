@@ -433,4 +433,81 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'invoice-payments-corrections',
+    title: 'Invoice Payments & Corrections',
+    description: 'Record partial payments, track payment history, issue corrective invoices, and manage invoice status.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Invoices',
+    whatYouLearn: [
+      'Recording full and partial payments on invoices',
+      'Viewing payment history and reverting paid status',
+      'Issuing corrective invoices with before/after tracking',
+      'Changing invoice status manually',
+    ],
+    steps: [
+      {
+        title: 'Record a payment',
+        content: 'Open any invoice and look at the Summary sidebar on the right. Below "Amount Due", click the green "Record Payment" button. Enter the amount received, select the date, choose a payment method (bank transfer, cash, card, check, or other), and optionally add a reference number. Click "Save Payment" — the invoice automatically updates to "partial" status if the amount is less than the total, or "paid" if fully covered.',
+        tip: 'You can record multiple partial payments over time. Each one is tracked separately in the Payment History section below the notes.',
+      },
+      {
+        title: 'View payment history',
+        content: 'Scroll down below the Notes section to see the Payment History card. Each recorded payment shows the amount, date, payment method badge, and reference notes. The total of all payments is displayed at the bottom. You can delete individual payment records if entered incorrectly — click the trash icon next to any payment.',
+      },
+      {
+        title: 'Revert a paid invoice',
+        content: 'If you accidentally marked an invoice as paid, look at the Summary sidebar — below the green "Paid" badge, there\'s an "Undo — mark as unpaid" link. Click it and confirm. The invoice will revert to its correct status based on actual recorded payments: "partial" if some payments exist, "sent" if it was previously sent, or "draft" otherwise.',
+      },
+      {
+        title: 'Change invoice status',
+        content: 'Click the colored status badge next to the invoice number (e.g., "Draft", "Sent"). A dropdown appears with all available statuses: Draft, Sent, Viewed, Partial, Paid, Overdue, and Cancelled. Select the new status — it saves immediately. When you change to "Sent", the sent timestamp is recorded automatically.',
+        tip: 'Use this to manually mark invoices as "Overdue" or to revert a status if needed.',
+      },
+      {
+        title: 'Issue a corrective invoice',
+        content: 'For invoices that have already been sent or paid and need corrections, click the correction icon (circular arrow) in the header toolbar. Confirm the action — a new corrective invoice is created with a "/COR" suffix (e.g., INV-0006/COR). All line items are copied from the original with their original values stored as a snapshot.',
+      },
+      {
+        title: 'Edit the correction',
+        content: 'On the corrective invoice, edit the items that need correcting — change quantities, prices, or add/remove items. Modified items automatically show the original total with a strikethrough next to the new total, so the client can see exactly what changed. Fill in the "Reason for Correction" field to explain why the invoice was adjusted (e.g., "Price adjusted per client agreement"). Send the corrective invoice to the client.',
+        tip: 'The original invoice stays untouched with a banner linking to the correction. The corrective invoice has a banner linking back to the original — full audit trail.',
+      },
+    ],
+  },
+  {
+    slug: 'smart-suggestions',
+    title: 'Smart Suggestions',
+    description: 'Let CueQuote analyze your past proposals to suggest missing items, flag pricing inconsistencies, and identify catalog gaps.',
+    duration: '3 min',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    whatYouLearn: [
+      'Enabling Smart Suggestions on proposals',
+      'Adding frequently used items you may have missed',
+      'Adjusting prices based on your historical averages',
+      'Growing your catalog from real proposal data',
+    ],
+    steps: [
+      {
+        title: 'Enable Smart Suggestions',
+        content: 'Open any proposal and look at the tab bar (Equipment | Terms & Details | Risk Plan). On the right side, you\'ll see a lightbulb "Smart" toggle button. Click it to turn suggestions on — it turns amber when active. Your preference is saved automatically, so it stays on/off across all proposals.',
+        tip: 'Smart Suggestions need at least 3 sent proposals with similar items to generate meaningful recommendations. The more proposals you create, the smarter it gets.',
+      },
+      {
+        title: 'Review missing items',
+        content: 'Click the "Smart Suggestions" banner above the equipment table to expand it. The "Missing Items" tab shows items you frequently include in similar proposals but haven\'t added to this one. Each suggestion shows a confidence percentage (e.g., "85%" means you include it in 85% of past proposals), average pricing from your history, and which current items it\'s commonly paired with. Click "Add" to insert any suggestion with its average pricing.',
+      },
+      {
+        title: 'Check repricing alerts',
+        content: 'Switch to the "Repricing" tab. This flags items in your current proposal that are priced more than 15% above or below your usual rate. Each alert shows your current price vs. historical average, plus the min-max range from past proposals. A red arrow means you\'re charging more than usual; green means less. Click "Use Avg" to apply your historical average price.',
+        tip: 'This is especially useful when reusing items across proposals — it catches accidental price changes or outdated rates.',
+      },
+      {
+        title: 'Fill catalog gaps',
+        content: 'The "Add to Catalog" tab shows items you\'ve used in 2 or more proposals but never added to your equipment catalog. Each entry shows how many times you\'ve used it and the average pricing. Click "Add to Catalog" to create a catalog entry with the average price pre-filled — next time, you can pick it from your catalog instead of typing it manually.',
+      },
+    ],
+  },
 ]
