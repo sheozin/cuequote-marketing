@@ -435,6 +435,16 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: Array.from({ length: 8 }, (_, i) => ({
+          "@type": "Question",
+          name: tHomeFaq(`q${i + 1}`),
+          acceptedAnswer: { "@type": "Answer", text: tHomeFaq(`a${i + 1}`) },
+        })),
+      }) }} />
+
       <style>{`
         summary::-webkit-details-marker { display: none; }
         details[open] summary svg { transform: rotate(180deg); }

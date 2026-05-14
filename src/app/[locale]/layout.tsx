@@ -8,9 +8,9 @@ import CampaignBanner from "../../components/CampaignBanner";
 import PageTracker from "../../components/PageTracker";
 import "../globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", weight: ["500", "600", "700", "800"] });
-const cairo = Cairo({ subsets: ["arabic"], variable: "--font-cairo", weight: ["500", "600", "700", "800"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", weight: ["500", "600", "700", "800"], display: "swap" });
+const cairo = Cairo({ subsets: ["arabic"], variable: "--font-cairo", weight: ["500", "600", "700", "800"], display: "swap" });
 
 const BASE_URL = "https://cuequote.com";
 
@@ -88,10 +88,9 @@ const jsonLdString = JSON.stringify({
       url: BASE_URL,
       offers: [
         { "@type": "Offer", name: "Free", price: "0", priceCurrency: "EUR" },
-        { "@type": "Offer", name: "Pay-per-proposal", price: "9", priceCurrency: "EUR" },
-        { "@type": "Offer", name: "Starter", price: "39", priceCurrency: "EUR" },
-        { "@type": "Offer", name: "Pro", price: "99", priceCurrency: "EUR" },
-        { "@type": "Offer", name: "Business", price: "199", priceCurrency: "EUR" },
+        { "@type": "Offer", name: "Starter", price: "29", priceCurrency: "EUR" },
+        { "@type": "Offer", name: "Pro", price: "79", priceCurrency: "EUR" },
+        { "@type": "Offer", name: "Business", price: "179", priceCurrency: "EUR" },
       ],
       description: "AI-powered AV proposal generator for event production professionals.",
     },
