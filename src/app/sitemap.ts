@@ -35,11 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
   // Static pages — one entry per locale
+  const siteLastUpdated = new Date('2026-05-14')
   for (const page of staticPages) {
     for (const locale of locales) {
       entries.push({
         url: localizedUrl(base, page.path || '/', locale),
-        lastModified: new Date(),
+        lastModified: siteLastUpdated,
         changeFrequency: page.changeFrequency,
         priority: page.priority,
         alternates: alternatesForPath(base, page.path || '/'),
@@ -52,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of locales) {
       entries.push({
         url: localizedUrl(base, `/tutorials/${slug}`, locale),
-        lastModified: new Date(),
+        lastModified: siteLastUpdated,
         changeFrequency: 'monthly',
         priority: 0.5,
         alternates: alternatesForPath(base, `/tutorials/${slug}`),
