@@ -455,6 +455,130 @@ export const TUTORIALS_PL: Tutorial[] = [
     ],
   },
   {
+    slug: 'invoicing',
+    title: 'Wystawianie faktur',
+    description: 'Generuj profesjonalne faktury z zaakceptowanych ofert, dodaj dane płatności i wyślij je klientom.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Faktury',
+    whatYouLearn: [
+      'Jak tworzyć faktury z ofert',
+      'Konfiguracja metod płatności (przelew, PayPal)',
+      'Wysyłanie faktur i śledzenie płatności',
+      'Faktura zaliczkowa vs pełna',
+      'Wycena dni montażu i demontażu',
+    ],
+    steps: [
+      {
+        title: 'Dodaj metody płatności',
+        content: 'Przejdź do Ustawienia → zakładka Płatności. Kliknij „Dodaj metodę płatności" i wpisz dane bankowe (nazwa rachunku, bank, IBAN, SWIFT) lub adres PayPal. Te dane pojawią się na każdej wysyłanej fakturze. Możesz dodać wiele metod i ustawić jedną jako domyślną.',
+        tip: 'Dodaj przynajmniej jedno konto bankowe — większość klientów B2B preferuje przelew za sprzęt AV.',
+      },
+      {
+        title: 'Utwórz fakturę z oferty',
+        content: 'Otwórz dowolną ofertę, która została wysłana lub zaakceptowana. Kliknij przycisk „Utwórz fakturę" w nagłówku. Zostaniesz zapytany o wybór między fakturą zaliczkową (na podstawie procentu zaliczki) a fakturą pełną (100% kwoty). CueQuote kopiuje wszystkie pozycje, dane klienta i ceny z oferty.',
+      },
+      {
+        title: 'Przejrzyj i dostosuj fakturę',
+        content: 'Edytor faktury otwiera się z danymi wstępnie wypełnionymi z oferty. Sprawdź numer faktury (generowany automatycznie jako INV-0001, INV-0002...), datę wystawienia, termin płatności i pozycje. Możesz edytować dowolne pole, dodawać lub usuwać pozycje oraz zmieniać ilości i ceny.',
+      },
+      {
+        title: 'Wybierz metodę płatności',
+        content: 'Wybierz z listy, którą metodę płatności wyświetlić na fakturze. Dane wybranej metody (IBAN, SWIFT itp.) pojawią się w sekcji „Instrukcje płatności" w PDF-ie faktury, wraz z numerem faktury jako referencją.',
+      },
+      {
+        title: 'Pobierz PDF faktury',
+        content: 'Kliknij przycisk pobierania, aby wygenerować profesjonalny PDF faktury. Zawiera branding firmy, formalny nagłówek „FAKTURA", tabelę pozycji, sumy z VAT, instrukcje płatności z danymi bankowymi oraz numer referencyjny. Gdy faktura jest oznaczona jako opłacona, pojawia się zielony znak wodny „OPŁACONA".',
+      },
+      {
+        title: 'Wyślij i śledź fakturę',
+        content: 'Kliknij „Wyślij", aby wysłać fakturę e-mailem do klienta z załączonym PDF. CueQuote automatycznie dodaje spersonalizowane powitanie z imieniem klienta. Status faktury zmienia się ze Szkic na Wysłana. Po otrzymaniu płatności kliknij „Oznacz jako opłaconą". Możesz też rejestrować płatności częściowe.',
+        tip: 'Dodaj notatkę z prośbą, aby klienci podawali numer faktury jako tytuł przelewu — to bardzo ułatwia uzgadnianie płatności.',
+      },
+      {
+        title: 'Wycena dni montażu i demontażu',
+        content: 'CueQuote rozdziela dni eventowe od dni montażu (instalacja) i demontażu (rozbiórka). Sprzęt jest naliczany według konfigurowalnej stawki za dni montażu/demontażu — 0% (gratis), 50% (połowa stawki) lub 100% (pełna stawka). Praca ludzka jest zawsze naliczana w pełnej stawce za wszystkie dni. Ustaw domyślną wartość firmy w Ustawienia > Oferty.',
+        tip: 'W Polsce 50% stawki za sprzęt w dni montażowe to standard. W regionie Zatoki Perskiej i MENA standardem jest 100%. Ustaw domyślnie raz i zapomnij.',
+      },
+    ],
+  },
+  {
+    slug: 'team-management',
+    title: 'Zarządzanie zespołem',
+    description: 'Zapraszaj członków zespołu, przydzielaj role i współpracuj nad ofertami w całej organizacji.',
+    duration: '3 min',
+    difficulty: 'intermediate',
+    category: 'Konto',
+    whatYouLearn: [
+      'Jak zapraszać członków zespołu do workspace',
+      'Cztery role i co każda z nich daje',
+      'Zarządzanie członkami zespołu i ich usuwanie',
+      'Jak dane migrują po dołączeniu członka',
+    ],
+    steps: [
+      {
+        title: 'Wejdź na stronę Zespół',
+        content: 'Przejdź do Zespół z paska bocznego. Zobaczysz listę wszystkich obecnych członków zespołu z ich imionami, e-mailami, rolami i datą dołączenia.',
+      },
+      {
+        title: 'Zaproś nowego członka',
+        content: 'Kliknij „Zaproś członka" i wpisz adres e-mail osoby. Wybierz rolę: Owner (pełny dostęp wraz z rozliczeniami), Admin (pełny dostęp oprócz rozliczeń), Sales (tworzenie ofert, zarządzanie klientami i katalogiem) lub Viewer (dostęp tylko do odczytu pulpitu).',
+        tip: 'Użyj roli Sales dla swojego zespołu wyceniającego — mogą tworzyć oferty i zarządzać klientami, ale nie mogą zmieniać rozliczeń ani ustawień firmy.',
+      },
+      {
+        title: 'Członek zespołu dołącza',
+        content: 'Zaproszona osoba otrzymuje e-mail z linkiem. Jeśli ma już konto CueQuote, klika link, loguje się i widzi stronę akceptacji/odrzucenia. Jeśli jest nowa, najpierw się rejestruje, a następnie akceptuje zaproszenie.',
+      },
+      {
+        title: 'Dane migrują automatycznie',
+        content: 'Gdy członek zespołu zaakceptuje zaproszenie, jego istniejące oferty, klienci, pozycje katalogowe i faktury automatycznie przenoszą się do workspace Twojego zespołu. Nic nie jest tracone — jego stary pusty workspace jest czyszczony. Widzi potwierdzenie przed akceptacją.',
+        tip: 'To znaczy, że nowi pracownicy mogą zacząć wyceniać na własnym koncie, a gdy dołączą do Twojego zespołu, cała ich praca przenosi się razem z nimi.',
+      },
+      {
+        title: 'Zmień role lub usuń członków',
+        content: 'Kliknij dowolnego członka zespołu, aby zmienić jego rolę lub usunąć go z workspace. Tylko właściciele mogą zarządzać innymi członkami zespołu. Usunięcie członka natychmiast odbiera mu dostęp.',
+      },
+    ],
+  },
+  {
+    slug: 'scope-templates',
+    title: 'Szablony zakresów',
+    description: 'Zapisuj i ponownie wykorzystuj konfiguracje ofert dla powtarzających się typów wydarzeń, aby przyspieszyć wycenianie.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Oferty',
+    whatYouLearn: [
+      'Tworzenie szablonów od podstaw',
+      'Zapisywanie istniejących ofert jako szablony',
+      'Szablony samego zakresu vs pełne szablony (z pozycjami)',
+      'Używanie szablonów do przyspieszenia wyceniania',
+    ],
+    steps: [
+      {
+        title: 'Wejdź na stronę Szablony',
+        content: 'Przejdź do Szablony z paska bocznego. Zobaczysz wszystkie zapisane szablony z typem wydarzenia, opisem, zakresem liczby uczestników oraz informacją, czy zawierają wstępnie skonfigurowane pozycje.',
+      },
+      {
+        title: 'Utwórz szablon od podstaw',
+        content: 'Kliknij „Nowy szablon" i skonfiguruj typ wydarzenia, nazwę, opis oraz zakres liczby uczestników. Opcjonalnie możesz dodać pozycje z ilościami i cenami, tworząc pełny szablon.',
+        tip: 'Zacznij od najczęstszego typu wydarzenia — konferencje, gale lub premiery produktów. Każdy szablon oszczędza 5-10 minut na ofertę.',
+      },
+      {
+        title: 'Zapisz ofertę jako szablon',
+        content: 'Otwórz dowolną ukończoną ofertę w edytorze i kliknij „Zapisz jako szablon". Wszystkie pozycje, ilości i ceny zostaną zapisane. Nadaj mu opisową nazwę i zapisz.',
+      },
+      {
+        title: 'Użyj szablonu przy tworzeniu oferty',
+        content: 'Przy tworzeniu nowej oferty Twoje szablony pojawiają się jako karty szybkiego startu nad polem opisu wydarzenia. Kliknij, aby wstępnie wypełnić opis i ustawienia. Jeśli to pełny szablon z pozycjami, możesz całkowicie pominąć generowanie AI.',
+      },
+      {
+        title: 'Szablon zakresu vs pełny szablon',
+        content: 'Szablony samego zakresu wstępnie wypełniają opis wydarzenia, ale nadal używają AI do wygenerowania listy sprzętu. Pełne szablony zawierają wstępnie skonfigurowane pozycje i pomijają generowanie AI — kliknij „Użyj szablonu", aby natychmiast utworzyć ofertę bez kosztu AI.',
+        tip: 'Używaj pełnych szablonów dla wydarzeń, które wyceniasz identycznie za każdym razem (np. standardowa konfiguracja sali konferencyjnej). Używaj szablonów zakresu, gdy opis jest podobny, ale sprzęt się zmienia.',
+      },
+    ],
+  },
+  {
     slug: 'smart-suggestions',
     title: 'Inteligentne sugestie',
     description: 'CueQuote analizuje Twoje poprzednie oferty, aby sugerować brakujące pozycje, sygnalizować niespójności cenowe i identyfikować braki w katalogu.',

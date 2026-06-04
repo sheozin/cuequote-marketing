@@ -476,6 +476,130 @@ export const TUTORIALS_FR: Tutorial[] = [
     ],
   },
   {
+    slug: 'invoicing',
+    title: 'Créer des factures',
+    description: 'Générez des factures professionnelles à partir de vos devis acceptés avec vos coordonnées de paiement et envoyez-les à vos clients.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Factures',
+    whatYouLearn: [
+      'Comment créer des factures à partir de devis',
+      'Configurer vos modes de paiement (banque, PayPal)',
+      'Envoyer des factures et suivre les paiements',
+      'Factures d\'acompte vs factures complètes',
+      'Tarification des jours de montage et démontage',
+    ],
+    steps: [
+      {
+        title: 'Ajoutez vos modes de paiement',
+        content: 'Allez dans Paramètres → onglet Paiements. Cliquez sur « Ajouter un mode de paiement » et saisissez vos coordonnées bancaires (titulaire du compte, banque, IBAN, SWIFT) ou votre adresse PayPal. Ces informations apparaîtront sur chaque facture que vous envoyez. Vous pouvez ajouter plusieurs modes et en définir un par défaut.',
+        tip: 'Ajoutez au moins un compte bancaire — la plupart des clients B2B préfèrent le virement bancaire pour les paiements de matériel AV.',
+      },
+      {
+        title: 'Créez une facture à partir d\'un devis',
+        content: 'Ouvrez n\'importe quel devis qui a été envoyé ou accepté. Cliquez sur le bouton « Créer une facture » dans l\'en-tête. On vous demandera de choisir entre une facture d\'acompte (basée sur votre pourcentage d\'acompte) ou une facture complète (100 % du total). CueQuote copie tous les postes, les informations client et les prix depuis le devis.',
+      },
+      {
+        title: 'Vérifiez et personnalisez la facture',
+        content: 'L\'éditeur de facture s\'ouvre avec les données pré-remplies du devis. Vérifiez le numéro de facture (généré automatiquement en INV-0001, INV-0002...), la date d\'émission, la date d\'échéance et les postes. Vous pouvez modifier n\'importe quel champ, ajouter ou supprimer des articles, et ajuster les quantités ou les prix.',
+      },
+      {
+        title: 'Sélectionnez un mode de paiement',
+        content: 'Choisissez dans le menu déroulant le mode de paiement à afficher sur la facture. Les coordonnées du mode sélectionné (IBAN, SWIFT, etc.) apparaîtront dans la section « Instructions de paiement » du PDF de la facture, accompagnées du numéro de facture comme référence.',
+      },
+      {
+        title: 'Téléchargez le PDF de la facture',
+        content: 'Cliquez sur le bouton de téléchargement pour générer un PDF de facture professionnel. Il comprend l\'image de marque de votre entreprise, un en-tête « FACTURE » formel, le tableau des postes, les totaux avec TVA, les instructions de paiement avec vos coordonnées bancaires et un numéro de référence. Lorsqu\'une facture est marquée comme payée, un filigrane vert « PAYÉ » apparaît.',
+      },
+      {
+        title: 'Envoyez et suivez la facture',
+        content: 'Cliquez sur « Envoyer » pour envoyer la facture par e-mail à votre client avec le PDF en pièce jointe. CueQuote ajoute automatiquement un message personnalisé adressé au nom de votre client. Le statut de la facture passe de Brouillon à Envoyé. Une fois le paiement reçu, cliquez sur « Marquer comme payé » pour l\'enregistrer. Vous pouvez aussi enregistrer des paiements partiels.',
+        tip: 'Ajoutez une note demandant aux clients d\'indiquer le numéro de facture comme référence de paiement — cela facilite grandement le rapprochement.',
+      },
+      {
+        title: 'Tarification des jours de montage et démontage',
+        content: 'CueQuote distingue les jours d\'événement des jours de montage (installation) et de démontage. Le matériel est facturé à un taux configurable pour les jours de montage/démontage — 0 % (gratuit), 50 % (demi-tarif) ou 100 % (plein tarif). La main-d\'œuvre est toujours au plein tarif pour tous les jours. Définissez la valeur par défaut de votre entreprise dans Paramètres > Devis.',
+        tip: 'En Pologne, 50 % du tarif matériel pour les jours de montage est la norme. Dans le Golfe et au MENA, c\'est 100 %. Définissez votre valeur par défaut une fois pour toutes.',
+      },
+    ],
+  },
+  {
+    slug: 'team-management',
+    title: 'Gestion de l\'équipe',
+    description: 'Invitez des membres d\'équipe, attribuez des rôles et collaborez sur les devis au sein de votre organisation.',
+    duration: '3 min',
+    difficulty: 'intermediate',
+    category: 'Compte',
+    whatYouLearn: [
+      'Comment inviter des membres d\'équipe dans votre espace de travail',
+      'Les quatre rôles et ce que chacun peut faire',
+      'Gérer et supprimer des membres d\'équipe',
+      'Comment les données migrent lorsqu\'un membre rejoint l\'équipe',
+    ],
+    steps: [
+      {
+        title: 'Accédez à la page Équipe',
+        content: 'Allez dans Équipe depuis la barre latérale. Vous verrez la liste de tous les membres actuels de l\'équipe avec leurs noms, e-mails, rôles et dates d\'adhésion.',
+      },
+      {
+        title: 'Invitez un nouveau membre',
+        content: 'Cliquez sur « Inviter un membre » et saisissez l\'adresse e-mail de la personne. Sélectionnez un rôle : Owner (accès complet y compris la facturation), Admin (accès complet sauf la facturation), Sales (créer des devis, gérer les clients et le catalogue) ou Viewer (accès en lecture seule au tableau de bord).',
+        tip: 'Utilisez le rôle Sales pour votre équipe commerciale — ils peuvent créer des devis et gérer les clients mais ne peuvent pas modifier la facturation ni les paramètres de l\'entreprise.',
+      },
+      {
+        title: 'Le membre d\'équipe rejoint',
+        content: 'La personne invitée reçoit un e-mail avec un lien. Si elle possède déjà un compte CueQuote, elle clique sur le lien, se connecte et voit une page d\'acceptation/refus. Si elle est nouvelle, elle s\'inscrit d\'abord puis accepte l\'invitation.',
+      },
+      {
+        title: 'Les données migrent automatiquement',
+        content: 'Lorsqu\'un membre d\'équipe accepte votre invitation, ses devis, clients, articles de catalogue et factures existants sont automatiquement déplacés vers l\'espace de travail de votre équipe. Rien n\'est perdu — son ancien espace de travail vide est nettoyé. Une confirmation est affichée avant l\'acceptation.',
+        tip: 'Cela signifie que les nouvelles recrues peuvent commencer à créer des devis sur leur propre compte, et lorsqu\'elles rejoignent votre équipe, tout leur travail les accompagne.',
+      },
+      {
+        title: 'Modifier les rôles ou supprimer des membres',
+        content: 'Cliquez sur n\'importe quel membre d\'équipe pour modifier son rôle ou le retirer de votre espace de travail. Seuls les owners peuvent gérer les autres membres de l\'équipe. La suppression d\'un membre révoque immédiatement son accès.',
+      },
+    ],
+  },
+  {
+    slug: 'scope-templates',
+    title: 'Modèles de scope',
+    description: 'Enregistrez et réutilisez des configurations de devis pour les types d\'événements récurrents afin d\'accélérer la création de devis.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Devis',
+    whatYouLearn: [
+      'Créer des modèles de zéro',
+      'Enregistrer des devis existants comme modèles',
+      'Modèles scope-only vs modèles complets (avec postes)',
+      'Utiliser les modèles pour accélérer la création de devis',
+    ],
+    steps: [
+      {
+        title: 'Accédez à la page Modèles',
+        content: 'Allez dans Modèles depuis la barre latérale. Vous y verrez tous vos modèles enregistrés avec leur type d\'événement, description, plage de participants et s\'ils incluent des postes pré-configurés.',
+      },
+      {
+        title: 'Créez un modèle de zéro',
+        content: 'Cliquez sur « Nouveau modèle » et configurez le type d\'événement, le nom, la description et la plage de participants. Vous pouvez optionnellement ajouter des postes avec des quantités et des prix pour créer un modèle complet.',
+        tip: 'Commencez par votre type d\'événement le plus courant — conférences, dîners de gala ou lancements de produits. Chaque modèle vous fait gagner 5 à 10 minutes par devis.',
+      },
+      {
+        title: 'Enregistrez un devis comme modèle',
+        content: 'Ouvrez n\'importe quel devis finalisé dans l\'éditeur et cliquez sur « Enregistrer comme modèle ». Tous les postes, quantités et prix sont capturés. Donnez-lui un nom descriptif et enregistrez.',
+      },
+      {
+        title: 'Utilisez un modèle lors de la création d\'un devis',
+        content: 'Lors de la création d\'un nouveau devis, vos modèles apparaissent sous forme de cartes de démarrage rapide au-dessus de la description de l\'événement. Cliquez sur un modèle pour pré-remplir la description et les paramètres. S\'il s\'agit d\'un modèle complet avec des postes, vous pouvez ignorer entièrement la génération par IA.',
+      },
+      {
+        title: 'Modèles scope-only vs modèles complets',
+        content: 'Les modèles scope-only pré-remplissent la description de l\'événement mais utilisent toujours l\'IA pour générer la liste de matériel. Les modèles complets incluent des postes pré-configurés et ignorent la génération IA — cliquez sur « Utiliser le modèle » pour un devis instantané sans coût IA.',
+        tip: 'Utilisez les modèles complets pour les événements que vous devisez de manière identique à chaque fois (par ex. une configuration standard de salle de conférence). Utilisez les modèles scope-only lorsque la description est similaire mais le matériel varie.',
+      },
+    ],
+  },
+  {
     slug: 'smart-suggestions',
     title: 'Suggestions intelligentes',
     description: 'CueQuote analyse vos devis précédents pour suggérer les éléments manquants, signaler les incohérences de prix et identifier les lacunes du catalogue.',

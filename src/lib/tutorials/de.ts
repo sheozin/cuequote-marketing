@@ -476,6 +476,130 @@ export const TUTORIALS_DE: Tutorial[] = [
     ],
   },
   {
+    slug: 'invoicing',
+    title: 'Rechnungen erstellen',
+    description: 'Erstellen Sie professionelle Rechnungen aus Ihren angenommenen Angeboten mit Ihren Zahlungsdetails und versenden Sie sie an Kunden.',
+    duration: '4 Min.',
+    difficulty: 'intermediate',
+    category: 'Rechnungen',
+    whatYouLearn: [
+      'Wie Sie Rechnungen aus Angeboten erstellen',
+      'Einrichtung Ihrer Zahlungsmethoden (Bank, PayPal)',
+      'Rechnungen versenden und Zahlungen nachverfolgen',
+      'Anzahlungs- vs. Gesamtrechnungen',
+      'Auf-/Abbautage-Preisgestaltung',
+    ],
+    steps: [
+      {
+        title: 'Zahlungsmethoden hinzufügen',
+        content: 'Gehen Sie zu Einstellungen → Tab Zahlungen. Klicken Sie auf „Zahlungsmethode hinzufügen" und geben Sie Ihre Bankdaten ein (Kontoinhaber, Bank, IBAN, SWIFT) oder Ihre PayPal-E-Mail. Diese Angaben erscheinen auf jeder Rechnung, die Sie versenden. Sie können mehrere Methoden hinzufügen und eine als Standard festlegen.',
+        tip: 'Fügen Sie mindestens ein Bankkonto hinzu — die meisten B2B-Kunden bevorzugen Banküberweisung für AV-Equipment-Zahlungen.',
+      },
+      {
+        title: 'Rechnung aus einem Angebot erstellen',
+        content: 'Öffnen Sie ein beliebiges Angebot, das gesendet oder angenommen wurde. Klicken Sie auf die Schaltfläche „Rechnung erstellen" in der Kopfzeile. Sie werden gefragt, ob eine Anzahlungsrechnung (basierend auf Ihrem Anzahlungsprozentsatz) oder eine Gesamtrechnung (100 % der Summe) erstellt werden soll. CueQuote übernimmt alle Positionen, Kundendaten und Preise aus dem Angebot.',
+      },
+      {
+        title: 'Rechnung prüfen und anpassen',
+        content: 'Der Rechnungseditor öffnet sich mit vorausgefüllten Daten aus dem Angebot. Prüfen Sie die Rechnungsnummer (automatisch generiert als INV-0001, INV-0002...), Ausstellungsdatum, Fälligkeitsdatum und Positionen. Sie können jedes Feld bearbeiten, Artikel hinzufügen oder entfernen sowie Mengen oder Preise anpassen.',
+      },
+      {
+        title: 'Zahlungsmethode auswählen',
+        content: 'Wählen Sie im Dropdown aus, welche Zahlungsmethode auf der Rechnung angezeigt werden soll. Die Details der gewählten Methode (IBAN, SWIFT usw.) erscheinen im Abschnitt „Zahlungshinweise" des Rechnungs-PDFs zusammen mit der Rechnungsnummer als Referenz.',
+      },
+      {
+        title: 'Rechnungs-PDF herunterladen',
+        content: 'Klicken Sie auf die Download-Schaltfläche, um ein professionelles Rechnungs-PDF zu erstellen. Es enthält Ihr Unternehmens-Branding, eine formelle „RECHNUNG"-Kopfzeile, Positionstabelle, Summen mit MwSt., Zahlungshinweise mit Ihren Bankdaten und eine Referenznummer. Wenn eine Rechnung als bezahlt markiert ist, erscheint ein grünes „BEZAHLT"-Wasserzeichen.',
+      },
+      {
+        title: 'Rechnung senden und nachverfolgen',
+        content: 'Klicken Sie auf „Senden", um die Rechnung per E-Mail an Ihren Kunden zu versenden — mit dem PDF im Anhang. CueQuote ergänzt automatisch eine personalisierte Begrüßung mit dem Namen Ihres Kunden. Der Rechnungsstatus wechselt von Entwurf auf Gesendet. Sobald Sie die Zahlung erhalten, klicken Sie auf „Als bezahlt markieren", um sie zu erfassen. Sie können auch Teilzahlungen erfassen.',
+        tip: 'Bitten Sie Ihre Kunden in einer Notiz, die Rechnungsnummer als Zahlungsreferenz anzugeben — das erleichtert den Abgleich erheblich.',
+      },
+      {
+        title: 'Auf-/Abbautage-Preisgestaltung',
+        content: 'CueQuote unterscheidet zwischen Eventtagen und Aufbau- (Installation) sowie Abbautagen (Demontage). Equipment wird an Auf-/Abbautagen zu einem konfigurierbaren Satz berechnet — 0 % (kostenlos), 50 % (halber Tarif) oder 100 % (voller Tarif). Personal wird immer zum vollen Tagessatz für alle Tage berechnet. Ihren Unternehmensstandard legen Sie unter Einstellungen > Angebote fest.',
+        tip: 'In Polen sind 50 % Equipment-Satz an Aufbautagen üblich. Im Golf und MENA-Raum sind 100 % typisch. Legen Sie Ihren Standard einmal fest und vergessen Sie es.',
+      },
+    ],
+  },
+  {
+    slug: 'team-management',
+    title: 'Teamverwaltung',
+    description: 'Laden Sie Teammitglieder ein, weisen Sie Rollen zu und arbeiten Sie gemeinsam an Angeboten in Ihrem Unternehmen.',
+    duration: '3 Min.',
+    difficulty: 'intermediate',
+    category: 'Konto',
+    whatYouLearn: [
+      'Wie Sie Teammitglieder zu Ihrem Workspace einladen',
+      'Die vier Rollen und was jede darf',
+      'Teammitglieder verwalten und entfernen',
+      'Wie Daten beim Beitritt eines Mitglieds migriert werden',
+    ],
+    steps: [
+      {
+        title: 'Teamseite aufrufen',
+        content: 'Gehen Sie in der Seitenleiste zu Team. Sie sehen eine Liste aller aktuellen Teammitglieder mit Namen, E-Mail-Adressen, Rollen und dem Beitrittsdatum.',
+      },
+      {
+        title: 'Neues Mitglied einladen',
+        content: 'Klicken Sie auf „Mitglied einladen" und geben Sie die E-Mail-Adresse der Person ein. Wählen Sie eine Rolle: Owner (Vollzugriff einschließlich Abrechnung), Admin (Vollzugriff außer Abrechnung), Sales (Angebote erstellen, Kunden und Katalog verwalten) oder Viewer (nur Dashboard-Lesezugriff).',
+        tip: 'Verwenden Sie die Sales-Rolle für Ihr Angebotsteam — sie können Angebote erstellen und Kunden verwalten, aber keine Abrechnungs- oder Unternehmenseinstellungen ändern.',
+      },
+      {
+        title: 'Teammitglied tritt bei',
+        content: 'Die eingeladene Person erhält eine E-Mail mit einem Link. Hat sie bereits ein CueQuote-Konto, klickt sie auf den Link, meldet sich an und sieht eine Seite zum Annehmen/Ablehnen. Ist sie neu, registriert sie sich zuerst und nimmt dann die Einladung an.',
+      },
+      {
+        title: 'Daten werden automatisch migriert',
+        content: 'Wenn ein Teammitglied Ihre Einladung annimmt, werden seine bestehenden Angebote, Kunden, Katalogartikel und Rechnungen automatisch in den Workspace Ihres Teams verschoben. Nichts geht verloren — der alte, leere Workspace wird bereinigt. Eine Bestätigung wird vor dem Annehmen angezeigt.',
+        tip: 'Das bedeutet, neue Mitarbeiter können auf ihrem eigenen Konto Angebote erstellen, und wenn sie Ihrem Team beitreten, kommt die gesamte Arbeit mit.',
+      },
+      {
+        title: 'Rollen ändern oder Mitglieder entfernen',
+        content: 'Klicken Sie auf ein Teammitglied, um dessen Rolle zu ändern oder es aus Ihrem Workspace zu entfernen. Nur Owner können andere Teammitglieder verwalten. Das Entfernen eines Mitglieds entzieht sofort den Zugriff.',
+      },
+    ],
+  },
+  {
+    slug: 'scope-templates',
+    title: 'Scope-Vorlagen',
+    description: 'Speichern und verwenden Sie Angebotskonfigurationen für wiederkehrende Eventtypen wieder, um schneller Angebote zu erstellen.',
+    duration: '4 Min.',
+    difficulty: 'intermediate',
+    category: 'Angebote',
+    whatYouLearn: [
+      'Vorlagen von Grund auf erstellen',
+      'Bestehende Angebote als Vorlage speichern',
+      'Scope-only vs. vollständige Vorlagen (mit Positionen)',
+      'Vorlagen nutzen, um schneller Angebote zu erstellen',
+    ],
+    steps: [
+      {
+        title: 'Vorlagenseite aufrufen',
+        content: 'Gehen Sie in der Seitenleiste zu Vorlagen. Hier sehen Sie alle gespeicherten Vorlagen mit Eventtyp, Beschreibung, Teilnehmerbereich und ob sie vorkonfigurierte Positionen enthalten.',
+      },
+      {
+        title: 'Vorlage von Grund auf erstellen',
+        content: 'Klicken Sie auf „Neue Vorlage" und konfigurieren Sie Eventtyp, Name, Beschreibung und Teilnehmerbereich. Optional können Sie Positionen mit Mengen und Preisen hinzufügen, um eine vollständige Vorlage zu erstellen.',
+        tip: 'Beginnen Sie mit Ihrem häufigsten Eventtyp — Konferenzen, Gala-Dinners oder Produktpräsentationen. Jede Vorlage spart Ihnen 5–10 Minuten pro Angebot.',
+      },
+      {
+        title: 'Angebot als Vorlage speichern',
+        content: 'Öffnen Sie ein fertiges Angebot im Editor und klicken Sie auf „Als Vorlage speichern". Alle Positionen, Mengen und Preise werden übernommen. Geben Sie einen aussagekräftigen Namen ein und speichern Sie.',
+      },
+      {
+        title: 'Vorlage beim Erstellen eines Angebots verwenden',
+        content: 'Beim Erstellen eines neuen Angebots erscheinen Ihre Vorlagen als Schnellstart-Karten über dem Beschreibungsfeld. Klicken Sie auf eine, um Beschreibung und Einstellungen vorzufüllen. Handelt es sich um eine vollständige Vorlage mit Positionen, können Sie die KI-Generierung komplett überspringen.',
+      },
+      {
+        title: 'Scope-only vs. vollständige Vorlagen',
+        content: 'Scope-only-Vorlagen füllen die Eventbeschreibung vor, nutzen aber dennoch die KI, um die Equipment-Liste zu generieren. Vollständige Vorlagen enthalten vorkonfigurierte Positionen und überspringen die KI-Generierung — klicken Sie auf „Vorlage verwenden" für ein sofortiges Angebot ohne KI-Kosten.',
+        tip: 'Verwenden Sie vollständige Vorlagen für Events, die Sie jedes Mal identisch anbieten (z. B. einen Standard-Konferenzraum-Aufbau). Verwenden Sie Scope-only-Vorlagen, wenn die Beschreibung ähnlich ist, aber das Equipment variiert.',
+      },
+    ],
+  },
+  {
     slug: 'smart-suggestions',
     title: 'Intelligente Vorschläge',
     description: 'CueQuote analysiert Ihre bisherigen Angebote, um fehlende Artikel vorzuschlagen, Preisinkonsistenzen zu erkennen und Kataloglücken zu identifizieren.',

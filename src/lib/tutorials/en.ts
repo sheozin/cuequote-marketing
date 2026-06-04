@@ -477,6 +477,130 @@ export const TUTORIALS_EN: Tutorial[] = [
     ],
   },
   {
+    slug: 'invoicing',
+    title: 'Creating Invoices',
+    description: 'Generate professional invoices from your accepted proposals with your payment details and send them to clients.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Invoices',
+    whatYouLearn: [
+      'How to create invoices from proposals',
+      'Setting up your payment methods (bank, PayPal)',
+      'Sending invoices and tracking payments',
+      'Deposit vs full invoices',
+      'Setup & strike day pricing',
+    ],
+    steps: [
+      {
+        title: 'Add your payment methods',
+        content: 'Go to Settings → Payments tab. Click "Add Payment Method" and enter your bank details (account name, bank, IBAN, SWIFT) or PayPal email. These details will appear on every invoice you send. You can add multiple methods and set one as default.',
+        tip: 'Add at least one bank account — most B2B clients prefer bank transfer for AV equipment payments.',
+      },
+      {
+        title: 'Create an invoice from a proposal',
+        content: 'Open any proposal that has been sent or accepted. Click the "Create Invoice" button in the header. You\'ll be asked to choose between a Deposit Invoice (based on your deposit percentage) or a Full Invoice (100% of the total). CueQuote copies all line items, client details, and pricing from the proposal.',
+      },
+      {
+        title: 'Review and customize the invoice',
+        content: 'The invoice editor opens with pre-filled data from the proposal. Review the invoice number (auto-generated as INV-0001, INV-0002...), issue date, due date, and line items. You can edit any field, add or remove items, and adjust quantities or prices.',
+      },
+      {
+        title: 'Select a payment method',
+        content: 'Choose which payment method to display on the invoice from the dropdown. The selected method\'s details (IBAN, SWIFT, etc.) will appear in the "Payment Instructions" section of the invoice PDF, along with the invoice number as reference.',
+      },
+      {
+        title: 'Download the invoice PDF',
+        content: 'Click the download button to generate a professional invoice PDF. It includes your company branding, a formal "INVOICE" header, line items table, totals with VAT, payment instructions with your bank details, and a reference number. When an invoice is marked as paid, a green "PAID" watermark appears.',
+      },
+      {
+        title: 'Send and track the invoice',
+        content: 'Click "Send" to email the invoice to your client with the PDF attached. CueQuote automatically adds a personalized greeting addressed to your client by name. The invoice status changes from Draft to Sent. Once you receive payment, click "Mark as Paid" to record it. You can also record partial payments.',
+        tip: 'Add a note asking clients to include the invoice number as the payment reference — this makes reconciliation much easier.',
+      },
+      {
+        title: 'Setup & strike day pricing',
+        content: 'CueQuote separates event days from setup (installation) and strike (teardown) days. Equipment is charged at a configurable rate for setup/strike days — 0% (included free), 50% (half rate), or 100% (full rate). Labor is always charged at full rate for all days. Set your company default in Settings > Proposals.',
+        tip: 'In Poland, 50% equipment rate on setup days is standard. In the Gulf and MENA, 100% is typical. Set your default once and forget.',
+      },
+    ],
+  },
+  {
+    slug: 'team-management',
+    title: 'Team Management',
+    description: 'Invite team members, assign roles, and collaborate on proposals across your organization.',
+    duration: '3 min',
+    difficulty: 'intermediate',
+    category: 'Account',
+    whatYouLearn: [
+      'How to invite team members to your workspace',
+      'The four roles and what each can access',
+      'Managing and removing team members',
+      'How data migrates when a member joins',
+    ],
+    steps: [
+      {
+        title: 'Access the Team page',
+        content: 'Go to Team from the sidebar. You\'ll see a list of all current team members with their names, emails, roles, and when they joined.',
+      },
+      {
+        title: 'Invite a new member',
+        content: 'Click "Invite Member" and enter the person\'s email address. Select a role: Owner (full access including billing), Admin (full access except billing), Sales (create proposals, manage clients and catalog), or Viewer (read-only dashboard access).',
+        tip: 'Use the Sales role for your quoting team — they can create proposals and manage clients but can\'t change billing or company settings.',
+      },
+      {
+        title: 'Team member joins',
+        content: 'The invited person receives an email with a link. If they already have a CueQuote account, they click the link, log in, and see an accept/decline page. If they\'re new, they sign up first, then accept the invite.',
+      },
+      {
+        title: 'Data migrates automatically',
+        content: 'When a team member accepts your invite, their existing proposals, clients, catalog items, and invoices automatically move to your team\'s workspace. Nothing is lost — their old empty workspace is cleaned up. They see a confirmation before accepting.',
+        tip: 'This means new hires can start quoting on their own account, and when they join your team, all their work comes with them.',
+      },
+      {
+        title: 'Change roles or remove members',
+        content: 'Click on any team member to change their role or remove them from your workspace. Only owners can manage other team members. Removing a member revokes their access immediately.',
+      },
+    ],
+  },
+  {
+    slug: 'scope-templates',
+    title: 'Scope Templates',
+    description: 'Save and reuse proposal configurations for recurring event types to speed up quoting.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    whatYouLearn: [
+      'Creating templates from scratch',
+      'Saving existing proposals as templates',
+      'Scope-only vs full templates (with line items)',
+      'Using templates to speed up quoting',
+    ],
+    steps: [
+      {
+        title: 'Access the Templates page',
+        content: 'Go to Templates from the sidebar. Here you\'ll see all your saved templates with their event type, description, attendee range, and whether they include pre-configured line items.',
+      },
+      {
+        title: 'Create a template from scratch',
+        content: 'Click "New Template" and configure the event type, name, description, and attendee range. You can optionally add line items with quantities and prices to create a full template.',
+        tip: 'Start with your most common event type — conferences, gala dinners, or product launches. Each template saves you 5-10 minutes per proposal.',
+      },
+      {
+        title: 'Save a proposal as a template',
+        content: 'Open any completed proposal in the editor and click "Save as Template". All line items, quantities, and prices are captured. Give it a descriptive name and save.',
+      },
+      {
+        title: 'Use a template when creating a proposal',
+        content: 'When creating a new proposal, your templates appear as quick-start cards above the event description. Click one to pre-fill the description and settings. If it\'s a full template with line items, you can skip AI generation entirely.',
+      },
+      {
+        title: 'Scope-only vs full templates',
+        content: 'Scope-only templates pre-fill the event description but still use AI to generate the equipment list. Full templates include pre-configured line items and skip AI generation — click "Use Template" for an instant proposal with no AI cost.',
+        tip: 'Use full templates for events you quote identically every time (e.g., a standard conference room setup). Use scope-only templates when the description is similar but equipment varies.',
+      },
+    ],
+  },
+  {
     slug: 'smart-suggestions',
     title: 'Smart Suggestions',
     description: 'Let CueQuote analyze your past proposals to suggest missing items, flag pricing inconsistencies, and identify catalog gaps.',
