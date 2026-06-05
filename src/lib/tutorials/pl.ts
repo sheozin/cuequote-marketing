@@ -57,6 +57,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '4 min',
     difficulty: 'beginner',
     category: 'Oferty',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Jak pisać skuteczne opisy wydarzeń dla AI',
       'Jak AI dobiera sprzęt na podstawie Twojego katalogu',
@@ -119,6 +120,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '2 min',
     difficulty: 'beginner',
     category: 'Branding',
+    videoUrl: '/videos/pdf-templates.mp4',
     whatYouLearn: [
       '4 style szablonów PDF i kiedy używać każdego z nich',
       'Jak kolor marki wpływa na cały PDF',
@@ -160,6 +162,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '5 min',
     difficulty: 'intermediate',
     category: 'Konfiguracja',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Jak dodawać i organizować pozycje sprzętu',
       'Zrozumienie kategorii sprzętu',
@@ -211,6 +214,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Podstawy',
+    videoUrl: '/videos/client-management.mp4',
     whatYouLearn: [
       'Dodawanie i edycja profili klientów',
       'Jak typy klientów wpływają na warunki generowane przez AI',
@@ -251,6 +255,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Oferty',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Edycja pozycji w cenie i wykluczeń dla każdej oferty',
       'Ustawianie niestandardowych warunków płatności',
@@ -305,6 +310,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Oferty',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Wysyłanie ofert e-mailem',
       'Udostępnianie przez link',
@@ -366,6 +372,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Konto',
+    videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Porównanie 4 planów subskrypcji',
       'Jak ulepszyć plan z darmowym okresem próbnym',
@@ -411,6 +418,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '2 min',
     difficulty: 'intermediate',
     category: 'Oferty',
+    videoUrl: '/videos/client-portal.mp4',
     whatYouLearn: [
       'Jak klienci rejestrują się w portalu',
       'Co klienci widzą w swoim pulpicie portalu',
@@ -439,6 +447,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Faktury',
+    videoUrl: '/videos/invoice-payments.mp4',
     whatYouLearn: [
       'Rejestrowanie pełnych i częściowych płatności',
       'Przeglądanie historii płatności i cofanie statusu opłaconej',
@@ -461,6 +470,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Faktury',
+    videoUrl: '/videos/invoicing.mp4',
     whatYouLearn: [
       'Jak tworzyć faktury z ofert',
       'Konfiguracja metod płatności (przelew, PayPal)',
@@ -509,6 +519,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Konto',
+    videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'Jak zapraszać członków zespołu do workspace',
       'Cztery role i co każda z nich daje',
@@ -547,6 +558,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Oferty',
+    videoUrl: '/videos/scope-templates.mp4',
     whatYouLearn: [
       'Tworzenie szablonów od podstaw',
       'Zapisywanie istniejących ofert jako szablony',
@@ -585,6 +597,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Oferty',
+    videoUrl: '/videos/smart-suggestions.mp4',
     whatYouLearn: [
       'Włączanie inteligentnych sugestii',
       'Dodawanie często używanych pozycji, które mogłeś pominąć',

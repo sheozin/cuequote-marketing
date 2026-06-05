@@ -57,6 +57,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'beginner',
     category: 'Devis',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Comment rédiger des descriptions d\'événement efficaces pour l\'IA',
       'Comment l\'IA sélectionne le matériel en fonction de votre catalogue',
@@ -119,6 +120,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '2 min',
     difficulty: 'beginner',
     category: 'Image de marque',
+    videoUrl: '/videos/pdf-templates.mp4',
     whatYouLearn: [
       'Les 4 styles de modèle PDF et quand utiliser chacun',
       'Comment la couleur de marque influe sur l\'ensemble du PDF',
@@ -160,6 +162,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '5 min',
     difficulty: 'intermediate',
     category: 'Configuration',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Comment ajouter et organiser des articles de matériel',
       'Comprendre les catégories de matériel',
@@ -211,6 +214,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Bases',
+    videoUrl: '/videos/client-management.mp4',
     whatYouLearn: [
       'Ajouter et modifier des profils clients',
       'Comment les types de clients influent sur les conditions générées par l\'IA',
@@ -251,6 +255,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Devis',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Modifier les inclusions et exclusions par devis',
       'Définir des conditions de paiement personnalisées',
@@ -305,6 +310,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Devis',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Envoyer des devis par e-mail',
       'Partager via un lien',
@@ -366,6 +372,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Compte',
+    videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Comparer les 4 plans d\'abonnement',
       'Comment passer à la version supérieure avec un essai gratuit',
@@ -411,6 +418,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '2 min',
     difficulty: 'intermediate',
     category: 'Devis',
+    videoUrl: '/videos/client-portal.mp4',
     whatYouLearn: [
       'Comment les clients s\'inscrivent au portail',
       'Ce que les clients voient dans leur tableau de bord',
@@ -439,6 +447,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Factures',
+    videoUrl: '/videos/invoice-payments.mp4',
     whatYouLearn: [
       'Enregistrer les paiements complets et partiels sur les factures',
       'Consulter l\'historique des paiements et annuler le statut payé',
@@ -482,6 +491,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Factures',
+    videoUrl: '/videos/invoicing.mp4',
     whatYouLearn: [
       'Comment créer des factures à partir de devis',
       'Configurer vos modes de paiement (banque, PayPal)',
@@ -530,6 +540,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Compte',
+    videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'Comment inviter des membres d\'équipe dans votre espace de travail',
       'Les quatre rôles et ce que chacun peut faire',
@@ -568,6 +579,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Devis',
+    videoUrl: '/videos/scope-templates.mp4',
     whatYouLearn: [
       'Créer des modèles de zéro',
       'Enregistrer des devis existants comme modèles',
@@ -606,6 +618,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Devis',
+    videoUrl: '/videos/smart-suggestions.mp4',
     whatYouLearn: [
       'Activer les Suggestions intelligentes sur les devis',
       'Ajouter les articles fréquemment utilisés que vous avez peut-être oubliés',

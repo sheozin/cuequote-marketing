@@ -57,6 +57,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'beginner',
     category: 'Angebote',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Wie Sie effektive Eventbeschreibungen für die KI verfassen',
       'Wie die KI Equipment auf Basis Ihres Katalogs auswählt',
@@ -119,6 +120,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '2 Min.',
     difficulty: 'beginner',
     category: 'Branding',
+    videoUrl: '/videos/pdf-templates.mp4',
     whatYouLearn: [
       'Die 4 PDF-Vorlagenstile und wann man welchen verwendet',
       'Wie die Markenfarbe das gesamte PDF beeinflusst',
@@ -160,6 +162,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '5 Min.',
     difficulty: 'intermediate',
     category: 'Setup',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Wie Sie Equipment-Artikel anlegen und organisieren',
       'Equipment-Kategorien verstehen',
@@ -211,6 +214,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'beginner',
     category: 'Grundlagen',
+    videoUrl: '/videos/client-management.mp4',
     whatYouLearn: [
       'Kundenprofile anlegen und bearbeiten',
       'Wie Kundentypen die KI-generierten Bedingungen beeinflussen',
@@ -251,6 +255,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'intermediate',
     category: 'Angebote',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Einschlüsse und Ausschlüsse pro Angebot bearbeiten',
       'Individuelle Zahlungsbedingungen festlegen',
@@ -305,6 +310,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'beginner',
     category: 'Angebote',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Angebote per E-Mail versenden',
       'Per Link teilen',
@@ -366,6 +372,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'intermediate',
     category: 'Konto',
+    videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Die 4 Abo-Tarife vergleichen',
       'Wie Sie mit einer kostenlosen Testphase upgraden',
@@ -411,6 +418,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '2 Min.',
     difficulty: 'intermediate',
     category: 'Angebote',
+    videoUrl: '/videos/client-portal.mp4',
     whatYouLearn: [
       'Wie sich Kunden für das Portal registrieren',
       'Was Kunden in ihrem Portal-Dashboard sehen',
@@ -439,6 +447,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'intermediate',
     category: 'Rechnungen',
+    videoUrl: '/videos/invoice-payments.mp4',
     whatYouLearn: [
       'Voll- und Teilzahlungen auf Rechnungen erfassen',
       'Zahlungsverlauf einsehen und Bezahlt-Status zurücksetzen',
@@ -482,6 +491,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'intermediate',
     category: 'Rechnungen',
+    videoUrl: '/videos/invoicing.mp4',
     whatYouLearn: [
       'Wie Sie Rechnungen aus Angeboten erstellen',
       'Einrichtung Ihrer Zahlungsmethoden (Bank, PayPal)',
@@ -530,6 +540,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'intermediate',
     category: 'Konto',
+    videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'Wie Sie Teammitglieder zu Ihrem Workspace einladen',
       'Die vier Rollen und was jede darf',
@@ -568,6 +579,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'intermediate',
     category: 'Angebote',
+    videoUrl: '/videos/scope-templates.mp4',
     whatYouLearn: [
       'Vorlagen von Grund auf erstellen',
       'Bestehende Angebote als Vorlage speichern',
@@ -606,6 +618,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'intermediate',
     category: 'Angebote',
+    videoUrl: '/videos/smart-suggestions.mp4',
     whatYouLearn: [
       'Intelligente Vorschläge in Angeboten aktivieren',
       'Häufig verwendete Artikel hinzufügen, die möglicherweise fehlen',

@@ -57,6 +57,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'beginner',
     category: 'العروض',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'كيفية كتابة أوصاف فعاليات فعّالة للذكاء الاصطناعي',
       'كيف يختار الذكاء الاصطناعي المعدات بناءً على الكتالوج',
@@ -119,6 +120,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: 'دقيقتان',
     difficulty: 'beginner',
     category: 'الهوية البصرية',
+    videoUrl: '/videos/pdf-templates.mp4',
     whatYouLearn: [
       'أنماط قوالب PDF الأربعة ومتى تستخدم كل منها',
       'كيف يؤثر لون العلامة التجارية على ملف PDF بأكمله',
@@ -160,6 +162,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '5 دقائق',
     difficulty: 'intermediate',
     category: 'الإعداد',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'كيفية إضافة وتنظيم بنود المعدات',
       'فهم فئات المعدات',
@@ -211,6 +214,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'beginner',
     category: 'الأساسيات',
+    videoUrl: '/videos/client-management.mp4',
     whatYouLearn: [
       'إضافة وتعديل ملفات العملاء',
       'كيف تُؤثِّر أنواع العملاء على الشروط المُولَّدة بالذكاء الاصطناعي',
@@ -251,6 +255,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'intermediate',
     category: 'العروض',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'تعديل ما يشمله العرض وما يستثنيه لكل عرض',
       'تحديد شروط دفع مخصصة',
@@ -305,6 +310,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'beginner',
     category: 'العروض',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'إرسال العروض عبر البريد الإلكتروني',
       'المشاركة عبر رابط',
@@ -366,6 +372,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'intermediate',
     category: 'الحساب',
+    videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'مقارنة خطط الاشتراك الأربع',
       'كيفية الترقية مع تجربة مجانية',
@@ -411,6 +418,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: 'دقيقتان',
     difficulty: 'intermediate',
     category: 'العروض',
+    videoUrl: '/videos/client-portal.mp4',
     whatYouLearn: [
       'كيف يُسجِّل العملاء في البوابة',
       'ما يراه العملاء في لوحة تحكم البوابة',
@@ -439,6 +447,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'intermediate',
     category: 'الفواتير',
+    videoUrl: '/videos/invoice-payments.mp4',
     whatYouLearn: [
       'تسجيل الدفعات الكاملة والجزئية على الفواتير',
       'عرض سجل المدفوعات والتراجع عن حالة "مدفوعة"',
@@ -482,6 +491,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'intermediate',
     category: 'الفواتير',
+    videoUrl: '/videos/invoicing.mp4',
     whatYouLearn: [
       'كيفية إنشاء فواتير من العروض',
       'إعداد طرق الدفع (بنك، PayPal)',
@@ -530,6 +540,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'intermediate',
     category: 'الحساب',
+    videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'كيفية دعوة أعضاء الفريق إلى مساحة العمل',
       'الأدوار الأربعة وصلاحيات كل منها',
@@ -568,6 +579,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'intermediate',
     category: 'العروض',
+    videoUrl: '/videos/scope-templates.mp4',
     whatYouLearn: [
       'إنشاء القوالب من الصفر',
       'حفظ العروض الحالية كقوالب',
@@ -606,6 +618,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'intermediate',
     category: 'العروض',
+    videoUrl: '/videos/smart-suggestions.mp4',
     whatYouLearn: [
       'تفعيل الاقتراحات الذكية على العروض',
       'إضافة عناصر متكررة ربما فاتتك',

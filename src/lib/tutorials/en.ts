@@ -57,6 +57,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'beginner',
     category: 'Proposals',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'How to write effective event descriptions for the AI',
       'How the AI selects equipment based on your catalog',
@@ -119,6 +120,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '2 min',
     difficulty: 'beginner',
     category: 'Branding',
+    videoUrl: '/videos/pdf-templates.mp4',
     whatYouLearn: [
       'The 4 PDF template styles and when to use each',
       'How brand color affects the entire PDF',
@@ -160,6 +162,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '5 min',
     difficulty: 'intermediate',
     category: 'Setup',
+    videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'How to add and organize equipment items',
       'Understanding equipment categories',
@@ -211,6 +214,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Basics',
+    videoUrl: '/videos/client-management.mp4',
     whatYouLearn: [
       'Adding and editing client profiles',
       'How client types affect AI-generated terms',
@@ -251,6 +255,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Proposals',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Editing per-proposal inclusions and exclusions',
       'Setting custom payment terms',
@@ -305,6 +310,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Proposals',
+    videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Sending proposals via email',
       'Sharing via link',
@@ -367,6 +373,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Account',
+    videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Comparing the 4 subscription plans',
       'How to upgrade with a free trial',
@@ -412,6 +419,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '2 min',
     difficulty: 'intermediate',
     category: 'Proposals',
+    videoUrl: '/videos/client-portal.mp4',
     whatYouLearn: [
       'How clients register for the portal',
       'What clients see in their portal dashboard',
@@ -440,6 +448,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Invoices',
+    videoUrl: '/videos/invoice-payments.mp4',
     whatYouLearn: [
       'Recording full and partial payments on invoices',
       'Viewing payment history and reverting paid status',
@@ -483,6 +492,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Invoices',
+    videoUrl: '/videos/invoicing.mp4',
     whatYouLearn: [
       'How to create invoices from proposals',
       'Setting up your payment methods (bank, PayPal)',
@@ -531,6 +541,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Account',
+    videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'How to invite team members to your workspace',
       'The four roles and what each can access',
@@ -569,6 +580,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Proposals',
+    videoUrl: '/videos/scope-templates.mp4',
     whatYouLearn: [
       'Creating templates from scratch',
       'Saving existing proposals as templates',
@@ -607,6 +619,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Proposals',
+    videoUrl: '/videos/smart-suggestions.mp4',
     whatYouLearn: [
       'Enabling Smart Suggestions on proposals',
       'Adding frequently used items you may have missed',
