@@ -33,6 +33,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: `/tutorials/${slug}` },
     openGraph: { title, description },
+    twitter: { card: 'summary_large_image', title, description },
   }
 }
 
