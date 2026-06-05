@@ -3,6 +3,7 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
+export const alt = 'CueQuote Tutorial'
 
 const TITLES: Record<string, { t: string; d: string }> = {
   'getting-started': { t: 'Getting Started', d: 'Create your CueQuote account and send your first AI-powered AV proposal in under 10 minutes.' },

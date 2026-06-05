@@ -76,25 +76,37 @@ export default async function BlogPostPage({
   const readTime = tp(`${slug}.readTime`);
   const contentArray = tp.raw(`${slug}.content`) as string[];
 
-  // Article JSON-LD for rich search results — content is static/trusted (not user input)
-  const articleLd = JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: title,
-    description: excerpt,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: { '@type': 'Person', name: 'Sherif Abdalazeem', url: 'https://cuequote.com/about' },
-    publisher: { '@type': 'Organization', name: 'CueQuote', url: 'https://cuequote.com' },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://cuequote.com/blog/${slug}` },
-    articleSection: post.category,
-  })
+  // Structured data for rich search results — content is static/trusted (not user input)
+  const structuredData = JSON.stringify([
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      description: excerpt,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: { '@type': 'Person', name: 'Sherif Abdalazeem', url: 'https://cuequote.com/about' },
+      publisher: { '@type': 'Organization', name: 'CueQuote', url: 'https://cuequote.com', logo: { '@type': 'ImageObject', url: 'https://cuequote.com/icon.png' } },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': `https://cuequote.com/blog/${slug}` },
+      articleSection: post.category,
+      image: `https://cuequote.com/blog/${slug}/opengraph-image`,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cuequote.com' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://cuequote.com/blog' },
+        { '@type': 'ListItem', position: 3, name: title, item: `https://cuequote.com/blog/${slug}` },
+      ],
+    },
+  ])
 
   return (
     <>
       <Nav />
-      {/* Safe: articleLd is built from trusted static data (post titles/dates), not user input */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: articleLd }} />
+      {/* Safe: structuredData is built from trusted static data (post titles/dates), not user input */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
 
       {/* ── Article header ──────────────────────────────────────────── */}
       <section style={{

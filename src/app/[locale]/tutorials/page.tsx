@@ -28,9 +28,20 @@ export default async function TutorialsPage() {
   const locale = await getLocale();
   const tutorials = getTutorials(locale);
 
+  const breadcrumbLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cuequote.com' },
+      { '@type': 'ListItem', position: 2, name: 'Tutorials', item: 'https://cuequote.com/tutorials' },
+    ],
+  })
+
   return (
     <>
       <Nav />
+      {/* Safe: breadcrumbLd is built from static data, not user input */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbLd }} />
 
       <style>{`
         .tutorial-card:hover {

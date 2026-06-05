@@ -58,9 +58,39 @@ export default async function TutorialPage({
 
   const difficultyLabel = t(tutorial.difficulty as 'beginner' | 'intermediate' | 'advanced')
 
+  // HowTo + Breadcrumb structured data for rich search results — all data is trusted/static
+  const structuredData = JSON.stringify([
+    {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: tutorial.title,
+      description: tutorial.description,
+      totalTime: tutorial.duration,
+      step: tutorial.steps.map((step, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        name: step.title,
+        text: step.content,
+        ...(step.tip ? { tip: { '@type': 'HowToTip', text: step.tip } } : {}),
+      })),
+      ...(tutorial.videoUrl ? { video: { '@type': 'VideoObject', name: tutorial.title, description: tutorial.description, contentUrl: tutorial.videoUrl } } : {}),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cuequote.com' },
+        { '@type': 'ListItem', position: 2, name: 'Tutorials', item: 'https://cuequote.com/tutorials' },
+        { '@type': 'ListItem', position: 3, name: tutorial.title, item: `https://cuequote.com/tutorials/${slug}` },
+      ],
+    },
+  ])
+
   return (
     <>
       <Nav />
+      {/* Safe: structuredData is built from trusted static tutorial content, not user input */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
       <article style={{ padding: '80px 24px 60px' }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           {/* Back link */}

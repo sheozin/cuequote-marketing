@@ -33,9 +33,20 @@ export default async function BlogPage() {
   const rest = POSTS.slice(1);
   const featuredCat = CATEGORY_COLORS[featured.category] || CATEGORY_COLORS.Guides;
 
+  const breadcrumbLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cuequote.com' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://cuequote.com/blog' },
+    ],
+  })
+
   return (
     <>
       <Nav />
+      {/* Safe: breadcrumbLd is built from static data, not user input */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbLd }} />
 
       {/* ── Header ──────────────────────────────────────────────────── */}
       <section style={{ padding: "96px 24px 0" }}>

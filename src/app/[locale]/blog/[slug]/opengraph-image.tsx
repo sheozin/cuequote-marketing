@@ -4,12 +4,13 @@ import messages from '@/messages/en.json'
 export const runtime = 'edge'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
+export const alt = 'CueQuote Blog Post'
 
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const blog = (messages as any).blog ?? {}
-  const post = blog[slug] ?? {}
+  const posts = (messages as any).posts ?? {}
+  const post = posts[slug] ?? {}
   const title = post.title ?? slug.replace(/-/g, ' ')
   const desc = post.excerpt ?? ''
 
