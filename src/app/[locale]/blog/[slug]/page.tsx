@@ -364,7 +364,6 @@ export default async function BlogPostPage({
 
       <style>{`
         .sidebar-sticky { position: -webkit-sticky; position: sticky; top: 80px; }
-        article, .blog-grid { overflow: visible !important; }
         @media (max-width: 768px) {
           .blog-grid { grid-template-columns: 1fr !important; }
           .blog-sidebar { position: static !important; }
