@@ -249,7 +249,7 @@ export default async function BlogPostPage({
 
           {/* ── Sidebar ── */}
           <aside className="blog-sidebar">
-            <div className="sidebar-sticky" style={{ position: "sticky", top: 80 }}>
+            <div className="sidebar-sticky">
             <div style={{
               background: "#f9fafb", borderRadius: 12, padding: 24,
               marginBottom: 24, borderLeft: `3px solid ${style.accent}`,
@@ -363,6 +363,8 @@ export default async function BlogPostPage({
       <Footer />
 
       <style>{`
+        .sidebar-sticky { position: -webkit-sticky; position: sticky; top: 80px; }
+        article, .blog-grid { overflow: visible !important; }
         @media (max-width: 768px) {
           .blog-grid { grid-template-columns: 1fr !important; }
           .blog-sidebar { position: static !important; }
