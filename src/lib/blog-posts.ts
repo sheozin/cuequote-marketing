@@ -7,6 +7,31 @@ export interface BlogPostSummary {
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
   {
+    slug: "av-industry-glossary",
+    category: "Guides",
+    date: "2026-06-21",
+  },
+  {
+    slug: "av-proposal-software-freelancers",
+    category: "Guides",
+    date: "2026-06-19",
+  },
+  {
+    slug: "av-proposals-conferences-trade-shows",
+    category: "Business",
+    date: "2026-06-17",
+  },
+  {
+    slug: "av-proposals-weddings-private-events",
+    category: "Business",
+    date: "2026-06-15",
+  },
+  {
+    slug: "av-proposals-corporate-events",
+    category: "Business",
+    date: "2026-06-13",
+  },
+  {
     slug: "best-av-proposal-software-2026",
     category: "Guides",
     date: "2026-06-11",
