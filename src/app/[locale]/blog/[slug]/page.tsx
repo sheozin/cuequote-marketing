@@ -248,7 +248,8 @@ export default async function BlogPostPage({
           </div>
 
           {/* ── Sidebar ── */}
-          <aside className="blog-sidebar" style={{ position: "sticky", top: 80, alignSelf: "start" }}>
+          <aside className="blog-sidebar">
+            <div className="sidebar-sticky" style={{ position: "sticky", top: 80 }}>
             <div style={{
               background: "#f9fafb", borderRadius: 12, padding: 24,
               marginBottom: 24, borderLeft: `3px solid ${style.accent}`,
@@ -311,6 +312,7 @@ export default async function BlogPostPage({
                 );
               })}
             </div>
+            </div>{/* end sidebar-sticky */}
           </aside>
         </div>
       </article>
@@ -364,6 +366,7 @@ export default async function BlogPostPage({
         @media (max-width: 768px) {
           .blog-grid { grid-template-columns: 1fr !important; }
           .blog-sidebar { position: static !important; }
+          .sidebar-sticky { position: static !important; }
           section:first-of-type h1 { font-size: 28px !important; }
           section:first-of-type > div > p { font-size: 15px !important; }
           .related-grid { grid-template-columns: 1fr !important; }
