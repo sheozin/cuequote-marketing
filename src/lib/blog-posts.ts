@@ -7,6 +7,31 @@ export interface BlogPostSummary {
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
   {
+    slug: "best-av-proposal-software-2026",
+    category: "Guides",
+    date: "2026-06-11",
+  },
+  {
+    slug: "cuequote-vs-jetbuilt",
+    category: "Business",
+    date: "2026-06-09",
+  },
+  {
+    slug: "cuequote-vs-d-tools",
+    category: "Business",
+    date: "2026-06-07",
+  },
+  {
+    slug: "free-av-proposal-template-download",
+    category: "Guides",
+    date: "2026-06-05",
+  },
+  {
+    slug: "how-to-price-av-services-events",
+    category: "Guides",
+    date: "2026-06-03",
+  },
+  {
     slug: "av-proposal-guide-uk-event-companies",
     category: "Business",
     date: "2026-05-31",
