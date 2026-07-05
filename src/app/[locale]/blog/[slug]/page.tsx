@@ -83,14 +83,35 @@ export default async function BlogPostPage({
   const readTime = tp(`${slug}.readTime`);
   const contentArray = tp.raw(`${slug}.content`) as string[];
 
-  // Extract key takeaways: first sentence of paragraphs 0, 2, 4, 6 (up to 5)
-  const takeaways = contentArray
-    .filter((_, i) => i % 2 === 0)
-    .slice(0, 5)
-    .map(p => {
-      const firstSentence = p.match(/^[^.!?]+[.!?]/)?.[0] || p.slice(0, 120) + '...';
-      return firstSentence;
-    });
+  // Extract key takeaways. Glossary paragraphs start with "1. TERM: ..." — handle separately.
+  const isGlossaryParagraph = (p: string) => /^\d+\.\s[A-Z]{2,}/.test(p);
+
+  const nonGlossaryParagraphs = contentArray.filter((p, i) => i % 2 === 0 && !isGlossaryParagraph(p));
+  const normalTakeaways = nonGlossaryParagraphs.slice(0, 5).map(p => {
+    const firstSentence = p.match(/^[^.!?]+[.!?]/)?.[0] || p.slice(0, 120) + '...';
+    return firstSentence;
+  });
+
+  let takeaways: string[];
+  if (normalTakeaways.length >= 3) {
+    // Enough non-glossary paragraphs — use them as-is
+    takeaways = normalTakeaways;
+  } else {
+    // Glossary post: collect first ~8 term names and present as a summary item
+    const glossaryParagraph = contentArray.find(isGlossaryParagraph);
+    const termNames: string[] = [];
+    if (glossaryParagraph) {
+      const termMatches = glossaryParagraph.matchAll(/\d+\.\s([A-Z][A-Z\s()\/\-0-9,]+):/g);
+      for (const m of termMatches) {
+        termNames.push(m[1].trim());
+        if (termNames.length >= 8) break;
+      }
+    }
+    takeaways = [
+      ...normalTakeaways,
+      ...(termNames.length > 0 ? [`Terms covered: ${termNames.join(', ')}…`] : []),
+    ].slice(0, 5);
+  }
 
   // Related posts: same category, excluding current, max 3
   const relatedPosts = POSTS
