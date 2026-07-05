@@ -48,12 +48,16 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
+      url: `https://cuequote.com/blog/${slug}`,
+      siteName: "CueQuote",
+      locale: "en_US",
       images: [{ url: ogImageUrl, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      site: '@cuequote',
       images: [ogImageUrl],
     },
   };
