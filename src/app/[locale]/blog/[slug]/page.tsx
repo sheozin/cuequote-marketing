@@ -214,7 +214,7 @@ export default async function BlogPostPage({
 
               if (isGlossary) {
                 // Split on numbered term pattern, keep the delimiter
-                const terms = paragraph.split(/(?=\d+\.\s[A-Z])/).filter(Boolean);
+                const terms = paragraph.split(/\s(?=\d+\.\s[A-Z])/).filter(Boolean);
                 return (
                   <div key={i} style={{ marginBottom: 28 }}>
                     {terms.map((term, j) => {
