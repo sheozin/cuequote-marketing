@@ -208,7 +208,46 @@ export default async function BlogPostPage({
           display: "grid", gridTemplateColumns: "1fr 300px", gap: 60,
         }}>
           <div>
-            {contentArray.map((paragraph, i) => (
+            {contentArray.map((paragraph, i) => {
+              // Detect glossary paragraphs with numbered terms (e.g. "1. AMPLIFIER: ...")
+              const isGlossary = /^\d+\.\s[A-Z]{2,}.*:\s/.test(paragraph);
+
+              if (isGlossary) {
+                // Split on numbered term pattern, keep the delimiter
+                const terms = paragraph.split(/(?=\d+\.\s[A-Z])/).filter(Boolean);
+                return (
+                  <div key={i} style={{ marginBottom: 28 }}>
+                    {terms.map((term, j) => {
+                      const match = term.match(/^(\d+)\.\s([A-Z][A-Z\s()\/\-0-9,]+):\s*(.*)/);
+                      if (!match) return <p key={j} style={{ fontSize: 17, color: "#374151", lineHeight: 1.8, marginBottom: 12 }}>{term}</p>;
+                      const [, num, name, def] = match;
+                      return (
+                        <div key={j} style={{
+                          display: "flex", gap: 12, marginBottom: 16,
+                          paddingBottom: 16, borderBottom: "1px solid #f3f4f6",
+                        }}>
+                          <span style={{
+                            fontSize: 13, fontWeight: 700, color: "#10b981",
+                            minWidth: 32, textAlign: "right", paddingTop: 2,
+                          }}>{num}.</span>
+                          <div>
+                            <span style={{
+                              fontSize: 15, fontWeight: 700, color: "#08172E",
+                              letterSpacing: 0.3,
+                            }}>{name}</span>
+                            <p style={{
+                              fontSize: 15, color: "#6b7280", lineHeight: 1.6,
+                              marginTop: 4, marginBottom: 0,
+                            }}>{def.trim()}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              }
+
+              return (
               <div key={i}>
                 <p style={{ fontSize: 17, color: "#374151", lineHeight: 1.8, marginBottom: 28 }}>
                   {paragraph}
@@ -235,7 +274,8 @@ export default async function BlogPostPage({
                   </div>
                 )}
               </div>
-            ))}
+              );
+            })}
 
             <div style={{
               borderTop: "1px solid #e5e7eb", marginTop: 56, paddingTop: 32,
