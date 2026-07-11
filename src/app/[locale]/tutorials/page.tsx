@@ -7,12 +7,24 @@ import { getTutorials, type Tutorial } from "@/lib/tutorials";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("tutorials");
+  const locale = await getLocale();
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const pagePath = '/tutorials';
   const title = t("metaTitle", { defaultValue: "Tutorials — Learn CueQuote" });
   const description = t("metaDescription", { defaultValue: "Step-by-step video guides to master CueQuote's AV proposal automation features." });
   return {
     title,
     description,
-    alternates: { canonical: "/tutorials" },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: { title, description },
   };
 }

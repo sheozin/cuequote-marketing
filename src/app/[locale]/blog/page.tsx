@@ -4,16 +4,28 @@ import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { ArrowRight } from "lucide-react";
 import { POSTS } from "../../../lib/blog-posts";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("blog");
+  const locale = await getLocale();
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const pagePath = '/blog';
   const title = t("metaTitle", { defaultValue: "Blog" });
   const description = t("metaDescription", { defaultValue: "Tips, guides, and insights for AV professionals — from proposal writing to equipment pricing and industry trends." });
   return {
     title,
     description,
-    alternates: { canonical: "/blog" },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: { title, description },
   };
 }

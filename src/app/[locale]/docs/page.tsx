@@ -3,16 +3,28 @@ import { Link } from "@/i18n/navigation";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { Sparkles } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("docs");
+  const locale = await getLocale();
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const pagePath = '/docs';
   const title = t("metaTitle", { defaultValue: "Documentation — Getting Started" });
   const description = t("metaDescription", { defaultValue: "Learn how to use CueQuote to create professional AV proposals." });
   return {
     title,
     description,
-    alternates: { canonical: "/docs" },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: { title, description },
   };
 }

@@ -22,16 +22,26 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
-  const locale = await getLocale()
+  const { locale, slug } = await params
   const tutorial = getTutorialBySlug(slug, locale)
   if (!tutorial) return { title: 'Tutorial' }
   const title = `${tutorial.title} — CueQuote Tutorials`
   const description = tutorial.description
+  const localePath = locale === 'en' ? '' : `/${locale}`
+  const pagePath = `/tutorials/${slug}`
   return {
     title,
     description,
-    alternates: { canonical: `/tutorials/${slug}` },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: { title, description },
     twitter: { card: 'summary_large_image', title, description },
   }

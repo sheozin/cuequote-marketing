@@ -9,12 +9,24 @@ const APP_URL = "https://app.cuequote.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("contact");
+  const locale = await getLocale();
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const pagePath = '/contact';
   const title = t("metaTitle", { defaultValue: "Contact" });
   const description = t("metaDescription", { defaultValue: "Get in touch with the CueQuote team. We'd love to hear from you — whether you have a question, feedback, or want to explore a partnership." });
   return {
     title,
     description,
-    alternates: { canonical: "/contact" },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: { title, description },
   };
 }

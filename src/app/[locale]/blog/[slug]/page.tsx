@@ -33,22 +33,33 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const post = POSTS.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
   const tp = await getTranslations("posts");
   const title = tp(`${slug}.title`);
   const description = tp(`${slug}.excerpt`);
   const ogImageUrl = `https://cuequote.com/blog/${slug}/opengraph-image`;
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const pagePath = `/blog/${slug}`;
   return {
     title,
     description,
-    alternates: { canonical: `/blog/${slug}` },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: {
       title,
       description,
       type: "article",
-      url: `https://cuequote.com/blog/${slug}`,
+      url: `https://cuequote.com${localePath}${pagePath}`,
       siteName: "CueQuote",
       locale: "en_US",
       images: [{ url: ogImageUrl, width: 1200, height: 630, alt: title }],

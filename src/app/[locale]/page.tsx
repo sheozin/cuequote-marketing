@@ -75,10 +75,22 @@ function ProposalMockup() {
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("hero");
+  const locale = await getLocale();
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const pagePath = '/';
   return {
     title: t("metaTitle", { defaultValue: "CueQuote — AI-Powered AV Proposals in Seconds" }),
     description: t("metaDescription", { defaultValue: "Generate professional AV equipment proposals with AI. Describe your event, get a complete equipment list with accurate pricing. Free to start — no credit card required." }),
-    alternates: { canonical: "/" },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: {
       title: t("metaTitle", { defaultValue: "CueQuote — AI-Powered AV Proposals in Seconds" }),
       description: t("metaDescription", { defaultValue: "Generate professional AV equipment proposals with AI. Describe your event, get a complete equipment list with accurate pricing. Free to start — no credit card required." }),

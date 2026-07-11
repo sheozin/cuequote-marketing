@@ -9,12 +9,24 @@ const APP_URL = "https://app.cuequote.com";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("about");
+  const locale = await getLocale();
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const pagePath = '/about';
   const title = t("metaTitle", { defaultValue: "About" });
   const description = t("metaDescription", { defaultValue: "CueQuote is built by AVE Events — a team that has been in the AV production trenches. We built the tool we wished existed." });
   return {
     title,
     description,
-    alternates: { canonical: "/about" },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: { title, description },
   };
 }

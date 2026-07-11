@@ -3,16 +3,28 @@ import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { Sparkles } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("changelog");
+  const locale = await getLocale();
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const pagePath = '/changelog';
   const title = t("metaTitle", { defaultValue: "Changelog — What's New" });
   const description = t("metaDescription", { defaultValue: "See the latest updates and improvements to CueQuote." });
   return {
     title,
     description,
-    alternates: { canonical: "/changelog" },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: { title, description },
   };
 }

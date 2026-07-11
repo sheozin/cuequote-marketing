@@ -2,16 +2,28 @@ import type { Metadata } from "next";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { FileText, Sparkles } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("terms");
+  const locale = await getLocale();
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const pagePath = '/terms';
   const title = t("metaTitle", { defaultValue: "Terms of Service" });
   const description = t("metaDescription", { defaultValue: "CueQuote terms of service — the rules and guidelines for using our platform." });
   return {
     title,
     description,
-    alternates: { canonical: "/terms" },
+    alternates: {
+      canonical: `https://cuequote.com${localePath}${pagePath}`,
+      languages: {
+        'en': `https://cuequote.com${pagePath}`,
+        'pl': `https://cuequote.com/pl${pagePath}`,
+        'ar': `https://cuequote.com/ar${pagePath}`,
+        'de': `https://cuequote.com/de${pagePath}`,
+        'fr': `https://cuequote.com/fr${pagePath}`,
+      },
+    },
     openGraph: { title, description },
   };
 }
