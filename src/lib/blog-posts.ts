@@ -7,6 +7,21 @@ export interface BlogPostSummary {
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
   {
+    slug: "interactive-proposal-viewer-client-comments",
+    category: "Technology",
+    date: "2026-06-27",
+  },
+  {
+    slug: "equipment-inventory-crew-scheduling",
+    category: "Technology",
+    date: "2026-06-25",
+  },
+  {
+    slug: "project-costing-margin-tracking-av",
+    category: "Technology",
+    date: "2026-06-23",
+  },
+  {
     slug: "av-industry-glossary",
     category: "Guides",
     date: "2026-06-21",
