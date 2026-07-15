@@ -216,12 +216,10 @@ export default async function PricingPage() {
         <PricingToggle
           avLabel={t("forAvCompanies", { defaultValue: "For AV Companies" })}
           plannerLabel={t("forEventPlanners", { defaultValue: "For Event Planners" })}
-        >
-          {(mode) => {
-            const activePlans = mode === 'av' ? plans : plannerPlans;
-            return (
-              <div className="pricing-grid" style={{ padding: "0 8px" }}>
-                {activePlans.map(({ name, price, period, desc, icon, features, cta, ctaStyle, popular, save, note }) => {
+        />
+        {[{ id: 'pricing-av', data: plans, show: true }, { id: 'pricing-planner', data: plannerPlans, show: false }].map(({ id, data: activePlans, show }) => (
+          <div key={id} id={id} className="pricing-grid" style={{ padding: "0 8px", display: show ? 'grid' : 'none' }}>
+            {activePlans.map(({ name, price, period, desc, icon, features, cta, ctaStyle, popular, save, note }) => {
                   const isFeat = popular;
                   return (
                     <div key={name} className={isFeat ? "feat-card" : ""} style={{
@@ -293,10 +291,8 @@ export default async function PricingPage() {
                     </div>
                   );
                 })}
-              </div>
-            );
-          }}
-        </PricingToggle>
+          </div>
+        ))}
       </section>
 
       {/* Feature Comparison Table */}
