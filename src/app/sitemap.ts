@@ -24,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/pricing', changeFrequency: 'monthly' as const, priority: 0.8 },
     { path: '/about', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/blog', changeFrequency: 'weekly' as const, priority: 0.7 },
+    { path: '/for-av-companies', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/for-event-planners', changeFrequency: 'monthly' as const, priority: 0.8 },
     { path: '/contact', changeFrequency: 'yearly' as const, priority: 0.5 },
     { path: '/privacy', changeFrequency: 'yearly' as const, priority: 0.3 },
     { path: '/terms', changeFrequency: 'yearly' as const, priority: 0.3 },

@@ -15,6 +15,8 @@ export default function Nav() {
 
   const links = [
     { label: t("features"), href: "/#features" },
+    { label: t("forAv"), href: "/for-av-companies" },
+    { label: t("forPlanners"), href: "/for-event-planners" },
     { label: t("pricing"), href: "/pricing" },
     { label: t("about"), href: "/about" },
     { label: t("contact"), href: "/contact" },

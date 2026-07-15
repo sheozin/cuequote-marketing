@@ -8,7 +8,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
   MessageSquare, Mic, MonitorPlay, Zap, ArrowRight,
-  Check, ChevronDown, CreditCard, Crown, Rocket,
+  Check, ChevronDown, CreditCard, Crown, Rocket, Calendar,
 } from "lucide-react";
 
 const APP_URL = "https://app.cuequote.com";
@@ -113,6 +113,7 @@ export default async function HomePage() {
   const tHomeBlog = await getTranslations("homeBlog");
   const tPosts = await getTranslations("posts");
   const tHomeCta = await getTranslations("homeCta");
+  const tWhoFor = await getTranslations("whoFor");
 
   return (
     <>
@@ -197,6 +198,76 @@ export default async function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ── Who is CueQuote for ──────────────────────────────────────────── */}
+      <section style={{ padding: "80px 24px", background: "#fff" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+          <p style={{ fontSize: 12, fontWeight: 700, color: "#10b981", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 12 }}>
+            {tWhoFor("label")}
+          </p>
+          <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", marginBottom: 8 }}>
+            {tWhoFor("title")}
+          </h2>
+          <p style={{ fontSize: 16, color: "#64748b", marginBottom: 48 }}>
+            {tWhoFor("subtitle")}
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="who-for-grid">
+            <Link href="/for-av-companies" style={{
+              textDecoration: "none", display: "flex", flexDirection: "column", alignItems: "center",
+              background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 16, padding: "40px 28px",
+              transition: "box-shadow 0.3s, border-color 0.3s",
+            }}>
+              <div style={{
+                width: 56, height: 56, borderRadius: 14, background: "#ecfdf5",
+                display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981", marginBottom: 20,
+              }}>
+                <Mic size={28} />
+              </div>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 22, color: "#08172E", marginBottom: 8 }}>
+                {tWhoFor("avTitle")}
+              </h3>
+              <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6, marginBottom: 20 }}>
+                {tWhoFor("avDesc")}
+              </p>
+              <span style={{
+                display: "inline-flex", alignItems: "center", gap: 6,
+                fontSize: 14, fontWeight: 600, color: "#10b981",
+              }}>
+                {tWhoFor("avCta")} <ArrowRight size={14} />
+              </span>
+            </Link>
+            <Link href="/for-event-planners" style={{
+              textDecoration: "none", display: "flex", flexDirection: "column", alignItems: "center",
+              background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 16, padding: "40px 28px",
+              transition: "box-shadow 0.3s, border-color 0.3s",
+            }}>
+              <div style={{
+                width: 56, height: 56, borderRadius: 14, background: "#ecfdf5",
+                display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981", marginBottom: 20,
+              }}>
+                <Calendar size={28} />
+              </div>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 22, color: "#08172E", marginBottom: 8 }}>
+                {tWhoFor("plannerTitle")}
+              </h3>
+              <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6, marginBottom: 20 }}>
+                {tWhoFor("plannerDesc")}
+              </p>
+              <span style={{
+                display: "inline-flex", alignItems: "center", gap: 6,
+                fontSize: 14, fontWeight: 600, color: "#10b981",
+              }}>
+                {tWhoFor("plannerCta")} <ArrowRight size={14} />
+              </span>
+            </Link>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 640px) {
+            .who-for-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
       </section>
 
       {/* ── 3. Use Cases ────────────────────────────────────────────────────── */}
