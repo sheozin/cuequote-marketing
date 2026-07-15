@@ -137,7 +137,7 @@ export default async function HomePage() {
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }} className="hero-grid">
           <HeroMockupSlider
             avSubtitle={t("subtitle")}
-            plannerSubtitle="Describe your event in plain English. Get a detailed production plan with equipment, crew, and budget — in under 2 minutes. No AV knowledge required."
+            plannerSubtitle="Describe your event in plain English. Get a complete production plan with technical requirements, crew, timeline, and budget estimates — in under 2 minutes."
             avCta={t("cta")}
             plannerCta="Plan Your Event — Free"
             ctaLink={`${APP_URL}/signup?lang=${locale}`}

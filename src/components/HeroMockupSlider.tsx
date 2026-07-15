@@ -56,7 +56,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
           {active === 0 ? (
             <>Turn event descriptions into <span style={{ color: "#10b981" }}>professional AV proposals</span> in seconds</>
           ) : (
-            <>Plan your event&apos;s <span style={{ color: "#10b981" }}>AV production</span> with confidence</>
+            <>Plan your <span style={{ color: "#10b981" }}>event production</span> with confidence</>
           )}
         </h1>
         <p style={{ fontSize: 16, color: "#94a3b8", lineHeight: 1.6, marginBottom: 28, maxWidth: 440 }}>
@@ -135,7 +135,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
 
               {/* Scope summary */}
               <div style={{ padding: "12px 20px", borderBottom: "1px solid #f3f4f6", fontSize: 12, color: "#64748b", lineHeight: 1.5, background: "#fafbfc" }}>
-                Full AV production for a 350-guest evening gala with keynote, awards, live jazz quartet, and DJ after-party.
+                Full production plan for a 350-guest evening gala with keynote, awards, live jazz quartet, and DJ after-party.
               </div>
 
               {/* Category budgets */}
@@ -173,7 +173,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
               </div>
 
               <div style={{ padding: "10px 20px", borderTop: "1px solid #f3f4f6", fontSize: 10, color: "#94a3b8", textAlign: "center" }}>
-                For Event Planners — production plan with market rates & tips
+                For Event Planners — complete production plan with budget & tips
               </div>
             </>
           )}
