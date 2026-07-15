@@ -4,98 +4,142 @@ import { getTranslations } from "next-intl/server";
 export default async function Footer() {
   const t = await getTranslations("footer");
 
+  const sections = [
+    {
+      title: t("product"),
+      links: [
+        { label: t("features"), href: "/#features" },
+        { label: t("howItWorks"), href: "/#how-it-works" },
+        { label: t("forAvCompanies"), href: "/for-av-companies" },
+        { label: t("forEventPlanners"), href: "/for-event-planners" },
+        { label: t("changelog"), href: "/changelog" },
+      ],
+    },
+    {
+      title: t("resources"),
+      links: [
+        { label: t("docs"), href: "/docs" },
+        { label: t("tutorials"), href: "/tutorials" },
+        { label: t("blog"), href: "/blog" },
+        { label: t("faq"), href: "/#faq" },
+      ],
+    },
+    {
+      title: t("company"),
+      links: [
+        { label: t("about"), href: "/about" },
+        { label: t("contact"), href: "/contact" },
+      ],
+    },
+    {
+      title: t("legal"),
+      links: [
+        { label: t("privacy"), href: "/privacy" },
+        { label: t("terms"), href: "/terms" },
+      ],
+    },
+  ];
+
   return (
-    <footer style={{ background: "#08172E", color: "#94a3b8", padding: "64px 24px 32px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr", gap: 48, marginBottom: 48 }}>
+    <footer style={{ background: "#08172E", color: "#94a3b8" }}>
+      {/* Main footer */}
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "56px 24px 0" }}>
+        {/* Desktop: full grid | Mobile: brand + inline sections */}
+        <div className="footer-desktop" style={{
+          display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr 1fr",
+          gap: 40, marginBottom: 40,
+        }}>
           {/* Brand */}
           <div>
-            <div style={{ marginBottom: 16 }}>
+            <div style={{ marginBottom: 12 }}>
               <span style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: "#fff" }}>Cue</span>
               <span style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: "#10b981" }}>Quote</span>
             </div>
-            <p style={{ fontSize: 14, lineHeight: 1.6 }}>
+            <p style={{ fontSize: 13, lineHeight: 1.6, marginBottom: 20, maxWidth: 240 }}>
               {t("tagline")}
             </p>
           </div>
 
-          {/* Product */}
-          <div>
-            <h4 style={{ color: "#fff", fontSize: 13, fontWeight: 600, marginBottom: 16, textTransform: "uppercase", letterSpacing: 1 }}>{t("product")}</h4>
-            {[
-              { label: t("features"), href: "/#features" },
-              { label: t("howItWorks"), href: "/#how-it-works" },
-              { label: t("faq"), href: "/#faq" },
-              { label: t("forAvCompanies"), href: "/for-av-companies" },
-              { label: t("forEventPlanners"), href: "/for-event-planners" },
-              { label: t("changelog"), href: "/changelog" },
-            ].map(({ label, href }) => (
-              <Link key={href} href={href} style={{ display: "block", textDecoration: "none", color: "#94a3b8", fontSize: 14, marginBottom: 10 }}>
-                {label}
-              </Link>
-            ))}
+          {/* Link sections */}
+          {sections.map((section) => (
+            <div key={section.title}>
+              <h4 style={{
+                color: "#fff", fontSize: 12, fontWeight: 700, marginBottom: 14,
+                textTransform: "uppercase", letterSpacing: 1.2,
+              }}>
+                {section.title}
+              </h4>
+              {section.links.map(({ label, href }) => (
+                <Link key={href} href={href} style={{
+                  display: "block", textDecoration: "none", color: "#64748b",
+                  fontSize: 13, marginBottom: 10, transition: "color 0.15s",
+                }}>
+                  {label}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: collapsed accordion-style */}
+        <div className="footer-mobile" style={{ display: "none", marginBottom: 32 }}>
+          {/* Brand centered */}
+          <div style={{ textAlign: "center", marginBottom: 28, paddingBottom: 24, borderBottom: "1px solid #1e293b" }}>
+            <div style={{ marginBottom: 8 }}>
+              <span style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: "#fff" }}>Cue</span>
+              <span style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: "#10b981" }}>Quote</span>
+            </div>
+            <p style={{ fontSize: 13, lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>
+              {t("tagline")}
+            </p>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h4 style={{ color: "#fff", fontSize: 13, fontWeight: 600, marginBottom: 16, textTransform: "uppercase", letterSpacing: 1 }}>{t("resources")}</h4>
-            {[
-              { label: t("docs"), href: "/docs" },
-              { label: t("tutorials"), href: "/tutorials" },
-              { label: t("blog"), href: "/blog" },
-            ].map(({ label, href }) => (
-              <Link key={href} href={href} style={{ display: "block", textDecoration: "none", color: "#94a3b8", fontSize: 14, marginBottom: 10 }}>
-                {label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 style={{ color: "#fff", fontSize: 13, fontWeight: 600, marginBottom: 16, textTransform: "uppercase", letterSpacing: 1 }}>{t("company")}</h4>
-            {[
-              { label: t("about"), href: "/about" },
-              { label: t("contact"), href: "/contact" },
-            ].map(({ label, href }) => (
-              <Link key={href} href={href} style={{ display: "block", textDecoration: "none", color: "#94a3b8", fontSize: 14, marginBottom: 10 }}>
-                {label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 style={{ color: "#fff", fontSize: 13, fontWeight: 600, marginBottom: 16, textTransform: "uppercase", letterSpacing: 1 }}>{t("legal")}</h4>
-            {[
-              { label: t("privacy"), href: "/privacy" },
-              { label: t("terms"), href: "/terms" },
-            ].map(({ label, href }) => (
-              <Link key={href} href={href} style={{ display: "block", textDecoration: "none", color: "#94a3b8", fontSize: 14, marginBottom: 10 }}>
-                {label}
-              </Link>
+          {/* All links in a compact 2x2 grid */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px 32px" }}>
+            {sections.map((section) => (
+              <div key={section.title}>
+                <h4 style={{
+                  color: "#fff", fontSize: 11, fontWeight: 700, marginBottom: 10,
+                  textTransform: "uppercase", letterSpacing: 1.2,
+                }}>
+                  {section.title}
+                </h4>
+                {section.links.map(({ label, href }) => (
+                  <Link key={href} href={href} style={{
+                    display: "block", textDecoration: "none", color: "#64748b",
+                    fontSize: 13, marginBottom: 8, lineHeight: 1.4,
+                  }}>
+                    {label}
+                  </Link>
+                ))}
+              </div>
             ))}
           </div>
         </div>
+      </div>
 
-        <div style={{ borderTop: "1px solid #1e293b", paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-          <p style={{ fontSize: 13 }}>&copy; {new Date().getFullYear()} CueQuote. {t("copyright")}</p>
-          <p style={{ fontSize: 13 }}>
+      {/* Bottom bar */}
+      <div style={{ borderTop: "1px solid #1e293b" }}>
+        <div style={{
+          maxWidth: 1200, margin: "0 auto", padding: "20px 24px",
+          display: "flex", justifyContent: "space-between", alignItems: "center",
+          flexWrap: "wrap", gap: 12,
+        }}>
+          <p style={{ fontSize: 12, color: "#475569" }}>
+            &copy; {new Date().getFullYear()} CueQuote. {t("copyright")}
+          </p>
+          <p style={{ fontSize: 12, color: "#475569" }}>
             {t("by")} <span style={{ color: "#10b981" }}>AVE Events</span>
           </p>
         </div>
-        <style>{`
-          @media (max-width: 768px) {
-            .footer-grid {
-              grid-template-columns: 1fr 1fr !important;
-              gap: 24px 32px !important;
-            }
-            .footer-grid > div:first-child {
-              grid-column: 1 / -1;
-              margin-bottom: 8px;
-            }
-          }
-        `}</style>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .footer-desktop { display: none !important; }
+          .footer-mobile { display: block !important; }
+        }
+      `}</style>
     </footer>
   );
 }
