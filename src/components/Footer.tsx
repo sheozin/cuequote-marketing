@@ -7,7 +7,7 @@ export default async function Footer() {
   return (
     <footer style={{ background: "#08172E", color: "#94a3b8", padding: "64px 24px 32px" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 48, marginBottom: 48 }}>
+        <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr", gap: 48, marginBottom: 48 }}>
           {/* Brand */}
           <div>
             <div style={{ marginBottom: 16 }}>
@@ -83,6 +83,25 @@ export default async function Footer() {
             {t("by")} <span style={{ color: "#10b981" }}>AVE Events</span>
           </p>
         </div>
+        <style>{`
+          @media (max-width: 768px) {
+            .footer-grid {
+              grid-template-columns: 1fr 1fr !important;
+              gap: 32px !important;
+            }
+            .footer-grid > div:first-child {
+              grid-column: 1 / -1;
+              text-align: center;
+            }
+          }
+          @media (max-width: 480px) {
+            .footer-grid {
+              grid-template-columns: 1fr !important;
+              gap: 24px !important;
+              text-align: center;
+            }
+          }
+        `}</style>
       </div>
     </footer>
   );
