@@ -11,6 +11,7 @@ import {
   Check, ChevronDown, CreditCard, Crown, Rocket, Calendar, CalendarCheck,
 } from "lucide-react";
 import { PricingToggle } from "../../components/PricingToggle";
+import { HeroMockupSlider } from "../../components/HeroMockupSlider";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -176,7 +177,7 @@ export default async function HomePage() {
           </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <ProposalMockup />
+            <HeroMockupSlider />
           </div>
         </div>
 
