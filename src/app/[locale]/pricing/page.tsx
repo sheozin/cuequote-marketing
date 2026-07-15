@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
+import { PricingToggle } from "../../../components/PricingToggle";
 import { Check, ChevronDown, Package, Sparkles, ArrowRight, Zap, CreditCard, Crown, Rocket, Building2 } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 
@@ -89,6 +90,52 @@ export default async function PricingPage() {
     },
   ];
 
+  const plannerPlans = [
+    {
+      name: t("freeName"),
+      price: "€0",
+      period: "",
+      desc: t("freeDesc"),
+      icon: <Zap size={20} />,
+      features: [t("freePlannerF1"), t("freePlannerF2"), t("freePlannerF3"), t("freePlannerF4")],
+      cta: t("startFree"),
+      ctaStyle: "outline" as const,
+    },
+    {
+      name: t("starterName"),
+      price: "€29",
+      period: t("perMonth"),
+      desc: t("starterDesc"),
+      icon: <CreditCard size={20} />,
+      features: [t("starterPlannerF1"), t("starterPlannerF2"), t("starterPlannerF3"), t("starterPlannerF4"), t("starterPlannerF5"), t("starterPlannerF6"), t("starterPlannerF7")],
+      cta: t("startTrial"),
+      ctaStyle: "primary" as const,
+      save: t("starterSave"),
+    },
+    {
+      name: t("proName"),
+      price: "€79",
+      period: t("perMonth"),
+      desc: t("proDesc"),
+      icon: <Crown size={20} />,
+      features: [t("proPlannerF1"), t("proPlannerF2"), t("proPlannerF3"), t("proPlannerF4"), t("proPlannerF5"), t("proPlannerF6"), t("proPlannerF7"), t("proPlannerF8")],
+      cta: t("startTrial"),
+      ctaStyle: "featured" as const,
+      popular: true,
+      note: t("proNote", { defaultValue: "Best value for teams" }),
+    },
+    {
+      name: t("businessName"),
+      price: "€179",
+      period: t("perMonth"),
+      desc: t("businessDesc"),
+      icon: <Rocket size={20} />,
+      features: [t("businessPlannerF1"), t("businessPlannerF2"), t("businessPlannerF3"), t("businessPlannerF4"), t("businessPlannerF5"), t("businessPlannerF6")],
+      cta: t("startTrial"),
+      ctaStyle: "primary" as const,
+    },
+  ];
+
   const faqs = [
     { q: t("faqQ1"), a: t("faqA1") },
     { q: t("faqQ2"), a: t("faqA2") },
@@ -166,80 +213,90 @@ export default async function PricingPage() {
 
       {/* Plan Cards */}
       <section style={{ padding: "0 24px 80px" }}>
-        <div className="pricing-grid" style={{ padding: "0 8px" }}>
-          {plans.map(({ name, price, period, desc, icon, features, cta, ctaStyle, popular, save, note }) => {
-            const isFeat = popular;
+        <PricingToggle
+          avLabel={t("forAvCompanies", { defaultValue: "For AV Companies" })}
+          plannerLabel={t("forEventPlanners", { defaultValue: "For Event Planners" })}
+        >
+          {(mode) => {
+            const activePlans = mode === 'av' ? plans : plannerPlans;
             return (
-              <div key={name} className={isFeat ? "feat-card" : ""} style={{
-                background: isFeat ? "linear-gradient(135deg, #08172E 0%, #0f2d50 100%)" : "#fff",
-                borderRadius: 20, padding: isFeat ? "44px 28px 36px" : "32px 24px 28px",
-                border: isFeat ? "1.5px solid rgba(16,185,129,0.4)" : "1px solid #e5e7eb",
-                position: "relative",
-                transform: isFeat ? "scale(1.04)" : "none",
-                boxShadow: isFeat ? "0 20px 60px rgba(8,23,46,0.35)" : "0 2px 12px rgba(0,0,0,0.04)",
-                display: "flex", flexDirection: "column",
-                zIndex: isFeat ? 3 : 1,
-              }}>
-                {popular && (
-                  <div style={{
-                    position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)",
-                    background: "#10b981", color: "#fff", fontSize: 11, fontWeight: 700,
-                    padding: "6px 20px", borderRadius: 100, whiteSpace: "nowrap", letterSpacing: 0.5,
-                    textTransform: "uppercase",
-                  }}>
-                    {t("popular")}
-                  </div>
-                )}
-
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-                  <div style={{
-                    width: 40, height: 40, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center",
-                    background: isFeat ? "rgba(16,185,129,0.15)" : "#f0fdf4", color: "#10b981",
-                  }}>{icon}</div>
-                  <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: isFeat ? "#fff" : "#08172E", letterSpacing: -0.5 }}>{name}</h3>
-                </div>
-                <p style={{ fontSize: 13, color: isFeat ? "rgba(255,255,255,0.45)" : "#9ca3af", marginBottom: 20, lineHeight: 1.4 }}>{desc}</p>
-
-                <div style={{ marginBottom: 4 }}>
-                  <span style={{ fontSize: 48, fontWeight: 800, color: isFeat ? "#fff" : "#08172E", letterSpacing: -2 }}>{price}</span>
-                  <span style={{ fontSize: 16, fontWeight: 500, color: isFeat ? "rgba(255,255,255,0.35)" : "#9ca3af" }}>{period}</span>
-                </div>
-                <p style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginBottom: 20, minHeight: 18 }}>
-                  {save || note || "\u00A0"}
-                </p>
-
-                <div style={{ height: 1, background: isFeat ? "rgba(255,255,255,0.08)" : "#f3f4f6", marginBottom: 20 }} />
-
-                <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
-                  {features.map((f) => (
-                    <li key={f} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: isFeat ? "rgba(255,255,255,0.8)" : "#4b5563", padding: "6px 0" }}>
-                      <Check size={15} style={{ color: "#10b981", flexShrink: 0 }} />
-                      <span>{f}</span>
-                      {newFeatureLabels.has(f) && (
-                        <span style={{
-                          fontSize: 9, fontWeight: 700, color: "#10b981",
-                          background: isFeat ? "rgba(16,185,129,0.2)" : "rgba(16,185,129,0.1)",
-                          padding: "2px 6px", borderRadius: 4, flexShrink: 0, letterSpacing: 0.5,
-                        }}>NEW</span>
+              <div className="pricing-grid" style={{ padding: "0 8px" }}>
+                {activePlans.map(({ name, price, period, desc, icon, features, cta, ctaStyle, popular, save, note }) => {
+                  const isFeat = popular;
+                  return (
+                    <div key={name} className={isFeat ? "feat-card" : ""} style={{
+                      background: isFeat ? "linear-gradient(135deg, #08172E 0%, #0f2d50 100%)" : "#fff",
+                      borderRadius: 20, padding: isFeat ? "44px 28px 36px" : "32px 24px 28px",
+                      border: isFeat ? "1.5px solid rgba(16,185,129,0.4)" : "1px solid #e5e7eb",
+                      position: "relative",
+                      transform: isFeat ? "scale(1.04)" : "none",
+                      boxShadow: isFeat ? "0 20px 60px rgba(8,23,46,0.35)" : "0 2px 12px rgba(0,0,0,0.04)",
+                      display: "flex", flexDirection: "column",
+                      zIndex: isFeat ? 3 : 1,
+                    }}>
+                      {popular && (
+                        <div style={{
+                          position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)",
+                          background: "#10b981", color: "#fff", fontSize: 11, fontWeight: 700,
+                          padding: "6px 20px", borderRadius: 100, whiteSpace: "nowrap", letterSpacing: 0.5,
+                          textTransform: "uppercase",
+                        }}>
+                          {t("popular")}
+                        </div>
                       )}
-                    </li>
-                  ))}
-                </ul>
 
-                <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
-                  textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
-                  padding: "14px 24px", borderRadius: 12, fontWeight: 700, fontSize: 15, marginTop: 24,
-                  background: ctaStyle === "featured" ? "#10b981" : ctaStyle === "primary" ? "#08172E" : "transparent",
-                  color: ctaStyle === "outline" ? "#08172E" : "#fff",
-                  border: ctaStyle === "outline" ? "1.5px solid #e5e7eb" : "none",
-                  transition: "all 0.2s",
-                }}>
-                  {cta} {ctaStyle !== "outline" && <ArrowRight size={16} />}
-                </Link>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+                        <div style={{
+                          width: 40, height: 40, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center",
+                          background: isFeat ? "rgba(16,185,129,0.15)" : "#f0fdf4", color: "#10b981",
+                        }}>{icon}</div>
+                        <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: isFeat ? "#fff" : "#08172E", letterSpacing: -0.5 }}>{name}</h3>
+                      </div>
+                      <p style={{ fontSize: 13, color: isFeat ? "rgba(255,255,255,0.45)" : "#9ca3af", marginBottom: 20, lineHeight: 1.4 }}>{desc}</p>
+
+                      <div style={{ marginBottom: 4 }}>
+                        <span style={{ fontSize: 48, fontWeight: 800, color: isFeat ? "#fff" : "#08172E", letterSpacing: -2 }}>{price}</span>
+                        <span style={{ fontSize: 16, fontWeight: 500, color: isFeat ? "rgba(255,255,255,0.35)" : "#9ca3af" }}>{period}</span>
+                      </div>
+                      <p style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginBottom: 20, minHeight: 18 }}>
+                        {save || note || "\u00A0"}
+                      </p>
+
+                      <div style={{ height: 1, background: isFeat ? "rgba(255,255,255,0.08)" : "#f3f4f6", marginBottom: 20 }} />
+
+                      <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
+                        {features.map((f) => (
+                          <li key={f} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: isFeat ? "rgba(255,255,255,0.8)" : "#4b5563", padding: "6px 0" }}>
+                            <Check size={15} style={{ color: "#10b981", flexShrink: 0 }} />
+                            <span>{f}</span>
+                            {newFeatureLabels.has(f) && (
+                              <span style={{
+                                fontSize: 9, fontWeight: 700, color: "#10b981",
+                                background: isFeat ? "rgba(16,185,129,0.2)" : "rgba(16,185,129,0.1)",
+                                padding: "2px 6px", borderRadius: 4, flexShrink: 0, letterSpacing: 0.5,
+                              }}>NEW</span>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+
+                      <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
+                        textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+                        padding: "14px 24px", borderRadius: 12, fontWeight: 700, fontSize: 15, marginTop: 24,
+                        background: ctaStyle === "featured" ? "#10b981" : ctaStyle === "primary" ? "#08172E" : "transparent",
+                        color: ctaStyle === "outline" ? "#08172E" : "#fff",
+                        border: ctaStyle === "outline" ? "1.5px solid #e5e7eb" : "none",
+                        transition: "all 0.2s",
+                      }}>
+                        {cta} {ctaStyle !== "outline" && <ArrowRight size={16} />}
+                      </Link>
+                    </div>
+                  );
+                })}
               </div>
             );
-          })}
-        </div>
+          }}
+        </PricingToggle>
       </section>
 
       {/* Feature Comparison Table */}
