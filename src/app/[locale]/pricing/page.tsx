@@ -176,7 +176,7 @@ export default async function PricingPage() {
       <Nav />
 
       <style>{`
-        .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; max-width: 1140px; margin: -70px auto 0; position: relative; z-index: 2; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; max-width: 1140px; margin: 0 auto; position: relative; z-index: 2; }
         @media (max-width: 900px) { .pricing-grid { grid-template-columns: repeat(2, 1fr) !important; } .feat-card { transform: none !important; } }
         @media (max-width: 560px) { .pricing-grid { grid-template-columns: 1fr !important; } }
         .packs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 580px; margin: 0 auto 32px; }
@@ -212,7 +212,7 @@ export default async function PricingPage() {
       </section>
 
       {/* Plan Cards */}
-      <section style={{ padding: "0 24px 80px" }}>
+      <section style={{ padding: "40px 24px 80px" }}>
         <PricingToggle
           avLabel={t("forAvCompanies", { defaultValue: "For AV Companies" })}
           plannerLabel={t("forEventPlanners", { defaultValue: "For Event Planners" })}
