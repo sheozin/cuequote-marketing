@@ -14,7 +14,11 @@
     "docs": "Dokumentation",
     "tutorials": "Tutorials",
     "forAv": "Für AV-Unternehmen",
-    "forPlanners": "Für Eventplaner"
+    "forPlanners": "Für Eventplaner",
+    "solutions": "Lösungen",
+    "forAvNavDesc": "Angebote aus Ihrem Katalog erstellen, gebrandete PDFs versenden",
+    "forPlannersNavDesc": "Planen Sie die AV-Produktion mit Budgetschätzungen",
+    "new": "Neu"
   },
   "hero": {
     "metaTitle": "CueQuote — KI-gestützte AV-Angebote & Eventproduktionsplanung",

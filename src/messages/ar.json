@@ -14,7 +14,11 @@
     "docs": "التوثيق",
     "tutorials": "الدروس",
     "forAv": "لشركات AV",
-    "forPlanners": "لمنظمي الفعاليات"
+    "forPlanners": "لمنظمي الفعاليات",
+    "solutions": "الحلول",
+    "forAvNavDesc": "إنشاء عروض من الكتالوج الخاص بك وإرسال ملفات PDF",
+    "forPlannersNavDesc": "خطط لإنتاج AV الفعالية مع تقديرات الميزانية",
+    "new": "جديد"
   },
   "hero": {
     "metaTitle": "CueQuote — عروض أسعار AV وتخطيط الإنتاج بالذكاء الاصطناعي",

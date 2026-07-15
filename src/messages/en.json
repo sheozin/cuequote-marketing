@@ -14,7 +14,11 @@
     "docs": "Docs",
     "tutorials": "Tutorials",
     "forAv": "For AV Companies",
-    "forPlanners": "For Event Planners"
+    "forPlanners": "For Event Planners",
+    "solutions": "Solutions",
+    "forAvNavDesc": "Create proposals from your catalog, send branded PDFs",
+    "forPlannersNavDesc": "Plan your event's AV with budget estimates and vendor briefs",
+    "new": "New"
   },
   "hero": {
     "metaTitle": "CueQuote — AI-Powered AV Proposals & Event Production Planning",

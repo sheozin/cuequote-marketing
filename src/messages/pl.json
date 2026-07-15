@@ -14,7 +14,11 @@
     "docs": "Dokumentacja",
     "tutorials": "Poradniki",
     "forAv": "Dla firm AV",
-    "forPlanners": "Dla organizatorów"
+    "forPlanners": "Dla organizatorów",
+    "solutions": "Rozwiązania",
+    "forAvNavDesc": "Twórz oferty z własnego katalogu, wysyłaj markowe PDF",
+    "forPlannersNavDesc": "Zaplanuj AV eventu z budżetem i briefami dla dostawców",
+    "new": "Nowość"
   },
   "hero": {
     "metaTitle": "CueQuote — Oferty AV i planowanie produkcji eventowej z AI",

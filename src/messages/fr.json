@@ -14,7 +14,11 @@
     "docs": "Documentation",
     "tutorials": "Tutoriels",
     "forAv": "Pour les entreprises AV",
-    "forPlanners": "Pour les organisateurs"
+    "forPlanners": "Pour les organisateurs",
+    "solutions": "Solutions",
+    "forAvNavDesc": "Créez des devis depuis votre catalogue, envoyez des PDF brandés",
+    "forPlannersNavDesc": "Planifiez la production AV avec estimations de budget",
+    "new": "Nouveau"
   },
   "hero": {
     "metaTitle": "CueQuote — Devis AV et planification de production événementielle par IA",
