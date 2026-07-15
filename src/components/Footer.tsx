@@ -87,18 +87,11 @@ export default async function Footer() {
           @media (max-width: 768px) {
             .footer-grid {
               grid-template-columns: 1fr 1fr !important;
-              gap: 32px !important;
+              gap: 24px 32px !important;
             }
             .footer-grid > div:first-child {
               grid-column: 1 / -1;
-              text-align: center;
-            }
-          }
-          @media (max-width: 480px) {
-            .footer-grid {
-              grid-template-columns: 1fr !important;
-              gap: 24px !important;
-              text-align: center;
+              margin-bottom: 8px;
             }
           }
         `}</style>
