@@ -23,7 +23,7 @@
     "title": "Zamień opisy wydarzeń w",
     "titleHighlight": "profesjonalne oferty AV",
     "titleEnd": "w kilka sekund",
-    "subtitle": "Opisz swoje wydarzenie, a CueQuote wygeneruje kompletną listę sprzętu z dokładną wyceną — gotową do wysłania jako markowy PDF.",
+    "subtitle": "Twórz oferty AV w kilka sekund lub planuj produkcję swojego wydarzenia z pomocą AI — rekomendacje sprzętu, ekipy i budżetu w mniej niż 2 minuty.",
     "cta": "Zacznij za darmo",
     "ctaSecondary": "Zobacz jak to działa",
     "noCreditCard": "Bez karty kredytowej",
@@ -40,7 +40,9 @@
     "freelanceTitle": "Freelancerzy AV",
     "freelanceDesc": "Wyceniaj szybciej niż konkurencja. Od zapytania na WhatsApp do profesjonalnej oferty w 2 minuty.",
     "agencyTitle": "Agencje eventowe",
-    "agencyDesc": "Określ wymagania AV dla wydarzeń klientów bez głębokiej wiedzy technicznej. AI zajmie się doborem sprzętu."
+    "agencyDesc": "Określ wymagania AV dla wydarzeń klientów bez głębokiej wiedzy technicznej. AI zajmie się doborem sprzętu.",
+    "case4Title": "Organizatorzy wydarzeń",
+    "case4Desc": "Wiedz, jakiego sprzętu AV potrzebujesz, zanim zadzwonisz do dostawcy. Otrzymaj rekomendacje sprzętu, szacunki budżetu i profesjonalne briefy — bez żadnej wiedzy technicznej."
   },
   "features": {
     "title": "Wszystko, czego potrzebujesz, by wyceniać szybciej",
@@ -253,7 +255,11 @@
     "q7": "Czy jest darmowy okres próbny?",
     "a7": "Tak. Plany Starter, Pro i Business mają 3-dniowy darmowy okres próbny. Nie wymaga karty kredytowej.",
     "q8": "Co się stanie, gdy wyczerpię limit ofert?",
-    "a8": "Możesz przejść na wyższy plan lub kupić pakiety kredytów od 19 € za 3 oferty. Kredyty nigdy nie wygasają."
+    "a8": "Możesz przejść na wyższy plan lub kupić pakiety kredytów od 19 € za 3 oferty. Kredyty nigdy nie wygasają.",
+    "q9": "Czy organizatorzy wydarzeń mogą korzystać z CueQuote?",
+    "a9": "Tak! CueQuote ma dedykowany tryb dla organizatorów wydarzeń. Opisz swoje wydarzenie, a AI zaleci odpowiedni sprzęt AV z szacunkami budżetu. Możesz pobrać profesjonalny brief dla dostawców i wysłać go firmom AV w celu uzyskania wycen.",
+    "q10": "Czy potrzebuję technicznej wiedzy o AV, żeby korzystać z CueQuote?",
+    "a10": "Wcale nie. Dla organizatorów wydarzeń CueQuote wyjaśnia każdą rekomendację sprzętową prostym językiem — co to jest, dlaczego tego potrzebujesz i ile powinno kosztować. Bez żargonu, bez zgadywania."
   },
   "homeBlog": {
     "title": "Z bloga",

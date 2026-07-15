@@ -8,8 +8,9 @@ import { getTranslations, getLocale } from "next-intl/server";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
   MessageSquare, Mic, MonitorPlay, Zap, ArrowRight,
-  Check, ChevronDown, CreditCard, Crown, Rocket, Calendar,
+  Check, ChevronDown, CreditCard, Crown, Rocket, Calendar, CalendarCheck,
 } from "lucide-react";
+import { PricingToggle } from "../../components/PricingToggle";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -287,6 +288,7 @@ export default async function HomePage() {
               { icon: <Mic size={24} />, titleKey: "avProductionTitle" as const, descKey: "avProductionDesc" as const },
               { icon: <Zap size={24} />, titleKey: "freelanceTitle" as const, descKey: "freelanceDesc" as const },
               { icon: <MonitorPlay size={24} />, titleKey: "agencyTitle" as const, descKey: "agencyDesc" as const },
+              { icon: <CalendarCheck size={24} />, titleKey: "case4Title" as const, descKey: "case4Desc" as const },
             ].map(({ icon, titleKey, descKey }) => (
               <div key={titleKey} style={{
                 background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 32,
@@ -387,12 +389,74 @@ export default async function HomePage() {
             <p style={{ fontSize: 18, color: "#6b7280" }}>{tPricing("subtitle")}</p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
+          <PricingToggle
+            avLabel={tPricing("forAvCompanies", { defaultValue: "For AV Companies" })}
+            plannerLabel={tPricing("forEventPlanners", { defaultValue: "For Event Planners" })}
+          />
+
+          <div id="pricing-av" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
             {[
               { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tHomePricing("freeF1"), tHomePricing("freeF2"), tHomePricing("freeF3"), tHomePricing("freeF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: false },
               { name: "Starter", price: "€29", period: "/mo", icon: <CreditCard size={20} />, features: [tHomePricing("starterF1"), tHomePricing("starterF2"), tHomePricing("starterF3"), tHomePricing("starterF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: true },
               { name: "Pro", price: "€79", period: "/mo", icon: <Crown size={20} />, features: [tHomePricing("proF1"), tHomePricing("proF2"), tHomePricing("proF3"), tHomePricing("proF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
               { name: "Business", price: "€179", period: "/mo", icon: <Rocket size={20} />, features: [tHomePricing("businessF1"), tHomePricing("businessF2"), tHomePricing("businessF3"), tHomePricing("businessF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
+            ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
+              <div key={name} style={{
+                background: "#fff", borderRadius: 20, padding: "32px 28px",
+                border: popular ? "2px solid #10b981" : "1px solid #e5e7eb",
+                position: "relative",
+                boxShadow: popular ? "0 8px 24px rgba(16,185,129,0.15)" : "0 2px 12px rgba(0,0,0,0.04)",
+                display: "flex", flexDirection: "column",
+                zIndex: popular ? 2 : 1,
+              }}>
+                {popular && (
+                  <div style={{
+                    position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)",
+                    background: "linear-gradient(135deg, #10b981, #059669)", color: "#fff", fontSize: 12, fontWeight: 700,
+                    padding: "6px 20px", borderRadius: 20, whiteSpace: "nowrap",
+                  }}>
+                    {tPricing("popular")}
+                  </div>
+                )}
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+                  <div style={{ color: "#10b981" }}>{icon}</div>
+                  <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 20, color: "#08172E" }}>{name}</h3>
+                </div>
+                <div style={{ marginBottom: 24 }}>
+                  <span style={{ fontSize: 44, fontWeight: 800, color: "#08172E", letterSpacing: -1 }}>{price}</span>
+                  <span style={{ fontSize: 15, color: "#9ca3af", fontWeight: 500 }}>{period}</span>
+                </div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
+                  {features.map((f) => (
+                    <li key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#4b5563", marginBottom: 13 }}>
+                      <div style={{ width: 20, height: 20, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                        <Check size={12} style={{ color: "#10b981" }} />
+                      </div>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
+                  textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+                  padding: "14px 24px", borderRadius: 10, fontWeight: 600, fontSize: 15, marginTop: 24,
+                  background: ctaStyle === "primary" ? "#10b981" : "transparent",
+                  color: ctaStyle === "primary" ? "#fff" : "#08172E",
+                  border: ctaStyle === "primary" ? "none" : "1px solid #e5e7eb",
+                  transition: "all 0.2s",
+                }}>
+                  {cta}
+                  {ctaStyle === "primary" && <ArrowRight size={16} />}
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div id="pricing-planner" style={{ display: "none", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
+            {[
+              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tPricing("freePlannerF1"), tPricing("freePlannerF2"), tPricing("freePlannerF3"), tPricing("freePlannerF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: false },
+              { name: "Starter", price: "€29", period: "/mo", icon: <CreditCard size={20} />, features: [tPricing("starterPlannerF1"), tPricing("starterPlannerF2"), tPricing("starterPlannerF3"), tPricing("starterPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: true },
+              { name: "Pro", price: "€79", period: "/mo", icon: <Crown size={20} />, features: [tPricing("proPlannerF1"), tPricing("proPlannerF2"), tPricing("proPlannerF3"), tPricing("proPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
+              { name: "Business", price: "€179", period: "/mo", icon: <Rocket size={20} />, features: [tPricing("businessPlannerF1"), tPricing("businessPlannerF2"), tPricing("businessPlannerF3"), tPricing("businessPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
             ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
               <div key={name} style={{
                 background: "#fff", borderRadius: 20, padding: "32px 28px",
@@ -501,6 +565,8 @@ export default async function HomePage() {
             { q: tHomeFaq("q6"), a: tHomeFaq("a6") },
             { q: tHomeFaq("q7"), a: tHomeFaq("a7") },
             { q: tHomeFaq("q8"), a: tHomeFaq("a8") },
+            { q: tHomeFaq("q9"), a: tHomeFaq("a9") },
+            { q: tHomeFaq("q10"), a: tHomeFaq("a10") },
           ].map(({ q, a }, i) => (
             <details key={i} style={{
               borderBottom: "1px solid #e5e7eb", padding: "20px 0",
@@ -521,7 +587,7 @@ export default async function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: Array.from({ length: 8 }, (_, i) => ({
+        mainEntity: Array.from({ length: 10 }, (_, i) => ({
           "@type": "Question",
           name: tHomeFaq(`q${i + 1}`),
           acceptedAnswer: { "@type": "Answer", text: tHomeFaq(`a${i + 1}`) },

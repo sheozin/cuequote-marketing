@@ -23,7 +23,7 @@
     "title": "Transformez les descriptions d'événements en",
     "titleHighlight": "devis AV professionnels",
     "titleEnd": "en quelques secondes",
-    "subtitle": "Décrivez votre événement et CueQuote génère une liste d'équipement complète avec des tarifs précis — prête à envoyer en PDF personnalisé.",
+    "subtitle": "Créez des devis AV en quelques secondes ou planifiez la production de votre événement avec l'IA — recommandations d'équipement, d'équipe et de budget en moins de 2 minutes.",
     "cta": "Commencer gratuitement",
     "ctaSecondary": "Voir comment ça fonctionne",
     "noCreditCard": "Aucune carte de crédit requise",
@@ -40,7 +40,9 @@
     "freelanceTitle": "Techniciens AV indépendants",
     "freelanceDesc": "Établissez vos devis plus vite que vos concurrents. De la demande WhatsApp au devis professionnel en 2 minutes.",
     "agencyTitle": "Agences événementielles",
-    "agencyDesc": "Définissez les besoins AV pour les événements de vos clients sans expertise technique approfondie. L'IA s'occupe de la sélection de l'équipement."
+    "agencyDesc": "Définissez les besoins AV pour les événements de vos clients sans expertise technique approfondie. L'IA s'occupe de la sélection de l'équipement.",
+    "case4Title": "Planificateurs d'événements",
+    "case4Desc": "Sachez de quel équipement AV vous avez besoin avant d'appeler un prestataire. Obtenez des recommandations d'équipement, des estimations de budget et des briefs professionnels — aucune connaissance technique requise."
   },
   "features": {
     "title": "Tout ce qu'il vous faut pour des devis plus rapides",
@@ -253,7 +255,11 @@
     "q7": "Y a-t-il un essai gratuit ?",
     "a7": "Oui. Les forfaits Starter, Pro et Business incluent un essai gratuit de 3 jours. Aucune carte de crédit requise pour commencer.",
     "q8": "Que se passe-t-il quand j'atteins ma limite de devis ?",
-    "a8": "Vous pouvez passer à un forfait supérieur ou acheter des packs de crédits à partir de 19 € pour 3 devis. Les crédits n'expirent jamais."
+    "a8": "Vous pouvez passer à un forfait supérieur ou acheter des packs de crédits à partir de 19 € pour 3 devis. Les crédits n'expirent jamais.",
+    "q9": "Les planificateurs d'événements peuvent-ils utiliser CueQuote ?",
+    "a9": "Oui ! CueQuote dispose d'un mode dédié aux planificateurs d'événements. Décrivez votre événement et notre IA recommande le bon équipement AV avec des estimations de budget. Vous pouvez télécharger un brief prestataire professionnel à envoyer aux sociétés AV pour obtenir des devis.",
+    "q10": "Ai-je besoin de connaissances techniques en AV pour utiliser CueQuote ?",
+    "a10": "Pas du tout. Pour les planificateurs d'événements, CueQuote explique chaque recommandation d'équipement en langage clair — ce que c'est, pourquoi vous en avez besoin et ce que ça devrait coûter. Pas de jargon, pas de devinettes."
   },
   "homeBlog": {
     "title": "Depuis le blog",

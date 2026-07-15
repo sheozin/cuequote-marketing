@@ -23,7 +23,7 @@
     "title": "Verwandeln Sie Veranstaltungsbeschreibungen in",
     "titleHighlight": "professionelle AV-Angebote",
     "titleEnd": "in Sekunden",
-    "subtitle": "Beschreiben Sie Ihre Veranstaltung und CueQuote erstellt eine vollständige Ausrüstungsliste mit präzisen Preisen — bereit zum Versand als gebrandetes PDF.",
+    "subtitle": "Erstellen Sie AV-Angebote in Sekunden oder planen Sie die Produktion Ihrer Veranstaltung mit KI — Ausrüstungs-, Personal- und Budgetempfehlungen in unter 2 Minuten.",
     "cta": "Kostenlos starten",
     "ctaSecondary": "So funktioniert es",
     "noCreditCard": "Keine Kreditkarte erforderlich",
@@ -40,7 +40,9 @@
     "freelanceTitle": "Freiberufliche AV-Techniker",
     "freelanceDesc": "Erstellen Sie Angebote schneller als Ihre Konkurrenz. Von der WhatsApp-Anfrage zum professionellen Angebot in 2 Minuten.",
     "agencyTitle": "Eventagenturen",
-    "agencyDesc": "Definieren Sie AV-Anforderungen für Kundenveranstaltungen ohne tiefes technisches Wissen. Die KI übernimmt die Ausrüstungsauswahl."
+    "agencyDesc": "Definieren Sie AV-Anforderungen für Kundenveranstaltungen ohne tiefes technisches Wissen. Die KI übernimmt die Ausrüstungsauswahl.",
+    "case4Title": "Veranstaltungsplaner",
+    "case4Desc": "Wissen Sie, welches AV-Equipment Sie benötigen, bevor Sie einen Anbieter anrufen. Erhalten Sie Ausrüstungsempfehlungen, Budgetschätzungen und professionelle Briefs — ohne technisches Wissen."
   },
   "features": {
     "title": "Alles, was Sie für schnelleres Angebotswesen brauchen",
@@ -253,7 +255,11 @@
     "q7": "Gibt es eine kostenlose Testversion?",
     "a7": "Ja. Starter-, Pro- und Business-Tarife beinhalten eine 3-tägige kostenlose Testversion. Keine Kreditkarte zum Starten erforderlich.",
     "q8": "Was passiert, wenn ich mein Angebotslimit erreiche?",
-    "a8": "Sie können Ihren Tarif upgraden oder Guthaben-Pakete ab 19 € für 3 Angebote kaufen. Guthaben läuft nie ab."
+    "a8": "Sie können Ihren Tarif upgraden oder Guthaben-Pakete ab 19 € für 3 Angebote kaufen. Guthaben läuft nie ab.",
+    "q9": "Können Veranstaltungsplaner CueQuote nutzen?",
+    "a9": "Ja! CueQuote verfügt über einen dedizierten Modus für Veranstaltungsplaner. Beschreiben Sie Ihre Veranstaltung und unsere KI empfiehlt das passende AV-Equipment mit Budgetschätzungen. Sie können einen professionellen Anbieter-Brief herunterladen und an AV-Firmen zur Angebotseinholung senden.",
+    "q10": "Benötige ich technisches AV-Wissen zur Nutzung von CueQuote?",
+    "a10": "Überhaupt nicht. Für Veranstaltungsplaner erklärt CueQuote jede Ausrüstungsempfehlung in einfacher Sprache — was es ist, warum Sie es brauchen und was es kosten sollte. Kein Fachjargon, kein Rätselraten."
   },
   "homeBlog": {
     "title": "Aus dem Blog",

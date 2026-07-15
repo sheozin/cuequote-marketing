@@ -23,7 +23,7 @@
     "title": "Turn event descriptions into",
     "titleHighlight": "professional AV proposals",
     "titleEnd": "in seconds",
-    "subtitle": "Describe your event, and CueQuote generates a complete equipment list with accurate pricing — ready to send as a branded PDF.",
+    "subtitle": "Create AV proposals in seconds or plan your event's production with AI — equipment, crew, and budget recommendations in under 2 minutes.",
     "cta": "Start Free",
     "ctaSecondary": "See How It Works",
     "noCreditCard": "No credit card required",
@@ -40,7 +40,9 @@
     "freelanceTitle": "Freelance AV Technicians",
     "freelanceDesc": "Quote faster than your competitors. Go from WhatsApp inquiry to professional proposal in 2 minutes.",
     "agencyTitle": "Event Agencies",
-    "agencyDesc": "Scope AV requirements for client events without deep technical knowledge. AI handles the equipment selection."
+    "agencyDesc": "Scope AV requirements for client events without deep technical knowledge. AI handles the equipment selection.",
+    "case4Title": "Event Planners",
+    "case4Desc": "Know what AV you need before you call a vendor. Get equipment recommendations, budget estimates, and professional briefs — no technical knowledge required."
   },
   "features": {
     "title": "Everything you need to quote faster",
@@ -253,7 +255,11 @@
     "q7": "Is there a free trial?",
     "a7": "Yes. Starter, Pro, and Business plans come with a 3-day free trial. No credit card required to start.",
     "q8": "What happens when I hit my proposal limit?",
-    "a8": "You can upgrade your plan or purchase credit packs starting at €19 for 3 proposals. Credits never expire."
+    "a8": "You can upgrade your plan or purchase credit packs starting at €19 for 3 proposals. Credits never expire.",
+    "q9": "Can event planners use CueQuote?",
+    "a9": "Yes! CueQuote has a dedicated mode for event planners. Describe your event and our AI recommends the right AV equipment with budget estimates. You can download a professional vendor brief to send to AV companies for quotes.",
+    "q10": "Do I need technical AV knowledge to use CueQuote?",
+    "a10": "Not at all. For event planners, CueQuote explains every equipment recommendation in plain language — what it does, why you need it, and what it should cost. No jargon, no guessing."
   },
   "homeBlog": {
     "title": "From the blog",
