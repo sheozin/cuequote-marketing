@@ -137,10 +137,23 @@ export default async function HomePage() {
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }} className="hero-grid">
           <HeroMockupSlider
             avSubtitle={t("subtitle")}
-            plannerSubtitle="Describe your event in plain English. Get a complete production plan with technical requirements, crew, timeline, and budget estimates — in under 2 minutes."
+            plannerSubtitle={t("plannerSubtitle")}
             avCta={t("cta")}
-            plannerCta="Plan Your Event — Free"
+            plannerCta={t("plannerCta")}
             ctaLink={`${APP_URL}/signup?lang=${locale}`}
+            t={{
+              title: t("title"), titleHighlight: t("titleHighlight"), titleEnd: t("titleEnd"),
+              plannerHeadline1: t("plannerHeadline1"), plannerHeadline2: t("plannerHeadline2"), plannerHeadline3: t("plannerHeadline3"),
+              plannerNoCreditCard: t("plannerNoCreditCard"), freeProposals: t("freeProposals"), plannerFreePlans: t("plannerFreePlans"),
+              heroAvGenerated: t("heroAvGenerated"), heroAvEvent: t("heroAvEvent"),
+              heroPlannerGenerated: t("heroPlannerGenerated"), heroPlannerEvent: t("heroPlannerEvent"),
+              heroPlannerEstimated: t("heroPlannerEstimated"), heroPlannerScope: t("heroPlannerScope"),
+              heroPlannerTip: t("heroPlannerTip"), heroAvFooter: t("heroAvFooter"), heroPlannerFooter: t("heroPlannerFooter"),
+              heroCatAudio: t("heroCatAudio"), heroCatLighting: t("heroCatLighting"),
+              heroCatVideo: t("heroCatVideo"), heroCatCrew: t("heroCatCrew"),
+              heroCatAudioItems: t("heroCatAudioItems"), heroCatLightingItems: t("heroCatLightingItems"),
+              heroCatVideoItems: t("heroCatVideoItems"), heroCatCrewItems: t("heroCatCrewItems"),
+            }}
           />
         </div>
 
