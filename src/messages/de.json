@@ -1432,6 +1432,59 @@
         "text": "Kunden können nur Angebote und Rechnungen sehen, die mit ihrer E-Mail-Adresse und Ihrem Unternehmen verknüpft sind. Sie können keine Daten anderer Kunden, Ihre internen Notizen oder Entwurfsangebote sehen. Der gesamte Zugriff wird auf Datenbankebene durchgesetzt."
       },
       "tip": "Das Kundenportal lässt Sie professioneller wirken — Kunden sehen ein gebrandetes Dashboard anstelle verstreuter E-Mail-Links."
+    },
+    "proposalComparison": {
+      "title": "Angebotsvergleich",
+      "content1": "Das Vergleichstool von CueQuote ermöglicht es Kunden und Veranstaltungsplanern, Angebote mehrerer Anbieter nebeneinander zu vergleichen. Es funktioniert vollständig über Share-Token — ohne Login erforderlich.",
+      "content2": "Fügen Sie Share-URLs oder Token auf der Vergleichsseite ein, um Angebote zu laden. Das Tool berechnet einen Wert-Score für jeden Anbieter basierend auf Preis (40%), Leistungsumfang (35%) und Vertragsbedingungen (25%).",
+      "step1": "Navigieren Sie zur Vergleichsseite und fügen Sie Share-URLs oder Token in das Eingabefeld ein, um Anbieter hinzuzufügen",
+      "step2": "Überprüfen Sie die Anbieterkarten mit Gesamtpreis, Ersparnis gegenüber dem günstigsten Angebot und Wert-Score-Aufschlüsselung",
+      "step3": "Scrollen Sie zur Positionsvergleichstabelle — Positionen werden namentlich abgeglichen und nach Kategorie gruppiert, günstigste grün und teuerste rot hervorgehoben",
+      "step4": "Prüfen Sie den Konditionenvergleich für Unterschiede bei Anzahlung, Gültigkeit, Stornierung und Versicherung, dann lesen Sie die KI-Insight-Zusammenfassung für eine Empfehlung",
+      "tip": "Die Vergleichs-URL ist teilbar — senden Sie sie Ihrem Kunden, damit er die Gegenüberstellung selbst einsehen kann"
+    },
+    "proposalComments": {
+      "title": "Angebotskommentare",
+      "content1": "Kommentare ermöglichen die Echtzeit-Zusammenarbeit zwischen Ihnen und Ihren Kunden direkt im Angebot. Kunden können Feedback auf der geteilten Angebotsseite hinterlassen, und Sie können vom Angebotseditor aus antworten.",
+      "content2": "Kommentare können auf bestimmte Positionen verweisen und als formelle Überarbeitungsanfragen markiert werden. Ihr Team sieht eine Kommentar-Badge-Zahl im Editor und das System prüft alle 10 Sekunden auf neue Kommentare.",
+      "step1": "Kunden öffnen den geteilten Angebotslink und hinterlassen Kommentare — sie können optional eine bestimmte Position zur Referenz auswählen",
+      "step2": "Wenn ein Kunde einen Kommentar als Überarbeitungsanfrage markiert, erscheint er mit einem 'Ausstehend'-Status-Badge in Ihrem Editor",
+      "step3": "Öffnen Sie das Angebot im Editor und klicken Sie auf den Kommentare-Tab — das rote Badge zeigt die Anzahl ungelesener Kommentare",
+      "step4": "Antworten Sie auf Kommentare und klicken Sie bei Überarbeitungsanfragen auf 'Als erledigt markieren', sobald Sie das Feedback bearbeitet haben",
+      "tip": "Kommentare werden in Echtzeit aktualisiert — sowohl Sie als auch Ihr Kunde sehen neue Nachrichten innerhalb von 10 Sekunden"
+    },
+    "inventoryManagement": {
+      "title": "Bestandsverwaltung",
+      "content1": "Verfolgen Sie Ihr physisches AV-Equipment mit Seriennummern, Asset-Tags, Zustandsbewertungen und Echtzeit-Verfügbarkeit. Weisen Sie Einheiten Veranstaltungen zu und sehen Sie auf einen Blick, was für bevorstehende Aufträge verfügbar ist.",
+      "content2": "Jede Bestandseinheit ist mit einem Katalogelement verknüpft und kann durch ihren Lebenszyklus verfolgt werden: verfügbar, einer Veranstaltung zugewiesen, in Wartung oder ausgemustert. Der Mini-Verfügbarkeitskalender zeigt Ihren wöchentlichen Equipment-Status.",
+      "step1": "Gehen Sie zu Bestand und klicken Sie 'Einheit hinzufügen' — wählen Sie Equipment aus Ihrem Katalog, geben Sie Seriennummer, Asset-Tag, Kaufdetails und Zustandsbewertung ein",
+      "step2": "Verwenden Sie die Suchleiste und Kategoriefilter, um bestimmte Einheiten zu finden — die Tabelle zeigt Gerätename, Seriennummer, Zustand, Status und aktuelle Veranstaltungszuweisung",
+      "step3": "Klicken Sie das Drei-Punkte-Menü einer verfügbaren Einheit und wählen Sie 'Veranstaltung zuweisen' — wählen Sie ein gewonnenes Angebot und Daten füllen sich automatisch aus dem Veranstaltungsplan",
+      "step4": "Prüfen Sie den Mini-Verfügbarkeitskalender in der rechten Seitenleiste — grün bedeutet verfügbar, gelb bedeutet alle Einheiten dieses Typs sind für diesen Tag vergeben",
+      "step5": "Verwenden Sie die Schnellaktionen, um Einheiten als 'In Wartung' zu markieren wenn sie gewartet werden müssen, oder 'Verfügbar' wenn sie wieder einsatzbereit sind",
+      "tip": "Halten Sie Seriennummern und Asset-Tags konsistent — sie erleichtern die Verfolgung spezifischer Einheiten über Veranstaltungen und Versicherungsunterlagen hinweg"
+    },
+    "crewScheduling": {
+      "title": "Crew-Planung",
+      "content1": "Verwalten Sie Ihre Crew-Liste, weisen Sie Teammitglieder Veranstaltungen zu und teilen Sie Crew-Vorbereitungsblätter mit Ihren Mitarbeitern. CueQuote unterstützt sowohl festes Personal als auch Freelancer mit unterschiedlichen Vergütungsstrukturen.",
+      "content2": "Der Crew-Kalender gibt Ihnen einen wöchentlichen Überblick, wer verfügbar und wer eingeteilt ist. Das Widget 'Veranstaltungen ohne Crew' zeigt bevorstehende Veranstaltungen, die noch Personal benötigen, und Crew-Vorbereitungsblätter können als öffentliche Links ohne Preisinformationen geteilt werden.",
+      "step1": "Gehen Sie zu Crew und klicken Sie 'Mitglied hinzufügen' — geben Sie Name, Typ (Personal oder Freelancer), Standardrolle, Fähigkeiten und Tagessatz für Freelancer ein",
+      "step2": "Filtern Sie Ihre Liste nach Typ (Personal/Freelancer) oder Fähigkeiten (Ton/Licht/Video), um die richtige Person für jede Veranstaltung zu finden",
+      "step3": "Klicken Sie 'Veranstaltung zuweisen' aus dem Mitgliedermenü — wählen Sie ein gewonnenes Angebot und Daten füllen sich automatisch. Sie können die Rolle für diese spezifische Veranstaltung überschreiben",
+      "step4": "Prüfen Sie das Widget 'Veranstaltungen ohne Crew', um bevorstehende Veranstaltungen und deren Besetzungsstatus zu sehen — klicken Sie die +-Schaltfläche, um schnell jemanden zuzuweisen",
+      "step5": "Teilen Sie ein Crew-Vorbereitungsblatt über einen öffentlichen Link — es zeigt Veranstaltungsplan, Equipment-Liste und zugewiesene Crew ohne Preisinformationen",
+      "tip": "Crew-Vorbereitungsblätter sind zum Drucken oder Teilen auf Mobilgeräten konzipiert — Crew-Mitglieder benötigen kein CueQuote-Konto zur Ansicht"
+    },
+    "costingMargins": {
+      "title": "Kalkulation & Margen",
+      "content1": "Verfolgen Sie Ihre Kosten und Gewinnmargen auf Angebotsebene. Setzen Sie Einkaufspreise für Katalogartikel, definieren Sie Margenziele und erhalten Sie Echtzeit-Warnungen, wenn ein Angebot unter Ihre Zielprofitabilität fällt.",
+      "content2": "Kostendaten sind streng intern — sie sind für Kunden in Angeboten, PDFs oder dem Kundenportal nie sichtbar. Sie steuern, welche Teamrollen Kosteninformationen über die Sichtbarkeitseinstellungen einsehen können.",
+      "step1": "Gehen Sie zu Einstellungen > Kalkulation & Margen und legen Sie fest, wer Kostendaten einsehen kann — wählen Sie zwischen Inhaber & Administrator oder schließen Sie Vertriebsmitarbeiter ein",
+      "step2": "Legen Sie Ihren Standard-Margenziel-Prozentsatz fest und überschreiben Sie optional Ziele für bestimmte Kategorien wie Audio, Video oder Personal",
+      "step3": "Fügen Sie Einkaufspreise zu Ihren Katalogartikeln hinzu oder geben Sie Kosten direkt im Angebotseditor pro Position ein",
+      "step4": "Schalten Sie 'Kosten anzeigen' im Angebotseditor um, um das Margen-Übersichtspanel zu sehen — es zeigt Umsatz, Ihre Kosten, Gewinn und Marge % mit farbcodierten Gesundheitsindikatoren",
+      "step5": "Überprüfen Sie Margenwarnungen über Ihren Positionen — rote Warnungen markieren Angebote unter dem Ziel, gelbe Warnungen markieren Positionen ohne Kostendaten",
+      "tip": "Die Margenberechnung umfasst nur erforderliche Positionen (keine optionalen). Positionen ohne Einkaufspreis werden aus der Kostensumme ausgeschlossen, ihr Umsatz zählt jedoch weiterhin — fügen Sie daher allen Positionen Kosten hinzu für genaue Margen"
     }
   },
   "changelog": {

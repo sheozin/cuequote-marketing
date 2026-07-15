@@ -646,4 +646,191 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'inventory-management',
+    title: 'Inventarverwaltung',
+    description: 'Verfolgen Sie physisches AV-Equipment mit Seriennummern, Zustandsbewertungen, Verfügbarkeitskalender und Zuweisung zu einzelnen Veranstaltungen.',
+    duration: '5 Min.',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    whatYouLearn: [
+      'Equipment-Einheiten mit Seriennummern und Zustandsbewertungen anlegen',
+      'Inventar nach Kategorie, Zustand und Standort filtern und durchsuchen',
+      'Konkrete Equipment-Einheiten zu Veranstaltungen zuweisen',
+      'Verfügbarkeit verfolgen und Kalenderkonflikte erkennen',
+      'Servicelogs erfassen und Wartungspläne verwalten',
+    ],
+    steps: [
+      {
+        title: 'Equipment-Einheit hinzufügen',
+        content: 'Gehen Sie in der Seitenleiste zu Inventar und klicken Sie auf „Einheit hinzufügen". Geben Sie Name, Kategorie, Seriennummer, Zustand (Ausgezeichnet, Gut, Wartung erforderlich, Außer Betrieb) und Lagerort ein. Jede Inventareinheit wird unabhängig von den Katalogpositionen nachverfolgt — der Katalog repräsentiert Ihr Sortiment, das Inventar jedes einzelne physische Gerät, das Sie besitzen.',
+        tip: 'Fotografieren Sie jede Einheit beim Anlegen — das erleichtert die Identifikation bei Ausgabe und Rücknahme im Schadensfall.',
+      },
+      {
+        title: 'Inventar durchsuchen und filtern',
+        content: 'Die Inventarliste ermöglicht die Filterung nach Kategorie (Audio, Video, Licht usw.), Zustand und Lagerort. Sie können auch nach Seriennummer oder Name suchen. Jede Position zeigt ihren aktuellen Status — Verfügbar, Einer Veranstaltung zugewiesen, In Wartung oder Außer Betrieb — so haben Sie stets einen aktuellen Überblick über Ihre Ressourcen.',
+      },
+      {
+        title: 'Equipment zu Veranstaltungen zuweisen',
+        content: 'Öffnen Sie eine Veranstaltung oder ein Angebot und wechseln Sie zum Tab Inventar. Klicken Sie auf „Equipment zuweisen" und wählen Sie konkrete Einheiten aus der Liste verfügbarer Ressourcen. Das System prüft automatisch Kalenderkonflikte — ist eine Einheit im gleichen Zeitraum bereits einer anderen Veranstaltung zugewiesen, werden Sie vor der Bestätigung darüber informiert.',
+        tip: 'Weisen Sie Equipment frühzeitig zu, um Doppelbuchungen in der Hochsaison zu vermeiden.',
+      },
+      {
+        title: 'Verfügbarkeit verfolgen',
+        content: 'Die Kalenderansicht im Bereich Inventar zeigt jede Equipment-Einheit auf einer Zeitachse mit den eingetragenen Buchungen. So sehen Sie auf einen Blick, welche Geräte an einem bestimmten Datum frei und welche belegt sind. Konflikte werden rot hervorgehoben, was die Planung der technischen Crew und die Transportkoordination erleichtert.',
+      },
+      {
+        title: 'Wartung verwalten',
+        content: 'Für jede Einheit können Sie Serviceeinträge erfassen: Prüfdatum, Beschreibung der durchgeführten Arbeiten, Kosten und den nächsten Wartungstermin planen. Als „In Wartung" markiertes Equipment wird bei der Veranstaltungsplanung automatisch aus den verfügbaren Ressourcen ausgeschlossen. Der Serviceverlauf ist vollständig durchsuchbar und exportierbar.',
+      },
+    ],
+  },
+  {
+    slug: 'crew-scheduling',
+    title: 'Crew-Einsatzplanung',
+    description: 'Verwalten Sie Ihr technisches Personal — Festangestellte und Freelancer — weisen Sie es Veranstaltungen zu, erstellen Sie Crew-Vorbereitungsbögen und verfolgen Sie den Verfügbarkeitskalender.',
+    duration: '5 Min.',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    whatYouLearn: [
+      'Crew-Mitglieder mit Rollen, Honoraren und Verfügbarkeit anlegen',
+      'Crew-Liste nach Spezialisierung, Beschäftigungsstatus und Verfügbarkeit filtern',
+      'Crew zu Veranstaltungen mit Rollen und Arbeitszeiten zuweisen',
+      'Crew-Vorbereitungsbögen mit Zeitplan und Equipment-Liste generieren',
+      'Crew-Verfügbarkeitskalender einsehen, um Konflikte zu vermeiden',
+    ],
+    steps: [
+      {
+        title: 'Crew-Mitglieder hinzufügen',
+        content: 'Gehen Sie in der Seitenleiste zum Bereich Crew und klicken Sie auf „Crew-Mitglied hinzufügen". Geben Sie Vor- und Nachname, Spezialisierung (Tontechniker, Lichttechniker, Videotechniker, Technischer Leiter, Fahrer usw.), Tages- oder Stundenhonorar, Kontaktdaten und Beschäftigungsart (Festangestellt oder Freelancer) ein. Optional können Sie Notizen zu Zertifikaten oder Spezialfähigkeiten hinzufügen.',
+        tip: 'Hinterlegen Sie die private Telefonnummer jedes Technikers — das ist unerlässlich bei kurzfristigen Crew-Änderungen kurz vor einer Veranstaltung.',
+      },
+      {
+        title: 'Crew-Liste filtern',
+        content: 'Die Crew-Liste lässt sich nach Spezialisierung, Beschäftigungsstatus (Festangestellt/Freelancer) und Verfügbarkeit in einem bestimmten Zeitraum filtern. So finden Sie schnell geeignete Techniker, ohne die gesamte Liste manuell durchzusehen. Jede Karte zeigt den aktuellen Verfügbarkeitsstatus der betreffenden Person.',
+      },
+      {
+        title: 'Crew zu Veranstaltungen zuweisen',
+        content: 'Wechseln Sie in der Veranstaltungsansicht zum Tab Crew und klicken Sie auf „Crew-Mitglieder zuweisen". Wählen Sie Techniker aus der Liste verfügbarer Ressourcen, legen Sie die Rolle für diese konkrete Veranstaltung fest und geben Sie die geplanten Arbeitsstunden ein. Das System prüft Kalenderkonflikte in Echtzeit — ist ein Techniker zum gleichen Zeitpunkt bereits anderweitig eingeplant, werden Sie sofort informiert.',
+        tip: 'Bestimmen Sie für jede Veranstaltung einen technischen Leiter — das verbessert die Kommunikation vor Ort und erleichtert die Logistikkoordination.',
+      },
+      {
+        title: 'Crew-Vorbereitungsbögen generieren',
+        content: 'Nach Abschluss der Crew-Zusammenstellung klicken Sie auf „Crew-Vorbereitungsbogen generieren", um ein PDF mit dem vollständigen Zeitplan herunterzuladen. Das Dokument enthält die zugewiesenen Techniker mit ihren Rollen, den Zeitplan für Anreise und Pausen, die Equipment-Liste für die Beladung, Kontaktdaten des Veranstaltungsortes sowie Sonderanweisungen. Die Bögen können direkt per E-Mail an jeden Techniker versendet werden.',
+      },
+      {
+        title: 'Crew-Kalender einsehen',
+        content: 'Der Crew-Kalender zeigt alle Mitglieder auf einer gemeinsamen Zeitachse mit ihren eingetragenen Einsätzen. So erkennen Sie auf Anhieb, welche Techniker an einem bestimmten Datum verfügbar sind, und können die Arbeitsbelastung des gesamten Teams beurteilen. Die Ansicht ist besonders hilfreich bei der Planung mehrerer paralleler Veranstaltungen und der Optimierung des Personaleinsatzes.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-comparison',
+    title: 'Angebotsvergleich',
+    description: 'Vergleichen Sie Lieferantenangebote anhand von Share-Tokens, Wertebewertungen, Positionsvergleichen, Konditionen und KI-Empfehlungen.',
+    duration: '4 Min.',
+    difficulty: 'intermediate',
+    category: 'Angebote',
+    whatYouLearn: [
+      'Lieferantenangebote über Share-Links zum Vergleich hinzufügen',
+      'Lieferantenkarten mit Wertebewertungen und Kennzahlen einsehen',
+      'Kostenpositionen über Lieferantenangebote hinweg vergleichen',
+      'Zahlungskonditionen, Vertragsstrafen und Haftungsausschlüsse gegenüberstellen',
+    ],
+    steps: [
+      {
+        title: 'Angebote zum Vergleich hinzufügen',
+        content: 'Gehen Sie zum Bereich Angebotsvergleich und klicken Sie auf „Angebot hinzufügen". Fügen Sie den Share-Token oder -Link eines Lieferantenangebots ein — CueQuote ruft die Angebotsdaten automatisch ab und fügt sie der Vergleichstabelle hinzu. Sie können bis zu 5 Angebote gleichzeitig hinzufügen. Jedes hinzugefügte Angebot wird auf Vollständigkeit und erforderliche Abschnitte validiert.',
+        tip: 'Bitten Sie Lieferanten, ihre Angebote direkt über CueQuote zu teilen — Share-Tokens stellen sicher, dass Sie die aktuellen Dokumentversionen vergleichen.',
+      },
+      {
+        title: 'Lieferantenkarten einsehen',
+        content: 'Jeder Lieferant wird auf einer eigenen Karte mit automatisch berechnetem Wert-Score (0–100), Gesamtpreis, Positionsanzahl und Kernangebots-Parametern angezeigt. Der Wert-Score berücksichtigt das Preis-Leistungs-Verhältnis und die Qualität der Konditionen. Karten können nach Preis, Wert-Score oder Lieferantenname sortiert werden.',
+      },
+      {
+        title: 'Kostenpositionen vergleichen',
+        content: 'Die Positionsvergleichsansicht stellt jede Kostenposition aus allen Angeboten in einer Tabelle gegenüber. Fehlende Positionen (wenn ein Lieferant etwas berechnet hat, was ein anderer nicht berücksichtigt hat) werden klar markiert, was die Beurteilung der Leistungsumfänge erleichtert. Die Ansicht kann nach Kategorie (Audio, Video, Licht usw.) gefiltert oder nach Preisdifferenz sortiert werden.',
+      },
+      {
+        title: 'Konditionen und Ausschlüsse gegenüberstellen',
+        content: 'Der Tab Konditionen stellt Zahlungspläne, Stornierungsrichtlinien, Haftungsausschlüsse und Angebotsgültigkeiten aller Lieferanten nebeneinander dar. Unterschiede werden automatisch gelb hervorgehoben, damit Sie keine wesentlichen Abweichungen in den Vertragsbedingungen übersehen.',
+      },
+      {
+        title: 'KI-Empfehlung nutzen',
+        content: 'Klicken Sie auf „KI-Analyse", um eine automatische Auswertung der gesammelten Angebote zu erhalten. Die KI identifiziert das stärkste Angebot nach Preis-Leistung, erkennt fehlende Positionen bei einzelnen Lieferanten, weist auf nicht standardkonforme Klauseln hin und formuliert eine Empfehlung mit Begründung. Die Analyse ist direkt in einen Entscheidungsbericht für Ihren Kunden kopierbar.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-comments',
+    title: 'Angebots-Kommentare',
+    description: 'Kunden können direkt im Angebot kommentieren, auf einzelne Positionen verweisen, Revisionsanfragen stellen, und der Kontoinhaber kann antworten.',
+    duration: '3 Min.',
+    difficulty: 'beginner',
+    category: 'Angebote',
+    whatYouLearn: [
+      'Wie Kunden Kommentare zu einem Angebot hinzufügen und auf Positionen verweisen',
+      'Formalisierte Revisionsanfragen mit Änderungsbeschreibung einreichen',
+      'Auf Kundenkommentare aus dem Angebots-Editor heraus antworten',
+      'Revisionen als erledigt markieren und den Änderungsverlauf verwalten',
+    ],
+    steps: [
+      {
+        title: 'Kundenkommentare',
+        content: 'Auf der Angebots-Share-Seite sieht der Kunde ein Kommentar-Symbol neben jeder Position sowie einen Button „Kommentar hinzufügen" im Gesamtbereich. Ein Klick öffnet das Kommentar-Panel, in dem der Kunde seine Bedenken oder Fragen beschreiben kann. Der Kommentar erscheint sofort im Angebots-Editor des Kontoinhabers — ohne Seitenaktualisierung.',
+        tip: 'Informieren Sie Ihren Kunden beim Versand des Angebots über die Kommentarfunktion — sie verkürzt die Revisionsdauer erheblich im Vergleich zur E-Mail-Korrespondenz.',
+      },
+      {
+        title: 'Revisionsanfragen',
+        content: 'Der Kunde kann eine Änderungsanfrage formalisieren, indem er bei einer bestimmten Position oder für das gesamte Angebot auf „Revision anfordern" klickt. Im Formular beschreibt er die gewünschten Änderungen (z. B. Mengenänderung, Positionsersatz, Anpassung der Zahlungskonditionen). Die Anfrage gelangt als Aufmerksamkeit-erfordernder Eintrag mit einer Referenznummer zur Nachverfolgung in den Angebots-Editor.',
+      },
+      {
+        title: 'Antworten des Kontoinhabers',
+        content: 'Öffnen Sie das Angebot im Editor und wechseln Sie zum Tab Kommentare. Neben jedem Kundenkommentar wird ein Antwortfeld angezeigt. Sie können mit einer Erklärung antworten, eine vorgenommene Änderung bestätigen oder um Präzisierung bitten. Die Antwort ist sofort auf der Angebots-Share-Seite für den Kunden sichtbar. Die gesamte Korrespondenz wird in einem chronologischen Thread archiviert.',
+      },
+      {
+        title: 'Revisionen abschließen',
+        content: 'Nach Umsetzung der gewünschten Änderungen klicken Sie bei der jeweiligen Revisionsanfrage auf „Als erledigt markieren". Der Status wechselt zu Erledigt und ist sowohl für Sie als auch für den Kunden sichtbar. Kommentare können nach Status gefiltert werden (Offen, Erledigt, Alle), was die Nachverfolgung des Verhandlungsfortschritts und den Abschluss des Dokuments erleichtert.',
+      },
+    ],
+  },
+  {
+    slug: 'costing-margins',
+    title: 'Kalkulation & Margen',
+    description: 'Konfigurieren Sie die Kostensichtbarkeit, legen Sie Margenziele fest, hinterlegen Sie Einkaufspreise, überwachen Sie Margenwarnungen und verfolgen Sie Gewinne — Kosten werden Kunden niemals angezeigt.',
+    duration: '5 Min.',
+    difficulty: 'advanced',
+    category: 'Setup',
+    whatYouLearn: [
+      'Kostensichtbarkeit und Zugriff auf das Margenpanel nach Teamrollen konfigurieren',
+      'Unternehmensweit und je Angebot individuelle Margen-Schwellwerte festlegen',
+      'Einkaufspreise zu Katalog- und Angebotspositionen hinzufügen',
+      'Margenwarnungen überwachen und Positionen unterhalb der Rentabilitätsschwelle beheben',
+      'Bruttogewinn und Gesamtmarge im Analyse-Dashboard verfolgen',
+    ],
+    steps: [
+      {
+        title: 'Kostensichtbarkeit konfigurieren',
+        content: 'Gehen Sie zu Einstellungen → Tab Angebote und suchen Sie den Abschnitt „Kostensichtbarkeit". Sie legen fest, welche Teamrollen auf das Margenpanel im Angebots-Editor zugreifen dürfen (Owner, Admin, Sales oder Viewer). Kosten und Margen werden niemals in das PDF exportiert oder auf der Share-Seite angezeigt — sie sind ausschließlich ein internes Analysetool Ihres Unternehmens.',
+        tip: 'Beschränken Sie die Kostensichtbarkeit auf die Rollen Owner und Admin, wenn Sie möchten, dass das Vertriebsteam sich auf den Angebotswert konzentriert und nicht auf die Margen.',
+      },
+      {
+        title: 'Margenziele festlegen',
+        content: 'Im Bereich Kosten & Margen in den Einstellungen legen Sie den unternehmensweiten Margen-Zielwert fest (z. B. 35 %). Diesen Zielwert können Sie für ein konkretes Angebot direkt im Editor überschreiben. Fällt die Marge eines Angebots unter den Schwellenwert, erscheint im Editor-Header ein gelbes Alert-Banner, das nur für autorisierte Nutzer sichtbar ist. Der Zielwert wird auch als Referenzlinie im Margendiagramm angezeigt.',
+      },
+      {
+        title: 'Einkaufspreise hinzufügen',
+        content: 'Einkaufspreise können auf zwei Ebenen hinterlegt werden: im Equipment-Katalog (als Standardkosten für eine bestimmte Position) und direkt im Angebots-Editor für eine konkrete Position. Klicken Sie auf das Kostensymbol bei einer beliebigen Angebotsposition, um den Einkaufspreis einzugeben oder zu bearbeiten. Der Einkaufspreis wird beim Hinzufügen einer Position automatisch aus dem Katalog übernommen — er kann für ein einzelnes Angebot überschrieben werden.',
+        tip: 'Für eigenes Equipment lassen Sie die Kosten leer oder tragen den Abschreibungswert ein. Für zugekauftes Equipment erfassen Sie stets den aktuellen Lieferantenpreis.',
+      },
+      {
+        title: 'Margen und Warnungen überwachen',
+        content: 'Das Margenpanel im Angebots-Editor zeigt für jede Position: Erlös, Kosten, Gewinn und Marge %. Positionen unterhalb des Margensziels sind mit einem roten Warnsymbol gekennzeichnet. Am unteren Rand des Panels erscheint eine Gesamtzusammenfassung: Gesamterlös, Gesamtkosten, Bruttogewinn und Gesamtmarge — verglichen mit dem Zielwert. Klicken Sie auf eine Position, um deren Einkaufspreis oder Verkaufspreis direkt zu bearbeiten.',
+      },
+      {
+        title: 'Gewinne im Dashboard verfolgen',
+        content: 'Das Analyse-Dashboard (Einstellungen → Analysen oder das dedizierte Dashboard-Tab) zeigt monatliche und quartalsweise Bruttogewinnübersichten aus allen gesendeten und gewonnenen Angeboten. Trenddiagramme visualisieren Margenveränderungen über die Zeit, und ein Positions-Ranking identifiziert Ihr rentabelstes und unrentabelstes Equipment. Die Daten lassen sich nach Angebotsstatus, Kunde und Zeitraum filtern.',
+      },
+    ],
+  },
 ]

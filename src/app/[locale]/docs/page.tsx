@@ -100,6 +100,8 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4"],
   },
+  { id: 'proposal-comparison', key: 'proposalComparison', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
+  { id: 'proposal-comments', key: 'proposalComments', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   // ── Send & track ──
   {
     id: "sharing-tracking",
@@ -150,6 +152,8 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
   },
+  { id: 'inventory-management', key: 'inventoryManagement', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
+  { id: 'crew-scheduling', key: 'crewScheduling', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
   // ── Account & configuration ──
   {
     id: "billing-plans",
@@ -169,6 +173,7 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
   },
+  { id: 'costing-margins', key: 'costingMargins', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
 ];
 
 export default async function DocsPage() {

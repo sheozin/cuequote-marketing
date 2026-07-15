@@ -1406,6 +1406,59 @@
         "text": "Klienci mogą widzieć tylko oferty i faktury powiązane z ich adresem e-mail i Twoją firmą. Nie mogą widzieć danych innych klientów, Twoich wewnętrznych notatek ani wersji roboczych ofert. Cały dostęp jest wymuszany na poziomie bazy danych."
       },
       "tip": "Portal klienta sprawia, że wyglądasz bardziej profesjonalnie — klienci widzą markowy panel zamiast rozproszonych linków e-mailowych."
+    },
+    "proposalComparison": {
+      "title": "Porównywanie ofert",
+      "content1": "Narzędzie porównawcze CueQuote umożliwia klientom i organizatorom wydarzeń zestawienie ofert wielu dostawców obok siebie. Działa wyłącznie za pomocą tokenów udostępniania — bez konieczności logowania.",
+      "content2": "Wklej adresy URL lub tokeny udostępniania na stronie porównania, aby załadować oferty. Narzędzie oblicza Wynik Wartości dla każdego dostawcy na podstawie ceny (40%), zakresu usług (35%) i warunków umowy (25%).",
+      "step1": "Przejdź do strony Porównaj i wklej adresy URL lub tokeny ofert w pole wejściowe, aby dodać dostawców",
+      "step2": "Sprawdź karty dostawców pokazujące łączną cenę, oszczędności względem najtańszej oferty oraz szczegóły Wyniku Wartości",
+      "step3": "Przewiń do tabeli porównania pozycji — elementy są dopasowane krzyżowo według nazwy i pogrupowane według kategorii, najsza cena wyróżniona na zielono, najwyższa na czerwono",
+      "step4": "Sprawdź Porównanie Warunków pod kątem różnic w depozycie, ważności, anulowaniu i ubezpieczeniu, a następnie przejrzyj podsumowanie AI z rekomendowanym wyborem",
+      "tip": "Adres URL porównania jest możliwy do udostępnienia — wyślij go klientowi, aby mógł samodzielnie zobaczyć analizę porównawczą"
+    },
+    "proposalComments": {
+      "title": "Komentarze do ofert",
+      "content1": "Komentarze umożliwiają współpracę w czasie rzeczywistym między Tobą a klientami bezpośrednio w ofertach. Klienci mogą zostawiać opinie na stronie udostępnionej oferty, a Ty możesz odpowiadać z edytora ofert.",
+      "content2": "Komentarze mogą odwoływać się do konkretnych pozycji i być oznaczane jako formalne żądania zmian. Twój zespół widzi licznik komentarzy w edytorze, a system sprawdza nowe komentarze co 10 sekund.",
+      "step1": "Klienci otwierają link do udostępnionej oferty i zostawiają komentarze — mogą opcjonalnie wybrać konkretną pozycję do odwołania",
+      "step2": "Gdy klient oznaczy komentarz jako żądanie zmiany, pojawia się on z odznaką statusu 'Oczekujące' w Twoim edytorze",
+      "step3": "Otwórz ofertę w edytorze i kliknij zakładkę Komentarze — czerwona odznaka pokazuje liczbę nieprzeczytanych komentarzy",
+      "step4": "Odpowiadaj na komentarze i klikaj 'Oznacz jako rozwiązane' w żądaniach zmian po ich rozpatrzeniu",
+      "tip": "Komentarze są aktualizowane w czasie rzeczywistym — zarówno Ty, jak i Twój klient widzicie nowe wiadomości w ciągu 10 sekund"
+    },
+    "inventoryManagement": {
+      "title": "Zarządzanie inwentarzem",
+      "content1": "Śledź swój fizyczny sprzęt AV za pomocą numerów seryjnych, tagów zasobów, ocen stanu i dostępności w czasie rzeczywistym. Przypisuj jednostki do wydarzeń i na pierwszy rzut oka sprawdzaj, co jest dostępne na nadchodzące zlecenia.",
+      "content2": "Każda jednostka inwentarza jest powiązana z pozycją katalogu i może być śledzona przez cały cykl życia: dostępna, przypisana do wydarzenia, w konserwacji lub wycofana. Miniaturowy kalendarz dostępności pokazuje tygodniowy status sprzętu.",
+      "step1": "Przejdź do Inwentarza i kliknij 'Dodaj jednostkę' — wybierz sprzęt z katalogu, wprowadź numer seryjny, tag zasobu, dane zakupu i ocenę stanu",
+      "step2": "Użyj paska wyszukiwania i filtrów kategorii, aby znaleźć konkretne jednostki — tabela pokazuje nazwę sprzętu, numer seryjny, stan, status i bieżące przypisanie do wydarzenia",
+      "step3": "Kliknij menu z trzema kropkami przy dostępnej jednostce i wybierz 'Przypisz do wydarzenia' — wybierz wygraną ofertę, a daty automatycznie wypełnią się z harmonogramu wydarzenia",
+      "step4": "Sprawdź miniaturowy kalendarz dostępności na prawym pasku bocznym — zielony oznacza dostępne, bursztynowy oznacza, że wszystkie jednostki tego typu są przypisane na dany dzień",
+      "step5": "Używaj szybkich akcji, aby oznaczać jednostki jako 'W konserwacji' gdy wymagają serwisu, lub 'Dostępne' gdy są gotowe do ponownego użycia",
+      "tip": "Utrzymuj spójne numery seryjne i tagi zasobów — ułatwiają śledzenie konkretnych jednostek w wydarzeniach i dokumentacji ubezpieczeniowej"
+    },
+    "crewScheduling": {
+      "title": "Planowanie ekipy",
+      "content1": "Zarządzaj listą ekipy, przypisuj członków zespołu do wydarzeń i udostępniaj arkusze przygotowawcze ekipy swojemu personelowi. CueQuote obsługuje zarówno pracowników wewnętrznych, jak i freelancerów z różnymi strukturami stawek.",
+      "content2": "Kalendarz ekipy daje Ci tygodniowy przegląd kto jest dostępny, a kto przypisany. Widget 'Wydarzenie potrzebujące ekipy' pokazuje nadchodzące wydarzenia wymagające obsady, a arkusze przygotowawcze ekipy można udostępniać jako publiczne linki bez informacji o cenach.",
+      "step1": "Przejdź do Ekipy i kliknij 'Dodaj członka' — wprowadź imię i nazwisko, typ (Pracownik lub Freelancer), domyślną rolę, umiejętności i stawkę dzienną dla freelancerów",
+      "step2": "Filtruj listę według typu (Pracownik/Freelancer) lub umiejętności (Dźwięk/Oświetlenie/Wideo), aby znaleźć odpowiednią osobę do każdego wydarzenia",
+      "step3": "Kliknij 'Przypisz do wydarzenia' z menu członka — wybierz wygraną ofertę, a daty automatycznie wypełnią się z harmonogramu wydarzenia. Możesz zmienić rolę dla tego konkretnego wydarzenia",
+      "step4": "Sprawdź widget 'Wydarzenie potrzebujące ekipy', aby zobaczyć nadchodzące wydarzenia i ich status obsady — kliknij przycisk +, aby szybko kogoś przypisać",
+      "step5": "Udostępnij Arkusz Przygotowawczy Ekipy przez publiczny link — pokazuje harmonogram wydarzenia, listę sprzętu i przypisaną ekipę bez żadnych informacji o cenach",
+      "tip": "Arkusze przygotowawcze ekipy są zaprojektowane do drukowania lub przeglądania na urządzeniach mobilnych — członkowie ekipy nie potrzebują konta CueQuote, aby je wyświetlić"
+    },
+    "costingMargins": {
+      "title": "Koszty i marże",
+      "content1": "Śledź koszty i marże zysku na poziomie oferty. Ustaw ceny kosztowe dla pozycji katalogu, określ docelowe marże i otrzymuj powiadomienia w czasie rzeczywistym, gdy oferta spadnie poniżej docelowej rentowności.",
+      "content2": "Dane o kosztach są ściśle wewnętrzne — nigdy nie są widoczne dla klientów w ofertach, plikach PDF ani portalu klienta. Kontrolujesz, które role zespołu mogą widzieć informacje o kosztach poprzez ustawienia widoczności.",
+      "step1": "Przejdź do Ustawienia > Koszty i marże i określ, kto może przeglądać dane o kosztach — wybierz między Właścicielem i Administratorem, lub uwzględnij członków zespołu Sprzedaży",
+      "step2": "Ustaw domyślny docelowy procent marży i opcjonalnie nadpisz cele dla konkretnych kategorii, takich jak Audio, Wideo lub Praca",
+      "step3": "Dodaj ceny kosztowe do pozycji katalogu lub wprowadź koszty bezpośrednio w edytorze ofert dla każdej pozycji",
+      "step4": "Włącz 'Pokaż koszty' w edytorze ofert, aby zobaczyć panel Podsumowania Marży — pokazuje Przychód, Twój Koszt, Zysk i Marżę % z kolorowymi wskaźnikami kondycji",
+      "step5": "Przeglądaj alerty marżowe powyżej pozycji — czerwone alerty oznaczają oferty poniżej celu, bursztynowe alerty oznaczają pozycje bez danych kosztowych",
+      "tip": "Obliczenie marży uwzględnia tylko wymagane pozycje (nie opcjonalne). Pozycje bez ceny kosztowej są wykluczone z łącznych kosztów, ale ich przychód nadal jest wliczany — dodawaj koszty do wszystkich pozycji, aby uzyskać dokładne marże"
     }
   },
   "changelog": {

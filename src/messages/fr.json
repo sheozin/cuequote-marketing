@@ -1434,6 +1434,59 @@
         "text": "Les clients ne peuvent voir que les devis et factures liés à leur adresse e-mail et à votre entreprise. Ils ne peuvent pas voir les données des autres clients, vos notes internes ni les devis en brouillon. Tout l'accès est contrôlé au niveau de la base de données."
       },
       "tip": "Le Portail client vous donne une image plus professionnelle — les clients voient un tableau de bord à votre image au lieu de liens e-mail éparpillés."
+    },
+    "proposalComparison": {
+      "title": "Comparaison de devis",
+      "content1": "L'outil de comparaison de CueQuote permet aux clients et aux organisateurs d'événements de comparer des devis de plusieurs prestataires côte à côte. Il fonctionne entièrement via des jetons de partage — sans connexion requise.",
+      "content2": "Collez des URLs de partage ou des jetons sur la page de comparaison pour charger les devis. L'outil calcule un Score de Valeur pour chaque prestataire basé sur le prix (40%), la couverture du périmètre (35%) et les conditions contractuelles (25%).",
+      "step1": "Accédez à la page Comparer et collez les URLs de partage ou les jetons des devis dans le champ de saisie pour ajouter des prestataires",
+      "step2": "Examinez les cartes prestataires affichant le prix total, les économies par rapport au moins cher et le détail du Score de Valeur",
+      "step3": "Faites défiler vers le bas jusqu'au tableau de comparaison des postes — les éléments sont croisés par nom et regroupés par catégorie, le moins cher en vert et le plus cher en rouge",
+      "step4": "Consultez la Comparaison des Conditions pour les différences de dépôt, validité, annulation et assurance, puis lisez le résumé IA pour une recommandation",
+      "tip": "L'URL de comparaison est partageable — envoyez-la à votre client pour qu'il puisse voir l'analyse comparative lui-même"
+    },
+    "proposalComments": {
+      "title": "Commentaires sur les devis",
+      "content1": "Les commentaires permettent une collaboration en temps réel entre vous et vos clients directement sur les devis. Les clients peuvent laisser des retours sur la page du devis partagé, et vous pouvez répondre depuis l'éditeur de devis.",
+      "content2": "Les commentaires peuvent référencer des postes spécifiques et être signalés comme demandes de révision formelles. Votre équipe voit un compteur de commentaires dans l'éditeur et le système vérifie les nouveaux commentaires toutes les 10 secondes.",
+      "step1": "Les clients ouvrent le lien du devis partagé et laissent des commentaires — ils peuvent éventuellement sélectionner un poste spécifique pour référence",
+      "step2": "Quand un client signale un commentaire comme demande de révision, il apparaît avec un badge de statut 'En attente' dans votre éditeur",
+      "step3": "Ouvrez le devis dans l'éditeur et cliquez sur l'onglet Commentaires — le badge rouge indique le nombre de commentaires non lus",
+      "step4": "Répondez aux commentaires et cliquez 'Marquer comme résolu' sur les demandes de révision une fois les retours traités",
+      "tip": "Les commentaires sont mis à jour en temps réel — vous et votre client voyez les nouveaux messages dans les 10 secondes"
+    },
+    "inventoryManagement": {
+      "title": "Gestion des stocks",
+      "content1": "Suivez votre équipement audiovisuel physique avec les numéros de série, étiquettes d'actif, évaluations d'état et disponibilité en temps réel. Assignez des unités aux événements et voyez d'un coup d'œil ce qui est disponible pour les prochains projets.",
+      "content2": "Chaque unité d'inventaire est liée à un article du catalogue et peut être suivie tout au long de son cycle de vie : disponible, assignée à un événement, en maintenance ou retirée. Le mini-calendrier de disponibilité affiche le statut hebdomadaire de votre équipement.",
+      "step1": "Allez dans Inventaire et cliquez 'Ajouter une unité' — sélectionnez l'équipement dans votre catalogue, saisissez le numéro de série, l'étiquette d'actif, les détails d'achat et l'évaluation d'état",
+      "step2": "Utilisez la barre de recherche et les filtres de catégorie pour trouver des unités spécifiques — le tableau affiche le nom de l'équipement, le numéro de série, l'état, le statut et l'assignation d'événement actuelle",
+      "step3": "Cliquez le menu à trois points d'une unité disponible et sélectionnez 'Assigner à un événement' — choisissez un devis gagné et les dates se remplissent automatiquement depuis le calendrier de l'événement",
+      "step4": "Consultez le mini-calendrier de disponibilité dans la barre latérale droite — vert signifie disponible, ambré signifie que toutes les unités de ce type sont assignées pour ce jour",
+      "step5": "Utilisez les actions rapides pour marquer des unités 'En maintenance' quand elles nécessitent un entretien, ou 'Disponible' quand elles sont prêtes à être déployées à nouveau",
+      "tip": "Maintenez des numéros de série et étiquettes d'actif cohérents — ils facilitent le suivi des unités spécifiques à travers les événements et les dossiers d'assurance"
+    },
+    "crewScheduling": {
+      "title": "Planification des équipes",
+      "content1": "Gérez votre liste d'équipe, assignez des membres aux événements et partagez des fiches de préparation avec votre personnel. CueQuote prend en charge le personnel interne et les freelances avec différentes structures tarifaires.",
+      "content2": "Le calendrier d'équipe vous donne un aperçu hebdomadaire de qui est disponible et qui est assigné. Le widget 'Événements nécessitant une équipe' affiche les événements à venir qui ont encore besoin de personnel, et les fiches de préparation peuvent être partagées en liens publics sans informations de tarification.",
+      "step1": "Allez dans Équipe et cliquez 'Ajouter un membre' — saisissez son nom, type (Personnel ou Freelance), rôle par défaut, compétences et tarif journalier pour les freelances",
+      "step2": "Filtrez votre liste par type (Personnel/Freelance) ou compétences (Son/Éclairage/Vidéo) pour trouver la bonne personne pour chaque événement",
+      "step3": "Cliquez 'Assigner à un événement' depuis le menu du membre — sélectionnez un devis gagné et les dates se remplissent automatiquement. Vous pouvez remplacer son rôle pour cet événement spécifique",
+      "step4": "Consultez le widget 'Événements nécessitant une équipe' pour voir les événements à venir et leur statut en personnel — cliquez le bouton + pour assigner rapidement quelqu'un",
+      "step5": "Partagez une Fiche de Préparation d'équipe via lien public — elle affiche le calendrier de l'événement, la liste des équipements et l'équipe assignée sans aucune information de tarification",
+      "tip": "Les fiches de préparation sont conçues pour être imprimées ou partagées sur mobile — les membres de l'équipe n'ont pas besoin d'un compte CueQuote pour les consulter"
+    },
+    "costingMargins": {
+      "title": "Coûts et marges",
+      "content1": "Suivez vos coûts et marges bénéficiaires au niveau du devis. Définissez des prix de revient sur les articles du catalogue, fixez des objectifs de marge et recevez des alertes en temps réel quand un devis passe sous votre rentabilité cible.",
+      "content2": "Les données de coûts sont strictement internes — elles ne sont jamais visibles par les clients dans les devis, les PDF ou le portail client. Vous contrôlez quels rôles d'équipe peuvent voir les informations de coûts via les paramètres de visibilité.",
+      "step1": "Allez dans Paramètres > Coûts et marges et définissez qui peut consulter les données de coûts — choisissez entre Propriétaire & Administrateur uniquement, ou incluez les membres de l'équipe commerciale",
+      "step2": "Définissez votre pourcentage d'objectif de marge par défaut et remplacez éventuellement les objectifs pour des catégories spécifiques comme Audio, Vidéo ou Main-d'œuvre",
+      "step3": "Ajoutez des prix de revient à vos articles du catalogue, ou saisissez des coûts par poste directement dans l'éditeur de devis",
+      "step4": "Activez 'Afficher les coûts' dans l'éditeur de devis pour voir le panneau Résumé des marges — il affiche le Chiffre d'affaires, Votre coût, le Bénéfice et le % de Marge avec des indicateurs de santé codés par couleur",
+      "step5": "Consultez les alertes de marge au-dessus de vos postes — les alertes rouges signalent les devis sous l'objectif, les alertes ambrées signalent les postes sans données de coût",
+      "tip": "Le calcul de marge inclut uniquement les éléments requis (pas les optionnels). Les éléments sans prix de revient sont exclus du total des coûts mais leur chiffre d'affaires compte toujours — ajoutez donc des coûts à tous les éléments pour des marges précises"
     }
   },
   "changelog": {

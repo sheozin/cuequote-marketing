@@ -646,4 +646,191 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'inventory-management',
+    title: 'Gestion des stocks',
+    description: 'Suivez votre matériel AV physique avec numéros de série, états techniques, calendrier de disponibilité et affectation aux événements.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Configuration',
+    whatYouLearn: [
+      'Ajouter des unités de matériel avec leurs numéros de série et états techniques',
+      'Filtrer et parcourir le stock par catégorie, état et emplacement',
+      'Affecter des unités de matériel spécifiques aux événements',
+      'Suivre la disponibilité du matériel et détecter les conflits dans le calendrier',
+      'Enregistrer les interventions de maintenance et gérer le calendrier d\'entretien',
+    ],
+    steps: [
+      {
+        title: 'Ajouter une unité de matériel',
+        content: 'Accédez aux Stocks depuis la barre latérale et cliquez sur « Ajouter une unité ». Renseignez le nom, la catégorie, le numéro de série, l\'état technique (Excellent, Bon, Maintenance requise, Hors service) et l\'emplacement de stockage. Chaque unité en stock est suivie indépendamment des articles du catalogue — le catalogue représente votre gamme, tandis que le stock représente chaque appareil physique que vous possédez.',
+        tip: 'Photographiez chaque unité lors de son ajout — cela facilitera son identification à la sortie et au retour en cas de dommages.',
+      },
+      {
+        title: 'Parcourir et filtrer le stock',
+        content: 'La liste des stocks permet de filtrer par catégorie (Audio, Vidéo, Éclairage, etc.), état technique et emplacement de stockage. Vous pouvez également rechercher par numéro de série ou par nom. Chaque unité affiche son statut actuel — Disponible, Affecté à un événement, En maintenance ou Hors service — vous offrant ainsi une vision instantanée de l\'état de vos actifs.',
+      },
+      {
+        title: 'Affecter le matériel aux événements',
+        content: 'Ouvrez un événement ou un devis et accédez à l\'onglet Stocks. Cliquez sur « Affecter du matériel » et sélectionnez des unités précises dans la liste des ressources disponibles. Le système vérifie automatiquement les conflits de calendrier — si une unité est déjà affectée à un autre événement à la même date, vous en serez informé avant de confirmer l\'affectation.',
+        tip: 'Affectez le matériel le plus tôt possible pour éviter les doubles réservations en période de forte activité événementielle.',
+      },
+      {
+        title: 'Suivre la disponibilité',
+        content: 'La vue calendrier dans la section Stocks présente chaque unité de matériel sur un axe temporel avec les réservations enregistrées. Vous pouvez vérifier rapidement quels appareils sont libres à une date donnée et lesquels sont déjà occupés. Les conflits sont signalés en rouge, ce qui facilite la planification de l\'équipe technique et la coordination du transport.',
+      },
+      {
+        title: 'Gérer la maintenance',
+        content: 'Pour chaque unité, vous pouvez enregistrer des entrées de service : date d\'inspection, description des travaux effectués, coût et planification du prochain entretien. Le matériel signalé comme « En maintenance » est automatiquement exclu des ressources disponibles lors de la planification des événements. L\'historique des interventions est entièrement consultable et exportable.',
+      },
+    ],
+  },
+  {
+    slug: 'crew-scheduling',
+    title: 'Planification de l\'équipe technique',
+    description: 'Gérez votre liste d\'équipe technique — salariés et freelances — affectez-les aux événements, générez des fiches de préparation et consultez le calendrier de disponibilité.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Configuration',
+    whatYouLearn: [
+      'Ajouter des membres d\'équipe avec leurs rôles, tarifs et disponibilités',
+      'Filtrer la liste de l\'équipe par spécialisation, statut d\'emploi et disponibilité',
+      'Affecter l\'équipe aux événements avec les rôles et horaires de travail',
+      'Générer des fiches de préparation d\'équipe avec planning et liste de matériel',
+      'Consulter le calendrier de disponibilité pour éviter les conflits',
+    ],
+    steps: [
+      {
+        title: 'Ajouter des membres d\'équipe',
+        content: 'Accédez à la section Équipe depuis la barre latérale et cliquez sur « Ajouter un membre ». Renseignez le nom complet, la spécialisation (Ingénieur du son, Technicien lumière, Opérateur vidéo, Directeur technique, Chauffeur, etc.), le tarif journalier ou horaire, les coordonnées et le type d\'emploi (Salarié ou Freelance). Vous pouvez également ajouter des notes sur les certifications ou compétences particulières.',
+        tip: 'Enregistrez le numéro de téléphone personnel de chaque technicien — indispensable en cas de changement de dernière minute dans la composition de l\'équipe.',
+      },
+      {
+        title: 'Filtrer la liste de l\'équipe',
+        content: 'La liste de l\'équipe technique peut être filtrée par spécialisation, statut d\'emploi (Salarié/Freelance) et disponibilité sur une plage de dates. Vous trouvez ainsi rapidement les techniciens adéquats sans parcourir manuellement toute la liste. Chaque fiche indique le statut de disponibilité actuel de la personne concernée.',
+      },
+      {
+        title: 'Affecter l\'équipe aux événements',
+        content: 'Dans la vue événement, accédez à l\'onglet Équipe et cliquez sur « Affecter des membres ». Sélectionnez les techniciens dans la liste des ressources disponibles, précisez le rôle pour cet événement précis et indiquez les horaires de travail prévus. Le système vérifie les conflits de calendrier en temps réel — si un technicien est déjà occupé à la même date, vous en serez immédiatement informé.',
+        tip: 'Désignez un directeur technique pour chaque événement — cela améliore la communication sur site et facilite la coordination logistique.',
+      },
+      {
+        title: 'Générer les fiches de préparation d\'équipe',
+        content: 'Une fois la composition de l\'équipe finalisée, cliquez sur « Générer la fiche d\'équipe » pour télécharger un PDF avec le planning complet de l\'équipe technique. Le document comprend la liste des techniciens affectés avec leurs rôles, le calendrier des arrivées et des pauses, la liste du matériel à charger, les coordonnées du lieu ainsi que les instructions particulières. Les fiches peuvent être envoyées directement par e-mail à chaque technicien.',
+      },
+      {
+        title: 'Consulter le calendrier d\'équipe',
+        content: 'Le calendrier de l\'équipe technique présente tous les membres sur un axe temporel commun avec leurs affectations enregistrées. Vous identifiez ainsi instantanément les techniciens disponibles à une date donnée et évaluez la charge de travail de l\'ensemble de l\'équipe. Cette vue est particulièrement utile pour planifier plusieurs événements simultanés et optimiser l\'utilisation des ressources humaines.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-comparison',
+    title: 'Comparaison de devis',
+    description: 'Comparez les devis de fournisseurs via des jetons de partage, des scores de valeur, la comparaison ligne à ligne, les conditions et les recommandations IA.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Devis',
+    whatYouLearn: [
+      'Ajouter des devis fournisseurs à comparer via des liens de partage',
+      'Consulter les fiches fournisseurs avec scores de valeur et indicateurs clés',
+      'Comparer les postes de coût entre les devis des fournisseurs',
+      'Rapprocher les conditions de paiement, pénalités et exclusions de responsabilité',
+    ],
+    steps: [
+      {
+        title: 'Ajouter des devis à comparer',
+        content: 'Accédez à la section Comparaison de devis et cliquez sur « Ajouter un devis ». Collez le jeton de partage ou le lien d\'un devis fournisseur — CueQuote récupère automatiquement les données du devis et l\'ajoute au tableau comparatif. Vous pouvez ajouter jusqu\'à 5 devis simultanément. Chaque devis ajouté est validé en termes de complétude et de sections requises.',
+        tip: 'Demandez aux fournisseurs de partager leurs devis directement via CueQuote — les jetons de partage garantissent que vous comparez les versions actuelles des documents.',
+      },
+      {
+        title: 'Consulter les fiches fournisseurs',
+        content: 'Chaque fournisseur est présenté sur une fiche distincte avec un score de valeur calculé automatiquement (0-100), le prix total, le nombre de postes et les paramètres clés du devis. Le score de valeur tient compte du rapport prix/étendue des prestations et de la qualité des conditions. Les fiches peuvent être triées par prix, score de valeur ou nom du fournisseur.',
+      },
+      {
+        title: 'Comparer les postes de coût',
+        content: 'La vue de comparaison des postes rassemble chaque ligne de coût de tous les devis dans un seul tableau. Les postes manquants (lorsqu\'un fournisseur a chiffré quelque chose qu\'un autre n\'a pas pris en compte) sont clairement signalés, facilitant l\'évaluation de l\'exhaustivité des périmètres. La vue peut être filtrée par catégorie (Audio, Vidéo, Éclairage, etc.) ou triée par écart de prix.',
+      },
+      {
+        title: 'Rapprocher les conditions et exclusions',
+        content: 'L\'onglet Conditions présente côte à côte les échéanciers de paiement, politiques d\'annulation, exclusions de responsabilité et dates d\'expiration des devis de tous les fournisseurs. Les différences sont automatiquement surlignées en jaune afin que vous ne manquiez aucun écart significatif dans les conditions contractuelles.',
+      },
+      {
+        title: 'Utiliser la recommandation IA',
+        content: 'Cliquez sur « Analyse IA » pour obtenir une évaluation automatique des devis collectés. L\'IA identifie la meilleure proposition en termes de valeur, détecte les postes manquants chez chaque fournisseur, signale les clauses non standard méritant attention et formule une recommandation argumentée. L\'analyse est prête à être copiée-collée dans un rapport décisionnel destiné à votre client.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-comments',
+    title: 'Commentaires sur les devis',
+    description: 'Les clients peuvent laisser des commentaires directement dans le devis, référencer des postes précis, soumettre des demandes de révision, et le titulaire du compte peut leur répondre.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Devis',
+    whatYouLearn: [
+      'Comment les clients ajoutent des commentaires sur un devis et référencent des postes',
+      'Soumettre des demandes de révision formalisées avec description des modifications',
+      'Répondre aux commentaires clients depuis l\'éditeur de devis',
+      'Marquer les révisions comme résolues et gérer l\'historique des modifications',
+    ],
+    steps: [
+      {
+        title: 'Commentaires du client',
+        content: 'Sur la page de partage du devis, le client voit une icône de commentaire à côté de chaque poste ainsi qu\'un bouton « Ajouter un commentaire » dans la section récapitulative. Un clic ouvre le panneau de commentaire où le client peut décrire ses interrogations ou questions. Le commentaire apparaît immédiatement dans l\'éditeur de devis du titulaire du compte — sans rechargement de page.',
+        tip: 'Informez votre client de la possibilité de commenter lors de l\'envoi du devis — cela raccourcit considérablement le cycle de révision par rapport aux échanges par e-mail.',
+      },
+      {
+        title: 'Demandes de révision',
+        content: 'Le client peut formaliser une demande de modification en cliquant sur « Demander une révision » pour un poste spécifique ou pour l\'ensemble du devis. Dans le formulaire, il décrit les modifications souhaitées (par ex. changement de quantité, remplacement d\'un poste, modification des conditions de paiement). La demande arrive dans l\'éditeur de devis signalée comme nécessitant une attention, accompagnée d\'un numéro de référence pour le suivi.',
+      },
+      {
+        title: 'Réponses du titulaire du compte',
+        content: 'Ouvrez le devis dans l\'éditeur et accédez à l\'onglet Commentaires. Un champ de réponse apparaît à côté de chaque commentaire client. Vous pouvez répondre avec une explication, confirmer une modification apportée ou demander des précisions. La réponse est immédiatement visible par le client sur la page de partage du devis. L\'intégralité de la correspondance est archivée dans un fil chronologique.',
+      },
+      {
+        title: 'Résoudre les révisions',
+        content: 'Après avoir appliqué les modifications demandées dans le devis, cliquez sur « Marquer comme résolu » pour la demande de révision concernée. Le statut passe à Résolu et est visible aussi bien par vous que par le client. Vous pouvez filtrer les commentaires par statut (Ouvert, Résolu, Tous), ce qui facilite le suivi de l\'avancement des négociations et la finalisation du document.',
+      },
+    ],
+  },
+  {
+    slug: 'costing-margins',
+    title: 'Coûts et marges',
+    description: 'Configurez la visibilité des coûts, définissez des objectifs de marge, renseignez les prix de revient, surveillez les alertes de marge et suivez la rentabilité — les coûts ne sont jamais affichés aux clients.',
+    duration: '5 min',
+    difficulty: 'advanced',
+    category: 'Configuration',
+    whatYouLearn: [
+      'Configurer la visibilité des coûts et l\'accès au panneau de marges selon les rôles de l\'équipe',
+      'Définir des seuils de marge cibles à l\'échelle de l\'entreprise et par devis',
+      'Ajouter des prix de revient aux postes du catalogue et des devis',
+      'Surveiller les alertes de marge et traiter les postes en dessous du seuil de rentabilité',
+      'Suivre le bénéfice brut et la marge globale dans le tableau de bord analytique',
+    ],
+    steps: [
+      {
+        title: 'Configurer la visibilité des coûts',
+        content: 'Accédez à Paramètres → onglet Devis et trouvez la section « Visibilité des coûts ». Vous définissez quels rôles de l\'équipe peuvent accéder au panneau de marges dans l\'éditeur de devis (Owner, Admin, Sales ou Viewer). Les coûts et marges ne sont jamais exportés dans le PDF ni affichés sur la page de partage — ce sont des outils analytiques strictement internes à votre entreprise.',
+        tip: 'Limitez la visibilité des coûts aux rôles Owner et Admin si vous souhaitez que l\'équipe commerciale se concentre sur la valeur du devis plutôt que sur les marges.',
+      },
+      {
+        title: 'Définir les objectifs de marge',
+        content: 'Dans la section Coûts et marges des Paramètres, définissez le seuil de marge cible à l\'échelle de l\'entreprise (par ex. 35 %). Vous pouvez également remplacer cet objectif pour un devis spécifique directement depuis l\'éditeur. Lorsque la marge d\'un devis tombe en dessous du seuil, une alerte jaune apparaît dans l\'en-tête de l\'éditeur, visible uniquement par l\'utilisateur autorisé. Le seuil s\'affiche également comme ligne de référence sur le graphique des marges.',
+      },
+      {
+        title: 'Ajouter les prix de revient',
+        content: 'Les prix de revient peuvent être ajoutés à deux niveaux : dans le catalogue de matériel (comme coût par défaut pour un article donné) et directement dans l\'éditeur de devis pour un poste spécifique. Cliquez sur l\'icône coût à côté de n\'importe quel poste pour saisir ou modifier le prix de revient. Le prix de revient est automatiquement repris depuis le catalogue lors de l\'ajout du poste — vous pouvez le remplacer pour un devis précis.',
+        tip: 'Pour votre propre matériel, laissez le coût vide ou saisissez la valeur d\'amortissement. Pour le matériel sous-loué, renseignez toujours le tarif actuel du fournisseur.',
+      },
+      {
+        title: 'Surveiller les marges et les alertes',
+        content: 'Le panneau de marges dans l\'éditeur de devis affiche pour chaque poste : chiffre d\'affaires, coût, bénéfice et marge %. Les postes en dessous de la marge cible sont signalés par une icône d\'avertissement rouge. En bas du panneau figure un récapitulatif de l\'ensemble du devis : CA total, coût total, bénéfice brut et marge globale — comparés à l\'objectif. Cliquez sur n\'importe quel poste pour modifier directement son prix de revient ou son prix de vente.',
+      },
+      {
+        title: 'Suivre les bénéfices dans le tableau de bord',
+        content: 'Le tableau de bord analytique (Paramètres → Analyses ou l\'onglet Dashboard dédié) présente des synthèses mensuelles et trimestrielles du bénéfice brut sur l\'ensemble des devis envoyés et gagnés. Les graphiques de tendance visualisent l\'évolution des marges dans le temps, et un classement des postes identifie votre matériel le plus et le moins rentable. Les données sont filtrables par statut de devis, client et période.',
+      },
+    ],
+  },
 ]

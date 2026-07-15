@@ -1430,6 +1430,59 @@
         "text": "Clients can only see proposals and invoices linked to their email address and your company. They cannot see other clients' data, your internal notes, or draft proposals. All access is enforced at the database level."
       },
       "tip": "The Client Portal makes you look more professional — clients see a branded dashboard instead of scattered email links."
+    },
+    "proposalComparison": {
+      "title": "Proposal Comparison",
+      "content1": "CueQuote's comparison tool lets clients and event planners compare proposals from multiple vendors side by side. It works entirely via share tokens — no login required.",
+      "content2": "Paste share URLs or tokens into the comparison page to load proposals. The tool calculates a Value Score for each vendor based on price (40%), scope coverage (35%), and contract terms (25%).",
+      "step1": "Navigate to the Compare page and paste proposal share URLs or tokens into the input field to add vendors",
+      "step2": "Review the vendor cards showing total price, savings vs cheapest, and Value Score breakdown",
+      "step3": "Scroll down to the line item comparison table — items are cross-matched by name and grouped by category, with cheapest highlighted in green and most expensive in red",
+      "step4": "Check the Terms Comparison for deposit, validity, cancellation, and insurance differences, then review the AI Insight summary for a recommended choice",
+      "tip": "The comparison URL is shareable — send it to your client so they can see the side-by-side analysis themselves"
+    },
+    "proposalComments": {
+      "title": "Proposal Comments",
+      "content1": "Comments allow real-time collaboration between you and your clients directly on proposals. Clients can leave feedback on the shared proposal page, and you can reply from the proposal editor.",
+      "content2": "Comments can reference specific line items and be flagged as formal revision requests. Your team sees a comment badge count in the editor and the system polls for new comments every 10 seconds.",
+      "step1": "Clients open the shared proposal link and leave comments — they can optionally select a specific line item to reference",
+      "step2": "When a client flags a comment as a revision request, it appears with a 'Pending' status badge in your editor",
+      "step3": "Open the proposal in the editor and click the Comments tab — the red badge shows the count of unread comments",
+      "step4": "Reply to comments and click 'Mark Resolved' on revision requests once you've addressed the feedback",
+      "tip": "Comments are updated in real-time — both you and your client see new messages within 10 seconds"
+    },
+    "inventoryManagement": {
+      "title": "Inventory Management",
+      "content1": "Track your physical AV equipment with serial numbers, asset tags, condition ratings, and real-time availability. Assign units to events and see at a glance what's available for upcoming jobs.",
+      "content2": "Each inventory unit links to a catalog item and can be tracked through its lifecycle: available, assigned to an event, in maintenance, or retired. The mini availability calendar shows your weekly equipment status.",
+      "step1": "Go to Inventory and click 'Add Unit' — select equipment from your catalog, enter the serial number, asset tag, purchase details, and condition rating",
+      "step2": "Use the search bar and category filters to find specific units — the table shows equipment name, serial number, condition, status, and current event assignment",
+      "step3": "Click the three-dot menu on any available unit and select 'Assign to Event' — choose a won proposal and dates auto-fill from the event schedule",
+      "step4": "Check the mini availability calendar on the right sidebar — green means available, amber means all units of that type are assigned for that day",
+      "step5": "Use the quick actions to mark units as 'In Maintenance' when they need servicing, or 'Available' when they're ready to deploy again",
+      "tip": "Keep serial numbers and asset tags consistent — they make it easy to track specific units across events and insurance records"
+    },
+    "crewScheduling": {
+      "title": "Crew Scheduling",
+      "content1": "Manage your crew roster, assign team members to events, and share crew prep sheets with your staff. CueQuote supports both in-house staff and freelancers with different rate structures.",
+      "content2": "The crew calendar gives you a weekly overview of who's available and who's assigned. The 'Events Needing Crew' widget shows upcoming events that still need staff, and crew prep sheets can be shared as public links with no pricing information.",
+      "step1": "Go to Crew and click 'Add Member' — enter their name, type (Staff or Freelancer), default role, skills, and day rate for freelancers",
+      "step2": "Filter your roster by type (Staff/Freelancer) or skills (Sound/Lighting/Video) to find the right person for each event",
+      "step3": "Click 'Assign to Event' from a member's menu — select a won proposal and the dates auto-fill from the event schedule. You can override their role for this specific event",
+      "step4": "Check the 'Events Needing Crew' widget to see upcoming events and their staffing status — click the + button to quickly assign someone",
+      "step5": "Share a Crew Prep Sheet via public link — it shows the event schedule, equipment list, and assigned crew without any pricing information",
+      "tip": "Crew prep sheets are designed to be printed or shared on mobile — crew members don't need a CueQuote account to view them"
+    },
+    "costingMargins": {
+      "title": "Costing & Margins",
+      "content1": "Track your costs and profit margins at the proposal level. Set cost prices on catalog items, define margin targets, and get real-time alerts when a proposal falls below your target profitability.",
+      "content2": "Cost data is strictly internal — it's never visible to clients in proposals, PDFs, or the client portal. You control which team roles can see cost information through the visibility settings.",
+      "step1": "Go to Settings > Costing & Margins and set who can view cost data — choose between Owner & Admin only, or include Sales team members",
+      "step2": "Set your default margin target percentage and optionally override targets for specific categories like Audio, Video, or Labor",
+      "step3": "Add cost prices to your catalog items, or enter costs per-line-item directly in the proposal editor",
+      "step4": "Toggle 'Show Costs' in the proposal editor to see the Margin Summary panel — it shows Revenue, Your Cost, Profit, and Margin % with color-coded health indicators",
+      "step5": "Review margin alerts above your line items — red alerts flag proposals below target, amber alerts flag items missing cost data",
+      "tip": "The margin calculation only includes required items (not optional ones). Items without a cost price are excluded from the cost total but their revenue still counts — so add costs to all items for accurate margins"
     }
   },
   "changelog": {

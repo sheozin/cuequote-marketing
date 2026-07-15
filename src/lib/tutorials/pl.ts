@@ -611,4 +611,191 @@ export const TUTORIALS_PL: Tutorial[] = [
       { title: 'Braki w katalogu', content: 'Zakładka "Dodaj do katalogu" pokazuje pozycje użyte w 2+ ofertach, ale nieobecne w katalogu. Kliknij "Dodaj do katalogu", aby utworzyć wpis z wypełnioną średnią ceną.' },
     ],
   },
+  {
+    slug: 'inventory-management',
+    title: 'Zarządzanie inwentarzem',
+    description: 'Śledź fizyczny sprzęt AV z numerami seryjnymi, stanami technicznymi, kalendarzem dostępności i przypisaniem do konkretnych wydarzeń.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Konfiguracja',
+    whatYouLearn: [
+      'Dodawanie jednostek sprzętu z numerami seryjnymi i stanami technicznymi',
+      'Filtrowanie i przeglądanie inwentarza według kategorii, stanu i lokalizacji',
+      'Przypisywanie konkretnych jednostek sprzętu do wydarzeń',
+      'Śledzenie dostępności sprzętu i wykrywanie konfliktów w kalendarzu',
+      'Rejestrowanie przeglądów serwisowych i zarządzanie harmonogramem konserwacji',
+    ],
+    steps: [
+      {
+        title: 'Dodaj jednostkę sprzętu',
+        content: 'Przejdź do Inwentarza z paska bocznego i kliknij „Dodaj jednostkę". Uzupełnij nazwę, kategorię, numer seryjny, stan techniczny (Doskonały, Dobry, Wymaga serwisu, Poza użyciem) oraz lokalizację magazynową. Każda jednostka w inwentarzu jest śledzona niezależnie od pozycji katalogowych — katalog reprezentuje Twój asortyment, a inwentarz — każdy fizyczny egzemplarz sprzętu, który posiadasz.',
+        tip: 'Zrób zdjęcie każdej jednostki podczas dodawania — ułatwi to identyfikację przy wydawaniu i przyjmowaniu sprzętu na wypadek uszkodzeń.',
+      },
+      {
+        title: 'Przeglądaj i filtruj inwentarz',
+        content: 'Widok listy inwentarza pozwala filtrować według kategorii (Audio, Wideo, Oświetlenie itd.), stanu technicznego oraz lokalizacji magazynowej. Możesz też wyszukiwać po numerze seryjnym lub nazwie. Każda pozycja pokazuje aktualny status — Dostępny, Przypisany do wydarzenia, W serwisie lub Poza użyciem — dzięki czemu masz zawsze aktualny obraz zasobów.',
+      },
+      {
+        title: 'Przypisz sprzęt do wydarzenia',
+        content: 'Otwórz wydarzenie lub ofertę i przejdź do zakładki Inwentarz. Kliknij „Przypisz sprzęt" i wybierz konkretne jednostki z listy dostępnych zasobów. System automatycznie sprawdza konflikty kalendarza — jeśli dana jednostka jest już przypisana do innego wydarzenia w tym samym terminie, zostaniesz o tym poinformowany przed potwierdzeniem przypisania.',
+        tip: 'Przypisuj sprzęt jak najwcześniej, aby uniknąć podwójnej rezerwacji przy intensywnym sezonie eventowym.',
+      },
+      {
+        title: 'Śledź dostępność',
+        content: 'Widok kalendarza w sekcji Inwentarz pokazuje każdą jednostkę sprzętu na osi czasu z zaznaczonymi rezerwacjami. Możesz szybko sprawdzić, które urządzenia są wolne w danym terminie, a które już zajęte. Konflikty są oznaczane na czerwono, ułatwiając planowanie obsady technicznej i organizację transportu.',
+      },
+      {
+        title: 'Zarządzaj konserwacją',
+        content: 'Dla każdej jednostki możesz rejestrować wpisy serwisowe: datę przeglądu, opis wykonanych prac, koszt oraz zaplanować kolejny termin konserwacji. Sprzęt oznaczony jako „W serwisie" jest automatycznie wykluczany z dostępnych zasobów podczas planowania wydarzeń. Historia serwisowa jest w pełni przeszukiwalna i eksportowalna.',
+      },
+    ],
+  },
+  {
+    slug: 'crew-scheduling',
+    title: 'Planowanie obsady technicznej',
+    description: 'Zarządzaj listą ekipy technicznej — pracowników etatowych i freelancerów — przypisuj ich do wydarzeń, generuj karty przygotowania ekipy i przeglądaj kalendarz obsady.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Konfiguracja',
+    whatYouLearn: [
+      'Dodawanie członków ekipy technicznej z rolami, stawkami i dostępnością',
+      'Filtrowanie listy ekipy według specjalizacji, statusu zatrudnienia i dostępności',
+      'Przypisywanie ekipy do wydarzeń z określeniem ról i godzin pracy',
+      'Generowanie kart przygotowania ekipy z harmonogramem i listą sprzętu',
+      'Przeglądanie kalendarza dostępności ekipy w celu unikania konfliktów',
+    ],
+    steps: [
+      {
+        title: 'Dodaj członków ekipy',
+        content: 'Przejdź do sekcji Ekipa z paska bocznego i kliknij „Dodaj członka ekipy". Uzupełnij imię i nazwisko, specjalizację (Technik dźwięku, Technik oświetlenia, Realizator wideo, Kierownik techniczny, Kierowca itd.), stawkę dzienną lub godzinową, dane kontaktowe oraz typ zatrudnienia (Etatowy lub Freelancer). Możesz też dodać notatki z certyfikatami lub specjalnymi umiejętnościami.',
+        tip: 'Dodaj prywatny numer telefonu każdego technika — przyda się przy nagłych zmianach obsady tuż przed wydarzeniem.',
+      },
+      {
+        title: 'Filtruj listę ekipy',
+        content: 'Lista ekipy technicznej umożliwia filtrowanie według specjalizacji, statusu zatrudnienia (Etatowy/Freelancer) oraz dostępności w wybranym zakresie dat. Dzięki temu szybko znajdziesz odpowiednich techników bez ręcznego przeglądania całej listy. Każda karta pokazuje aktualny status dostępności danej osoby.',
+      },
+      {
+        title: 'Przypisz ekipę do wydarzeń',
+        content: 'W widoku wydarzenia przejdź do zakładki Ekipa i kliknij „Przypisz członków ekipy". Wybierz techników z listy dostępnych zasobów, określ rolę pełnioną na tym konkretnym wydarzeniu oraz zaplanowane godziny pracy. System sprawdza konflikty kalendarza w czasie rzeczywistym — jeśli technik jest już zajęty w danym terminie, zostaniesz o tym poinformowany.',
+        tip: 'Wyznacz kierownika technicznego dla każdego wydarzenia — usprawni to komunikację na miejscu i ułatwi koordynację logistyki.',
+      },
+      {
+        title: 'Generuj karty przygotowania ekipy',
+        content: 'Po skompletowaniu obsady kliknij „Generuj kartę ekipy", aby pobrać PDF z harmonogramem dla całej ekipy technicznej. Dokument zawiera listę przypisanych techników z ich rolami, harmonogram zbiórek i przerw, listę sprzętu wymagającą załadunku, dane kontaktowe miejsca realizacji oraz instrukcje specjalne. Karty ekipy można wysyłać bezpośrednio e-mailem do każdego technika.',
+      },
+      {
+        title: 'Przeglądaj kalendarz ekipy',
+        content: 'Widok kalendarza ekipy technicznej prezentuje wszystkich członków na wspólnej osi czasu z zaznaczonymi ich przypisaniami. Pozwala to błyskawicznie zidentyfikować wolnych techników w danym terminie oraz ocenić obciążenie pracą całego zespołu. Widok jest przydatny przy planowaniu wielu równoległych wydarzeń i optymalizacji wykorzystania zasobów ludzkich.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-comparison',
+    title: 'Porównanie ofert',
+    description: 'Porównuj oferty dostawców za pomocą tokenów udostępniania, ocen wartości, zestawień pozycji, warunków i rekomendacji AI.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Oferty',
+    whatYouLearn: [
+      'Dodawanie ofert dostawców do porównania za pomocą linków udostępniania',
+      'Przeglądanie kart dostawców z ocenami wartości i kluczowymi wskaźnikami',
+      'Porównywanie pozycji kosztowych między ofertami dostawców',
+      'Zestawianie warunków płatności, kar i wyłączeń odpowiedzialności',
+    ],
+    steps: [
+      {
+        title: 'Dodaj oferty do porównania',
+        content: 'Przejdź do sekcji Porównanie ofert i kliknij „Dodaj ofertę". Wklej token udostępniania lub link do oferty dostawcy — CueQuote automatycznie pobiera dane oferty i dodaje ją do zestawienia. Możesz dodać do 5 ofert równocześnie. Każda dodana oferta jest walidowana pod kątem kompletności i wymaganych sekcji.',
+        tip: 'Poproś dostawców o udostępnienie ofert bezpośrednio przez CueQuote — tokeny udostępniania gwarantują, że porównujesz aktualne wersje dokumentów.',
+      },
+      {
+        title: 'Przeglądaj karty dostawców',
+        content: 'Każdy dostawca jest prezentowany na osobnej karcie z automatycznie obliczoną oceną wartości (0–100), łączną ceną, liczbą pozycji oraz kluczowymi parametrami oferty. Ocena wartości uwzględnia stosunek ceny do zakresu świadczeń i jakości warunków. Karty można sortować według ceny, oceny wartości lub nazwy dostawcy.',
+      },
+      {
+        title: 'Porównuj pozycje kosztowe',
+        content: 'Widok porównania pozycji zestawia każdą linię kosztową ze wszystkich ofert w jednej tabeli. Brakujące pozycje (gdy jeden dostawca wycenił coś, czego inny nie uwzględnił) są wyraźnie oznaczane, ułatwiając ocenę kompletności zakresu. Możesz filtrować widok według kategorii (Audio, Wideo, Oświetlenie itd.) lub sortować według różnicy cenowej.',
+      },
+      {
+        title: 'Zestawiaj warunki i wyłączenia',
+        content: 'Zakładka Warunki prezentuje obok siebie harmonogramy płatności, polityki anulowania, wyłączenia odpowiedzialności i terminy ważności ofert wszystkich dostawców. Różnice są automatycznie zaznaczane na żółto, dzięki czemu nie przegapisz istotnych rozbieżności w warunkach umownych.',
+      },
+      {
+        title: 'Skorzystaj z rekomendacji AI',
+        content: 'Kliknij „Analiza AI", aby otrzymać automatyczną ocenę zebranych ofert. AI wskazuje najmocniejszą propozycję pod kątem wartości, identyfikuje brakujące pozycje u poszczególnych dostawców, sygnalizuje niestandardowe warunki wymagające uwagi oraz formułuje rekomendację z uzasadnieniem. Analiza jest gotowa do skopiowania i wklejenia do raportu decyzyjnego dla klienta.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-comments',
+    title: 'Komentarze do ofert',
+    description: 'Klienci mogą zostawiać komentarze bezpośrednio w ofercie, odwoływać się do konkretnych pozycji, zgłaszać prośby o rewizję, a właściciel konta może na nie odpowiadać.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Oferty',
+    whatYouLearn: [
+      'Jak klienci dodają komentarze do oferty i odwołują się do pozycji',
+      'Przesyłanie sformalizowanych próśb o rewizję z opisem zmian',
+      'Odpowiadanie na komentarze klientów z poziomu edytora oferty',
+      'Oznaczanie rewizji jako rozwiązanych i zarządzanie historią zmian',
+    ],
+    steps: [
+      {
+        title: 'Komentarze klienta',
+        content: 'Na stronie udostępniania oferty klient widzi ikonę komentarza obok każdej pozycji oraz przycisk „Dodaj komentarz" w sekcji zbiorczej. Kliknięcie otwiera panel komentarza, w którym klient może opisać swoje wątpliwości lub pytania. Komentarz jest natychmiast widoczny dla właściciela konta w edytorze oferty — bez konieczności odświeżania strony.',
+        tip: 'Poinformuj klienta o możliwości komentowania podczas przesyłania oferty — znacznie skraca to czas iteracji w porównaniu z wymianą e-maili.',
+      },
+      {
+        title: 'Prośby o rewizję',
+        content: 'Klient może sformalizować prośbę o zmianę klikając „Zgłoś rewizję" przy konkretnej pozycji lub dla całej oferty. W formularzu opisuje żądane zmiany (np. zmiana ilości, zastąpienie pozycji, modyfikacja warunków płatności). Prośba trafia do edytora oferty oznaczona jako wymagająca uwagi, wraz z numerem referencyjnym ułatwiającym śledzenie.',
+      },
+      {
+        title: 'Odpowiedzi właściciela konta',
+        content: 'Otwórz ofertę w edytorze i przejdź do zakładki Komentarze. Przy każdym komentarzu klienta widoczne jest pole odpowiedzi. Możesz odpisać z wyjaśnieniem, potwierdzić wprowadzoną zmianę lub poprosić o doprecyzowanie. Odpowiedź jest natychmiast dostępna dla klienta na stronie udostępniania oferty. Cała korespondencja jest archiwizowana w chronologicznym wątku.',
+      },
+      {
+        title: 'Rozwiązywanie rewizji',
+        content: 'Po wprowadzeniu żądanych zmian w ofercie kliknij „Oznacz jako rozwiązane" przy danej prośbie o rewizję. Status zmienia się na Rozwiązano i jest widoczny zarówno dla Ciebie, jak i dla klienta. Możesz filtrować komentarze według statusu (Otwarte, Rozwiązane, Wszystkie), co ułatwia kontrolę nad postępem negocjacji i finalizacją dokumentu.',
+      },
+    ],
+  },
+  {
+    slug: 'costing-margins',
+    title: 'Koszty i marże',
+    description: 'Konfiguruj widoczność kosztów, ustalaj cele marżowe, wprowadzaj ceny kosztowe, monitoruj alerty marżowe i śledź zyski — koszty nigdy nie są pokazywane klientom.',
+    duration: '5 min',
+    difficulty: 'advanced',
+    category: 'Konfiguracja',
+    whatYouLearn: [
+      'Konfigurowanie widoczności kosztów i dostępu do panelu marż w ramach ról zespołu',
+      'Ustalanie docelowych progów marżowych na poziomie firmy i poszczególnych ofert',
+      'Dodawanie cen kosztowych do pozycji katalogowych i ofertowych',
+      'Monitorowanie alertów marżowych i reagowanie na pozycje poniżej progu rentowności',
+      'Śledzenie zysku brutto i marży łącznej na pulpicie analitycznym',
+    ],
+    steps: [
+      {
+        title: 'Konfiguruj widoczność kosztów',
+        content: 'Przejdź do Ustawień → zakładka Oferty i znajdź sekcję „Widoczność kosztów". Możesz określić, które role zespołu mają dostęp do panelu marż w edytorze oferty (Owner, Admin, Sales lub Viewer). Koszty i marże nigdy nie są eksportowane do PDF ani widoczne na stronie udostępniania — są wyłącznie wewnętrznym narzędziem analitycznym Twojej firmy.',
+        tip: 'Ogranicz widoczność kosztów do ról Owner i Admin, jeśli chcesz, aby handlowcy skupiali się na wartości oferty, a nie na marżach.',
+      },
+      {
+        title: 'Ustal cele marżowe',
+        content: 'W sekcji Koszty i marże w Ustawieniach określ docelowy próg marżowy dla całej firmy (np. 35%). Możesz też nadpisać ten cel dla konkretnej oferty bezpośrednio w edytorze. Gdy marża oferty spada poniżej progu, w nagłówku edytora pojawia się żółty alert widoczny tylko dla uprawnionego użytkownika. Próg jest również widoczny jako linia referencyjna na wykresie marż.',
+      },
+      {
+        title: 'Dodaj ceny kosztowe',
+        content: 'Ceny kosztowe możesz dodawać na dwóch poziomach: w katalogu sprzętu (jako domyślny koszt dla danej pozycji) oraz bezpośrednio w edytorze oferty dla konkretnej pozycji. Kliknij ikonę kosztów przy dowolnej pozycji oferty, aby wprowadzić lub edytować cenę kosztową. Cena kosztowa jest automatycznie przenoszona z katalogu przy dodaniu pozycji — możesz ją nadpisać dla konkretnej wyceny.',
+        tip: 'Dla sprzętu własnego zostaw koszt pusty lub wpisz amortyzację. Dla sprzętu podnajmowanego wpisz zawsze aktualną stawkę dostawcy.',
+      },
+      {
+        title: 'Monitoruj marże i alerty',
+        content: 'Panel marż w edytorze oferty wyświetla dla każdej pozycji: przychód, koszt, zysk i marżę %. Pozycje poniżej docelowej marży są oznaczone czerwoną ikoną ostrzeżenia. Na dole panelu widoczne jest podsumowanie całej oferty: łączny przychód, łączny koszt, zysk brutto i marża łączna — porównana z celem. Kliknij dowolną pozycję, aby bezpośrednio edytować jej koszt lub cenę sprzedaży.',
+      },
+      {
+        title: 'Śledź zyski na pulpicie',
+        content: 'Pulpit analityczny (Ustawienia → Analityka lub dedykowana zakładka Dashboard) prezentuje miesięczne i kwartalne zestawienia zysku brutto ze wszystkich wysłanych i wygranych ofert. Wykresy trendów pokazują zmiany marży w czasie, a ranking pozycji identyfikuje Twój najbardziej i najmniej rentowny sprzęt. Dane są filtrowane według statusu oferty, klienta i okresu.',
+      },
+    ],
+  },
 ]

@@ -647,4 +647,200 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'inventory-management',
+    title: 'Inventory Management',
+    description: 'Track your physical equipment units with serial numbers, condition status, and assignment to events — so you always know where every piece of gear is.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    videoUrl: '/videos/inventory-management.mp4',
+    whatYouLearn: [
+      'Adding units with serial numbers and asset tags',
+      'Tracking condition and status (available, assigned, maintenance, retired)',
+      'Assigning units to won proposals with auto-populated dates',
+      'Reading the mini availability calendar by category',
+      'Plan limits for inventory unit count',
+    ],
+    steps: [
+      {
+        title: 'Add a unit',
+        content: 'Go to Inventory from the sidebar and click "Add Unit". Select the equipment item from your catalog, enter a serial number and optional asset tag, and set the condition (Excellent, Good, Fair, or Poor). The unit is created with a status of "available" and is immediately trackable. Every physical piece of gear in your fleet gets its own unit record.',
+        tip: 'Use your own asset tagging system (e.g., AVE-001, AVE-002) in the asset tag field — it prints on your internal sheets and makes gear identification fast on-site.',
+      },
+      {
+        title: 'View and filter your inventory',
+        content: 'The Inventory page lists all units with their item name, serial number, condition, current status, and assigned event (if any). Use the search bar to find a unit by serial number or name. Filter by category (Audio, Video, Lighting, etc.) or by status to quickly see all units in maintenance, all available units, or everything assigned to active events.',
+      },
+      {
+        title: 'Assign a unit to an event',
+        content: 'Click on any available unit and select "Assign to Event". Choose a won proposal from the dropdown — only proposals with status "Won" appear here. The event start and end dates auto-fill from the proposal. Confirm to mark the unit as "assigned" for that date range. The unit will show as unavailable to other events during the same period.',
+        tip: 'Assign units after a proposal is won, not before. This keeps your availability data accurate and avoids phantom conflicts.',
+      },
+      {
+        title: 'Track availability with the mini calendar',
+        content: 'The right sidebar on the Inventory page shows a mini availability calendar. Select a category to see weekly availability: green cells mean units are available for that week, amber cells mean all units in that category are assigned. Use this before quoting a large event to confirm you have enough gear in stock without double-booking.',
+      },
+      {
+        title: 'Maintenance and retirement',
+        content: 'To mark a unit as needing service, click its status badge and select "Maintenance". The unit is removed from available inventory until you change the status back. When equipment reaches end of life, set it to "Retired" — it stays in your records for audit purposes but is excluded from availability counts. Plan limits apply to total active units: check your plan page for your current cap.',
+      },
+    ],
+  },
+  {
+    slug: 'crew-scheduling',
+    title: 'Crew Scheduling',
+    description: 'Manage your crew roster, assign staff and freelancers to events, and share public prep sheets so your team arrives fully briefed.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    videoUrl: '/videos/crew-scheduling.mp4',
+    whatYouLearn: [
+      'Building your crew roster with roles, skills, and day rates',
+      'Assigning crew members to won proposals',
+      'Reading the mini crew calendar for staffing conflicts',
+      'Sharing public prep sheets (equipment list, no prices)',
+      'Crew stats and active/inactive management',
+    ],
+    steps: [
+      {
+        title: 'Add crew members',
+        content: 'Go to Crew from the sidebar and click "Add Crew Member". Enter their name, type (Staff or Freelancer), primary role (e.g., Sound Engineer, Lighting Tech, AV Technician), and skills. For freelancers, add their day rate — this feeds into your internal cost tracking without appearing on client-facing documents. Staff members have a fixed salary and no per-day rate.',
+        tip: 'Add skills as comma-separated tags (e.g., "FOH mixing, RF coordination, Dante networking"). This helps when filtering crew by capability for specialist events.',
+      },
+      {
+        title: 'Filter and manage your roster',
+        content: 'The Crew page shows all members in a searchable list. Use the type filter to see only Staff or only Freelancers, or filter by skill to find the right person for a job. Toggle the "Active only" switch to hide inactive members — useful for seasonal freelancers you work with intermittently. Inactive crew can be reactivated anytime.',
+      },
+      {
+        title: 'Assign crew to an event',
+        content: 'Click "Assign to Event" on any crew member\'s card. Select a won proposal from the dropdown — the event dates auto-populate from the proposal. You can override the role for this specific event (e.g., assign your Sound Engineer as "Lead Tech" for a particular show). One crew member can be assigned to multiple non-overlapping events.',
+        tip: 'The assignment dialog shows any date conflicts before you confirm, so you can\'t accidentally double-book a person.',
+      },
+      {
+        title: 'Share a crew prep sheet',
+        content: 'Open any event from the Crew calendar and click "Share Prep Sheet". A unique public link is generated that you can send to your crew. The prep sheet shows the event name, date, venue, schedule, and the full equipment list from the proposal — but no prices are visible. It\'s designed to brief your team without exposing your commercial terms.',
+      },
+      {
+        title: 'View the crew calendar',
+        content: 'The mini crew calendar in the sidebar shows weekly staffing status by event. Green indicates events that are fully staffed, amber means events that need more crew assigned. Click the "Events needing crew" widget at the top of the page to jump directly to upcoming events with open staffing gaps. Crew stats (total staff, total freelancers, events this month) appear in the summary header.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-comparison',
+    title: 'Proposal Comparison',
+    description: 'Compare proposals from multiple vendors side by side — line items, pricing, terms, and an AI insight panel — so you can make the best decision fast.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    videoUrl: '/videos/proposal-comparison.mp4',
+    whatYouLearn: [
+      'Adding proposals to a comparison via share URLs or tokens',
+      'Reading vendor cards with value scores',
+      'Comparing line items with cheapest/most expensive badges',
+      'Comparing payment terms and cancellation policies',
+      'Using the AI insight panel to get a ranked recommendation',
+    ],
+    steps: [
+      {
+        title: 'Add proposals to compare',
+        content: 'Go to Comparison from the sidebar and click "Add Proposal". Paste a CueQuote share URL or a raw share token from any vendor using CueQuote. You can add up to 4 proposals at once — from different vendors competing for the same event, or your own alternative versions. The comparison tool works entirely via share tokens, so no login is required from the other vendors.',
+        tip: 'If you\'re comparing your own proposals (e.g., two versions you created), just open each proposal, copy the share link, and paste both here.',
+      },
+      {
+        title: 'Review vendor cards',
+        content: 'Each vendor gets a summary card showing their company name, total price, currency, validity date, and a value score. The value score is a composite rating based on price competitiveness, completeness of inclusions, and payment terms flexibility. The card with the lowest total is highlighted — useful for quick budget comparisons at a glance.',
+      },
+      {
+        title: 'Compare line items',
+        content: 'Scroll to the line item comparison table. Items are grouped by category (Audio, Video, Lighting, etc.) and cross-matched across vendors. The cheapest price for each item gets a green "Cheapest" badge; the most expensive gets an amber "Most Expensive" badge. Items that a vendor hasn\'t included appear as a dash — helping you spot scope gaps between proposals.',
+        tip: 'A vendor with a lower total but several dashes may be cheaper because they\'ve omitted items, not because they\'re more efficient. Check the gaps carefully.',
+      },
+      {
+        title: 'Compare terms',
+        content: 'The Terms section shows payment terms side by side: deposit percentage, balance due date, validity period, and cancellation policy for each vendor. This is often where proposals diverge most — a cheaper quote with a 100% upfront deposit may be riskier than a slightly pricier one with 30% deposit on acceptance.',
+      },
+      {
+        title: 'Read the AI insight panel',
+        content: 'Click "Generate AI Insight" to get a ranked recommendation based on price, terms, and scope completeness. The AI panel explains its reasoning — which vendor offers the best overall value, where others fall short, and what to ask each vendor to revise before accepting. Use the suggested next steps to negotiate or move forward with your preferred option.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-comments',
+    title: 'Proposal Comments & Activity',
+    description: 'Clients can leave comments on shared proposals, request revisions on specific line items, and get replies from you — all tracked in real time.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Proposals',
+    videoUrl: '/videos/proposal-comments.mp4',
+    whatYouLearn: [
+      'How clients leave comments on the share page',
+      'Referencing specific line items in a comment',
+      'Flagging comments as revision requests',
+      'Replying from the proposal editor',
+      'Resolving revisions and clearing the badge count',
+    ],
+    steps: [
+      {
+        title: 'Client leaves a comment',
+        content: 'When a client opens a shared proposal, they\'ll see a "Comments" panel at the bottom of the page. They can type a message and optionally reference a specific line item by clicking the item name before submitting. The comment is timestamped and attributed to their name, and you\'re notified immediately.',
+        tip: 'Clients don\'t need a CueQuote account to leave comments — the share link gives them access to the comment panel automatically.',
+      },
+      {
+        title: 'Revision requests',
+        content: 'When leaving a comment, clients can check "Flag as revision request". This marks the comment with a pending status and signals to you that a change is expected before they\'ll accept. Revision requests are visually distinct from general comments — they appear with an amber indicator so nothing gets missed in a busy thread.',
+      },
+      {
+        title: 'Reply from the editor',
+        content: 'Open the proposal in your editor and click the "Comments" tab. All client comments appear here in chronological order. Type your reply in the text field below any comment and press Send. Replies are visible to the client the next time they view the share page — the comment thread updates in near real time via polling.',
+        tip: 'A red badge on the Comments tab shows how many unread or unresolved comments are waiting. It resets once you\'ve opened the tab.',
+      },
+      {
+        title: 'Resolve revisions',
+        content: 'Once you\'ve made the requested changes (edited the line item, adjusted pricing, updated terms), return to the Comments tab and click "Mark Resolved" on the revision request. The comment moves to a resolved state and the client sees it as closed when they next visit the share page. Resolved items are kept in the thread for audit purposes but no longer count toward the unresolved badge.',
+      },
+    ],
+  },
+  {
+    slug: 'costing-margins',
+    title: 'Costing & Margins',
+    description: 'Track cost prices, set margin targets, and monitor profitability per proposal — all invisible to clients.',
+    duration: '5 min',
+    difficulty: 'advanced',
+    category: 'Setup',
+    videoUrl: '/videos/costing-margins.mp4',
+    whatYouLearn: [
+      'Configuring who can see cost data (owner/admin vs. sales)',
+      'Setting a default margin target and per-category overrides',
+      'Adding cost prices to catalog items and individual line items',
+      'Reading the margin summary panel and responding to alerts',
+      'Tracking overall profitability from the dashboard widget',
+    ],
+    steps: [
+      {
+        title: 'Configure cost visibility',
+        content: 'Go to Settings → Costing & Margins. The visibility toggle controls who sees cost data inside the editor: "Owner & Admin only" restricts it to those roles, while "Include Sales" lets the Sales role see costs and margins too. Cost prices are never shown on client-facing share pages or PDFs — this setting only affects internal team visibility.',
+        tip: 'Start with "Owner & Admin only" if your sales team is new. You can open it up to the full team once everyone understands how margin targets work.',
+      },
+      {
+        title: 'Set margin targets',
+        content: 'Enter your default target margin percentage in the "Default Margin Target" field — this is the minimum profit margin you want across all proposals. Below it, you can add per-category overrides: for example, Labor at 40%, Sub-hired Video at 20%, and owned Audio at 60%. Category overrides take precedence over the default when the margin summary runs its calculations.',
+      },
+      {
+        title: 'Add cost prices',
+        content: 'Cost prices can be set in two places. In the Catalog, edit any item and fill in the "Cost Price" field for sub-hired or purchased equipment. In the proposal editor, turn on the cost toggle (the eye icon next to the line items table) — a "Cost" column appears beside each line item where you can enter or override the cost for that specific job. Leave cost empty for equipment you own outright.',
+        tip: 'Sub-hired equipment almost always needs a cost price. Enter the supplier\'s rate so the margin panel reflects your true profit after paying them.',
+      },
+      {
+        title: 'Monitor margins in the editor',
+        content: 'With the cost toggle enabled, the margin summary panel appears at the bottom of the Equipment tab. It shows Revenue (your sale price), Cost (sum of cost prices), Profit (the difference), and Margin % for the entire proposal. Items below your target margin threshold are highlighted with an amber alert. Items with no cost price set show a "Missing cost" warning so nothing slips through.',
+      },
+      {
+        title: 'Track profit from the dashboard',
+        content: 'The dashboard profit summary widget shows aggregate revenue, cost, and profit for the current month across all won proposals. Use it for a quick financial health check without opening individual proposals. The widget respects the same visibility settings — Sales role members see it only if "Include Sales" is enabled in Costing & Margins settings.',
+      },
+    ],
+  },
 ]
