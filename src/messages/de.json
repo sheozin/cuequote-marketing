@@ -17,9 +17,9 @@
     "forPlanners": "Für Eventplaner"
   },
   "hero": {
-    "metaTitle": "CueQuote — KI-gestützte AV-Angebote in Sekunden",
-    "metaDescription": "Verwandeln Sie Veranstaltungsbeschreibungen in professionelle AV-Ausrüstungsangebote in unter 2 Minuten.",
-    "badge": "KI-gestützte AV-Angebotserstellung",
+    "metaTitle": "CueQuote — KI-gestützte AV-Angebote & Eventproduktionsplanung",
+    "metaDescription": "Verwandeln Sie Veranstaltungsbeschreibungen in professionelle AV-Ausrüstungsangebote oder detaillierte Eventproduktionspläne in unter 2 Minuten.",
+    "badge": "KI-gestützte AV-Angebote & Planung",
     "title": "Verwandeln Sie Veranstaltungsbeschreibungen in",
     "titleHighlight": "professionelle AV-Angebote",
     "titleEnd": "in Sekunden",
@@ -30,11 +30,11 @@
     "freeProposals": "3 kostenlose Angebote/Monat"
   },
   "socialProof": {
-    "trusted": "Vertraut von AV-Profis"
+    "trusted": "Vertraut von AV-Profis und Veranstaltungsplanern"
   },
   "useCases": {
-    "title": "Entwickelt für AV-Profis",
-    "subtitle": "Ob Sie ein Verleihunternehmen betreiben, freiberuflich arbeiten oder eine Agentur leiten — CueQuote passt in Ihren Workflow.",
+    "title": "Entwickelt für Produktionsprofis",
+    "subtitle": "Ob Sie ein Verleihunternehmen betreiben, freiberuflich arbeiten, eine Agentur leiten oder Events planen — CueQuote passt in Ihren Workflow.",
     "avProductionTitle": "AV-Produktionsfirmen",
     "avProductionDesc": "Erstellen Sie präzise Angebote aus Ihrem Ausrüstungskatalog. Versenden Sie gebrandete PDFs, die Ihrer Unternehmensidentität entsprechen.",
     "freelanceTitle": "Freiberufliche AV-Techniker",
@@ -45,8 +45,8 @@
     "case4Desc": "Wissen Sie, welches AV-Equipment Sie benötigen, bevor Sie einen Anbieter anrufen. Erhalten Sie Ausrüstungsempfehlungen, Budgetschätzungen und professionelle Briefs — ohne technisches Wissen."
   },
   "features": {
-    "title": "Alles, was Sie für schnelleres Angebotswesen brauchen",
-    "subtitle": "Von der KI-Generierung bis zum PDF-Export — alles auf einer Plattform.",
+    "title": "Alles, was Sie für schnelleres Angebotswesen und bessere Planung brauchen",
+    "subtitle": "Von der KI-Generierung bis zum PDF-Export — alles auf einer Plattform, für AV-Firmen und Veranstaltungsplaner.",
     "aiTitle": "KI-Angebotsgenerierung",
     "aiDesc": "Beschreiben Sie Ihre Veranstaltung in natürlicher Sprache. Die KI erstellt eine vollständige, kalkulierte Ausrüstungsliste mit Mengen und Preisen.",
     "pdfTitle": "Gebrandeter PDF-Export",
@@ -70,11 +70,11 @@
     "step2Title": "Überprüfen",
     "step2Desc": "Die KI erstellt eine vollständige Ausrüstungsliste. Bearbeiten Sie Mengen, Preise, fügen Sie Positionen hinzu oder entfernen Sie sie. Alles ist bearbeitbar.",
     "step3Title": "Senden",
-    "step3Desc": "Exportieren Sie ein gebrandetes PDF oder teilen Sie einen Link. Verfolgen Sie, wann Ihr Kunde es aufruft. Werden Sie benachrichtigt, wenn er antwortet."
+    "step3Desc": "Exportieren Sie ein gebrandetes PDF oder teilen Sie einen Link. Verfolgen Sie, wann er geöffnet wird. Werden Sie benachrichtigt, wenn jemand antwortet."
   },
   "pricing": {
     "metaTitle": "Preise",
-    "metaDescription": "Einfache, transparente Preise für die AV-Angebotserstellung.",
+    "metaDescription": "Einfache, transparente Preise für AV-Angebotserstellung und Eventproduktionsplanung.",
     "title": "Einfache, transparente Preise",
     "subtitle": "Starten Sie kostenlos. Upgraden Sie bei Bedarf.",
     "monthly": "Monatlich",
@@ -100,7 +100,7 @@
     "starterF5": "1 Benutzer",
     "starterF6": "E-Mail-Support",
     "starterF7": "Grundlegende Risikobewertung",
-    "starterSave": "Am häufigsten von AV-Profis gewählt",
+    "starterSave": "Am häufigsten von Produktionsprofis gewählt",
     "proName": "Pro",
     "proDesc": "Für wachsende Produktionsfirmen.",
     "proF1": "40 Angebote/Monat",
@@ -143,7 +143,7 @@
     "creditsNeverExpire": "Guthaben läuft nie ab",
     "brandedPdfsIncluded": "Gebrandete PDFs inklusive",
     "readyTitle": "Bereit, schneller Angebote zu erstellen?",
-    "readySubtitle": "Schließen Sie sich AV-Profis an, die Angebote in Minuten statt Stunden erstellen.",
+    "readySubtitle": "Schließen Sie sich AV-Profis und Veranstaltungsplanern an, die Angebote in Minuten statt Stunden erstellen.",
     "noCreditCard": "Keine Kreditkarte erforderlich",
     "faqQ1": "Kann ich den Tarif jederzeit wechseln?",
     "faqA1": "Ja. Upgraden oder downgraden Sie jederzeit. Änderungen werden mit dem nächsten Abrechnungszyklus wirksam.",
@@ -240,12 +240,12 @@
   },
   "homeFaq": {
     "title": "Häufig gestellte Fragen",
-    "q1": "Wie generiert die KI Angebote?",
+    "q1": "Wie generiert die KI Angebote und Produktionspläne?",
     "a1": "Sie beschreiben Ihre Veranstaltung in natürlicher Sprache — Art der Veranstaltung, Ort, Teilnehmerzahl, AV-Anforderungen. Die KI von CueQuote analysiert die Anforderungen und erstellt eine vollständige Ausrüstungsliste mit Mengen und Preisen basierend auf Ihrem Katalog.",
     "q2": "Kann ich die generierten Angebote anpassen?",
     "a2": "Absolut. Alles ist bearbeitbar — fügen Sie Positionen hinzu, entfernen oder ändern Sie sie, passen Sie Mengen und Preise an, setzen Sie Rabatte und MwSt. Die KI gibt Ihnen einen Ausgangspunkt; Sie haben die volle Kontrolle.",
-    "q3": "Welche Ausrüstungskategorien deckt CueQuote ab?",
-    "a3": "Audio, Video, Beleuchtung, Simultanübersetzung, Streaming, Digital Signage, Bühnenbau, Personal und Transport. Wir befüllen Ihren Katalog mit 30 gängigen AV-Artikeln, und Sie können eigene hinzufügen.",
+    "q3": "Können Veranstaltungsplaner CueQuote nutzen?",
+    "a3": "Ja! CueQuote verfügt über einen dedizierten Modus für Veranstaltungsplaner. Beschreiben Sie Ihre Veranstaltung und unsere KI empfiehlt das passende AV-Equipment mit Budgetschätzungen. Sie können einen professionellen Anbieter-Brief herunterladen und an AV-Firmen zur Angebotseinholung senden.",
     "q4": "Sind meine Daten sicher?",
     "a4": "Ja. Wir verwenden Supabase mit Row-Level-Security. Ihr Ausrüstungskatalog, Ihre Preise und Kundendaten sind auf Ihr Unternehmen beschränkt. Kein anderer Benutzer kann auf Ihre Daten zugreifen.",
     "q5": "Kann ich mein eigenes Branding verwenden?",
@@ -256,8 +256,8 @@
     "a7": "Ja. Starter-, Pro- und Business-Tarife beinhalten eine 3-tägige kostenlose Testversion. Keine Kreditkarte zum Starten erforderlich.",
     "q8": "Was passiert, wenn ich mein Angebotslimit erreiche?",
     "a8": "Sie können Ihren Tarif upgraden oder Guthaben-Pakete ab 19 € für 3 Angebote kaufen. Guthaben läuft nie ab.",
-    "q9": "Können Veranstaltungsplaner CueQuote nutzen?",
-    "a9": "Ja! CueQuote verfügt über einen dedizierten Modus für Veranstaltungsplaner. Beschreiben Sie Ihre Veranstaltung und unsere KI empfiehlt das passende AV-Equipment mit Budgetschätzungen. Sie können einen professionellen Anbieter-Brief herunterladen und an AV-Firmen zur Angebotseinholung senden.",
+    "q9": "Welche Ausrüstungskategorien deckt CueQuote ab?",
+    "a9": "Audio, Video, Beleuchtung, Simultanübersetzung, Streaming, Digital Signage, Bühnenbau, Personal und Transport. Wir befüllen Ihren Katalog mit 30 gängigen AV-Artikeln, und Sie können eigene hinzufügen.",
     "q10": "Benötige ich technisches AV-Wissen zur Nutzung von CueQuote?",
     "a10": "Überhaupt nicht. Für Veranstaltungsplaner erklärt CueQuote jede Ausrüstungsempfehlung in einfacher Sprache — was es ist, warum Sie es brauchen und was es kosten sollte. Kein Fachjargon, kein Rätselraten."
   },
@@ -266,8 +266,8 @@
     "viewAll": "Alle anzeigen"
   },
   "homeCta": {
-    "title": "Erstellen Sie noch heute Angebote",
-    "subtitle": "Schließen Sie sich AV-Profis an, die schneller Angebote erstellen und mehr Aufträge mit CueQuote gewinnen.",
+    "title": "Erstellen Sie noch heute Angebote und Pläne",
+    "subtitle": "Schließen Sie sich AV-Profis und Veranstaltungsplanern an, die mit CueQuote schneller arbeiten.",
     "cta": "Kostenlos starten",
     "noCreditCard": "Keine Kreditkarte erforderlich"
   },
@@ -275,18 +275,18 @@
     "metaTitle": "Über uns",
     "metaDescription": "Die Geschichte hinter CueQuote.",
     "title": "Über CueQuote",
-    "subtitle": "Von AV-Profis entwickelt, für AV-Profis.",
+    "subtitle": "Von AV-Profis entwickelt, für AV-Firmen und Veranstaltungsorganisatoren.",
     "badge": "Unsere Geschichte",
     "heading": "Von AV-Profis entwickelt,",
-    "headingHighlight": "für AV-Profis",
-    "p1": "CueQuote entstand aus einer einfachen Frustration: Die Angebotserstellung für AV-Ausrüstung bei Live-Events dauert zu lange.",
+    "headingHighlight": "für AV-Firmen und Veranstaltungsorganisatoren",
+    "p1": "CueQuote entstand aus einer einfachen Frustration: Die Angebotserstellung für AV-Ausrüstung bei Live-Events dauert zu lange — und AV-Produktion ohne technisches Wissen zu planen ist überwältigend (wenn man Veranstaltungsorganisator ist).",
     "p2": "Wir sind <strong>AVE Events</strong> — ein Produktionsunternehmen mit Sitz in Europa, das Konferenzen, Firmenveranstaltungen und Live-Shows auf dem ganzen Kontinent und im Nahen Osten betreut hat. Wir wissen, wie es ist, um 22 Uhr ein Briefing zu erhalten und bis zum Morgen ein Angebot zu benötigen.",
     "p3": "Tabellen, Kopieren und Einfügen aus alten Angeboten, manuelle Berechnungen — wir haben alles gemacht. Und wir haben beobachtet, wie andere Unternehmen dasselbe tun. Stunden Arbeit für jedes Angebot. Fehler in der Preisgestaltung. Inkonsistente Formatierung. Angebote, die nicht die Qualität unserer Produktionsarbeit widerspiegeln.",
-    "p4": "Also haben wir CueQuote entwickelt: ein KI-gestütztes Werkzeug, das Veranstaltungsbeschreibungen in vollständige, professionelle AV-Angebote umwandelt. Dieselbe Qualität in 2 Minuten statt 2 Stunden.",
+    "p4": "Also haben wir CueQuote entwickelt: ein KI-gestütztes Werkzeug, das Veranstaltungsbeschreibungen in vollständige, professionelle AV-Angebote oder detaillierte Produktionspläne für Veranstaltungsorganisatoren umwandelt. Dieselbe Qualität in 2 Minuten statt 2 Stunden.",
     "whyDifferent": "Warum wir anders sind",
     "diff1": "Wir haben Hunderte von echten AV-Angeboten kalkuliert — die KI weiß, was eine 300-Personen-Konferenz wirklich braucht",
     "diff2": "Entwickelt vom gleichen Team hinter CueDeck, der Live-Event-Produktionskonsole",
-    "diff3": "Wir verstehen den AV-Vermietungsworkflow, nicht nur generisches Angebotswesen",
+    "diff3": "Wir verstehen sowohl den AV-Vermietungsworkflow als auch die Eventplanung, nicht nur generisches Angebotswesen",
     "diff4": "Europa-orientiert: Mehrwährungsfähig, MwSt.-Unterstützung, DSGVO-konform",
     "p5": "CueQuote ist Teil des <strong>CueDeck-Ökosystems</strong> — Werkzeuge, die speziell für die Live-Event-Produktionsbranche entwickelt wurden. Wir sind kein generisches Angebots-Tool mit AV-Oberfläche. Wir haben dies von Grund auf für unsere Branche entwickelt.",
     "cta": "CueQuote kostenlos testen",
@@ -300,8 +300,8 @@
     "statCountries": "Bediente Länder",
     "statTeam": "Team",
     "whyDifferentSub": "Aufgebaut aus echter AV-Produktionserfahrung, nicht aus einer generischen Vorlage.",
-    "ctaTitle": "Bereit, Ihre AV-Angebote zu revolutionieren?",
-    "ctaSub": "Schließen Sie sich AV-Profis an, die mit CueQuote schneller Aufträge gewinnen."
+    "ctaTitle": "Bereit, Ihre Arbeitsweise zu revolutionieren?",
+    "ctaSub": "Schließen Sie sich AV-Profis und Veranstaltungsplanern an, die mit CueQuote schneller arbeiten."
   },
   "contact": {
     "metaTitle": "Kontakt",
@@ -343,7 +343,7 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Tipps und Einblicke für AV-Profis.",
+    "metaDescription": "Tipps und Einblicke für AV-Profis und Veranstaltungsplaner.",
     "title": "Blog",
     "subtitle": "Tipps, Anleitungen und Einblicke für AV-Profis.",
     "readMore": "Mehr lesen",
@@ -351,18 +351,18 @@
     "allPosts": "Alle Beiträge",
     "badge": "Blog",
     "heading": "Einblicke für AV-Profis",
-    "headingSubtitle": "Tipps, Anleitungen und Branchenperspektiven, um mehr Angebote zu gewinnen und Ihr AV-Geschäft auszubauen.",
+    "headingSubtitle": "Tipps, Anleitungen und Branchenperspektiven, um mehr Angebote zu gewinnen und Ihr AV-Geschäft auszubauen — und für Veranstaltungsplaner immer einen Schritt voraus zu sein.",
     "backToBlock": "Zurück zum Blog"
   },
   "subscribe": {
     "title": "Bleiben Sie auf dem Laufenden",
-    "subtitle": "Erhalten Sie Tipps zur AV-Angebotserstellung, Produktupdates und Brancheneinblicke. Kein Spam.",
+    "subtitle": "Erhalten Sie Tipps zur AV-Angebotserstellung und Eventplanung, Produktupdates und Brancheneinblicke. Kein Spam.",
     "placeholder": "sie@unternehmen.com",
     "button": "Abonnieren",
     "success": "Abonniert!"
   },
   "footer": {
-    "tagline": "KI-gestützte AV-Angebote für Event-Produktionsprofis.",
+    "tagline": "KI-gestützte AV-Angebote und Eventplanung für Produktionsprofis.",
     "product": "Produkt",
     "company": "Unternehmen",
     "legal": "Rechtliches",
@@ -379,7 +379,9 @@
     "changelog": "Änderungsprotokoll",
     "docs": "Dokumentation",
     "tutorials": "Tutorials",
-    "resources": "Ressourcen"
+    "resources": "Ressourcen",
+    "forAvCompanies": "Für AV-Firmen",
+    "forEventPlanners": "Für Veranstaltungsplaner"
   },
   "posts": {
     "interactive-proposal-viewer-client-comments": {
@@ -1161,7 +1163,7 @@
   },
   "tutorials": {
     "metaTitle": "Tutorials — CueQuote lernen",
-    "metaDescription": "Schritt-für-Schritt-Anleitungen zur Beherrschung von CueQuote.",
+    "metaDescription": "Schritt-für-Schritt-Anleitungen zur Beherrschung von CueQuote für AV-Angebote und Eventplanung.",
     "badge": "Tutorials",
     "heading": "Lernen Sie CueQuote in Minuten",
     "subtitle": "Schritt-für-Schritt-Videoanleitungen, die Ihnen helfen, jede Funktion zu meistern",
@@ -1194,7 +1196,7 @@
   },
   "docs": {
     "metaTitle": "Dokumentation — Erste Schritte",
-    "metaDescription": "Erfahren Sie, wie Sie mit CueQuote professionelle AV-Angebote erstellen.",
+    "metaDescription": "Erfahren Sie, wie Sie mit CueQuote professionelle AV-Angebote erstellen oder Events planen.",
     "badge": "Dokumentation",
     "heading": "Erste Schritte mit",
     "headingHighlight": "CueQuote",

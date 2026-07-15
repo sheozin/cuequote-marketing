@@ -17,9 +17,9 @@
     "forPlanners": "Pour les organisateurs"
   },
   "hero": {
-    "metaTitle": "CueQuote — Devis AV par IA en quelques secondes",
-    "metaDescription": "Transformez les descriptions d'événements en devis professionnels d'équipement AV en moins de 2 minutes.",
-    "badge": "Devis AV assistés par IA",
+    "metaTitle": "CueQuote — Devis AV et planification de production événementielle par IA",
+    "metaDescription": "Transformez les descriptions d'événements en devis professionnels d'équipement AV ou en plans de production détaillés en moins de 2 minutes.",
+    "badge": "Devis AV et planification assistés par IA",
     "title": "Transformez les descriptions d'événements en",
     "titleHighlight": "devis AV professionnels",
     "titleEnd": "en quelques secondes",
@@ -30,11 +30,11 @@
     "freeProposals": "3 devis gratuits/mois"
   },
   "socialProof": {
-    "trusted": "Approuvé par les professionnels AV"
+    "trusted": "Approuvé par les professionnels AV et les planificateurs d'événements"
   },
   "useCases": {
-    "title": "Conçu pour les professionnels AV",
-    "subtitle": "Que vous dirigiez une société de location, travailliez en freelance ou gériez une agence — CueQuote s'adapte à votre workflow.",
+    "title": "Conçu pour les professionnels de la production",
+    "subtitle": "Que vous dirigiez une société de location, travailliez en freelance, gériez une agence ou planifiez des événements — CueQuote s'adapte à votre workflow.",
     "avProductionTitle": "Sociétés de production AV",
     "avProductionDesc": "Générez des devis précis à partir de votre catalogue d'équipement. Envoyez des PDF personnalisés qui reflètent l'identité de votre entreprise.",
     "freelanceTitle": "Techniciens AV indépendants",
@@ -45,8 +45,8 @@
     "case4Desc": "Sachez de quel équipement AV vous avez besoin avant d'appeler un prestataire. Obtenez des recommandations d'équipement, des estimations de budget et des briefs professionnels — aucune connaissance technique requise."
   },
   "features": {
-    "title": "Tout ce qu'il vous faut pour des devis plus rapides",
-    "subtitle": "De la génération IA à l'export PDF — tout sur une seule plateforme.",
+    "title": "Tout ce qu'il vous faut pour des devis et une planification plus rapides",
+    "subtitle": "De la génération IA à l'export PDF — tout sur une seule plateforme, pour les prestataires AV et les planificateurs d'événements.",
     "aiTitle": "Génération de devis par IA",
     "aiDesc": "Décrivez votre événement en langage courant. L'IA génère une liste d'équipement complète et chiffrée avec quantités et tarifs.",
     "pdfTitle": "Export PDF personnalisé",
@@ -70,11 +70,11 @@
     "step2Title": "Vérifiez",
     "step2Desc": "L'IA génère une liste d'équipement complète. Modifiez les quantités, les prix, ajoutez ou supprimez des postes. Tout est modifiable.",
     "step3Title": "Envoyez",
-    "step3Desc": "Exportez un PDF personnalisé ou partagez un lien. Suivez quand votre client le consulte. Soyez notifié quand il répond."
+    "step3Desc": "Exportez un PDF personnalisé ou partagez un lien. Suivez quand il est consulté. Soyez notifié quand on vous répond."
   },
   "pricing": {
     "metaTitle": "Tarifs",
-    "metaDescription": "Des tarifs simples et transparents pour la génération de devis AV.",
+    "metaDescription": "Des tarifs simples et transparents pour la génération de devis AV et la planification de production événementielle.",
     "title": "Des tarifs simples et transparents",
     "subtitle": "Commencez gratuitement. Évoluez selon vos besoins.",
     "monthly": "Mensuel",
@@ -100,7 +100,7 @@
     "starterF5": "1 utilisateur",
     "starterF6": "Support par e-mail",
     "starterF7": "Évaluation des risques de base",
-    "starterSave": "Le plus choisi par les professionnels AV",
+    "starterSave": "Le plus choisi par les professionnels de la production",
     "proName": "Pro",
     "proDesc": "Pour les sociétés de production en croissance.",
     "proF1": "40 devis/mois",
@@ -143,7 +143,7 @@
     "creditsNeverExpire": "Les crédits n'expirent jamais",
     "brandedPdfsIncluded": "PDF personnalisés inclus",
     "readyTitle": "Prêt à établir des devis plus vite ?",
-    "readySubtitle": "Rejoignez les professionnels AV qui créent des devis en minutes, pas en heures.",
+    "readySubtitle": "Rejoignez les professionnels AV et les planificateurs d'événements qui créent des devis en minutes, pas en heures.",
     "noCreditCard": "Aucune carte de crédit requise",
     "faqQ1": "Puis-je changer de forfait à tout moment ?",
     "faqA1": "Oui. Passez à un forfait supérieur ou inférieur à tout moment. Les modifications prennent effet lors du prochain cycle de facturation.",
@@ -240,12 +240,12 @@
   },
   "homeFaq": {
     "title": "Questions fréquemment posées",
-    "q1": "Comment l'IA génère-t-elle les devis ?",
+    "q1": "Comment l'IA génère-t-elle les devis et plans de production ?",
     "a1": "Vous décrivez votre événement en langage courant — type d'événement, lieu, nombre de participants, besoins AV. L'IA de CueQuote analyse les exigences et génère une liste d'équipement complète avec quantités et tarifs basés sur votre catalogue.",
     "q2": "Puis-je personnaliser les devis générés ?",
     "a2": "Absolument. Tout est modifiable — ajoutez, supprimez ou modifiez des postes, ajustez les quantités et les prix, définissez les remises et la TVA. L'IA vous donne un point de départ ; vous avez le contrôle total.",
-    "q3": "Quelles catégories d'équipement CueQuote couvre-t-il ?",
-    "a3": "Audio, vidéo, éclairage, interprétation simultanée, streaming, affichage numérique, scénographie, main-d'œuvre et transport. Nous pré-remplissons votre catalogue avec 30 articles AV courants, et vous pouvez ajouter les vôtres.",
+    "q3": "Les planificateurs d'événements peuvent-ils utiliser CueQuote ?",
+    "a3": "Oui ! CueQuote dispose d'un mode dédié aux planificateurs d'événements. Décrivez votre événement et notre IA recommande le bon équipement AV avec des estimations de budget. Vous pouvez télécharger un brief prestataire professionnel à envoyer aux sociétés AV pour obtenir des devis.",
     "q4": "Mes données sont-elles sécurisées ?",
     "a4": "Oui. Nous utilisons Supabase avec la sécurité au niveau des lignes. Votre catalogue d'équipement, vos tarifs et vos données clients sont isolés dans votre entreprise. Aucun autre utilisateur ne peut accéder à vos données.",
     "q5": "Puis-je utiliser ma propre image de marque ?",
@@ -256,8 +256,8 @@
     "a7": "Oui. Les forfaits Starter, Pro et Business incluent un essai gratuit de 3 jours. Aucune carte de crédit requise pour commencer.",
     "q8": "Que se passe-t-il quand j'atteins ma limite de devis ?",
     "a8": "Vous pouvez passer à un forfait supérieur ou acheter des packs de crédits à partir de 19 € pour 3 devis. Les crédits n'expirent jamais.",
-    "q9": "Les planificateurs d'événements peuvent-ils utiliser CueQuote ?",
-    "a9": "Oui ! CueQuote dispose d'un mode dédié aux planificateurs d'événements. Décrivez votre événement et notre IA recommande le bon équipement AV avec des estimations de budget. Vous pouvez télécharger un brief prestataire professionnel à envoyer aux sociétés AV pour obtenir des devis.",
+    "q9": "Quelles catégories d'équipement CueQuote couvre-t-il ?",
+    "a9": "Audio, vidéo, éclairage, interprétation simultanée, streaming, affichage numérique, scénographie, main-d'œuvre et transport. Nous pré-remplissons votre catalogue avec 30 articles AV courants, et vous pouvez ajouter les vôtres.",
     "q10": "Ai-je besoin de connaissances techniques en AV pour utiliser CueQuote ?",
     "a10": "Pas du tout. Pour les planificateurs d'événements, CueQuote explique chaque recommandation d'équipement en langage clair — ce que c'est, pourquoi vous en avez besoin et ce que ça devrait coûter. Pas de jargon, pas de devinettes."
   },
@@ -266,8 +266,8 @@
     "viewAll": "Voir tout"
   },
   "homeCta": {
-    "title": "Commencez à créer des devis dès aujourd'hui",
-    "subtitle": "Rejoignez les professionnels AV qui établissent des devis plus vite et remportent plus de contrats avec CueQuote.",
+    "title": "Commencez à créer des devis et des plans dès aujourd'hui",
+    "subtitle": "Rejoignez les professionnels AV et les planificateurs d'événements qui travaillent plus vite avec CueQuote.",
     "cta": "Commencer gratuitement",
     "noCreditCard": "Aucune carte de crédit requise"
   },
@@ -275,18 +275,18 @@
     "metaTitle": "À propos",
     "metaDescription": "L'histoire derrière CueQuote.",
     "title": "À propos de CueQuote",
-    "subtitle": "Créé par des professionnels AV, pour des professionnels AV.",
+    "subtitle": "Créé par des professionnels AV, pour les entreprises AV et les organisateurs d'événements.",
     "badge": "Notre histoire",
     "heading": "Créé par des professionnels AV,",
-    "headingHighlight": "pour des professionnels AV",
-    "p1": "CueQuote est né d'une frustration simple : l'établissement de devis pour l'équipement AV lors d'événements en direct prend trop de temps.",
+    "headingHighlight": "pour les entreprises AV et les organisateurs d'événements",
+    "p1": "CueQuote est né d'une frustration simple : l'établissement de devis pour l'équipement AV lors d'événements en direct prend trop de temps — et planifier une production AV sans connaissances techniques est une tâche redoutable (si vous êtes organisateur d'événements).",
     "p2": "Nous sommes <strong>AVE Events</strong> — une société de production basée en Europe qui a géré des conférences, des événements d'entreprise et des spectacles en direct à travers le continent et au Moyen-Orient. Nous savons ce que c'est que de recevoir un briefing à 22 h et d'avoir besoin d'un devis pour le lendemain matin.",
     "p3": "Tableaux, copier-coller d'anciens devis, calculs manuels — nous avons tout fait. Et nous avons vu d'autres entreprises faire de même. Des heures de travail pour chaque devis. Des erreurs de tarification. Une mise en forme incohérente. Des devis qui ne reflètent pas la qualité de notre travail de production.",
-    "p4": "Alors nous avons créé CueQuote : un outil assisté par IA qui transforme les descriptions d'événements en devis AV complets et professionnels. La même qualité en 2 minutes au lieu de 2 heures.",
+    "p4": "Alors nous avons créé CueQuote : un outil assisté par IA qui transforme les descriptions d'événements en devis AV complets et professionnels ou en plans de production détaillés pour les organisateurs d'événements. La même qualité en 2 minutes au lieu de 2 heures.",
     "whyDifferent": "Pourquoi nous sommes différents",
     "diff1": "Nous avons chiffré des centaines de devis AV réels — l'IA sait ce dont une conférence de 300 personnes a réellement besoin",
     "diff2": "Créé par la même équipe derrière CueDeck, la console de production d'événements en direct",
-    "diff3": "Nous comprenons le workflow de location AV, pas seulement la création de devis générique",
+    "diff3": "Nous comprenons à la fois le workflow de location AV et la planification d'événements, pas seulement la création de devis générique",
     "diff4": "Priorité européenne : multi-devises, TVA, conformité RGPD",
     "p5": "CueQuote fait partie de l'<strong>écosystème CueDeck</strong> — des outils conçus spécifiquement pour l'industrie de la production d'événements en direct. Nous ne sommes pas un outil de devis générique avec une couche AV. Nous avons tout construit de zéro pour notre industrie.",
     "cta": "Essayer CueQuote gratuitement",
@@ -300,8 +300,8 @@
     "statCountries": "Pays desservis",
     "statTeam": "Équipe",
     "whyDifferentSub": "Construit à partir d'une expérience réelle en production AV, pas d'un modèle générique.",
-    "ctaTitle": "Prêt à transformer vos devis AV ?",
-    "ctaSub": "Rejoignez les professionnels AV qui concluent plus vite avec CueQuote."
+    "ctaTitle": "Prêt à transformer votre façon de travailler ?",
+    "ctaSub": "Rejoignez les professionnels AV et les planificateurs d'événements qui travaillent plus vite avec CueQuote."
   },
   "contact": {
     "metaTitle": "Contact",
@@ -343,7 +343,7 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Conseils et perspectives pour les professionnels AV.",
+    "metaDescription": "Conseils et perspectives pour les professionnels AV et les planificateurs d'événements.",
     "title": "Blog",
     "subtitle": "Conseils, guides et perspectives pour les professionnels AV.",
     "readMore": "Lire la suite",
@@ -351,18 +351,18 @@
     "allPosts": "Tous les articles",
     "badge": "Blog",
     "heading": "Perspectives pour les professionnels AV",
-    "headingSubtitle": "Conseils, guides et perspectives de l'industrie pour vous aider à remporter plus de devis et développer votre activité AV.",
+    "headingSubtitle": "Conseils, guides et perspectives de l'industrie pour vous aider à remporter plus de devis et développer votre activité AV — et pour que les planificateurs d'événements gardent une longueur d'avance.",
     "backToBlock": "Retour au blog"
   },
   "subscribe": {
     "title": "Restez informé",
-    "subtitle": "Recevez des conseils sur les devis AV, des mises à jour produit et des perspectives de l'industrie. Pas de spam.",
+    "subtitle": "Recevez des conseils sur les devis AV et la planification d'événements, des mises à jour produit et des perspectives de l'industrie. Pas de spam.",
     "placeholder": "vous@entreprise.com",
     "button": "S'abonner",
     "success": "Abonné !"
   },
   "footer": {
-    "tagline": "Devis AV assistés par IA pour les professionnels de la production événementielle.",
+    "tagline": "Devis AV et planification événementielle assistés par IA pour les professionnels de la production.",
     "product": "Produit",
     "company": "Entreprise",
     "legal": "Mentions légales",
@@ -379,7 +379,9 @@
     "changelog": "Journal des modifications",
     "docs": "Documentation",
     "tutorials": "Tutoriels",
-    "resources": "Ressources"
+    "resources": "Ressources",
+    "forAvCompanies": "Pour les prestataires AV",
+    "forEventPlanners": "Pour les planificateurs d'événements"
   },
   "posts": {
     "interactive-proposal-viewer-client-comments": {
@@ -1163,7 +1165,7 @@
   },
   "tutorials": {
     "metaTitle": "Tutoriels — Apprenez CueQuote",
-    "metaDescription": "Guides pas à pas pour maîtriser CueQuote.",
+    "metaDescription": "Guides pas à pas pour maîtriser CueQuote pour les devis AV et la planification d'événements.",
     "badge": "Tutoriels",
     "heading": "Apprenez CueQuote en quelques minutes",
     "subtitle": "Des guides vidéo étape par étape pour maîtriser chaque fonctionnalité",
@@ -1196,7 +1198,7 @@
   },
   "docs": {
     "metaTitle": "Documentation — Premiers pas",
-    "metaDescription": "Apprenez à utiliser CueQuote pour créer des devis AV professionnels.",
+    "metaDescription": "Apprenez à utiliser CueQuote pour créer des devis AV professionnels ou planifier des événements.",
     "badge": "Documentation",
     "heading": "Premiers pas avec",
     "headingHighlight": "CueQuote",

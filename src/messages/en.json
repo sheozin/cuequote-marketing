@@ -17,9 +17,9 @@
     "forPlanners": "For Event Planners"
   },
   "hero": {
-    "metaTitle": "CueQuote — AI-Powered AV Proposals in Seconds",
-    "metaDescription": "Turn event descriptions into professional AV equipment proposals in under 2 minutes.",
-    "badge": "AI-Powered AV Quoting",
+    "metaTitle": "CueQuote — AI-Powered AV Proposals & Event Production Planning",
+    "metaDescription": "Turn event descriptions into professional AV equipment proposals or detailed event production plans in under 2 minutes.",
+    "badge": "AI-Powered AV Quoting & Planning",
     "title": "Turn event descriptions into",
     "titleHighlight": "professional AV proposals",
     "titleEnd": "in seconds",
@@ -30,11 +30,11 @@
     "freeProposals": "3 free proposals/month"
   },
   "socialProof": {
-    "trusted": "Trusted by AV professionals"
+    "trusted": "Trusted by AV professionals and event planners"
   },
   "useCases": {
-    "title": "Built for AV professionals",
-    "subtitle": "Whether you run a rental house, freelance, or manage an agency — CueQuote fits your workflow.",
+    "title": "Built for production professionals",
+    "subtitle": "Whether you run a rental house, freelance, manage an agency, or plan events — CueQuote fits your workflow.",
     "avProductionTitle": "AV Production Companies",
     "avProductionDesc": "Generate accurate proposals from your equipment catalog. Send branded PDFs that match your company identity.",
     "freelanceTitle": "Freelance AV Technicians",
@@ -45,8 +45,8 @@
     "case4Desc": "Know what AV you need before you call a vendor. Get equipment recommendations, budget estimates, and professional briefs — no technical knowledge required."
   },
   "features": {
-    "title": "Everything you need to quote faster",
-    "subtitle": "From AI generation to PDF export — all in one platform.",
+    "title": "Everything you need to quote and plan faster",
+    "subtitle": "From AI generation to PDF export — all in one platform, for AV vendors and event planners.",
     "aiTitle": "AI Proposal Generation",
     "aiDesc": "Describe your event in plain language. AI generates a complete, scoped equipment list with quantities and pricing.",
     "pdfTitle": "Branded PDF Export",
@@ -70,11 +70,11 @@
     "step2Title": "Review",
     "step2Desc": "AI generates a complete equipment list. Edit quantities, prices, add or remove items. Everything is editable.",
     "step3Title": "Send",
-    "step3Desc": "Export a branded PDF or share a link. Track when your client views it. Get notified when they respond."
+    "step3Desc": "Export a branded PDF or share a link. Track when it's opened. Get notified when they respond."
   },
   "pricing": {
     "metaTitle": "Pricing",
-    "metaDescription": "Simple, transparent pricing for AV proposal generation.",
+    "metaDescription": "Simple, transparent pricing for AV proposal generation and event production planning.",
     "title": "Simple, transparent pricing",
     "subtitle": "Start free. Upgrade as you grow.",
     "monthly": "Monthly",
@@ -100,7 +100,7 @@
     "starterF5": "1 user",
     "starterF6": "Email support",
     "starterF7": "Basic risk assessment",
-    "starterSave": "Most chosen by AV professionals",
+    "starterSave": "Most chosen by production professionals",
     "proName": "Pro",
     "proDesc": "For growing production companies.",
     "proF1": "40 proposals/month",
@@ -143,7 +143,7 @@
     "creditsNeverExpire": "Credits never expire",
     "brandedPdfsIncluded": "Branded PDFs included",
     "readyTitle": "Ready to quote faster?",
-    "readySubtitle": "Join AV professionals who create proposals in minutes, not hours.",
+    "readySubtitle": "Join AV professionals and event planners who create proposals in minutes, not hours.",
     "noCreditCard": "No credit card required",
     "faqQ1": "Can I change plans at any time?",
     "faqA1": "Yes. Upgrade or downgrade at any time. Changes take effect on your next billing cycle.",
@@ -240,12 +240,12 @@
   },
   "homeFaq": {
     "title": "Frequently asked questions",
-    "q1": "How does the AI generate proposals?",
+    "q1": "How does the AI generate proposals and production plans?",
     "a1": "You describe your event in plain language — type of event, venue, attendee count, AV needs. CueQuote's AI analyzes the requirements and generates a complete equipment list with quantities and pricing based on your catalog.",
     "q2": "Can I customize the generated proposals?",
     "a2": "Absolutely. Everything is editable — add, remove, or modify line items, adjust quantities and prices, set discounts and VAT. The AI gives you a starting point; you have full control.",
-    "q3": "What equipment categories does CueQuote cover?",
-    "a3": "Audio, video, lighting, simultaneous interpretation, streaming, digital signage, staging, labor, and transport. We seed your catalog with 30 common AV items, and you can add your own.",
+    "q3": "Can event planners use CueQuote?",
+    "a3": "Yes! CueQuote has a dedicated mode for event planners. Describe your event and our AI recommends the right AV equipment with budget estimates. You can download a professional vendor brief to send to AV companies for quotes.",
     "q4": "Is my data secure?",
     "a4": "Yes. We use Supabase with row-level security. Your equipment catalog, pricing, and client data are isolated to your company. No other user can access your data.",
     "q5": "Can I use my own branding?",
@@ -256,8 +256,8 @@
     "a7": "Yes. Starter, Pro, and Business plans come with a 3-day free trial. No credit card required to start.",
     "q8": "What happens when I hit my proposal limit?",
     "a8": "You can upgrade your plan or purchase credit packs starting at €19 for 3 proposals. Credits never expire.",
-    "q9": "Can event planners use CueQuote?",
-    "a9": "Yes! CueQuote has a dedicated mode for event planners. Describe your event and our AI recommends the right AV equipment with budget estimates. You can download a professional vendor brief to send to AV companies for quotes.",
+    "q9": "What equipment categories does CueQuote cover?",
+    "a9": "Audio, video, lighting, simultaneous interpretation, streaming, digital signage, staging, labor, and transport. We seed your catalog with 30 common AV items, and you can add your own.",
     "q10": "Do I need technical AV knowledge to use CueQuote?",
     "a10": "Not at all. For event planners, CueQuote explains every equipment recommendation in plain language — what it does, why you need it, and what it should cost. No jargon, no guessing."
   },
@@ -266,8 +266,8 @@
     "viewAll": "View all"
   },
   "homeCta": {
-    "title": "Start creating proposals today",
-    "subtitle": "Join AV professionals who quote faster and win more deals with CueQuote.",
+    "title": "Start creating proposals and plans today",
+    "subtitle": "Join AV professionals and event planners who work faster with CueQuote.",
     "cta": "Get Started Free",
     "noCreditCard": "No credit card required"
   },
@@ -275,18 +275,18 @@
     "metaTitle": "About",
     "metaDescription": "The story behind CueQuote.",
     "title": "About CueQuote",
-    "subtitle": "Built by AV professionals, for AV professionals.",
+    "subtitle": "Built by AV professionals, for AV companies and event organizers.",
     "badge": "Our Story",
     "heading": "Built by AV professionals,",
-    "headingHighlight": "for AV professionals",
-    "p1": "CueQuote was born from a simple frustration: quoting AV equipment for live events takes too long.",
+    "headingHighlight": "for AV companies and event organizers",
+    "p1": "CueQuote was born from a simple frustration: quoting AV equipment for live events takes too long — and planning AV production without technical knowledge is overwhelming (if you're an event organizer).",
     "p2": "We're <strong>AVE Events</strong> — a production company based in Europe that has managed conferences, corporate events, and live shows across the continent and the Middle East. We know what it's like to receive a brief at 10 PM and need a proposal by morning.",
     "p3": "Spreadsheets, copy-paste from old proposals, manual calculations — we did it all. And we watched other companies do the same. Hours of work for every quote. Errors in pricing. Inconsistent formatting. Proposals that didn't reflect the quality of our production work.",
-    "p4": "So we built CueQuote: an AI-powered tool that turns event descriptions into complete, professional AV proposals. The same quality output in 2 minutes instead of 2 hours.",
+    "p4": "So we built CueQuote: an AI-powered tool that turns event descriptions into complete, professional AV proposals or detailed production plans for event organizers. The same quality output in 2 minutes instead of 2 hours.",
     "whyDifferent": "Why we're different",
     "diff1": "We've scoped hundreds of real AV proposals — the AI knows what a 300-person conference actually needs",
     "diff2": "Built by the same team behind CueDeck, the live event production console",
-    "diff3": "We understand the AV rental workflow, not just generic quoting",
+    "diff3": "We understand both the AV rental and event planning workflow, not just generic quoting",
     "diff4": "European-first: multi-currency, VAT support, GDPR compliant",
     "p5": "CueQuote is part of the <strong>CueDeck ecosystem</strong> — tools purpose-built for the live event production industry. We're not a generic proposal tool with an AV skin. We built this from the ground up for our industry.",
     "cta": "Try CueQuote Free",
@@ -300,8 +300,8 @@
     "statCountries": "Countries Served",
     "statTeam": "Team",
     "whyDifferentSub": "Built from real-world AV production experience, not a generic template.",
-    "ctaTitle": "Ready to transform your AV quoting?",
-    "ctaSub": "Join AV professionals who close deals faster with CueQuote."
+    "ctaTitle": "Ready to transform how you work?",
+    "ctaSub": "Join AV professionals and event planners who work faster with CueQuote."
   },
   "contact": {
     "metaTitle": "Contact",
@@ -343,7 +343,7 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Tips and insights for AV professionals.",
+    "metaDescription": "Tips and insights for AV professionals and event planners.",
     "title": "Blog",
     "subtitle": "Tips, guides, and insights for AV professionals.",
     "readMore": "Read more",
@@ -351,18 +351,18 @@
     "allPosts": "All Posts",
     "badge": "Blog",
     "heading": "Insights for AV professionals",
-    "headingSubtitle": "Tips, guides, and industry perspectives to help you win more proposals and grow your AV business.",
+    "headingSubtitle": "Tips, guides, and industry perspectives to help you win more proposals and grow your AV business — and event planners stay ahead.",
     "backToBlock": "Back to blog"
   },
   "subscribe": {
     "title": "Stay in the loop",
-    "subtitle": "Get tips on AV quoting, product updates, and industry insights. No spam.",
+    "subtitle": "Get tips on AV quoting and event planning, product updates, and industry insights. No spam.",
     "placeholder": "you@company.com",
     "button": "Subscribe",
     "success": "Subscribed!"
   },
   "footer": {
-    "tagline": "AI-powered AV proposals for event production professionals.",
+    "tagline": "AI-powered AV proposals and event planning for production professionals.",
     "product": "Product",
     "company": "Company",
     "legal": "Legal",
@@ -379,7 +379,9 @@
     "changelog": "Changelog",
     "docs": "Documentation",
     "tutorials": "Tutorials",
-    "resources": "Resources"
+    "resources": "Resources",
+    "forAvCompanies": "For AV Companies",
+    "forEventPlanners": "For Event Planners"
   },
   "posts": {
     "interactive-proposal-viewer-client-comments": {
@@ -1159,7 +1161,7 @@
   },
   "tutorials": {
     "metaTitle": "Tutorials — Learn CueQuote",
-    "metaDescription": "Step-by-step guides to master CueQuote.",
+    "metaDescription": "Step-by-step guides to master CueQuote for AV quoting and event planning.",
     "badge": "Tutorials",
     "heading": "Learn CueQuote in Minutes",
     "subtitle": "Step-by-step video guides to help you master every feature",
@@ -1192,7 +1194,7 @@
   },
   "docs": {
     "metaTitle": "Documentation — Getting Started",
-    "metaDescription": "Learn how to use CueQuote to create professional AV proposals.",
+    "metaDescription": "Learn how to use CueQuote to create professional AV proposals or plan events.",
     "badge": "Documentation",
     "heading": "Getting Started with",
     "headingHighlight": "CueQuote",

@@ -26,6 +26,8 @@ export default async function Footer() {
               { label: t("features"), href: "/#features" },
               { label: t("howItWorks"), href: "/#how-it-works" },
               { label: t("faq"), href: "/#faq" },
+              { label: t("forAvCompanies"), href: "/for-av-companies" },
+              { label: t("forEventPlanners"), href: "/for-event-planners" },
               { label: t("changelog"), href: "/changelog" },
             ].map(({ label, href }) => (
               <Link key={href} href={href} style={{ display: "block", textDecoration: "none", color: "#94a3b8", fontSize: 14, marginBottom: 10 }}>
