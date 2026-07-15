@@ -134,51 +134,14 @@ export default async function HomePage() {
           filter: "blur(60px)", pointerEvents: "none",
         }} />
 
-        <div style={{
-          maxWidth: 1200, margin: "0 auto",
-          display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center",
-        }} className="hero-grid">
-          <div style={{ position: "relative", zIndex: 1 }}>
-            <div style={{
-              display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, color: "#10b981",
-              background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.15)",
-              padding: "6px 14px", borderRadius: 20, marginBottom: 24,
-            }}>
-              <Sparkles size={14} /> {t("badge")}
-            </div>
-            <h1 style={{
-              fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: "clamp(2rem, 8vw, 3rem)",
-              color: "#fff", lineHeight: 1.1, marginBottom: 20, letterSpacing: -1,
-            }}>
-              {t("title")}{" "}
-              <span style={{ color: "#10b981" }}>{t("titleHighlight")}</span>{" "}
-              {t("titleEnd")}
-            </h1>
-            <p style={{ fontSize: 18, color: "#94a3b8", lineHeight: 1.7, marginBottom: 32, maxWidth: 500 }}>
-              {t("subtitle")}
-            </p>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
-                textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
-                background: "#10b981", color: "#fff", padding: "14px 28px", borderRadius: 10,
-                fontWeight: 600, fontSize: 16, transition: "background 0.2s",
-              }}>
-                <Sparkles size={18} /> {t("cta")}
-              </Link>
-              <Link href="#how-it-works" style={{
-                textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
-                border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "14px 28px", borderRadius: 10,
-                fontWeight: 500, fontSize: 16,
-              }}>
-                {t("ctaSecondary")} <ArrowRight size={16} />
-              </Link>
-            </div>
-            <p style={{ fontSize: 13, color: "#64748b", marginTop: 16 }}>{t("noCreditCard")} &bull; {t("freeProposals")}</p>
-          </div>
-
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <HeroMockupSlider />
-          </div>
+        <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }} className="hero-grid">
+          <HeroMockupSlider
+            avSubtitle={t("subtitle")}
+            plannerSubtitle="Describe your event in plain English. Get a detailed production plan with equipment, crew, and budget — in under 2 minutes. No AV knowledge required."
+            avCta={t("cta")}
+            plannerCta="Plan Your Event — Free"
+            ctaLink={`${APP_URL}/signup?lang=${locale}`}
+          />
         </div>
 
         <style>{`
