@@ -13,7 +13,8 @@ interface PopupCampaign {
   id: string
   phase: 'launch' | 'early_bird' | 'urgency' | 'exclusive' | 'last_call'
   trigger_type: 'timed' | 'scroll' | 'exit_intent' | 'returning' | 'all'
-  content: { headline: string; subtext: string; cta: string; badge?: string }
+  variants: Array<{ headline: string; subtext: string; cta: string; badge?: string }>
+  variant_count: number
   seats_remaining: number | null
   promo_code: string | null
   discount_pct: number | null
@@ -115,6 +116,14 @@ export default function SmartPopup() {
         return
       }
       localStorage.setItem(LS_VISITED_KEY, 'true')
+
+      // Variant rotation: increment visit count, pick variant by modulo
+      const visitCount = parseInt(localStorage.getItem('cq_popup_visit_count') || '0', 10)
+      localStorage.setItem('cq_popup_visit_count', String(visitCount + 1))
+      const variantIdx = visitCount % camp.variant_count
+      // Attach selected variant for render convenience
+      ;(camp as PopupCampaign & { _variantIdx: number })._variantIdx = variantIdx
+
       setCampaign(camp)
     })
   }, [])
@@ -166,7 +175,8 @@ export default function SmartPopup() {
   if (!campaign || !visible) return null
 
   const colors = PHASE_COLORS[campaign.phase] ?? PHASE_COLORS.launch
-  const { headline, subtext, cta, badge } = campaign.content
+  const variantIdx = (campaign as PopupCampaign & { _variantIdx?: number })._variantIdx ?? 0
+  const { headline, subtext, cta, badge } = campaign.variants[variantIdx] ?? campaign.variants[0]
   const discountPct = campaign.discount_pct ?? 0
   const discountedPrice = discountPct > 0
     ? Math.round(STARTER_PRICE * (1 - discountPct / 100))
