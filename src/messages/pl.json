@@ -1169,6 +1169,8 @@
     "badge": "Poradniki",
     "heading": "Naucz się CueQuote w kilka minut",
     "subtitle": "Przewodniki wideo krok po kroku, które pomogą Ci opanować każdą funkcję",
+    "all": "Wszystkie",
+    "filter": "Filtruj:",
     "comingSoon": "Film wkrótce",
     "beginner": "Początkujący",
     "intermediate": "Średniozaawansowany",
@@ -1524,6 +1526,36 @@
       "step4": "Włącz 'Pokaż koszty' w edytorze ofert, aby zobaczyć panel Podsumowania Marży — pokazuje Przychód, Twój Koszt, Zysk i Marżę % z kolorowymi wskaźnikami kondycji",
       "step5": "Przeglądaj alerty marżowe powyżej pozycji — czerwone alerty oznaczają oferty poniżej celu, bursztynowe alerty oznaczają pozycje bez danych kosztowych",
       "tip": "Obliczenie marży uwzględnia tylko wymagane pozycje (nie opcjonalne). Pozycje bez ceny kosztowej są wykluczone z łącznych kosztów, ale ich przychód nadal jest wliczany — dodawaj koszty do wszystkich pozycji, aby uzyskać dokładne marże"
+    },
+    "vendorManagement": {
+      "title": "Zarządzanie dostawcami",
+      "content1": "Zarządzaj relacjami z dostawcami AV w jednym miejscu. Dodawaj firmy dostawców z danymi kontaktowymi, śledź ich status i prowadź notatki o doświadczeniach i cenach.",
+      "content2": "Strona Dostawcy jest dostępna w trybie Planner. Wykorzystaj ją do budowania sieci dostawców, wysyłania zapytań ofertowych i porównywania odpowiedzi.",
+      "step1": "Przejdź do Dostawcy z paska bocznego (dostępne w trybie Planner) i kliknij 'Dodaj dostawcę' aby utworzyć nowy rekord z nazwą firmy, kontaktem, emailem i telefonem",
+      "step2": "Ustaw status dostawcy (aktywny, preferowany, nowy) i dodaj tagi do łatwego filtrowania — np. 'specjalista audio', 'ogólnopolski', 'budżetowy'",
+      "step3": "Dodaj notatki o relacji aby śledzić doświadczenia, wzorce cenowe i niezawodność — notatki są prywatne i nigdy nie są udostępniane dostawcy",
+      "step4": "Wysyłaj zapytania ofertowe bezpośrednio z profilu dostawcy i śledź status odpowiedzi (oczekujący, otrzymany, odrzucony)",
+      "tip": "Zbuduj relacje z co najmniej 3 dostawcami na kategorię, aby zawsze mieć konkurencyjne opcje dla klientów"
+    },
+    "quoteComparison": {
+      "title": "Porównywanie ofert",
+      "content1": "Porównuj oferty otrzymane od wielu dostawców AV obok siebie. Widok porównawczy pokazuje ceny, zakres, warunki płatności i ocenę wartości generowaną przez AI.",
+      "content2": "Oferty są powiązane z Twoimi propozycjami — gdy dostawca odpowie na zapytanie, jego oferta pojawi się w sekcji Oferty do przeglądu i porównania.",
+      "step1": "Przejdź do Oferty z paska bocznego aby zobaczyć wszystkie otrzymane oferty dostawców, uporządkowane według statusu",
+      "step2": "Wgraj oferty dostawców jako PDF lub wprowadź pozycje ręcznie — system śledzi ceny, zakres i warunki dla każdej odpowiedzi",
+      "step3": "Użyj widoku porównawczego aby zobaczyć dostawców obok siebie — różnice cenowe i warunki są automatycznie podświetlone",
+      "step4": "Wybierz dostawcę i oznacz jego ofertę jako zaakceptowaną — system zaktualizuje Twoją propozycję potwierdzonymi cenami",
+      "tip": "Zawsze porównuj co najmniej 2-3 oferty dostawców przed wyborem. Ocena wartości uwzględnia cenę (40%), kompletność zakresu (35%) i warunki płatności (25%)"
+    },
+    "marketRateBudgets": {
+      "title": "Budżety rynkowe",
+      "content1": "W trybie Planner AI generuje plany produkcji z szacunkami budżetowymi opartymi na cenach rynkowych zamiast stałych cen katalogowych. Każda pozycja zawiera zakres cenowy (min-max).",
+      "content2": "Budżety rynkowe pomagają organizatorom wydarzeń ustalić realistyczne oczekiwania klientów przed uzyskaniem formalnych ofert od dostawców.",
+      "step1": "Utwórz nową propozycję w trybie Planner — opisz wydarzenie, w tym typ, liczbę uczestników, miejsce i wymagania produkcyjne",
+      "step2": "AI wygeneruje kompletny plan produkcji z zakresami budżetowymi (min-max) dla każdej kategorii: Audio, Oświetlenie, Video i Ekipa",
+      "step3": "Przejrzyj rekomendacje dotyczące ekipy i harmonogram produkcji — AI sugeruje poziomy obsady na podstawie złożoności wydarzenia",
+      "step4": "Użyj szacunku budżetowego do uzgodnienia z klientem, a następnie poproś dostawców o formalne oferty",
+      "tip": "Szacunki rynkowe oparte są na średnich branżowych i mogą się różnić w zależności od regionu. Zawsze uzyskaj formalne oferty od dostawców"
     }
   },
   "changelog": {

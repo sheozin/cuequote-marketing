@@ -1197,6 +1197,8 @@
     "badge": "Tutoriels",
     "heading": "Apprenez CueQuote en quelques minutes",
     "subtitle": "Des guides vidéo étape par étape pour maîtriser chaque fonctionnalité",
+    "all": "Tous",
+    "filter": "Filtrer :",
     "comingSoon": "Vidéo à venir",
     "beginner": "Débutant",
     "intermediate": "Intermédiaire",
@@ -1552,6 +1554,36 @@
       "step4": "Activez 'Afficher les coûts' dans l'éditeur de devis pour voir le panneau Résumé des marges — il affiche le Chiffre d'affaires, Votre coût, le Bénéfice et le % de Marge avec des indicateurs de santé codés par couleur",
       "step5": "Consultez les alertes de marge au-dessus de vos postes — les alertes rouges signalent les devis sous l'objectif, les alertes ambrées signalent les postes sans données de coût",
       "tip": "Le calcul de marge inclut uniquement les éléments requis (pas les optionnels). Les éléments sans prix de revient sont exclus du total des coûts mais leur chiffre d'affaires compte toujours — ajoutez donc des coûts à tous les éléments pour des marges précises"
+    },
+    "vendorManagement": {
+      "title": "Gestion des fournisseurs",
+      "content1": "Gérez vos relations avec les fournisseurs AV en un seul endroit. Ajoutez des entreprises avec leurs coordonnées, suivez leur statut et conservez des notes sur les expériences et les prix.",
+      "content2": "La page Fournisseurs est disponible en mode Planificateur. Utilisez-la pour construire votre réseau, envoyer des demandes de devis et comparer les réponses.",
+      "step1": "Accédez à Fournisseurs dans la barre latérale et cliquez sur 'Ajouter un fournisseur' pour créer un nouveau contact avec nom, email et téléphone",
+      "step2": "Définissez le statut du fournisseur (actif, préféré, nouveau) et ajoutez des tags pour faciliter le filtrage",
+      "step3": "Ajoutez des notes de relation pour suivre les expériences, les tendances de prix et la fiabilité — les notes sont privées",
+      "step4": "Envoyez des demandes de devis directement depuis le profil du fournisseur et suivez le statut des réponses",
+      "tip": "Établissez des relations avec au moins 3 fournisseurs par catégorie pour avoir toujours des options compétitives"
+    },
+    "quoteComparison": {
+      "title": "Comparaison de devis",
+      "content1": "Comparez les devis reçus de plusieurs fournisseurs AV côte à côte. La vue comparative affiche les prix, la portée, les conditions de paiement et un score de valeur généré par l'IA.",
+      "content2": "Les devis sont liés à vos propositions — lorsqu'un fournisseur répond à votre demande, son devis apparaît dans la section Devis pour examen et comparaison.",
+      "step1": "Accédez à Devis dans la barre latérale pour voir tous les devis reçus, organisés par statut",
+      "step2": "Téléchargez les devis fournisseurs en PDF ou saisissez les postes manuellement",
+      "step3": "Utilisez la vue comparative pour voir les fournisseurs côte à côte — les écarts de prix et les conditions sont automatiquement mis en évidence",
+      "step4": "Sélectionnez un fournisseur et marquez son devis comme accepté — le système met à jour votre proposition avec les prix confirmés",
+      "tip": "Comparez toujours au moins 2-3 devis avant de choisir"
+    },
+    "marketRateBudgets": {
+      "title": "Budgets aux prix du marché",
+      "content1": "En mode Planificateur, l'IA génère des plans de production avec des estimations budgétaires aux prix du marché au lieu de prix catalogue fixes. Chaque poste inclut une fourchette de prix (min-max).",
+      "content2": "Les budgets aux prix du marché aident les organisateurs d'événements à définir des attentes réalistes avant d'obtenir des devis formels des fournisseurs.",
+      "step1": "Créez une nouvelle proposition en mode Planificateur — décrivez l'événement avec le type, le nombre de participants, le lieu et les besoins de production",
+      "step2": "L'IA génère un plan de production complet avec des fourchettes budgétaires pour chaque catégorie : Audio, Éclairage, Vidéo et Équipe",
+      "step3": "Examinez les recommandations d'équipe et le calendrier de production — l'IA suggère des niveaux de personnel basés sur la complexité",
+      "step4": "Utilisez l'estimation budgétaire pour vous aligner avec votre client, puis demandez des devis formels aux fournisseurs",
+      "tip": "Les estimations aux prix du marché sont basées sur les moyennes du secteur et peuvent varier selon la région"
     }
   },
   "changelog": {

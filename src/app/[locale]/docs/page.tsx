@@ -174,6 +174,10 @@ const ARTICLE_KEYS = [
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
   },
   { id: 'costing-margins', key: 'costingMargins', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
+  // ── Event Planner ──
+  { id: 'vendor-management', key: 'vendorManagement', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
+  { id: 'quote-comparison', key: 'quoteComparison', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
+  { id: 'market-rate-budgets', key: 'marketRateBudgets', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
 ];
 
 export default async function DocsPage() {

@@ -1195,6 +1195,8 @@
     "badge": "Tutorials",
     "heading": "Lernen Sie CueQuote in Minuten",
     "subtitle": "Schritt-für-Schritt-Videoanleitungen, die Ihnen helfen, jede Funktion zu meistern",
+    "all": "Alle",
+    "filter": "Filter:",
     "comingSoon": "Video kommt bald",
     "beginner": "Anfänger",
     "intermediate": "Fortgeschritten",
@@ -1550,6 +1552,36 @@
       "step4": "Schalten Sie 'Kosten anzeigen' im Angebotseditor um, um das Margen-Übersichtspanel zu sehen — es zeigt Umsatz, Ihre Kosten, Gewinn und Marge % mit farbcodierten Gesundheitsindikatoren",
       "step5": "Überprüfen Sie Margenwarnungen über Ihren Positionen — rote Warnungen markieren Angebote unter dem Ziel, gelbe Warnungen markieren Positionen ohne Kostendaten",
       "tip": "Die Margenberechnung umfasst nur erforderliche Positionen (keine optionalen). Positionen ohne Einkaufspreis werden aus der Kostensumme ausgeschlossen, ihr Umsatz zählt jedoch weiterhin — fügen Sie daher allen Positionen Kosten hinzu für genaue Margen"
+    },
+    "vendorManagement": {
+      "title": "Lieferantenverwaltung",
+      "content1": "Verwalten Sie Ihre AV-Lieferantenbeziehungen an einem Ort. Fügen Sie Lieferantenunternehmen mit Kontaktdaten hinzu, verfolgen Sie deren Status und führen Sie Notizen über Erfahrungen und Preise.",
+      "content2": "Die Lieferantenseite ist im Planer-Modus verfügbar. Nutzen Sie sie zum Aufbau Ihres Lieferantennetzwerks, zum Versenden von Angebotsanfragen und zum Vergleichen von Antworten.",
+      "step1": "Navigieren Sie zu Lieferanten in der Seitenleiste und klicken Sie auf 'Lieferant hinzufügen' um einen neuen Datensatz mit Firmenname, Kontakt, E-Mail und Telefon anzulegen",
+      "step2": "Setzen Sie den Lieferantenstatus (aktiv, bevorzugt, neu) und fügen Sie Tags zur einfachen Filterung hinzu",
+      "step3": "Fügen Sie Beziehungsnotizen hinzu um Erfahrungen, Preismuster und Zuverlässigkeit zu verfolgen — Notizen sind privat",
+      "step4": "Senden Sie Angebotsanfragen direkt vom Lieferantenprofil und verfolgen Sie den Antwortstatus",
+      "tip": "Bauen Sie Beziehungen zu mindestens 3 Lieferanten pro Kategorie auf, damit Sie immer wettbewerbsfähige Optionen haben"
+    },
+    "quoteComparison": {
+      "title": "Angebotsvergleich",
+      "content1": "Vergleichen Sie Angebote von mehreren AV-Lieferanten nebeneinander. Die Vergleichsansicht zeigt Preise, Umfang, Zahlungsbedingungen und eine KI-generierte Bewertung.",
+      "content2": "Angebote sind mit Ihren Vorschlägen verknüpft — wenn ein Lieferant antwortet, erscheint sein Angebot im Bereich Angebote zur Überprüfung und zum Vergleich.",
+      "step1": "Gehen Sie zu Angebote in der Seitenleiste um alle erhaltenen Lieferantenangebote nach Status sortiert zu sehen",
+      "step2": "Laden Sie Lieferantenangebote als PDFs hoch oder geben Sie Positionen manuell ein",
+      "step3": "Nutzen Sie die Vergleichsansicht um Lieferanten nebeneinander zu sehen — Preisunterschiede und Bedingungen werden automatisch hervorgehoben",
+      "step4": "Wählen Sie einen Lieferanten und markieren Sie sein Angebot als akzeptiert — das System aktualisiert Ihren Vorschlag mit den bestätigten Preisen",
+      "tip": "Vergleichen Sie immer mindestens 2-3 Angebote bevor Sie sich entscheiden"
+    },
+    "marketRateBudgets": {
+      "title": "Marktpreisbudgets",
+      "content1": "Im Planer-Modus generiert die KI Produktionspläne mit Marktpreis-Budgetschätzungen anstelle fester Katalogpreise. Jede Position enthält eine Preisspanne (Min-Max).",
+      "content2": "Marktpreisbudgets helfen Event-Planern, realistische Kundenerwartungen zu setzen, bevor formelle Lieferantenangebote eingeholt werden.",
+      "step1": "Erstellen Sie einen neuen Vorschlag im Planer-Modus — beschreiben Sie die Veranstaltung einschließlich Typ, Teilnehmerzahl, Veranstaltungsort und Produktionsanforderungen",
+      "step2": "Die KI generiert einen vollständigen Produktionsplan mit Budgetspannen für jede Kategorie: Audio, Beleuchtung, Video und Crew",
+      "step3": "Überprüfen Sie die Crew-Empfehlungen und den Produktionszeitplan — die KI schlägt Personalstärken basierend auf der Veranstaltungskomplexität vor",
+      "step4": "Nutzen Sie die Budgetschätzung zur Abstimmung mit Ihrem Kunden und fordern Sie dann formelle Lieferantenangebote an",
+      "tip": "Marktpreisschätzungen basieren auf Branchendurchschnitten und können je nach Region variieren"
     }
   },
   "changelog": {

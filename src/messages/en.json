@@ -1193,6 +1193,8 @@
     "badge": "Tutorials",
     "heading": "Learn CueQuote in Minutes",
     "subtitle": "Step-by-step video guides to help you master every feature",
+    "all": "All",
+    "filter": "Filter:",
     "comingSoon": "Video coming soon",
     "beginner": "Beginner",
     "intermediate": "Intermediate",
@@ -1548,6 +1550,36 @@
       "step4": "Toggle 'Show Costs' in the proposal editor to see the Margin Summary panel — it shows Revenue, Your Cost, Profit, and Margin % with color-coded health indicators",
       "step5": "Review margin alerts above your line items — red alerts flag proposals below target, amber alerts flag items missing cost data",
       "tip": "The margin calculation only includes required items (not optional ones). Items without a cost price are excluded from the cost total but their revenue still counts — so add costs to all items for accurate margins"
+    },
+    "vendorManagement": {
+      "title": "Vendor Management",
+      "content1": "Manage your AV vendor relationships in one place. Add vendor companies with contact details, track their status, and maintain notes about past experiences and pricing.",
+      "content2": "The Vendors page is available in Planner mode. Use it to build your vendor network, send RFQ requests, and compare responses before selecting a vendor for your event.",
+      "step1": "Navigate to Vendors from the sidebar (available in Planner mode) and click 'Add Vendor' to create a new vendor record with company name, contact, email, and phone",
+      "step2": "Set the vendor status (active, preferred, new) and add tags for easy filtering — e.g., 'audio specialist', 'nationwide', 'budget-friendly'",
+      "step3": "Add relationship notes to track past experiences, pricing patterns, and reliability — these notes are private and never shared with the vendor",
+      "step4": "Send RFQ requests directly from the vendor profile and track response status (pending, received, declined)",
+      "tip": "Build relationships with at least 3 vendors per category so you always have competitive options for your clients"
+    },
+    "quoteComparison": {
+      "title": "Quote Comparison",
+      "content1": "Compare quotes received from multiple AV vendors side by side. The comparison view shows pricing, scope, payment terms, and an AI-generated value score to help you make informed decisions.",
+      "content2": "Quotes are linked to your proposals — when a vendor responds to your RFQ, their quote appears in the Quotes section where you can review, compare, and select the best option.",
+      "step1": "Go to Quotes from the sidebar to see all received vendor quotes, organized by status (pending, received, accepted, declined)",
+      "step2": "Upload vendor quotes as PDFs or enter line items manually — the system tracks pricing, scope, and terms for each vendor response",
+      "step3": "Use the comparison view to see vendors side by side — pricing differences, payment terms, and cancellation policies are highlighted automatically",
+      "step4": "Select a vendor and mark their quote as accepted — the system updates your proposal with the confirmed pricing",
+      "tip": "Always compare at least 2-3 vendor quotes before selecting. The value score weighs price (40%), scope completeness (35%), and payment terms (25%)"
+    },
+    "marketRateBudgets": {
+      "title": "Market-Rate Budgets",
+      "content1": "When using CueQuote in Planner mode, the AI generates production plans with market-rate budget estimates instead of fixed catalog prices. Each line item includes a low-high price range based on current market data.",
+      "content2": "Market-rate budgets help event planners set realistic client expectations before getting formal vendor quotes. The AI also provides crew recommendations, production timeline, and practical tips.",
+      "step1": "Create a new proposal in Planner mode — describe your event including type, attendee count, venue, and production requirements",
+      "step2": "The AI generates a complete production plan with budget ranges (low-high) for each category: Audio, Lighting, Video, and Crew",
+      "step3": "Review the crew recommendations and production timeline — the AI suggests staffing levels and setup schedules based on event complexity",
+      "step4": "Use the budget estimate to align with your client, then request formal quotes from vendors to get final pricing",
+      "tip": "Market-rate estimates are based on industry averages and may vary by region. Always get formal vendor quotes for final budgeting"
     }
   },
   "changelog": {
