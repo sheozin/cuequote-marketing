@@ -151,49 +151,57 @@ export default function SmartPopup() {
       />
 
       {/* Modal */}
+      <style>{`
+        .cq-popup-modal {
+          position: fixed;
+          z-index: 9999;
+          left: 0; right: 0; bottom: 0;
+          width: 100%;
+          padding: 0 0 env(safe-area-inset-bottom, 0);
+        }
+        .cq-popup-card {
+          border-radius: 20px 20px 0 0;
+        }
+        @media (min-width: 640px) {
+          .cq-popup-modal {
+            left: 50%; right: auto; bottom: auto;
+            top: 50%;
+            width: auto;
+            max-width: 560px;
+            min-width: 480px;
+            padding: 0;
+          }
+          .cq-popup-card {
+            border-radius: 20px;
+          }
+        }
+      `}</style>
       <div
         role="dialog"
         aria-modal="true"
         aria-label={headline}
+        className="cq-popup-modal"
         style={{
-          position: 'fixed',
-          zIndex: 9999,
-          // Desktop: centered; Mobile: bottom sheet
-          left: '50%',
-          bottom: 0,
           transform: animateIn
-            ? 'translateX(-50%) translateY(0) scale(1)'
-            : 'translateX(-50%) translateY(40px) scale(0.95)',
+            ? (typeof window !== 'undefined' && window.innerWidth >= 640
+                ? 'translateX(-50%) translateY(-50%) scale(1)'
+                : 'translateY(0) scale(1)')
+            : (typeof window !== 'undefined' && window.innerWidth >= 640
+                ? 'translateX(-50%) translateY(calc(-50% + 40px)) scale(0.95)'
+                : 'translateY(40px) scale(0.95)'),
           opacity: animateIn ? 1 : 0,
           transition: 'transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease',
-          width: '100%',
-          maxWidth: 512,
-          padding: '0 0 env(safe-area-inset-bottom, 0)',
         }}
-        // On md+ screens, vertically center instead
-        className="sm:bottom-auto sm:top-1/2 sm:[transform:var(--modal-transform)]"
       >
-        <style>{`
-          @media (min-width: 640px) {
-            [role="dialog"] {
-              top: 50% !important;
-              bottom: auto !important;
-              --modal-transform-in: translateX(-50%) translateY(-50%) scale(1);
-              --modal-transform-out: translateX(-50%) translateY(calc(-50% + 40px)) scale(0.95);
-            }
-          }
-        `}</style>
-
         <div
+          className="cq-popup-card"
           style={{
             background: colors.gradient,
-            borderRadius: '20px 20px 0 0',
             overflow: 'hidden',
             boxShadow: '0 -8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.08)',
             color: '#fff',
             fontFamily: 'var(--font-dm-sans, var(--font-inter, system-ui, sans-serif))',
           }}
-          className="sm:rounded-2xl sm:shadow-2xl"
         >
           {/* Close button */}
           <button
