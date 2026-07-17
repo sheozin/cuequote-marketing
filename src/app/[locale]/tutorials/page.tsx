@@ -299,7 +299,18 @@ export default async function TutorialsPage() {
 
                 {/* Content */}
                 <div style={{ padding: 24 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
+                    {/* Mode badge */}
+                    <span style={{
+                      fontSize: 11,
+                      fontWeight: 600,
+                      padding: "3px 10px",
+                      borderRadius: 100,
+                      background: (tut as any).mode === 'av' ? 'rgba(16,185,129,0.1)' : (tut as any).mode === 'planner' ? 'rgba(139,92,246,0.1)' : 'rgba(59,130,246,0.1)',
+                      color: (tut as any).mode === 'av' ? '#059669' : (tut as any).mode === 'planner' ? '#7c3aed' : '#2563eb',
+                    }}>
+                      {(tut as any).mode === 'av' ? 'AV' : (tut as any).mode === 'planner' ? 'Planner' : 'AV + Planner'}
+                    </span>
                     {/* Difficulty badge */}
                     <span style={{
                       fontSize: 11,

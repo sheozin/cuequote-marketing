@@ -862,4 +862,144 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'vendor-management',
+    title: 'Vendor Management',
+    description: 'Add AV vendors to your network, manage contacts, and track relationships so you always know who to call when you need to source equipment.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Planner',
+    mode: 'planner',
+    icon: '🏪',
+    whatYouLearn: [
+      'Adding vendor companies and contacts to your vendor list',
+      'Categorizing vendors by speciality (Audio, Video, Lighting, Full-Service)',
+      'Tracking relationship notes and past interactions',
+      'Requesting quotes from vendors directly from an event',
+      'Keeping your preferred vendor list organized and up to date',
+    ],
+    steps: [
+      {
+        title: 'Navigate to Vendors',
+        content: 'Click "Vendors" in the sidebar. This is your AV supplier address book — a centralized list of every vendor you\'ve worked with or want to work with. Each vendor card shows the company name, primary contact, speciality, location, and a quick badge indicating whether they are an active, preferred, or new vendor.',
+      },
+      {
+        title: 'Add a new vendor',
+        content: 'Click "Add Vendor" and fill in the company details: name, website, city and country, and their AV speciality (Audio, Video, Lighting, Simultaneous Interpretation, Full-Service AV, or Other). Add the primary contact person\'s name, email, and phone number. You can add multiple contacts per vendor — useful for large suppliers where you deal with different people for sales and technical queries.',
+        tip: 'Add vendors as you discover them, even before you\'ve worked with them. A broad vendor list gives you more options when sourcing for unusual or high-spec events.',
+      },
+      {
+        title: 'Set vendor status and tags',
+        content: 'Assign a status to each vendor: Preferred (vendors you actively recommend or use regularly), Active (vendors you\'ve worked with and would use again), Prospect (vendors you\'re evaluating), or Inactive (vendors you\'ve stopped working with). Add tags such as "outdoor specialist", "LED walls", or "rigging" to help filter vendors quickly when sourcing for specific event requirements.',
+      },
+      {
+        title: 'Add relationship notes',
+        content: 'Click on any vendor to open their detail view. Use the Notes section to log important relationship context: lead times they typically need, minimum order values, preferred communication channels, pricing tendencies, or any past issues to be aware of. Notes are internal only — vendors never see them. They\'re invaluable when a colleague is sourcing from a vendor you know well.',
+        tip: 'Note the vendor\'s typical response time to quote requests. This helps you decide when to reach out based on your event timeline.',
+      },
+      {
+        title: 'Request a quote from a vendor',
+        content: 'From any event in your planner dashboard, open the Sourcing tab and click "Request Quote". Select one or more vendors from your list, choose the equipment categories you need them to quote on, set a response deadline, and add any specific notes or technical requirements. CueQuote sends a structured quote request to each selected vendor with the event details and your requirements pre-filled.',
+      },
+      {
+        title: 'Track vendor requests and responses',
+        content: 'All outgoing quote requests appear under the Sourcing tab with their status: Sent, Viewed, Responded, or Declined. When a vendor responds with a CueQuote proposal, it appears automatically in your Quote Comparison view. When they respond outside CueQuote (by email or file), you can upload their quote manually and link it to the request so everything stays in one place.',
+        tip: 'Send requests to at least 2-3 vendors per equipment category. Competition keeps pricing honest and gives you a fallback if your preferred vendor is unavailable.',
+      },
+    ],
+  },
+  {
+    slug: 'quote-comparison',
+    title: 'Comparing Vendor Quotes',
+    description: 'Receive quotes from multiple AV vendors, compare them side by side on price and scope, and select the best supplier for your event.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Planner',
+    mode: 'planner',
+    icon: '📊',
+    whatYouLearn: [
+      'Loading vendor quotes into the comparison view',
+      'Reading the vendor summary cards and value scores',
+      'Comparing line items across vendors with cheapest/most expensive flags',
+      'Reviewing payment terms and cancellation policies side by side',
+      'Using the AI insight panel to get a ranked recommendation',
+      'Selecting a vendor and moving an event forward',
+    ],
+    steps: [
+      {
+        title: 'Open the Quote Comparison view',
+        content: 'From your event dashboard, open the event you\'re sourcing for and click the "Quote Comparison" tab. If you\'ve already sent quote requests and vendors have responded with CueQuote proposals, their submissions appear automatically. If vendors sent proposals by email or as files, click "Add Quote" and paste the CueQuote share URL or upload the document manually.',
+        tip: 'You can add up to 4 vendor proposals to a single comparison. This is enough for most sourcing decisions — beyond 4 the comparison becomes unwieldy.',
+      },
+      {
+        title: 'Read the vendor summary cards',
+        content: 'Each vendor gets a summary card at the top of the comparison showing: company name, total price in your event currency, quote validity date, and a value score (1-10). The value score is a composite of price competitiveness, scope completeness, and payment terms flexibility. The vendor with the lowest total is highlighted in green — a quick visual anchor for budget-conscious decisions.',
+      },
+      {
+        title: 'Compare line items in detail',
+        content: 'Scroll down to the line item comparison table. Items are grouped by category (Audio, Video, Lighting, Labor, Transport) and matched across all vendors. The cheapest price for each item gets a green "Cheapest" badge; the most expensive gets an amber badge. Items a vendor hasn\'t included appear as a dash — these gaps are often where the real pricing differences lie. A vendor quoting 10% less but missing 5 line items may actually be more expensive once those items are sourced separately.',
+        tip: 'Pay special attention to Labor and Transport line items — these are frequently omitted from initial quotes to make the headline price look competitive.',
+      },
+      {
+        title: 'Review payment terms and cancellation policies',
+        content: 'The Terms section shows each vendor\'s payment schedule side by side: deposit percentage, balance due date, and cancellation policy. A vendor asking for 100% upfront represents a cash flow risk compared to one asking for 30% on acceptance and 70% two weeks before the event. Factor payment terms into your overall vendor evaluation — a slightly higher price with better terms can be a better deal for your client.',
+      },
+      {
+        title: 'Generate the AI insight',
+        content: 'Click "Generate AI Insight" in the comparison toolbar. The AI analyzes all loaded quotes across price, scope, terms, and completeness, then produces a ranked recommendation with explanatory text. It highlights which vendor offers the best overall value for your specific event context, where each vendor falls short, and what to ask them to revise before you award the contract.',
+        tip: 'Use the AI insight as a starting point for your decision — it\'s a fast way to synthesize complex data. Always apply your own judgement based on the vendor relationship and event stakes.',
+      },
+      {
+        title: 'Select a vendor and update the event',
+        content: 'Once you\'ve made your decision, click "Select Vendor" on the winning card. The event status updates to "Vendor Confirmed" and the selected vendor\'s proposal is linked as the primary quote for the event. CueQuote sends an automatic notification to the chosen vendor and an optional decline notification to the others. The accepted quote total flows into your event budget tracker automatically.',
+      },
+    ],
+  },
+  {
+    slug: 'market-rate-budgets',
+    title: 'Market-Rate Budget Estimates',
+    description: 'Understand how CueQuote\'s AI generates realistic AV budget ranges for your events, and use those estimates to plan effectively before sourcing vendors.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Planner',
+    mode: 'planner',
+    icon: '💰',
+    whatYouLearn: [
+      'How the AI generates low and high budget ranges for AV events',
+      'What factors drive the estimate (attendees, venue, equipment type)',
+      'Reading the budget breakdown by category',
+      'Using budget estimates early in the planning process',
+      'Understanding crew recommendations included in the estimate',
+      'When to use an estimate vs. a live vendor quote',
+    ],
+    steps: [
+      {
+        title: 'Create an event and request a budget estimate',
+        content: 'From the planner dashboard, click "New Event" and fill in the basic details: event name, type (conference, gala, product launch, etc.), date, venue name and city, and expected attendee count. Once the event is created, go to the Budget tab and click "Generate Budget Estimate". Describe your AV requirements in the text field — the more detail you provide, the more accurate the range.',
+        tip: 'Even a rough description like "corporate conference for 300 people, main stage presentation, breakout rooms" gives the AI enough context to produce a useful range. You can refine it later.',
+      },
+      {
+        title: 'Understand the low and high range',
+        content: 'CueQuote returns a budget estimate as a range rather than a single number — for example, "USD 14,500 – USD 22,000". The low end reflects a lean setup using standard-grade equipment with a local vendor; the high end reflects premium equipment, multiple redundant systems, and a full-service vendor with crew. Your actual quote will typically land somewhere in between, depending on your vendor selection and final spec.',
+      },
+      {
+        title: 'Read the category breakdown',
+        content: 'Below the headline range, the estimate is broken down by AV category: Audio, Video, Lighting, Staging, Simultaneous Interpretation (if applicable), Labor, and Transport. Each category shows its own low-high range and a percentage of the total budget. This breakdown helps you prioritize — if a client has a fixed budget, you can see instantly where to trim (e.g., reducing lighting spend to protect the Audio budget for a keynote-heavy event).',
+        tip: 'Labor typically accounts for 25-35% of a full-service AV budget. If the labor line looks low in your estimate, double-check that multi-day setup and strike are accounted for in your event description.',
+      },
+      {
+        title: 'Review crew recommendations',
+        content: 'The estimate includes a recommended crew list for your event: roles (FOH Engineer, Lighting Operator, Video Technician, Stage Manager, etc.), suggested headcount per role, and the number of days each role is needed. These recommendations are driven by your attendee count, event type, and equipment complexity. Use them as a staffing guide when briefing vendors or when reviewing crew line items in received quotes.',
+      },
+      {
+        title: 'Use the estimate in client conversations',
+        content: 'Share the budget estimate with your client early in the planning process to align on AV spend before going to market. The estimate is formatted as a clean summary you can copy or export — it shows the range, category breakdown, and a note that final pricing will depend on vendor selection and final specification. Setting client budget expectations upfront prevents difficult conversations when live quotes arrive.',
+        tip: 'If a client\'s stated budget is significantly below the low end of your estimate, flag it immediately. It\'s better to adjust scope or expectations before issuing RFQs than after vendors have submitted.',
+      },
+      {
+        title: 'Know when to move from estimate to live quote',
+        content: 'Budget estimates are planning tools — they are not substitutes for vendor quotes. Use estimates during early-stage planning, client budget discussions, and internal budget approvals. Once your event brief is finalized (venue confirmed, agenda set, technical rider available), move to live vendor sourcing via the Vendors tab. The estimate gives you confidence going into sourcing that the quotes you receive are within a reasonable market range.',
+      },
+    ],
+  },
 ]

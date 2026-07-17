@@ -5,7 +5,7 @@ import { TUTORIALS_AR } from './ar'
 import { TUTORIALS_DE } from './de'
 import { TUTORIALS_FR } from './fr'
 
-export type { Tutorial, TutorialDifficulty, TutorialStep, SupportedLang } from './types'
+export type { Tutorial, TutorialDifficulty, TutorialMode, TutorialStep, SupportedLang } from './types'
 
 // Slug order is driven by English — slugs are URL paths and must match across languages.
 const TUTORIALS_BY_LANG: Record<SupportedLang, Tutorial[]> = {

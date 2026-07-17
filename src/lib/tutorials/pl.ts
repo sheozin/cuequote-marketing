@@ -817,4 +817,143 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'vendor-management',
+    title: 'Zarządzanie dostawcami AV',
+    description: 'Dodawaj firmy AV do swojej sieci kontaktów, zarządzaj danymi dostawców i śledź relacje — zawsze wiesz, do kogo zadzwonić, gdy potrzebujesz sprzętu.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Planner',
+    mode: 'planner',
+    icon: '🏪',
+    whatYouLearn: [
+      'Dodawanie firm i kontaktów do listy dostawców AV',
+      'Kategoryzowanie dostawców według specjalizacji (Audio, Video, Oświetlenie, Full-Service)',
+      'Zapisywanie notatek i historii współpracy',
+      'Wysyłanie zapytań ofertowych bezpośrednio z poziomu wydarzenia',
+      'Utrzymywanie uporządkowanej listy preferowanych dostawców',
+    ],
+    steps: [
+      {
+        title: 'Przejdź do sekcji Dostawcy',
+        content: 'Kliknij „Dostawcy" w pasku bocznym. To Twoja książka adresowa firm AV — centralny rejestr wszystkich dostawców, z którymi współpracujesz lub planujesz współpracować. Każda karta dostawcy wyświetla nazwę firmy, główny kontakt, specjalizację, lokalizację i oznaczenie statusu: aktywny, preferowany lub nowy.',
+      },
+      {
+        title: 'Dodaj nowego dostawcę',
+        content: 'Kliknij „Dodaj dostawcę" i uzupełnij dane firmy: nazwę, stronę internetową, miasto i kraj oraz specjalizację AV (Audio, Video, Oświetlenie, Tłumaczenie symultaniczne, Full-Service AV lub Inne). Dodaj dane głównej osoby kontaktowej: imię i nazwisko, adres e-mail i numer telefonu. Możesz dodać wiele kontaktów na jednego dostawcę — przydatne w przypadku dużych firm, gdzie sprzedaż i wsparcie techniczne obsługują różne osoby.',
+        tip: 'Dodawaj dostawców na bieżąco, nawet zanim zaczniesz z nimi współpracować. Szersza lista daje Ci więcej opcji przy pozyskiwaniu sprzętu na niestandardowe lub wymagające technicznie wydarzenia.',
+      },
+      {
+        title: 'Ustaw status i tagi dostawcy',
+        content: 'Przypisz każdemu dostawcy status: Preferowany (aktywnie polecani lub regularnie używani), Aktywny (sprawdzeni w praktyce), Kandydat (w trakcie oceny) lub Nieaktywny (z którymi przestałeś współpracować). Dodaj tagi, np. „outdoor", „ściany LED" lub „rigging", aby szybko filtrować dostawców według wymagań konkretnego wydarzenia.',
+      },
+      {
+        title: 'Zapisuj notatki o relacji',
+        content: 'Kliknij na dowolnego dostawcę, aby otworzyć jego widok szczegółowy. W sekcji Notatki zapisuj istotny kontekst: czas potrzebny na przygotowanie oferty, minimalna wartość zamówienia, preferowany kanał komunikacji, tendencje cenowe lub wcześniejsze problemy. Notatki są widoczne wyłącznie wewnętrznie — dostawcy nigdy ich nie widzą. Są nieocenione, gdy kolega pozyskuje sprzęt od dostawcy, którego dobrze znasz.',
+        tip: 'Zanotuj typowy czas odpowiedzi dostawcy na zapytanie ofertowe. To pomaga ocenić, kiedy wysłać zapytanie w zależności od harmonogramu wydarzenia.',
+      },
+      {
+        title: 'Wyślij zapytanie ofertowe',
+        content: 'Z poziomu dowolnego wydarzenia w panelu planisty otwórz zakładkę Pozyskiwanie i kliknij „Zapytaj o ofertę". Wybierz jednego lub kilku dostawców z listy, wskaż kategorie sprzętu, których dotyczy zapytanie, ustaw termin odpowiedzi i dodaj szczegółowe wymagania techniczne. CueQuote wysyła ustrukturyzowane zapytanie ofertowe do każdego wybranego dostawcy z danymi wydarzenia i wymaganiami już wstępnie uzupełnionymi.',
+      },
+      {
+        title: 'Śledź zapytania i odpowiedzi',
+        content: 'Wszystkie wysłane zapytania widoczne są w zakładce Pozyskiwanie ze statusem: Wysłane, Wyświetlone, Odpowiedziano lub Odrzucono. Gdy dostawca odpowie ofertą przez CueQuote, pojawia się ona automatycznie w widoku Porównania Ofert. Jeśli odpowiedź przyszła e-mailem lub jako plik, możesz ją wgrać ręcznie i powiązać z zapytaniem — wszystko pozostaje w jednym miejscu.',
+        tip: 'Wysyłaj zapytania do co najmniej 2-3 dostawców na kategorię sprzętu. Konkurencja pilnuje uczciwych cen i daje Ci alternatywę, gdy preferowany dostawca jest niedostępny.',
+      },
+    ],
+  },
+  {
+    slug: 'quote-comparison',
+    title: 'Porównywanie ofert dostawców',
+    description: 'Odbieraj oferty od wielu firm AV, porównuj je równolegle pod kątem ceny i zakresu, i wybieraj najlepszego dostawcę dla swojego wydarzenia.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Planner',
+    mode: 'planner',
+    icon: '📊',
+    whatYouLearn: [
+      'Wczytywanie ofert dostawców do widoku porównania',
+      'Odczytywanie kart dostawców i wskaźników wartości',
+      'Porównywanie pozycji cenowych z oznaczeniami najtańszego i najdroższego',
+      'Zestawienie warunków płatności i polityk anulowania',
+      'Korzystanie z panelu rekomendacji AI',
+      'Wybór dostawcy i aktualizacja statusu wydarzenia',
+    ],
+    steps: [
+      {
+        title: 'Otwórz widok Porównania Ofert',
+        content: 'Z panelu wydarzeń otwórz event, dla którego prowadzisz sourcing, i kliknij zakładkę „Porównanie Ofert". Jeśli wysłałeś już zapytania ofertowe i dostawcy odpowiedzieli ofertami CueQuote, ich propozycje pojawiają się automatycznie. Jeśli dostawcy przesłali oferty e-mailem lub jako pliki, kliknij „Dodaj ofertę" i wklej link udostępniania CueQuote lub wgraj dokument ręcznie.',
+        tip: 'Do jednego porównania możesz dodać maksymalnie 4 oferty. To wystarczy przy większości decyzji zakupowych — przy większej liczbie porównanie staje się nieczytelne.',
+      },
+      {
+        title: 'Odczytaj karty podsumowania dostawców',
+        content: 'Każdy dostawca otrzymuje kartę podsumowania na górze widoku: nazwa firmy, łączna cena w walucie wydarzenia, data ważności oferty i wskaźnik wartości (1-10). Wskaźnik wartości to wypadkowa konkurencyjności cenowej, kompletności zakresu i elastyczności warunków płatności. Dostawca z najniższą ceną jest zaznaczony na zielono — szybki punkt odniesienia dla decyzji budżetowych.',
+      },
+      {
+        title: 'Porównaj pozycje cenowe w szczegółach',
+        content: 'Przewiń do tabeli porównania pozycji. Sprzęt jest zgrupowany według kategorii (Audio, Video, Oświetlenie, Praca, Transport) i zestawiony między wszystkimi dostawcami. Najtańsza cena dla każdej pozycji jest oznaczona zielonym znacznikiem „Najtaniej"; najdroższa — bursztynowym. Pozycje nieuwzględnione przez dostawcę wyświetlane są jako kreska — te braki często kryją prawdziwe różnice cenowe. Dostawca z ceną o 10% niższą, ale z 5 brakującymi pozycjami, może być faktycznie droższy po doliceniu tych elementów.',
+        tip: 'Zwróć szczególną uwagę na pozycje Praca i Transport — są one często pomijane w pierwszych ofertach, by wyróżnić się niską ceną nagłówkową.',
+      },
+      {
+        title: 'Porównaj warunki płatności i polityki anulowania',
+        content: 'Sekcja Warunki zestawia harmonogram płatności każdego dostawcy obok siebie: procent zaliczki, termin płatności salda i warunki anulowania. Dostawca żądający 100% płatności z góry to ryzyko dla płynności finansowej w porównaniu z tym, który prosi o 30% przy akceptacji i 70% na dwa tygodnie przed wydarzeniem. Uwzględnij warunki płatności w całościowej ocenie — nieznacznie wyższa cena z lepszymi warunkami może być korzystniejsza dla klienta.',
+      },
+      {
+        title: 'Wygeneruj rekomendację AI',
+        content: 'Kliknij „Generuj rekomendację AI" na pasku narzędzi porównania. AI analizuje wszystkie wczytane oferty pod kątem ceny, zakresu, warunków i kompletności, a następnie tworzy ranking z uzasadnieniem. Wskazuje, który dostawca oferuje najlepszą wartość dla Twojego konkretnego wydarzenia, gdzie inne oferty mają braki i co warto wynegocjować przed podpisaniem umowy.',
+        tip: 'Traktuj rekomendację AI jako punkt wyjścia do decyzji — to szybki sposób na syntezę złożonych danych. Zawsze stosuj własny osąd oparty na relacji z dostawcą i ważności wydarzenia.',
+      },
+      {
+        title: 'Wybierz dostawcę i zaktualizuj wydarzenie',
+        content: 'Po podjęciu decyzji kliknij „Wybierz dostawcę" na karcie wybranej firmy. Status wydarzenia zmienia się na „Dostawca potwierdzony", a oferta wybranego dostawcy zostaje powiązana jako główna wycena dla wydarzenia. CueQuote wysyła automatyczne powiadomienie do wybranego dostawcy i opcjonalne powiadomienie o odrzuceniu do pozostałych. Wartość zaakceptowanej oferty automatycznie trafia do śledzenia budżetu wydarzenia.',
+      },
+    ],
+  },
+  {
+    slug: 'market-rate-budgets',
+    title: 'Szacowanie budżetu AV',
+    description: 'Dowiedz się, jak AI CueQuote generuje realistyczne widełki budżetowe AV dla Twoich wydarzeń i jak używać tych szacunków do planowania przed pozyskaniem dostawców.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Planner',
+    mode: 'planner',
+    icon: '💰',
+    whatYouLearn: [
+      'Jak AI generuje widełki budżetowe (niski/wysoki) dla wydarzeń AV',
+      'Jakie czynniki wpływają na szacunek (liczba uczestników, venue, typ sprzętu)',
+      'Odczytywanie podziału budżetu według kategorii',
+      'Kiedy używać szacunku, a kiedy przejść do realnych ofert od dostawców',
+      'Rozumienie rekomendacji ekipy technicznej zawartych w szacunku',
+    ],
+    steps: [
+      {
+        title: 'Utwórz wydarzenie i poproś o szacunek budżetu',
+        content: 'Na pulpicie planisty kliknij „Nowe wydarzenie" i uzupełnij podstawowe dane: nazwę, typ (konferencja, gala, premiera produktu itp.), datę, nazwę i miasto venue oraz przewidywaną liczbę uczestników. Po utworzeniu wydarzenia przejdź do zakładki Budżet i kliknij „Generuj szacunek budżetu". W polu tekstowym opisz swoje wymagania AV — im więcej szczegółów, tym trafniejszy zakres.',
+        tip: 'Nawet ogólny opis, np. „konferencja korporacyjna dla 300 osób, scena główna, sale breakoutowe", daje AI wystarczający kontekst, by wygenerować użyteczny zakres. Możesz go doprecyzować później.',
+      },
+      {
+        title: 'Zrozum widełki niski-wysoki',
+        content: 'CueQuote zwraca szacunek jako zakres, a nie pojedynczą liczbę — np. „14 500 USD – 22 000 USD". Dolna granica odzwierciedla minimalistyczne rozwiązanie z standardowym sprzętem i lokalnym dostawcą; górna — sprzęt premium, wielokrotne systemy redundantne i dostawcę full-service z własną ekipą. Twoja rzeczywista oferta zazwyczaj mieści się gdzieś pośrodku, zależnie od wyboru dostawcy i ostatecznej specyfikacji.',
+      },
+      {
+        title: 'Przeanalizuj podział według kategorii',
+        content: 'Poniżej głównego zakresu szacunek jest rozbity na kategorie AV: Audio, Video, Oświetlenie, Scena, Tłumaczenie symultaniczne (jeśli dotyczy), Praca i Transport. Każda kategoria ma własny zakres niski-wysoki oraz udział procentowy w łącznym budżecie. Ten podział pomaga ustalić priorytety — jeśli klient ma stały budżet, od razu widzisz, gdzie ciąć (np. zmniejszyć wydatki na oświetlenie, by chronić budżet Audio przy wydarzeniu zdominowanym przez keynotes).',
+        tip: 'Praca stanowi zazwyczaj 25-35% pełnego budżetu AV. Jeśli pozycja Praca wydaje się za niska, sprawdź, czy w opisie wydarzenia uwzględniłeś wielodniowy montaż i demontaż.',
+      },
+      {
+        title: 'Sprawdź rekomendacje ekipy',
+        content: 'Szacunek zawiera rekomendowaną listę ekipy dla Twojego wydarzenia: role (Inżynier FOH, Operator oświetlenia, Technik video, Kierownik sceny itp.), sugerowaną liczbę osób na każdą rolę i liczbę dni pracy. Rekomendacje wynikają z liczby uczestników, typu wydarzenia i złożoności technicznej. Traktuj je jako wskazówkę kadrową przy briefowaniu dostawców lub weryfikacji pozycji ekipy w otrzymanych ofertach.',
+      },
+      {
+        title: 'Wykorzystaj szacunek w rozmowach z klientem',
+        content: 'Podziel się szacunkiem budżetu z klientem wcześnie w procesie planowania, by uzgodnić nakłady na AV przed wyjściem na rynek. Szacunek jest sformatowany jako czytelne podsumowanie, które możesz skopiować lub wyeksportować — pokazuje zakres, podział kategorii i informację, że ostateczna cena zależy od wyboru dostawcy i finalnej specyfikacji. Ustalenie oczekiwań budżetowych klienta z wyprzedzeniem zapobiega trudnym rozmowom po otrzymaniu realnych ofert.',
+        tip: 'Jeśli budżet podany przez klienta jest znacząco poniżej dolnej granicy szacunku, zasygnalizuj to natychmiast. Lepiej dostosować zakres lub oczekiwania przed wysłaniem zapytań ofertowych niż po ich otrzymaniu.',
+      },
+      {
+        title: 'Wiedz, kiedy przejść od szacunku do realnej oferty',
+        content: 'Szacunki budżetowe to narzędzia planistyczne — nie zastępują ofert dostawców. Używaj ich na wczesnym etapie planowania, podczas rozmów o budżecie z klientem i przy wewnętrznych zatwierdzeniach finansowych. Gdy brief wydarzenia jest gotowy (venue potwierdzone, agenda ustalona, rider techniczny dostępny), przejdź do pozyskiwania realnych ofert w zakładce Dostawcy. Szacunek daje Ci pewność, że oferty, które otrzymasz, mieszczą się w rozsądnym przedziale rynkowym.',
+      },
+    ],
+  },
 ]

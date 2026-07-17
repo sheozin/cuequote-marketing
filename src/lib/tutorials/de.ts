@@ -852,4 +852,144 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'vendor-management',
+    title: 'Lieferantenverwaltung',
+    description: 'Fügen Sie AV-Dienstleister zu Ihrem Netzwerk hinzu, verwalten Sie Ansprechpartner und verfolgen Sie Lieferantenbeziehungen — damit Sie immer wissen, wen Sie bei Equipmentbedarf kontaktieren.',
+    duration: '4 Min.',
+    difficulty: 'beginner',
+    category: 'Planer',
+    mode: 'planner',
+    icon: '🏪',
+    whatYouLearn: [
+      'Unternehmen und Kontakte zur Lieferantenliste hinzufügen',
+      'Lieferanten nach Spezialisierung kategorisieren (Audio, Video, Licht, Full-Service)',
+      'Beziehungsnotizen und Verlauf hinterlegen',
+      'Angebote direkt aus einer Veranstaltung bei Lieferanten anfragen',
+      'Die bevorzugte Lieferantenliste aktuell und übersichtlich halten',
+    ],
+    steps: [
+      {
+        title: 'Zum Bereich Lieferanten navigieren',
+        content: 'Klicken Sie in der Seitenleiste auf „Lieferanten". Das ist Ihr AV-Adressbuch — eine zentrale Liste aller Lieferanten, mit denen Sie zusammenarbeiten oder arbeiten möchten. Jede Lieferantenkarte zeigt Firmenname, Hauptansprechpartner, Spezialisierung, Standort und ein Statusbadge: aktiv, bevorzugt oder neu.',
+      },
+      {
+        title: 'Neuen Lieferanten anlegen',
+        content: 'Klicken Sie auf „Lieferant hinzufügen" und tragen Sie die Firmendaten ein: Name, Website, Stadt und Land sowie AV-Spezialisierung (Audio, Video, Licht, Simultandolmetschen, Full-Service AV oder Sonstiges). Hinterlegen Sie die Daten des Hauptansprechpartners: Name, E-Mail und Telefonnummer. Sie können mehrere Kontakte pro Lieferant anlegen — hilfreich bei großen Dienstleistern, bei denen verschiedene Personen Vertrieb und technischen Support übernehmen.',
+        tip: 'Erfassen Sie Lieferanten laufend, auch bevor Sie mit ihnen zusammengearbeitet haben. Eine breite Lieferantenliste gibt Ihnen mehr Optionen bei speziellen oder technisch anspruchsvollen Veranstaltungen.',
+      },
+      {
+        title: 'Status und Tags setzen',
+        content: 'Weisen Sie jedem Lieferanten einen Status zu: Bevorzugt (Lieferanten, die Sie aktiv empfehlen oder regelmäßig nutzen), Aktiv (bewährt, würden Sie wieder beauftragen), Interessent (in Prüfung) oder Inaktiv (Zusammenarbeit eingestellt). Vergeben Sie Tags wie „Outdoor-Spezialist", „LED-Wände" oder „Rigging", um Lieferanten bei der Beschaffung für bestimmte Anforderungen schnell zu filtern.',
+      },
+      {
+        title: 'Beziehungsnotizen hinterlegen',
+        content: 'Klicken Sie auf einen Lieferanten, um die Detailansicht zu öffnen. Nutzen Sie den Bereich Notizen für wichtige Kontextinformationen: typische Vorlaufzeiten, Mindestbestellwerte, bevorzugte Kommunikationswege, Preistendenzen oder bekannte Probleme. Notizen sind intern und für Lieferanten niemals sichtbar. Sie sind unverzichtbar, wenn ein Kollege einen Lieferanten anfragen möchte, den Sie gut kennen.',
+        tip: 'Notieren Sie die typische Antwortzeit des Lieferanten auf Angebotsanfragen. Das hilft Ihnen, den richtigen Anfragezeitpunkt je nach Veranstaltungsplanung zu wählen.',
+      },
+      {
+        title: 'Angebot beim Lieferanten anfragen',
+        content: 'Öffnen Sie in Ihrem Planer-Dashboard eine Veranstaltung, klicken Sie auf den Tab Beschaffung und dann auf „Angebot anfragen". Wählen Sie einen oder mehrere Lieferanten aus Ihrer Liste, geben Sie die benötigten Equipmentkategorien an, setzen Sie einen Antworttermin und fügen Sie spezifische Anforderungen oder technische Details hinzu. CueQuote sendet eine strukturierte Angebotsanfrage mit den Veranstaltungsdetails und Ihren Anforderungen an alle ausgewählten Lieferanten.',
+      },
+      {
+        title: 'Anfragen und Antworten verfolgen',
+        content: 'Alle ausgehenden Angebotsanfragen erscheinen im Tab Beschaffung mit ihrem Status: Gesendet, Angesehen, Beantwortet oder Abgelehnt. Antwortet ein Lieferant mit einem CueQuote-Angebot, erscheint es automatisch in der Angebotsvergleichs-Ansicht. Antwortet er per E-Mail oder als Datei, können Sie sein Angebot manuell hochladen und mit der Anfrage verknüpfen — alles bleibt an einem Ort.',
+        tip: 'Senden Sie Anfragen an mindestens 2–3 Lieferanten pro Equipmentkategorie. Wettbewerb hält Preise fair und gibt Ihnen eine Alternative, wenn Ihr bevorzugter Lieferant nicht verfügbar ist.',
+      },
+    ],
+  },
+  {
+    slug: 'quote-comparison',
+    title: 'Lieferantenangebote vergleichen',
+    description: 'Erhalten Sie Angebote von mehreren AV-Dienstleistern, vergleichen Sie sie nach Preis und Leistungsumfang und wählen Sie den besten Lieferanten für Ihre Veranstaltung.',
+    duration: '5 Min.',
+    difficulty: 'intermediate',
+    category: 'Planer',
+    mode: 'planner',
+    icon: '📊',
+    whatYouLearn: [
+      'Lieferantenangebote in die Vergleichsansicht laden',
+      'Lieferantenzusammenfassungskarten und Wertkennzahlen lesen',
+      'Positionen lieferantenübergreifend mit Günstigster-/Teuerster-Kennzeichnung vergleichen',
+      'Zahlungskonditionen und Stornierungsregeln nebeneinander prüfen',
+      'KI-Empfehlungspanel für eine priorisierte Empfehlung nutzen',
+      'Lieferant auswählen und Veranstaltungsstatus aktualisieren',
+    ],
+    steps: [
+      {
+        title: 'Angebotsvergleichs-Ansicht öffnen',
+        content: 'Öffnen Sie im Veranstaltungs-Dashboard die Veranstaltung, für die Sie beschaffen, und klicken Sie auf den Tab „Angebotsvergleich". Haben Sie bereits Anfragen gesendet und Lieferanten mit CueQuote-Angeboten geantwortet, erscheinen deren Angebote automatisch. Haben Lieferanten per E-Mail oder Datei geantwortet, klicken Sie auf „Angebot hinzufügen", fügen Sie den CueQuote-Freigabelink ein oder laden Sie das Dokument manuell hoch.',
+        tip: 'Sie können bis zu 4 Lieferantenangebote in einem Vergleich laden. Das reicht für die meisten Beschaffungsentscheidungen — bei mehr als 4 wird der Vergleich unübersichtlich.',
+      },
+      {
+        title: 'Lieferantenzusammenfassungskarten lesen',
+        content: 'Jeder Lieferant erhält oben im Vergleich eine Zusammenfassungskarte mit: Firmenname, Gesamtpreis in der Veranstaltungswährung, Angebotsgültigkeitsdatum und Wertkennzahl (1–10). Die Wertkennzahl ist ein Komposit aus Preiswettbewerbsfähigkeit, Vollständigkeit des Leistungsumfangs und Flexibilität der Zahlungskonditionen. Der Lieferant mit dem niedrigsten Gesamtpreis wird grün hervorgehoben — ein schneller visueller Ankerpunkt für budgetorientierte Entscheidungen.',
+      },
+      {
+        title: 'Positionen im Detail vergleichen',
+        content: 'Scrollen Sie zur Positionsvergleichstabelle. Positionen sind nach Kategorie gruppiert (Audio, Video, Licht, Arbeit, Transport) und lieferantenübergreifend abgeglichen. Der günstigste Preis je Position erhält ein grünes „Günstigster"-Badge, der teuerste ein bernsteinfarbenes. Nicht enthaltene Positionen erscheinen als Strich — diese Lücken verbergen oft die eigentlichen Preisunterschiede. Ein Lieferant mit 10 % niedrigerem Gesamtpreis, aber 5 fehlenden Positionen, kann bei nachträglicher Beschaffung dieser Positionen tatsächlich teurer sein.',
+        tip: 'Achten Sie besonders auf Arbeits- und Transportpositionen — diese werden in Erstangeboten häufig weggelassen, um den Gesamtpreis attraktiver wirken zu lassen.',
+      },
+      {
+        title: 'Zahlungskonditionen und Stornierungsregeln vergleichen',
+        content: 'Der Bereich Konditionen zeigt den Zahlungsplan jedes Lieferanten nebeneinander: Anzahlungsprozentsatz, Fälligkeitsdatum des Restbetrags und Stornierungsregeln. Ein Lieferant, der 100 % im Voraus verlangt, stellt ein Liquiditätsrisiko dar verglichen mit einem, der 30 % bei Auftragsbestätigung und 70 % zwei Wochen vor der Veranstaltung fordert. Beziehen Sie die Zahlungskonditionen in Ihre Gesamtbewertung ein — ein leicht höherer Preis mit besseren Konditionen kann für Ihren Kunden die bessere Wahl sein.',
+      },
+      {
+        title: 'KI-Empfehlung generieren',
+        content: 'Klicken Sie in der Vergleichs-Symbolleiste auf „KI-Empfehlung generieren". Die KI analysiert alle geladenen Angebote nach Preis, Umfang, Konditionen und Vollständigkeit und erstellt eine priorisierte Empfehlung mit Begründung. Sie zeigt, welcher Lieferant für Ihren spezifischen Veranstaltungskontext den besten Gesamtwert bietet, wo andere Angebote schwächeln und was Sie von jedem Lieferanten vor der Auftragsvergabe nachverhandeln sollten.',
+        tip: 'Nutzen Sie die KI-Empfehlung als Ausgangspunkt — sie ist ein schneller Weg, komplexe Daten zu verdichten. Wenden Sie stets Ihr eigenes Urteil an, basierend auf der Lieferantenbeziehung und der Bedeutung der Veranstaltung.',
+      },
+      {
+        title: 'Lieferant auswählen und Veranstaltung aktualisieren',
+        content: 'Klicken Sie nach Ihrer Entscheidung auf der Gewinnerkarte auf „Lieferant auswählen". Der Veranstaltungsstatus ändert sich zu „Lieferant bestätigt" und das Angebot des ausgewählten Lieferanten wird als Hauptangebot für die Veranstaltung verknüpft. CueQuote sendet automatisch eine Benachrichtigung an den gewählten Lieferanten und optional eine Absage an die anderen. Die Gesamtsumme des akzeptierten Angebots fließt automatisch in das Veranstaltungsbudget-Tracking ein.',
+      },
+    ],
+  },
+  {
+    slug: 'market-rate-budgets',
+    title: 'Marktübliche Budgetschätzungen',
+    description: 'Verstehen Sie, wie CueQuotes KI realistische AV-Budgetbandbreiten für Ihre Veranstaltungen erstellt, und nutzen Sie diese Schätzungen zur frühzeitigen Planung vor der Lieferantenauswahl.',
+    duration: '4 Min.',
+    difficulty: 'beginner',
+    category: 'Planer',
+    mode: 'planner',
+    icon: '💰',
+    whatYouLearn: [
+      'Wie die KI niedrige und hohe Budgetbandbreiten für AV-Veranstaltungen generiert',
+      'Welche Faktoren die Schätzung bestimmen (Teilnehmerzahl, Venue, Equipmentart)',
+      'Budgetaufschlüsselung nach Kategorie lesen',
+      'Schätzungen in der frühen Planungsphase nutzen',
+      'Crew-Empfehlungen aus der Schätzung verstehen',
+      'Wann von einer Schätzung zu einem Live-Lieferantenangebot wechseln',
+    ],
+    steps: [
+      {
+        title: 'Veranstaltung anlegen und Budgetschätzung anfordern',
+        content: 'Klicken Sie im Planer-Dashboard auf „Neue Veranstaltung" und tragen Sie die Grunddaten ein: Name, Art (Konferenz, Gala, Produktlaunch usw.), Datum, Venue-Name und -Stadt sowie die erwartete Teilnehmerzahl. Nach dem Erstellen der Veranstaltung wechseln Sie zum Tab Budget und klicken auf „Budgetschätzung generieren". Beschreiben Sie im Textfeld Ihre AV-Anforderungen — je mehr Details, desto genauer die Bandbreite.',
+        tip: 'Selbst eine grobe Beschreibung wie „Unternehmenskonferenz für 300 Personen, Hauptbühne, Breakout-Räume" gibt der KI genug Kontext für eine brauchbare Schätzung. Sie können später verfeinern.',
+      },
+      {
+        title: 'Bandbreite verstehen: Niedrig und Hoch',
+        content: 'CueQuote gibt die Budgetschätzung als Bandbreite aus, nicht als Einzelzahl — zum Beispiel „14.500 USD – 22.000 USD". Der untere Wert spiegelt ein schlankes Setup mit Standardequipment und einem lokalen Lieferanten wider; der obere Wert steht für Premium-Equipment, mehrfach redundante Systeme und einen Full-Service-Dienstleister mit eigenem Crew. Ihr tatsächliches Angebot liegt erfahrungsgemäß irgendwo dazwischen, abhängig von Lieferantenwahl und finaler Spezifikation.',
+      },
+      {
+        title: 'Aufschlüsselung nach Kategorie lesen',
+        content: 'Unterhalb der Hauptbandbreite wird die Schätzung nach AV-Kategorien aufgegliedert: Audio, Video, Licht, Bühne, Simultandolmetschen (falls relevant), Arbeit und Transport. Jede Kategorie hat eine eigene Niedrig-Hoch-Bandbreite und einen prozentualen Anteil am Gesamtbudget. Diese Aufschlüsselung hilft bei der Priorisierung — hat ein Kunde ein fixes Budget, sehen Sie sofort, wo gekürzt werden kann (z. B. Lichtbudget reduzieren, um das Audiobudget bei einer keynote-lastigen Veranstaltung zu schützen).',
+        tip: 'Arbeit macht typischerweise 25–35 % eines Full-Service-AV-Budgets aus. Erscheint die Arbeitsposition in Ihrer Schätzung zu niedrig, prüfen Sie, ob mehrtägiger Auf- und Abbau in der Veranstaltungsbeschreibung berücksichtigt wurde.',
+      },
+      {
+        title: 'Crew-Empfehlungen prüfen',
+        content: 'Die Schätzung enthält eine empfohlene Crew-Liste für Ihre Veranstaltung: Rollen (FOH-Ingenieur, Lichtoperator, Videotechniker, Bühnenmanager usw.), empfohlene Personenzahl je Rolle und Anzahl der benötigten Arbeitstage. Die Empfehlungen basieren auf Teilnehmerzahl, Veranstaltungsart und technischer Komplexität. Nutzen Sie sie als Personalplanung beim Briefing von Lieferanten oder beim Prüfen von Crew-Positionen in eingehenden Angeboten.',
+      },
+      {
+        title: 'Schätzung in Kundengesprächen nutzen',
+        content: 'Teilen Sie die Budgetschätzung früh im Planungsprozess mit dem Kunden, um AV-Ausgaben vor der Marktanfrage abzustimmen. Die Schätzung wird als saubere Zusammenfassung formatiert, die Sie kopieren oder exportieren können — mit Bandbreite, Kategorienaufschlüsselung und dem Hinweis, dass die finale Preisgestaltung vom Lieferanten und der endgültigen Spezifikation abhängt. Frühzeitige Budgeterwartungen verhindern schwierige Gespräche, wenn Live-Angebote eintreffen.',
+        tip: 'Liegt das genannte Kundenbudget deutlich unterhalb des Schätzungs-Minimums, sprechen Sie das sofort an. Umfang oder Erwartungen vor dem Versand von Anfragen anzupassen ist besser als danach.',
+      },
+      {
+        title: 'Wissen, wann von der Schätzung zum Live-Angebot zu wechseln ist',
+        content: 'Budgetschätzungen sind Planungsinstrumente — sie ersetzen keine Lieferantenangebote. Verwenden Sie Schätzungen in der frühen Planungsphase, bei Budget-Kundengesprächen und internen Budget-Freigaben. Sobald das Veranstaltungs-Briefing abgeschlossen ist (Venue bestätigt, Agenda festgelegt, technischer Rider verfügbar), wechseln Sie über den Tab Lieferanten zur Live-Beschaffung. Die Schätzung gibt Ihnen die Gewissheit, dass die eingehenden Angebote im marktüblichen Rahmen liegen.',
+      },
+    ],
+  },
 ]

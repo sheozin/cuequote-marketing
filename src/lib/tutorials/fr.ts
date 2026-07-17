@@ -852,4 +852,144 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'vendor-management',
+    title: 'Gestion des prestataires AV',
+    description: 'Ajoutez des prestataires AV à votre réseau, gérez vos contacts et suivez vos relations fournisseurs — pour toujours savoir qui appeler quand vous avez besoin de matériel.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Planificateur',
+    mode: 'planner',
+    icon: '🏪',
+    whatYouLearn: [
+      'Ajouter des entreprises et des contacts à votre liste de prestataires AV',
+      'Catégoriser les prestataires par spécialité (Son, Vidéo, Éclairage, Clé en main)',
+      'Consigner des notes et l\'historique des collaborations',
+      'Envoyer des demandes de devis directement depuis un événement',
+      'Maintenir une liste de prestataires privilégiés organisée et à jour',
+    ],
+    steps: [
+      {
+        title: 'Accéder à la section Prestataires',
+        content: 'Cliquez sur « Prestataires » dans la barre latérale. Il s\'agit de votre carnet d\'adresses AV — une liste centralisée de tous les prestataires avec lesquels vous travaillez ou souhaitez travailler. Chaque fiche prestataire affiche le nom de l\'entreprise, le contact principal, la spécialité, la localisation et un badge de statut : actif, privilégié ou nouveau.',
+      },
+      {
+        title: 'Ajouter un nouveau prestataire',
+        content: 'Cliquez sur « Ajouter un prestataire » et renseignez les coordonnées de l\'entreprise : nom, site web, ville et pays, et spécialité AV (Son, Vidéo, Éclairage, Interprétation simultanée, AV clé en main ou Autre). Ajoutez les informations du contact principal : nom, e-mail et téléphone. Vous pouvez ajouter plusieurs contacts par prestataire — utile pour les grandes sociétés où les équipes commerciales et techniques sont distinctes.',
+        tip: 'Ajoutez les prestataires au fil du temps, même avant d\'avoir travaillé avec eux. Une liste étendue vous offre plus d\'options pour sourcer des événements atypiques ou à fortes exigences techniques.',
+      },
+      {
+        title: 'Définir le statut et les étiquettes du prestataire',
+        content: 'Attribuez un statut à chaque prestataire : Privilégié (prestataires que vous recommandez activement ou utilisez régulièrement), Actif (prestataires éprouvés que vous seriez prêt à remandater), Prospect (en cours d\'évaluation) ou Inactif (collaboration arrêtée). Ajoutez des étiquettes comme « outdoor », « murs LED » ou « rigging » pour filtrer rapidement les prestataires selon les exigences d\'un événement précis.',
+      },
+      {
+        title: 'Consigner des notes sur la relation',
+        content: 'Cliquez sur un prestataire pour ouvrir sa vue détaillée. Utilisez la section Notes pour consigner le contexte important : délais de préparation habituels, montants minimum de commande, canaux de communication préférés, tendances tarifaires ou problèmes passés à connaître. Les notes sont strictement internes — les prestataires ne les voient jamais. Elles sont précieuses quand un collègue sollicite un prestataire que vous connaissez bien.',
+        tip: 'Notez le délai de réponse habituel du prestataire aux demandes de devis. Cela vous aide à déterminer quand envoyer votre demande en fonction du calendrier de l\'événement.',
+      },
+      {
+        title: 'Envoyer une demande de devis',
+        content: 'Depuis n\'importe quel événement de votre tableau de bord planificateur, ouvrez l\'onglet Approvisionnement et cliquez sur « Demander un devis ». Sélectionnez un ou plusieurs prestataires de votre liste, choisissez les catégories de matériel concernées, fixez une date limite de réponse et ajoutez des notes ou exigences techniques spécifiques. CueQuote envoie une demande de devis structurée à chaque prestataire sélectionné avec les détails de l\'événement et vos exigences préremplies.',
+      },
+      {
+        title: 'Suivre les demandes et les réponses',
+        content: 'Toutes les demandes de devis envoyées apparaissent dans l\'onglet Approvisionnement avec leur statut : Envoyée, Vue, Répondue ou Refusée. Lorsqu\'un prestataire répond avec un devis CueQuote, celui-ci apparaît automatiquement dans la vue Comparaison de devis. S\'il répond par e-mail ou par fichier, vous pouvez téléverser son devis manuellement et le lier à la demande — tout reste au même endroit.',
+        tip: 'Envoyez des demandes à au moins 2-3 prestataires par catégorie de matériel. La concurrence maintient des prix honnêtes et vous donne une alternative si votre prestataire privilégié est indisponible.',
+      },
+    ],
+  },
+  {
+    slug: 'quote-comparison',
+    title: 'Comparer les devis des prestataires',
+    description: 'Recevez des devis de plusieurs prestataires AV, comparez-les côte à côte sur le prix et le périmètre, et sélectionnez le meilleur fournisseur pour votre événement.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Planificateur',
+    mode: 'planner',
+    icon: '📊',
+    whatYouLearn: [
+      'Charger les devis des prestataires dans la vue de comparaison',
+      'Lire les fiches récapitulatives et les scores de valeur',
+      'Comparer les postes entre prestataires avec les indicateurs Moins cher / Plus cher',
+      'Examiner les conditions de paiement et les politiques d\'annulation côte à côte',
+      'Utiliser le panneau de recommandations IA pour obtenir un classement',
+      'Sélectionner un prestataire et mettre à jour le statut de l\'événement',
+    ],
+    steps: [
+      {
+        title: 'Ouvrir la vue Comparaison de devis',
+        content: 'Depuis le tableau de bord des événements, ouvrez l\'événement pour lequel vous sourcez et cliquez sur l\'onglet « Comparaison de devis ». Si vous avez déjà envoyé des demandes et que des prestataires ont répondu avec des devis CueQuote, leurs propositions apparaissent automatiquement. Si les prestataires ont répondu par e-mail ou par fichier, cliquez sur « Ajouter un devis » et collez le lien de partage CueQuote ou téléversez le document manuellement.',
+        tip: 'Vous pouvez ajouter jusqu\'à 4 devis dans une comparaison. C\'est suffisant pour la plupart des décisions de sourcing — au-delà, la comparaison devient difficile à lire.',
+      },
+      {
+        title: 'Lire les fiches récapitulatives des prestataires',
+        content: 'Chaque prestataire dispose d\'une fiche récapitulative en haut de la comparaison : nom de l\'entreprise, prix total dans la devise de l\'événement, date de validité du devis et score de valeur (1-10). Le score de valeur est un composite de la compétitivité du prix, de l\'exhaustivité du périmètre et de la flexibilité des conditions de paiement. Le prestataire avec le prix total le plus bas est mis en évidence en vert — un repère visuel rapide pour les décisions budgétaires.',
+      },
+      {
+        title: 'Comparer les postes en détail',
+        content: 'Faites défiler jusqu\'au tableau de comparaison des postes. Les postes sont regroupés par catégorie (Son, Vidéo, Éclairage, Main-d\'œuvre, Transport) et mis en correspondance entre tous les prestataires. Le prix le moins cher pour chaque poste reçoit un badge vert « Moins cher » ; le plus cher reçoit un badge ambré. Les postes qu\'un prestataire n\'a pas inclus apparaissent comme un tiret — ces écarts révèlent souvent les vraies différences de prix. Un prestataire proposant un total 10 % moins élevé mais avec 5 postes manquants peut s\'avérer plus cher une fois ces éléments sourcés séparément.',
+        tip: 'Portez une attention particulière aux postes Main-d\'œuvre et Transport — ils sont fréquemment omis dans les devis initiaux pour rendre le prix global plus attractif.',
+      },
+      {
+        title: 'Examiner les conditions de paiement et les politiques d\'annulation',
+        content: 'La section Conditions affiche l\'échéancier de paiement de chaque prestataire côte à côte : pourcentage d\'acompte, date d\'échéance du solde et politique d\'annulation. Un prestataire demandant 100 % à l\'avance représente un risque de trésorerie comparé à celui qui demande 30 % à l\'acceptation et 70 % deux semaines avant l\'événement. Intégrez les conditions de paiement dans votre évaluation globale — un prix légèrement plus élevé avec de meilleures conditions peut être plus avantageux pour votre client.',
+      },
+      {
+        title: 'Générer la recommandation IA',
+        content: 'Cliquez sur « Générer une recommandation IA » dans la barre d\'outils de comparaison. L\'IA analyse tous les devis chargés en termes de prix, périmètre, conditions et exhaustivité, puis produit un classement avec un texte explicatif. Elle indique quel prestataire offre la meilleure valeur globale pour votre événement spécifique, les points faibles de chaque offre, et ce qu\'il convient de renégocier avant d\'attribuer le contrat.',
+        tip: 'Utilisez la recommandation IA comme point de départ — c\'est un moyen rapide de synthétiser des données complexes. Appliquez toujours votre propre jugement en fonction de votre relation avec le prestataire et des enjeux de l\'événement.',
+      },
+      {
+        title: 'Sélectionner un prestataire et mettre à jour l\'événement',
+        content: 'Une fois votre décision prise, cliquez sur « Sélectionner ce prestataire » sur la fiche du gagnant. Le statut de l\'événement passe à « Prestataire confirmé » et le devis du prestataire sélectionné est lié comme devis principal de l\'événement. CueQuote envoie automatiquement une notification au prestataire choisi et, en option, une notification de refus aux autres. Le total du devis accepté alimente automatiquement le suivi du budget de l\'événement.',
+      },
+    ],
+  },
+  {
+    slug: 'market-rate-budgets',
+    title: 'Estimations budgétaires aux tarifs du marché',
+    description: 'Comprenez comment l\'IA de CueQuote génère des fourchettes budgétaires AV réalistes pour vos événements, et utilisez ces estimations pour planifier efficacement avant de contacter les prestataires.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Planificateur',
+    mode: 'planner',
+    icon: '💰',
+    whatYouLearn: [
+      'Comment l\'IA génère des fourchettes budgétaires basse et haute pour les événements AV',
+      'Les facteurs qui influencent l\'estimation (participants, lieu, type de matériel)',
+      'Lire la ventilation budgétaire par catégorie',
+      'Utiliser les estimations en phase de planification précoce',
+      'Comprendre les recommandations d\'équipe incluses dans l\'estimation',
+      'Savoir quand passer d\'une estimation à un devis en direct',
+    ],
+    steps: [
+      {
+        title: 'Créer un événement et demander une estimation budgétaire',
+        content: 'Depuis le tableau de bord planificateur, cliquez sur « Nouvel événement » et renseignez les informations de base : nom, type (conférence, gala, lancement de produit, etc.), date, nom et ville du lieu, et nombre de participants attendus. Une fois l\'événement créé, accédez à l\'onglet Budget et cliquez sur « Générer une estimation budgétaire ». Dans le champ de texte, décrivez vos besoins AV — plus vous donnez de détails, plus la fourchette sera précise.',
+        tip: 'Même une description sommaire comme « conférence d\'entreprise pour 300 personnes, scène principale, salles de sous-groupes » donne à l\'IA suffisamment de contexte pour produire une fourchette utile. Vous pouvez affiner plus tard.',
+      },
+      {
+        title: 'Comprendre la fourchette basse et haute',
+        content: 'CueQuote retourne une estimation sous forme de fourchette, pas d\'un chiffre unique — par exemple « 14 500 USD – 22 000 USD ». L\'extrémité basse reflète une configuration légère avec du matériel standard et un prestataire local ; l\'extrémité haute reflète du matériel haut de gamme, plusieurs systèmes redondants et un prestataire clé en main avec son équipe. Votre devis réel se situera généralement quelque part entre les deux, selon le choix du prestataire et la spécification finale.',
+      },
+      {
+        title: 'Lire la ventilation par catégorie',
+        content: 'Sous la fourchette principale, l\'estimation est détaillée par catégorie AV : Son, Vidéo, Éclairage, Scène, Interprétation simultanée (le cas échéant), Main-d\'œuvre et Transport. Chaque catégorie dispose de sa propre fourchette basse-haute et d\'un pourcentage du budget total. Cette ventilation aide à prioriser — si un client a un budget fixe, vous voyez immédiatement où réduire (par exemple, diminuer le budget éclairage pour préserver le budget son lors d\'un événement dominé par des conférences).',
+        tip: 'La main-d\'œuvre représente généralement 25-35 % d\'un budget AV clé en main. Si le poste main-d\'œuvre semble faible dans votre estimation, vérifiez que les jours de montage et de démontage multi-journées sont bien pris en compte dans la description de l\'événement.',
+      },
+      {
+        title: 'Examiner les recommandations d\'équipe',
+        content: 'L\'estimation inclut une liste d\'équipe recommandée pour votre événement : rôles (ingénieur son FOH, opérateur lumière, technicien vidéo, directeur de scène, etc.), effectif suggéré par rôle et nombre de jours de travail requis. Ces recommandations sont déterminées par le nombre de participants, le type d\'événement et la complexité du matériel. Utilisez-les comme guide d\'effectif lors du brief des prestataires ou de l\'examen des postes d\'équipe dans les devis reçus.',
+      },
+      {
+        title: 'Utiliser l\'estimation dans les échanges avec le client',
+        content: 'Partagez l\'estimation budgétaire avec votre client tôt dans le processus de planification pour aligner les dépenses AV avant d\'aller sur le marché. L\'estimation est formatée comme un résumé clair que vous pouvez copier ou exporter — il présente la fourchette, la ventilation par catégorie et une note indiquant que le prix final dépendra du choix du prestataire et de la spécification complète. Aligner les attentes budgétaires du client en amont évite des conversations difficiles à l\'arrivée des devis.',
+        tip: 'Si le budget déclaré par le client est nettement inférieur à l\'extrémité basse de votre estimation, signalez-le immédiatement. Mieux vaut ajuster le périmètre ou les attentes avant d\'envoyer des appels d\'offres qu\'après leur réception.',
+      },
+      {
+        title: 'Savoir quand passer de l\'estimation au devis en direct',
+        content: 'Les estimations budgétaires sont des outils de planification — elles ne remplacent pas les devis des prestataires. Utilisez-les en phase de planification précoce, lors des discussions budgétaires avec le client et pour les validations budgétaires internes. Une fois le cahier des charges finalisé (lieu confirmé, programme défini, fiche technique disponible), passez au sourcing en direct via l\'onglet Prestataires. L\'estimation vous donne l\'assurance que les devis reçus s\'inscrivent dans une fourchette raisonnable du marché.',
+      },
+    ],
+  },
 ]
