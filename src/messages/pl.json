@@ -17,7 +17,7 @@
     "forPlanners": "Dla organizatorów",
     "solutions": "Rozwiązania",
     "forAvNavDesc": "Twórz oferty z własnego katalogu, wysyłaj markowe PDF",
-    "forPlannersNavDesc": "Zaplanuj AV eventu z budżetem i briefami dla dostawców",
+    "forPlannersNavDesc": "Planuj, budżetuj i produkuj eventy z narzędziami AI",
     "new": "Nowość"
   },
   "hero": {
@@ -1602,11 +1602,11 @@
     "ctaBottomButton": "Rozpocznij bezpłatny okres próbny"
   },
   "plannerPage": {
-    "metaTitle": "CueQuote dla organizatorów eventów — Planuj AV z pewnością",
-    "metaDescription": "Opisz swój event prostym językiem. Uzyskaj szczegółowy plan produkcji AV ze sprzętem, ekipą i budżetem w mniej niż 2 minuty.",
+    "metaTitle": "CueQuote dla organizatorów eventów — Planuj, budżetuj i produkuj eventy z AI",
+    "metaDescription": "Opisz swój event prostym językiem. Uzyskaj szczegółowy plan produkcji ze sprzętem, ekipą i budżetem w mniej niż 2 minuty. Bez wiedzy technicznej.",
     "badge": "Dla organizatorów eventów",
-    "heroTitle": "Planuj AV na swój event z pewnością",
-    "heroSubtitle": "Opisz swój event prostym językiem. Uzyskaj szczegółowy plan produkcji ze sprzętem, ekipą i budżetem — w mniej niż 2 minuty. Wiedza o AV nie jest wymagana.",
+    "heroTitle": "Planuj, budżetuj i produkuj eventy z AI",
+    "heroSubtitle": "Opisz swój event prostym językiem. Uzyskaj szczegółowy plan produkcji ze sprzętem, ekipą i budżetem — w mniej niż 2 minuty. Bez wiedzy technicznej.",
     "ctaStart": "Zacznij planować — za darmo",
     "ctaHow": "Zobacz jak to działa",
     "problemsLabel": "BRZMI ZNAJOMO?",

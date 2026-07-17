@@ -17,7 +17,7 @@
     "forPlanners": "For Event Planners",
     "solutions": "Solutions",
     "forAvNavDesc": "Create proposals from your catalog, send branded PDFs",
-    "forPlannersNavDesc": "Plan your event's AV with budget estimates and vendor briefs",
+    "forPlannersNavDesc": "Plan, budget, and produce events with AI-powered tools",
     "new": "New"
   },
   "hero": {
@@ -1626,11 +1626,11 @@
     "ctaBottomButton": "Start Your Free Trial"
   },
   "plannerPage": {
-    "metaTitle": "CueQuote for Event Planners — Plan AV with Confidence",
-    "metaDescription": "Describe your event in plain English. Get a detailed AV production plan with equipment, crew, and budget in under 2 minutes. No AV knowledge required.",
+    "metaTitle": "CueQuote for Event Planners — Plan, Budget & Produce Events with AI",
+    "metaDescription": "Describe your event in plain English. Get a detailed production plan with equipment, crew, and budget in under 2 minutes. No technical knowledge required.",
     "badge": "For Event Planners & Organizers",
-    "heroTitle": "Plan your event's AV with confidence",
-    "heroSubtitle": "Describe your event in plain English. Get a detailed production plan with equipment, crew, and budget — in under 2 minutes. No AV knowledge required.",
+    "heroTitle": "Plan, budget, and produce events with AI",
+    "heroSubtitle": "Describe your event in plain English. Get a detailed production plan with equipment, crew, and budget — in under 2 minutes. No technical knowledge required.",
     "ctaStart": "Start Planning — Free",
     "ctaHow": "See How It Works",
     "problemsLabel": "SOUND FAMILIAR?",
