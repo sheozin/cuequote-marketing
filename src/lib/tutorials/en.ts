@@ -8,6 +8,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '5 min',
     difficulty: 'beginner',
     category: 'Basics',
+    mode: 'both',
     videoUrl: '/videos/cuequote-walkthrough-master.mp4',
     whatYouLearn: [
       'How to create your CueQuote account',
@@ -57,6 +58,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'beginner',
     category: 'Proposals',
+    mode: 'both',
     videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'How to write effective event descriptions for the AI',
@@ -120,6 +122,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '2 min',
     difficulty: 'beginner',
     category: 'Branding',
+    mode: 'both',
     videoUrl: '/videos/pdf-templates.mp4',
     whatYouLearn: [
       'The 4 PDF template styles and when to use each',
@@ -162,6 +165,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '5 min',
     difficulty: 'intermediate',
     category: 'Setup',
+    mode: 'av',
     videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'How to add and organize equipment items',
@@ -214,6 +218,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Basics',
+    mode: 'both',
     videoUrl: '/videos/client-management.mp4',
     whatYouLearn: [
       'Adding and editing client profiles',
@@ -255,6 +260,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Proposals',
+    mode: 'both',
     videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Editing per-proposal inclusions and exclusions',
@@ -310,6 +316,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Proposals',
+    mode: 'both',
     videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Sending proposals via email',
@@ -373,6 +380,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Account',
+    mode: 'both',
     videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Comparing the 4 subscription plans',
@@ -419,6 +427,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '2 min',
     difficulty: 'intermediate',
     category: 'Proposals',
+    mode: 'both',
     videoUrl: '/videos/client-portal.mp4',
     whatYouLearn: [
       'How clients register for the portal',
@@ -448,6 +457,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Invoices',
+    mode: 'both',
     videoUrl: '/videos/invoice-payments.mp4',
     whatYouLearn: [
       'Recording full and partial payments on invoices',
@@ -492,6 +502,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Invoices',
+    mode: 'both',
     videoUrl: '/videos/invoicing.mp4',
     whatYouLearn: [
       'How to create invoices from proposals',
@@ -541,6 +552,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Account',
+    mode: 'both',
     videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'How to invite team members to your workspace',
@@ -580,6 +592,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Proposals',
+    mode: 'both',
     videoUrl: '/videos/scope-templates.mp4',
     whatYouLearn: [
       'Creating templates from scratch',
@@ -619,6 +632,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Proposals',
+    mode: 'both',
     videoUrl: '/videos/smart-suggestions.mp4',
     whatYouLearn: [
       'Enabling Smart Suggestions on proposals',
@@ -654,6 +668,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '5 min',
     difficulty: 'intermediate',
     category: 'Setup',
+    mode: 'av',
     videoUrl: '/videos/inventory-management.mp4',
     whatYouLearn: [
       'Adding units with serial numbers and asset tags',
@@ -694,6 +709,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '5 min',
     difficulty: 'intermediate',
     category: 'Setup',
+    mode: 'av',
     videoUrl: '/videos/crew-scheduling.mp4',
     whatYouLearn: [
       'Building your crew roster with roles, skills, and day rates',
@@ -734,6 +750,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Proposals',
+    mode: 'both',
     videoUrl: '/videos/proposal-comparison.mp4',
     whatYouLearn: [
       'Adding proposals to a comparison via share URLs or tokens',
@@ -774,6 +791,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Proposals',
+    mode: 'both',
     videoUrl: '/videos/proposal-comments.mp4',
     whatYouLearn: [
       'How clients leave comments on the share page',
@@ -810,6 +828,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     duration: '5 min',
     difficulty: 'advanced',
     category: 'Setup',
+    mode: 'av',
     videoUrl: '/videos/costing-margins.mp4',
     whatYouLearn: [
       'Configuring who can see cost data (owner/admin vs. sales)',

@@ -8,6 +8,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '5 Min.',
     difficulty: 'beginner',
     category: 'Grundlagen',
+    mode: 'both',
     videoUrl: '/videos/cuequote-walkthrough-master.mp4',
     whatYouLearn: [
       'Wie Sie Ihr CueQuote-Konto erstellen',
@@ -57,6 +58,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'beginner',
     category: 'Angebote',
+    mode: 'both',
     videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Wie Sie effektive Eventbeschreibungen für die KI verfassen',
@@ -120,6 +122,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '2 Min.',
     difficulty: 'beginner',
     category: 'Branding',
+    mode: 'both',
     videoUrl: '/videos/pdf-templates.mp4',
     whatYouLearn: [
       'Die 4 PDF-Vorlagenstile und wann man welchen verwendet',
@@ -162,6 +165,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '5 Min.',
     difficulty: 'intermediate',
     category: 'Setup',
+    mode: 'av',
     videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Wie Sie Equipment-Artikel anlegen und organisieren',
@@ -214,6 +218,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'beginner',
     category: 'Grundlagen',
+    mode: 'both',
     videoUrl: '/videos/client-management.mp4',
     whatYouLearn: [
       'Kundenprofile anlegen und bearbeiten',
@@ -255,6 +260,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'intermediate',
     category: 'Angebote',
+    mode: 'both',
     videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Einschlüsse und Ausschlüsse pro Angebot bearbeiten',
@@ -310,6 +316,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'beginner',
     category: 'Angebote',
+    mode: 'both',
     videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Angebote per E-Mail versenden',
@@ -372,6 +379,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'intermediate',
     category: 'Konto',
+    mode: 'both',
     videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Die 4 Abo-Tarife vergleichen',
@@ -418,6 +426,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '2 Min.',
     difficulty: 'intermediate',
     category: 'Angebote',
+    mode: 'both',
     videoUrl: '/videos/client-portal.mp4',
     whatYouLearn: [
       'Wie sich Kunden für das Portal registrieren',
@@ -447,6 +456,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'intermediate',
     category: 'Rechnungen',
+    mode: 'both',
     videoUrl: '/videos/invoice-payments.mp4',
     whatYouLearn: [
       'Voll- und Teilzahlungen auf Rechnungen erfassen',
@@ -491,6 +501,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'intermediate',
     category: 'Rechnungen',
+    mode: 'both',
     videoUrl: '/videos/invoicing.mp4',
     whatYouLearn: [
       'Wie Sie Rechnungen aus Angeboten erstellen',
@@ -540,6 +551,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'intermediate',
     category: 'Konto',
+    mode: 'both',
     videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'Wie Sie Teammitglieder zu Ihrem Workspace einladen',
@@ -579,6 +591,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'intermediate',
     category: 'Angebote',
+    mode: 'both',
     videoUrl: '/videos/scope-templates.mp4',
     whatYouLearn: [
       'Vorlagen von Grund auf erstellen',
@@ -618,6 +631,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'intermediate',
     category: 'Angebote',
+    mode: 'both',
     videoUrl: '/videos/smart-suggestions.mp4',
     whatYouLearn: [
       'Intelligente Vorschläge in Angeboten aktivieren',
@@ -653,6 +667,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '5 Min.',
     difficulty: 'intermediate',
     category: 'Setup',
+    mode: 'av',
     whatYouLearn: [
       'Equipment-Einheiten mit Seriennummern und Zustandsbewertungen anlegen',
       'Inventar nach Kategorie, Zustand und Standort filtern und durchsuchen',
@@ -692,6 +707,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '5 Min.',
     difficulty: 'intermediate',
     category: 'Setup',
+    mode: 'av',
     whatYouLearn: [
       'Crew-Mitglieder mit Rollen, Honoraren und Verfügbarkeit anlegen',
       'Crew-Liste nach Spezialisierung, Beschäftigungsstatus und Verfügbarkeit filtern',
@@ -731,6 +747,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '4 Min.',
     difficulty: 'intermediate',
     category: 'Angebote',
+    mode: 'both',
     whatYouLearn: [
       'Lieferantenangebote über Share-Links zum Vergleich hinzufügen',
       'Lieferantenkarten mit Wertebewertungen und Kennzahlen einsehen',
@@ -768,6 +785,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '3 Min.',
     difficulty: 'beginner',
     category: 'Angebote',
+    mode: 'both',
     whatYouLearn: [
       'Wie Kunden Kommentare zu einem Angebot hinzufügen und auf Positionen verweisen',
       'Formalisierte Revisionsanfragen mit Änderungsbeschreibung einreichen',
@@ -801,6 +819,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     duration: '5 Min.',
     difficulty: 'advanced',
     category: 'Setup',
+    mode: 'av',
     whatYouLearn: [
       'Kostensichtbarkeit und Zugriff auf das Margenpanel nach Teamrollen konfigurieren',
       'Unternehmensweit und je Angebot individuelle Margen-Schwellwerte festlegen',

@@ -1,4 +1,5 @@
 export type TutorialDifficulty = 'beginner' | 'intermediate' | 'advanced'
+export type TutorialMode = 'av' | 'planner' | 'both'
 
 export interface TutorialStep {
   title: string
@@ -13,6 +14,8 @@ export interface Tutorial {
   duration: string
   difficulty: TutorialDifficulty
   category: string
+  mode: TutorialMode
+  icon?: string
   videoUrl?: string
   whatYouLearn: string[]
   steps: TutorialStep[]

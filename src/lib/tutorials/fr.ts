@@ -8,6 +8,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '5 min',
     difficulty: 'beginner',
     category: 'Bases',
+    mode: 'both',
     videoUrl: '/videos/cuequote-walkthrough-master.mp4',
     whatYouLearn: [
       'Comment créer votre compte CueQuote',
@@ -57,6 +58,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'beginner',
     category: 'Devis',
+    mode: 'both',
     videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Comment rédiger des descriptions d\'événement efficaces pour l\'IA',
@@ -120,6 +122,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '2 min',
     difficulty: 'beginner',
     category: 'Image de marque',
+    mode: 'both',
     videoUrl: '/videos/pdf-templates.mp4',
     whatYouLearn: [
       'Les 4 styles de modèle PDF et quand utiliser chacun',
@@ -162,6 +165,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '5 min',
     difficulty: 'intermediate',
     category: 'Configuration',
+    mode: 'av',
     videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'Comment ajouter et organiser des articles de matériel',
@@ -214,6 +218,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Bases',
+    mode: 'both',
     videoUrl: '/videos/client-management.mp4',
     whatYouLearn: [
       'Ajouter et modifier des profils clients',
@@ -255,6 +260,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Devis',
+    mode: 'both',
     videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Modifier les inclusions et exclusions par devis',
@@ -310,6 +316,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Devis',
+    mode: 'both',
     videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'Envoyer des devis par e-mail',
@@ -372,6 +379,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Compte',
+    mode: 'both',
     videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Comparer les 4 plans d\'abonnement',
@@ -418,6 +426,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '2 min',
     difficulty: 'intermediate',
     category: 'Devis',
+    mode: 'both',
     videoUrl: '/videos/client-portal.mp4',
     whatYouLearn: [
       'Comment les clients s\'inscrivent au portail',
@@ -447,6 +456,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Factures',
+    mode: 'both',
     videoUrl: '/videos/invoice-payments.mp4',
     whatYouLearn: [
       'Enregistrer les paiements complets et partiels sur les factures',
@@ -491,6 +501,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Factures',
+    mode: 'both',
     videoUrl: '/videos/invoicing.mp4',
     whatYouLearn: [
       'Comment créer des factures à partir de devis',
@@ -540,6 +551,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Compte',
+    mode: 'both',
     videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'Comment inviter des membres d\'équipe dans votre espace de travail',
@@ -579,6 +591,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Devis',
+    mode: 'both',
     videoUrl: '/videos/scope-templates.mp4',
     whatYouLearn: [
       'Créer des modèles de zéro',
@@ -618,6 +631,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'intermediate',
     category: 'Devis',
+    mode: 'both',
     videoUrl: '/videos/smart-suggestions.mp4',
     whatYouLearn: [
       'Activer les Suggestions intelligentes sur les devis',
@@ -653,6 +667,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '5 min',
     difficulty: 'intermediate',
     category: 'Configuration',
+    mode: 'av',
     whatYouLearn: [
       'Ajouter des unités de matériel avec leurs numéros de série et états techniques',
       'Filtrer et parcourir le stock par catégorie, état et emplacement',
@@ -692,6 +707,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '5 min',
     difficulty: 'intermediate',
     category: 'Configuration',
+    mode: 'av',
     whatYouLearn: [
       'Ajouter des membres d\'équipe avec leurs rôles, tarifs et disponibilités',
       'Filtrer la liste de l\'équipe par spécialisation, statut d\'emploi et disponibilité',
@@ -731,6 +747,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '4 min',
     difficulty: 'intermediate',
     category: 'Devis',
+    mode: 'both',
     whatYouLearn: [
       'Ajouter des devis fournisseurs à comparer via des liens de partage',
       'Consulter les fiches fournisseurs avec scores de valeur et indicateurs clés',
@@ -768,6 +785,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '3 min',
     difficulty: 'beginner',
     category: 'Devis',
+    mode: 'both',
     whatYouLearn: [
       'Comment les clients ajoutent des commentaires sur un devis et référencent des postes',
       'Soumettre des demandes de révision formalisées avec description des modifications',
@@ -801,6 +819,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     duration: '5 min',
     difficulty: 'advanced',
     category: 'Configuration',
+    mode: 'av',
     whatYouLearn: [
       'Configurer la visibilité des coûts et l\'accès au panneau de marges selon les rôles de l\'équipe',
       'Définir des seuils de marge cibles à l\'échelle de l\'entreprise et par devis',

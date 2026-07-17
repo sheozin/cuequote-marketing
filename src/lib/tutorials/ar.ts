@@ -8,6 +8,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '5 دقائق',
     difficulty: 'beginner',
     category: 'الأساسيات',
+    mode: 'both',
     videoUrl: '/videos/cuequote-walkthrough-master.mp4',
     whatYouLearn: [
       'كيفية إنشاء حسابك على CueQuote',
@@ -57,6 +58,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'beginner',
     category: 'العروض',
+    mode: 'both',
     videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'كيفية كتابة أوصاف فعاليات فعّالة للذكاء الاصطناعي',
@@ -120,6 +122,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: 'دقيقتان',
     difficulty: 'beginner',
     category: 'الهوية البصرية',
+    mode: 'both',
     videoUrl: '/videos/pdf-templates.mp4',
     whatYouLearn: [
       'أنماط قوالب PDF الأربعة ومتى تستخدم كل منها',
@@ -162,6 +165,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '5 دقائق',
     difficulty: 'intermediate',
     category: 'الإعداد',
+    mode: 'av',
     videoUrl: '/videos/getting-started.mp4',
     whatYouLearn: [
       'كيفية إضافة وتنظيم بنود المعدات',
@@ -214,6 +218,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'beginner',
     category: 'الأساسيات',
+    mode: 'both',
     videoUrl: '/videos/client-management.mp4',
     whatYouLearn: [
       'إضافة وتعديل ملفات العملاء',
@@ -255,6 +260,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'intermediate',
     category: 'العروض',
+    mode: 'both',
     videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'تعديل ما يشمله العرض وما يستثنيه لكل عرض',
@@ -310,6 +316,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'beginner',
     category: 'العروض',
+    mode: 'both',
     videoUrl: '/videos/sharing-and-tracking.mp4',
     whatYouLearn: [
       'إرسال العروض عبر البريد الإلكتروني',
@@ -372,6 +379,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'intermediate',
     category: 'الحساب',
+    mode: 'both',
     videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'مقارنة خطط الاشتراك الأربع',
@@ -418,6 +426,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: 'دقيقتان',
     difficulty: 'intermediate',
     category: 'العروض',
+    mode: 'both',
     videoUrl: '/videos/client-portal.mp4',
     whatYouLearn: [
       'كيف يُسجِّل العملاء في البوابة',
@@ -447,6 +456,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'intermediate',
     category: 'الفواتير',
+    mode: 'both',
     videoUrl: '/videos/invoice-payments.mp4',
     whatYouLearn: [
       'تسجيل الدفعات الكاملة والجزئية على الفواتير',
@@ -491,6 +501,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'intermediate',
     category: 'الفواتير',
+    mode: 'both',
     videoUrl: '/videos/invoicing.mp4',
     whatYouLearn: [
       'كيفية إنشاء فواتير من العروض',
@@ -540,6 +551,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'intermediate',
     category: 'الحساب',
+    mode: 'both',
     videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'كيفية دعوة أعضاء الفريق إلى مساحة العمل',
@@ -579,6 +591,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'intermediate',
     category: 'العروض',
+    mode: 'both',
     videoUrl: '/videos/scope-templates.mp4',
     whatYouLearn: [
       'إنشاء القوالب من الصفر',
@@ -618,6 +631,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'intermediate',
     category: 'العروض',
+    mode: 'both',
     videoUrl: '/videos/smart-suggestions.mp4',
     whatYouLearn: [
       'تفعيل الاقتراحات الذكية على العروض',
@@ -653,6 +667,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '5 دقائق',
     difficulty: 'intermediate',
     category: 'الإعداد',
+    mode: 'av',
     whatYouLearn: [
       'إضافة وحدات المعدات بأرقامها التسلسلية وحالاتها التقنية',
       'تصفية المخزون وعرضه حسب الفئة والحالة والموقع',
@@ -692,6 +707,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '5 دقائق',
     difficulty: 'intermediate',
     category: 'الإعداد',
+    mode: 'av',
     whatYouLearn: [
       'إضافة أعضاء الطاقم الفني بأدوارهم وأجورهم وتوفرهم',
       'تصفية قائمة الطاقم حسب التخصص وحالة التوظيف والتوفر',
@@ -731,6 +747,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '4 دقائق',
     difficulty: 'intermediate',
     category: 'العروض',
+    mode: 'both',
     whatYouLearn: [
       'إضافة عروض الموردين للمقارنة عبر روابط المشاركة',
       'مراجعة بطاقات الموردين مع تقييمات القيمة والمؤشرات الرئيسية',
@@ -768,6 +785,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '3 دقائق',
     difficulty: 'beginner',
     category: 'العروض',
+    mode: 'both',
     whatYouLearn: [
       'كيف يُضيف العملاء تعليقات على العرض ويُشيرون إلى البنود',
       'تقديم طلبات مراجعة رسمية مع وصف التغييرات المطلوبة',
@@ -801,6 +819,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     duration: '5 دقائق',
     difficulty: 'advanced',
     category: 'الإعداد',
+    mode: 'av',
     whatYouLearn: [
       'ضبط إعدادات ظهور التكاليف والوصول إلى لوحة الهوامش حسب أدوار الفريق',
       'تحديد أهداف الهامش على مستوى الشركة والعروض الفردية',
