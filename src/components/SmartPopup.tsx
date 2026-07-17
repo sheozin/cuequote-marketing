@@ -13,7 +13,7 @@ const supabase = createClient(
 interface PopupContent {
   headline: string
   subtext: string
-  cta_text: string
+  cta: string
   badge?: string
 }
 
@@ -49,7 +49,7 @@ export default function SmartPopup() {
   // Fetch campaign on mount
   useEffect(() => {
     supabase.rpc('get_active_popup_campaign').then(({ data }) => {
-      const camp = data?.[0] as PopupCampaign | undefined
+      const camp = (Array.isArray(data) ? data[0] : data) as PopupCampaign | undefined
       if (!camp) return
 
       // Check dismissal
@@ -130,7 +130,7 @@ export default function SmartPopup() {
   if (!campaign || !visible) return null
 
   const colors = PHASE_COLORS[campaign.phase] ?? PHASE_COLORS.launch
-  const { headline, subtext, cta_text, badge } = campaign.content
+  const { headline, subtext, cta, badge } = campaign.content
 
   return (
     <>
@@ -352,7 +352,7 @@ export default function SmartPopup() {
               }}
               onClick={handleDismiss}
             >
-              {cta_text}
+              {cta}
             </a>
 
             {/* Dismiss link */}
