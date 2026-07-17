@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const pagePath = '/docs';
   const title = t("metaTitle", { defaultValue: "Documentation — Getting Started" });
-  const description = t("metaDescription", { defaultValue: "Learn how to use CueQuote to create professional AV proposals." });
+  const description = t("metaDescription", { defaultValue: "Learn how to use CueQuote to create professional event proposals." });
   return {
     title,
     description,

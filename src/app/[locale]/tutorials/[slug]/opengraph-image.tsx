@@ -6,7 +6,7 @@ export const contentType = 'image/png'
 export const alt = 'CueQuote Tutorial'
 
 const TITLES: Record<string, { t: string; d: string }> = {
-  'getting-started': { t: 'Getting Started', d: 'Create your CueQuote account and send your first AI-powered AV proposal in under 10 minutes.' },
+  'getting-started': { t: 'Getting Started', d: 'Create your CueQuote account and send your first AI-powered event proposal in under 10 minutes.' },
   'ai-proposal-generation': { t: 'AI Proposal Generation', d: 'Describe your event and let AI build the perfect equipment scope with accurate pricing.' },
   'customizing-pdf-templates': { t: 'Customizing PDF Templates', d: 'Switch between 4 professional PDF styles and apply your brand color.' },
   'managing-equipment-catalog': { t: 'Managing Your Equipment Catalog', d: 'Build your equipment database so the AI generates accurate proposals with your real prices.' },

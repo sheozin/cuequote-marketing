@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'CueQuote — AI-Powered AV Proposals in Seconds'
+export const alt = 'CueQuote — The AI Platform for Event Professionals'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -69,7 +69,7 @@ export default function Image() {
             marginBottom: 40,
           }}
         >
-          AV Proposal Automation
+          The AI Platform for Event Professionals
         </div>
 
         {/* Divider */}
@@ -93,7 +93,7 @@ export default function Image() {
             opacity: 0.9,
           }}
         >
-          Turn event descriptions into professional AV equipment proposals in under 2 minutes.
+          Create professional event proposals or detailed production plans in under 2 minutes.
         </div>
 
         {/* URL */}

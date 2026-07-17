@@ -15,8 +15,8 @@ export default function Image() {
           <span style={{ fontSize: '16px', color: 'rgba(255,255,255,0.4)', marginLeft: '16px', letterSpacing: '3px' }}>· BLOG</span>
         </div>
         <div style={{ width: '60px', height: '4px', background: '#10b981', borderRadius: '2px', marginBottom: '30px' }} />
-        <div style={{ fontSize: '52px', fontWeight: 800, color: '#ffffff', lineHeight: 1.2, marginBottom: '20px' }}>AV Production Insights</div>
-        <div style={{ fontSize: '22px', color: 'rgba(255,255,255,0.55)', maxWidth: '750px', lineHeight: 1.5 }}>Tips, guides, and industry knowledge for AV professionals who want to quote faster and win more deals.</div>
+        <div style={{ fontSize: '52px', fontWeight: 800, color: '#ffffff', lineHeight: 1.2, marginBottom: '20px' }}>Event Industry Insights</div>
+        <div style={{ fontSize: '22px', color: 'rgba(255,255,255,0.55)', maxWidth: '750px', lineHeight: 1.5 }}>Tips, guides, and industry knowledge for event professionals who want to quote faster and win more deals.</div>
         <div style={{ position: 'absolute', bottom: '40px', left: '80px', fontSize: '16px', color: 'rgba(255,255,255,0.2)', letterSpacing: '2px' }}>cuequote.com/blog</div>
       </div>
     ),

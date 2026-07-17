@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const pagePath = '/tutorials';
   const title = t("metaTitle", { defaultValue: "Tutorials — Learn CueQuote" });
-  const description = t("metaDescription", { defaultValue: "Step-by-step video guides to master CueQuote's AV proposal automation features." });
+  const description = t("metaDescription", { defaultValue: "Step-by-step video guides to master CueQuote's event proposal automation features." });
   return {
     title,
     description,
@@ -176,7 +176,7 @@ export default async function TutorialsPage() {
                 Complete Product Walkthrough
               </h2>
               <p style={{ color: "#6b7280", fontSize: 14, margin: "6px 0 0", maxWidth: 500 }}>
-                See every feature end-to-end — from signup to a fully priced, professional AV proposal in under 5 minutes.
+                See every feature end-to-end — from signup to a fully priced, professional event proposal in under 5 minutes.
               </p>
             </div>
             <a

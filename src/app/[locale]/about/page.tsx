@@ -200,10 +200,10 @@ export default async function AboutPage() {
             fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 32, color: "#fff",
             marginBottom: 16, letterSpacing: -0.5,
           }}>
-            {t("ctaTitle", { defaultValue: "Ready to transform your AV quoting?" })}
+            {t("ctaTitle", { defaultValue: "Ready to transform how you work?" })}
           </h2>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.65)", marginBottom: 32, lineHeight: 1.7 }}>
-            {t("ctaSub", { defaultValue: "Join AV professionals who close deals faster with CueQuote." })}
+            {t("ctaSub", { defaultValue: "Join event professionals who work faster with CueQuote." })}
           </p>
           <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
             textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,

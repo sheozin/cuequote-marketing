@@ -18,20 +18,20 @@ const BASE_URL = "https://cuequote.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "CueQuote — AI-Powered AV Proposals in Seconds",
+    default: "CueQuote — The AI Platform for Event Professionals",
     template: "%s | CueQuote",
   },
   description:
-    "Turn event descriptions into professional AV equipment proposals in under 2 minutes. AI-powered quoting for AV production companies, event agencies, and freelance techs.",
+    "Create professional event proposals or detailed production plans in under 2 minutes. AI-powered for AV companies, event planners, and production professionals.",
   keywords: [
-    "AV proposal software", "AV quoting tool", "audio visual proposal", "event equipment quote",
-    "AV production estimate", "AI proposal generator", "AV rental pricing",
+    "event proposal software", "AI proposal generator", "event planning tool", "AV proposal software",
+    "production planning", "event equipment quote", "proposal automation",
   ],
   authors: [{ name: "CueQuote" }],
   creator: "CueQuote",
   openGraph: {
-    title: "CueQuote — AI-Powered AV Proposals in Seconds",
-    description: "Turn event descriptions into professional AV equipment proposals in under 2 minutes.",
+    title: "CueQuote — The AI Platform for Event Professionals",
+    description: "Create professional event proposals or detailed production plans in under 2 minutes.",
     url: BASE_URL,
     siteName: "CueQuote",
     type: "website",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CueQuote — AI-Powered AV Proposals in Seconds",
-    description: "Turn event descriptions into professional AV equipment proposals in under 2 minutes.",
+    title: "CueQuote — The AI Platform for Event Professionals",
+    description: "Create professional event proposals or detailed production plans in under 2 minutes.",
   },
   robots: {
     index: true,
@@ -71,7 +71,7 @@ const jsonLdString = JSON.stringify({
       url: BASE_URL,
       logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.svg` },
       foundingDate: "2026",
-      description: "AI-powered AV proposal generation for event production professionals.",
+      description: "The AI platform for event professionals — proposals, production planning, and more.",
     },
     {
       "@type": "WebSite",
@@ -92,7 +92,7 @@ const jsonLdString = JSON.stringify({
         { "@type": "Offer", name: "Pro", price: "79", priceCurrency: "EUR" },
         { "@type": "Offer", name: "Business", price: "179", priceCurrency: "EUR" },
       ],
-      description: "AI-powered AV proposal generator for event production professionals.",
+      description: "The AI platform for event professionals — proposals, production planning, and more.",
     },
   ],
 });

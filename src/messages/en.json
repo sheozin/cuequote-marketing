@@ -21,13 +21,13 @@
     "new": "New"
   },
   "hero": {
-    "metaTitle": "CueQuote — AI-Powered AV Proposals & Event Production Planning",
-    "metaDescription": "Turn event descriptions into professional AV equipment proposals or detailed event production plans in under 2 minutes.",
-    "badge": "AI-Powered AV Quoting & Planning",
+    "metaTitle": "CueQuote — The AI Platform for Event Professionals",
+    "metaDescription": "Create professional event proposals or detailed production plans in under 2 minutes. AI-powered for AV companies and event planners.",
+    "badge": "AI-Powered Proposal Automation",
     "title": "Turn event descriptions into",
-    "titleHighlight": "professional AV proposals",
+    "titleHighlight": "winning event proposals",
     "titleEnd": "in seconds",
-    "subtitle": "Create AV proposals in seconds or plan your event's production with AI — equipment, crew, and budget recommendations in under 2 minutes.",
+    "subtitle": "Create event proposals in seconds or plan your production with AI — equipment, crew, and budget recommendations in under 2 minutes.",
     "cta": "Start Free",
     "ctaSecondary": "See How It Works",
     "noCreditCard": "No credit card required",
@@ -58,7 +58,7 @@
     "heroCatCrewItems": "4 crew: audio, lighting, video, stage mgr"
   },
   "socialProof": {
-    "trusted": "Trusted by AV professionals and event planners"
+    "trusted": "Trusted by event professionals worldwide"
   },
   "useCases": {
     "title": "Built for production professionals",
@@ -102,7 +102,7 @@
   },
   "pricing": {
     "metaTitle": "Pricing",
-    "metaDescription": "Simple, transparent pricing for AV proposal generation and event production planning.",
+    "metaDescription": "Simple, transparent pricing for event proposal automation and production planning.",
     "title": "Simple, transparent pricing",
     "subtitle": "Start free. Upgrade as you grow.",
     "monthly": "Monthly",
@@ -171,7 +171,7 @@
     "creditsNeverExpire": "Credits never expire",
     "brandedPdfsIncluded": "Branded PDFs included",
     "readyTitle": "Ready to quote faster?",
-    "readySubtitle": "Join AV professionals and event planners who create proposals in minutes, not hours.",
+    "readySubtitle": "Join event professionals who create proposals in minutes, not hours.",
     "noCreditCard": "No credit card required",
     "faqQ1": "Can I change plans at any time?",
     "faqA1": "Yes. Upgrade or downgrade at any time. Changes take effect on your next billing cycle.",
@@ -295,7 +295,7 @@
   },
   "homeCta": {
     "title": "Start creating proposals and plans today",
-    "subtitle": "Join AV professionals and event planners who work faster with CueQuote.",
+    "subtitle": "Join event professionals who work faster with CueQuote.",
     "cta": "Get Started Free",
     "noCreditCard": "No credit card required"
   },
@@ -303,10 +303,10 @@
     "metaTitle": "About",
     "metaDescription": "The story behind CueQuote.",
     "title": "About CueQuote",
-    "subtitle": "Built by AV professionals, for AV companies and event organizers.",
+    "subtitle": "Built by event industry veterans, for production companies and event planners.",
     "badge": "Our Story",
-    "heading": "Built by AV professionals,",
-    "headingHighlight": "for AV companies and event organizers",
+    "heading": "Built by event industry veterans,",
+    "headingHighlight": "for production companies and event planners",
     "p1": "CueQuote was born from a simple frustration: quoting AV equipment for live events takes too long — and planning AV production without technical knowledge is overwhelming (if you're an event organizer).",
     "p2": "We're <strong>AVE Events</strong> — a production company based in Europe that has managed conferences, corporate events, and live shows across the continent and the Middle East. We know what it's like to receive a brief at 10 PM and need a proposal by morning.",
     "p3": "Spreadsheets, copy-paste from old proposals, manual calculations — we did it all. And we watched other companies do the same. Hours of work for every quote. Errors in pricing. Inconsistent formatting. Proposals that didn't reflect the quality of our production work.",
@@ -327,9 +327,9 @@
     "statEventsQuoted": "Events Quoted",
     "statCountries": "Countries Served",
     "statTeam": "Team",
-    "whyDifferentSub": "Built from real-world AV production experience, not a generic template.",
+    "whyDifferentSub": "Built from real-world event production experience, not a generic template.",
     "ctaTitle": "Ready to transform how you work?",
-    "ctaSub": "Join AV professionals and event planners who work faster with CueQuote."
+    "ctaSub": "Join event professionals who work faster with CueQuote."
   },
   "contact": {
     "metaTitle": "Contact",
@@ -371,26 +371,26 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Tips and insights for AV professionals and event planners.",
+    "metaDescription": "Tips and insights for event professionals.",
     "title": "Blog",
-    "subtitle": "Tips, guides, and insights for AV professionals.",
+    "subtitle": "Tips, guides, and insights for event professionals.",
     "readMore": "Read more",
     "backToBlog": "Back to Blog",
     "allPosts": "All Posts",
     "badge": "Blog",
-    "heading": "Insights for AV professionals",
-    "headingSubtitle": "Tips, guides, and industry perspectives to help you win more proposals and grow your AV business — and event planners stay ahead.",
+    "heading": "Insights for event professionals",
+    "headingSubtitle": "Tips, guides, and industry perspectives to help you win more proposals and grow your event business.",
     "backToBlock": "Back to blog"
   },
   "subscribe": {
     "title": "Stay in the loop",
-    "subtitle": "Get tips on AV quoting and event planning, product updates, and industry insights. No spam.",
+    "subtitle": "Get tips on event proposals and production planning, product updates, and industry insights. No spam.",
     "placeholder": "you@company.com",
     "button": "Subscribe",
     "success": "Subscribed!"
   },
   "footer": {
-    "tagline": "AI-powered AV proposals and event planning for production professionals.",
+    "tagline": "The AI platform for event professionals.",
     "product": "Product",
     "company": "Company",
     "legal": "Legal",

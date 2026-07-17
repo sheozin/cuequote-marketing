@@ -21,13 +21,13 @@
     "new": "Neu"
   },
   "hero": {
-    "metaTitle": "CueQuote — KI-gestützte AV-Angebote & Eventproduktionsplanung",
-    "metaDescription": "Verwandeln Sie Veranstaltungsbeschreibungen in professionelle AV-Ausrüstungsangebote oder detaillierte Eventproduktionspläne in unter 2 Minuten.",
-    "badge": "KI-gestützte AV-Angebote & Planung",
+    "metaTitle": "CueQuote — Die KI-Plattform für Event-Profis",
+    "metaDescription": "Erstellen Sie professionelle Event-Angebote oder detaillierte Produktionspläne in unter 2 Minuten. KI-gestützt für AV-Firmen und Veranstaltungsplaner.",
+    "badge": "KI-gestützte Angebotsautomatisierung",
     "title": "Verwandeln Sie Veranstaltungsbeschreibungen in",
-    "titleHighlight": "professionelle AV-Angebote",
+    "titleHighlight": "überzeugende Event-Angebote",
     "titleEnd": "in Sekunden",
-    "subtitle": "Erstellen Sie AV-Angebote in Sekunden oder planen Sie die Produktion Ihrer Veranstaltung mit KI — Ausrüstungs-, Personal- und Budgetempfehlungen in unter 2 Minuten.",
+    "subtitle": "Erstellen Sie Event-Angebote in Sekunden oder planen Sie Ihre Produktion mit KI — Ausrüstungs-, Personal- und Budgetempfehlungen in unter 2 Minuten.",
     "cta": "Kostenlos starten",
     "ctaSecondary": "So funktioniert es",
     "noCreditCard": "Keine Kreditkarte erforderlich",
@@ -58,7 +58,7 @@
     "heroCatCrewItems": "4 Crew: Audio, Licht, Video, Bühne"
   },
   "socialProof": {
-    "trusted": "Vertraut von AV-Profis und Veranstaltungsplanern"
+    "trusted": "Vertraut von Event-Profis weltweit"
   },
   "useCases": {
     "title": "Entwickelt für Produktionsprofis",
@@ -102,7 +102,7 @@
   },
   "pricing": {
     "metaTitle": "Preise",
-    "metaDescription": "Einfache, transparente Preise für AV-Angebotserstellung und Eventproduktionsplanung.",
+    "metaDescription": "Einfache, transparente Preise für Event-Angebotsautomatisierung und Produktionsplanung.",
     "title": "Einfache, transparente Preise",
     "subtitle": "Starten Sie kostenlos. Upgraden Sie bei Bedarf.",
     "monthly": "Monatlich",
@@ -171,7 +171,7 @@
     "creditsNeverExpire": "Guthaben läuft nie ab",
     "brandedPdfsIncluded": "Gebrandete PDFs inklusive",
     "readyTitle": "Bereit, schneller Angebote zu erstellen?",
-    "readySubtitle": "Schließen Sie sich AV-Profis und Veranstaltungsplanern an, die Angebote in Minuten statt Stunden erstellen.",
+    "readySubtitle": "Schließen Sie sich Event-Profis an, die Angebote in Minuten statt Stunden erstellen.",
     "noCreditCard": "Keine Kreditkarte erforderlich",
     "faqQ1": "Kann ich den Tarif jederzeit wechseln?",
     "faqA1": "Ja. Upgraden oder downgraden Sie jederzeit. Änderungen werden mit dem nächsten Abrechnungszyklus wirksam.",
@@ -295,7 +295,7 @@
   },
   "homeCta": {
     "title": "Erstellen Sie noch heute Angebote und Pläne",
-    "subtitle": "Schließen Sie sich AV-Profis und Veranstaltungsplanern an, die mit CueQuote schneller arbeiten.",
+    "subtitle": "Schließen Sie sich Event-Profis an, die mit CueQuote schneller arbeiten.",
     "cta": "Kostenlos starten",
     "noCreditCard": "Keine Kreditkarte erforderlich"
   },
@@ -303,10 +303,10 @@
     "metaTitle": "Über uns",
     "metaDescription": "Die Geschichte hinter CueQuote.",
     "title": "Über CueQuote",
-    "subtitle": "Von AV-Profis entwickelt, für AV-Firmen und Veranstaltungsorganisatoren.",
+    "subtitle": "Von Eventbranche-Veteranen entwickelt, für Produktionsfirmen und Veranstaltungsplaner.",
     "badge": "Unsere Geschichte",
-    "heading": "Von AV-Profis entwickelt,",
-    "headingHighlight": "für AV-Firmen und Veranstaltungsorganisatoren",
+    "heading": "Von Eventbranche-Veteranen entwickelt,",
+    "headingHighlight": "für Produktionsfirmen und Veranstaltungsplaner",
     "p1": "CueQuote entstand aus einer einfachen Frustration: Die Angebotserstellung für AV-Ausrüstung bei Live-Events dauert zu lange — und AV-Produktion ohne technisches Wissen zu planen ist überwältigend (wenn man Veranstaltungsorganisator ist).",
     "p2": "Wir sind <strong>AVE Events</strong> — ein Produktionsunternehmen mit Sitz in Europa, das Konferenzen, Firmenveranstaltungen und Live-Shows auf dem ganzen Kontinent und im Nahen Osten betreut hat. Wir wissen, wie es ist, um 22 Uhr ein Briefing zu erhalten und bis zum Morgen ein Angebot zu benötigen.",
     "p3": "Tabellen, Kopieren und Einfügen aus alten Angeboten, manuelle Berechnungen — wir haben alles gemacht. Und wir haben beobachtet, wie andere Unternehmen dasselbe tun. Stunden Arbeit für jedes Angebot. Fehler in der Preisgestaltung. Inkonsistente Formatierung. Angebote, die nicht die Qualität unserer Produktionsarbeit widerspiegeln.",
@@ -327,9 +327,9 @@
     "statEventsQuoted": "Veranstaltungen kalkuliert",
     "statCountries": "Bediente Länder",
     "statTeam": "Team",
-    "whyDifferentSub": "Aufgebaut aus echter AV-Produktionserfahrung, nicht aus einer generischen Vorlage.",
+    "whyDifferentSub": "Aufgebaut aus echter Eventproduktionserfahrung, nicht aus einer generischen Vorlage.",
     "ctaTitle": "Bereit, Ihre Arbeitsweise zu revolutionieren?",
-    "ctaSub": "Schließen Sie sich AV-Profis und Veranstaltungsplanern an, die mit CueQuote schneller arbeiten."
+    "ctaSub": "Schließen Sie sich Event-Profis an, die mit CueQuote schneller arbeiten."
   },
   "contact": {
     "metaTitle": "Kontakt",
@@ -371,26 +371,26 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Tipps und Einblicke für AV-Profis und Veranstaltungsplaner.",
+    "metaDescription": "Tipps und Einblicke für Event-Profis.",
     "title": "Blog",
-    "subtitle": "Tipps, Anleitungen und Einblicke für AV-Profis.",
+    "subtitle": "Tipps, Anleitungen und Einblicke für Event-Profis.",
     "readMore": "Mehr lesen",
     "backToBlog": "Zurück zum Blog",
     "allPosts": "Alle Beiträge",
     "badge": "Blog",
-    "heading": "Einblicke für AV-Profis",
-    "headingSubtitle": "Tipps, Anleitungen und Branchenperspektiven, um mehr Angebote zu gewinnen und Ihr AV-Geschäft auszubauen — und für Veranstaltungsplaner immer einen Schritt voraus zu sein.",
+    "heading": "Einblicke für Event-Profis",
+    "headingSubtitle": "Tipps, Anleitungen und Branchenperspektiven, um mehr Angebote zu gewinnen und Ihr Event-Geschäft auszubauen.",
     "backToBlock": "Zurück zum Blog"
   },
   "subscribe": {
     "title": "Bleiben Sie auf dem Laufenden",
-    "subtitle": "Erhalten Sie Tipps zur AV-Angebotserstellung und Eventplanung, Produktupdates und Brancheneinblicke. Kein Spam.",
+    "subtitle": "Erhalten Sie Tipps zu Event-Angeboten und Produktionsplanung, Produktupdates und Brancheneinblicke. Kein Spam.",
     "placeholder": "sie@unternehmen.com",
     "button": "Abonnieren",
     "success": "Abonniert!"
   },
   "footer": {
-    "tagline": "KI-gestützte AV-Angebote und Eventplanung für Produktionsprofis.",
+    "tagline": "Die KI-Plattform für Event-Profis.",
     "product": "Produkt",
     "company": "Unternehmen",
     "legal": "Rechtliches",

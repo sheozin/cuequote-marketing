@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const pagePath = '/pricing';
   const title = t("metaTitle", { defaultValue: "Pricing" });
-  const description = t("metaDescription", { defaultValue: "Simple, transparent pricing for AV proposal generation. Start free, upgrade as you grow." });
+  const description = t("metaDescription", { defaultValue: "Simple, transparent pricing for event proposal automation. Start free, upgrade as you grow." });
   return {
     title,
     description,

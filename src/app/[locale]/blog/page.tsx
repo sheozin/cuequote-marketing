@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const pagePath = '/blog';
   const title = t("metaTitle", { defaultValue: "Blog" });
-  const description = t("metaDescription", { defaultValue: "Tips, guides, and insights for AV professionals — from proposal writing to equipment pricing and industry trends." });
+  const description = t("metaDescription", { defaultValue: "Tips and insights for event professionals." });
   return {
     title,
     description,

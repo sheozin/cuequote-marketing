@@ -294,7 +294,7 @@ export default async function BlogPostPage({
                       Ready to create proposals in minutes?
                     </h3>
                     <p style={{ fontSize: 14, color: "#374151", marginBottom: 16, lineHeight: 1.6 }}>
-                      CueQuote generates professional AV proposals with AI. Start free, no credit card required.
+                      CueQuote generates professional event proposals with AI. Start free, no credit card required.
                     </p>
                     <a href="https://app.cuequote.com" target="_blank" rel="noopener noreferrer" style={{
                       display: "inline-block", padding: "12px 28px", borderRadius: 10,

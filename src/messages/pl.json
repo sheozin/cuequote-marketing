@@ -21,13 +21,13 @@
     "new": "Nowość"
   },
   "hero": {
-    "metaTitle": "CueQuote — Oferty AV i planowanie produkcji eventowej z AI",
-    "metaDescription": "Zamień opisy wydarzeń w profesjonalne oferty sprzętowe AV lub szczegółowe plany produkcji eventowej w mniej niż 2 minuty.",
-    "badge": "Wyceny AV i planowanie z AI",
+    "metaTitle": "CueQuote — Platforma AI dla profesjonalistów eventowych",
+    "metaDescription": "Twórz profesjonalne oferty eventowe lub szczegółowe plany produkcji w mniej niż 2 minuty. AI dla firm AV i organizatorów wydarzeń.",
+    "badge": "Automatyzacja ofert z AI",
     "title": "Zamień opisy wydarzeń w",
-    "titleHighlight": "profesjonalne oferty AV",
+    "titleHighlight": "zwycięskie oferty eventowe",
     "titleEnd": "w kilka sekund",
-    "subtitle": "Twórz oferty AV w kilka sekund lub planuj produkcję swojego wydarzenia z pomocą AI — rekomendacje sprzętu, ekipy i budżetu w mniej niż 2 minuty.",
+    "subtitle": "Twórz oferty eventowe w kilka sekund lub planuj produkcję z pomocą AI — rekomendacje sprzętu, ekipy i budżetu w mniej niż 2 minuty.",
     "cta": "Zacznij za darmo",
     "ctaSecondary": "Zobacz jak to działa",
     "noCreditCard": "Bez karty kredytowej",
@@ -58,7 +58,7 @@
     "heroCatCrewItems": "4 osoby: dźwięk, światło, wideo, scena"
   },
   "socialProof": {
-    "trusted": "Zaufali nam profesjonaliści AV i organizatorzy wydarzeń"
+    "trusted": "Zaufali nam profesjonaliści eventowi na całym świecie"
   },
   "useCases": {
     "title": "Stworzone dla profesjonalistów produkcji",
@@ -102,7 +102,7 @@
   },
   "pricing": {
     "metaTitle": "Cennik",
-    "metaDescription": "Prosty, przejrzysty cennik generowania ofert AV i planowania produkcji eventowej.",
+    "metaDescription": "Prosty, przejrzysty cennik automatyzacji ofert eventowych i planowania produkcji.",
     "title": "Prosty, przejrzysty cennik",
     "subtitle": "Zacznij za darmo. Rozwijaj się w swoim tempie.",
     "monthly": "Miesięcznie",
@@ -171,7 +171,7 @@
     "creditsNeverExpire": "Kredyty nigdy nie wygasają",
     "brandedPdfsIncluded": "Markowe PDF-y w zestawie",
     "readyTitle": "Gotowy wyceniać szybciej?",
-    "readySubtitle": "Dołącz do profesjonalistów AV i organizatorów wydarzeń, którzy tworzą oferty w minuty, nie godziny.",
+    "readySubtitle": "Dołącz do profesjonalistów eventowych, którzy tworzą oferty w minuty, nie godziny.",
     "noCreditCard": "Bez karty kredytowej",
     "faqQ1": "Czy mogę zmienić plan w dowolnym momencie?",
     "faqA1": "Tak. Przejdź na wyższy lub niższy plan w dowolnym momencie. Zmiany wchodzą w życie w następnym cyklu rozliczeniowym.",
@@ -295,7 +295,7 @@
   },
   "homeCta": {
     "title": "Zacznij tworzyć oferty i plany już dziś",
-    "subtitle": "Dołącz do profesjonalistów AV i organizatorów wydarzeń, którzy pracują szybciej z CueQuote.",
+    "subtitle": "Dołącz do profesjonalistów eventowych, którzy pracują szybciej z CueQuote.",
     "cta": "Zacznij za darmo",
     "noCreditCard": "Bez karty kredytowej"
   },
@@ -303,10 +303,10 @@
     "metaTitle": "O nas",
     "metaDescription": "Historia CueQuote.",
     "title": "O CueQuote",
-    "subtitle": "Stworzone przez profesjonalistów AV, dla firm AV i organizatorów eventów.",
+    "subtitle": "Stworzone przez weteranów branży eventowej, dla firm produkcyjnych i organizatorów wydarzeń.",
     "badge": "Nasza historia",
-    "heading": "Stworzone przez profesjonalistów AV,",
-    "headingHighlight": "dla firm AV i organizatorów eventów",
+    "heading": "Stworzone przez weteranów branży eventowej,",
+    "headingHighlight": "dla firm produkcyjnych i organizatorów wydarzeń",
     "p1": "CueQuote narodził się z prostej frustracji: wycena sprzętu AV na eventy zajmuje zbyt dużo czasu — a planowanie produkcji AV bez wiedzy technicznej jest przytłaczające (jeśli jesteś organizatorem wydarzeń).",
     "p2": "Jesteśmy <strong>AVE Events</strong> — firmą produkcyjną z siedzibą w Europie, która zarządzała konferencjami, eventami korporacyjnymi i pokazami na żywo na całym kontynencie i Bliskim Wschodzie. Wiemy, jak to jest otrzymać brief o 22:00 i potrzebować oferty rano.",
     "p3": "Arkusze kalkulacyjne, kopiowanie starych ofert, ręczne obliczenia — robiliśmy to wszystko. I obserwowaliśmy, jak inne firmy robią to samo. Godziny pracy na każdą wycenę. Błędy w cenach. Niespójne formatowanie. Oferty, które nie odzwierciedlały jakości naszej pracy produkcyjnej.",
@@ -327,9 +327,9 @@
     "statEventsQuoted": "Wycenionych eventów",
     "statCountries": "Obsługiwanych krajów",
     "statTeam": "Zespół",
-    "whyDifferentSub": "Zbudowane na bazie prawdziwego doświadczenia w produkcji AV, a nie ogólnego szablonu.",
+    "whyDifferentSub": "Zbudowane na bazie prawdziwego doświadczenia w produkcji eventowej, a nie ogólnego szablonu.",
     "ctaTitle": "Gotowy na transformację swojej pracy?",
-    "ctaSub": "Dołącz do profesjonalistów AV i organizatorów wydarzeń, którzy pracują szybciej z CueQuote."
+    "ctaSub": "Dołącz do profesjonalistów eventowych, którzy pracują szybciej z CueQuote."
   },
   "contact": {
     "metaTitle": "Kontakt",
@@ -371,26 +371,26 @@
   },
   "blog": {
     "metaTitle": "Blog",
-    "metaDescription": "Porady i spostrzeżenia dla profesjonalistów AV i organizatorów wydarzeń.",
+    "metaDescription": "Porady i spostrzeżenia dla profesjonalistów eventowych.",
     "title": "Blog",
-    "subtitle": "Porady, przewodniki i spostrzeżenia dla profesjonalistów AV.",
+    "subtitle": "Porady, przewodniki i spostrzeżenia dla profesjonalistów eventowych.",
     "readMore": "Czytaj więcej",
     "backToBlog": "Powrót do bloga",
     "allPosts": "Wszystkie wpisy",
     "badge": "Blog",
-    "heading": "Spostrzeżenia dla profesjonalistów AV",
-    "headingSubtitle": "Porady, przewodniki i perspektywy branżowe, które pomogą Ci wygrywać więcej ofert i rozwijać biznes AV — oraz organizatorom eventów być krok do przodu.",
+    "heading": "Spostrzeżenia dla profesjonalistów eventowych",
+    "headingSubtitle": "Porady, przewodniki i perspektywy branżowe, które pomogą Ci wygrywać więcej ofert i rozwijać biznes eventowy.",
     "backToBlock": "Powrót do bloga"
   },
   "subscribe": {
     "title": "Bądź na bieżąco",
-    "subtitle": "Otrzymuj porady dotyczące wycen AV i planowania eventów, aktualizacje produktu i branżowe informacje. Bez spamu.",
+    "subtitle": "Otrzymuj porady dotyczące ofert eventowych i planowania produkcji, aktualizacje produktu i branżowe informacje. Bez spamu.",
     "placeholder": "ty@firma.com",
     "button": "Subskrybuj",
     "success": "Zasubskrybowano!"
   },
   "footer": {
-    "tagline": "Oferty AV i planowanie eventów wspierane przez AI dla profesjonalistów produkcji.",
+    "tagline": "Platforma AI dla profesjonalistów eventowych.",
     "product": "Produkt",
     "company": "Firma",
     "legal": "Prawne",
