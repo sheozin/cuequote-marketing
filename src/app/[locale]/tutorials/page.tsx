@@ -3,7 +3,8 @@ import { Link } from "@/i18n/navigation";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { getTranslations, getLocale } from "next-intl/server";
-import { getTutorials, type Tutorial } from "@/lib/tutorials";
+import { getTutorials, getTutorialCategories, type Tutorial } from "@/lib/tutorials";
+import { TutorialFilter } from "@/components/TutorialFilter";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("tutorials");
@@ -204,8 +205,16 @@ export default async function TutorialsPage() {
         </div>
       </section>
 
+      {/* Filter */}
+      <TutorialFilter
+        categories={getTutorialCategories(locale)}
+        allLabel={t("all", { defaultValue: "All" })}
+        filterLabel={t("filter", { defaultValue: "Filter:" })}
+        totalCount={tutorials.length}
+      />
+
       {/* Tutorial Grid */}
-      <section style={{ padding: "40px 24px 80px", maxWidth: 1200, margin: "0 auto" }}>
+      <section style={{ padding: "0 24px 80px", maxWidth: 1200, margin: "0 auto" }}>
         <div
           className="tutorials-grid"
           style={{
@@ -222,6 +231,9 @@ export default async function TutorialsPage() {
                 key={tut.slug}
                 href={`/tutorials/${tut.slug}`}
                 className="tutorial-card"
+                data-tutorial-card=""
+                data-category={tut.category}
+                data-mode={(tut as any).mode || 'both'}
                 style={{
                   display: "block",
                   textDecoration: "none",
