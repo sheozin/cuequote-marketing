@@ -97,8 +97,10 @@ export default function SmartPopup() {
   const triggeredRef = useRef(false)
 
   useEffect(() => {
-    supabase.rpc('get_active_popup_campaign').then(({ data }) => {
+    supabase.rpc('get_active_popup_campaign').then(({ data, error }) => {
+      if (error) { console.error('[SmartPopup] RPC error:', error); return }
       const camp = (Array.isArray(data) ? data[0] : data) as PopupCampaign | undefined
+      console.log('[SmartPopup] Campaign data:', camp ? camp.phase : 'none')
       if (!camp) return
 
       const dismissedRaw = localStorage.getItem(`${LS_DISMISSED_PREFIX}${camp.id}`)
@@ -133,7 +135,7 @@ export default function SmartPopup() {
     let scrollHandler: (() => void) | null = null
     let mouseHandler: ((e: MouseEvent) => void) | null = null
 
-    if (type === 'timed') timer = setTimeout(showPopup, 30_000)
+    if (type === 'timed') timer = setTimeout(showPopup, 10_000)
     else if (type === 'returning') timer = setTimeout(showPopup, 5_000)
     else if (type === 'all') timer = setTimeout(showPopup, 10_000)
     else if (type === 'scroll') {
