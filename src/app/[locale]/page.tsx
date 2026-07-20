@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { PricingToggle } from "../../components/PricingToggle";
 import { HeroMockupSlider } from "../../components/HeroMockupSlider";
+import { Testimonials } from "../../components/Testimonials";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -523,6 +524,12 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── 7b. Testimonials ──────────────────────────────────────────────── */}
+      <Testimonials
+        title={t("testimonialsTitle", { defaultValue: "Trusted by Event Professionals" })}
+        subtitle={t("testimonialsSubtitle", { defaultValue: "See what AV companies and event planners say about CueQuote" })}
+      />
 
       {/* ── 8. FAQ ──────────────────────────────────────────────────────────── */}
       <section id="faq" style={{ padding: "96px 24px", background: "#f9fafb" }}>
