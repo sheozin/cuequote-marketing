@@ -129,8 +129,8 @@ export default async function AboutPage() {
               { label: t("statFounded", { defaultValue: "Founded" }), value: "2026" },
               { label: t("statHq", { defaultValue: "Headquarters" }), value: t("statHqValue", { defaultValue: "Warsaw, Poland" }) },
               { label: t("statIndustry", { defaultValue: "Industry" }), value: t("statIndustryValue", { defaultValue: "AV & Event Production" }) },
-              { label: t("statEventsQuoted", { defaultValue: "Events Quoted" }), value: "10,000+" },
-              { label: t("statCountries", { defaultValue: "Countries Served" }), value: "15+" },
+              { label: t("statLanguages", { defaultValue: "Languages Supported" }), value: "5" },
+              { label: t("statAiPowered", { defaultValue: "AI-Powered" }), value: "✓" },
               { label: t("statTeam", { defaultValue: "Team" }), value: "AVE Event Solutions" },
             ].map((stat, i) => (
               <div key={i} style={{

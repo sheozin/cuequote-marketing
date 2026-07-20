@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = []
 
   // Static pages — one entry per locale
-  const siteLastUpdated = new Date('2026-05-14')
+  const siteLastUpdated = new Date('2026-07-20')
   for (const page of staticPages) {
     for (const locale of locales) {
       entries.push({

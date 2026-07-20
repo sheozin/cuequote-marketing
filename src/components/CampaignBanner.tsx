@@ -254,7 +254,7 @@ export default function CampaignBanner() {
               animation: 'pulse 2s infinite',
               flexShrink: 0,
             }} />
-            Claim yours →
+            {{ en: 'Claim yours →', ar: 'احجز مقعدك ←', pl: 'Odbierz swoje →', de: 'Jetzt sichern →', fr: 'Réclamez le vôtre →' }[locale] || 'Claim yours →'}
           </a>
         )}
 

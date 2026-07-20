@@ -60,7 +60,10 @@
     "heroCatCrewItems": "4 osoby: dźwięk, światło, wideo, scena"
   },
   "socialProof": {
-    "trusted": "Zaufali nam profesjonaliści eventowi na całym świecie"
+    "trusted": "Zaufali nam profesjonaliści eventowi na całym świecie",
+    "multiLang": "5 obsługiwanych języków",
+    "aiPowered": "Oferty napędzane AI",
+    "brandedPdfs": "Eksport PDF z marką"
   },
   "useCases": {
     "title": "Stworzone dla profesjonalistów produkcji",
@@ -166,8 +169,12 @@
     "tenProposals": "10 ofert",
     "perProposal3": "6,33 € za ofertę",
     "perProposal10": "4,90 € za ofertę",
-    "buy3Pack": "Kup pakiet 3",
-    "buy10Pack": "Kup pakiet 10",
+    "fiveProposals": "5 ofert",
+    "fifteenProposals": "15 ofert",
+    "perProposal5": "5,00 € za szt.",
+    "perProposal15": "3,93 € za szt.",
+    "buy3Pack": "Kup pakiet 5",
+    "buy10Pack": "Kup pakiet 15",
     "bestValue": "Najlepsza wartość",
     "noMonthlyFee": "Bez opłaty miesięcznej",
     "creditsNeverExpire": "Kredyty nigdy nie wygasają",
@@ -326,8 +333,8 @@
     "statHqValue": "Warszawa, Polska",
     "statIndustry": "Branża",
     "statIndustryValue": "AV i produkcja eventów",
-    "statEventsQuoted": "Wycenionych eventów",
-    "statCountries": "Obsługiwanych krajów",
+    "statLanguages": "Obsługiwane języki",
+    "statAiPowered": "Napędzane AI",
     "statTeam": "Zespół",
     "testimonialsTitle": "Zaufali nam profesjonaliści eventowi",
     "testimonialsSubtitle": "Zobacz, co mówią firmy AV i organizatorzy wydarzeń o CueQuote",
@@ -384,7 +391,8 @@
     "badge": "Blog",
     "heading": "Spostrzeżenia dla profesjonalistów eventowych",
     "headingSubtitle": "Porady, przewodniki i perspektywy branżowe, które pomogą Ci wygrywać więcej ofert i rozwijać biznes eventowy.",
-    "backToBlock": "Powrót do bloga"
+    "backToBlock": "Powrót do bloga",
+    "featured": "Wyróżnione"
   },
   "subscribe": {
     "title": "Bądź na bieżąco",
@@ -1197,6 +1205,11 @@
     "t8Desc": "Zmień plan, zarządzaj rozliczeniami i pobieraj faktury",
     "t9Title": "Tworzenie faktur",
     "t9Desc": "Generuj profesjonalne faktury z zaakceptowanych ofert z danymi płatności",
+    "productTour": "PRZEGLĄD PRODUKTU",
+    "tourDuration": "8 min",
+    "completeWalkthrough": "Kompletny przegląd produktu",
+    "walkthroughDesc": "Zobacz każdą funkcję od A do Z — od rejestracji do w pełni wycenionej, profesjonalnej oferty eventowej w mniej niż 5 minut.",
+    "tryItFree": "Wypróbuj za darmo",
     "ctaTitle": "Nie możesz znaleźć tego, czego szukasz?",
     "ctaSubtitle": "Sprawdź naszą dokumentację lub skontaktuj się z nami",
     "viewDocs": "Zobacz dokumentację",

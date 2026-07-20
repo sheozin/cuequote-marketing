@@ -162,9 +162,9 @@ export default async function TutorialsPage() {
                   padding: "4px 12px",
                   borderRadius: 100,
                 }}>
-                  PRODUCT TOUR
+                  {t("productTour", { defaultValue: "PRODUCT TOUR" })}
                 </span>
-                <span style={{ color: "#9ca3af", fontSize: 13 }}>8 min</span>
+                <span style={{ color: "#9ca3af", fontSize: 13 }}>{t("tourDuration", { defaultValue: "8 min" })}</span>
               </div>
               <h2 style={{
                 fontFamily: "var(--font-dm-sans)",
@@ -173,10 +173,10 @@ export default async function TutorialsPage() {
                 color: "#08172E",
                 margin: 0,
               }}>
-                Complete Product Walkthrough
+                {t("completeWalkthrough", { defaultValue: "Complete Product Walkthrough" })}
               </h2>
               <p style={{ color: "#6b7280", fontSize: 14, margin: "6px 0 0", maxWidth: 500 }}>
-                See every feature end-to-end — from signup to a fully priced, professional event proposal in under 5 minutes.
+                {t("walkthroughDesc", { defaultValue: "See every feature end-to-end — from signup to a fully priced, professional event proposal in under 5 minutes." })}
               </p>
             </div>
             <a
@@ -196,7 +196,7 @@ export default async function TutorialsPage() {
                 whiteSpace: "nowrap",
               }}
             >
-              Try It Free
+              {t("tryItFree", { defaultValue: "Try It Free" })}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>

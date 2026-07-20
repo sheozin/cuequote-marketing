@@ -60,7 +60,10 @@
     "heroCatCrewItems": "4 Crew: Audio, Licht, Video, Bühne"
   },
   "socialProof": {
-    "trusted": "Vertraut von Event-Profis weltweit"
+    "trusted": "Vertraut von Event-Profis weltweit",
+    "multiLang": "5 Sprachen unterstützt",
+    "aiPowered": "KI-gestützte Angebote",
+    "brandedPdfs": "Gebrandete PDF-Exporte"
   },
   "useCases": {
     "title": "Entwickelt für Produktionsprofis",
@@ -166,8 +169,12 @@
     "tenProposals": "10 Angebote",
     "perProposal3": "6,33 € pro Angebot",
     "perProposal10": "4,90 € pro Angebot",
-    "buy3Pack": "3er-Paket kaufen",
-    "buy10Pack": "10er-Paket kaufen",
+    "fiveProposals": "5 Angebote",
+    "fifteenProposals": "15 Angebote",
+    "perProposal5": "5,00 € pro Stück",
+    "perProposal15": "3,93 € pro Stück",
+    "buy3Pack": "5er-Paket kaufen",
+    "buy10Pack": "15er-Paket kaufen",
     "bestValue": "Bestes Angebot",
     "noMonthlyFee": "Keine monatliche Gebühr",
     "creditsNeverExpire": "Guthaben läuft nie ab",
@@ -326,8 +333,8 @@
     "statHqValue": "Warschau, Polen",
     "statIndustry": "Branche",
     "statIndustryValue": "AV & Veranstaltungsproduktion",
-    "statEventsQuoted": "Veranstaltungen kalkuliert",
-    "statCountries": "Bediente Länder",
+    "statLanguages": "Unterstützte Sprachen",
+    "statAiPowered": "KI-gestützt",
     "statTeam": "Team",
     "testimonialsTitle": "Vertraut von Event-Profis",
     "testimonialsSubtitle": "Was AV-Unternehmen und Event-Planer über CueQuote sagen",
@@ -384,7 +391,8 @@
     "badge": "Blog",
     "heading": "Einblicke für Event-Profis",
     "headingSubtitle": "Tipps, Anleitungen und Branchenperspektiven, um mehr Angebote zu gewinnen und Ihr Event-Geschäft auszubauen.",
-    "backToBlock": "Zurück zum Blog"
+    "backToBlock": "Zurück zum Blog",
+    "featured": "Empfohlen"
   },
   "subscribe": {
     "title": "Bleiben Sie auf dem Laufenden",
@@ -1223,6 +1231,11 @@
     "t8Desc": "Pläne upgraden, Abrechnung verwalten und Rechnungen herunterladen",
     "t9Title": "Rechnungen erstellen",
     "t9Desc": "Erstellen Sie professionelle Rechnungen aus Ihren akzeptierten Angeboten mit Ihren Zahlungsdetails",
+    "productTour": "PRODUKTTOUR",
+    "tourDuration": "8 Min.",
+    "completeWalkthrough": "Kompletter Produktrundgang",
+    "walkthroughDesc": "Sehen Sie jede Funktion von A bis Z — von der Anmeldung bis zu einem vollständig kalkulierten, professionellen Eventangebot in unter 5 Minuten.",
+    "tryItFree": "Kostenlos testen",
     "ctaTitle": "Nicht gefunden, was Sie suchen?",
     "ctaSubtitle": "Sehen Sie unsere Dokumentation oder kontaktieren Sie uns",
     "viewDocs": "Dokumentation ansehen",

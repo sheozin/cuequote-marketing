@@ -1,5 +1,12 @@
 "use server";
 
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://rurazinghbfskuoeikwi.supabase.co",
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+);
+
 export type ContactFormState = {
   success: boolean;
   message: string;
@@ -26,8 +33,22 @@ export async function submitContactForm(
     return { success: false, message: "Please enter a message." };
   }
 
-  // TODO: Wire up email service (e.g. Resend, SendGrid) here
-  console.log("[Contact Form Submission]", { name, email, subject, message });
+  try {
+    const { error } = await supabase.from("contact_submissions").insert({
+      name,
+      email,
+      subject: subject || null,
+      message,
+    });
+
+    if (error) {
+      console.error("[Contact Form Error]", error);
+      return { success: false, message: "Something went wrong. Please try again." };
+    }
+  } catch (err) {
+    console.error("[Contact Form Error]", err);
+    return { success: false, message: "Something went wrong. Please try again." };
+  }
 
   return {
     success: true,

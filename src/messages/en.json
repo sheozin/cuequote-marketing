@@ -60,7 +60,10 @@
     "heroCatCrewItems": "4 crew: audio, lighting, video, stage mgr"
   },
   "socialProof": {
-    "trusted": "Trusted by event professionals worldwide"
+    "trusted": "Trusted by event professionals worldwide",
+    "multiLang": "5 Languages Supported",
+    "aiPowered": "AI-Powered Proposals",
+    "brandedPdfs": "Branded PDF Export"
   },
   "useCases": {
     "title": "Built for production professionals",
@@ -166,8 +169,12 @@
     "tenProposals": "10 Proposals",
     "perProposal3": "€6.33 per proposal",
     "perProposal10": "€4.90 per proposal",
-    "buy3Pack": "Buy 3-Pack",
-    "buy10Pack": "Buy 10-Pack",
+    "fiveProposals": "5 Proposals",
+    "fifteenProposals": "15 Proposals",
+    "perProposal5": "€5.00 each",
+    "perProposal15": "€3.93 each",
+    "buy3Pack": "Buy 5-Pack",
+    "buy10Pack": "Buy 15-Pack",
     "bestValue": "Best Value",
     "noMonthlyFee": "No monthly fee",
     "creditsNeverExpire": "Credits never expire",
@@ -326,8 +333,8 @@
     "statHqValue": "Warsaw, Poland",
     "statIndustry": "Industry",
     "statIndustryValue": "AV & Event Production",
-    "statEventsQuoted": "Events Quoted",
-    "statCountries": "Countries Served",
+    "statLanguages": "Languages Supported",
+    "statAiPowered": "AI-Powered",
     "statTeam": "Team",
     "testimonialsTitle": "Trusted by Event Professionals",
     "testimonialsSubtitle": "See what AV companies and event planners say about CueQuote",
@@ -384,7 +391,8 @@
     "badge": "Blog",
     "heading": "Insights for event professionals",
     "headingSubtitle": "Tips, guides, and industry perspectives to help you win more proposals and grow your event business.",
-    "backToBlock": "Back to blog"
+    "backToBlock": "Back to blog",
+    "featured": "Featured"
   },
   "subscribe": {
     "title": "Stay in the loop",
@@ -1221,6 +1229,11 @@
     "t8Desc": "Upgrade plans, manage billing, and download invoices",
     "t9Title": "Creating Invoices",
     "t9Desc": "Generate professional invoices from your accepted proposals with your payment details",
+    "productTour": "PRODUCT TOUR",
+    "tourDuration": "8 min",
+    "completeWalkthrough": "Complete Product Walkthrough",
+    "walkthroughDesc": "See every feature end-to-end — from signup to a fully priced, professional event proposal in under 5 minutes.",
+    "tryItFree": "Try It Free",
     "ctaTitle": "Can't find what you're looking for?",
     "ctaSubtitle": "Check our documentation or reach out to us",
     "viewDocs": "View Documentation",

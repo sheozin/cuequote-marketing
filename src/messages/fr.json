@@ -60,7 +60,10 @@
     "heroCatCrewItems": "4 techniciens: son, lumière, vidéo, régie"
   },
   "socialProof": {
-    "trusted": "Approuvé par les professionnels de l'événementiel dans le monde entier"
+    "trusted": "Approuvé par les professionnels de l'événementiel dans le monde entier",
+    "multiLang": "5 langues prises en charge",
+    "aiPowered": "Devis propulsés par l'IA",
+    "brandedPdfs": "Export PDF personnalisé"
   },
   "useCases": {
     "title": "Conçu pour les professionnels de la production",
@@ -166,8 +169,12 @@
     "tenProposals": "10 devis",
     "perProposal3": "6,33 € par devis",
     "perProposal10": "4,90 € par devis",
-    "buy3Pack": "Acheter le pack de 3",
-    "buy10Pack": "Acheter le pack de 10",
+    "fiveProposals": "5 devis",
+    "fifteenProposals": "15 devis",
+    "perProposal5": "5,00 € chacun",
+    "perProposal15": "3,93 € chacun",
+    "buy3Pack": "Acheter le pack de 5",
+    "buy10Pack": "Acheter le pack de 15",
     "bestValue": "Meilleur rapport qualité-prix",
     "noMonthlyFee": "Pas de frais mensuels",
     "creditsNeverExpire": "Les crédits n'expirent jamais",
@@ -326,8 +333,8 @@
     "statHqValue": "Varsovie, Pologne",
     "statIndustry": "Secteur",
     "statIndustryValue": "AV et production événementielle",
-    "statEventsQuoted": "Événements chiffrés",
-    "statCountries": "Pays desservis",
+    "statLanguages": "Langues prises en charge",
+    "statAiPowered": "Propulsé par l'IA",
     "statTeam": "Équipe",
     "testimonialsTitle": "Approuvé par les professionnels de l'événementiel",
     "testimonialsSubtitle": "Découvrez ce que les entreprises AV et les organisateurs disent de CueQuote",
@@ -384,7 +391,8 @@
     "badge": "Blog",
     "heading": "Perspectives pour les professionnels de l'événementiel",
     "headingSubtitle": "Conseils, guides et perspectives de l'industrie pour vous aider à remporter plus de devis et développer votre activité événementielle.",
-    "backToBlock": "Retour au blog"
+    "backToBlock": "Retour au blog",
+    "featured": "En vedette"
   },
   "subscribe": {
     "title": "Restez informé",
@@ -1225,6 +1233,11 @@
     "t8Desc": "Changez de forfait, gérez la facturation et téléchargez les factures",
     "t9Title": "Creation de factures",
     "t9Desc": "Generez des factures professionnelles a partir de vos devis acceptes avec vos coordonnees de paiement",
+    "productTour": "VISITE DU PRODUIT",
+    "tourDuration": "8 min",
+    "completeWalkthrough": "Visite complète du produit",
+    "walkthroughDesc": "Découvrez chaque fonctionnalité de bout en bout — de l'inscription à un devis événementiel professionnel complet en moins de 5 minutes.",
+    "tryItFree": "Essayer gratuitement",
     "ctaTitle": "Vous ne trouvez pas ce que vous cherchez ?",
     "ctaSubtitle": "Consultez notre documentation ou contactez-nous",
     "viewDocs": "Voir la documentation",

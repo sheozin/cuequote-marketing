@@ -120,7 +120,7 @@ export default async function BlogPage() {
                     background: "#fef3c7", padding: "3px 10px", borderRadius: 12,
                     textTransform: "uppercase", letterSpacing: 0.5,
                   }}>
-                    Featured
+                    {t("featured", { defaultValue: "Featured" })}
                   </span>
                 </div>
 
