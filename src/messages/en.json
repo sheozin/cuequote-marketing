@@ -392,7 +392,11 @@
     "heading": "Insights for event professionals",
     "headingSubtitle": "Tips, guides, and industry perspectives to help you win more proposals and grow your event business.",
     "backToBlock": "Back to blog",
-    "featured": "Featured"
+    "featured": "Featured",
+    "categoryGuides": "Guides",
+    "categoryIndustry": "Industry",
+    "categoryTechnology": "Technology",
+    "categoryBusiness": "Business"
   },
   "subscribe": {
     "title": "Stay in the loop",
@@ -1237,7 +1241,10 @@
     "ctaTitle": "Can't find what you're looking for?",
     "ctaSubtitle": "Check our documentation or reach out to us",
     "viewDocs": "View Documentation",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "modeAv": "AV",
+    "modePlanner": "Planner",
+    "modeBoth": "AV + Planner"
   },
   "docs": {
     "metaTitle": "Documentation — Getting Started",

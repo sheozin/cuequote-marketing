@@ -392,7 +392,11 @@
     "heading": "Spostrzeżenia dla profesjonalistów eventowych",
     "headingSubtitle": "Porady, przewodniki i perspektywy branżowe, które pomogą Ci wygrywać więcej ofert i rozwijać biznes eventowy.",
     "backToBlock": "Powrót do bloga",
-    "featured": "Wyróżnione"
+    "featured": "Wyróżnione",
+    "categoryGuides": "Poradniki",
+    "categoryIndustry": "Branża",
+    "categoryTechnology": "Technologia",
+    "categoryBusiness": "Biznes"
   },
   "subscribe": {
     "title": "Bądź na bieżąco",
@@ -1213,7 +1217,10 @@
     "ctaTitle": "Nie możesz znaleźć tego, czego szukasz?",
     "ctaSubtitle": "Sprawdź naszą dokumentację lub skontaktuj się z nami",
     "viewDocs": "Zobacz dokumentację",
-    "contactUs": "Skontaktuj się"
+    "contactUs": "Skontaktuj się",
+    "modeAv": "AV",
+    "modePlanner": "Planer",
+    "modeBoth": "AV + Planer"
   },
   "docs": {
     "metaTitle": "Dokumentacja — Pierwsze kroki",

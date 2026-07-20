@@ -392,7 +392,11 @@
     "heading": "Einblicke für Event-Profis",
     "headingSubtitle": "Tipps, Anleitungen und Branchenperspektiven, um mehr Angebote zu gewinnen und Ihr Event-Geschäft auszubauen.",
     "backToBlock": "Zurück zum Blog",
-    "featured": "Empfohlen"
+    "featured": "Empfohlen",
+    "categoryGuides": "Leitfäden",
+    "categoryIndustry": "Branche",
+    "categoryTechnology": "Technologie",
+    "categoryBusiness": "Business"
   },
   "subscribe": {
     "title": "Bleiben Sie auf dem Laufenden",
@@ -1239,7 +1243,10 @@
     "ctaTitle": "Nicht gefunden, was Sie suchen?",
     "ctaSubtitle": "Sehen Sie unsere Dokumentation oder kontaktieren Sie uns",
     "viewDocs": "Dokumentation ansehen",
-    "contactUs": "Kontakt aufnehmen"
+    "contactUs": "Kontakt aufnehmen",
+    "modeAv": "AV",
+    "modePlanner": "Planer",
+    "modeBoth": "AV + Planer"
   },
   "docs": {
     "metaTitle": "Dokumentation — Erste Schritte",

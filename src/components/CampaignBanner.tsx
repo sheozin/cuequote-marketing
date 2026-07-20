@@ -264,10 +264,10 @@ export default function CampaignBanner() {
             <span style={{ fontSize: 11, opacity: 0.7, fontWeight: 600, marginRight: 2 }}>
               {{ en: 'Ends in', ar: 'ينتهي خلال', pl: 'Kończy się za', de: 'Endet in', fr: 'Se termine dans' }[locale] || 'Ends in'}
             </span>
-            {parts.d > 0 && <CountdownBox value={parts.d} label="days" />}
-            <CountdownBox value={parts.h} label="hrs" />
-            <CountdownBox value={parts.m} label="min" />
-            <CountdownBox value={parts.s} label="sec" />
+            {parts.d > 0 && <CountdownBox value={parts.d} label={{ en: 'days', ar: 'أيام', pl: 'dni', de: 'Tage', fr: 'j' }[locale] || 'days'} />}
+            <CountdownBox value={parts.h} label={{ en: 'hrs', ar: 'س', pl: 'godz', de: 'Std', fr: 'h' }[locale] || 'hrs'} />
+            <CountdownBox value={parts.m} label={{ en: 'min', ar: 'د', pl: 'min', de: 'Min', fr: 'min' }[locale] || 'min'} />
+            <CountdownBox value={parts.s} label={{ en: 'sec', ar: 'ث', pl: 'sek', de: 'Sek', fr: 'sec' }[locale] || 'sec'} />
           </div>
         )}
       </div>

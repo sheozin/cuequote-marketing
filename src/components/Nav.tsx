@@ -181,7 +181,7 @@ export default function Nav() {
             textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#4b5563",
             textAlign: "center",
           }}>
-            {t("signIn")}
+            {t("login")}
           </Link>
           <Link href={appLink('/signup', locale)} onClick={() => setOpen(false)} style={{
             textDecoration: "none", fontSize: 16, fontWeight: 600, color: "#fff",

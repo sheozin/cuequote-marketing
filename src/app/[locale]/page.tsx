@@ -516,7 +516,7 @@ export default async function HomePage() {
               <Link key={slug} href={`/blog/${slug}`} style={{ textDecoration: "none", cursor: "pointer" }}>
                 <article style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 28, height: "100%" }}>
                   <div style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginBottom: 12 }}>
-                    {new Date(date).toLocaleDateString("en-US", { month: "short", year: "numeric" })}
+                    {new Date(date).toLocaleDateString(locale, { month: "short", year: "numeric" })}
                   </div>
                   <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 8, lineHeight: 1.3 }}>{tPosts(`${slug}.title`)}</h3>
                   <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6 }}>{tPosts(`${slug}.excerpt`)}</p>

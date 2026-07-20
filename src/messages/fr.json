@@ -392,7 +392,11 @@
     "heading": "Perspectives pour les professionnels de l'événementiel",
     "headingSubtitle": "Conseils, guides et perspectives de l'industrie pour vous aider à remporter plus de devis et développer votre activité événementielle.",
     "backToBlock": "Retour au blog",
-    "featured": "En vedette"
+    "featured": "En vedette",
+    "categoryGuides": "Guides",
+    "categoryIndustry": "Industrie",
+    "categoryTechnology": "Technologie",
+    "categoryBusiness": "Business"
   },
   "subscribe": {
     "title": "Restez informé",
@@ -1241,7 +1245,10 @@
     "ctaTitle": "Vous ne trouvez pas ce que vous cherchez ?",
     "ctaSubtitle": "Consultez notre documentation ou contactez-nous",
     "viewDocs": "Voir la documentation",
-    "contactUs": "Nous contacter"
+    "contactUs": "Nous contacter",
+    "modeAv": "AV",
+    "modePlanner": "Planificateur",
+    "modeBoth": "AV + Planificateur"
   },
   "docs": {
     "metaTitle": "Documentation — Premiers pas",

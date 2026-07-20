@@ -392,7 +392,11 @@
     "heading": "رؤى لمحترفي الفعاليات",
     "headingSubtitle": "نصائح وأدلة ووجهات نظر صناعية لمساعدتك في الفوز بمزيد من العروض وتنمية أعمالك في الفعاليات.",
     "backToBlock": "العودة إلى المدوّنة",
-    "featured": "مميّز"
+    "featured": "مميّز",
+    "categoryGuides": "أدلة",
+    "categoryIndustry": "الصناعة",
+    "categoryTechnology": "التكنولوجيا",
+    "categoryBusiness": "الأعمال"
   },
   "subscribe": {
     "title": "ابقَ على اطلاع",
@@ -1287,7 +1291,10 @@
     "ctaTitle": "لا تجد ما تبحث عنه؟",
     "ctaSubtitle": "تحقق من وثائقنا أو تواصل معنا",
     "viewDocs": "عرض التوثيق",
-    "contactUs": "اتصل بنا"
+    "contactUs": "اتصل بنا",
+    "modeAv": "AV",
+    "modePlanner": "مخطط",
+    "modeBoth": "AV + مخطط"
   },
   "docs": {
     "metaTitle": "التوثيق — البدء",

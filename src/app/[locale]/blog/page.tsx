@@ -40,6 +40,7 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string; border: string
 export default async function BlogPage() {
   const t = await getTranslations("blog");
   const tp = await getTranslations("posts");
+  const locale = await getLocale();
 
   const featured = POSTS[0];
   const rest = POSTS.slice(1);
@@ -112,7 +113,7 @@ export default async function BlogPage() {
                     fontSize: 12, fontWeight: 600, color: featuredCat.text,
                     background: featuredCat.bg, padding: "4px 12px", borderRadius: 12,
                   }}>
-                    {featured.category}
+                    {t(`category${featured.category}`, { defaultValue: featured.category })}
                   </span>
                   <span style={{ fontSize: 13, color: "#9ca3af" }}>{tp(`${featured.slug}.readTime`)}</span>
                   <span style={{
@@ -137,7 +138,7 @@ export default async function BlogPage() {
 
                 <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                   <span style={{ fontSize: 13, color: "#9ca3af" }}>
-                    {new Date(featured.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                    {new Date(featured.date).toLocaleDateString(locale, { month: "short", day: "numeric", year: "numeric" })}
                   </span>
                   <span style={{
                     display: "inline-flex", alignItems: "center", gap: 4,
@@ -196,7 +197,7 @@ export default async function BlogPage() {
                         fontSize: 12, fontWeight: 600, color: cat.text,
                         background: cat.bg, padding: "3px 10px", borderRadius: 12,
                       }}>
-                        {post.category}
+                        {t(`category${post.category}`, { defaultValue: post.category })}
                       </span>
                       <span style={{ fontSize: 13, color: "#9ca3af" }}>{tp(`${post.slug}.readTime`)}</span>
                     </div>
@@ -217,7 +218,7 @@ export default async function BlogPage() {
                       paddingTop: 8, borderTop: "1px solid #f3f4f6",
                     }}>
                       <span style={{ fontSize: 13, color: "#9ca3af" }}>
-                        {new Date(post.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                        {new Date(post.date).toLocaleDateString(locale, { month: "short", day: "numeric", year: "numeric" })}
                       </span>
                       <span style={{
                         display: "inline-flex", alignItems: "center", gap: 4,

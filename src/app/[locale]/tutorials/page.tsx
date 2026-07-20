@@ -137,7 +137,6 @@ export default async function TutorialsPage() {
             <video
               controls
               preload="metadata"
-              poster=""
               style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "contain" }}
             >
               <source src="/videos/cuequote-walkthrough-master.mp4" type="video/mp4" />
@@ -321,7 +320,7 @@ export default async function TutorialsPage() {
                       background: (tut as any).mode === 'av' ? 'rgba(16,185,129,0.1)' : (tut as any).mode === 'planner' ? 'rgba(139,92,246,0.1)' : 'rgba(59,130,246,0.1)',
                       color: (tut as any).mode === 'av' ? '#059669' : (tut as any).mode === 'planner' ? '#7c3aed' : '#2563eb',
                     }}>
-                      {(tut as any).mode === 'av' ? 'AV' : (tut as any).mode === 'planner' ? 'Planner' : 'AV + Planner'}
+                      {(tut as any).mode === 'av' ? t("modeAv", { defaultValue: "AV" }) : (tut as any).mode === 'planner' ? t("modePlanner", { defaultValue: "Planner" }) : t("modeBoth", { defaultValue: "AV + Planner" })}
                     </span>
                     {/* Difficulty badge */}
                     <span style={{
