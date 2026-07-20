@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
+import { Testimonials } from "../../../components/Testimonials";
 import { Sparkles, Check, ArrowRight, Globe, Calendar, BarChart3, Zap } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 
@@ -221,6 +222,11 @@ export default async function AboutPage() {
           .about-diff-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
+
+      <Testimonials
+        title={t("testimonialsTitle", { defaultValue: "Trusted by Event Professionals" })}
+        subtitle={t("testimonialsSubtitle", { defaultValue: "See what AV companies and event planners say about CueQuote" })}
+      />
 
       <Footer />
     </>
