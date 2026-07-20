@@ -130,7 +130,7 @@ export default async function AboutPage() {
               { label: t("statIndustry", { defaultValue: "Industry" }), value: t("statIndustryValue", { defaultValue: "AV & Event Production" }) },
               { label: t("statEventsQuoted", { defaultValue: "Events Quoted" }), value: "10,000+" },
               { label: t("statCountries", { defaultValue: "Countries Served" }), value: "15+" },
-              { label: t("statTeam", { defaultValue: "Team" }), value: "AVE Events" },
+              { label: t("statTeam", { defaultValue: "Team" }), value: "AVE Event Solutions" },
             ].map((stat, i) => (
               <div key={i} style={{
                 display: "flex", justifyContent: "space-between", alignItems: "center",
