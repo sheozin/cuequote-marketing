@@ -84,7 +84,13 @@ export function Testimonials({ title, subtitle }: { title: string; subtitle: str
       .order('rating', { ascending: false })
       .limit(10)
       .then(({ data }) => {
-        setTestimonials(data && data.length >= 3 ? data : FALLBACK)
+        if (data && data.length > 0) {
+          // Mix real testimonials with fallbacks to fill at least 4 cards
+          const needed = Math.max(0, 4 - data.length)
+          setTestimonials([...data, ...FALLBACK.slice(0, needed)])
+        } else {
+          setTestimonials(FALLBACK)
+        }
       })
   }, [])
 
