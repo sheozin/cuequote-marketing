@@ -2,14 +2,13 @@
 
 import { useEffect, useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
-import { X, Clock } from 'lucide-react'
+import { X } from 'lucide-react'
+import { useLocale } from 'next-intl'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://rurazinghbfskuoeikwi.supabase.co',
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1cmF6aW5naGJmc2t1b2Vpa3dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMTI2MDAsImV4cCI6MjA5MDc4ODYwMH0.lWiRDtQdkYFzs_R1Rnvb9jMcdDpo_a68yDY_dEbwseU'
 )
-
-import { useLocale } from 'next-intl'
 
 interface ActiveCampaign {
   id: string
@@ -21,6 +20,16 @@ interface ActiveCampaign {
   show_countdown: boolean
   banner_color: string
   translations: Record<string, { banner_text?: string }> | null
+}
+
+interface PopupCampaign {
+  seats_taken: number
+  target_seats: number
+  seats_remaining: number
+  promo_code: string | null
+  discount_pct: number | null
+  signup_url: string
+  phase: string
 }
 
 const LS_KEY = 'cuequote_mkt_campaign_dismissed'
@@ -57,18 +66,68 @@ function CountdownBox({ value, label }: { value: number; label: string }) {
   )
 }
 
+// Scarcity messages — different angle than popup
+const SCARCITY_MESSAGES: Record<string, Record<string, string>> = {
+  en: {
+    launch: '{taken} of {total} founding seats claimed — {code} saves {pct}%',
+    early_bird: 'Only {remaining} founding seats left — use {code} for {pct}% off',
+    urgency: '🔥 {remaining} seats remaining at founding price — {code}',
+    exclusive: '⚡ Almost full — {remaining} founding seats left',
+    last_call: '🚨 Final {remaining} seats — {code} expires soon',
+  },
+  pl: {
+    launch: '{taken} z {total} miejsc założycielskich zajętych — {code} daje {pct}% zniżki',
+    early_bird: 'Tylko {remaining} miejsc założycielskich — użyj {code} na {pct}% zniżki',
+    urgency: '🔥 Zostało {remaining} miejsc w cenie założycielskiej — {code}',
+    exclusive: '⚡ Prawie pełne — zostało {remaining} miejsc',
+    last_call: '🚨 Ostatnie {remaining} miejsca — {code} wygasa wkrótce',
+  },
+  ar: {
+    launch: '{taken} من {total} مقعد تأسيسي تم حجزه — {code} يوفر {pct}%',
+    early_bird: 'فقط {remaining} مقعد تأسيسي متبقي — استخدم {code} لخصم {pct}%',
+    urgency: '🔥 {remaining} مقعد متبقي بالسعر التأسيسي — {code}',
+    exclusive: '⚡ وشك الامتلاء — {remaining} مقعد تأسيسي متبقي',
+    last_call: '🚨 آخر {remaining} مقاعد — {code} ينتهي قريباً',
+  },
+  de: {
+    launch: '{taken} von {total} Gründerplätzen belegt — {code} spart {pct}%',
+    early_bird: 'Nur noch {remaining} Gründerplätze — {code} für {pct}% Rabatt',
+    urgency: '🔥 {remaining} Plätze zum Gründerpreis — {code}',
+    exclusive: '⚡ Fast voll — {remaining} Gründerplätze übrig',
+    last_call: '🚨 Letzte {remaining} Plätze — {code} läuft bald ab',
+  },
+  fr: {
+    launch: '{taken} des {total} places fondateur prises — {code} économise {pct}%',
+    early_bird: 'Plus que {remaining} places fondateur — {code} pour {pct}% de réduction',
+    urgency: '🔥 {remaining} places au prix fondateur — {code}',
+    exclusive: '⚡ Presque complet — {remaining} places fondateur restantes',
+    last_call: '🚨 Dernières {remaining} places — {code} expire bientôt',
+  },
+}
+
 export default function CampaignBanner() {
   const locale = useLocale()
   const [campaign, setCampaign] = useState<ActiveCampaign | null>(null)
+  const [popupData, setPopupData] = useState<PopupCampaign | null>(null)
   const [dismissed, setDismissed] = useState(false)
   const [parts, setParts] = useState<{ d: number; h: number; m: number; s: number } | null>(null)
 
   useEffect(() => {
     const dismissedId = typeof window !== 'undefined' ? localStorage.getItem(LS_KEY) : null
-    supabase.rpc('get_active_campaign').then(({ data }) => {
-      const camp = data?.[0]
+
+    // Fetch both the legacy campaign banner AND popup campaign data
+    Promise.all([
+      supabase.rpc('get_active_campaign').then(({ data }) => data?.[0] ?? null),
+      supabase.rpc('get_active_popup_campaign').then(({ data }) => {
+        const d = Array.isArray(data) ? data[0] : data
+        return d ?? null
+      }),
+    ]).then(([camp, popup]) => {
       if (camp && camp.id !== dismissedId) {
         setCampaign(camp)
+      }
+      if (popup && popup.seats_remaining > 0) {
+        setPopupData(popup)
       }
     })
   }, [])
@@ -82,17 +141,52 @@ export default function CampaignBanner() {
     return () => clearInterval(interval)
   }, [campaign])
 
-  if (!campaign || dismissed) return null
+  if (dismissed) return null
+  // Need at least one data source
+  if (!campaign && !popupData) return null
 
   const handleDismiss = () => {
     setDismissed(true)
-    localStorage.setItem(LS_KEY, campaign.id)
+    if (campaign) localStorage.setItem(LS_KEY, campaign.id)
+  }
+
+  // Build banner text — prefer dynamic scarcity from popup campaign
+  let bannerText = ''
+  let promoCode = campaign?.promo_code ?? popupData?.promo_code ?? null
+  let bannerColor = campaign?.banner_color ?? '#0F172A'
+  let ctaUrl = ''
+
+  if (popupData && popupData.seats_remaining > 0) {
+    const lang = SCARCITY_MESSAGES[locale] ?? SCARCITY_MESSAGES.en
+    const template = lang[popupData.phase] ?? lang.launch
+    bannerText = template
+      .replace('{taken}', String(popupData.seats_taken))
+      .replace('{total}', String(popupData.target_seats))
+      .replace('{remaining}', String(popupData.seats_remaining))
+      .replace('{code}', popupData.promo_code ?? '')
+      .replace('{pct}', String(popupData.discount_pct ?? 20))
+
+    promoCode = popupData.promo_code
+    ctaUrl = `${popupData.signup_url}?code=${promoCode}&utm_source=website&utm_medium=topbar&utm_campaign=${popupData.phase}`
+
+    // Phase-based colors
+    const phaseColors: Record<string, string> = {
+      launch: '#0F172A',
+      early_bird: '#059669',
+      urgency: '#DC2626',
+      exclusive: '#7C3AED',
+      last_call: '#991B1B',
+    }
+    bannerColor = phaseColors[popupData.phase] ?? '#0F172A'
+  } else if (campaign) {
+    bannerText = (locale !== 'en' && campaign.translations?.[locale]?.banner_text) || campaign.banner_text
+    promoCode = campaign.promo_code
   }
 
   return (
     <div
       style={{
-        background: `linear-gradient(135deg, ${campaign.banner_color} 0%, ${campaign.banner_color}dd 50%, ${campaign.banner_color}bb 100%)`,
+        background: `linear-gradient(135deg, ${bannerColor} 0%, ${bannerColor}dd 50%, ${bannerColor}bb 100%)`,
         borderBottom: '1px solid rgba(255,255,255,0.1)',
       }}
       className="relative text-white z-50"
@@ -107,10 +201,20 @@ export default function CampaignBanner() {
         gap: 16,
         flexWrap: 'wrap',
       }}>
-        <span style={{ fontSize: 14, fontWeight: 600 }}>
-          {(locale !== 'en' && campaign.translations?.[locale]?.banner_text) || campaign.banner_text}
-        </span>
-        {campaign.promo_code && (
+        {/* Banner text — clickable if we have a CTA url */}
+        {ctaUrl ? (
+          <a
+            href={ctaUrl}
+            style={{ fontSize: 14, fontWeight: 600, color: '#fff', textDecoration: 'none' }}
+          >
+            {bannerText}
+          </a>
+        ) : (
+          <span style={{ fontSize: 14, fontWeight: 600 }}>{bannerText}</span>
+        )}
+
+        {/* Promo code badge */}
+        {promoCode && !bannerText.includes(promoCode) && (
           <code style={{
             background: 'rgba(255,255,255,0.2)',
             backdropFilter: 'blur(4px)',
@@ -121,10 +225,41 @@ export default function CampaignBanner() {
             fontWeight: 800,
             letterSpacing: 1.5,
           }}>
-            {campaign.promo_code}
+            {promoCode}
           </code>
         )}
-        {campaign.show_countdown && parts && (
+
+        {/* Seats remaining pill — live counter */}
+        {popupData && popupData.seats_remaining > 0 && (
+          <a
+            href={ctaUrl}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              background: 'rgba(255,255,255,0.15)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              borderRadius: 20,
+              padding: '4px 14px',
+              fontSize: 12,
+              fontWeight: 700,
+              color: '#fff',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            <span style={{
+              width: 6, height: 6, borderRadius: '50%',
+              background: '#34D399',
+              animation: 'pulse 2s infinite',
+              flexShrink: 0,
+            }} />
+            Claim yours →
+          </a>
+        )}
+
+        {/* Countdown — only from legacy campaign */}
+        {campaign?.show_countdown && parts && !popupData && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <span style={{ fontSize: 11, opacity: 0.7, fontWeight: 600, marginRight: 2 }}>
               {{ en: 'Ends in', ar: 'ينتهي خلال', pl: 'Kończy się za', de: 'Endet in', fr: 'Se termine dans' }[locale] || 'Ends in'}
@@ -136,6 +271,8 @@ export default function CampaignBanner() {
           </div>
         )}
       </div>
+
+      {/* Dismiss button */}
       <button
         onClick={handleDismiss}
         style={{
@@ -154,6 +291,8 @@ export default function CampaignBanner() {
       >
         <X size={16} />
       </button>
+
+      <style>{`@keyframes pulse { 0%,100% { opacity:1 } 50% { opacity:0.4 } }`}</style>
     </div>
   )
 }
