@@ -64,7 +64,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
   return (
     <div className="hero-slider-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
       {/* LEFT: Text */}
-      <div style={{ transition: "opacity 0.4s ease", opacity: fading ? 0 : 1 }}>
+      <div style={{ transition: "opacity 0.4s ease", opacity: fading ? 0 : 1, minHeight: 280 }}>
         <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 44, color: "#fff", lineHeight: 1.1, letterSpacing: -1.5, marginBottom: 16 }}>
           {active === 0 ? (
             <>{t.title} <span style={{ color: "#10b981" }}>{t.titleHighlight}</span> {t.titleEnd}</>
@@ -95,7 +95,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
         <div style={{
           background: "#fff", borderRadius: 16, border: "1px solid #e5e7eb",
           boxShadow: "0 20px 60px rgba(0,0,0,0.08)", overflow: "hidden",
-          maxWidth: 480, width: "100%", transition: "opacity 0.4s ease", opacity: fading ? 0 : 1,
+          maxWidth: 480, width: "100%", minHeight: 480, transition: "opacity 0.4s ease", opacity: fading ? 0 : 1,
         }}>
           {active === 0 ? (
             <>
