@@ -87,7 +87,7 @@ const SECTIONS = [
   {
     id: "governing-law",
     title: "12. Governing Law",
-    content: `These terms are governed by the laws of the European Union and the applicable member state where AVE Events is established. Any disputes shall be resolved in the courts of that jurisdiction.`,
+    content: `These terms are governed by the laws of the European Union and the applicable member state where AVE Event Solutions is established. Any disputes shall be resolved in the courts of that jurisdiction.`,
   },
   {
     id: "contact",

@@ -77,7 +77,7 @@ const SECTIONS = [
   {
     id: "contact",
     title: "10. Contact",
-    content: `For privacy-related questions or requests, contact us at privacy@cuequote.com. Data controller: AVE Events, Europe.`,
+    content: `For privacy-related questions or requests, contact us at privacy@cuequote.com. Data controller: AVE Event Solutions, Europe.`,
   },
 ];
 

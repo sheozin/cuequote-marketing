@@ -297,7 +297,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Use the {company_name} placeholder',
-        content: 'In T&C text, type {company_name} and it will be automatically replaced with your actual company name in the PDF. For example: "All equipment remains the property of {company_name}" becomes "All equipment remains the property of AVE Events" in the generated PDF.',
+        content: 'In T&C text, type {company_name} and it will be automatically replaced with your actual company name in the PDF. For example: "All equipment remains the property of {company_name}" becomes "All equipment remains the property of AVE Event Solutions" in the generated PDF.',
       },
       {
         title: 'Reset to company defaults',

@@ -297,7 +297,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Den Platzhalter {company_name} verwenden',
-        content: 'Geben Sie in AGB-Texten {company_name} ein und er wird im PDF automatisch durch den tatsächlichen Namen Ihres Unternehmens ersetzt. Zum Beispiel: "Das gesamte Equipment bleibt Eigentum von {company_name}" wird im generierten PDF zu "Das gesamte Equipment bleibt Eigentum von AVE Events".',
+        content: 'Geben Sie in AGB-Texten {company_name} ein und er wird im PDF automatisch durch den tatsächlichen Namen Ihres Unternehmens ersetzt. Zum Beispiel: "Das gesamte Equipment bleibt Eigentum von {company_name}" wird im generierten PDF zu "Das gesamte Equipment bleibt Eigentum von AVE Event Solutions".',
       },
       {
         title: 'Auf Unternehmensstandards zurücksetzen',

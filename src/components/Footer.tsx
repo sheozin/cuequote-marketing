@@ -129,7 +129,7 @@ export default async function Footer() {
             &copy; {new Date().getFullYear()} CueQuote. {t("copyright")}
           </p>
           <p style={{ fontSize: 12, color: "#475569" }}>
-            {t("by")} <span style={{ color: "#10b981" }}>AVE Events</span>
+            {t("by")} <span style={{ color: "#10b981" }}>AVE Event Solutions</span>
           </p>
         </div>
       </div>

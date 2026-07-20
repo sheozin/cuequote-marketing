@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const pagePath = '/about';
   const title = t("metaTitle", { defaultValue: "About" });
-  const description = t("metaDescription", { defaultValue: "CueQuote is built by AVE Events — a team that has been in the AV production trenches. We built the tool we wished existed." });
+  const description = t("metaDescription", { defaultValue: "CueQuote is built by AVE Event Solutions — a team that has been in the AV production trenches. We built the tool we wished existed." });
   return {
     title,
     description,

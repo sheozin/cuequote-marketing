@@ -297,7 +297,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Używaj znacznika {company_name}',
-        content: 'W tekście regulaminu wpisz {company_name}, a zostanie on automatycznie zastąpiony rzeczywistą nazwą Twojej firmy w PDF-ie. Na przykład: „Cały sprzęt pozostaje własnością {company_name}” stanie się „Cały sprzęt pozostaje własnością AVE Events” w wygenerowanym PDF-ie.',
+        content: 'W tekście regulaminu wpisz {company_name}, a zostanie on automatycznie zastąpiony rzeczywistą nazwą Twojej firmy w PDF-ie. Na przykład: „Cały sprzęt pozostaje własnością {company_name}” stanie się „Cały sprzęt pozostaje własnością AVE Event Solutions” w wygenerowanym PDF-ie.',
       },
       {
         title: 'Przywróć ustawienia domyślne firmy',

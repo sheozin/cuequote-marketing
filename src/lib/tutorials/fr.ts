@@ -297,7 +297,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Utilisez l\'espace réservé {company_name}',
-        content: 'Dans le texte des CGV, saisissez {company_name} et il sera automatiquement remplacé par le nom réel de votre entreprise dans le PDF. Par exemple : « Tout le matériel reste la propriété de {company_name} » devient « Tout le matériel reste la propriété de AVE Events » dans le PDF généré.',
+        content: 'Dans le texte des CGV, saisissez {company_name} et il sera automatiquement remplacé par le nom réel de votre entreprise dans le PDF. Par exemple : « Tout le matériel reste la propriété de {company_name} » devient « Tout le matériel reste la propriété de AVE Event Solutions » dans le PDF généré.',
       },
       {
         title: 'Réinitialisez aux valeurs par défaut de l\'entreprise',
