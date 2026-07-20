@@ -99,9 +99,8 @@ export default function SmartPopup() {
 
   useEffect(() => {
     supabase.rpc('get_active_popup_campaign').then(({ data, error }) => {
-      if (error) { console.error('[SmartPopup] RPC error:', error); return }
+      if (error) return
       const camp = (Array.isArray(data) ? data[0] : data) as PopupCampaign | undefined
-      console.log('[SmartPopup] Campaign data:', camp ? camp.phase : 'none')
       if (!camp) return
 
       const dismissedRaw = localStorage.getItem(`${LS_DISMISSED_PREFIX}${camp.id}`)
@@ -128,6 +127,16 @@ export default function SmartPopup() {
     })
   }, [])
 
+  // Lightweight tracking — fire-and-forget, non-blocking
+  const trackEvent = useCallback((event: 'view' | 'click' | 'dismiss', campaignId: string, variant: number) => {
+    supabase.from('popup_events').insert({
+      campaign_id: campaignId,
+      event,
+      variant_index: variant,
+      page_url: window.location.pathname,
+    }).then(() => {})
+  }, [])
+
   const showPopup = useCallback(() => {
     if (triggeredRef.current) return
     triggeredRef.current = true
@@ -135,7 +144,12 @@ export default function SmartPopup() {
     requestAnimationFrame(() => {
       requestAnimationFrame(() => setAnimateIn(true))
     })
-  }, [])
+    // Track view
+    if (campaign) {
+      const idx = (campaign as PopupCampaign & { _variantIdx?: number })._variantIdx ?? 0
+      trackEvent('view', campaign.id, idx)
+    }
+  }, [campaign, trackEvent])
 
   useEffect(() => {
     if (!campaign) return
@@ -167,10 +181,12 @@ export default function SmartPopup() {
 
   const handleDismiss = useCallback(() => {
     if (!campaign) return
+    const idx = (campaign as PopupCampaign & { _variantIdx?: number })._variantIdx ?? 0
+    trackEvent('dismiss', campaign.id, idx)
     localStorage.setItem(`${LS_DISMISSED_PREFIX}${campaign.id}`, String(Date.now()))
     setAnimateIn(false)
     setTimeout(() => setVisible(false), 300)
-  }, [campaign])
+  }, [campaign, trackEvent])
 
   if (!campaign || !visible) return null
 
@@ -309,8 +325,11 @@ export default function SmartPopup() {
 
             {/* CTA */}
             <a
-              href={campaign.signup_url}
-              onClick={handleDismiss}
+              href={`${campaign.signup_url}?code=${campaign.promo_code || ''}&utm_source=website&utm_medium=popup&utm_campaign=${campaign.phase}_v${variantIdx}`}
+              onClick={() => {
+                trackEvent('click', campaign.id, variantIdx)
+                handleDismiss()
+              }}
               style={{
                 display: 'block', width: '100%', padding: '16px 24px',
                 background: '#fff', color: colors.bg,
