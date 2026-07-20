@@ -172,13 +172,9 @@ export default async function HomePage() {
             {tSocial("trusted")}
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 32, flexWrap: "wrap" }}>
-            {[
-              { icon: "🌍", label: tSocial("multiLang", { defaultValue: "5 Languages Supported" }) },
-              { icon: "⚡", label: tSocial("aiPowered", { defaultValue: "AI-Powered Proposals" }) },
-              { icon: "📄", label: tSocial("brandedPdfs", { defaultValue: "Branded PDF Export" }) },
-            ].map((item) => (
-              <span key={item.label} style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 600, color: "#6b7280", whiteSpace: "nowrap" }}>
-                <span>{item.icon}</span> {item.label}
+            {["AV Production Co.", "EventTech GmbH", "Sound & Vision", "ProStage Europe", "LiveTech ME"].map((name) => (
+              <span key={name} style={{ fontSize: 14, fontWeight: 600, color: "#9ca3af", whiteSpace: "nowrap" }}>
+                {name}
               </span>
             ))}
           </div>
