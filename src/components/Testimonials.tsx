@@ -15,6 +15,7 @@ interface Testimonial {
   company_name: string | null
   show_name: boolean
   show_company: boolean
+  user_name?: string | null
 }
 
 const FALLBACK: Testimonial[] = [
@@ -57,14 +58,16 @@ function TestimonialCard({ t }: { t: Testimonial }) {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: '#fff', fontSize: 12, fontWeight: 700, flexShrink: 0,
           }}>
-            {(t.role || 'U')[0].toUpperCase()}
+            {(t.show_name && t.user_name) ? t.user_name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() : (t.role || 'U')[0].toUpperCase()}
           </div>
           <div>
             <p style={{ fontSize: 13, fontWeight: 600, color: '#08172E', margin: 0 }}>
-              {t.role || 'CueQuote User'}
+              {t.show_name && t.user_name ? t.user_name : (t.role || 'CueQuote User')}
             </p>
-            {t.show_company && t.company_name && (
-              <p style={{ fontSize: 11, color: '#9ca3af', margin: 0 }}>{t.company_name}</p>
+            {((t.show_name && t.user_name && t.role) || (t.show_company && t.company_name)) && (
+              <p style={{ fontSize: 11, color: '#9ca3af', margin: 0 }}>
+                {[t.show_name && t.user_name && t.role ? t.role.charAt(0).toUpperCase() + t.role.slice(1) : null, t.show_company ? t.company_name : null].filter(Boolean).join(' · ')}
+              </p>
             )}
           </div>
         </div>
@@ -83,11 +86,16 @@ export function Testimonials({ title, subtitle }: { title: string; subtitle: str
   useEffect(() => {
     supabase
       .from('user_testimonials')
-      .select('id, quote, rating, role, company_name, show_name, show_company')
+      .select('id, quote, rating, role, company_name, show_name, show_company, profiles:user_id(full_name)')
       .eq('is_approved', true)
       .order('rating', { ascending: false })
       .limit(10)
-      .then(({ data }) => {
+      .then(({ data: rawData }) => {
+        const data = rawData?.map((t: any) => ({
+          ...t,
+          user_name: t.profiles?.full_name || null,
+          profiles: undefined,
+        })) || null
         if (data && data.length > 0) {
           const needed = Math.max(0, 4 - data.length)
           setTestimonials([...data, ...FALLBACK.slice(0, needed)])
