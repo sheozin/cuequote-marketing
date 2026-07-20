@@ -102,7 +102,7 @@ export function Testimonials({ title, subtitle }: { title: string; subtitle: str
     if (!el) return
     const cards = el.querySelectorAll<HTMLElement>('.snap-card')
     if (cards[index]) {
-      cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+      cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
     }
     setActive(index)
   }, [])
@@ -188,7 +188,7 @@ export function Testimonials({ title, subtitle }: { title: string; subtitle: str
               key={`${t.id}-${i}`}
               className="snap-card"
               style={{
-                scrollSnapAlign: 'start',
+                scrollSnapAlign: 'center',
                 flexShrink: 0,
                 width: 'clamp(300px, 80vw, 380px)',
               }}
