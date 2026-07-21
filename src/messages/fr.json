@@ -1608,6 +1608,36 @@
       "step3": "Examinez les recommandations d'équipe et le calendrier de production — l'IA suggère des niveaux de personnel basés sur la complexité",
       "step4": "Utilisez l'estimation budgétaire pour vous aligner avec votre client, puis demandez des devis formels aux fournisseurs",
       "tip": "Les estimations aux prix du marché sont basées sur les moyennes du secteur et peuvent varier selon la région"
+    },
+    "feedbackSupport": {
+      "title": "Retours & Support",
+      "content1": "CueQuote dispose d'un système de retours intégré vous permettant de signaler des bugs, de demander des fonctionnalités ou d'obtenir de l'aide — sans quitter l'application.",
+      "content2": "Chaque soumission inclut un contexte automatique (votre navigateur, plan et page actuelle) afin que notre équipe puisse aider plus rapidement. Vous pouvez suivre le statut de vos soumissions et voir les réponses directement dans l'application.",
+      "step1": "Accédez à Retours & Support dans la barre latérale et choisissez votre type : Signalement de bug, Demande de fonctionnalité, Retour général ou Demande d'assistance",
+      "step2": "Remplissez l'objet et les détails — l'application capture automatiquement votre navigateur, plan et contexte de page",
+      "step3": "Consultez vos soumissions passées dans l'onglet Mes demandes — chacune affiche un badge de statut (Soumis, En cours d'examen, Planifié, Livré)",
+      "step4": "Consultez l'onglet Centre d'aide pour des liens vers des tutoriels, la documentation et des réponses aux questions courantes",
+      "tip": "Les retours des utilisateurs des plans Pro et Business sont automatiquement prioritaires pour une réponse plus rapide"
+    },
+    "catalogSuggestions": {
+      "title": "Développer votre catalogue avec l'IA",
+      "content1": "Lorsque l'IA de CueQuote génère un devis, elle inclut parfois des articles absents de votre catalogue d'équipements — marqués [CUSTOM] avec des prix estimés.",
+      "content2": "Après la génération, une barre de suggestions ambrée apparaît avec ces nouveaux articles. Vous pouvez les ajouter à votre catalogue en un clic, afin que les futurs devis utilisent vos prix exacts.",
+      "step1": "Générez un devis avec l'IA — si des articles ne sont pas dans votre catalogue, une barre de suggestions apparaît à l'étape Révision",
+      "step2": "Cliquez sur la barre pour la développer et voir chaque nouvel article avec sa catégorie, unité et prix suggéré",
+      "step3": "Cliquez 'Ajouter au catalogue' pour des articles individuels ou 'Tout ajouter' pour tout sauvegarder en une fois",
+      "tip": "Les articles ajoutés depuis les suggestions IA conservent le prix estimé comme point de départ — révisez et ajustez les prix dans votre catalogue"
+    },
+    "plannerBudget": {
+      "title": "Comprendre votre budget événementiel",
+      "content1": "Lorsque vous générez un plan budgétaire en mode Planificateur, l'IA de CueQuote crée un budget de production événementiel complet avec des prix aux tarifs du marché, des recommandations d'équipe et un calendrier suggéré.",
+      "content2": "Contrairement au mode Société AV qui utilise vos prix catalogue, le mode Planificateur utilise de vraies fourchettes de tarifs du marché pour que vous sachiez à quoi vous attendre.",
+      "step1": "Passez en mode Planificateur et décrivez votre événement — lieu, nombre de participants et ce dont vous avez besoin",
+      "step2": "Consultez la Vue d'ensemble du budget avec la fourchette totale estimée (ex. 12 500 € — 18 200 €) et la répartition équipements/équipe",
+      "step3": "Consultez la section Équipements & Services — chaque article indique pourquoi il est nécessaire et une fourchette budgétaire",
+      "step4": "Examinez les Recommandations d'équipe pour connaître les rôles techniques requis, le nombre de personnes et la fourchette de tarif journalier",
+      "step5": "Lisez le Calendrier événementiel et la section Conseils pro pour travailler efficacement avec les prestataires AV",
+      "tip": "Utilisez la fourchette budgétaire lors des demandes de devis — si un devis dépasse la fourchette, demandez au prestataire d'expliquer la différence"
     }
   },
   "changelog": {

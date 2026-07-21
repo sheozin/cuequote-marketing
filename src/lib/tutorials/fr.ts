@@ -992,4 +992,118 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'feedback-support',
+    title: 'Retours & Support',
+    description: 'Signalez des bugs, demandez des fonctionnalités ou obtenez de l\'aide — sans quitter l\'application.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Bases',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Comment envoyer des retours, signaler des bugs et demander des fonctionnalités',
+      'Suivre le statut de vos demandes',
+      'Obtenir de l\'aide directement depuis l\'application',
+      'Utiliser le Centre d\'aide pour des réponses rapides',
+    ],
+    steps: [
+      {
+        title: 'Accéder à Retours & Support',
+        content: 'Cliquez sur « Retours & Support » dans la barre latérale pour accéder à votre ligne directe avec l\'équipe CueQuote.',
+      },
+      {
+        title: 'Choisir le type de retour',
+        content: 'Choisissez parmi : Signalement de bug, Demande de fonctionnalité, Retour général ou Demande d\'assistance.',
+        tip: 'L\'application capture automatiquement votre navigateur, plan et contexte de page lors de la soumission.',
+      },
+      {
+        title: 'Remplir les détails et envoyer',
+        content: 'Saisissez l\'objet et la description puis cliquez « Envoyer » — votre demande est enregistrée immédiatement dans l\'onglet Mes demandes.',
+      },
+      {
+        title: 'Suivre vos demandes',
+        content: 'Dans l\'onglet « Mes demandes », consultez toutes vos demandes avec leur badge de statut : Soumis, En cours d\'examen, Planifié ou Livré.',
+      },
+      {
+        title: 'Utiliser le Centre d\'aide',
+        content: 'L\'onglet « Centre d\'aide » contient des liens vers des tutoriels, la documentation et des réponses aux questions fréquentes.',
+      },
+    ],
+  },
+  {
+    slug: 'catalog-suggestions',
+    title: 'Développer votre catalogue avec l\'IA',
+    description: 'Quand l\'IA utilise des articles absents de votre catalogue, ajoutez-les en un clic.',
+    duration: '2 min',
+    difficulty: 'beginner',
+    category: 'Configuration',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      'Comment l\'IA signale les articles absents de votre catalogue',
+      'Ajouter les articles suggérés au catalogue en un clic',
+      'Ajouter toutes les suggestions en une fois',
+      'Pourquoi les prix du catalogue rendent les futurs devis plus précis',
+    ],
+    steps: [
+      {
+        title: 'Générer un devis avec l\'IA',
+        content: 'Créez un nouveau devis. Les articles absents de votre catalogue sont marqués [CUSTOM] avec un prix estimé aux tarifs du marché.',
+      },
+      {
+        title: 'Consulter la barre de suggestions',
+        content: 'Après la génération, une barre de suggestions ambrée apparaît à l\'étape Révision. Cliquez dessus pour voir les nouveaux articles avec leurs prix suggérés.',
+        tip: 'Le prix suggéré est basé sur les tarifs du marché — ajustez-le après l\'avoir ajouté au catalogue.',
+      },
+      {
+        title: 'Ajouter des articles au catalogue',
+        content: 'Cliquez « Ajouter au catalogue » sur un article individuel ou « Tout ajouter » pour tout sauvegarder en une fois.',
+      },
+      {
+        title: 'Les futurs devis utilisent vos prix exacts',
+        content: 'Une fois les articles dans votre catalogue, l\'IA utilisera votre prix de catalogue plutôt qu\'une estimation lors des prochains devis.',
+      },
+    ],
+  },
+  {
+    slug: 'planner-budget-review',
+    title: 'Comprendre votre budget événementiel',
+    description: 'Lisez et utilisez le plan budgétaire généré par l\'IA en mode Planificateur.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Planificateur',
+    mode: 'planner',
+    videoUrl: '',
+    whatYouLearn: [
+      'Lire la vue d\'ensemble du budget avec la fourchette basse-haute',
+      'Comprendre les recommandations d\'équipe et les rôles',
+      'Utiliser le calendrier événementiel pour la planification',
+      'Appliquer les conseils pro lors du travail avec les prestataires AV',
+      'Comprendre les inclusions et exclusions',
+    ],
+    steps: [
+      {
+        title: 'Générer un plan budgétaire',
+        content: 'Passez en mode Planificateur, décrivez votre événement et cliquez « Générer » pour obtenir un plan budgétaire complet aux tarifs du marché.',
+      },
+      {
+        title: 'Consulter la vue d\'ensemble du budget',
+        content: 'La section supérieure affiche votre budget estimé sous forme de fourchette — par exemple 12 500 € — 18 200 €. L\'extrémité basse correspond à une configuration allégée, l\'extrémité haute à du matériel premium avec équipe complète.',
+        tip: 'Utilisez la fourchette pour fixer les attentes clients avant d\'aller sur le marché.',
+      },
+      {
+        title: 'Vérifier les recommandations d\'équipe',
+        content: 'La section Recommandations d\'équipe liste les rôles techniques requis avec le nombre de personnes et les fourchettes de tarif journalier.',
+      },
+      {
+        title: 'Consulter le calendrier événementiel',
+        content: 'Le calendrier suggère les phases de montage, show et démontage avec des estimations de temps et les jalons techniques clés.',
+      },
+      {
+        title: 'Lire les conseils pro et inclusions/exclusions',
+        content: 'Des conseils pratiques spécifiques à votre type d\'événement, et une clarification de ce que couvre l\'estimation budgétaire.',
+      },
+    ],
+  },
 ]

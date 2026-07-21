@@ -1002,4 +1002,118 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'feedback-support',
+    title: 'Feedback & Support',
+    description: 'Submit bugs, request features, or get support — all without leaving the app.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Basics',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'How to submit feedback, bug reports, and feature requests',
+      'Tracking the status of your submissions',
+      'Getting support directly from the app',
+      'Using the Help Center for quick answers',
+    ],
+    steps: [
+      {
+        title: 'Navigate to Feedback & Support',
+        content: 'Click "Feedback & Support" in the sidebar. This is your direct line to the CueQuote team — you can report bugs, request features, ask for help, or leave general feedback without leaving the app.',
+      },
+      {
+        title: 'Choose your feedback type',
+        content: 'Select from four types: Bug Report (something isn\'t working), Feature Request (something you\'d like added), General Feedback (anything else), or Support Request (you need help with something). The form adjusts based on your selection.',
+        tip: 'The app automatically captures your browser, current plan, and page context when you submit — so you don\'t need to include technical details manually.',
+      },
+      {
+        title: 'Fill in the details and submit',
+        content: 'Enter a subject line and a description of your issue or request. The more detail you include, the faster the team can help. Click "Submit" — your submission is logged immediately and you\'ll see it appear in the My Submissions tab.',
+      },
+      {
+        title: 'Track your submissions',
+        content: 'Click the "My Submissions" tab to see all your past submissions. Each shows a status badge: Submitted (received), In Review (being looked at), Planned (scheduled for development), or Shipped (completed). When the team replies, their response appears inline.',
+      },
+      {
+        title: 'Use the Help Center',
+        content: 'The "Help Center" tab has links to tutorials, full documentation, and answers to frequently asked questions. Check here first before submitting a support request — many common questions are already answered.',
+      },
+    ],
+  },
+  {
+    slug: 'catalog-suggestions',
+    title: 'Growing Your Catalog with AI',
+    description: 'When the AI uses items not in your catalog, add them with one click.',
+    duration: '2 min',
+    difficulty: 'beginner',
+    category: 'Setup',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      'How the AI flags items not in your catalog',
+      'Adding suggested items to your catalog with one click',
+      'Adding all suggestions at once',
+      'Why catalog prices make future proposals more accurate',
+    ],
+    steps: [
+      {
+        title: 'Generate a proposal with AI',
+        content: 'Create a new proposal as usual and let the AI generate the equipment list. When the AI includes items that are not in your equipment catalog, it marks them with [CUSTOM] and uses an estimated market-rate price.',
+      },
+      {
+        title: 'Review the suggestion bar',
+        content: 'After generation, if any items weren\'t found in your catalog, an amber suggestion bar appears on the Review step. Click it to expand a list of new items with their category, unit, and AI-suggested price.',
+        tip: 'The suggested price is based on market rates — you can adjust it to your actual rate after adding to the catalog.',
+      },
+      {
+        title: 'Add items to your catalog',
+        content: 'Click "Add to Catalog" on any individual item to save it, or click "Add all" to save everything at once. Items are added to your catalog immediately with the AI-suggested price as a starting point.',
+      },
+      {
+        title: 'Future proposals use your exact prices',
+        content: 'Once items are in your catalog, the next time the AI generates a proposal that needs them, it will use your catalog price instead of an estimate. Your catalog becomes more complete with every proposal you generate.',
+      },
+    ],
+  },
+  {
+    slug: 'planner-budget-review',
+    title: 'Understanding Your Event Budget',
+    description: 'Read and use the AI-generated budget plan in Planner mode.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Planner',
+    mode: 'planner',
+    videoUrl: '',
+    whatYouLearn: [
+      'Reading the budget overview with low-high range',
+      'Understanding crew recommendations and roles',
+      'Using the event timeline for planning',
+      'Applying pro tips when working with AV vendors',
+      'Understanding inclusions and exclusions',
+    ],
+    steps: [
+      {
+        title: 'Generate a budget plan',
+        content: 'Switch to Planner mode and describe your event — include the venue, attendee count, and what you need (presentations, live music, branding, simultaneous interpretation, etc.). Click "Generate" and the AI produces a full budget plan with market-rate pricing.',
+      },
+      {
+        title: 'Review the budget overview',
+        content: 'The top section shows your total estimated budget as a range — for example €12,500 — €18,200. The low end reflects a lean, standard-grade setup; the high end reflects premium equipment and full-service crew. Your actual vendor quotes will typically land within this range.',
+        tip: 'Use the budget range when setting client expectations before going to market. If a client\'s budget is below the low end, discuss scope reduction before requesting quotes.',
+      },
+      {
+        title: 'Check crew recommendations',
+        content: 'Scroll to the Crew Recommendations section. The AI lists the technical roles you\'ll need (FOH Engineer, Lighting Operator, Video Tech, etc.), how many people per role, and a typical daily rate range for each. Use this when reviewing crew line items from vendor quotes.',
+      },
+      {
+        title: 'Review the event timeline',
+        content: 'The Event Timeline section shows a suggested schedule — setup day(s), show day(s), and strike. It includes time estimates for each phase and key technical milestones. Share this with vendors when requesting quotes so they can factor in the correct number of labor days.',
+      },
+      {
+        title: 'Read pro tips and inclusions/exclusions',
+        content: 'The Pro Tips section gives practical advice specific to your event type — things to watch out for, questions to ask vendors, and common cost drivers. The Inclusions/Exclusions section clarifies what the budget estimate covers and what is not included (e.g., venue fees, content creation, customs duties for international events).',
+      },
+    ],
+  },
 ]

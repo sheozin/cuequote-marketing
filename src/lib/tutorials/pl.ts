@@ -956,4 +956,118 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'feedback-support',
+    title: 'Zgłoszenia i pomoc techniczna',
+    description: 'Zgłaszaj błędy, wnioskuj o funkcje lub uzyskaj pomoc — bez wychodzenia z aplikacji.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Podstawy',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Jak zgłaszać opinie, raporty błędów i wnioski o funkcje',
+      'Śledzenie statusu swoich zgłoszeń',
+      'Uzyskiwanie wsparcia bezpośrednio z aplikacji',
+      'Korzystanie z Centrum pomocy',
+    ],
+    steps: [
+      {
+        title: 'Przejdź do sekcji Zgłoszenia i pomoc',
+        content: 'Kliknij „Zgłoszenia i pomoc" na pasku bocznym. To Twój bezpośredni kontakt z zespołem CueQuote — możesz zgłaszać błędy, wnioskować o funkcje, prosić o pomoc lub zostawić opinię bez wychodzenia z aplikacji.',
+      },
+      {
+        title: 'Wybierz typ zgłoszenia',
+        content: 'Wybierz jeden z czterech typów: Raport błędu, Wniosek o funkcję, Ogólna opinia lub Prośba o wsparcie. Formularz dostosowuje się do wybranego typu.',
+        tip: 'Aplikacja automatycznie przechwytuje informacje o przeglądarce, planie i bieżącej stronie przy zgłoszeniu.',
+      },
+      {
+        title: 'Uzupełnij szczegóły i wyślij',
+        content: 'Wpisz temat i opis problemu lub prośby. Kliknij „Wyślij" — zgłoszenie jest rejestrowane natychmiast i pojawi się w zakładce Moje zgłoszenia.',
+      },
+      {
+        title: 'Śledź swoje zgłoszenia',
+        content: 'Kliknij zakładkę „Moje zgłoszenia", aby zobaczyć wszystkie poprzednie zgłoszenia z ich statusem: Zgłoszono, W trakcie przeglądu, Zaplanowano lub Wdrożono.',
+      },
+      {
+        title: 'Skorzystaj z Centrum pomocy',
+        content: 'Zakładka „Centrum pomocy" zawiera linki do samouczków, dokumentacji i odpowiedzi na najczęstsze pytania. Sprawdź ją przed wysłaniem prośby o wsparcie.',
+      },
+    ],
+  },
+  {
+    slug: 'catalog-suggestions',
+    title: 'Rozbudowywanie katalogu z pomocą AI',
+    description: 'Gdy AI używa elementów spoza katalogu, dodaj je jednym kliknięciem.',
+    duration: '2 min',
+    difficulty: 'beginner',
+    category: 'Konfiguracja',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      'Jak AI oznacza elementy spoza katalogu',
+      'Dodawanie sugerowanych elementów do katalogu jednym kliknięciem',
+      'Dodawanie wszystkich sugestii naraz',
+      'Dlaczego ceny katalogowe poprawiają dokładność przyszłych ofert',
+    ],
+    steps: [
+      {
+        title: 'Wygeneruj ofertę przy użyciu AI',
+        content: 'Utwórz nową ofertę jak zwykle. Gdy AI uwzględni elementy nieobecne w katalogu, oznaczy je jako [CUSTOM] i użyje szacunkowej ceny rynkowej.',
+      },
+      {
+        title: 'Sprawdź pasek sugestii',
+        content: 'Po wygenerowaniu bursztynowy pasek sugestii pojawia się na etapie Przeglądu. Kliknij go, aby rozwinąć listę nowych elementów z kategorią, jednostką i sugerowaną ceną.',
+        tip: 'Sugerowana cena jest oparta na stawkach rynkowych — możesz ją dostosować do swojej rzeczywistej stawki po dodaniu do katalogu.',
+      },
+      {
+        title: 'Dodaj elementy do katalogu',
+        content: 'Kliknij „Dodaj do katalogu" przy dowolnym elemencie lub „Dodaj wszystkie", aby zapisać wszystko naraz. Elementy są natychmiast dodawane z sugerowaną ceną jako punktem wyjścia.',
+      },
+      {
+        title: 'Przyszłe oferty używają Twoich dokładnych cen',
+        content: 'Gdy elementy są w katalogu, następnym razem AI użyje ceny katalogowej zamiast szacunku. Katalog staje się pełniejszy z każdą wygenerowaną ofertą.',
+      },
+    ],
+  },
+  {
+    slug: 'planner-budget-review',
+    title: 'Rozumienie budżetu wydarzenia',
+    description: 'Czytaj i wykorzystuj plan budżetowy generowany przez AI w trybie Planner.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Planner',
+    mode: 'planner',
+    videoUrl: '',
+    whatYouLearn: [
+      'Odczytywanie przeglądu budżetu z zakresem niski-wysoki',
+      'Rozumienie rekomendacji ekipy i ról',
+      'Używanie harmonogramu wydarzenia do planowania',
+      'Stosowanie wskazówek podczas pracy z dostawcami AV',
+      'Rozumienie elementów uwzględnionych i wyłączonych',
+    ],
+    steps: [
+      {
+        title: 'Wygeneruj plan budżetowy',
+        content: 'Przełącz się na tryb Planner i opisz swoje wydarzenie. Kliknij „Generuj", a AI stworzy pełny plan budżetowy z cenami rynkowymi.',
+      },
+      {
+        title: 'Sprawdź przegląd budżetu',
+        content: 'Górna sekcja pokazuje całkowity szacowany budżet jako zakres — na przykład 12 500 € — 18 200 €. Dolna granica odzwierciedla oszczędne rozwiązanie ze standardowym sprzętem; górna — sprzęt premium i pełną obsługę.',
+        tip: 'Użyj zakresu budżetu przy ustalaniu oczekiwań klienta przed wyjściem na rynek.',
+      },
+      {
+        title: 'Sprawdź rekomendacje ekipy',
+        content: 'Sekcja Rekomendacje ekipy wymienia potrzebne role techniczne z liczbą osób i typowymi stawkami dziennymi.',
+      },
+      {
+        title: 'Przejrzyj harmonogram wydarzenia',
+        content: 'Sekcja Harmonogram pokazuje sugerowany plan — montaż, show i demontaż — z szacunkami czasu dla każdej fazy.',
+      },
+      {
+        title: 'Przeczytaj wskazówki i elementy uwzględnione/wyłączone',
+        content: 'Sekcja Wskazówki zawiera praktyczne porady specyficzne dla Twojego typu wydarzenia. Sekcja Uwzględnione/Wyłączone precyzuje, co obejmuje szacunek budżetowy.',
+      },
+    ],
+  },
 ]

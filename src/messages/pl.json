@@ -1580,6 +1580,36 @@
       "step3": "Przejrzyj rekomendacje dotyczące ekipy i harmonogram produkcji — AI sugeruje poziomy obsady na podstawie złożoności wydarzenia",
       "step4": "Użyj szacunku budżetowego do uzgodnienia z klientem, a następnie poproś dostawców o formalne oferty",
       "tip": "Szacunki rynkowe oparte są na średnich branżowych i mogą się różnić w zależności od regionu. Zawsze uzyskaj formalne oferty od dostawców"
+    },
+    "feedbackSupport": {
+      "title": "Zgłoszenia i pomoc techniczna",
+      "content1": "CueQuote posiada wbudowany system zgłoszeń, który umożliwia zgłaszanie błędów, wnioskowanie o funkcje lub uzyskanie wsparcia — bez wychodzenia z aplikacji.",
+      "content2": "Każde zgłoszenie zawiera automatyczny kontekst (przeglądarka, plan i bieżąca strona), dzięki czemu nasz zespół może szybciej pomóc. Możesz śledzić status swoich zgłoszeń i widzieć odpowiedzi bezpośrednio w aplikacji.",
+      "step1": "Przejdź do sekcji Zgłoszenia i pomoc na pasku bocznym i wybierz typ: Raport błędu, Wniosek o funkcję, Ogólna opinia lub Prośba o wsparcie",
+      "step2": "Wpisz temat i szczegóły — aplikacja automatycznie przechwytuje przeglądarkę, plan i kontekst strony",
+      "step3": "Sprawdź poprzednie zgłoszenia w zakładce Moje zgłoszenia — każde ma znacznik statusu (Zgłoszono, W trakcie przeglądu, Zaplanowano, Wdrożono)",
+      "step4": "Sprawdź zakładkę Centrum pomocy — linki do samouczków, dokumentacji i odpowiedzi na typowe pytania",
+      "tip": "Zgłoszenia od użytkowników planów Pro i Business są automatycznie priorytetyzowane dla szybszej odpowiedzi"
+    },
+    "catalogSuggestions": {
+      "title": "Rozbudowywanie katalogu z pomocą AI",
+      "content1": "Gdy AI CueQuote generuje ofertę, czasami uwzględnia elementy nieobecne w katalogu sprzętu — oznaczone jako [CUSTOM] z szacunkowymi cenami.",
+      "content2": "Po wygenerowaniu pojawia się bursztynowy pasek sugestii pokazujący te nowe elementy. Możesz dodać je do katalogu jednym kliknięciem, dzięki czemu przyszłe oferty będą używać Twoich dokładnych cen.",
+      "step1": "Wygeneruj ofertę z AI — jeśli jakieś elementy nie są w katalogu, zobaczysz pasek sugestii na etapie Przeglądu",
+      "step2": "Kliknij pasek, aby go rozwinąć i zobaczyć każdy nowy element z kategorią, jednostką i sugerowaną ceną",
+      "step3": "Kliknij 'Dodaj do katalogu' przy poszczególnych elementach lub 'Dodaj wszystkie', aby zapisać je naraz",
+      "tip": "Elementy dodane z sugestii AI zachowują szacunkową cenę AI jako punkt wyjścia — sprawdź i dostosuj ceny w katalogu"
+    },
+    "plannerBudget": {
+      "title": "Rozumienie budżetu wydarzenia",
+      "content1": "Gdy generujesz plan budżetowy w trybie Planner, AI CueQuote tworzy kompleksowy budżet produkcji z cenami rynkowymi, rekomendacjami ekipy i sugerowanym harmonogramem.",
+      "content2": "W odróżnieniu od trybu Firma AV, który używa Twoich cen katalogowych, tryb Planner używa rzeczywistych zakresów cen rynkowych, abyś wiedział czego się spodziewać przy zapytaniu o wyceny.",
+      "step1": "Przełącz się na tryb Planner i opisz swoje wydarzenie — podaj miejsce, liczbę uczestników i czego potrzebujesz",
+      "step2": "Sprawdź Przegląd budżetu pokazujący całkowity szacowany zakres (np. 12 500 € — 18 200 €) z podziałem na sprzęt i ekipę",
+      "step3": "Sprawdź sekcję Sprzęt i usługi — każdy element pokazuje dlaczego jest potrzebny i zakres budżetu",
+      "step4": "Przejrzyj Rekomendacje ekipy, aby zobaczyć potrzebne role techniczne, liczbę osób i typowe stawki dzienne",
+      "step5": "Przeczytaj Harmonogram wydarzenia i sekcję Wskazówki dotyczące pracy z dostawcami AV",
+      "tip": "Używaj zakresu budżetu przy prośbach o wyceny — jeśli oferta wykracza poza zakres, poproś dostawcę o wyjaśnienie różnicy"
     }
   },
   "changelog": {

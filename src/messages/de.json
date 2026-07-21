@@ -1606,6 +1606,36 @@
       "step3": "Überprüfen Sie die Crew-Empfehlungen und den Produktionszeitplan — die KI schlägt Personalstärken basierend auf der Veranstaltungskomplexität vor",
       "step4": "Nutzen Sie die Budgetschätzung zur Abstimmung mit Ihrem Kunden und fordern Sie dann formelle Lieferantenangebote an",
       "tip": "Marktpreisschätzungen basieren auf Branchendurchschnitten und können je nach Region variieren"
+    },
+    "feedbackSupport": {
+      "title": "Feedback & Support",
+      "content1": "CueQuote verfügt über ein integriertes Feedback-System, mit dem Sie Fehler melden, Funktionen anfordern oder Support erhalten können — alles ohne die App zu verlassen.",
+      "content2": "Jede Einreichung enthält automatischen Kontext (Ihr Browser, Plan und aktuelle Seite), damit unser Team schneller helfen kann. Sie können den Status Ihrer Einreichungen verfolgen und Antworten direkt in der App sehen.",
+      "step1": "Gehen Sie zu Feedback & Support in der Seitenleiste und wählen Sie Ihren Typ: Fehlerbericht, Funktionsanfrage, Allgemeines Feedback oder Support-Anfrage",
+      "step2": "Füllen Sie Betreff und Details aus — die App erfasst automatisch Browser, Plan und Seitenkontext",
+      "step3": "Sehen Sie Ihre bisherigen Anfragen im Tab Meine Anfragen — jede zeigt ein Status-Badge (Eingereicht, In Prüfung, Geplant, Umgesetzt)",
+      "step4": "Prüfen Sie den Tab Help Center für Links zu Tutorials, Dokumentation und Antworten auf häufige Fragen",
+      "tip": "Feedback von Pro- und Business-Plan-Nutzern wird automatisch priorisiert für schnellere Bearbeitung"
+    },
+    "catalogSuggestions": {
+      "title": "Katalog mit KI erweitern",
+      "content1": "Wenn die KI von CueQuote ein Angebot generiert, schließt sie manchmal Elemente ein, die nicht in Ihrem Ausrüstungskatalog vorhanden sind — markiert mit [CUSTOM] und geschätzten Preisen.",
+      "content2": "Nach der Generierung erscheint eine bernsteinfarbene Vorschlagsleiste mit diesen neuen Elementen. Sie können sie mit einem Klick zu Ihrem Katalog hinzufügen, damit zukünftige Angebote Ihre genauen Preise verwenden.",
+      "step1": "Generieren Sie ein Angebot mit KI — wenn Elemente nicht in Ihrem Katalog sind, sehen Sie eine Vorschlagsleiste im Prüfschritt",
+      "step2": "Klicken Sie auf die Leiste, um sie zu erweitern und jedes neue Element mit Kategorie, Einheit und vorgeschlagenem Preis zu sehen",
+      "step3": "Klicken Sie 'Zum Katalog hinzufügen' für einzelne Elemente oder 'Alle hinzufügen' für alles auf einmal",
+      "tip": "Aus KI-Vorschlägen hinzugefügte Elemente behalten den KI-geschätzten Preis als Ausgangspunkt — überprüfen und passen Sie Preise in Ihrem Katalog an"
+    },
+    "plannerBudget": {
+      "title": "Ihr Veranstaltungsbudget verstehen",
+      "content1": "Wenn Sie im Planer-Modus einen Budgetplan generieren, erstellt die KI von CueQuote ein umfassendes Veranstaltungsproduktionsbudget mit Marktpreisen, Crew-Empfehlungen und einem vorgeschlagenen Zeitplan.",
+      "content2": "Im Gegensatz zum AV-Firmenmodus, der Ihre Katalogpreise verwendet, nutzt der Planermodus echte Marktpreiskorridore, damit Sie wissen, was Sie erwarten können.",
+      "step1": "Wechseln Sie in den Planer-Modus und beschreiben Sie Ihre Veranstaltung — Venue, Teilnehmerzahl und Ihre Anforderungen",
+      "step2": "Prüfen Sie die Budget-Übersicht mit dem geschätzten Gesamtkorridors (z. B. 12.500 € — 18.200 €) und der Aufschlüsselung nach Ausrüstung und Crew",
+      "step3": "Prüfen Sie den Abschnitt Ausrüstung & Services — jedes Element zeigt warum es benötigt wird und einen Budgetkorridor",
+      "step4": "Prüfen Sie die Crew-Empfehlungen für benötigte technische Rollen, Personenzahl und typische Tagesratespanne",
+      "step5": "Lesen Sie den Veranstaltungszeitplan und den Abschnitt Profitipps zur Arbeit mit AV-Dienstleistern",
+      "tip": "Verwenden Sie den Budgetkorridor bei Angebotsanfragen — liegt ein Angebot außerhalb des Korridors, bitten Sie den Dienstleister um eine Erklärung"
     }
   },
   "changelog": {

@@ -1604,6 +1604,36 @@
       "step3": "Review the crew recommendations and production timeline — the AI suggests staffing levels and setup schedules based on event complexity",
       "step4": "Use the budget estimate to align with your client, then request formal quotes from vendors to get final pricing",
       "tip": "Market-rate estimates are based on industry averages and may vary by region. Always get formal vendor quotes for final budgeting"
+    },
+    "feedbackSupport": {
+      "title": "Feedback & Support",
+      "content1": "CueQuote has a built-in feedback system that lets you report bugs, request features, or get support — all without leaving the app.",
+      "content2": "Every submission includes automatic context (your browser, plan, and current page) so our team can help faster. You can track the status of your submissions and see replies directly in the app.",
+      "step1": "Go to Feedback & Support in the sidebar and choose your feedback type: Bug Report, Feature Request, General Feedback, or Support Request",
+      "step2": "Fill in the subject and details — the app automatically captures your browser, plan, and page context",
+      "step3": "View your past submissions in the My Submissions tab — each shows a status badge (Submitted, In Review, Planned, Shipped)",
+      "step4": "Check the Help Center tab for links to tutorials, documentation, and answers to common questions",
+      "tip": "Feedback from Pro and Business plan users is automatically prioritized for faster response"
+    },
+    "catalogSuggestions": {
+      "title": "Growing Your Catalog with AI",
+      "content1": "When CueQuote's AI generates a proposal, it sometimes includes items that aren't in your equipment catalog — marked with [CUSTOM] and estimated prices.",
+      "content2": "After generation, an amber suggestion bar appears showing these new items. You can add them to your catalog with one click, so future proposals use your exact pricing instead of estimates.",
+      "step1": "Generate a proposal with AI — if any items aren't in your catalog, you'll see a suggestion bar on the Review step",
+      "step2": "Click the bar to expand it and see each new item with its category, unit, and suggested price",
+      "step3": "Click 'Add to Catalog' on individual items, or 'Add all' to save them all at once — they'll appear in your Catalog immediately",
+      "tip": "Items added from AI suggestions keep the AI-estimated price as a starting point — review and adjust prices in your Catalog to match your actual rates"
+    },
+    "plannerBudget": {
+      "title": "Understanding Your Event Budget",
+      "content1": "When you generate a budget plan in Planner mode, CueQuote's AI creates a comprehensive event production budget with market-rate pricing, crew recommendations, and a suggested timeline.",
+      "content2": "Unlike AV Company mode which uses your catalog prices, Planner mode uses real market rate ranges so you know what to expect when requesting quotes from AV vendors.",
+      "step1": "Switch to Planner mode and describe your event — include venue, attendee count, and what you need (presentations, live music, branding, etc.)",
+      "step2": "Review the Budget Overview showing your total estimated range (e.g. €12,500 — €18,200) with a breakdown of equipment vs crew costs",
+      "step3": "Check the Equipment & Services section — each item shows why it's needed and a budget range, not just a single price",
+      "step4": "Review Crew Recommendations to see which technical roles you'll need, how many people, and the typical daily rate range",
+      "step5": "Read the Event Timeline for a suggested schedule, and the Pro Tips section for practical advice on working with AV vendors",
+      "tip": "Use the budget range when requesting quotes from vendors — if a quote falls outside the range, ask the vendor to explain the difference"
     }
   },
   "changelog": {

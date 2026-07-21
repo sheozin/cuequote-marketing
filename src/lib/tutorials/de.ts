@@ -992,4 +992,118 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'feedback-support',
+    title: 'Feedback & Support',
+    description: 'Melden Sie Fehler, beantragen Sie Funktionen oder erhalten Sie Support — ohne die App zu verlassen.',
+    duration: '3 Min.',
+    difficulty: 'beginner',
+    category: 'Grundlagen',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Wie Sie Feedback, Fehlerberichte und Funktionsanfragen senden',
+      'Den Status Ihrer Anfragen verfolgen',
+      'Direkt aus der App Support erhalten',
+      'Das Help Center für schnelle Antworten nutzen',
+    ],
+    steps: [
+      {
+        title: 'Zu Feedback & Support navigieren',
+        content: 'Klicken Sie in der Seitenleiste auf „Feedback & Support" — Ihre direkte Verbindung zum CueQuote-Team.',
+      },
+      {
+        title: 'Feedback-Typ auswählen',
+        content: 'Wählen Sie aus: Fehlerbericht, Funktionsanfrage, Allgemeines Feedback oder Support-Anfrage. Das Formular passt sich an.',
+        tip: 'Die App erfasst automatisch Ihren Browser, Plan und Seitenkontext beim Senden.',
+      },
+      {
+        title: 'Details ausfüllen und senden',
+        content: 'Geben Sie Betreff und Beschreibung ein und klicken Sie „Senden" — Ihre Anfrage wird sofort erfasst und im Tab Meine Anfragen angezeigt.',
+      },
+      {
+        title: 'Anfragen verfolgen',
+        content: 'Im Tab „Meine Anfragen" sehen Sie alle bisherigen Anfragen mit Status-Badges: Eingereicht, In Prüfung, Geplant oder Umgesetzt.',
+      },
+      {
+        title: 'Das Help Center nutzen',
+        content: 'Im Tab „Help Center" finden Sie Links zu Tutorials, Dokumentation und häufig gestellten Fragen.',
+      },
+    ],
+  },
+  {
+    slug: 'catalog-suggestions',
+    title: 'Katalog mit KI erweitern',
+    description: 'Wenn die KI Elemente verwendet, die nicht in Ihrem Katalog sind, fügen Sie sie mit einem Klick hinzu.',
+    duration: '2 Min.',
+    difficulty: 'beginner',
+    category: 'Einrichtung',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      'Wie die KI Elemente kennzeichnet, die nicht in Ihrem Katalog sind',
+      'Vorgeschlagene Elemente mit einem Klick zum Katalog hinzufügen',
+      'Alle Vorschläge auf einmal hinzufügen',
+      'Warum Katalogpreise zukünftige Angebote genauer machen',
+    ],
+    steps: [
+      {
+        title: 'Angebot mit KI erstellen',
+        content: 'Erstellen Sie ein neues Angebot. Elemente außerhalb Ihres Katalogs werden mit [CUSTOM] und einem geschätzten Marktpreis markiert.',
+      },
+      {
+        title: 'Vorschlagsleiste prüfen',
+        content: 'Nach der Generierung erscheint eine bernsteinfarbene Vorschlagsleiste im Prüfschritt. Klicken Sie darauf, um neue Elemente mit KI-vorgeschlagenen Preisen einzusehen.',
+        tip: 'Der vorgeschlagene Preis basiert auf Marktpreisen — passen Sie ihn nach dem Hinzufügen zum Katalog an.',
+      },
+      {
+        title: 'Elemente zum Katalog hinzufügen',
+        content: 'Klicken Sie „Zum Katalog hinzufügen" für einzelne Elemente oder „Alle hinzufügen", um alles auf einmal zu speichern.',
+      },
+      {
+        title: 'Zukünftige Angebote nutzen Ihre genauen Preise',
+        content: 'Sobald Elemente im Katalog sind, verwendet die KI beim nächsten Angebot Ihren Katalogpreis statt einer Schätzung.',
+      },
+    ],
+  },
+  {
+    slug: 'planner-budget-review',
+    title: 'Ihr Veranstaltungsbudget verstehen',
+    description: 'Lesen und nutzen Sie den KI-generierten Budgetplan im Planner-Modus.',
+    duration: '4 Min.',
+    difficulty: 'beginner',
+    category: 'Planner',
+    mode: 'planner',
+    videoUrl: '',
+    whatYouLearn: [
+      'Budget-Übersicht mit Niedrig-Hoch-Spanne lesen',
+      'Crew-Empfehlungen und Rollen verstehen',
+      'Den Veranstaltungszeitplan für die Planung nutzen',
+      'Profitipps bei der Arbeit mit AV-Dienstleistern anwenden',
+      'Inklusivleistungen und Ausschlüsse verstehen',
+    ],
+    steps: [
+      {
+        title: 'Budgetplan generieren',
+        content: 'Wechseln Sie in den Planner-Modus, beschreiben Sie Ihre Veranstaltung und klicken Sie auf „Generieren" für einen vollständigen Budgetplan mit Marktpreisen.',
+      },
+      {
+        title: 'Budget-Übersicht prüfen',
+        content: 'Der obere Abschnitt zeigt Ihr geschätztes Gesamtbudget als Spanne — z. B. 12.500 € — 18.200 €. Das untere Ende steht für ein schlankes Setup, das obere für Premium-Ausrüstung und Full-Service.',
+        tip: 'Nutzen Sie die Spanne für Kundenerwartungen vor dem Marktzugang.',
+      },
+      {
+        title: 'Crew-Empfehlungen prüfen',
+        content: 'Der Abschnitt Crew-Empfehlungen listet benötigte Rollen, Anzahl der Personen und typische Tagesratespannen auf.',
+      },
+      {
+        title: 'Veranstaltungszeitplan prüfen',
+        content: 'Der Zeitplan-Abschnitt zeigt vorgeschlagene Aufbau-, Show- und Abbauphasen mit Zeitschätzungen und technischen Meilensteinen.',
+      },
+      {
+        title: 'Profitipps und Inklusivleistungen/Ausschlüsse lesen',
+        content: 'Praxistipps speziell für Ihren Veranstaltungstyp und eine Übersicht, was die Schätzung abdeckt und was nicht.',
+      },
+    ],
+  },
 ]
