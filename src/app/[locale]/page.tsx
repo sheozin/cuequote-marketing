@@ -97,6 +97,18 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: t("metaTitle", { defaultValue: "CueQuote — AI-Powered AV Proposals in Seconds" }),
       description: t("metaDescription", { defaultValue: "Generate professional AV equipment proposals with AI. Describe your event, get a complete equipment list with accurate pricing. Free to start — no credit card required." }),
+      url: `https://cuequote.com${localePath}${pagePath}`,
+      siteName: "CueQuote",
+      type: "website",
+      locale: locale === 'ar' ? 'ar_SA' : locale === 'pl' ? 'pl_PL' : locale === 'de' ? 'de_DE' : locale === 'fr' ? 'fr_FR' : 'en_US',
+      images: [{ url: 'https://cuequote.com/opengraph-image', width: 1200, height: 630, alt: 'CueQuote — AI-Powered Proposals for AV & Event Professionals' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t("metaTitle", { defaultValue: "CueQuote — AI-Powered AV Proposals in Seconds" }),
+      description: t("metaDescription", { defaultValue: "Generate professional AV equipment proposals with AI." }),
+      site: '@cuequote',
+      images: ['https://cuequote.com/opengraph-image'],
     },
   };
 }

@@ -7,6 +7,11 @@ export interface BlogPostSummary {
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
   {
+    slug: "how-cuequote-helps-event-planners",
+    category: "Guides",
+    date: "2026-07-20",
+  },
+  {
     slug: "interactive-proposal-viewer-client-comments",
     category: "Technology",
     date: "2026-06-27",
