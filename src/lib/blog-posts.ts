@@ -7,9 +7,24 @@ export interface BlogPostSummary {
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
   {
-    slug: "how-cuequote-helps-event-planners",
+    slug: "how-much-does-av-cost-for-events",
+    category: "Guides",
+    date: "2026-07-22",
+  },
+  {
+    slug: "event-production-budget-template-guide",
     category: "Guides",
     date: "2026-07-20",
+  },
+  {
+    slug: "ai-event-proposal-software-guide",
+    category: "Technology",
+    date: "2026-07-18",
+  },
+  {
+    slug: "how-cuequote-helps-event-planners",
+    category: "Guides",
+    date: "2026-07-16",
   },
   {
     slug: "interactive-proposal-viewer-client-comments",
