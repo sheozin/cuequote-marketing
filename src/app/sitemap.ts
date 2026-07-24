@@ -3,12 +3,22 @@ import { POSTS } from '../lib/blog-posts'
 import { getAllSlugs } from '../lib/tutorials'
 import { locales, defaultLocale } from '../i18n/config'
 
+// ── SITEMAP LOCALE STRATEGY ──
+// Phase 1 (current): Only EN + PL in sitemap to build indexing trust with Google.
+// 77 pages were "crawled but not indexed" because Google saw 5 translations as duplicates.
+// Once EN + PL pages are indexed (check Google Search Console), re-add other locales:
+//   Phase 2: Add DE (after EN/PL indexed ~50%+)
+//   Phase 3: Add FR + AR (after DE indexed)
+// To re-enable: change sitemapLocales below to include more locales.
+const sitemapLocales = ['en', 'pl'] as const
+
 function localizedUrl(base: string, path: string, locale: string): string {
   if (locale === defaultLocale) return `${base}${path}`
   return `${base}/${locale}${path}`
 }
 
 function alternatesForPath(base: string, path: string) {
+  // Alternates still reference ALL locales (hreflang tells Google about all versions)
   const languages: Record<string, string> = {}
   for (const locale of locales) {
     languages[locale] = localizedUrl(base, path, locale)
@@ -36,10 +46,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const entries: MetadataRoute.Sitemap = []
 
-  // Static pages — one entry per locale
-  const siteLastUpdated = new Date('2026-07-20')
+  // Static pages — one entry per sitemap locale
+  const siteLastUpdated = new Date('2026-07-24')
   for (const page of staticPages) {
-    for (const locale of locales) {
+    for (const locale of sitemapLocales) {
       entries.push({
         url: localizedUrl(base, page.path || '/', locale),
         lastModified: siteLastUpdated,
@@ -52,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Tutorial pages
   for (const slug of getAllSlugs()) {
-    for (const locale of locales) {
+    for (const locale of sitemapLocales) {
       entries.push({
         url: localizedUrl(base, `/tutorials/${slug}`, locale),
         lastModified: siteLastUpdated,
@@ -65,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts
   for (const p of POSTS) {
-    for (const locale of locales) {
+    for (const locale of sitemapLocales) {
       entries.push({
         url: localizedUrl(base, `/blog/${p.slug}`, locale),
         lastModified: new Date(p.date),
