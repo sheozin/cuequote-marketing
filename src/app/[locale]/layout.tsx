@@ -93,6 +93,37 @@ const jsonLdString = JSON.stringify({
         { "@type": "Offer", name: "Business", price: "179", priceCurrency: "EUR" },
       ],
       description: "The AI platform for event professionals — proposals, production planning, and more.",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        bestRating: "5",
+        worstRating: "1",
+        ratingCount: "3",
+        reviewCount: "3",
+      },
+      review: [
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Johne S." },
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          reviewBody: "CueQuote has completely changed the way we work. It generates professional proposals in minutes directly from our equipment catalog, creates risk assessments, and helps us manage inventory — all in one platform. It's an all-in-one solution that every AV production company should have.",
+          publisher: { "@type": "Organization", name: "AVE Events" },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Alex D." },
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          reviewBody: "I was skeptical about AI writing our proposals — we have very specific pricing. But CueQuote uses our exact catalog prices, not estimates. The first proposal it generated was 95% ready. I adjusted two line items and sent it. We've done 40+ proposals this way now.",
+          publisher: { "@type": "Organization", name: "SoundPro Events" },
+        },
+        {
+          "@type": "Review",
+          author: { "@type": "Person", name: "Aneta M." },
+          reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+          reviewBody: "CueQuote has shortened our proposal preparation time and increased the efficiency of our sales process. The tool allows quick creation of clear quotes, easy project management, and maintaining consistency of offers directed to clients.",
+          publisher: { "@type": "Organization", name: "AVE Events" },
+        },
+      ],
     },
   ],
 });
