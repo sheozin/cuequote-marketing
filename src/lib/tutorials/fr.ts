@@ -1106,4 +1106,91 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'multi-currency-pricing',
+    title: 'Tarification multidevise',
+    description: 'Définissez des prix par devise dans votre catalogue pour que les devis utilisent automatiquement le bon tarif sans conversion manuelle.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Configuration',
+    mode: 'both',
+    icon: '💱',
+    whatYouLearn: [
+      'Comment ajouter des prix en USD, EUR et d\'autres devises aux articles du catalogue',
+      'Comment la génération de devis sélectionne le bon prix en devise',
+      'Comment fonctionne la conversion automatique de repli en l\'absence de prix local',
+      'Bonnes pratiques pour maintenir les prix multidevises à jour',
+    ],
+    steps: [
+      {
+        title: 'Ouvrir un article du catalogue pour modification',
+        content: 'Accédez au Catalogue via la barre latérale et cliquez sur n\'importe quel article pour ouvrir son panneau de détails, puis cliquez sur Modifier. Sous le champ de prix par défaut, vous verrez une section « Prix multidevises ». C\'est ici que vous pouvez définir des prix dans des devises supplémentaires au-delà de la devise par défaut de votre entreprise.',
+        tip: 'Commencez par les devises que vous utilisez le plus souvent — généralement EUR, USD et GBP pour les entreprises AV à dimension internationale.',
+      },
+      {
+        title: 'Ajouter un prix pour chaque devise',
+        content: 'Cliquez sur « Ajouter un prix en devise » et sélectionnez une devise dans la liste déroulante (EUR, USD, GBP, PLN, AED, EGP, CHF). Saisissez le tarif de location dans cette devise. Répétez l\'opération pour chaque devise supplémentaire. Chaque prix saisi est un tarif exact — non une conversion. Cela vous permet de refléter les prix du marché local et les tarifs négociés pour différentes régions.',
+      },
+      {
+        title: 'Comprendre comment la génération de devis sélectionne le prix',
+        content: 'Lorsque l\'IA génère un devis dans une devise spécifique, elle recherche d\'abord un prix catalogue correspondant dans cette même devise. Si vous avez défini un prix en USD pour un article et que le devis est en USD, ce prix exact est utilisé. Vos devis reflètent ainsi toujours vos vrais tarifs pour chaque marché — sans dépendre des taux de change flottants.',
+        tip: 'Définissez des prix réalistes du marché local plutôt que de convertir votre devise d\'origine. Un système PA loué 500 €/jour en Pologne peut avoir un tarif marché différent à 600 $/jour aux États-Unis.',
+      },
+      {
+        title: 'Conversion automatique de repli',
+        content: 'Si un devis utilise une devise pour laquelle vous n\'avez pas défini de prix spécifique sur un article du catalogue, CueQuote convertit automatiquement votre prix en devise par défaut au taux de change du marché actuel. Le prix converti est signalé dans l\'éditeur de devis par une petite icône d\'échange afin que vous puissiez le vérifier avant l\'envoi. Vous pouvez remplacer manuellement tout prix converti automatiquement dans l\'éditeur.',
+      },
+      {
+        title: 'Maintenir les prix à jour',
+        content: 'Les prix multidevises sont statiques — ils ne se mettent pas à jour automatiquement avec les mouvements des taux de change. Révisez-les régulièrement (trimestriellement est un bon rythme) et mettez à jour les articles qui se sont significativement écartés des tarifs du marché actuels. Pour les articles sous-loués, alignez vos prix devise du catalogue sur la devise de facturation de votre fournisseur pour protéger vos marges.',
+        tip: 'Ajoutez un rappel trimestriel dans votre agenda pour revoir vos 20 principaux articles du catalogue dans toutes les devises. Cinq minutes de maintenance des prix évitent des surprises de marge désagréables sur les grands devis.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-approval-workflow',
+    title: 'Workflow de validation des devis',
+    description: 'Activez la validation interne pour que les devis soient examinés et approuvés par un responsable avant d\'atteindre les clients.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Devis',
+    mode: 'both',
+    icon: '✅',
+    whatYouLearn: [
+      'Activer le workflow de validation dans les Paramètres',
+      'Comment soumettre un devis à l\'approbation d\'un responsable',
+      'Le processus de revue du responsable et les commentaires internes',
+      'Comprendre les statuts de validation (en attente, approuvé, rejeté)',
+      'Ce qui arrive à un devis après approbation ou rejet',
+    ],
+    steps: [
+      {
+        title: 'Activer la validation dans les Paramètres',
+        content: 'Accédez aux Paramètres via la barre latérale et ouvrez l\'onglet « Devis ». Activez « Validation requise avant envoi ». Une fois activé, tout devis créé par un membre du rôle Commercial doit être approuvé par un Administrateur ou un Propriétaire avant d\'être envoyé à un client. Les Propriétaires et Administrateurs peuvent envoyer des devis directement sans passer par le flux de validation.',
+        tip: 'Activez la validation lorsque vous avez une équipe commerciale qui crée des devis — cela donne aux responsables un point de contrôle qualité avant que quoi que ce soit n\'atteigne les clients.',
+      },
+      {
+        title: 'Soumettre un devis pour validation',
+        content: 'Lorsqu\'un membre de l\'équipe commerciale termine la création d\'un devis, il clique sur « Soumettre pour validation » plutôt que sur « Envoyer ». Cela verrouille le devis contre toute modification ultérieure et change son statut en « Validation en attente ». Le devis apparaît immédiatement dans la file d\'attente de validation du responsable. Le soumetteur peut ajouter une note optionnelle expliquant ce que le réviseur doit savoir.',
+      },
+      {
+        title: 'Le responsable examine le devis',
+        content: 'Les responsables (Administrateurs et Propriétaires) voient une notification dans l\'application et une alerte par e-mail lorsqu\'un devis entre dans leur file d\'attente de validation. Ils ouvrent le devis en vue lecture seule complète — toutes les lignes, les prix, les conditions, les inclusions, les exclusions et les totaux sont visibles. Le responsable peut également télécharger l\'aperçu PDF pour voir exactement ce que le client recevrait.',
+        tip: 'Examinez attentivement le total du devis, les conditions de paiement et les CGV — ce sont les trois domaines qui nécessitent le plus souvent des ajustements avant qu\'un devis n\'arrive chez un client.',
+      },
+      {
+        title: 'Laisser des commentaires internes',
+        content: 'Dans le panneau de validation situé à droite du devis, les responsables peuvent laisser des commentaires internes visibles uniquement par l\'équipe — pas par le client. Utilisez les commentaires pour expliquer ce qui doit changer : « Réduire la remise à 10% maximum » ou « Ajouter l\'exclusion du générateur pour les événements en extérieur dans les conditions ». Le soumetteur voit ces commentaires immédiatement et peut déverrouiller le devis pour effectuer des corrections.',
+      },
+      {
+        title: 'Approuver ou rejeter',
+        content: 'Après examen, le responsable clique sur « Approuver » ou « Rejeter ». L\'approbation déverrouille le bouton Envoyer pour le soumetteur — il reçoit une notification que le devis est prêt à partir. Le rejet renvoie le devis en statut Brouillon avec les commentaires du responsable visibles, afin que le soumetteur sache exactement ce qu\'il faut corriger avant de soumettre à nouveau.',
+      },
+      {
+        title: 'Statuts de validation en un coup d\'œil',
+        content: 'Les devis dans le workflow de validation affichent l\'un des quatre statuts dans la liste des devis : Brouillon (pas encore soumis), Validation en attente (en attente de revue du responsable), Approuvé (prêt à être envoyé) ou Rejeté (renvoyé pour révision). Filtrez la liste des devis par statut pour voir toute votre file d\'attente de validation d\'un coup. Les devis approuvés et envoyés suivent ensuite le flux normal : Envoyé → Vu → Gagné/Perdu.',
+        tip: 'Établissez une norme d\'équipe pour le délai de traitement des validations — 4 heures ouvrables est un objectif courant. Des validations tardives peuvent retarder des devis sensibles au temps.',
+      },
+    ],
+  },
 ]

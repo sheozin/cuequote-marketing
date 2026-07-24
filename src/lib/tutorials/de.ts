@@ -1106,4 +1106,91 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'multi-currency-pricing',
+    title: 'Mehrwährungspreise',
+    description: 'Legen Sie währungsspezifische Preise in Ihrem Katalog fest, damit Angebote automatisch den richtigen Kurs für jede Währung verwenden – ohne manuelle Umrechnung.',
+    duration: '4 Min.',
+    difficulty: 'intermediate',
+    category: 'Einrichtung',
+    mode: 'both',
+    icon: '💱',
+    whatYouLearn: [
+      'Wie Sie USD-, EUR- und andere Währungspreise zu Katalogpositionen hinzufügen',
+      'Wie die Angebotserstellung den richtigen Währungspreis auswählt',
+      'Wie die automatische Umrechnungs-Fallback-Funktion bei fehlendem Lokalpreis funktioniert',
+      'Best Practices zur Aktualisierung von Mehrwährungspreisen',
+    ],
+    steps: [
+      {
+        title: 'Katalogposition zur Bearbeitung öffnen',
+        content: 'Gehen Sie über die Seitenleiste zu Katalog und klicken Sie auf eine beliebige Position, um das Detailpanel zu öffnen, dann auf Bearbeiten. Unterhalb des Standard-Preisfeldes sehen Sie den Abschnitt „Mehrwährungspreise". Hier können Sie Preise in weiteren Währungen über die Firmenstandard-Währung hinaus festlegen.',
+        tip: 'Beginnen Sie mit den Währungen, die Sie am häufigsten verwenden — in der Regel EUR, USD und GBP für international tätige AV-Unternehmen.',
+      },
+      {
+        title: 'Preis für jede Währung hinzufügen',
+        content: 'Klicken Sie auf „Währungspreis hinzufügen" und wählen Sie eine Währung aus der Dropdown-Liste (EUR, USD, GBP, PLN, AED, EGP, CHF). Geben Sie den Mietpreis in dieser Währung ein. Wiederholen Sie dies für jede weitere Währung. Jeder eingetragene Preis ist ein fester Kurs — keine Umrechnung. So können Sie lokale Marktpreise und ausgehandelte Preise für verschiedene Regionen abbilden.',
+      },
+      {
+        title: 'Verstehen, wie die Angebotserstellung den Preis auswählt',
+        content: 'Wenn die KI ein Angebot in einer bestimmten Währung erstellt, sucht sie zuerst nach einem passenden Katalogpreis in derselben Währung. Haben Sie für eine Position einen USD-Preis festgelegt und das Angebot ist in USD, wird genau dieser Preis verwendet. So spiegeln Ihre Angebote immer Ihre tatsächlichen Sätze für jeden Markt wider — keine schwankenden Wechselkurse.',
+        tip: 'Legen Sie realistische lokale Marktpreise fest, anstatt Ihre Heimatwährung umzurechnen. Ein PA-System, das in Polen für 500 €/Tag vermietet wird, kann in den USA einen anderen Marktpreis von 600 $/Tag haben.',
+      },
+      {
+        title: 'Automatische Umrechnungs-Fallback',
+        content: 'Wenn ein Angebot eine Währung verwendet, für die Sie keinen Preis für eine Katalogposition festgelegt haben, rechnet CueQuote automatisch Ihren Standard-Währungspreis zum aktuellen Markt-Wechselkurs um. Der umgerechnete Preis wird im Angebotseditor mit einem kleinen Wechselkurs-Symbol markiert, damit Sie ihn vor dem Versand prüfen können. Sie können jeden automatisch umgerechneten Preis manuell im Editor überschreiben.',
+      },
+      {
+        title: 'Preise aktuell halten',
+        content: 'Mehrwährungspreise sind statisch — sie aktualisieren sich nicht automatisch mit Wechselkursbewegungen. Überprüfen Sie sie regelmäßig (vierteljährlich empfohlen) und aktualisieren Sie Positionen, die erheblich von aktuellen Marktpreisen abgewichen sind. Für zugekaufte Positionen stimmen Sie Ihre Katalog-Währungspreise mit der Abrechnungswährung des Lieferanten ab, um Ihre Margen zu schützen.',
+        tip: 'Setzen Sie eine vierteljährliche Kalendererinnerung, um Ihre 20 wichtigsten Katalogpositionen in allen Währungen zu überprüfen. Fünf Minuten Preispflege verhindern unangenehme Margenüberraschungen bei großen Angeboten.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-approval-workflow',
+    title: 'Angebots-Freigabeprozess',
+    description: 'Aktivieren Sie die interne Freigabe, damit Angebote vor dem Versand an Kunden von einem Manager geprüft und genehmigt werden.',
+    duration: '5 Min.',
+    difficulty: 'intermediate',
+    category: 'Angebote',
+    mode: 'both',
+    icon: '✅',
+    whatYouLearn: [
+      'Freigabeprozess in den Einstellungen aktivieren',
+      'Wie Sie ein Angebot zur Freigabe einreichen',
+      'Der Manager-Überprüfungsprozess und interne Kommentare',
+      'Freigabestatus verstehen (ausstehend, genehmigt, abgelehnt)',
+      'Was nach der Genehmigung oder Ablehnung mit einem Angebot passiert',
+    ],
+    steps: [
+      {
+        title: 'Freigabe in den Einstellungen aktivieren',
+        content: 'Gehen Sie über die Seitenleiste zu Einstellungen und öffnen Sie den Tab „Angebote". Aktivieren Sie „Freigabe vor dem Versand erforderlich". Sobald aktiviert, muss jedes von einem Vertriebsmitarbeiter erstellte Angebot von einem Admin oder Inhaber genehmigt werden, bevor es an einen Kunden versendet werden kann. Inhaber und Admins können Angebote direkt versenden, ohne den Freigabeprozess zu durchlaufen.',
+        tip: 'Aktivieren Sie die Freigabe, wenn Sie ein Vertriebsteam haben, das Angebote erstellt — so haben Manager eine Qualitätsstufe, bevor etwas die Kunden erreicht.',
+      },
+      {
+        title: 'Angebot zur Freigabe einreichen',
+        content: 'Wenn ein Vertriebsmitarbeiter ein Angebot fertiggestellt hat, klickt er auf „Zur Freigabe einreichen" statt auf „Senden". Dadurch wird das Angebot für weitere Bearbeitungen gesperrt und der Status auf „Freigabe ausstehend" geändert. Das Angebot erscheint sofort in der Freigabe-Warteschlange des Managers. Der Einreichende kann eine optionale Notiz hinzufügen, die dem Prüfer wichtige Informationen erläutert.',
+      },
+      {
+        title: 'Manager prüft das Angebot',
+        content: 'Manager (Admins und Inhaber) sehen eine Benachrichtigung in der App und einen E-Mail-Alert, wenn ein Angebot in ihre Freigabe-Warteschlange gelangt. Sie öffnen das Angebot in der vollständigen Nur-Lese-Ansicht — alle Positionen, Preise, Konditionen, Inklusivleistungen, Ausschlüsse und Gesamtbeträge sind sichtbar. Der Manager kann auch die PDF-Vorschau herunterladen, um genau zu sehen, was der Kunde erhalten würde.',
+        tip: 'Prüfen Sie den Gesamtbetrag des Angebots, die Zahlungsbedingungen und die AGB sorgfältig — das sind die drei Bereiche, die vor dem Versand an Kunden am häufigsten angepasst werden müssen.',
+      },
+      {
+        title: 'Interne Kommentare hinterlassen',
+        content: 'Im Freigabe-Panel auf der rechten Seite des Angebots können Manager interne Kommentare hinterlassen, die nur für das Team sichtbar sind — nicht für den Kunden. Verwenden Sie Kommentare, um zu erläutern, was geändert werden muss: „Rabatt auf maximal 10% reduzieren" oder „Generatorausschluss für Außenveranstaltungen in die Konditionen aufnehmen". Der Einreichende sieht diese Kommentare sofort und kann das Angebot für Korrekturen entsperren.',
+      },
+      {
+        title: 'Genehmigen oder ablehnen',
+        content: 'Nach der Prüfung klickt der Manager auf „Genehmigen" oder „Ablehnen". Eine Genehmigung entsperrt die Schaltfläche „Senden" für den Einreichenden — er erhält eine Benachrichtigung, dass das Angebot versandbereit ist. Eine Ablehnung sendet das Angebot mit den sichtbaren Kommentaren des Managers zurück in den Entwurfsstatus, damit der Einreichende genau weiß, was vor der erneuten Einreichung zu beheben ist.',
+      },
+      {
+        title: 'Freigabestatus auf einen Blick',
+        content: 'Angebote im Freigabeprozess zeigen in der Angebotsliste einen von vier Status: Entwurf (noch nicht eingereicht), Freigabe ausstehend (wartet auf Manager-Prüfung), Genehmigt (versandbereit) oder Abgelehnt (zur Überarbeitung zurückgesendet). Filtern Sie die Angebotsliste nach Status, um Ihre gesamte Freigabe-Warteschlange auf einmal zu sehen. Genehmigte und versendete Angebote folgen dann dem normalen Ablauf: Gesendet → Angesehen → Gewonnen/Verloren.',
+        tip: 'Legen Sie im Team eine Norm für die Bearbeitungszeit der Freigabe fest — 4 Arbeitsstunden ist ein häufiges Ziel. Verzögerte Freigaben können zeitkritische Angebote gefährden.',
+      },
+    ],
+  },
 ]

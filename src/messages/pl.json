@@ -1715,6 +1715,36 @@
       "step4": "Przejrzyj Rekomendacje ekipy, aby zobaczyć potrzebne role techniczne, liczbę osób i typowe stawki dzienne",
       "step5": "Przeczytaj Harmonogram wydarzenia i sekcję Wskazówki dotyczące pracy z dostawcami AV",
       "tip": "Używaj zakresu budżetu przy prośbach o wyceny — jeśli oferta wykracza poza zakres, poproś dostawcę o wyjaśnienie różnicy"
+    },
+    "multiCurrencyPricing": {
+      "title": "Wycena wielowalutowa",
+      "content1": "CueQuote pozwala ustawić dokładne ceny w każdej walucie dla każdego elementu katalogu, dzięki czemu oferty zawsze pokazują właściwą kwotę — nie przeliczone przybliżenie. Gdy klient wybierze USD lub EUR jako walutę oferty, CueQuote pobiera wprowadzoną przez Ciebie ręcznie cenę, a nie automatycznie przeliczoną wartość.",
+      "content2": "Jeśli nie ustawiono ręcznej ceny dla wybranej waluty, CueQuote stosuje automatyczne przeliczenie po bieżącym kursie. Możesz to w każdej chwili nadpisać, dodając konkretną cenę w danej walucie do elementu.",
+      "step1": "Przejdź do Katalogu i otwórz dowolny element sprzętu, któremu chcesz przypisać ceny w wielu walutach",
+      "step2": "W edytorze elementu znajdź sekcję Ceny walutowe i kliknij Dodaj walutę — wybierz USD, EUR, GBP lub inną obsługiwaną walutę",
+      "step3": "Wprowadź dokładną cenę w tej walucie (np. 450 $ za kamerę kosztującą 400 €), a następnie zapisz element",
+      "step4": "Utwórz lub otwórz ofertę i ustaw walutę oferty — CueQuote automatycznie użyje Twojej ręcznej ceny dla elementów, które ją mają, a pozostałe przeliczy",
+      "tip": "Ustaw ręczne ceny w USD i EUR dla najpopularniejszych elementów, aby uniknąć niespodzianek przy zaokrąglaniu w ofertach międzynarodowych"
+    },
+    "proposalApprovalWorkflow": {
+      "title": "Zatwierdzanie ofert",
+      "content1": "Przepływ zatwierdzania pozwala menedżerom sprawdzić oferty przed wysłaniem ich do klientów. Po włączeniu tej funkcji członkowie zespołu przesyłają oferty do zatwierdzenia zamiast wysyłać je bezpośrednio — oferta jest zablokowana do edycji do czasu podjęcia decyzji.",
+      "content2": "Tylko właściciele i administratorzy obszaru roboczego mogą zatwierdzać lub odrzucać oferty. Zatwierdzający mogą zostawiać wewnętrzne komentarze widoczne tylko dla zespołu, co ułatwia prośby o konkretne zmiany bez wymiany e-maili.",
+      "step1": "Przejdź do Ustawień → Oferty i włącz opcję Wymagaj zatwierdzenia przed wysłaniem, aby aktywować przepływ dla swojego obszaru roboczego",
+      "step2": "Utwórz ofertę jak zwykle, a następnie kliknij Prześlij do zatwierdzenia zamiast Wyślij — status oferty zmienia się na Oczekuje na zatwierdzenie",
+      "step3": "Menedżer otrzymuje powiadomienie e-mail i może otworzyć ofertę, aby sprawdzić wszystkie szczegóły, ceny i warunki",
+      "step4": "Zatwierdzający klika Zatwierdź, aby zezwolić na wysłanie, Odrzuć, aby je zablokować, lub Poproś o zmiany, aby odesłać ofertę z komentarzami",
+      "step5": "Jeśli poproszono o zmiany, twórca edytuje ofertę i ponownie przesyła ją do zatwierdzenia — cykl powtarza się aż do zatwierdzenia lub odrzucenia",
+      "tip": "Używaj pola komentarzy wewnętrznych, aby zostawiać konkretne uwagi, np. 'dostosuj stawkę za dzień montażu', żeby twórca wiedział dokładnie co poprawić"
+    },
+    "customCategories": {
+      "title": "Własne kategorie",
+      "content1": "CueQuote zawiera 13 wbudowanych kategorii sprzętu (Oświetlenie, Audio, Wideo itp.), ale możesz tworzyć własne dla wszystkiego, co nie pasuje do żadnej z nich. Własne kategorie pojawiają się wszędzie tam, gdzie wbudowane: w katalogu, ofertach, eksportach PDF i stronie udostępniania klientom.",
+      "content2": "Pole kategorii działa jak combobox — zacznij pisać, aby filtrować istniejące kategorie, lub wpisz nową nazwę i naciśnij Enter, aby ją od razu utworzyć. Możesz też zmieniać nazwy nagłówków sekcji w poszczególnych ofertach, bez wpływu na globalną nazwę kategorii.",
+      "step1": "W Katalogu otwórz lub utwórz element i kliknij pole Kategoria — zacznij pisać, aby wyszukać istniejące kategorie, lub wpisz nową nazwę, np. 'Scena', i naciśnij Enter, aby ją utworzyć",
+      "step2": "Zapisz element — nowa kategoria jest teraz dostępna w całym obszarze roboczym dla innych elementów",
+      "step3": "Aby zmienić nazwę nagłówka kategorii tylko w konkretnej ofercie, otwórz ofertę, kliknij nagłówek sekcji i wpisz nową nazwę — wpływa to tylko na PDF i stronę udostępniania tej oferty",
+      "tip": "Używaj krótkich i spójnych nazw własnych kategorii — pojawiają się one jako nagłówki sekcji w PDF, więc 'Rigging i kratownice' działa lepiej niż 'Sprzęt do riggingu i systemy kratownicowe'"
     }
   },
   "changelog": {

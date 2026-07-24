@@ -1739,6 +1739,36 @@
       "step4": "Review Crew Recommendations to see which technical roles you'll need, how many people, and the typical daily rate range",
       "step5": "Read the Event Timeline for a suggested schedule, and the Pro Tips section for practical advice on working with AV vendors",
       "tip": "Use the budget range when requesting quotes from vendors — if a quote falls outside the range, ask the vendor to explain the difference"
+    },
+    "multiCurrencyPricing": {
+      "title": "Multi-Currency Pricing",
+      "content1": "CueQuote lets you set exact prices per currency on every catalog item, so proposals always show the right number — not a converted estimate. When a client selects USD or EUR as their proposal currency, CueQuote pulls the manual price you set, not an auto-converted figure.",
+      "content2": "If no manual price exists for the chosen currency, CueQuote falls back to automatic conversion using the current exchange rate. You can override this any time by adding a specific price for that currency on the item.",
+      "step1": "Go to Catalog and open any equipment item you want to price in multiple currencies",
+      "step2": "In the item editor, find the Currency Prices section and click Add Currency — choose USD, EUR, GBP, or any supported currency",
+      "step3": "Enter the exact price for that currency (e.g. $450 for a camera that costs €400), then save the item",
+      "step4": "Create or open a proposal and set the proposal currency — CueQuote automatically uses your manual price for items that have it, and converts the rest",
+      "tip": "Set manual USD and EUR prices on your most popular items to avoid rounding surprises on international proposals"
+    },
+    "proposalApprovalWorkflow": {
+      "title": "Proposal Approval Workflow",
+      "content1": "The approval workflow lets managers review proposals before they reach clients. Once enabled, team members submit proposals for approval instead of sending them directly — the proposal is locked for editing until a decision is made.",
+      "content2": "Only workspace Owners and Admins can approve or reject proposals. Approvers can leave internal comments visible only to the team, making it easy to request specific changes without back-and-forth emails.",
+      "step1": "Go to Settings → Proposals and toggle on Require approval before sending to enable the workflow for your workspace",
+      "step2": "Create a proposal as usual, then click Submit for Approval instead of Send — the proposal status changes to Pending Approval",
+      "step3": "The manager receives an email notification and can open the proposal to review all details, pricing, and terms",
+      "step4": "The approver clicks Approve to allow sending, Reject to block it, or Request Changes to send it back with comments",
+      "step5": "If changes are requested, the original creator edits the proposal and resubmits — the cycle repeats until the proposal is approved or rejected",
+      "tip": "Use the internal comments field to leave specific feedback like 'adjust the setup day rate' so the creator knows exactly what to fix"
+    },
+    "customCategories": {
+      "title": "Custom Categories",
+      "content1": "CueQuote includes 13 built-in equipment categories (Lighting, Audio, Video, etc.), but you can create your own for anything that doesn't fit. Custom categories appear everywhere the built-in ones do: catalog, proposals, PDF exports, and the client share page.",
+      "content2": "The category field uses a combobox — start typing to filter existing categories, or type a new name and press Enter to create it on the spot. You can also rename individual section headings per proposal without affecting the category name globally.",
+      "step1": "In the Catalog, open or create an item and click the Category field — type to search existing categories or type a new name like 'Staging' and press Enter to create it",
+      "step2": "Save the item — the new category is now available across your entire workspace for other items",
+      "step3": "To rename a category heading in a specific proposal only, open the proposal, click the section heading, and type the new name — this affects only that proposal's PDF and share page",
+      "tip": "Keep custom category names short and consistent — they appear as section headings in the PDF, so 'Rigging & Trussing' works better than 'Rigging equipment and trussing systems'"
     }
   },
   "changelog": {

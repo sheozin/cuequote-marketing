@@ -1116,4 +1116,91 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'multi-currency-pricing',
+    title: 'Multi-Currency Pricing',
+    description: 'Set per-currency prices in your catalog so proposals automatically use the right rate for each currency without manual conversion.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'both',
+    icon: '💱',
+    whatYouLearn: [
+      'How to add USD, EUR, and other currency prices to catalog items',
+      'How proposal generation picks the correct currency price',
+      'How auto-conversion fallback works when no local price is set',
+      'Best practices for keeping multi-currency prices up to date',
+    ],
+    steps: [
+      {
+        title: 'Open a catalog item for editing',
+        content: 'Go to Catalog from the sidebar and click on any item to open its detail panel, then click Edit. Below the default price field you\'ll see a "Multi-Currency Prices" section. This is where you can set prices in additional currencies beyond your company default.',
+        tip: 'Start with the currencies you quote most frequently — typically EUR, USD, and GBP for international AV companies.',
+      },
+      {
+        title: 'Add a price for each currency',
+        content: 'Click "Add Currency Price" and select a currency from the dropdown (EUR, USD, GBP, PLN, AED, EGP, CHF). Enter the rental price in that currency. Repeat for each additional currency you want to set. Each currency price you enter is an exact rate — not a conversion. This lets you reflect local market rates and negotiated pricing for different regions.',
+      },
+      {
+        title: 'Understand how proposal generation picks the price',
+        content: 'When the AI generates a proposal in a specific currency, it looks for a matching catalog price in that same currency first. If you have set a USD price on an item and the proposal is in USD, that exact price is used. This ensures your proposals always reflect your real rates for each market — not floating exchange rates.',
+        tip: 'Set realistic local market prices rather than converting your home currency. A PA system that rents for €500/day in Poland may have a different market rate at $600/day in the US.',
+      },
+      {
+        title: 'Auto-conversion fallback',
+        content: 'If a proposal uses a currency for which you have not set a specific price on a catalog item, CueQuote falls back to converting your default currency price using the current market exchange rate. The converted price is flagged in the proposal editor with a small exchange icon so you can verify it before sending. You can override any auto-converted price manually in the editor.',
+      },
+      {
+        title: 'Keep prices current',
+        content: 'Multi-currency prices are static — they do not update automatically with exchange rate movements. Review your currency prices periodically (quarterly is a good cadence) and update any that have drifted significantly from current market rates. For items you sub-hire, align your catalog currency prices with your supplier\'s invoicing currency to protect your margins.',
+        tip: 'Add a calendar reminder every quarter to review your top 20 catalog items across all currencies. Five minutes of price maintenance prevents margin surprises on large proposals.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-approval-workflow',
+    title: 'Proposal Approval Workflow',
+    description: 'Enable internal approval so proposals are reviewed and signed off by a manager before they reach clients.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    mode: 'both',
+    icon: '✅',
+    whatYouLearn: [
+      'Enabling the approval workflow in Settings',
+      'How to submit a proposal for manager approval',
+      'The manager review process and internal comments',
+      'Understanding approval statuses (pending, approved, rejected)',
+      'What happens to a proposal after approval or rejection',
+    ],
+    steps: [
+      {
+        title: 'Enable approval in Settings',
+        content: 'Go to Settings from the sidebar and open the "Proposals" tab. Toggle on "Require approval before sending". Once enabled, any proposal created by a Sales role member must be approved by an Admin or Owner before it can be sent to a client. Owners and Admins can send proposals directly without going through the approval flow.',
+        tip: 'Enable approval when you have a sales team creating proposals — it gives managers a quality gate before anything reaches clients.',
+      },
+      {
+        title: 'Submit a proposal for approval',
+        content: 'When a Sales team member finishes building a proposal, they click "Submit for Approval" instead of "Send". This locks the proposal from further editing and changes its status to "Pending Approval". The proposal appears in the manager\'s approval queue immediately. The submitting team member can add an optional note explaining anything the reviewer should know.',
+      },
+      {
+        title: 'Manager reviews the proposal',
+        content: 'Managers (Admins and Owners) see a notification in the app and an email alert when a proposal enters their approval queue. They open the proposal in full read-only view — all line items, pricing, terms, inclusions, exclusions, and totals are visible. The manager can also download the PDF preview to see exactly what the client would receive.',
+        tip: 'Review the proposal total, payment terms, and T&C carefully — these are the three areas that most often need adjustment before a proposal should go to a client.',
+      },
+      {
+        title: 'Leave internal comments',
+        content: 'In the approval panel on the right side of the proposal, managers can leave internal comments visible only to the team — not to the client. Use comments to explain what needs changing: "Reduce the discount to 10% max" or "Add the outdoor generator exclusion to the terms". The submitter sees these comments immediately and can unlock the proposal to make edits.',
+      },
+      {
+        title: 'Approve or reject',
+        content: 'After reviewing, the manager clicks "Approve" or "Reject". Approving unlocks the Send button for the submitter — they receive a notification that the proposal is cleared to go. Rejecting sends the proposal back to Draft status with the manager\'s comments visible, so the submitter knows exactly what to fix before resubmitting.',
+      },
+      {
+        title: 'Approval statuses at a glance',
+        content: 'Proposals in the approval workflow show one of four statuses on the proposals list: Draft (not yet submitted), Pending Approval (waiting for manager review), Approved (cleared to send), or Rejected (sent back for revision). Filter the proposals list by status to see your full approval queue at once. Approved proposals that have been sent then follow the normal Sent → Viewed → Won/Lost flow.',
+        tip: 'Set a team norm for approval turnaround time — 4 business hours is a common target. Slow approvals can delay time-sensitive event quotes.',
+      },
+    ],
+  },
 ]

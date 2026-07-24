@@ -1740,6 +1740,36 @@
       "step4": "Prüfen Sie die Crew-Empfehlungen für benötigte technische Rollen, Personenzahl und typische Tagesratespanne",
       "step5": "Lesen Sie den Veranstaltungszeitplan und den Abschnitt Profitipps zur Arbeit mit AV-Dienstleistern",
       "tip": "Verwenden Sie den Budgetkorridor bei Angebotsanfragen — liegt ein Angebot außerhalb des Korridors, bitten Sie den Dienstleister um eine Erklärung"
+    },
+    "multiCurrencyPricing": {
+      "title": "Mehrwährungs-Preisgestaltung",
+      "content1": "CueQuote ermöglicht es Ihnen, für jeden Katalogeintrag genaue Preise pro Währung festzulegen, sodass Angebote immer den richtigen Betrag zeigen — keine umgerechnete Schätzung. Wenn ein Kunde USD oder EUR als Angebotswährung wählt, zieht CueQuote den von Ihnen manuell festgelegten Preis, nicht eine automatisch umgerechnete Zahl.",
+      "content2": "Wenn kein manueller Preis für die gewählte Währung existiert, greift CueQuote auf die automatische Umrechnung zum aktuellen Wechselkurs zurück. Sie können dies jederzeit überschreiben, indem Sie einen spezifischen Preis für diese Währung beim Artikel hinzufügen.",
+      "step1": "Gehen Sie zum Katalog und öffnen Sie einen Ausrüstungsartikel, den Sie in mehreren Währungen bepreisen möchten",
+      "step2": "Suchen Sie im Artikeleditor den Abschnitt Währungspreise und klicken Sie auf Währung hinzufügen — wählen Sie USD, EUR, GBP oder eine andere unterstützte Währung",
+      "step3": "Geben Sie den genauen Preis für diese Währung ein (z. B. 450 $ für eine Kamera, die 400 € kostet), und speichern Sie den Artikel",
+      "step4": "Erstellen oder öffnen Sie ein Angebot und legen Sie die Angebotswährung fest — CueQuote verwendet automatisch Ihren manuellen Preis für Artikel, die einen haben, und rechnet den Rest um",
+      "tip": "Setzen Sie manuelle USD- und EUR-Preise für Ihre beliebtesten Artikel, um Überraschungen beim Runden in internationalen Angeboten zu vermeiden"
+    },
+    "proposalApprovalWorkflow": {
+      "title": "Angebots-Freigabe-Workflow",
+      "content1": "Der Freigabe-Workflow ermöglicht es Managern, Angebote zu prüfen, bevor sie den Kunden erreichen. Nach der Aktivierung reichen Teammitglieder Angebote zur Freigabe ein, anstatt sie direkt zu senden — das Angebot wird bis zur Entscheidung gesperrt.",
+      "content2": "Nur Workspace-Inhaber und Administratoren können Angebote genehmigen oder ablehnen. Freigabende können interne Kommentare hinterlassen, die nur für das Team sichtbar sind, was spezifische Änderungsanfragen ohne E-Mail-Austausch ermöglicht.",
+      "step1": "Gehen Sie zu Einstellungen → Angebote und aktivieren Sie Freigabe vor dem Senden erforderlich, um den Workflow für Ihren Workspace zu aktivieren",
+      "step2": "Erstellen Sie ein Angebot wie gewohnt und klicken Sie dann auf Zur Freigabe einreichen statt Senden — der Status wechselt zu Freigabe ausstehend",
+      "step3": "Der Manager erhält eine E-Mail-Benachrichtigung und kann das Angebot öffnen, um alle Details, Preise und Konditionen zu prüfen",
+      "step4": "Der Freigebende klickt auf Genehmigen, um das Senden zu erlauben, Ablehnen, um es zu blockieren, oder Änderungen anfordern, um es mit Kommentaren zurückzusenden",
+      "step5": "Wenn Änderungen angefordert werden, bearbeitet der ursprüngliche Ersteller das Angebot und reicht es erneut ein — der Zyklus wiederholt sich bis zur Genehmigung oder Ablehnung",
+      "tip": "Nutzen Sie das interne Kommentarfeld für konkrete Rückmeldungen wie 'Aufbautagsrate anpassen', damit der Ersteller genau weiß, was zu korrigieren ist"
+    },
+    "customCategories": {
+      "title": "Benutzerdefinierte Kategorien",
+      "content1": "CueQuote enthält 13 eingebaute Ausrüstungskategorien (Beleuchtung, Audio, Video usw.), aber Sie können eigene für alles erstellen, was nicht passt. Benutzerdefinierte Kategorien erscheinen überall, wo die eingebauten erscheinen: Katalog, Angebote, PDF-Exporte und die Kunden-Freigabeseite.",
+      "content2": "Das Kategoriefeld funktioniert als Combobox — tippen Sie, um vorhandene Kategorien zu filtern, oder geben Sie einen neuen Namen ein und drücken Sie Enter, um ihn sofort zu erstellen. Sie können auch Abschnittsüberschriften je Angebot umbenennen, ohne den globalen Kategorienamen zu beeinflussen.",
+      "step1": "Öffnen oder erstellen Sie im Katalog einen Artikel und klicken Sie auf das Feld Kategorie — tippen Sie, um vorhandene Kategorien zu durchsuchen, oder geben Sie einen neuen Namen wie 'Bühne' ein und drücken Sie Enter",
+      "step2": "Speichern Sie den Artikel — die neue Kategorie ist jetzt im gesamten Workspace für andere Artikel verfügbar",
+      "step3": "Um eine Kategorieüberschrift nur in einem bestimmten Angebot umzubenennen, öffnen Sie das Angebot, klicken Sie auf die Abschnittsüberschrift und tippen Sie den neuen Namen — dies betrifft nur das PDF und die Freigabeseite dieses Angebots",
+      "tip": "Halten Sie benutzerdefinierte Kategorienamen kurz und konsistent — sie erscheinen als Abschnittsüberschriften im PDF, daher ist 'Rigging & Traversen' besser als 'Rigging-Ausrüstung und Traversensysteme'"
     }
   },
   "changelog": {

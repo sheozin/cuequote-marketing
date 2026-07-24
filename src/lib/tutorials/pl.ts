@@ -1070,4 +1070,91 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'multi-currency-pricing',
+    title: 'Wycena w wielu walutach',
+    description: 'Ustaw ceny w poszczególnych walutach w katalogu, aby oferty automatycznie używały właściwego kursu bez ręcznego przeliczania.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Konfiguracja',
+    mode: 'both',
+    icon: '💱',
+    whatYouLearn: [
+      'Jak dodawać ceny w USD, EUR i innych walutach do pozycji katalogu',
+      'Jak generowanie ofert wybiera właściwą cenę walutową',
+      'Jak działa automatyczne przeliczanie przy braku lokalnej ceny',
+      'Najlepsze praktyki aktualizacji cen walutowych',
+    ],
+    steps: [
+      {
+        title: 'Otwórz pozycję katalogu do edycji',
+        content: 'Przejdź do Katalogu z paska bocznego i kliknij dowolną pozycję, aby otworzyć panel szczegółów, a następnie kliknij Edytuj. Poniżej pola ceny domyślnej zobaczysz sekcję „Ceny w wielu walutach". Tu możesz ustawić ceny w walutach dodatkowych, poza domyślną walutą firmy.',
+        tip: 'Zacznij od walut, w których najczęściej wystawiasz oferty — najczęściej EUR, USD i GBP dla firm AV obsługujących klientów zagranicznych.',
+      },
+      {
+        title: 'Dodaj cenę dla każdej waluty',
+        content: 'Kliknij „Dodaj cenę walutową" i wybierz walutę z listy (EUR, USD, GBP, PLN, AED, EGP, CHF). Wpisz cenę najmu w tej walucie. Powtórz dla każdej kolejnej waluty. Każda wpisana cena jest kursem dokładnym — nie przeliczeniem. Dzięki temu możesz odzwierciedlić stawki rynku lokalnego i ceny negocjowane dla różnych regionów.',
+      },
+      {
+        title: 'Zrozum, jak generowanie ofert wybiera cenę',
+        content: 'Gdy AI generuje ofertę w określonej walucie, najpierw szuka pasującej ceny katalogowej w tej samej walucie. Jeśli ustawiłeś cenę w USD dla pozycji, a oferta jest w USD, użyta zostanie dokładnie ta cena. Zapewnia to, że Twoje oferty zawsze odzwierciedlają rzeczywiste stawki dla każdego rynku — a nie zmienne kursy wymiany.',
+        tip: 'Ustalaj realistyczne lokalne ceny rynkowe zamiast przeliczać walutę domową. System PA wynajmowany za 500 €/dzień w Polsce może mieć inną stawkę rynkową — 600 $/dzień w USA.',
+      },
+      {
+        title: 'Automatyczne przeliczanie jako rezerwa',
+        content: 'Jeśli oferta używa waluty, dla której nie ustawiłeś ceny dla danej pozycji katalogu, CueQuote automatycznie przelicza cenę w walucie domyślnej po bieżącym kursie rynkowym. Przeliczona cena jest oznaczona w edytorze oferty małą ikoną wymiany, abyś mógł ją zweryfikować przed wysłaniem. Każdą automatycznie przeliczoną cenę możesz ręcznie nadpisać w edytorze.',
+      },
+      {
+        title: 'Utrzymuj ceny na bieżąco',
+        content: 'Ceny w wielu walutach są statyczne — nie aktualizują się automatycznie wraz ze zmianami kursów walut. Przeglądaj je regularnie (zalecany cykl kwartalny) i aktualizuj pozycje, które znacząco odbiegają od aktualnych stawek rynkowych. Dla pozycji podnajmowanych od dostawców synchronizuj ceny walutowe w katalogu z walutą fakturowania dostawcy, aby chronić marże.',
+        tip: 'Ustaw kwartalny przypomnienie w kalendarzu, aby przejrzeć 20 najważniejszych pozycji katalogu we wszystkich walutach. Pięć minut konserwacji cen zapobiega nieprzyjemnym niespodziankom marżowym przy dużych ofertach.',
+      },
+    ],
+  },
+  {
+    slug: 'proposal-approval-workflow',
+    title: 'Przepływ zatwierdzania ofert',
+    description: 'Włącz wewnętrzne zatwierdzanie, aby oferty były przeglądane i zatwierdzane przez menedżera przed wysłaniem do klientów.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Oferty',
+    mode: 'both',
+    icon: '✅',
+    whatYouLearn: [
+      'Włączanie przepływu zatwierdzania w Ustawieniach',
+      'Jak przesłać ofertę do zatwierdzenia przez menedżera',
+      'Proces przeglądu przez menedżera i komentarze wewnętrzne',
+      'Statusy zatwierdzania (oczekuje, zatwierdzona, odrzucona)',
+      'Co dzieje się z ofertą po zatwierdzeniu lub odrzuceniu',
+    ],
+    steps: [
+      {
+        title: 'Włącz zatwierdzanie w Ustawieniach',
+        content: 'Przejdź do Ustawień z paska bocznego i otwórz zakładkę „Oferty". Włącz opcję „Wymagaj zatwierdzenia przed wysłaniem". Po włączeniu każda oferta utworzona przez członka zespołu z rolą Sprzedaż musi zostać zatwierdzona przez Administratora lub Właściciela przed wysłaniem do klienta. Właściciele i Administratorzy mogą wysyłać oferty bezpośrednio bez przechodzenia przez przepływ zatwierdzania.',
+        tip: 'Włącz zatwierdzanie, gdy masz zespół sprzedaży tworzący oferty — daje menedżerom punkt kontroli jakości przed wysłaniem czegokolwiek do klientów.',
+      },
+      {
+        title: 'Prześlij ofertę do zatwierdzenia',
+        content: 'Gdy członek zespołu sprzedaży kończy budowanie oferty, klika „Prześlij do zatwierdzenia" zamiast „Wyślij". Blokuje to ofertę przed dalszą edycją i zmienia jej status na „Oczekuje na zatwierdzenie". Oferta pojawia się natychmiast w kolejce zatwierdzania menedżera. Osoba przesyłająca może dodać opcjonalną notatkę wyjaśniającą recenzentowi ważne informacje.',
+      },
+      {
+        title: 'Menedżer przegląda ofertę',
+        content: 'Menedżerowie (Administratorzy i Właściciele) widzą powiadomienie w aplikacji i alert e-mail, gdy oferta trafia do ich kolejki zatwierdzania. Otwierają ofertę w pełnym widoku tylko do odczytu — widoczne są wszystkie pozycje, ceny, warunki, elementy uwzględnione, wyłączenia i sumy. Menedżer może też pobrać podgląd PDF, aby zobaczyć dokładnie to, co otrzymałby klient.',
+        tip: 'Uważnie sprawdź sumę oferty, warunki płatności i regulamin — to trzy obszary, które najczęściej wymagają korekty przed wysłaniem oferty do klienta.',
+      },
+      {
+        title: 'Zostaw komentarze wewnętrzne',
+        content: 'W panelu zatwierdzania po prawej stronie oferty menedżerowie mogą zostawiać komentarze wewnętrzne widoczne tylko dla zespołu — nie dla klienta. Używaj komentarzy, aby wyjaśnić, co należy zmienić: „Zredukuj rabat do maksymalnie 10%" lub „Dodaj wykluczenie generatora dla plenerów do warunków". Osoba przesyłająca widzi te komentarze natychmiast i może odblokować ofertę w celu wprowadzenia poprawek.',
+      },
+      {
+        title: 'Zatwierdź lub odrzuć',
+        content: 'Po sprawdzeniu menedżer klika „Zatwierdź" lub „Odrzuć". Zatwierdzenie odblokowuje przycisk Wyślij dla osoby przesyłającej — otrzymuje ona powiadomienie, że oferta jest gotowa do wysłania. Odrzucenie odsyła ofertę do statusu Szkic z widocznymi komentarzami menedżera, dzięki czemu osoba przesyłająca wie dokładnie, co poprawić przed ponownym przesłaniem.',
+      },
+      {
+        title: 'Statusy zatwierdzania na pierwszy rzut oka',
+        content: 'Oferty w przepływie zatwierdzania pokazują jeden z czterech statusów na liście ofert: Szkic (jeszcze nieprzesłana), Oczekuje na zatwierdzenie (czeka na przegląd menedżera), Zatwierdzona (gotowa do wysłania) lub Odrzucona (odesłana do poprawek). Filtruj listę ofert według statusu, aby zobaczyć całą kolejkę zatwierdzania. Zatwierdzone i wysłane oferty przechodzą następnie przez normalny przepływ: Wysłana → Wyświetlona → Wygrana/Przegrana.',
+        tip: 'Ustal w zespole normę czasu realizacji zatwierdzenia — 4 godziny robocze to częsty cel. Opóźnione zatwierdzenia mogą utrudniać oferty związane z napiętymi terminami.',
+      },
+    ],
+  },
 ]

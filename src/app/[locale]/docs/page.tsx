@@ -196,6 +196,9 @@ const ARTICLE_KEYS = [
   { id: 'feedback-support', key: 'feedbackSupport', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   { id: 'catalog-suggestions', key: 'catalogSuggestions', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3'] },
   { id: 'planner-budget', key: 'plannerBudget', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
+  { id: 'multi-currency-pricing', key: 'multiCurrencyPricing', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
+  { id: 'proposal-approval-workflow', key: 'proposalApprovalWorkflow', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
+  { id: 'custom-categories', key: 'customCategories', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3'] },
 ];
 
 export default async function DocsPage() {

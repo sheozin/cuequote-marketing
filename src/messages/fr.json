@@ -1742,6 +1742,36 @@
       "step4": "Examinez les Recommandations d'équipe pour connaître les rôles techniques requis, le nombre de personnes et la fourchette de tarif journalier",
       "step5": "Lisez le Calendrier événementiel et la section Conseils pro pour travailler efficacement avec les prestataires AV",
       "tip": "Utilisez la fourchette budgétaire lors des demandes de devis — si un devis dépasse la fourchette, demandez au prestataire d'expliquer la différence"
+    },
+    "multiCurrencyPricing": {
+      "title": "Tarification multidevise",
+      "content1": "CueQuote vous permet de définir des prix exacts par devise sur chaque article du catalogue, de sorte que les propositions affichent toujours le bon montant — pas une estimation convertie. Lorsqu'un client sélectionne USD ou EUR comme devise de proposition, CueQuote utilise le prix manuel que vous avez défini, pas un chiffre converti automatiquement.",
+      "content2": "Si aucun prix manuel n'existe pour la devise choisie, CueQuote bascule sur la conversion automatique au taux de change actuel. Vous pouvez remplacer cela à tout moment en ajoutant un prix spécifique pour cette devise sur l'article.",
+      "step1": "Allez dans le Catalogue et ouvrez tout article d'équipement que vous souhaitez tarifer en plusieurs devises",
+      "step2": "Dans l'éditeur d'article, trouvez la section Prix par devise et cliquez sur Ajouter une devise — choisissez USD, EUR, GBP ou toute devise prise en charge",
+      "step3": "Saisissez le prix exact pour cette devise (ex. 450 $ pour une caméra qui coûte 400 €), puis enregistrez l'article",
+      "step4": "Créez ou ouvrez une proposition et définissez la devise de la proposition — CueQuote utilise automatiquement votre prix manuel pour les articles qui en ont un, et convertit le reste",
+      "tip": "Définissez des prix manuels en USD et EUR pour vos articles les plus populaires afin d'éviter les surprises d'arrondi sur les propositions internationales"
+    },
+    "proposalApprovalWorkflow": {
+      "title": "Workflow de validation des propositions",
+      "content1": "Le workflow de validation permet aux responsables de vérifier les propositions avant qu'elles n'atteignent les clients. Une fois activé, les membres de l'équipe soumettent les propositions à validation au lieu de les envoyer directement — la proposition est verrouillée pour modification jusqu'à ce qu'une décision soit prise.",
+      "content2": "Seuls les propriétaires et administrateurs de l'espace de travail peuvent approuver ou rejeter des propositions. Les approbateurs peuvent laisser des commentaires internes visibles uniquement par l'équipe, ce qui facilite les demandes de modifications spécifiques sans échanges d'e-mails.",
+      "step1": "Allez dans Paramètres → Propositions et activez Exiger une validation avant l'envoi pour activer le workflow dans votre espace de travail",
+      "step2": "Créez une proposition comme d'habitude, puis cliquez sur Soumettre à validation au lieu d'Envoyer — le statut de la proposition passe à En attente de validation",
+      "step3": "Le responsable reçoit une notification par e-mail et peut ouvrir la proposition pour examiner tous les détails, prix et conditions",
+      "step4": "L'approbateur clique sur Approuver pour autoriser l'envoi, Rejeter pour le bloquer, ou Demander des modifications pour le renvoyer avec des commentaires",
+      "step5": "Si des modifications sont demandées, le créateur initial modifie la proposition et la resoumet — le cycle se répète jusqu'à l'approbation ou le rejet",
+      "tip": "Utilisez le champ commentaires internes pour laisser des retours précis comme 'ajuster le tarif jour de montage' afin que le créateur sache exactement quoi corriger"
+    },
+    "customCategories": {
+      "title": "Catégories personnalisées",
+      "content1": "CueQuote inclut 13 catégories d'équipement intégrées (Éclairage, Audio, Vidéo, etc.), mais vous pouvez en créer de nouvelles pour tout ce qui ne rentre pas dedans. Les catégories personnalisées apparaissent partout où les catégories intégrées apparaissent : catalogue, propositions, exports PDF et page de partage client.",
+      "content2": "Le champ catégorie utilise une combobox — commencez à taper pour filtrer les catégories existantes, ou tapez un nouveau nom et appuyez sur Entrée pour le créer immédiatement. Vous pouvez également renommer les intitulés de section par proposition sans affecter le nom de catégorie globalement.",
+      "step1": "Dans le Catalogue, ouvrez ou créez un article et cliquez sur le champ Catégorie — tapez pour rechercher les catégories existantes ou saisissez un nouveau nom comme 'Scénographie' et appuyez sur Entrée pour le créer",
+      "step2": "Enregistrez l'article — la nouvelle catégorie est maintenant disponible dans tout votre espace de travail pour d'autres articles",
+      "step3": "Pour renommer un intitulé de catégorie dans une proposition spécifique uniquement, ouvrez la proposition, cliquez sur l'intitulé de section et tapez le nouveau nom — cela n'affecte que le PDF et la page de partage de cette proposition",
+      "tip": "Gardez les noms de catégories personnalisées courts et cohérents — ils apparaissent comme intitulés de section dans le PDF, donc 'Gréage & Praticables' fonctionne mieux que 'Équipements de gréage et systèmes de praticables'"
     }
   },
   "changelog": {
