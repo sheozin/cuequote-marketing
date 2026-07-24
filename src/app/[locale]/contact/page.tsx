@@ -27,7 +27,21 @@ export async function generateMetadata(): Promise<Metadata> {
         'fr': `https://cuequote.com/fr${pagePath}`,
       },
     },
-    openGraph: { title, description },
+    openGraph: {
+      title,
+      description,
+      url: `https://cuequote.com${localePath}${pagePath}`,
+      siteName: 'CueQuote',
+      type: 'website',
+      images: [{ url: 'https://cuequote.com/og-image.png', width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      site: '@cuequote',
+      images: ['https://cuequote.com/og-image.png'],
+    },
   };
 }
 
