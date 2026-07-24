@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
+import { Testimonials } from "../../../components/Testimonials";
 import {
   Sparkles, ArrowRight, AlertTriangle, ClipboardList, Search,
   BarChart3, Shield, Scale, FileText, Users,
+  Building2, Award, Heart, HelpCircle, ChevronDown,
 } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 
@@ -73,6 +75,20 @@ export default async function ForEventPlannersPage() {
     { icon: <BarChart3 size={22} />, titleKey: "feat4Title" as const, descKey: "feat4Desc" as const },
     { icon: <FileText size={22} />, titleKey: "feat5Title" as const, descKey: "feat5Desc" as const },
     { icon: <Users size={22} />, titleKey: "feat6Title" as const, descKey: "feat6Desc" as const },
+  ];
+
+  const useCases = [
+    { icon: <Building2 size={28} />, titleKey: "useCase1Title" as const, subtitleKey: "useCase1Subtitle" as const, descKey: "useCase1Desc" as const },
+    { icon: <Award size={28} />, titleKey: "useCase2Title" as const, subtitleKey: "useCase2Subtitle" as const, descKey: "useCase2Desc" as const },
+    { icon: <Heart size={28} />, titleKey: "useCase3Title" as const, subtitleKey: "useCase3Subtitle" as const, descKey: "useCase3Desc" as const },
+  ];
+
+  const faqs = [
+    { qKey: "faq1Q" as const, aKey: "faq1A" as const },
+    { qKey: "faq2Q" as const, aKey: "faq2A" as const },
+    { qKey: "faq3Q" as const, aKey: "faq3A" as const },
+    { qKey: "faq4Q" as const, aKey: "faq4A" as const },
+    { qKey: "faq5Q" as const, aKey: "faq5A" as const },
   ];
 
   return (
@@ -242,6 +258,104 @@ export default async function ForEventPlannersPage() {
                 <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 6 }}>{t(titleKey)}</h3>
                 <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6 }}>{t(descKey)}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Use Cases ──────────────────────────────────────────────────────── */}
+      <section style={{ padding: "96px 24px", background: "#f9fafb" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
+            <p style={{ fontSize: 12, fontWeight: 700, color: "#10b981", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 12 }}>
+              {t("useCasesLabel")}
+            </p>
+            <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", marginBottom: 12 }}>
+              {t("useCasesTitle")}
+            </h2>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+            {useCases.map(({ icon, titleKey, subtitleKey, descKey }) => (
+              <div key={titleKey} style={{
+                background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 32,
+                textAlign: "center",
+              }}>
+                <div style={{
+                  width: 56, height: 56, borderRadius: 14, background: "#ecfdf5",
+                  display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981",
+                  margin: "0 auto 20px",
+                }}>
+                  {icon}
+                </div>
+                <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 20, color: "#08172E", marginBottom: 4 }}>
+                  {t(titleKey)}
+                </h3>
+                <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 12 }}>
+                  {t(subtitleKey)}
+                </p>
+                <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6 }}>{t(descKey)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Testimonials ───────────────────────────────────────────────────── */}
+      <Testimonials title={t("testimonialsTitle")} subtitle={t("testimonialsSubtitle")} />
+
+      {/* ── Pricing Teaser ─────────────────────────────────────────────────── */}
+      <section style={{ padding: "64px 24px", background: "#ecfdf5", textAlign: "center" }}>
+        <div style={{ maxWidth: 600, margin: "0 auto" }}>
+          <Sparkles size={24} style={{ color: "#10b981", marginBottom: 16 }} />
+          <h2 style={{
+            fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 28, color: "#08172E",
+            marginBottom: 8,
+          }}>
+            {t("pricingTeaser")}
+          </h2>
+          <p style={{ fontSize: 16, color: "#6b7280", marginBottom: 24 }}>
+            {t("pricingDesc")}
+          </p>
+          <Link href="/pricing" style={{
+            textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 8,
+            color: "#10b981", fontWeight: 600, fontSize: 16,
+          }}>
+            {t("pricingLink")} <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+
+      {/* ── FAQ ────────────────────────────────────────────────────────────── */}
+      <section style={{ padding: "96px 24px", background: "#fff" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <p style={{ fontSize: 12, fontWeight: 700, color: "#10b981", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 12 }}>
+              {t("faqLabel")}
+            </p>
+            <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E" }}>
+              {t("faqTitle")}
+            </h2>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            {faqs.map(({ qKey, aKey }) => (
+              <details key={qKey} style={{
+                background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 12,
+                overflow: "hidden",
+              }}>
+                <summary style={{
+                  padding: "20px 24px", cursor: "pointer", fontFamily: "var(--font-dm-sans)",
+                  fontWeight: 600, fontSize: 16, color: "#08172E", listStyle: "none",
+                  display: "flex", alignItems: "center", justifyContent: "space-between",
+                }}>
+                  {t(qKey)}
+                  <ChevronDown size={18} style={{ color: "#9ca3af", flexShrink: 0 }} />
+                </summary>
+                <div style={{ padding: "0 24px 20px", fontSize: 15, color: "#6b7280", lineHeight: 1.7 }}>
+                  {t(aKey)}
+                </div>
+              </details>
             ))}
           </div>
         </div>
