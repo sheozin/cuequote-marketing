@@ -428,6 +428,24 @@
     "forEventPlanners": "Pour les planificateurs d'événements"
   },
   "posts": {
+    "complete-guide-av-quoting": {
+      "title": "Le guide complet du devis AV : processus, tarification et erreurs courantes",
+      "excerpt": "Tout ce que les entreprises AV doivent savoir sur les devis — de la compréhension du brief client aux stratégies de prix, erreurs courantes et outils IA qui accélèrent le processus.",
+      "readTime": "9 min de lecture",
+      "content": [
+        "Le devis AV est le processus commercial le plus important pour toute entreprise de production audiovisuelle. Chaque projet commence par un devis, et sa qualité, sa rapidité et sa précision déterminent si vous remportez le contrat ou le perdez face à un concurrent. Ce guide couvre l'ensemble du processus de devis AV — des modèles de tarification aux erreurs courantes et aux outils IA modernes.",
+        "Le processus de devis AV commence dès la réception d'une demande — et la rapidité de votre réponse compte plus que la plupart des entreprises ne le réalisent. Les données du secteur montrent que le premier devis professionnel dans la boîte mail du client établit le point de référence.",
+        "La compréhension du brief client est ce qui sépare les deviseurs expérimentés des débutants. Un brief qui dit 'AV pour une conférence de 200 personnes' contient des informations utiles, mais ce qu'il omet est plus important.",
+        "Les modèles de tarification se divisent en trois catégories : par jour, par événement et forfaitaire. La plupart des entreprises AV performantes utilisent une combinaison de ces modèles.",
+        "L'une des erreurs les plus courantes est la sous-estimation de la main-d'œuvre. L'équipement attire l'attention, mais c'est l'équipe qui détermine le succès ou l'échec du projet.",
+        "Une autre erreur coûteuse est de présenter les prix sans contexte. Structurez votre devis par catégorie — Audio, Vidéo, Éclairage, Scène, Équipe, Logistique — avec des sous-totaux.",
+        "Le format et la présentation de votre devis AV envoient un message avant que le client ne lise une seule ligne. Un PDF propre et brandé avec votre logo signale le professionnalisme.",
+        "La vitesse de devis était historiquement limitée par le travail manuel. Les outils IA comme CueQuote compriment ce temps en minutes grâce à l'automatisation.",
+        "L'IA ne remplace pas le jugement d'un professionnel AV expérimenté — elle gère le travail d'assemblage pour que le professionnel puisse se concentrer sur les décisions stratégiques.",
+        "Les erreurs courantes incluent : devis sans visite du lieu, oubli d'éléments standards, prix obsolètes, absence de CGV et pas de relance dans les 48 heures.",
+        "Pour améliorer votre taux de conversion : répondez plus vite, présentez plus professionnellement et utilisez des outils comme CueQuote pour automatiser la mise en forme et générer des devis depuis votre catalogue."
+      ]
+    },
     "how-much-does-av-cost-for-events": {
       "title": "Combien coûte l'AV pour un événement ? Guide complet des prix 2026",
       "excerpt": "La tarification de la production audiovisuelle événementielle est notoirement opaque. Que vous organisiez une réunion de conseil de 50 personnes ou une conférence de 500 participants, comprendre les coûts réels des systèmes de sonorisation, écrans LED, éclairage et équipes techniques vous aidera à budgétiser précisément.",

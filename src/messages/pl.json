@@ -428,6 +428,24 @@
     "forEventPlanners": "Dla organizatorów wydarzeń"
   },
   "posts": {
+    "complete-guide-av-quoting": {
+      "title": "Kompletny przewodnik po wycenach AV: proces, ceny i najczęstsze błędy",
+      "excerpt": "Wszystko, co firmy AV muszą wiedzieć o wycenach — od analizy briefu klienta po strategie cenowe, typowe błędy i narzędzia AI przyspieszające proces.",
+      "readTime": "9 min czytania",
+      "content": [
+        "Wycena AV to najważniejszy proces biznesowy w każdej firmie produkcji audiowizualnej. Każdy projekt zaczyna się od wyceny, a jej jakość, szybkość i dokładność decyduje o tym, czy wygrasz kontrakt, czy stracisz go na rzecz konkurencji. Ten przewodnik omawia cały proces wyceny AV — od modeli cenowych po typowe błędy i narzędzia AI, które zmieniają zasady gry.",
+        "Proces wyceny AV rozpoczyna się w momencie otrzymania zapytania — a szybkość odpowiedzi ma ogromne znaczenie. Dane branżowe konsekwentnie pokazują, że pierwsza profesjonalna wycena w skrzynce klienta wyznacza punkt odniesienia dla wszystkich kolejnych porównań. Szybkość nie oznacza cięcia na skróty — oznacza posiadanie systemów, które pozwalają tworzyć dokładne, brandowane wyceny bez ręcznej pracy.",
+        "Zrozumienie briefu klienta to etap, na którym doświadczeni wyceniający odróżniają się od początkujących. Brief, który mówi 'AV na konferencję na 200 osób', zawiera przydatne informacje, ale to, co pomija, jest ważniejsze niż to, co zawiera. Musisz ustalić typ i wymiary sali, liczbę scen, wymagania streamingowe, liczbę mikrofonów i preferencje technologiczne.",
+        "Modele cenowe w wycenach AV dzielą się na trzy kategorie: dzienne, za event i pakietowe. Większość udanych firm AV stosuje kombinację: stawki dzienne za sprzęt, opłaty za event za logistykę oraz opcje pakietowe dla stałych klientów.",
+        "Jednym z najczęstszych błędów jest niedoszacowanie pracy ludzi. Sprzęt przyciąga uwagę, ponieważ jest namacalny, ale ekipa, która go ustawia i obsługuje, decyduje o sukcesie lub porażce projektu.",
+        "Kolejny błąd kosztujący kontrakty to prezentowanie cen bez kontekstu. Podziel wycenę na kategorie — Audio, Video, Oświetlenie, Scena, Ekipa, Logistyka — z podsumowaniami dla każdej z nich.",
+        "Format i prezentacja wyceny AV wysyła wiadomość, zanim klient przeczyta choćby jedną pozycję. Czysty, brandowany PDF z logo firmy i profesjonalnym formatowaniem mówi, że prowadzisz poważną firmę.",
+        "Szybkość wyceny była historycznie ograniczona przez pracę ręczną. Narzędzia AI jak CueQuote kompresują ten czas do minut, automatyzując wyszukiwanie sprzętu, kalkulację ilości i generowanie dokumentów.",
+        "AI nie zastępuje doświadczenia profesjonalisty AV — obsługuje prace montażowe, aby profesjonalista mógł skupić się na decyzjach wymagających ludzkiej wiedzy.",
+        "Typowe błędy w wycenach obejmują: wycenę bez wizyty na miejscu, zapominanie o pozycjach standardowych, stosowanie nieaktualnych cen, wysyłanie wycen bez regulaminu i brak follow-upu w ciągu 48 godzin.",
+        "Dla firm AV chcących poprawić skuteczność wycen ścieżka jest jasna: reaguj szybciej, prezentuj profesjonalniej, wyceniaj przejrzyście i śledź zaangażowanie klienta. CueQuote automatyzuje prace montażowe, wymuszając brandowany format i generując wyceny z Twojego katalogu."
+      ]
+    },
     "how-much-does-av-cost-for-events": {
       "title": "Ile kosztuje AV na event? Kompletny przewodnik cenowy na 2026 rok",
       "excerpt": "Ceny produkcji audiowizualnej na wydarzenia bywają nieprzejrzyste. Niezależnie od tego, czy planujesz spotkanie zarządu na 50 osób, czy konferencję na 500 uczestników, zrozumienie realnych kosztów nagłośnienia, ekranów LED, oświetlenia i ekipy pozwoli Ci trafnie zaplanować budżet.",
