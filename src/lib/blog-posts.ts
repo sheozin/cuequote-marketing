@@ -27,6 +27,11 @@ export const POSTS: BlogPostSummary[] = [
     date: "2026-07-16",
   },
   {
+    slug: "cuequote-vs-rentman",
+    category: "Industry",
+    date: "2026-07-11",
+  },
+  {
     slug: "interactive-proposal-viewer-client-comments",
     category: "Technology",
     date: "2026-06-27",
