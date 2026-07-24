@@ -46,6 +46,8 @@ export default function PageTracker() {
     const track = async () => {
       try {
         const lang = navigator.language?.split('-')[0] || 'en'
+        // Extract site locale from URL path
+        const pathLocale = pathname?.match(/^\/(en|pl|ar|de|fr)\//)?.[1] || 'en'
 
         // Get country from free IP API (no key needed, ~50ms)
         let country: string | null = null
@@ -68,6 +70,7 @@ export default function PageTracker() {
           browser: getBrowser(),
           screen_width: window.innerWidth,
           language: lang,
+          site_locale: pathLocale,
         })
       } catch {
         // Silent fail — analytics should never break the site
