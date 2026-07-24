@@ -12,13 +12,13 @@ interface Subscriber {
 }
 
 export default function NewsletterAdminPage() {
-  const { data, loading, refresh } = useData<Subscriber>('cms_newsletter_subscribers', 'subscribed_at');
+  const { data, loading, refresh } = useData<Subscriber>('newsletter_subscribers', 'subscribed_at');
   const audit = useAudit();
 
   const remove = async (id: string) => {
     if (!confirm('Delete this subscriber?')) return;
     const supabase = createClient();
-    await supabase.from('cms_newsletter_subscribers').delete().eq('id', id);
+    await supabase.from('newsletter_subscribers').delete().eq('id', id);
     await audit('deleted', 'newsletter_subscriber', id);
     refresh();
   };
