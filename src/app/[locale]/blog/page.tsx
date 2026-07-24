@@ -13,8 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const pagePath = '/blog';
-  const title = t("metaTitle", { defaultValue: "Blog" });
-  const description = t("metaDescription", { defaultValue: "Tips and insights for event professionals." });
+  const title = t("metaTitle", { defaultValue: "Event Production Blog — AV Tips & Industry Insights" });
+  const description = t("metaDescription", { defaultValue: "Expert guides on AV pricing, event production budgets, proposal best practices, and AI tools for event professionals. Tips for AV companies and planners." });
   return {
     title,
     description,
@@ -28,7 +28,21 @@ export async function generateMetadata(): Promise<Metadata> {
         'fr': `https://cuequote.com/fr${pagePath}`,
       },
     },
-    openGraph: { title, description },
+    openGraph: {
+      title,
+      description,
+      url: `https://cuequote.com${localePath}${pagePath}`,
+      siteName: "CueQuote",
+      type: "website",
+      images: [{ url: 'https://cuequote.com/og-image.png', width: 1200, height: 630, alt: 'CueQuote Blog — Event Production Tips & AV Insights' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      site: '@cuequote',
+      images: ['https://cuequote.com/og-image.png'],
+    },
   };
 }
 

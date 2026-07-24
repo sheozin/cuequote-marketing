@@ -106,8 +106,8 @@
     "step3Desc": "Exportez un PDF personnalisé ou partagez un lien. Suivez quand il est consulté. Soyez notifié quand on vous répond."
   },
   "pricing": {
-    "metaTitle": "Tarifs",
-    "metaDescription": "Des tarifs simples et transparents pour l'automatisation des devis événementiels et la planification de production.",
+    "metaTitle": "Plans tarifaires — Commencez gratuitement | CueQuote",
+    "metaDescription": "Plan gratuit disponible. Tarifs transparents pour les entreprises AV et les organisateurs d'événements. Évoluez sans frais cachés, résiliez à tout moment.",
     "title": "Des tarifs simples et transparents",
     "subtitle": "Commencez gratuitement. Évoluez selon vos besoins.",
     "monthly": "Mensuel",
@@ -381,8 +381,8 @@
     "error": "Une erreur s'est produite. Veuillez réessayer."
   },
   "blog": {
-    "metaTitle": "Blog",
-    "metaDescription": "Conseils et perspectives pour les professionnels de l'événementiel.",
+    "metaTitle": "Blog production événementielle — Conseils AV & insights secteur",
+    "metaDescription": "Guides experts sur la tarification AV, les budgets de production événementielle, les meilleures pratiques de devis et les outils IA pour les professionnels de l'événementiel.",
     "title": "Blog",
     "subtitle": "Conseils, guides et perspectives pour les professionnels de l'événementiel.",
     "readMore": "Lire la suite",
@@ -1784,7 +1784,7 @@
     "ctaBottomButton": "Commencer votre essai gratuit"
   },
   "plannerPage": {
-    "metaTitle": "CueQuote pour les organisateurs — Planifiez, budgétisez et produisez vos événements avec l'IA",
+    "metaTitle": "CueQuote pour les organisateurs — Planification de production événementielle IA",
     "metaDescription": "Décrivez votre événement en langage simple. Obtenez un plan de production détaillé avec équipements, équipe et budget en moins de 2 minutes. Aucune connaissance technique requise.",
     "badge": "Pour les organisateurs d'événements",
     "heroTitle": "Planifiez, budgétisez et produisez vos événements avec l'IA",
