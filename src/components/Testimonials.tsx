@@ -107,7 +107,12 @@ export function Testimonials({ title, subtitle }: { title: string; subtitle: str
     if (!el) return
     const cards = el.querySelectorAll<HTMLElement>('.m-snap-card')
     if (cards[index]) {
-      cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+      // Use scrollLeft instead of scrollIntoView to avoid scrolling the entire page
+      const card = cards[index]
+      const containerWidth = el.offsetWidth
+      const cardLeft = card.offsetLeft
+      const cardWidth = card.offsetWidth
+      el.scrollTo({ left: cardLeft - (containerWidth - cardWidth) / 2, behavior: 'smooth' })
     }
     setActive(index)
   }, [])
