@@ -1809,6 +1809,16 @@
       "step3": "Wählen Sie pro Artikel 'Katalogpreis verwenden' um das Angebot zu aktualisieren, oder 'Katalog aktualisieren' um den Angebotspreis als neuen Standard zu setzen",
       "step4": "Klicken Sie 'Alle mit Katalog abgleichen' um Katalogpreise auf alle abweichenden Positionen anzuwenden — grüne Häkchen erscheinen während der Synchronisation",
       "tip": "Der Preisabgleich ist besonders nützlich nach der KI-Generierung — die KI gleicht Katalogpositionen ab, kann aber gelegentlich leicht abweichende Preise verwenden. Ein Klick behebt alles."
+    },
+    "productionBudgetPlanner": {
+      "title": "Produktionsbudget für Veranstaltungsplaner",
+      "content1": "Wenn Sie ein Produktionsbudget im Planer-Modus generieren, erstellt die KI von CueQuote einen umfassenden Plan für Equipment und Team mit Marktpreisen. Jede Kategorie — Audio, Video, Lighting, Staging — wird als begrenzte Karte mit farbigem Badge, Elementzahl und Budgetspanne angezeigt, sodass Sie den vollständigen Produktionsumfang auf einen Blick verstehen.",
+      "content2": "Für Planungszwecke werden Audio, Video, Lighting und Staging in einer einzigen Karte 'AV & Technical' zusammengefasst. Diese einheitliche Ansicht hilft Ihnen, die Gesamtkosten der technischen Produktion zu verstehen, bevor Sie Angebote von Lieferanten anfordern. Die KI enthält auch Team-Empfehlungen, einen Veranstaltungsablauf und praktische Tipps für die Zusammenarbeit mit AV-Lieferanten.",
+      "step1": "Wechseln Sie vom Dashboard in den Planer-Modus — dies schaltet Veranstaltungsplanungs-Tools frei, die für nicht-technische Benutzer optimiert sind",
+      "step2": "Klicken Sie auf 'Produktionsbudget generieren' und beschreiben Sie Ihre Veranstaltung: Veranstaltungstyp, Teilnehmerzahl und benötigte Ausstattung (Präsentationen, Live-Musik, Streaming, Simultanübersetzung usw.). Wählen Sie eine Vorlage, die zu Ihrem Veranstaltungstyp passt, für bessere KI-Anleitungen.",
+      "step3": "Überprüfen Sie das kategorisierte Budget mit der von der KI generierten Ausrüstungsliste. Die Karte 'AV & Technical' fasst alle Audio-, Video-, Beleuchtungs- und Staging-Anforderungen zusammen mit einer Zwischensumme und Elementzahl. Klicken Sie auf die Karte, um sie zu erweitern und einzelne Positionen mit Beschreibungen und Budgetspannen anzuzeigen.",
+      "step4": "Nutzen Sie die Budgetspannen und Team-Empfehlungen bei Angebotsanfragen an Lieferanten, und beziehen Sie sich auf den Veranstaltungsablauf, um sicherzustellen, dass Lieferanten die Aufbau- und Abbauplanung verstehen. Speichern oder exportieren Sie den Plan als PDF, um ihn mit Stakeholdern zu teilen.",
+      "tip": "Die Marktpreis-Budgetspannen helfen Ihnen, Kundenerwartungen vor Lieferantenanfragen zu steuern. Wenn eine Spanne hoch oder niedrig erscheint, passen Sie die Veranstaltungsbeschreibung an und generieren Sie neu — mehr Details führen normalerweise zu genaueren Schätzungen."
     }
   },
   "changelog": {

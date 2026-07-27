@@ -333,6 +333,222 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── 4b. Product Showcase — Visually distinct sections ─────────── */}
+
+      {/* Section 1: Proposals — text left, screenshot right with emerald glow */}
+      <section style={{ padding: "120px 24px 120px", background: "#fff", position: "relative", overflow: "hidden" }}>
+        {/* Decorative dot grid */}
+        <div style={{
+          position: "absolute", top: 40, right: 0, width: 200, height: 200, opacity: 0.04,
+          backgroundImage: "radial-gradient(circle, #08172E 1.5px, transparent 1.5px)",
+          backgroundSize: "20px 20px",
+        }} />
+        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 80 }} className="showcase-row">
+          <div style={{ flex: "1 1 360px", position: "relative", zIndex: 1 }}>
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: 8,
+              background: "#ecfdf5", borderRadius: 20, padding: "6px 14px", marginBottom: 20,
+            }}>
+              <FileText size={14} style={{ color: "#10b981" }} />
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#059669", textTransform: "uppercase", letterSpacing: 1.5 }}>PROPOSALS</span>
+            </div>
+            <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", lineHeight: 1.15, marginBottom: 20 }}>
+              From event brief to branded proposal in 2 minutes
+            </h2>
+            <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 32 }}>
+              Describe the event, AI generates a complete equipment list from your catalog — with your prices, your terms, ready to send.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+              {["AI generates from your exact catalog prices", "Track sent, viewed, won, and lost", "E-signatures and client portal built in"].map(item => (
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <div style={{ width: 22, height: 22, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span style={{ fontSize: 15, color: "#374151", fontWeight: 500 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{ flex: "1 1 520px", position: "relative" }}>
+            {/* Emerald glow behind screenshot */}
+            <div style={{
+              position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
+              width: "90%", height: "80%", borderRadius: 40,
+              background: "radial-gradient(ellipse, rgba(16,185,129,0.12) 0%, transparent 70%)",
+              filter: "blur(40px)", pointerEvents: "none",
+            }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/screenshots/02-proposals.png"
+              alt="CueQuote proposals dashboard showing status tracking and pipeline value"
+              style={{
+                width: "100%", borderRadius: 16, position: "relative", zIndex: 1,
+                boxShadow: "0 25px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06)",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2: Branded Proposal — dark background, centered hero screenshot */}
+      <section style={{
+        padding: "120px 24px", position: "relative", overflow: "hidden",
+        background: "linear-gradient(180deg, #08172E 0%, #0d2240 100%)",
+      }}>
+        {/* Subtle radial glow */}
+        <div style={{
+          position: "absolute", top: "30%", left: "50%", transform: "translate(-50%, -50%)",
+          width: 600, height: 400, borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%)",
+          filter: "blur(80px)", pointerEvents: "none",
+        }} />
+        <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
+          <div style={{
+            display: "inline-flex", alignItems: "center", gap: 8,
+            background: "rgba(16,185,129,0.15)", borderRadius: 20, padding: "6px 14px", marginBottom: 20,
+          }}>
+            <Share2 size={14} style={{ color: "#34d399" }} />
+            <span style={{ fontSize: 12, fontWeight: 700, color: "#34d399", textTransform: "uppercase", letterSpacing: 1.5 }}>CLIENT EXPERIENCE</span>
+          </div>
+          <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#fff", lineHeight: 1.15, marginBottom: 16 }}>
+            Proposals your clients will actually enjoy reading
+          </h2>
+          <p style={{ fontSize: 17, color: "#94a3b8", lineHeight: 1.7, maxWidth: 620, margin: "0 auto 48px" }}>
+            Your logo, your brand colors, detailed equipment breakdown with pricing — sent as a clean web link. Clients review, comment, and accept with one click.
+          </p>
+
+          {/* Screenshot with perspective tilt */}
+          <div style={{ position: "relative", maxWidth: 520, margin: "0 auto 48px" }}>
+            {/* Glow under image */}
+            <div style={{
+              position: "absolute", bottom: -20, left: "10%", right: "10%", height: 60,
+              background: "radial-gradient(ellipse, rgba(16,185,129,0.25) 0%, transparent 70%)",
+              filter: "blur(20px)", pointerEvents: "none",
+            }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/screenshots/13-proposal-share-top.png"
+              alt="Branded proposal with company logo, equipment list, and accept button"
+              className="showcase-tilt"
+              style={{
+                width: "100%", borderRadius: 16, position: "relative", zIndex: 1,
+                boxShadow: "0 30px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.08)",
+              }}
+            />
+          </div>
+
+          {/* Feature pills below screenshot */}
+          <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
+            {["Your branding on every proposal", "Clients accept or request changes inline", "Real-time view tracking"].map(item => (
+              <div key={item} style={{
+                display: "flex", alignItems: "center", gap: 8,
+                background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)",
+                borderRadius: 10, padding: "10px 16px",
+              }}>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span style={{ fontSize: 14, color: "#cbd5e1", fontWeight: 500 }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Equipment Catalog — offset layout with floating stat badges */}
+      <section style={{
+        padding: "120px 24px", position: "relative", overflow: "hidden",
+        background: "linear-gradient(180deg, #f0fdf4 0%, #f9fafb 40%, #fff 100%)",
+        borderTop: "3px solid #10b981",
+      }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 80 }} className="showcase-row showcase-row-reverse">
+          {/* Screenshot with floating badges */}
+          <div style={{ flex: "1 1 520px", position: "relative" }}>
+            {/* Decorative accent line */}
+            <div style={{
+              position: "absolute", top: -20, left: -20, width: 80, height: 80,
+              borderLeft: "3px solid rgba(16,185,129,0.2)", borderTop: "3px solid rgba(16,185,129,0.2)",
+              borderRadius: "12px 0 0 0", pointerEvents: "none",
+            }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/screenshots/03-catalog.png"
+              alt="Equipment catalog with categories, pricing, and cost tracking"
+              style={{
+                width: "100%", borderRadius: 16, position: "relative", zIndex: 1,
+                boxShadow: "0 25px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.06)",
+              }}
+            />
+            {/* Floating badge — top right */}
+            <div style={{
+              position: "absolute", top: -16, right: -12, zIndex: 2,
+              background: "#fff", borderRadius: 12, padding: "10px 16px",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.04)",
+              display: "flex", alignItems: "center", gap: 8,
+            }}>
+              <div style={{ width: 32, height: 32, borderRadius: 8, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <Package size={16} style={{ color: "#10b981" }} />
+              </div>
+              <div>
+                <div style={{ fontSize: 11, color: "#9ca3af", fontWeight: 500 }}>Catalog Items</div>
+                <div style={{ fontSize: 16, fontWeight: 700, color: "#08172E" }}>Unlimited</div>
+              </div>
+            </div>
+            {/* Floating badge — bottom left */}
+            <div style={{
+              position: "absolute", bottom: -16, left: -12, zIndex: 2,
+              background: "#fff", borderRadius: 12, padding: "10px 16px",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.04)",
+              display: "flex", alignItems: "center", gap: 8,
+            }}>
+              <div style={{ width: 32, height: 32, borderRadius: 8, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <TrendingUp size={16} style={{ color: "#10b981" }} />
+              </div>
+              <div>
+                <div style={{ fontSize: 11, color: "#9ca3af", fontWeight: 500 }}>Price Sync</div>
+                <div style={{ fontSize: 16, fontWeight: 700, color: "#10b981" }}>Always On</div>
+              </div>
+            </div>
+          </div>
+          {/* Text */}
+          <div style={{ flex: "1 1 360px" }}>
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: 8,
+              background: "#ecfdf5", borderRadius: 20, padding: "6px 14px", marginBottom: 20,
+            }}>
+              <Package size={14} style={{ color: "#10b981" }} />
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#059669", textTransform: "uppercase", letterSpacing: 1.5 }}>EQUIPMENT CATALOG</span>
+            </div>
+            <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", lineHeight: 1.15, marginBottom: 20 }}>
+              Your equipment. Your prices. Always accurate.
+            </h2>
+            <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 32 }}>
+              Import your equipment list or build it in CueQuote. The AI pulls from your catalog for every proposal — exact prices, never estimates.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+              {["Price Sync keeps catalog and proposals aligned", "Duplicate items with one click", "AI suggests adding new items as you go"].map(item => (
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <div style={{ width: 22, height: 22, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span style={{ fontSize: 15, color: "#374151", fontWeight: 500 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Showcase responsive + tilt styles */}
+      <style>{`
+        .showcase-row { flex-wrap: wrap; }
+        .showcase-tilt { transform: perspective(1200px) rotateY(-2deg) rotateX(2deg); transition: transform 0.4s ease; }
+        .showcase-tilt:hover { transform: perspective(1200px) rotateY(0deg) rotateX(0deg); }
+        @media (max-width: 900px) {
+          .showcase-row { flex-direction: column !important; gap: 48px !important; }
+          .showcase-row-reverse { flex-direction: column-reverse !important; }
+          .showcase-tilt { transform: none; }
+        }
+      `}</style>
+
       {/* ── 5. How It Works ─────────────────────────────────────────────────── */}
       <section id="how-it-works" style={{ padding: "96px 24px" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>

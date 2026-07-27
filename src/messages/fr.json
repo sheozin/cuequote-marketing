@@ -1811,6 +1811,16 @@
       "step3": "Pour chaque article, choisissez 'Utiliser le prix du catalogue' pour mettre à jour le devis, ou 'Mettre à jour le catalogue' pour définir le prix du devis comme nouveau standard",
       "step4": "Cliquez 'Tout aligner sur le catalogue' pour appliquer en masse les prix du catalogue à tous les éléments non concordants — des coches vertes apparaissent pendant la synchronisation",
       "tip": "La synchronisation des prix est particulièrement utile après la génération par IA — l'IA correspond les éléments du catalogue mais peut parfois utiliser des prix légèrement différents. Un clic corrige tout."
+    },
+    "productionBudgetPlanner": {
+      "title": "Budget de production pour les organisateurs d'événements",
+      "content1": "Quand vous générez un budget de production en mode Planificateur, l'IA de CueQuote crée un plan complet d'équipement et d'équipe aux tarifs du marché. Chaque catégorie — Audio, Vidéo, Éclairage, Scénographie — apparaît comme une carte délimitée avec un badge coloré, un nombre d'éléments et une fourchette budgétaire, ce qui vous permet de comprendre la portée complète de la production en un coup d'œil.",
+      "content2": "Pour la facilité du planificateur, l'Audio, la Vidéo, l'Éclairage et la Scénographie sont regroupés dans une seule carte 'AV & Technique'. Cette vue unifiée vous aide à voir le coût technique complet de la production avant de contacter les fournisseurs. L'IA inclut également des recommandations d'équipe, un calendrier d'événement et des conseils pratiques pour travailler avec les fournisseurs AV.",
+      "step1": "Passez au mode Planificateur depuis le tableau de bord — cela déverrouille les outils de planification de production d'événements adaptés aux utilisateurs non techniques",
+      "step2": "Cliquez sur 'Générer un budget de production' et décrivez votre événement : type de lieu, nombre de participants et ce dont vous avez besoin (présentations, musique en direct, diffusion, interprétation simultanée, etc.). Choisissez un modèle correspondant au type de votre événement pour des conseils d'IA plus appropriés.",
+      "step3": "Consultez le budget par catégorie avec la liste d'équipement générée par l'IA. La carte 'AV & Technique' regroupe tous les besoins en audio, vidéo, éclairage et scénographie avec un sous-total et un nombre d'éléments. Cliquez sur la carte pour la développer et voir les lignes individuelles avec descriptions et fourchettes budgétaires.",
+      "step4": "Utilisez les fourchettes budgétaires du marché et les recommandations d'équipe quand vous demandez des devis aux fournisseurs, et référencez le calendrier d'événement pour vous assurer que les fournisseurs comprennent le calendrier de montage et de démontage. Enregistrez ou exportez le plan en PDF pour le partager avec les parties prenantes.",
+      "tip": "Les fourchettes budgétaires aux tarifs du marché vous aident à gérer les attentes des clients avant de contacter les fournisseurs. Si une fourchette semble élevée ou basse, ajustez la description de votre événement et régénérez — plus de détails produisent généralement des estimations plus précises."
     }
   },
   "changelog": {

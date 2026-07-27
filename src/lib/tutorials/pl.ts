@@ -1194,4 +1194,48 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'production-budget-planning',
+    title: 'Planowanie budżetu produkcji dla planistów imprez',
+    description: 'Wygeneruj kompleksowe budżety produkcji AV z rekomendacjami sprzętu, zespołu i harmonogramu dostosowanymi do Twojej imprezy.',
+    duration: '5 min',
+    difficulty: 'beginner',
+    category: 'Planista',
+    mode: 'planner',
+    videoUrl: '/videos/production-budget-planning.mp4',
+    whatYouLearn: [
+      'Przełączanie do trybu Planista w celu budżetowania produkcji imprezy',
+      'Opisywanie imprezy w celu uzyskania dokładnych szacunków budżetu wygenerowanych przez AI',
+      'Czytanie i interpretacja karty AV & Technical z pogrupowanymi kategoriami',
+      'Zrozumienie zakresów budżetu i rekomendacji zespołu',
+      'Używanie harmonogramu produkcji i porad dla rozmów z dostawcami',
+    ],
+    steps: [
+      {
+        title: 'Przełącz się do trybu Planista',
+        content: 'Z pulpitu kliknij przycisk przełączania trybu w prawym górnym rogu i wybierz „Planista". To przełącza interfejs z trybu ofert AV Company na tryb planowania produkcji imprezy. Tryb Planista używa cen rynkowych zamiast Twojego katalogu, co idealnie nadaje się dla profesjonalistów ds. imprez, którzy potrzebują niezależnych wskazówek budżetowych.',
+        tip: 'Możesz przełączać się między trybami w dowolnym momencie — Twoje oferty i ustawienia dla każdego trybu są przechowywane osobno.',
+      },
+      {
+        title: 'Utwórz nowy budżet produkcji',
+        content: 'Kliknij „Generuj budżet produkcji" i opisz imprezę naturalnym językiem. Uwzględnij: typ imprezy (konferencja, gala, festiwal itp.), nazwę i typ miejsca, spodziewaną liczbę uczestników, datę i czas trwania oraz specyficzne potrzeby AV (prezentacje, muzyka na żywo, streaming, interpretacja symultaniczna, branding). Im więcej szczegółów podasz, tym bardziej dokładny będzie plan wygenerowany przez AI.',
+        tip: 'Możesz wkleić RFP lub breif imprezy bezpośrednio w opis — AI automatycznie wyodrębnia kluczowe wymagania.',
+      },
+      {
+        title: 'Wybierz szablon',
+        content: 'Wybierz szablon odpowiadający typowi Twojej imprezy — Konferencja, Gala, Impreza korporacyjna, Festiwal lub Niestandardowy. Szablon pomaga kierować AI do sugerowania odpowiedniego sprzętu i ról zespołu dla podobnych imprez. Zawsze możesz pominąć wybór szablonu i podać swój własny szczegółowy opis.',
+        tip: 'Używanie szablonu często przyspiesza wyniki o 20%, ponieważ AI zaczyna od ramy odniesienia zamiast wnioskować wszystko z opisu.',
+      },
+      {
+        title: 'Przeglądaj kartę AV & Technical',
+        content: 'Po wygenerowaniu pierwsza sekcja pokazuje kartę „AV & Technical", która grupuje Audio, Video, Lighting i Staging razem. Ta karta wyświetla całkowitą liczbę elementów dla wszystkich kategorii AV, zakres budżetu (od-do) i razem. Kliknij kartę, aby rozwinąć i zobaczyć poszczególne pozycje z opisami, ilościami i zakresami budżetu dla każdej pozycji. Ten ujednolicony widok ułatwia zrozumienie całego kosztu produkcji technicznej na pierwszy rzut oka.',
+        tip: 'Zakres budżetu odzwierciedla zmianę rynkową — dolny koniec to standard-grade sprzęt z lokalnymi dostawcami, górny koniec to rozwiązania premium z redundancją zespołu.',
+      },
+      {
+        title: 'Sprawdź rekomendacje zespołu i harmonogram',
+        content: 'Przewiń w dół, aby przejrzeć sekcję Rekomendacje zespołu (role, liczba osób na rolę, dzienne stawki) i Harmonogram imprezy (sugerowane dni montażu, dni imprezy, rozmontowanie i kamienie milowe techniczne). Użyj ich do poinformowania swoich żądań ofert od dostawców i aby ustawić realistyczne oczekiwania z klientem dotyczące pracy i harmonogramu. Zapisz lub wyeksportuj cały plan jako PDF, aby udostępnić go interesariuszom.',
+        tip: 'Udostępnij zakres budżetu klientowi wcześnie, aby wyrównać wydatki przed pójściem na rynek — to zapobiega szokowi ceny, gdy nadejdą oferty dostawców.',
+      },
+    ],
+  },
 ]

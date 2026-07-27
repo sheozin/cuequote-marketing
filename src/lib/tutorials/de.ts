@@ -1230,4 +1230,48 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'production-budget-planning',
+    title: 'Produktionsbudgetplanung für Veranstaltungsplaner',
+    description: 'Generieren Sie umfassende AV-Produktionsbudgets mit Geräte-, Team- und Terminempfehlungen, die auf Ihre Veranstaltung zugeschnitten sind.',
+    duration: '5 min',
+    difficulty: 'beginner',
+    category: 'Planer',
+    mode: 'planner',
+    videoUrl: '/videos/production-budget-planning.mp4',
+    whatYouLearn: [
+      'Umschalten in den Planer-Modus für Veranstaltungsproduktionsbudgetierung',
+      'Beschreiben Ihrer Veranstaltung für genaue KI-generierte Budgetschätzungen',
+      'Lesen und Interpretieren der AV-Karte mit gruppierten Kategorien',
+      'Verstehen von Budgetspannen und Teamempfehlungen',
+      'Verwendung des Produktionszeitplans und Tipps für Lieferantengespräche',
+    ],
+    steps: [
+      {
+        title: 'Wechsel in den Planer-Modus',
+        content: 'Klicken Sie im Dashboard auf den Modusschalter oben rechts und wählen Sie "Planer". Dies wechselt Ihre Oberfläche vom AV-Unternehmens-Angebotsmodus zum Veranstaltungsplanungsmodus. Der Planer-Modus verwendet Marktpreise statt Ihres Katalogs und ist ideal für Veranstaltungsprofis, die unabhängige Budgetanleitungen benötigen.',
+        tip: 'Sie können jederzeit zwischen den Modi wechseln — Ihre Angebote und Einstellungen für jeden Modus werden separat gespeichert.',
+      },
+      {
+        title: 'Neues Produktionsbudget erstellen',
+        content: 'Klicken Sie auf "Produktionsbudget generieren" und beschreiben Sie Ihre Veranstaltung in natürlicher Sprache. Geben Sie an: Veranstaltungstyp (Konferenz, Gala, Festival usw.), Ortsname und -typ, erwartete Besucherzahl, Datum und Dauer sowie spezifische AV-Anforderungen (Präsentationen, Live-Musik, Streaming, Simultanübersetzung, Branding). Je mehr Details Sie angeben, desto genauer ist der KI-generierte Plan.',
+        tip: 'Sie können eine RFP oder ein Veranstaltungs-Brief direkt in die Beschreibung einfügen — die KI extrahiert die Schlüsselanforderungen automatisch.',
+      },
+      {
+        title: 'Wählen Sie eine Vorlage',
+        content: 'Wählen Sie eine Vorlage, die Ihrem Veranstaltungstyp entspricht — Konferenz, Gala, Unternehmensveranstaltung, Festival oder Benutzerdefiniert. Die Vorlage hilft, die KI anzuleiten, um angemessene Geräte und Teamrollen für ähnliche Veranstaltungen vorzuschlagen. Sie können die Vorlagenauswahl immer überspringen und Ihre eigene detaillierte Beschreibung angeben.',
+        tip: 'Die Verwendung einer Vorlage beschleunigt die Ergebnisse normalerweise um 20%, da die KI mit einem Bezugsrahmen startet, anstatt alles aus Ihrer Beschreibung abzuleiten.',
+      },
+      {
+        title: 'Überprüfen Sie die AV-Karte',
+        content: 'Nach der Generierung zeigt der erste Abschnitt eine Karte "AV & Technical" an, die Audio, Video, Beleuchtung und Staging zusammenfasst. Diese Karte zeigt die Gesamtanzahl der Elemente für alle AV-Kategorien, die Budgetspanne (niedrig-hoch) und eine Zwischensumme. Klicken Sie auf die Karte, um sie zu erweitern und einzelne Positionen mit Beschreibungen, Mengen und Budgetspannen pro Element zu sehen. Diese einheitliche Ansicht macht es einfach, Ihre gesamten technischen Produktionskosten auf einen Blick zu verstehen.',
+        tip: 'Die Budgetspanne spiegelt Marktschwankungen wider — das untere Ende ist für Standard-Geräte mit lokalen Lieferanten, das obere Ende für Premium-Lösungen mit Team-Redundanz.',
+      },
+      {
+        title: 'Überprüfen Sie Teamempfehlungen und Zeitplan',
+        content: 'Scrollen Sie nach unten, um den Abschnitt "Teamempfehlungen" (Rollen, Personalzahl pro Rolle, Tagessätze) und den "Veranstaltungszeitplan" (empfohlene Aufbautage, Veranstaltungstage, Abbau und technische Meilensteine) zu überprüfen. Verwenden Sie diese zur Unterrichtung Ihrer Angebotsanfragen bei Lieferanten und um realistische Erwartungen mit Ihrem Kunden bezüglich Arbeit und Zeitplanung zu setzen. Speichern oder exportieren Sie den gesamten Plan als PDF, um ihn mit Stakeholdern zu teilen.',
+        tip: 'Teilen Sie die Budgetspanne frühzeitig mit Ihrem Kunden, um die Ausgaben abzustimmen, bevor Sie zum Markt gehen — dies verhindert Preisschock, wenn Lieferantenangebote eintreffen.',
+      },
+    ],
+  },
 ]

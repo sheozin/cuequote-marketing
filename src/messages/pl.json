@@ -1784,6 +1784,16 @@
       "step3": "Dla każdej pozycji wybierz 'Użyj ceny z katalogu', aby zaktualizować ofertę, lub 'Aktualizuj katalog', aby ustawić cenę oferty jako nowy standard",
       "step4": "Kliknij 'Dopasuj wszystko do katalogu', aby masowo zastosować ceny katalogu do wszystkich rozbieżnych pozycji — zielone znaczniki pojawiają się podczas synchronizacji",
       "tip": "Synchronizacja cen jest szczególnie przydatna po generowaniu AI — AI dopasowuje pozycje katalogu, ale może czasem użyć nieco innych cen. Jeden klik naprawia wszystko."
+    },
+    "productionBudgetPlanner": {
+      "title": "Budżet produkcji dla planistów imprez",
+      "content1": "Gdy generujesz budżet produkcji w trybie Planista, AI CueQuote tworzy kompleksowy plan sprzętu i zespołu z cenami rynkowymi. Każda kategoria — Audio, Video, Lighting, Staging — pojawia się jako karta obramowana z kolorowym znaczkiem, liczbą elementów i zakresem budżetu, co ułatwia zrozumienie pełnego zakresu produkcji na pierwszy rzut oka.",
+      "content2": "Dla wygody planisty, Audio, Video, Lighting i Staging są pogrupowane w jednej karcie 'AV & Technical'. Ten ujednolicony widok pomaga zobaczyć całkowity koszt techniczny produkcji przed skontaktowaniem się z dostawcami. AI zawiera również rekomendacje zespołu, harmonogram imprezy i praktyczne wskazówki dotyczące pracy z dostawcami AV.",
+      "step1": "Przełącz się na tryb Planista z pulpitu — odblokuje to narzędzia do planowania produkcji imprezy dostosowane dla użytkowników nietechnicznych",
+      "step2": "Kliknij 'Generuj budżet produkcji' i opisz swoją imprezę: typ miejsca, liczbę uczestników oraz to, czego potrzebujesz (prezentacje, muzyka na żywo, streaming, interpretacja symultaniczna itp.). Wybierz szablon pasujący do typu imprezy, aby uzyskać lepsze wskazówki AI.",
+      "step3": "Przejrzyj budżet kategorii z listą sprzętu wygenerowaną przez AI. Karta 'AV & Technical' grupuje wszystkie potrzeby audio, wideo, oświetlenia i scenografii z razem z subtotalem i liczbą elementów. Kliknij kartę, aby rozwinąć i zobaczyć indywidualne elementy liniowe z opisami i zakresami budżetu.",
+      "step4": "Użyj zakresów budżetu rynkowego i rekomendacji zespołu, gdy prosisz dostawców o oferty, i odwołaj się do harmonogramu imprezy, aby upewnić się, że dostawcy rozumieją plan montażu i rozmontowania. Zapisz lub wyeksportuj plan jako PDF, aby udostępnić interesariuszom.",
+      "tip": "Zakresy budżetu rynkowego pomagają zarządzać oczekiwaniami klienta przed zwróceniem się do dostawców. Jeśli zakres wydaje się wysoki lub niski, dostosuj opis imprezy i regeneruj — więcej szczegółów zwykle daje dokładniejsze szacunki."
     }
   },
   "changelog": {

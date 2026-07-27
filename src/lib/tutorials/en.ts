@@ -1240,4 +1240,48 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'production-budget-planning',
+    title: 'Production Budget Planning for Event Planners',
+    description: 'Generate comprehensive AV production budgets with equipment, crew, and timeline recommendations tailored to your event.',
+    duration: '5 min',
+    difficulty: 'beginner',
+    category: 'Planner',
+    mode: 'planner',
+    videoUrl: '/videos/production-budget-planning.mp4',
+    whatYouLearn: [
+      'Switching to Planner mode for event production budgeting',
+      'Describing your event for accurate AI-generated budget estimates',
+      'Reading and interpreting the AV & Technical card with grouped categories',
+      'Understanding budget ranges and crew recommendations',
+      'Using the production timeline and pro tips for vendor conversations',
+    ],
+    steps: [
+      {
+        title: 'Switch to Planner mode',
+        content: 'From your dashboard, click the mode toggle in the top right and select "Planner". This switches your interface from AV Company proposal mode to event production planning mode. Planner mode uses market-rate pricing instead of your catalog, making it ideal for event professionals who need independent budget guidance.',
+        tip: 'You can switch between modes at any time — your proposals and settings for each mode are kept separate.',
+      },
+      {
+        title: 'Create a new production budget',
+        content: 'Click "Generate Production Budget" and describe your event in natural language. Include: event type (conference, gala, festival, etc.), venue name and type, expected attendee count, date and duration, and specific AV needs (presentations, live music, streaming, simultaneous interpretation, branding). The more detail you provide, the more accurate the AI-generated plan.',
+        tip: 'You can paste an RFP or event brief directly into the description — the AI extracts the key requirements automatically.',
+      },
+      {
+        title: 'Choose a template',
+        content: 'Select a template that matches your event type — Conference, Gala, Corporate Event, Festival, or Custom. The template helps guide the AI to suggest appropriate equipment and crew roles for similar events. You can always skip template selection and provide your own detailed description.',
+        tip: 'Using a template often produces results 20% faster because the AI starts with a reference frame instead of inferring everything from your description.',
+      },
+      {
+        title: 'Review the AV & Technical card',
+        content: 'After generation, the first section shows an "AV & Technical" card that groups Audio, Video, Lighting, and Staging together. This card displays the total item count for all AV categories, the budget range (low-high), and a subtotal. Click the card to expand and see individual line items with descriptions, quantities, and per-item budget ranges. This unified view makes it easy to understand your full technical production cost at a glance.',
+        tip: 'The budget range reflects market variation — the low end is for standard-grade equipment with local vendors, the high end for premium solutions with crew redundancy.',
+      },
+      {
+        title: 'Check crew recommendations and timeline',
+        content: 'Scroll down to review the Crew Recommendations section (roles, headcount per role, daily rates) and the Event Timeline (suggested setup days, show days, strike, and technical milestones). Use these to inform your vendor quote requests and to set realistic expectations with your client about labor and scheduling. Save or export the entire plan as a PDF to share with stakeholders.',
+        tip: 'Share the budget range with your client early to align on spend before going to market — this prevents sticker shock when vendor quotes arrive.',
+      },
+    ],
+  },
 ]

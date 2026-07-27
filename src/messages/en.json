@@ -1808,6 +1808,16 @@
       "step3": "For each item, choose 'Use catalog price' to update the proposal, or 'Update catalog' to set the proposal price as your new catalog standard",
       "step4": "Click 'Match all to catalog' to bulk-apply catalog prices to all mismatched items at once — green checkmarks appear as items sync",
       "tip": "Price Sync is especially useful after AI generation — the AI matches catalog items but may occasionally use slightly different prices. One click fixes them all."
+    },
+    "productionBudgetPlanner": {
+      "title": "Production Budget for Event Planners",
+      "content1": "When you generate a production budget in Planner mode, CueQuote's AI creates a comprehensive equipment and crew plan with market-rate pricing. Each category — Audio, Video, Lighting, Staging — appears as a bordered card with a colored badge, item count, and budget range, making it easy to understand the full production scope at a glance.",
+      "content2": "For planner convenience, Audio, Video, Lighting, and Staging are grouped together under a single 'AV & Technical' card in the results. This unified view helps you see the complete technical production cost before contacting vendors. The AI also includes crew recommendations, event timeline, and practical tips for working with AV vendors.",
+      "step1": "Switch to Planner mode from the dashboard — this unlocks event production planning tools tailored for non-technical users",
+      "step2": "Click 'Generate Production Budget' and describe your event: venue type, attendee count, and what you need (presentations, live music, streaming, simultaneous interpretation, etc.). Choose a template that matches your event type for better AI guidance.",
+      "step3": "Review the categorized budget with the AI-generated equipment list. The 'AV & Technical' card groups all audio, video, lighting, and staging needs together with a subtotal and item count. Click the card to expand and see individual line items with descriptions and budget ranges.",
+      "step4": "Use the budget ranges and crew recommendations when requesting quotes from vendors, and reference the Event Timeline to ensure vendors understand the setup and strike schedule. Save or export the plan as a PDF to share with stakeholders.",
+      "tip": "The market-rate budget ranges help you manage client expectations before going to vendors. If a range seems high or low, adjust your event description and regenerate — more detail typically produces more accurate estimates."
     }
   },
   "changelog": {

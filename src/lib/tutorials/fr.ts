@@ -1230,4 +1230,48 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'production-budget-planning',
+    title: 'Planification du budget de production pour les organisateurs d\'événements',
+    description: 'Générez des budgets de production AV complets avec des recommandations d\'équipement, d\'équipe et de calendrier adaptés à votre événement.',
+    duration: '5 min',
+    difficulty: 'beginner',
+    category: 'Planificateur',
+    mode: 'planner',
+    videoUrl: '/videos/production-budget-planning.mp4',
+    whatYouLearn: [
+      'Basculer vers le mode Planificateur pour la budgétisation de la production événementielle',
+      'Décrire votre événement pour obtenir des estimations de budget générées avec précision par l\'IA',
+      'Lire et interpréter la carte AV & Technique avec les catégories regroupées',
+      'Comprendre les fourchettes budgétaires et les recommandations d\'équipe',
+      'Utiliser le calendrier de production et les conseils pour les conversations avec les fournisseurs',
+    ],
+    steps: [
+      {
+        title: 'Basculer vers le mode Planificateur',
+        content: 'Depuis votre tableau de bord, cliquez sur le sélecteur de mode en haut à droite et sélectionnez "Planificateur". Cela bascule votre interface du mode devis des sociétés AV au mode planification d\'événement. Le mode Planificateur utilise les tarifs du marché au lieu de votre catalogue, ce qui le rend idéal pour les professionnels des événements qui ont besoin de conseils budgétaires indépendants.',
+        tip: 'Vous pouvez basculer entre les modes à tout moment — vos devis et paramètres pour chaque mode sont conservés séparément.',
+      },
+      {
+        title: 'Créer un nouveau budget de production',
+        content: 'Cliquez sur "Générer un budget de production" et décrivez votre événement en langage naturel. Incluez : le type d\'événement (conférence, gala, festival, etc.), le nom et le type du lieu, le nombre de participants attendus, la date et la durée, ainsi que les besoins AV spécifiques (présentations, musique live, diffusion, interprétation simultanée, branding). Plus vous fournissez de détails, plus le plan généré par l\'IA sera précis.',
+        tip: 'Vous pouvez coller un RFP ou un brief d\'événement directement dans la description — l\'IA extrait automatiquement les exigences clés.',
+      },
+      {
+        title: 'Choisir un modèle',
+        content: 'Sélectionnez un modèle qui correspond à votre type d\'événement — Conférence, Gala, Événement d\'entreprise, Festival ou Personnalisé. Le modèle aide à guider l\'IA pour suggérer les équipements et rôles d\'équipe appropriés pour les événements similaires. Vous pouvez toujours ignorer la sélection de modèle et fournir votre propre description détaillée.',
+        tip: 'L\'utilisation d\'un modèle accélère généralement les résultats de 20% car l\'IA part d\'un cadre de référence plutôt que de tout déduire de votre description.',
+      },
+      {
+        title: 'Examiner la carte AV & Technique',
+        content: 'Après la génération, la première section affiche une carte « AV & Technique » qui regroupe l\'audio, la vidéo, l\'éclairage et la scénographie. Cette carte affiche le nombre total d\'éléments pour toutes les catégories AV, la fourchette budgétaire (bas-haut) et un sous-total. Cliquez sur la carte pour la développer et voir les lignes individuelles avec descriptions, quantités et fourchettes budgétaires par élément. Cette vue unifiée rend facile de comprendre votre coût total de production technique en un coup d\'œil.',
+        tip: 'La fourchette budgétaire reflète les variations du marché — le bas de gamme concerne les équipements de qualité standard avec des fournisseurs locaux, le haut de gamme les solutions premium avec redondance d\'équipe.',
+      },
+      {
+        title: 'Examiner les recommandations d\'équipe et le calendrier',
+        content: 'Faites défiler vers le bas pour examiner la section "Recommandations d\'équipe" (rôles, nombre de personnes par rôle, tarifs journaliers) et le "Calendrier d\'événement" (jours de montage suggérés, jours d\'événement, démontage et jalons techniques). Utilisez ceux-ci pour éclairer vos demandes de devis auprès des fournisseurs et pour établir des attentes réalistes avec votre client concernant le travail et la planification. Enregistrez ou exportez l\'intégralité du plan en PDF pour le partager avec les parties prenantes.',
+        tip: 'Partagez la fourchette budgétaire avec votre client tôt pour harmoniser les dépenses avant d\'aller au marché — cela évite le choc des prix quand les devis des fournisseurs arrivent.',
+      },
+    ],
+  },
 ]
