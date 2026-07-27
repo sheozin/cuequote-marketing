@@ -33,6 +33,7 @@ export default function LanguageSwitcher({ currentLocale, dropDirection = 'down'
     return () => document.removeEventListener('mousedown', onClick)
   }, [open])
 
+  const langLabel = { en: 'Language', pl: 'Język', ar: 'اللغة', de: 'Sprache', fr: 'Langue' }[currentLocale as string] || 'Language'
   const current = LANGUAGES.find(l => l.code === currentLocale) ?? LANGUAGES[0]
 
   const switchLocale = (code: string) => {
@@ -114,7 +115,7 @@ export default function LanguageSwitcher({ currentLocale, dropDirection = 'down'
               color: '#9ca3af',
             }}
           >
-            Language
+            {langLabel}
           </div>
           {LANGUAGES.map((lang) => (
             <button

@@ -229,6 +229,119 @@ export default async function ForEventPlannersPage() {
         `}</style>
       </section>
 
+      {/* ── Screenshot: Event Templates ─────────────────────────────────── */}
+      <section style={{ padding: "100px 24px", background: "#fff", position: "relative", overflow: "hidden" }}>
+        <div style={{
+          position: "absolute", top: 40, left: 0, width: 200, height: 200, opacity: 0.04,
+          backgroundImage: "radial-gradient(circle, #08172E 1.5px, transparent 1.5px)",
+          backgroundSize: "20px 20px",
+        }} />
+        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 80 }} className="planner-showcase-row">
+          <div style={{ flex: "1 1 360px", position: "relative", zIndex: 1 }}>
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: 8,
+              background: "#ecfdf5", borderRadius: 20, padding: "6px 14px", marginBottom: 20,
+            }}>
+              <ClipboardList size={14} style={{ color: "#10b981" }} />
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#059669", textTransform: "uppercase", letterSpacing: 1.5 }}>{t("showcaseTemplatesBadge", { defaultValue: "EVENT TEMPLATES" })}</span>
+            </div>
+            <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 32, color: "#08172E", lineHeight: 1.15, marginBottom: 20 }}>
+              {t("showcaseTemplatesTitle", { defaultValue: "8 event types. AI handles the rest." })}
+            </h2>
+            <p style={{ fontSize: 16, color: "#6b7280", lineHeight: 1.7, marginBottom: 28 }}>
+              {t("showcaseTemplatesDesc", { defaultValue: "Choose your event type — conference, wedding, gala, product launch — and AI generates a complete production plan with equipment, crew, and budget ranges." })}
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {[
+                t("showcaseTemplatesBullet1", { defaultValue: "Market-rate budget ranges — know what's fair" }),
+                t("showcaseTemplatesBullet2", { defaultValue: "Crew recommendations with daily rates" }),
+                t("showcaseTemplatesBullet3", { defaultValue: "Export vendor briefs to send to AV companies" }),
+              ].map(item => (
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <div style={{ width: 20, height: 20, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span style={{ fontSize: 14, color: "#374151", fontWeight: 500 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{ flex: "1 1 520px", position: "relative" }}>
+            <div style={{
+              position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
+              width: "90%", height: "80%", borderRadius: 40,
+              background: "radial-gradient(ellipse, rgba(16,185,129,0.12) 0%, transparent 70%)",
+              filter: "blur(40px)", pointerEvents: "none",
+            }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/screenshots/planner-02-templates.png" alt="Event type templates — conference, wedding, product launch, gala" style={{
+              width: "100%", borderRadius: 16, position: "relative", zIndex: 1,
+              boxShadow: "0 25px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06)",
+            }} />
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 768px) {
+            .planner-showcase-row { flex-direction: column !important; gap: 40px !important; }
+          }
+        `}</style>
+      </section>
+
+      {/* ── Screenshot: Budget Review ─────────────────────────────────────── */}
+      <section style={{ padding: "100px 24px", background: "#f9fafb", position: "relative", overflow: "hidden" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 80 }} className="planner-showcase-row-rev">
+          <div style={{ flex: "1 1 520px", position: "relative", order: 1 }}>
+            <div style={{
+              position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
+              width: "90%", height: "80%", borderRadius: 40,
+              background: "radial-gradient(ellipse, rgba(139,92,246,0.1) 0%, transparent 70%)",
+              filter: "blur(40px)", pointerEvents: "none",
+            }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/screenshots/planner-05-budget-review.png" alt="AI-generated production budget with equipment and crew costs" style={{
+              width: "100%", borderRadius: 16, position: "relative", zIndex: 1,
+              boxShadow: "0 25px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06)",
+            }} />
+          </div>
+          <div style={{ flex: "1 1 360px", position: "relative", zIndex: 1, order: 2 }}>
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: 8,
+              background: "#f5f3ff", borderRadius: 20, padding: "6px 14px", marginBottom: 20,
+            }}>
+              <BarChart3 size={14} style={{ color: "#8b5cf6" }} />
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#7c3aed", textTransform: "uppercase", letterSpacing: 1.5 }}>{t("showcaseBudgetBadge", { defaultValue: "BUDGET REVIEW" })}</span>
+            </div>
+            <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 32, color: "#08172E", lineHeight: 1.15, marginBottom: 20 }}>
+              {t("showcaseBudgetTitle", { defaultValue: "Know your budget before calling a vendor" })}
+            </h2>
+            <p style={{ fontSize: 16, color: "#6b7280", lineHeight: 1.7, marginBottom: 28 }}>
+              {t("showcaseBudgetDesc", { defaultValue: "AI generates detailed budget estimates with market-rate pricing. Compare quotes when they come back — and know if you're getting a fair deal." })}
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {[
+                t("showcaseBudgetBullet1", { defaultValue: "Detailed cost breakdown by category" }),
+                t("showcaseBudgetBullet2", { defaultValue: "Market-rate ranges so you know what's fair" }),
+                t("showcaseBudgetBullet3", { defaultValue: "Compare vendor quotes side by side" }),
+              ].map(item => (
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <div style={{ width: 20, height: 20, borderRadius: "50%", background: "#f5f3ff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <span style={{ fontSize: 14, color: "#374151", fontWeight: 500 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 768px) {
+            .planner-showcase-row-rev { flex-direction: column !important; gap: 40px !important; }
+            .planner-showcase-row-rev > div:first-child { order: 2 !important; }
+            .planner-showcase-row-rev > div:last-child { order: 1 !important; }
+          }
+        `}</style>
+      </section>
+
       {/* ── Features ───────────────────────────────────────────────────────── */}
       <section style={{ padding: "96px 24px", background: "#fff" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -248,7 +361,8 @@ export default async function ForEventPlannersPage() {
             {features.map(({ icon, titleKey, descKey }) => (
               <div key={titleKey} style={{
                 background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 16, padding: 28,
-              }}>
+                transition: "box-shadow 0.3s, transform 0.3s",
+              }} className="planner-feature-card">
                 <div style={{
                   width: 44, height: 44, borderRadius: 10, background: "#ecfdf5",
                   display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981", marginBottom: 16,
@@ -261,6 +375,9 @@ export default async function ForEventPlannersPage() {
             ))}
           </div>
         </div>
+        <style>{`
+          .planner-feature-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+        `}</style>
       </section>
 
       {/* ── Use Cases ──────────────────────────────────────────────────────── */}

@@ -13,6 +13,7 @@ import {
 import { PricingToggle } from "../../components/PricingToggle";
 import { HeroMockupSlider } from "../../components/HeroMockupSlider";
 import { Testimonials } from "../../components/Testimonials";
+import { ProductShowcase } from "../../components/ProductShowcase";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -129,6 +130,7 @@ export default async function HomePage() {
   const tPosts = await getTranslations("posts");
   const tHomeCta = await getTranslations("homeCta");
   const tWhoFor = await getTranslations("whoFor");
+  const tShowcase = await getTranslations("homeShowcase");
 
   return (
     <>
@@ -264,9 +266,18 @@ export default async function HomePage() {
       </section>
 
       {/* ── 3. Use Cases ────────────────────────────────────────────────────── */}
-      <section style={{ padding: "96px 24px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 64 }}>
+      <section style={{ padding: "96px 24px", background: "#fff", position: "relative", overflow: "hidden" }}>
+        {/* Subtle background accent */}
+        <div style={{
+          position: "absolute", top: -100, right: -100, width: 400, height: 400, borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }} />
+        <div style={{ maxWidth: 1000, margin: "0 auto", position: "relative", zIndex: 1 }}>
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <p style={{ fontSize: 12, fontWeight: 700, color: "#10b981", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 12 }}>
+              {tUseCases("label", { defaultValue: "WHO IT'S FOR" })}
+            </p>
             <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", marginBottom: 12 }}>
               {tUseCases("title")}
             </h2>
@@ -275,26 +286,36 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }} className="use-cases-grid">
             {[
-              { icon: <Mic size={24} />, titleKey: "avProductionTitle" as const, descKey: "avProductionDesc" as const },
-              { icon: <Zap size={24} />, titleKey: "freelanceTitle" as const, descKey: "freelanceDesc" as const },
-              { icon: <MonitorPlay size={24} />, titleKey: "agencyTitle" as const, descKey: "agencyDesc" as const },
-              { icon: <CalendarCheck size={24} />, titleKey: "case4Title" as const, descKey: "case4Desc" as const },
-            ].map(({ icon, titleKey, descKey }) => (
-              <div key={titleKey} style={{
-                background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 32,
+              { icon: <Mic size={24} />, titleKey: "avProductionTitle" as const, descKey: "avProductionDesc" as const, accent: "#10b981", accentBg: "#ecfdf5" },
+              { icon: <Zap size={24} />, titleKey: "freelanceTitle" as const, descKey: "freelanceDesc" as const, accent: "#3b82f6", accentBg: "#eff6ff" },
+              { icon: <MonitorPlay size={24} />, titleKey: "agencyTitle" as const, descKey: "agencyDesc" as const, accent: "#8b5cf6", accentBg: "#f5f3ff" },
+              { icon: <CalendarCheck size={24} />, titleKey: "case4Title" as const, descKey: "case4Desc" as const, accent: "#f59e0b", accentBg: "#fffbeb" },
+            ].map(({ icon, titleKey, descKey, accent, accentBg }) => (
+              <div key={titleKey} className="use-case-card" style={{
+                background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 16, padding: "32px 28px",
+                borderLeft: `4px solid ${accent}`,
                 transition: "box-shadow 0.3s, transform 0.3s",
               }}>
-                <div style={{ width: 48, height: 48, borderRadius: 12, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981", marginBottom: 20 }}>
+                <div style={{
+                  width: 48, height: 48, borderRadius: 12, background: accentBg,
+                  display: "flex", alignItems: "center", justifyContent: "center", color: accent, marginBottom: 16,
+                }}>
                   {icon}
                 </div>
                 <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 20, color: "#08172E", marginBottom: 8 }}>{tUseCases(titleKey)}</h3>
-                <p style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.6 }}>{tUseCases(descKey)}</p>
+                <p style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.7 }}>{tUseCases(descKey)}</p>
               </div>
             ))}
           </div>
         </div>
+        <style>{`
+          .use-case-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+          @media (max-width: 640px) {
+            .use-cases-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
       </section>
 
       {/* ── 4. Features ─────────────────────────────────────────────────────── */}
@@ -317,7 +338,6 @@ export default async function HomePage() {
               { icon: <CreditCard size={22} />, titleKey: "invoicingTitle" as const, descKey: "invoicingDesc" as const },
               { icon: <Package size={22} />, titleKey: "catalogTitle" as const, descKey: "catalogDesc" as const },
               { icon: <Globe size={22} />, titleKey: "currencyTitle" as const, descKey: "currencyDesc" as const },
-              { icon: <TrendingUp size={22} />, titleKey: "analyticsTitle" as const, descKey: "analyticsDesc" as const },
             ].map(({ icon, titleKey, descKey }) => (
               <div key={titleKey} style={{
                 background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 28,
@@ -329,6 +349,19 @@ export default async function HomePage() {
                 <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6 }}>{tFeatures(descKey)}</p>
               </div>
             ))}
+          </div>
+          {/* Full-width Analytics card — avoids orphan in the grid */}
+          <div style={{
+            marginTop: 24, background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: "28px 32px",
+            display: "flex", alignItems: "center", gap: 20,
+          }} className="feature-wide-card">
+            <div style={{ width: 44, height: 44, borderRadius: 10, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981", flexShrink: 0 }}>
+              <TrendingUp size={22} />
+            </div>
+            <div>
+              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, color: "#08172E", marginBottom: 4 }}>{tFeatures("analyticsTitle")}</h3>
+              <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6 }}>{tFeatures("analyticsDesc")}</p>
+            </div>
           </div>
         </div>
       </section>
@@ -350,16 +383,16 @@ export default async function HomePage() {
               background: "#ecfdf5", borderRadius: 20, padding: "6px 14px", marginBottom: 20,
             }}>
               <FileText size={14} style={{ color: "#10b981" }} />
-              <span style={{ fontSize: 12, fontWeight: 700, color: "#059669", textTransform: "uppercase", letterSpacing: 1.5 }}>PROPOSALS</span>
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#059669", textTransform: "uppercase", letterSpacing: 1.5 }}>{tShowcase("proposalBadge")}</span>
             </div>
             <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", lineHeight: 1.15, marginBottom: 20 }}>
-              From event brief to branded proposal in 2 minutes
+              {tShowcase("proposalTitle")}
             </h2>
             <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 32 }}>
-              Describe the event, AI generates a complete equipment list from your catalog — with your prices, your terms, ready to send.
+              {tShowcase("proposalDesc")}
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-              {["AI generates from your exact catalog prices", "Track sent, viewed, won, and lost", "E-signatures and client portal built in"].map(item => (
+              {[tShowcase("proposalBullet1"), tShowcase("proposalBullet2"), tShowcase("proposalBullet3")].map(item => (
                 <div key={item} style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <div style={{ width: 22, height: 22, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -379,8 +412,8 @@ export default async function HomePage() {
             }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/screenshots/02-proposals.png"
-              alt="CueQuote proposals dashboard showing status tracking and pipeline value"
+              src="/screenshots/12-proposal-editor.png"
+              alt="CueQuote proposal editor with AI-generated line items, Smart Suggestions, and Price Sync"
               style={{
                 width: "100%", borderRadius: 16, position: "relative", zIndex: 1,
                 boxShadow: "0 25px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06)",
@@ -390,164 +423,65 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Section 2: Branded Proposal — dark background, centered hero screenshot */}
-      <section style={{
-        padding: "120px 24px", position: "relative", overflow: "hidden",
-        background: "linear-gradient(180deg, #08172E 0%, #0d2240 100%)",
-      }}>
-        {/* Subtle radial glow */}
-        <div style={{
-          position: "absolute", top: "30%", left: "50%", transform: "translate(-50%, -50%)",
-          width: 600, height: 400, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%)",
-          filter: "blur(80px)", pointerEvents: "none",
-        }} />
-        <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "rgba(16,185,129,0.15)", borderRadius: 20, padding: "6px 14px", marginBottom: 20,
-          }}>
-            <Share2 size={14} style={{ color: "#34d399" }} />
-            <span style={{ fontSize: 12, fontWeight: 700, color: "#34d399", textTransform: "uppercase", letterSpacing: 1.5 }}>CLIENT EXPERIENCE</span>
-          </div>
-          <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#fff", lineHeight: 1.15, marginBottom: 16 }}>
-            Proposals your clients will actually enjoy reading
-          </h2>
-          <p style={{ fontSize: 17, color: "#94a3b8", lineHeight: 1.7, maxWidth: 620, margin: "0 auto 48px" }}>
-            Your logo, your brand colors, detailed equipment breakdown with pricing — sent as a clean web link. Clients review, comment, and accept with one click.
-          </p>
+      {/* Section 2: Your Toolkit — Toggle between Catalog (AV) and Templates (Planner) */}
+      <ProductShowcase
+        variant="light"
+        textSide="right"
+        id="toolkit"
+        toggleLabels={{ av: tShowcase("toggleAv"), planner: tShowcase("togglePlanner"), hint: tShowcase("toggleHint") }}
+        av={{
+          badge: { icon: 'av', label: tShowcase("toolkitAvBadge") },
+          heading: tShowcase("toolkitAvHeading"),
+          description: tShowcase("toolkitAvDesc"),
+          bullets: [
+            tShowcase("toolkitAvBullet1"),
+            tShowcase("toolkitAvBullet2"),
+            tShowcase("toolkitAvBullet3"),
+          ],
+          screenshot: { src: '/screenshots/03-catalog.png', alt: 'Equipment catalog with categories, pricing, and cost tracking' },
+        }}
+        planner={{
+          badge: { icon: 'planner', label: tShowcase("toolkitPlannerBadge") },
+          heading: tShowcase("toolkitPlannerHeading"),
+          description: tShowcase("toolkitPlannerDesc"),
+          bullets: [
+            tShowcase("toolkitPlannerBullet1"),
+            tShowcase("toolkitPlannerBullet2"),
+            tShowcase("toolkitPlannerBullet3"),
+            tShowcase("toolkitPlannerBullet4"),
+          ],
+          screenshot: { src: '/screenshots/planner-02-templates.png', alt: 'Event type templates — conference, wedding, product launch, gala' },
+        }}
+      />
 
-          {/* Screenshot with perspective tilt */}
-          <div style={{ position: "relative", maxWidth: 520, margin: "0 auto 48px" }}>
-            {/* Glow under image */}
-            <div style={{
-              position: "absolute", bottom: -20, left: "10%", right: "10%", height: 60,
-              background: "radial-gradient(ellipse, rgba(16,185,129,0.25) 0%, transparent 70%)",
-              filter: "blur(20px)", pointerEvents: "none",
-            }} />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/screenshots/13-proposal-share-top.png"
-              alt="Branded proposal with company logo, equipment list, and accept button"
-              className="showcase-tilt"
-              style={{
-                width: "100%", borderRadius: 16, position: "relative", zIndex: 1,
-                boxShadow: "0 30px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.08)",
-              }}
-            />
-          </div>
-
-          {/* Feature pills below screenshot */}
-          <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-            {["Your branding on every proposal", "Clients accept or request changes inline", "Real-time view tracking"].map(item => (
-              <div key={item} style={{
-                display: "flex", alignItems: "center", gap: 8,
-                background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: 10, padding: "10px 16px",
-              }}>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span style={{ fontSize: 14, color: "#cbd5e1", fontWeight: 500 }}>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 3: Equipment Catalog — offset layout with floating stat badges */}
-      <section style={{
-        padding: "120px 24px", position: "relative", overflow: "hidden",
-        background: "linear-gradient(180deg, #f0fdf4 0%, #f9fafb 40%, #fff 100%)",
-        borderTop: "3px solid #10b981",
-      }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 80 }} className="showcase-row showcase-row-reverse">
-          {/* Screenshot with floating badges */}
-          <div style={{ flex: "1 1 520px", position: "relative" }}>
-            {/* Decorative accent line */}
-            <div style={{
-              position: "absolute", top: -20, left: -20, width: 80, height: 80,
-              borderLeft: "3px solid rgba(16,185,129,0.2)", borderTop: "3px solid rgba(16,185,129,0.2)",
-              borderRadius: "12px 0 0 0", pointerEvents: "none",
-            }} />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/screenshots/03-catalog.png"
-              alt="Equipment catalog with categories, pricing, and cost tracking"
-              style={{
-                width: "100%", borderRadius: 16, position: "relative", zIndex: 1,
-                boxShadow: "0 25px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.06)",
-              }}
-            />
-            {/* Floating badge — top right */}
-            <div style={{
-              position: "absolute", top: -16, right: -12, zIndex: 2,
-              background: "#fff", borderRadius: 12, padding: "10px 16px",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.04)",
-              display: "flex", alignItems: "center", gap: 8,
-            }}>
-              <div style={{ width: 32, height: 32, borderRadius: 8, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <Package size={16} style={{ color: "#10b981" }} />
-              </div>
-              <div>
-                <div style={{ fontSize: 11, color: "#9ca3af", fontWeight: 500 }}>Catalog Items</div>
-                <div style={{ fontSize: 16, fontWeight: 700, color: "#08172E" }}>Unlimited</div>
-              </div>
-            </div>
-            {/* Floating badge — bottom left */}
-            <div style={{
-              position: "absolute", bottom: -16, left: -12, zIndex: 2,
-              background: "#fff", borderRadius: 12, padding: "10px 16px",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.04)",
-              display: "flex", alignItems: "center", gap: 8,
-            }}>
-              <div style={{ width: 32, height: 32, borderRadius: 8, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <TrendingUp size={16} style={{ color: "#10b981" }} />
-              </div>
-              <div>
-                <div style={{ fontSize: 11, color: "#9ca3af", fontWeight: 500 }}>Price Sync</div>
-                <div style={{ fontSize: 16, fontWeight: 700, color: "#10b981" }}>Always On</div>
-              </div>
-            </div>
-          </div>
-          {/* Text */}
-          <div style={{ flex: "1 1 360px" }}>
-            <div style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
-              background: "#ecfdf5", borderRadius: 20, padding: "6px 14px", marginBottom: 20,
-            }}>
-              <Package size={14} style={{ color: "#10b981" }} />
-              <span style={{ fontSize: 12, fontWeight: 700, color: "#059669", textTransform: "uppercase", letterSpacing: 1.5 }}>EQUIPMENT CATALOG</span>
-            </div>
-            <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", lineHeight: 1.15, marginBottom: 20 }}>
-              Your equipment. Your prices. Always accurate.
-            </h2>
-            <p style={{ fontSize: 17, color: "#6b7280", lineHeight: 1.7, marginBottom: 32 }}>
-              Import your equipment list or build it in CueQuote. The AI pulls from your catalog for every proposal — exact prices, never estimates.
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-              {["Price Sync keeps catalog and proposals aligned", "Duplicate items with one click", "AI suggests adding new items as you go"].map(item => (
-                <div key={item} style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <div style={{ width: 22, height: 22, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <span style={{ fontSize: 15, color: "#374151", fontWeight: 500 }}>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Showcase responsive + tilt styles */}
-      <style>{`
-        .showcase-row { flex-wrap: wrap; }
-        .showcase-tilt { transform: perspective(1200px) rotateY(-2deg) rotateX(2deg); transition: transform 0.4s ease; }
-        .showcase-tilt:hover { transform: perspective(1200px) rotateY(0deg) rotateX(0deg); }
-        @media (max-width: 900px) {
-          .showcase-row { flex-direction: column !important; gap: 48px !important; }
-          .showcase-row-reverse { flex-direction: column-reverse !important; }
-          .showcase-tilt { transform: none; }
-        }
-      `}</style>
+      {/* Section 3: Professional Documents — Toggle between Branded Proposal (AV) and Production Budget (Planner) */}
+      <ProductShowcase
+        variant="dark"
+        id="documents"
+        toggleLabels={{ av: tShowcase("toggleAv"), planner: tShowcase("togglePlanner"), hint: tShowcase("toggleHint") }}
+        av={{
+          badge: { icon: 'av', label: tShowcase("docsAvBadge") },
+          heading: tShowcase("docsAvHeading"),
+          description: tShowcase("docsAvDesc"),
+          bullets: [
+            tShowcase("docsAvBullet1"),
+            tShowcase("docsAvBullet2"),
+            tShowcase("docsAvBullet3"),
+          ],
+          screenshot: { src: '/screenshots/13-proposal-share-top.png', alt: 'Branded proposal with company logo, equipment list, and accept button' },
+        }}
+        planner={{
+          badge: { icon: 'planner', label: tShowcase("docsPlannerBadge") },
+          heading: tShowcase("docsPlannerHeading"),
+          description: tShowcase("docsPlannerDesc"),
+          bullets: [
+            tShowcase("docsPlannerBullet1"),
+            tShowcase("docsPlannerBullet2"),
+            tShowcase("docsPlannerBullet3"),
+          ],
+          screenshot: { src: '/screenshots/planner-11-proposal-top.png', alt: 'Branded event production budget as vendors see it' },
+        }}
+      />
 
       {/* ── 5. How It Works ─────────────────────────────────────────────────── */}
       <section id="how-it-works" style={{ padding: "96px 24px" }}>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useLocale } from 'next-intl'
 import { Check, Copy } from 'lucide-react'
 
 interface ShareButtonsProps {
@@ -57,6 +58,8 @@ const platforms = [
 ]
 
 export default function ShareButtons({ url, title, description }: ShareButtonsProps) {
+  const locale = useLocale()
+  const shareLabel = { en: 'Share', pl: 'Udostępnij', ar: 'مشاركة', de: 'Teilen', fr: 'Partager' }[locale as string] || 'Share'
   const [copied, setCopied] = useState(false)
 
   const copyLink = () => {
@@ -67,7 +70,7 @@ export default function ShareButtons({ url, title, description }: ShareButtonsPr
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-      <span style={{ fontSize: 12, fontWeight: 600, color: '#9ca3af', textTransform: 'uppercase', letterSpacing: 1, marginRight: 4 }}>Share</span>
+      <span style={{ fontSize: 12, fontWeight: 600, color: '#9ca3af', textTransform: 'uppercase', letterSpacing: 1, marginRight: 4 }}>{shareLabel}</span>
       {platforms.map((p) => (
         <a
           key={p.name}

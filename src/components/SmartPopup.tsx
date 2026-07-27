@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useCallback, useRef } from 'react'
+import { useLocale } from 'next-intl'
 import { createClient } from '@supabase/supabase-js'
 import { X } from 'lucide-react'
 
@@ -92,6 +93,14 @@ const POPUP_CSS = `
 `
 
 export default function SmartPopup() {
+  const locale = useLocale()
+  const uiText = {
+    en: { off: 'OFF', seats: 'seats remaining at this price', promo: 'Your promo code', noThanks: "No thanks, I'll pass" },
+    pl: { off: 'ZNIŻKI', seats: 'miejsc pozostało w tej cenie', promo: 'Twój kod promocyjny', noThanks: 'Nie, dziękuję' },
+    ar: { off: 'خصم', seats: 'مقاعد متبقية بهذا السعر', promo: 'رمز العرض الخاص بك', noThanks: 'لا شكراً' },
+    de: { off: 'RABATT', seats: 'Plätze zu diesem Preis übrig', promo: 'Ihr Promo-Code', noThanks: 'Nein danke' },
+    fr: { off: 'REMISE', seats: 'places restantes à ce prix', promo: 'Votre code promo', noThanks: 'Non merci' },
+  }[locale as string] || { off: 'OFF', seats: 'seats remaining at this price', promo: 'Your promo code', noThanks: "No thanks, I'll pass" }
   const [campaign, setCampaign] = useState<PopupCampaign | null>(null)
   const [visible, setVisible] = useState(false)
   const [animateIn, setAnimateIn] = useState(false)
@@ -281,7 +290,7 @@ export default function SmartPopup() {
                   borderRadius: 8, padding: '2px 8px',
                   fontSize: 12, fontWeight: 700, color: colors.accent,
                 }}>
-                  {discountPct}% OFF
+                  {discountPct}% {uiText.off}
                 </span>
               </div>
             )}
@@ -300,7 +309,7 @@ export default function SmartPopup() {
                   animation: 'pulse 2s infinite',
                 }} />
                 <span style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.9)' }}>
-                  <strong style={{ color: colors.accent }}>{campaign.seats_remaining}</strong> seats remaining at this price
+                  <strong style={{ color: colors.accent }}>{campaign.seats_remaining}</strong> {uiText.seats}
                 </span>
               </div>
             )}
@@ -309,7 +318,7 @@ export default function SmartPopup() {
             {campaign.promo_code && (
               <div style={{ marginBottom: 22 }}>
                 <p style={{ margin: '0 0 6px', fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: 1, color: 'rgba(255,255,255,0.5)' }}>
-                  Your promo code
+                  {uiText.promo}
                 </p>
                 <code style={{
                   display: 'block', background: 'rgba(0,0,0,0.3)',
@@ -351,7 +360,7 @@ export default function SmartPopup() {
                 textAlign: 'center', padding: '4px 0',
               }}
             >
-              No thanks, I&apos;ll pass
+              {uiText.noThanks}
             </button>
           </div>
         </div>
