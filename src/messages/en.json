@@ -428,6 +428,19 @@
     "forEventPlanners": "For Event Planners"
   },
   "posts": {
+    "cuequote-v132-whats-new": {
+      "title": "What's New in CueQuote v1.32.0",
+      "excerpt": "Version 1.32.0 brings Price Sync, Catalog Suggestions, item duplication, smarter AI matching, unsaved-change protection, and contextual upgrade prompts — all built to make your quoting workflow faster and more reliable.",
+      "readTime": "4 min read",
+      "content": [
+        "CueQuote v1.32.0 is out today, and it focuses on one thing: closing the gap between your equipment catalog and your proposals. Every feature in this release was shaped by the same question — where do small inefficiencies compound into real wasted time? The answer turned out to be catalog management, AI accuracy, and a few unguarded moments where work could vanish without warning. See the full feature overview in the image above.",
+        "Price Sync is the headlining addition. When you open a proposal in the editor, CueQuote now compares every line item against your catalog in real time. If prices have drifted — because you updated catalog rates, or because AI generation pulled a slightly different figure — a blue banner surfaces the discrepancies and lets you resolve them item by item or all at once with 'Match all to catalog'. You can also push in the other direction: if you negotiated a new rate in the proposal, 'Update catalog' sets it as the new standard. One click, both directions, no spreadsheet required.",
+        "Catalog Suggestions gives the AI a new output channel. When CueQuote generates a proposal and spots equipment that does not yet exist in your catalog, it now surfaces those items as suggestions you can accept with a single click. Previously, you would finish a proposal, notice an item was missing from the catalog, and have to add it manually. Now that step happens inline, right after generation. Your catalog grows naturally as you work, without interrupting your quoting flow.",
+        "Two smaller but useful additions round out the catalog improvements. Duplicate Catalog Items lets you copy any existing item to use as a starting point for a variation — useful when you stock multiple configurations of the same equipment. Smarter AI Matching adjusts how the AI references catalog entries: it now keeps catalog item names untranslated during matching, so Arabic, German, French, and Polish catalog names are matched accurately instead of being converted to English first. Clients still receive the proposal in their language; the catalog name stays stable on the backend where accuracy matters.",
+        "On the safety side, Unsaved Changes Protection now intercepts any navigation away from an open proposal editor. If you click a link, close a tab, or switch sections without saving, CueQuote prompts you to confirm before anything is lost. It is a small thing until the one time it catches a half-finished proposal. Smart Upgrade Promos rounds out the release: free-plan users now see contextual suggestions at the exact moments a paid feature would help — not on a general pricing page, but inline, when they hit a plan limit. The prompt is informational, not intrusive, and it disappears once dismissed.",
+        "All six features are live now for all CueQuote accounts. Price Sync and Catalog Suggestions are available on all plans; item duplication, smarter AI matching, and unsaved-change protection have no plan restrictions. If you are not yet using CueQuote, start free at cuequote.com — the catalog and proposal tools are available from day one."
+      ]
+    },
     "price-sync-catalog-proposal-matching": {
       "title": "Price Sync: How to Keep Your AV Catalog and Proposals in Perfect Alignment",
       "excerpt": "When catalog prices drift out of sync with your proposals, you quote the wrong rates and lose trust with clients. Learn how Price Sync detects mismatches, when to pull vs push, and how one click can fix them all.",
