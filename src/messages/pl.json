@@ -428,6 +428,22 @@
     "forEventPlanners": "Dla organizatorów wydarzeń"
   },
   "posts": {
+    "price-sync-catalog-proposal-matching": {
+      "title": "Synchronizacja cen: jak utrzymać katalog AV i oferty w idealnej zgodności",
+      "excerpt": "Gdy ceny w katalogu i ofertach się rozbiegają, wysyłasz błędne stawki i tracisz zaufanie klientów. Dowiedz się, jak Synchronizacja cen wykrywa rozbieżności, kiedy ciągnąć a kiedy pchać, i jak jednym kliknięciem naprawić wszystko.",
+      "readTime": "6 min czytania",
+      "content": [
+        "Każda firma AV zarządzająca katalogiem sprzętu mierzy się z tym samym cichym problemem: ceny dryfują. Aktualizujesz stawkę w katalogu, bo dostawca zmienił cenę, ale trzy otwarte oferty wciąż pokazują starą. Albo dajesz klientowi specjalną stawkę na pozycję i teraz ta cena siedzi w ofercie, podczas gdy katalog pokazuje coś innego. Z czasem, bez systemu do ich uzgadniania, przepaść między tym, co mówi katalog, a tym, co pokazują oferty, staje się źródłem błędów i niedoszacowanych zleceń.",
+        "Synchronizacja cen to odpowiedź CueQuote na ten problem. Monitoruje pozycje każdej oferty względem katalogu sprzętu w czasie rzeczywistym i sygnalizuje wszelkie rozbieżności jako jedno, konkretne powiadomienie. Nie musisz ręcznie audytować ofert ani krzyżowo sprawdzać arkuszy — system robi to za ciebie.",
+        "Problem pojawia się w dwóch kierunkach. Pierwszy: katalog ma właściwą cenę, ale oferta jest nieaktualna. Zdarza się to najczęściej po generowaniu AI, gdzie AI dopasowuje pozycje katalogu po nazwie, ale może pobrać nieco inną cenę. Drugi kierunek jest odwrotny: celowo wyceniłeś coś inaczej w ofercie — być może rabat wolumenowy lub cena uzgodniona w negocjacjach — i teraz chcesz ją wpisać do katalogu jako nowy standard.",
+        "Synchronizacja cen obsługuje oba kierunki. Gdy otwierasz ofertę w edytorze i istnieją rozbieżności, nad tabelą pozycji pojawia się niebieski baner. Kliknięcie banera rozwija panel, który wyświetla każdą rozbieżność z nazwą pozycji, bieżącą ceną w ofercie, ceną katalogu i różnicą procentową. Pozycje z różnicą powyżej 10% są oznaczone na czerwono; mniejsze różnice na bursztynowo.",
+        "Dla każdej rozbieżnej pozycji wybierasz jedną z dwóch akcji. 'Użyj ceny z katalogu' aktualizuje pozycję oferty do aktualnej ceny katalogu — właściwy wybór, gdy katalog jest źródłem prawdy. 'Aktualizuj katalog' ustawia cenę oferty jako nowy standard w katalogu — właściwy wybór, gdy negocjowałeś nową stawkę i chcesz, aby propagowała się na przyszłe oferty. Ta dwukierunkowa możliwość odróżnia Synchronizację cen od zwykłego narzędzia audytu.",
+        "Opcja masowa — 'Dopasuj wszystko do katalogu' — pojawia się u góry panelu i stosuje ceny katalogu do wszystkich rozbieżnych pozycji jednym kliknięciem. To właściwy wybór zaraz po generowaniu AI, gdy chcesz potwierdzić, że wszystkie ceny sugerowane przez AI pokrywają się z katalogiem przed wysłaniem oferty do klienta. Zielone znaczniki pojawiają się obok każdej pozycji po synchronizacji. Baner znika, gdy wszystkie pozycje są w zgodności.",
+        "Warto wyrobić praktyczny nawyk: uruchamiaj Synchronizację cen przed każdym wysłaniem oferty. Zajmuje mniej niż trzydzieści sekund i zapobiega kategorii błędów, które najtrudniej naprawić po fakcie — złe ceny, które klient już widział.",
+        "Kierunek 'Aktualizuj katalog' wymaga własnej dyscypliny. Rezerwuj go dla celowych zmian stawek, nie dla jednorazowych rabatów. Jeśli dajesz klientowi 15% zniżki na ścianę LED, bo jest stałym klientem, nie aktualizuj katalogu tą obniżoną ceną — przyszłe oferty ją odziedziczą i twoja standardowa stawka się zeroduje. Używaj 'Aktualizuj katalog' tylko wtedy, gdy nowa cena reprezentuje zamierzoną, trwałą zmianę struktury cenowej.",
+        "Synchronizacja cen jest częścią szerszej filozofii w CueQuote: twój katalog jest jedynym źródłem prawdy dla cen sprzętu, a wszystko inne — oferty, faktury, obliczenia kosztów — powinno pozostawać do niego zakotwiczone. Gdy ta kotwica trzyma, twoje wyceny stają się spójne, marże przewidywalne, a klienci za każdym razem otrzymują profesjonalne doświadczenie."
+      ]
+    },
     "complete-guide-av-quoting": {
       "title": "Kompletny przewodnik po wycenach AV: proces, ceny i najczęstsze błędy",
       "excerpt": "Wszystko, co firmy AV muszą wiedzieć o wycenach — od analizy briefu klienta po strategie cenowe, typowe błędy i narzędzia AI przyspieszające proces.",
@@ -1745,6 +1761,16 @@
       "step2": "Zapisz element — nowa kategoria jest teraz dostępna w całym obszarze roboczym dla innych elementów",
       "step3": "Aby zmienić nazwę nagłówka kategorii tylko w konkretnej ofercie, otwórz ofertę, kliknij nagłówek sekcji i wpisz nową nazwę — wpływa to tylko na PDF i stronę udostępniania tej oferty",
       "tip": "Używaj krótkich i spójnych nazw własnych kategorii — pojawiają się one jako nagłówki sekcji w PDF, więc 'Rigging i kratownice' działa lepiej niż 'Sprzęt do riggingu i systemy kratownicowe'"
+    },
+    "priceSync": {
+      "title": "Synchronizacja cen",
+      "content1": "Synchronizacja cen automatycznie wykrywa, gdy ceny pozycji w ofercie różnią się od katalogu sprzętu. Pojawia się jako niebieski baner w edytorze oferty przy wykryciu rozbieżności.",
+      "content2": "Możesz synchronizować ceny w dowolnym kierunku: pobierać ceny z katalogu do oferty lub przesyłać ceny z oferty do katalogu jako nowy standard. Przycisk 'Dopasuj wszystko do katalogu' pozwala masowo naprawić wszystkie rozbieżności.",
+      "step1": "Otwórz dowolną ofertę w edytorze — jeśli ceny pozycji różnią się od katalogu, niebieski baner 'Synchronizacja cen' pojawi się nad pozycjami",
+      "step2": "Kliknij, aby rozwinąć i zobaczyć każdą rozbieżność: nazwę, cenę w ofercie, cenę katalogu i różnicę procentową (czerwona dla >10%, bursztynowa dla mniejszych różnic)",
+      "step3": "Dla każdej pozycji wybierz 'Użyj ceny z katalogu', aby zaktualizować ofertę, lub 'Aktualizuj katalog', aby ustawić cenę oferty jako nowy standard",
+      "step4": "Kliknij 'Dopasuj wszystko do katalogu', aby masowo zastosować ceny katalogu do wszystkich rozbieżnych pozycji — zielone znaczniki pojawiają się podczas synchronizacji",
+      "tip": "Synchronizacja cen jest szczególnie przydatna po generowaniu AI — AI dopasowuje pozycje katalogu, ale może czasem użyć nieco innych cen. Jeden klik naprawia wszystko."
     }
   },
   "changelog": {
@@ -1818,6 +1844,8 @@
     "feat5Desc": "Śledź sprzęt z numerami seryjnymi. Planuj ekipę na eventy. Wiedz, co jest dostępne, zanim wycenisz.",
     "feat6Title": "Marże i rentowność",
     "feat6Desc": "Sprawdzaj koszty i marże na każdej transakcji. Ustaw cele, otrzymuj alerty gdy marże spadną poniżej progu.",
+    "feat7Title": "Synchronizacja cen",
+    "feat7Desc": "Ceny katalogu i oferty są synchronizowane automatycznie. Napraw rozbieżności jednym kliknięciem lub prześlij ceny oferty do katalogu jako nowy standard.",
     "painLabel": "BRZMI ZNAJOMO?",
     "painTitle": "Problemy z wycenami, które kosztują Cię kontrakty",
     "painSubtitle": "Firmy AV tracą przychody co tydzień przez te możliwe do uniknięcia problemy.",

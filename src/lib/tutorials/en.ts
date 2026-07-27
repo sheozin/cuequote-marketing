@@ -1203,4 +1203,41 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'price-sync',
+    title: 'Price Sync — Matching Catalog & Proposal Prices',
+    description: 'Automatically detect and fix price mismatches between your equipment catalog and active proposals.',
+    duration: '3 min',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    mode: 'av',
+    icon: '🔄',
+    videoUrl: '',
+    whatYouLearn: [
+      'How to spot price mismatches between your catalog and proposal line items',
+      'Using "Use catalog price" to pull the correct price into a proposal',
+      'Using "Update catalog" to push a proposal price back as the new standard',
+      'Bulk-matching all mismatched items at once',
+    ],
+    steps: [
+      {
+        title: 'Open a proposal — Price Sync banner appears',
+        content: 'Open any proposal in the editor. If one or more line item prices differ from your equipment catalog, a blue "Price Sync" banner appears above the line items table. The banner shows how many items are out of sync at a glance.',
+        tip: 'Price Sync is especially useful right after AI generation — the AI matches catalog items but may occasionally use slightly different prices.',
+      },
+      {
+        title: 'Review mismatches',
+        content: 'Click the banner to expand the Price Sync panel. Each mismatched item is listed with its name, the current proposal price, the catalog price, and the percentage difference. Items with a difference greater than 10% are highlighted in red; smaller differences appear in amber.',
+      },
+      {
+        title: 'Choose an action per item',
+        content: 'For each mismatched item, choose one of two actions: "Use catalog price" updates the proposal line item to match your catalog — use this when the catalog is correct. "Update catalog" sets the proposal price as the new standard in your catalog — use this when you have intentionally changed the price for this job and want it to become your default going forward.',
+        tip: 'Use "Update catalog" sparingly — it changes the price for all future proposals. Use it only when you have a deliberate new rate, not for one-off discounts.',
+      },
+      {
+        title: 'Bulk match all items',
+        content: 'If you want to fix all mismatches at once, click "Match all to catalog" at the top of the Price Sync panel. CueQuote updates every mismatched line item to the catalog price in one go. Green checkmarks appear next to each item as they sync. The banner disappears once all items are in sync.',
+      },
+    ],
+  },
 ]

@@ -1193,4 +1193,41 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'price-sync',
+    title: 'Preisabgleich — Katalog- und Angebotspreise synchronisieren',
+    description: 'Erkennen und beheben Sie automatisch Preisabweichungen zwischen Ihrem Gerätekatalog und aktiven Angeboten.',
+    duration: '3 Min.',
+    difficulty: 'intermediate',
+    category: 'Angebote',
+    mode: 'av',
+    icon: '🔄',
+    videoUrl: '',
+    whatYouLearn: [
+      'Wie Sie Preisabweichungen zwischen Katalog und Angebotspositionen erkennen',
+      'Verwendung von „Katalogpreis verwenden" zur Aktualisierung des Angebots',
+      'Verwendung von „Katalog aktualisieren" zum Festlegen eines neuen Standards',
+      'Massenabgleich aller abweichenden Positionen auf einmal',
+    ],
+    steps: [
+      {
+        title: 'Angebot öffnen — Preisabgleich-Banner erscheint',
+        content: 'Öffnen Sie ein Angebot im Editor. Weichen ein oder mehrere Positionspreise vom Gerätekatalog ab, erscheint über der Positionstabelle ein blauer „Preisabgleich"-Banner. Der Banner zeigt die Anzahl der nicht synchronisierten Positionen.',
+        tip: 'Der Preisabgleich ist besonders nützlich direkt nach der KI-Generierung — die KI gleicht Katalogpositionen ab, kann aber gelegentlich leicht abweichende Preise verwenden.',
+      },
+      {
+        title: 'Abweichungen überprüfen',
+        content: 'Klicken Sie auf den Banner, um das Preisabgleich-Panel zu öffnen. Jede abweichende Position wird mit Name, aktuellem Angebotspreis, Katalogpreis und prozentualem Unterschied aufgelistet. Positionen mit mehr als 10% Unterschied sind rot markiert; kleinere Abweichungen erscheinen in Gelb.',
+      },
+      {
+        title: 'Aktion pro Position wählen',
+        content: 'Für jede abweichende Position stehen zwei Aktionen zur Auswahl: „Katalogpreis verwenden" aktualisiert die Angebotsposition auf den Katalogpreis — verwenden Sie dies, wenn der Katalog korrekt ist. „Katalog aktualisieren" setzt den Angebotspreis als neuen Standard im Katalog — verwenden Sie dies, wenn Sie den Preis für diesen Auftrag bewusst geändert haben.',
+        tip: 'Verwenden Sie „Katalog aktualisieren" sparsam — es ändert den Preis für alle zukünftigen Angebote. Nur bei bewusst neuem Tarif verwenden, nicht bei Einmalrabatten.',
+      },
+      {
+        title: 'Alle Positionen auf einmal abgleichen',
+        content: 'Um alle Abweichungen auf einmal zu beheben, klicken Sie oben im Preisabgleich-Panel auf „Alle mit Katalog abgleichen". CueQuote aktualisiert alle abweichenden Positionen auf den Katalogpreis. Grüne Häkchen erscheinen neben jeder Position während der Synchronisation. Der Banner verschwindet, sobald alle Positionen synchronisiert sind.',
+      },
+    ],
+  },
 ]

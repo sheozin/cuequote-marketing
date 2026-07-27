@@ -7,7 +7,7 @@ import {
   Sparkles, FileText, PenTool, CreditCard, Package, TrendingUp,
   ArrowRight, Clock, AlertTriangle, EyeOff, Palette,
   MessageSquare, Cpu, Send, Building2, Rocket, Music,
-  HelpCircle, ChevronDown,
+  HelpCircle, ChevronDown, RefreshCw,
 } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 
@@ -75,6 +75,7 @@ export default async function ForAvCompaniesPage() {
     { icon: <CreditCard size={22} />, titleKey: "feat4Title" as const, descKey: "feat4Desc" as const },
     { icon: <Package size={22} />, titleKey: "feat5Title" as const, descKey: "feat5Desc" as const },
     { icon: <TrendingUp size={22} />, titleKey: "feat6Title" as const, descKey: "feat6Desc" as const },
+    { icon: <RefreshCw size={22} />, titleKey: "feat7Title" as const, descKey: "feat7Desc" as const },
   ];
 
   const useCases = [

@@ -428,6 +428,22 @@
     "forEventPlanners": "Für Veranstaltungsplaner"
   },
   "posts": {
+    "price-sync-catalog-proposal-matching": {
+      "title": "Preisabgleich: So halten Sie Ihren AV-Katalog und Angebote in perfekter Übereinstimmung",
+      "excerpt": "Wenn Katalogpreise und Angebote auseinanderdriften, senden Sie falsche Preise und verlieren das Vertrauen von Kunden. Lernen Sie, wie der Preisabgleich Abweichungen erkennt, wann Sie ziehen oder schieben sollten, und wie ein Klick alles behebt.",
+      "readTime": "6 Min. Lesezeit",
+      "content": [
+        "Jedes AV-Unternehmen, das einen Gerätekatalog verwaltet, steht vor demselben stillen Problem: Preise driften. Sie aktualisieren einen Tarif im Katalog, weil ein Lieferant seine Kosten geändert hat, aber drei offene Angebote zeigen noch den alten Preis. Oder Sie geben einem Kunden einen Sonderpreis für eine Position, und jetzt sitzt dieser Preis im Angebot, während der Katalog etwas anderes zeigt. Mit der Zeit — ohne ein System zur Abstimmung — wird die Lücke zwischen dem, was der Katalog sagt, und dem, was Angebote zeigen, zu einer Quelle von Fehlern und unterbewerteten Aufträgen.",
+        "Der Preisabgleich ist CueQuotes Antwort auf dieses Problem. Er überwacht jede Angebotsposition in Echtzeit mit Ihrem Gerätekatalog und zeigt Abweichungen als eine einzige, umsetzbare Benachrichtigung an. Sie müssen Angebote nicht manuell prüfen oder Tabellen vergleichen — das System erledigt es für Sie.",
+        "Das Problem zeigt sich in zwei Richtungen. Die erste: Der Katalog hat den richtigen Preis, aber das Angebot ist veraltet. Dies passiert häufig nach der KI-Generierung, wo die KI Katalogpositionen nach Name abgleicht, aber möglicherweise einen leicht anderen Preis zieht. Die zweite Richtung ist umgekehrt: Sie haben eine Position in einem Angebot bewusst anders bepreist — vielleicht ein Mengenrabatt oder ein verhandelter Preis — und möchten diesen Preis nun als neuen Standard in den Katalog schreiben.",
+        "Der Preisabgleich behandelt beide Richtungen. Wenn Sie ein Angebot im Editor öffnen und Abweichungen vorhanden sind, erscheint ein blauer Banner über der Positionstabelle. Ein Klick auf den Banner öffnet das Panel, das jede Abweichung mit Artikelname, aktuellem Angebotspreis, Katalogpreis und prozentualem Unterschied auflistet. Positionen mit mehr als 10% Unterschied sind rot markiert; kleinere Abweichungen erscheinen in Gelb.",
+        "Für jede abweichende Position wählen Sie eine von zwei Aktionen. 'Katalogpreis verwenden' aktualisiert die Angebotsposition auf den aktuellen Katalogpreis — die richtige Wahl, wenn der Katalog die Wahrheit widerspiegelt. 'Katalog aktualisieren' setzt den Angebotspreis als neuen Standard im Katalog — die richtige Wahl, wenn Sie einen neuen Tarif ausgehandelt haben und ihn für zukünftige Angebote festschreiben möchten. Diese bidirektionale Fähigkeit unterscheidet den Preisabgleich von einem einfachen Audit-Tool.",
+        "Die Massen-Option — 'Alle mit Katalog abgleichen' — erscheint oben im Panel und wendet Katalogpreise auf alle abweichenden Positionen mit einem Klick an. Das ist die richtige Wahl direkt nach der KI-Generierung, wenn Sie bestätigen möchten, dass alle KI-vorgeschlagenen Preise mit Ihrem Katalog übereinstimmen, bevor das Angebot an den Kunden geht. Grüne Häkchen erscheinen neben jeder Position während der Synchronisation. Der Banner verschwindet, sobald alle Positionen übereinstimmen.",
+        "Eine praktische Gewohnheit ist es wert, entwickelt zu werden: Führen Sie den Preisabgleich vor jedem Angebotsversand durch. Er dauert weniger als dreißig Sekunden und verhindert die Art von Fehlern, die sich am schwersten im Nachhinein beheben lassen — falsche Preise, die Kunden bereits gesehen haben.",
+        "Die Richtung 'Katalog aktualisieren' verdient ihre eigene Disziplin. Verwenden Sie sie für bewusste Tarifänderungen, nicht für Einmalrabatte. Wenn Sie einem Kunden 15% Rabatt auf eine LED-Wand geben, weil er ein Stammkunde ist, aktualisieren Sie den Katalog nicht mit diesem reduzierten Preis — zukünftige Angebote erben ihn und Ihr Standardtarif erodiert. Verwenden Sie 'Katalog aktualisieren' nur, wenn der neue Preis eine beabsichtigte, dauerhafte Änderung Ihrer Preisstruktur darstellt.",
+        "Der Preisabgleich ist Teil einer übergeordneten Philosophie in CueQuote: Ihr Katalog ist die einzige Wahrheitsquelle für Gerätepreise, und alles andere — Angebote, Rechnungen, Kostenberechnungen — sollte daran verankert bleiben. Wenn dieser Anker hält, wird Ihre Kalkulation konsistent, Ihre Margen vorhersehbar, und Kunden erhalten jedes Mal ein professionelles Erlebnis."
+      ]
+    },
     "complete-guide-av-quoting": {
       "title": "Der komplette Leitfaden zur AV-Angebotserstellung: Prozess, Preise und häufige Fehler",
       "excerpt": "Alles, was AV-Unternehmen über die Angebotserstellung wissen müssen — vom Verständnis des Kundenbriefings über Preisstrategien bis hin zu häufigen Fehlern und KI-gestützten Tools.",
@@ -1770,6 +1786,16 @@
       "step2": "Speichern Sie den Artikel — die neue Kategorie ist jetzt im gesamten Workspace für andere Artikel verfügbar",
       "step3": "Um eine Kategorieüberschrift nur in einem bestimmten Angebot umzubenennen, öffnen Sie das Angebot, klicken Sie auf die Abschnittsüberschrift und tippen Sie den neuen Namen — dies betrifft nur das PDF und die Freigabeseite dieses Angebots",
       "tip": "Halten Sie benutzerdefinierte Kategorienamen kurz und konsistent — sie erscheinen als Abschnittsüberschriften im PDF, daher ist 'Rigging & Traversen' besser als 'Rigging-Ausrüstung und Traversensysteme'"
+    },
+    "priceSync": {
+      "title": "Preisabgleich",
+      "content1": "Der Preisabgleich erkennt automatisch, wenn Angebotspreise von Ihrem Gerätekatalog abweichen. Er erscheint als blauer Banner im Angebots-Editor, sobald Abweichungen gefunden werden.",
+      "content2": "Sie können Preise in beide Richtungen synchronisieren: Katalogpreise ins Angebot übernehmen oder Angebotspreise als neuen Standard in den Katalog zurückschreiben. Mit 'Alle mit Katalog abgleichen' beheben Sie alle Abweichungen auf einmal.",
+      "step1": "Öffnen Sie ein Angebot im Editor — weichen Positionspreise vom Katalog ab, erscheint ein blauer 'Preisabgleich'-Banner über den Positionen",
+      "step2": "Klicken Sie zum Aufklappen und sehen Sie jede Abweichung: Artikelname, Angebotspreis, Katalogpreis und prozentualen Unterschied (rot für >10%, gelb für kleinere Abweichungen)",
+      "step3": "Wählen Sie pro Artikel 'Katalogpreis verwenden' um das Angebot zu aktualisieren, oder 'Katalog aktualisieren' um den Angebotspreis als neuen Standard zu setzen",
+      "step4": "Klicken Sie 'Alle mit Katalog abgleichen' um Katalogpreise auf alle abweichenden Positionen anzuwenden — grüne Häkchen erscheinen während der Synchronisation",
+      "tip": "Der Preisabgleich ist besonders nützlich nach der KI-Generierung — die KI gleicht Katalogpositionen ab, kann aber gelegentlich leicht abweichende Preise verwenden. Ein Klick behebt alles."
     }
   },
   "changelog": {
@@ -1843,6 +1869,8 @@
     "feat5Desc": "Verfolgen Sie Geräte mit Seriennummern. Planen Sie Crew für Events. Wissen Sie, was verfügbar ist, bevor Sie anbieten.",
     "feat6Title": "Margen & Rentabilität",
     "feat6Desc": "Sehen Sie Kosten und Margen bei jedem Deal. Setzen Sie Ziele, erhalten Sie Warnungen bei Margenunterschreitung.",
+    "feat7Title": "Preisabgleich",
+    "feat7Desc": "Katalog- und Angebotspreise bleiben automatisch synchron. Beheben Sie Abweichungen per Klick oder schreiben Sie Angebotspreise als neuen Standard zurück in den Katalog.",
     "painLabel": "KOMMT IHNEN DAS BEKANNT VOR?",
     "painTitle": "Angebotsprobleme, die Sie Aufträge kosten",
     "painSubtitle": "AV-Unternehmen verlieren jede Woche Umsatz durch diese vermeidbaren Probleme.",

@@ -7,6 +7,11 @@ export interface BlogPostSummary {
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
   {
+    slug: "price-sync-catalog-proposal-matching",
+    category: "Guides",
+    date: "2026-07-25",
+  },
+  {
     slug: "complete-guide-av-quoting",
     category: "Guides",
     date: "2026-07-23",

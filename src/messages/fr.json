@@ -428,6 +428,22 @@
     "forEventPlanners": "Pour les planificateurs d'événements"
   },
   "posts": {
+    "price-sync-catalog-proposal-matching": {
+      "title": "Synchronisation des prix : comment maintenir votre catalogue AV et vos devis en parfait alignement",
+      "excerpt": "Quand les prix du catalogue et des devis divergent, vous envoyez de mauvais tarifs et perdez la confiance des clients. Découvrez comment la synchronisation des prix détecte les écarts, quand tirer ou pousser, et comment un clic peut tout corriger.",
+      "readTime": "6 min de lecture",
+      "content": [
+        "Toute entreprise AV qui gère un catalogue de matériel fait face au même problème silencieux : les prix dérivent. Vous mettez à jour un tarif dans votre catalogue parce qu'un fournisseur a changé ses prix, mais trois devis ouverts affichent encore l'ancien tarif. Ou vous accordez un prix spécial à un client sur une ligne, et ce prix se retrouve dans le devis pendant que le catalogue en affiche un autre. Avec le temps, sans système de réconciliation, l'écart entre ce que dit le catalogue et ce qu'affichent les devis devient une source d'erreurs et de missions sous-évaluées.",
+        "La synchronisation des prix est la réponse de CueQuote à ce problème. Elle surveille chaque ligne de chaque devis par rapport à votre catalogue de matériel en temps réel et signale toute divergence sous forme d'une notification unique et actionnable. Vous n'avez pas besoin d'auditer les devis manuellement ni de croiser les données avec des feuilles de calcul — le système le fait pour vous.",
+        "Le problème se manifeste dans deux directions. La première : votre catalogue a le bon prix mais le devis est obsolète. Cela arrive le plus souvent après la génération par IA, où l'IA associe vos articles du catalogue par nom mais peut tirer un prix légèrement différent. La seconde direction est inverse : vous avez délibérément tarifé quelque chose différemment dans un devis — peut-être une remise volume ou un prix négocié — et vous souhaitez maintenant inscrire ce tarif dans votre catalogue comme nouveau standard.",
+        "La synchronisation des prix gère les deux directions. Quand vous ouvrez un devis dans l'éditeur et que des écarts existent, une bannière bleue apparaît au-dessus du tableau des lignes. Cliquer sur la bannière développe le panneau qui liste chaque écart avec le nom de l'article, le prix actuel dans le devis, le prix du catalogue et le pourcentage d'écart. Les articles avec un écart supérieur à 10% sont mis en évidence en rouge ; les écarts plus faibles apparaissent en orange.",
+        "Pour chaque élément non concordant, vous choisissez l'une des deux actions. 'Utiliser le prix du catalogue' met à jour la ligne du devis pour correspondre au prix catalogue actuel — le bon choix quand le catalogue reflète la réalité. 'Mettre à jour le catalogue' définit le prix du devis comme nouveau standard dans le catalogue — le bon choix quand vous avez délibérément décidé d'un nouveau tarif et souhaitez le propager aux futurs devis. Cette capacité bidirectionnelle est ce qui différencie la synchronisation des prix d'un simple outil d'audit.",
+        "L'option de masse — 'Tout aligner sur le catalogue' — apparaît en haut du panneau et applique les prix du catalogue à tous les éléments non concordants en un seul clic. C'est le bon choix immédiatement après la génération par IA, pour confirmer que tous les prix suggérés par l'IA s'alignent avec votre catalogue avant d'envoyer le devis au client. Des coches vertes apparaissent à côté de chaque élément pendant la synchronisation. La bannière disparaît une fois tous les éléments alignés.",
+        "Une discipline pratique mérite d'être développée : lancez la synchronisation des prix avant chaque envoi de devis. Cela prend moins de trente secondes et prévient la catégorie d'erreurs la plus difficile à corriger après coup — des prix erronés que les clients ont déjà vus.",
+        "La direction 'Mettre à jour le catalogue' mérite sa propre discipline. Réservez-la aux changements de tarifs délibérés, pas aux remises ponctuelles. Si vous accordez à un client une réduction de 15% sur un mur LED parce qu'il est fidèle, ne mettez pas à jour le catalogue avec ce prix réduit — les futurs devis en hériteront et votre tarif standard s'érode. Utilisez 'Mettre à jour le catalogue' uniquement quand le nouveau prix représente un changement intentionnel et permanent de votre structure tarifaire.",
+        "La synchronisation des prix fait partie d'une philosophie plus large dans CueQuote : votre catalogue est la seule source de vérité pour les prix du matériel, et tout le reste — devis, factures, calculs de coûts — doit y rester ancré. Quand cette ancre tient, vos devis deviennent cohérents, vos marges prévisibles, et les clients reçoivent chaque fois une expérience professionnelle."
+      ]
+    },
     "complete-guide-av-quoting": {
       "title": "Le guide complet du devis AV : processus, tarification et erreurs courantes",
       "excerpt": "Tout ce que les entreprises AV doivent savoir sur les devis — de la compréhension du brief client aux stratégies de prix, erreurs courantes et outils IA qui accélèrent le processus.",
@@ -1772,6 +1788,16 @@
       "step2": "Enregistrez l'article — la nouvelle catégorie est maintenant disponible dans tout votre espace de travail pour d'autres articles",
       "step3": "Pour renommer un intitulé de catégorie dans une proposition spécifique uniquement, ouvrez la proposition, cliquez sur l'intitulé de section et tapez le nouveau nom — cela n'affecte que le PDF et la page de partage de cette proposition",
       "tip": "Gardez les noms de catégories personnalisées courts et cohérents — ils apparaissent comme intitulés de section dans le PDF, donc 'Gréage & Praticables' fonctionne mieux que 'Équipements de gréage et systèmes de praticables'"
+    },
+    "priceSync": {
+      "title": "Synchronisation des prix",
+      "content1": "La synchronisation des prix détecte automatiquement quand les prix des lignes d'un devis diffèrent de votre catalogue de matériel. Elle apparaît sous forme de bannière bleue dans l'éditeur de devis lorsque des écarts sont trouvés.",
+      "content2": "Vous pouvez synchroniser les prix dans les deux sens : importer les prix du catalogue dans le devis, ou exporter les prix du devis vers le catalogue comme nouveau standard. Le bouton 'Tout aligner sur le catalogue' vous permet de corriger tous les écarts en une seule fois.",
+      "step1": "Ouvrez un devis dans l'éditeur — si les prix des lignes diffèrent du catalogue, une bannière bleue 'Synchronisation des prix' apparaît au-dessus des lignes",
+      "step2": "Cliquez pour développer et voir chaque écart : le nom de l'article, le prix du devis, le prix du catalogue et le pourcentage d'écart (rouge pour >10%, orange pour les écarts plus faibles)",
+      "step3": "Pour chaque article, choisissez 'Utiliser le prix du catalogue' pour mettre à jour le devis, ou 'Mettre à jour le catalogue' pour définir le prix du devis comme nouveau standard",
+      "step4": "Cliquez 'Tout aligner sur le catalogue' pour appliquer en masse les prix du catalogue à tous les éléments non concordants — des coches vertes apparaissent pendant la synchronisation",
+      "tip": "La synchronisation des prix est particulièrement utile après la génération par IA — l'IA correspond les éléments du catalogue mais peut parfois utiliser des prix légèrement différents. Un clic corrige tout."
     }
   },
   "changelog": {
@@ -1845,6 +1871,8 @@
     "feat5Desc": "Suivez les équipements par numéro de série. Planifiez l'équipe pour les événements. Sachez ce qui est disponible avant de faire un devis.",
     "feat6Title": "Marges et rentabilité",
     "feat6Desc": "Visualisez les coûts et marges sur chaque affaire. Fixez des objectifs, recevez des alertes si les marges baissent.",
+    "feat7Title": "Synchronisation des prix",
+    "feat7Desc": "Les prix du catalogue et du devis restent synchronisés automatiquement. Corrigez les écarts en un clic ou renvoyez les prix du devis vers le catalogue comme nouveau standard.",
     "painLabel": "ÇA VOUS DIT QUELQUE CHOSE ?",
     "painTitle": "Les problèmes de devis qui vous coûtent des contrats",
     "painSubtitle": "Les entreprises AV perdent du chiffre d'affaires chaque semaine à cause de ces problèmes évitables.",

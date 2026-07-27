@@ -428,6 +428,22 @@
     "forEventPlanners": "For Event Planners"
   },
   "posts": {
+    "price-sync-catalog-proposal-matching": {
+      "title": "Price Sync: How to Keep Your AV Catalog and Proposals in Perfect Alignment",
+      "excerpt": "When catalog prices drift out of sync with your proposals, you quote the wrong rates and lose trust with clients. Learn how Price Sync detects mismatches, when to pull vs push, and how one click can fix them all.",
+      "readTime": "6 min read",
+      "content": [
+        "Every AV company that manages an equipment catalog faces the same quiet problem: prices drift. You update a rate in your catalog because a supplier changed their charge, but three open proposals still show the old price. Or you give a client a special rate on a line item and now that price sits in the proposal while your catalog shows something different. Over time, without a system to reconcile them, the gap between what your catalog says and what your proposals show becomes a source of errors, awkward conversations, and underpriced jobs.",
+        "Price Sync is CueQuote's answer to this problem. It monitors every proposal's line items against your equipment catalog in real time and surfaces any discrepancies as a single, actionable notification. You do not need to audit proposals manually or cross-reference spreadsheets — the system does it for you.",
+        "The problem manifests in two directions. The first is when your catalog has the correct price but the proposal is out of date. This happens most often after AI generation, where the AI matches your catalog items by name but may pull a slightly different price, or after you have updated catalog rates and want existing proposals to reflect them. The second direction is the reverse: you have deliberately priced something differently in a proposal — perhaps a volume discount, a preferred client rate, or a price agreed in negotiation — and you now want to lock that rate into your catalog as the new standard.",
+        "Price Sync handles both directions. When you open a proposal in the editor and mismatches exist, a blue banner appears above the line items table. The number of mismatched items is shown at a glance. Clicking the banner expands the Price Sync panel, which lists each mismatch with the item name, the current proposal price, the catalog price, and the percentage difference. Items with a gap greater than 10% are flagged in red; smaller differences appear in amber. This visual hierarchy lets you prioritize the significant discrepancies first.",
+        "For each mismatched item, you choose one of two actions. 'Use catalog price' updates the proposal line item to match what your catalog currently says — the right choice when your catalog is the source of truth and the proposal just needs to catch up. 'Update catalog' sets the proposal price as the new standard in your catalog — the right choice when you have negotiated or decided on a new rate and want it to propagate forward to all future proposals. This two-way capability is what makes Price Sync different from a simple audit tool. It does not assume the catalog is always correct; it lets you decide which direction each sync should flow.",
+        "The bulk option — 'Match all to catalog' — appears at the top of the panel and applies catalog prices to every mismatched item in one click. This is the right choice right after AI generation, when you want to confirm that all AI-suggested prices align with your catalog before sending the proposal to a client. Green checkmarks appear next to each item as the sync completes. The banner disappears once all items are in alignment.",
+        "A practical discipline worth developing: run Price Sync before every proposal send. After you have built the proposal, reviewed the scope, and customized the terms, pause at the Price Sync banner. It takes less than thirty seconds, and it prevents the category of errors that are hardest to fix after the fact — wrong prices that clients have already seen. If a client questions a price that differs from a previous quote, having consistent, synchronized pricing across your catalog and proposals gives you a clean audit trail to point to.",
+        "The 'Update catalog' direction deserves its own discipline. Reserve it for deliberate rate changes, not one-off discounts. If you give a client a 15% reduction on your LED wall because they are a repeat customer, do not update the catalog with that reduced price — future proposals will inherit it and your standard rate erodes. Instead, leave the catalog at the standard rate and dismiss the mismatch for that item. Use 'Update catalog' only when the new price represents an intentional, permanent change to your pricing structure. Over time, this keeps your catalog honest and your default rates accurate.",
+        "Price Sync is part of a broader philosophy in CueQuote: your catalog is the single source of truth for equipment pricing, and everything else — proposals, invoices, costing calculations — should stay anchored to it. When that anchor holds, your quoting becomes consistent, your margins are predictable, and clients get the same professional experience every time they receive a proposal from you. Price Sync is the mechanism that keeps the anchor from drifting."
+      ]
+    },
     "complete-guide-av-quoting": {
       "title": "The Complete Guide to AV Quoting: Process, Pricing & Common Mistakes",
       "excerpt": "Everything AV companies need to know about quoting — from understanding client briefs to pricing strategies, common mistakes that lose contracts, and how AI-powered quoting tools accelerate the process.",
@@ -1769,6 +1785,16 @@
       "step2": "Save the item — the new category is now available across your entire workspace for other items",
       "step3": "To rename a category heading in a specific proposal only, open the proposal, click the section heading, and type the new name — this affects only that proposal's PDF and share page",
       "tip": "Keep custom category names short and consistent — they appear as section headings in the PDF, so 'Rigging & Trussing' works better than 'Rigging equipment and trussing systems'"
+    },
+    "priceSync": {
+      "title": "Price Sync",
+      "content1": "Price Sync automatically detects when proposal line item prices differ from your equipment catalog. It appears as a blue banner in the proposal editor whenever mismatches are found.",
+      "content2": "You can sync prices in either direction: pull catalog prices into the proposal, or push proposal prices back to your catalog as the new standard. A 'Match all to catalog' button lets you bulk-fix all mismatches at once.",
+      "step1": "Open any proposal in the editor — if line item prices differ from your catalog, a blue 'Price Sync' banner appears above the line items",
+      "step2": "Click to expand and see each mismatch: the item name, proposal price, catalog price, and percentage difference (red for >10%, amber for smaller differences)",
+      "step3": "For each item, choose 'Use catalog price' to update the proposal, or 'Update catalog' to set the proposal price as your new catalog standard",
+      "step4": "Click 'Match all to catalog' to bulk-apply catalog prices to all mismatched items at once — green checkmarks appear as items sync",
+      "tip": "Price Sync is especially useful after AI generation — the AI matches catalog items but may occasionally use slightly different prices. One click fixes them all."
     }
   },
   "changelog": {
@@ -1842,6 +1868,8 @@
     "feat5Desc": "Track equipment with serial numbers. Schedule crew for events. Know what's available before you quote.",
     "feat6Title": "Margin & Profitability",
     "feat6Desc": "See costs and margins on every deal. Set targets, get alerts when margins drop below your threshold.",
+    "feat7Title": "Price Sync",
+    "feat7Desc": "Catalog and proposal prices stay in sync automatically. Fix mismatches with one click or push proposal prices back to your catalog as the new standard.",
     "painLabel": "SOUND FAMILIAR?",
     "painTitle": "The quoting problems costing you deals",
     "painSubtitle": "AV companies lose revenue every week to these preventable issues.",

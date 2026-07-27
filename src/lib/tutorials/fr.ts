@@ -1193,4 +1193,41 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'price-sync',
+    title: 'Synchronisation des prix — Aligner catalogue et devis',
+    description: 'Détectez et corrigez automatiquement les écarts de prix entre votre catalogue de matériel et vos devis actifs.',
+    duration: '3 min',
+    difficulty: 'intermediate',
+    category: 'Devis',
+    mode: 'av',
+    icon: '🔄',
+    videoUrl: '',
+    whatYouLearn: [
+      'Comment repérer les écarts de prix entre le catalogue et les lignes du devis',
+      'Utiliser « Utiliser le prix du catalogue » pour mettre à jour le devis',
+      'Utiliser « Mettre à jour le catalogue » pour définir le prix du devis comme nouveau standard',
+      'Alignement en masse de tous les éléments non concordants en une seule fois',
+    ],
+    steps: [
+      {
+        title: 'Ouvrir un devis — la bannière de synchronisation apparaît',
+        content: 'Ouvrez n\'importe quel devis dans l\'éditeur. Si un ou plusieurs prix de lignes diffèrent de votre catalogue de matériel, une bannière bleue « Synchronisation des prix » apparaît au-dessus du tableau des lignes. La bannière indique le nombre d\'éléments non synchronisés.',
+        tip: 'La synchronisation des prix est particulièrement utile juste après la génération par IA — l\'IA correspond les éléments du catalogue mais peut parfois utiliser des prix légèrement différents.',
+      },
+      {
+        title: 'Examiner les écarts',
+        content: 'Cliquez sur la bannière pour développer le panneau de synchronisation des prix. Chaque élément non concordant est listé avec son nom, le prix actuel dans le devis, le prix du catalogue et le pourcentage d\'écart. Les éléments avec un écart supérieur à 10% sont mis en évidence en rouge ; les écarts plus faibles apparaissent en orange.',
+      },
+      {
+        title: 'Choisir une action par élément',
+        content: 'Pour chaque élément non concordant, choisissez l\'une des deux actions : « Utiliser le prix du catalogue » met à jour la ligne du devis pour correspondre au catalogue — utilisez ceci quand le catalogue est correct. « Mettre à jour le catalogue » définit le prix du devis comme nouveau standard dans le catalogue — utilisez ceci quand vous avez intentionnellement changé le prix pour cette mission.',
+        tip: 'Utilisez « Mettre à jour le catalogue » avec parcimonie — cela change le prix pour tous les futurs devis. Utilisez-le uniquement pour un nouveau tarif délibéré, pas pour des remises ponctuelles.',
+      },
+      {
+        title: 'Aligner tous les éléments en masse',
+        content: 'Pour corriger tous les écarts d\'un coup, cliquez sur « Tout aligner sur le catalogue » en haut du panneau de synchronisation. CueQuote met à jour chaque ligne non concordante au prix du catalogue en une seule fois. Des coches vertes apparaissent à côté de chaque élément pendant la synchronisation. La bannière disparaît une fois tous les éléments synchronisés.',
+      },
+    ],
+  },
 ]

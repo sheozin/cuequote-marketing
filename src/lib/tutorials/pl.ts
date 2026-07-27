@@ -1157,4 +1157,41 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'price-sync',
+    title: 'Synchronizacja cen — dopasowanie katalogu i oferty',
+    description: 'Automatycznie wykrywaj i naprawiaj rozbieżności cen między katalogiem sprzętu a aktywnymi ofertami.',
+    duration: '3 min',
+    difficulty: 'intermediate',
+    category: 'Oferty',
+    mode: 'av',
+    icon: '🔄',
+    videoUrl: '',
+    whatYouLearn: [
+      'Jak wykrywać rozbieżności cen między katalogiem a pozycjami oferty',
+      'Używanie „Użyj ceny z katalogu", aby zaktualizować ofertę',
+      'Używanie „Aktualizuj katalog", aby ustawić cenę z oferty jako nowy standard',
+      'Masowe dopasowywanie wszystkich rozbieżnych pozycji jednocześnie',
+    ],
+    steps: [
+      {
+        title: 'Otwórz ofertę — pojawia się baner synchronizacji cen',
+        content: 'Otwórz dowolną ofertę w edytorze. Jeśli jedna lub więcej cen pozycji różni się od katalogu sprzętu, nad tabelą pozycji pojawi się niebieski baner „Synchronizacja cen". Baner pokazuje liczbę niezsynchronizowanych pozycji.',
+        tip: 'Synchronizacja cen jest szczególnie przydatna zaraz po generowaniu AI — AI dopasowuje pozycje katalogu, ale może czasem użyć nieco innych cen.',
+      },
+      {
+        title: 'Przeglądaj rozbieżności',
+        content: 'Kliknij baner, aby rozwinąć panel synchronizacji cen. Każda rozbieżna pozycja jest wymieniona z nazwą, bieżącą ceną w ofercie, ceną katalogu i procentową różnicą. Pozycje z różnicą powyżej 10% są zaznaczone na czerwono; mniejsze różnice pojawiają się na bursztynowo.',
+      },
+      {
+        title: 'Wybierz akcję dla każdej pozycji',
+        content: 'Dla każdej rozbieżnej pozycji wybierz jedną z dwóch akcji: „Użyj ceny z katalogu" aktualizuje pozycję oferty do ceny katalogu — użyj tego, gdy katalog jest prawidłowy. „Aktualizuj katalog" ustawia cenę z oferty jako nowy standard w katalogu — użyj tego, gdy celowo zmieniłeś cenę dla tego zlecenia i chcesz, aby stała się nowym domyślnym.',
+        tip: 'Używaj „Aktualizuj katalog" ostrożnie — zmienia cenę dla wszystkich przyszłych ofert. Używaj tylko przy celowej nowej stawce, nie przy jednorazowych rabatach.',
+      },
+      {
+        title: 'Masowe dopasowanie wszystkich pozycji',
+        content: 'Jeśli chcesz naprawić wszystkie rozbieżności jednocześnie, kliknij „Dopasuj wszystko do katalogu" u góry panelu synchronizacji cen. CueQuote aktualizuje każdą rozbieżną pozycję do ceny katalogu jednocześnie. Zielone znaczniki pojawiają się obok każdej pozycji podczas synchronizacji. Baner znika, gdy wszystkie pozycje są zsynchronizowane.',
+      },
+    ],
+  },
 ]
