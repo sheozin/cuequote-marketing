@@ -1,10 +1,12 @@
 "use server";
 
+import { headers } from "next/headers";
 import { createClient } from "@supabase/supabase-js";
+import { isRateLimited } from "@/lib/rate-limit";
 
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://rurazinghbfskuoeikwi.supabase.co",
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
 export type SubscribeFormState = {
@@ -20,6 +22,12 @@ export async function subscribeEmail(
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return { success: false, message: "Please enter a valid email address." };
+  }
+
+  // Rate limit: 3 subscribe attempts per IP per 10 minutes
+  const ip = (await headers()).get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (isRateLimited(`subscribe:${ip}`, 3, 10 * 60 * 1000)) {
+    return { success: false, message: "Too many requests. Please try again later." };
   }
 
   try {

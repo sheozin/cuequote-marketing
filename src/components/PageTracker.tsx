@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
 
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://rurazinghbfskuoeikwi.supabase.co',
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1cmF6aW5naGJmc2t1b2Vpa3dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyMTI2MDAsImV4cCI6MjA5MDc4ODYwMH0.lWiRDtQdkYFzs_R1Rnvb9jMcdDpo_a68yDY_dEbwseU'
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
 
 function getSessionId(): string {
@@ -54,7 +54,11 @@ export default function PageTracker() {
         try {
           const geo = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(2000) })
           const geoData = await geo.json()
-          country = geoData.country_name || geoData.country || null
+          const raw = geoData.country_name || geoData.country || null
+          // Validate: only accept plain strings up to 100 chars, no HTML/script
+          if (raw && typeof raw === 'string' && raw.length <= 100 && !/[<>"'&]/.test(raw)) {
+            country = raw
+          }
         } catch {
           // Fallback to timezone region
           country = Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[1]?.replace(/_/g, ' ') || null

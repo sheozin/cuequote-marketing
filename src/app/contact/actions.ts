@@ -1,10 +1,12 @@
 "use server";
 
+import { headers } from "next/headers";
 import { createClient } from "@supabase/supabase-js";
+import { isRateLimited } from "@/lib/rate-limit";
 
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://rurazinghbfskuoeikwi.supabase.co",
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
 export type ContactFormState = {
@@ -31,6 +33,12 @@ export async function submitContactForm(
 
   if (!message) {
     return { success: false, message: "Please enter a message." };
+  }
+
+  // Rate limit: 5 contact submissions per IP per hour
+  const ip = (await headers()).get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (isRateLimited(`contact:${ip}`, 5, 60 * 60 * 1000)) {
+    return { success: false, message: "Too many requests. Please try again later." };
   }
 
   try {
