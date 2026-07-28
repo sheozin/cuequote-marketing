@@ -46,11 +46,14 @@ html {
   /* Reduce large flex/grid gaps on mobile */
   .showcase-row,
   .av-showcase-row,
+  .planner-showcase-row {
+    flex-direction: column-reverse !important;
+    gap: 32px !important;
+  }
   .av-showcase-row-reverse,
-  .planner-showcase-row,
   .planner-showcase-row-rev {
     flex-direction: column !important;
-    gap: 40px !important;
+    gap: 32px !important;
   }
 }
 

@@ -29,39 +29,8 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
   const sectionRef = useRef<HTMLElement>(null)
   const autoSwitched = useRef(false)
 
-  // Auto-switch to planner 3s after section scrolls into view (once only)
-  useEffect(() => {
-    const section = sectionRef.current
-    if (!section) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !autoSwitched.current && !hasInteracted) {
-          autoSwitched.current = true
-          setTimeout(() => {
-            if (!hasInteracted) {
-              setTransitioning(true)
-              setTimeout(() => {
-                setMode('planner')
-                setTransitioning(false)
-              }, 200)
-              // Switch back to AV after 3 more seconds
-              setTimeout(() => {
-                setTransitioning(true)
-                setTimeout(() => {
-                  setMode('av')
-                  setTransitioning(false)
-                }, 200)
-              }, 3000)
-            }
-          }, 2000)
-        }
-      },
-      { threshold: 0.4 }
-    )
-    observer.observe(section)
-    return () => observer.disconnect()
-  }, [hasInteracted])
+  // Auto-switch removed — caused layout shifts and page jumping on mobile.
+  // The toggle hint ("Switch to see planner view →") is sufficient.
 
   const handleSwitch = (newMode: 'av' | 'planner') => {
     if (newMode === mode) return
@@ -383,8 +352,8 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
         .showcase-pulse { animation: showcase-pulse-anim 2s ease-in-out infinite; }
         .showcase-arrow-hint { animation: showcase-arrow-bounce 1.5s ease-in-out infinite; }
         @media (max-width: 900px) {
-          .showcase-row { flex-direction: column !important; gap: 48px !important; }
-          .showcase-row-reverse { flex-direction: column-reverse !important; }
+          .showcase-row { flex-direction: column-reverse !important; gap: 32px !important; }
+          .showcase-row-reverse { flex-direction: column !important; gap: 32px !important; }
         }
         @media (max-width: 768px) {
           .showcase-section-light { padding: 64px 20px; }
