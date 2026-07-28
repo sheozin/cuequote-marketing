@@ -442,7 +442,11 @@
     "categoryGuides": "Poradniki",
     "categoryIndustry": "Branża",
     "categoryTechnology": "Technologia",
-    "categoryBusiness": "Biznes"
+    "categoryBusiness": "Biznes",
+    "latestPosts": "Najnowsze artykuły",
+    "loadMore": "Załaduj więcej",
+    "showingOf": "Pokazuję {shown} z {total} artykułów",
+    "noPostsFound": "Nie znaleziono artykułów w tej kategorii."
   },
   "subscribe": {
     "title": "Bądź na bieżąco",

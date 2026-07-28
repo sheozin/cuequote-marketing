@@ -442,7 +442,11 @@
     "categoryGuides": "Guides",
     "categoryIndustry": "Industry",
     "categoryTechnology": "Technology",
-    "categoryBusiness": "Business"
+    "categoryBusiness": "Business",
+    "latestPosts": "Latest Posts",
+    "loadMore": "Load More",
+    "showingOf": "Showing {shown} of {total} posts",
+    "noPostsFound": "No posts found in this category."
   },
   "subscribe": {
     "title": "Stay in the loop",

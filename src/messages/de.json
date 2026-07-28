@@ -442,7 +442,11 @@
     "categoryGuides": "Leitfäden",
     "categoryIndustry": "Branche",
     "categoryTechnology": "Technologie",
-    "categoryBusiness": "Business"
+    "categoryBusiness": "Business",
+    "latestPosts": "Neueste Beiträge",
+    "loadMore": "Mehr laden",
+    "showingOf": "Zeige {shown} von {total} Beiträgen",
+    "noPostsFound": "Keine Beiträge in dieser Kategorie gefunden."
   },
   "subscribe": {
     "title": "Bleiben Sie auf dem Laufenden",

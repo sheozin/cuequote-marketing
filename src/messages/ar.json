@@ -442,7 +442,11 @@
     "categoryGuides": "أدلة",
     "categoryIndustry": "الصناعة",
     "categoryTechnology": "التكنولوجيا",
-    "categoryBusiness": "الأعمال"
+    "categoryBusiness": "الأعمال",
+    "latestPosts": "أحدث المقالات",
+    "loadMore": "تحميل المزيد",
+    "showingOf": "عرض {shown} من {total} منشور",
+    "noPostsFound": "لم يتم العثور على مشاركات في هذه الفئة."
   },
   "subscribe": {
     "title": "ابقَ على اطلاع",
