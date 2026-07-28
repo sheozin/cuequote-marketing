@@ -55,6 +55,15 @@ html {
     flex-direction: column !important;
     gap: 32px !important;
   }
+  /* Reset flex-basis in column mode — prevents 520px height on image containers */
+  .showcase-row > div,
+  .av-showcase-row > div,
+  .av-showcase-row-reverse > div,
+  .planner-showcase-row > div,
+  .planner-showcase-row-rev > div {
+    flex: none !important;
+    width: 100% !important;
+  }
 }
 
 /* RTL support for Arabic */
