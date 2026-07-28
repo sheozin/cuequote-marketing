@@ -354,6 +354,10 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
         @media (max-width: 900px) {
           .showcase-row { flex-direction: column-reverse !important; gap: 32px !important; }
           .showcase-row-reverse { flex-direction: column !important; gap: 32px !important; }
+          .showcase-row > div, .showcase-row-reverse > div {
+            flex: none !important;
+            width: 100% !important;
+          }
         }
         @media (max-width: 768px) {
           .showcase-section-light { padding: 64px 20px; }
