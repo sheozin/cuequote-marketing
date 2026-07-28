@@ -308,6 +308,8 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
                   opacity: isActive && !transitioning ? 1 : 0,
                   transform: isActive && !transitioning ? 'translateY(0)' : 'translateY(10px)',
                   pointerEvents: isActive && !transitioning ? 'auto' : 'none',
+                  visibility: isActive ? 'visible' : 'hidden',
+                  ...(isActive ? {} : { position: 'absolute' as const, top: 0, left: 0, right: 0 }),
                 }}
               >
                 {/* Screenshot side */}
