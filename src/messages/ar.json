@@ -446,7 +446,14 @@
     "latestPosts": "أحدث المقالات",
     "loadMore": "تحميل المزيد",
     "showingOf": "عرض {shown} من {total} منشور",
-    "noPostsFound": "لم يتم العثور على مشاركات في هذه الفئة."
+    "noPostsFound": "لم يتم العثور على مشاركات في هذه الفئة.",
+    "keyTakeaways": "أهم النقاط",
+    "relatedArticles": "مقالات ذات صلة",
+    "shareThisPost": "شارك هذا المقال",
+    "popularThisWeek": "الأكثر شيوعاً هذا الأسبوع",
+    "ctaTitle": "هل أنت مستعد لإنشاء عروض في دقائق؟",
+    "ctaDescription": "CueQuote ينشئ عروض فعاليات احترافية بالذكاء الاصطناعي. ابدأ مجاناً بدون بطاقة ائتمان.",
+    "ctaButton": "← جرّب CueQuote مجاناً"
   },
   "subscribe": {
     "title": "ابقَ على اطلاع",

@@ -446,7 +446,14 @@
     "latestPosts": "Neueste Beiträge",
     "loadMore": "Mehr laden",
     "showingOf": "Zeige {shown} von {total} Beiträgen",
-    "noPostsFound": "Keine Beiträge in dieser Kategorie gefunden."
+    "noPostsFound": "Keine Beiträge in dieser Kategorie gefunden.",
+    "keyTakeaways": "Wichtigste Erkenntnisse",
+    "relatedArticles": "Verwandte Artikel",
+    "shareThisPost": "Diesen Beitrag teilen",
+    "popularThisWeek": "Beliebt diese Woche",
+    "ctaTitle": "Bereit, Angebote in Minuten zu erstellen?",
+    "ctaDescription": "CueQuote erstellt professionelle Event-Angebote mit KI. Kostenlos starten, keine Kreditkarte erforderlich.",
+    "ctaButton": "CueQuote kostenlos testen →"
   },
   "subscribe": {
     "title": "Bleiben Sie auf dem Laufenden",

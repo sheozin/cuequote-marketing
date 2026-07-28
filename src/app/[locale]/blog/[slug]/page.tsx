@@ -291,17 +291,17 @@ export default async function BlogPostPage({
                     border: "1px solid rgba(16,185,129,0.2)",
                   }}>
                     <h3 style={{ fontSize: 18, fontWeight: 700, color: "#08172E", marginBottom: 8 }}>
-                      Ready to create proposals in minutes?
+                      {t("ctaTitle", { defaultValue: "Ready to create proposals in minutes?" })}
                     </h3>
                     <p style={{ fontSize: 14, color: "#374151", marginBottom: 16, lineHeight: 1.6 }}>
-                      CueQuote generates professional event proposals with AI. Start free, no credit card required.
+                      {t("ctaDescription", { defaultValue: "CueQuote generates professional event proposals with AI. Start free, no credit card required." })}
                     </p>
                     <a href="https://app.cuequote.com" target="_blank" rel="noopener noreferrer" style={{
                       display: "inline-block", padding: "12px 28px", borderRadius: 10,
                       background: "#10b981", color: "#fff", fontWeight: 700,
                       fontSize: 14, textDecoration: "none",
                     }}>
-                      Try CueQuote Free →
+                      {t("ctaButton", { defaultValue: "Try CueQuote Free →" })}
                     </a>
                   </div>
                 )}
@@ -334,7 +334,7 @@ export default async function BlogPostPage({
                 fontSize: 14, fontWeight: 700, color: "#08172E",
                 marginBottom: 16, display: "flex", alignItems: "center", gap: 8,
               }}>
-                <Zap size={16} style={{ color: style.accent }} /> Key Takeaways
+                <Zap size={16} style={{ color: style.accent }} /> {t("keyTakeaways", { defaultValue: "Key Takeaways" })}
               </h3>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 {takeaways.map((item, i) => (
@@ -357,7 +357,7 @@ export default async function BlogPostPage({
                 fontSize: 11, fontWeight: 700, textTransform: "uppercase",
                 letterSpacing: 1.5, color: "#9ca3af", marginBottom: 12,
               }}>
-                Share This Post
+                {t("shareThisPost", { defaultValue: "Share This Post" })}
               </h3>
               <ShareButtons url={`https://cuequote.com/blog/${slug}`} title={title} description={excerpt} />
             </div>
@@ -367,7 +367,7 @@ export default async function BlogPostPage({
                 fontSize: 11, fontWeight: 700, textTransform: "uppercase",
                 letterSpacing: 1.5, color: "#9ca3af", marginBottom: 16,
               }}>
-                Popular This Week
+                {t("popularThisWeek", { defaultValue: "Popular This Week" })}
               </h3>
               {popularPosts.map((pp, i) => {
                 let ppTitle: string;
@@ -398,7 +398,7 @@ export default async function BlogPostPage({
         <section style={{ background: "#fff", paddingBottom: 80 }}>
           <div className="related-grid-wrap" style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px" }}>
             <h2 style={{ fontSize: 20, fontWeight: 700, color: "#08172E", marginBottom: 24 }}>
-              Related Articles
+              {t("relatedArticles", { defaultValue: "Related Articles" })}
             </h2>
             <div className="related-grid" style={{
               display: "grid",

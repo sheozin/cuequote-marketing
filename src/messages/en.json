@@ -446,7 +446,14 @@
     "latestPosts": "Latest Posts",
     "loadMore": "Load More",
     "showingOf": "Showing {shown} of {total} posts",
-    "noPostsFound": "No posts found in this category."
+    "noPostsFound": "No posts found in this category.",
+    "keyTakeaways": "Key Takeaways",
+    "relatedArticles": "Related Articles",
+    "shareThisPost": "Share This Post",
+    "popularThisWeek": "Popular This Week",
+    "ctaTitle": "Ready to create proposals in minutes?",
+    "ctaDescription": "CueQuote generates professional event proposals with AI. Start free, no credit card required.",
+    "ctaButton": "Try CueQuote Free →"
   },
   "subscribe": {
     "title": "Stay in the loop",
