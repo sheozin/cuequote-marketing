@@ -182,12 +182,7 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
               return (
                 <div key={idx} style={{
                   gridArea: '1 / 1',
-                  transition: 'opacity 0.2s ease, transform 0.2s ease',
-                  opacity: isActive && !transitioning ? 1 : 0,
-                  transform: isActive && !transitioning ? 'translateY(0)' : 'translateY(10px)',
-                  pointerEvents: isActive && !transitioning ? 'auto' : 'none',
-                  visibility: isActive ? 'visible' : 'hidden',
-                  ...(isActive ? {} : { position: 'absolute' as const, top: 0, left: 0, right: 0 }),
+                  display: isActive ? 'block' : 'none',
                 }}>
                   {/* Badge */}
                   <div style={{
@@ -303,13 +298,8 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
                 className={`showcase-row ${isReversed ? 'showcase-row-reverse' : ''}`}
                 style={{
                   gridArea: '1 / 1',
-                  display: 'flex', alignItems: 'center', gap: 80,
-                  transition: 'opacity 0.2s ease, transform 0.2s ease',
-                  opacity: isActive && !transitioning ? 1 : 0,
-                  transform: isActive && !transitioning ? 'translateY(0)' : 'translateY(10px)',
-                  pointerEvents: isActive && !transitioning ? 'auto' : 'none',
-                  visibility: isActive ? 'visible' : 'hidden',
-                  ...(isActive ? {} : { position: 'absolute' as const, top: 0, left: 0, right: 0 }),
+                  display: isActive ? 'flex' : 'none',
+                  alignItems: 'center', gap: 80,
                 }}
               >
                 {/* Screenshot side */}
