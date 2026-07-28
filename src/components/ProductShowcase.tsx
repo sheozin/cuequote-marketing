@@ -155,8 +155,8 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
       : 'rgba(139,92,246,0.2)'
 
     return (
-      <section ref={sectionRef} id={id} style={{
-        padding: '120px 24px', position: 'relative', overflow: 'hidden',
+      <section ref={sectionRef} id={id} className="showcase-section-dark" style={{
+        position: 'relative', overflow: 'hidden',
         background: bgGradient,
         transition: 'background 0.5s ease',
       }}>
@@ -172,8 +172,8 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
         <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
           {toggle}
 
-          {/* Grid overlay: both variants rendered, container = taller child height */}
-          <div style={{ display: 'grid' }}>
+          {/* Grid overlay: active child is relative, inactive is absolute (no height contribution) */}
+          <div style={{ display: 'grid', position: 'relative' }}>
             {[content, inactiveContent].map((c, idx) => {
               const isActive = idx === 0
               const cAccentDark = c === av ? '#34d399' : '#C4B5FD'
@@ -186,7 +186,8 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
                   opacity: isActive && !transitioning ? 1 : 0,
                   transform: isActive && !transitioning ? 'translateY(0)' : 'translateY(10px)',
                   pointerEvents: isActive && !transitioning ? 'auto' : 'none',
-                  visibility: isActive || idx === 1 ? 'visible' : 'hidden',
+                  visibility: isActive ? 'visible' : 'hidden',
+                  ...(isActive ? {} : { position: 'absolute' as const, top: 0, left: 0, right: 0 }),
                 }}>
                   {/* Badge */}
                   <div style={{
@@ -255,6 +256,7 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
         </div>
 
         <style>{`
+          .showcase-section-dark { padding: 120px 24px; }
           .showcase-tilt { transform: perspective(1200px) rotateY(-2deg) rotateX(2deg); transition: transform 0.4s ease; }
           .showcase-tilt:hover { transform: perspective(1200px) rotateY(0deg) rotateX(0deg); }
           @keyframes showcase-pulse-anim { 0%, 100% { background: transparent; } 50% { background: rgba(139,92,246,0.15); } }
@@ -263,6 +265,9 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
           .showcase-arrow-hint { animation: showcase-arrow-bounce 1.5s ease-in-out infinite; }
           @media (max-width: 900px) {
             .showcase-tilt { transform: none; }
+          }
+          @media (max-width: 768px) {
+            .showcase-section-dark { padding: 64px 20px; }
           }
         `}</style>
       </section>
@@ -273,8 +278,8 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
   const isReversed = textSide === 'right'
 
   return (
-    <section ref={sectionRef} id={id} style={{
-      padding: '120px 24px', position: 'relative', overflow: 'hidden',
+    <section ref={sectionRef} id={id} className="showcase-section-light" style={{
+      position: 'relative', overflow: 'hidden',
       background: `linear-gradient(180deg, ${mode === 'av' ? '#f0fdf4' : '#f5f3ff'} 0%, #f9fafb 40%, #fff 100%)`,
       borderTop: `3px solid ${accentColor}`,
       transition: 'background 0.5s ease, border-color 0.5s ease',
@@ -378,6 +383,7 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
       </div>
 
       <style>{`
+        .showcase-section-light { padding: 120px 24px; }
         .showcase-row { flex-wrap: wrap; }
         .showcase-row-reverse { flex-direction: row-reverse; }
         @keyframes showcase-pulse-anim { 0%, 100% { background: transparent; } 50% { background: rgba(139,92,246,0.15); } }
@@ -387,6 +393,9 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
         @media (max-width: 900px) {
           .showcase-row { flex-direction: column !important; gap: 48px !important; }
           .showcase-row-reverse { flex-direction: column-reverse !important; }
+        }
+        @media (max-width: 768px) {
+          .showcase-section-light { padding: 64px 20px; }
         }
       `}</style>
     </section>

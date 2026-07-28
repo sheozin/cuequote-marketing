@@ -35,6 +35,25 @@ html {
 ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
 
+/* Mobile spacing: reduce excessive section padding and gaps */
+@media (max-width: 768px) {
+  section {
+    padding-top: clamp(48px, 8vw, 120px) !important;
+    padding-bottom: clamp(48px, 8vw, 120px) !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  /* Reduce large flex/grid gaps on mobile */
+  .showcase-row,
+  .av-showcase-row,
+  .av-showcase-row-reverse,
+  .planner-showcase-row,
+  .planner-showcase-row-rev {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+}
+
 /* RTL support for Arabic */
 [dir="rtl"] {
   font-family: var(--font-cairo), system-ui, sans-serif;
