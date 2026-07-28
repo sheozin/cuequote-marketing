@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
+import { Analytics } from "@vercel/analytics/react";
 import CampaignBanner from "../../components/CampaignBanner";
 import CookieConsent from "../../components/CookieConsent";
 import "../globals.css";
@@ -109,6 +110,7 @@ export default async function LocaleLayout({
       </head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <Analytics />
           <CampaignBanner />
           <CookieConsent />
           {children}
