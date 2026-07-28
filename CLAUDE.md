@@ -25,6 +25,18 @@ Same applies to tutorials: `src/lib/tutorials/en.ts`, `pl.ts`, `ar.ts`, `de.ts`,
 - One feature per row, sequential dates
 - Changelog page reads user locale and displays translated content
 
+## Mobile Spacing — Pre-publish Check
+
+Before pushing any page or component changes, verify:
+
+1. **No inline padding > 80px** without a mobile override — use CSS classes with `@media (max-width: 768px)` to reduce to 48-64px
+2. **No inline gap > 48px** without a mobile override — stacked columns on mobile should use 32-40px gap
+3. **No grid overlays** where inactive children inflate container height — use `position: absolute` on inactive items so only the active child determines height
+4. **No fixed heights** on content containers (images/screenshots OK) — use `auto` or `min-height`
+5. **Test on 375px width** (iPhone SE) — the narrowest common viewport
+
+The global `globals.css` already applies `clamp(48px, 8vw, 120px)` to all `<section>` padding on mobile, but new components using `<div>` wrappers instead of `<section>` need their own responsive padding.
+
 ## Docs
 
 - Articles defined in `src/app/[locale]/docs/page.tsx` ARTICLE_KEYS array
