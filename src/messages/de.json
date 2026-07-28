@@ -455,6 +455,12 @@
     "button": "Abonnieren",
     "success": "Abonniert!"
   },
+  "consent": {
+    "message": "Wir verwenden Analysen, um zu verstehen, wie Besucher unsere Website nutzen und Ihre Erfahrung zu verbessern. Keine personenbezogenen Daten werden an Werbetreibende verkauft oder weitergegeben.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "learnMore": "Datenschutzerklärung"
+  },
   "footer": {
     "tagline": "Die KI-Plattform für Event-Profis.",
     "product": "Produkt",

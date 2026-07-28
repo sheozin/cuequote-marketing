@@ -455,6 +455,12 @@
     "button": "Subscribe",
     "success": "Subscribed!"
   },
+  "consent": {
+    "message": "We use analytics to understand how visitors use our site and improve your experience. No personal data is sold or shared with advertisers.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Privacy Policy"
+  },
   "footer": {
     "tagline": "The AI platform for event professionals.",
     "product": "Product",

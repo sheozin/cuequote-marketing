@@ -455,6 +455,12 @@
     "button": "Subskrybuj",
     "success": "Zasubskrybowano!"
   },
+  "consent": {
+    "message": "Używamy analityki, aby zrozumieć, jak odwiedzający korzystają z naszej strony i poprawić Twoje doświadczenia. Żadne dane osobowe nie są sprzedawane ani udostępniane reklamodawcom.",
+    "accept": "Akceptuję",
+    "decline": "Odrzucam",
+    "learnMore": "Polityka prywatności"
+  },
   "footer": {
     "tagline": "Platforma AI dla profesjonalistów eventowych.",
     "product": "Produkt",

@@ -455,6 +455,12 @@
     "button": "S'abonner",
     "success": "Abonné !"
   },
+  "consent": {
+    "message": "Nous utilisons des analyses pour comprendre comment les visiteurs utilisent notre site et améliorer votre expérience. Aucune donnée personnelle n'est vendue ou partagée avec des annonceurs.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "learnMore": "Politique de confidentialité"
+  },
   "footer": {
     "tagline": "La plateforme IA pour les professionnels de l'événementiel.",
     "product": "Produit",
