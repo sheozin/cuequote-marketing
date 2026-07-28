@@ -7,6 +7,81 @@ export interface BlogPostSummary {
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
   {
+    slug: "how-to-write-av-rfp",
+    category: "Guides",
+    date: "2026-07-28",
+  },
+  {
+    slug: "corporate-iftar-planning-guide",
+    category: "Guides",
+    date: "2026-07-28",
+  },
+  {
+    slug: "cout-evenement-entreprise-2026",
+    category: "Guides",
+    date: "2026-07-28",
+  },
+  {
+    slug: "ile-kosztuje-organizacja-konferencji",
+    category: "Guides",
+    date: "2026-07-27",
+  },
+  {
+    slug: "firmenevent-planen-ohne-erfahrung",
+    category: "Guides",
+    date: "2026-07-27",
+  },
+  {
+    slug: "corporate-event-planning-mistakes",
+    category: "Guides",
+    date: "2026-07-26",
+  },
+  {
+    slug: "conference-planning-mistakes-arabic",
+    category: "Guides",
+    date: "2026-07-26",
+  },
+  {
+    slug: "cahier-des-charges-audiovisuel",
+    category: "Guides",
+    date: "2026-07-26",
+  },
+  {
+    slug: "jak-wybrac-firme-eventowa",
+    category: "Guides",
+    date: "2026-07-25",
+  },
+  {
+    slug: "veranstaltungstechnik-kosten-uebersicht",
+    category: "Guides",
+    date: "2026-07-25",
+  },
+  {
+    slug: "av-basics-for-event-planners",
+    category: "Guides",
+    date: "2026-07-24",
+  },
+  {
+    slug: "corporate-event-cost-saudi",
+    category: "Guides",
+    date: "2026-07-24",
+  },
+  {
+    slug: "organiser-seminaire-entreprise-checklist",
+    category: "Guides",
+    date: "2026-07-24",
+  },
+  {
+    slug: "planowanie-eventu-firmowego-od-zera",
+    category: "Guides",
+    date: "2026-07-23",
+  },
+  {
+    slug: "event-budget-vorlage-kostenlos",
+    category: "Guides",
+    date: "2026-07-23",
+  },
+  {
     slug: "cuequote-v132-whats-new",
     category: "Product Updates",
     date: "2026-07-27",
