@@ -39,9 +39,20 @@ function getBrowser(): string {
 export default function PageTracker() {
   const pathname = usePathname()
 
+  // Allow setting internal flag via URL param: ?cq_internal=1
   useEffect(() => {
-    // Don't track admin pages
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('cq_internal') === '1') {
+      localStorage.setItem('cq_internal', '1')
+    } else if (params.get('cq_internal') === '0') {
+      localStorage.removeItem('cq_internal')
+    }
+  }, [])
+
+  useEffect(() => {
+    // Don't track admin pages or internal users
     if (pathname?.startsWith('/admin')) return
+    if (localStorage.getItem('cq_internal') === '1') return
 
     const track = async () => {
       try {
