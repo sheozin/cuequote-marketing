@@ -1351,4 +1351,40 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'real-time-comment-notifications',
+    title: 'Powiadomienia w Czasie Rzeczywistym o Komentarzach',
+    description: 'Otrzymuj natychmiastowe powiadomienia, gdy klienci komentują Twoje udostępniane oferty, aby nigdy nie przegapić ważnych opinii lub próśb o poprawki.',
+    duration: '2 min',
+    difficulty: 'beginner',
+    category: 'Oferty',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Jak działają powiadomienia w czasie rzeczywistym, gdy klienci komentują',
+      'Co widzisz w powiadomieniu typu toast',
+      'Jak uzyskać dostęp do komentarzy z ikony dzwonka',
+      'Odpowiadanie na komentarze bezpośrednio z edytora',
+    ],
+    steps: [
+      {
+        title: 'Klient komentuje Twoją udostępnianą ofertę',
+        content: 'Gdy wysyłasz ofertę do klienta, otrzymuje on link do udostępniania. Na stronie udostępniania może zostawić komentarze w panelu Komentarze na dole. Każdy komentarz jest opatrzony sygnaturą czasową i przypisany do imienia i nazwiska klienta. W momencie przesłania komentarza otrzymujesz natychmiastowe powiadomienie.',
+      },
+      {
+        title: 'Otrzymujesz natychmiastowe powiadomienie toast',
+        content: 'Powiadomienie typu toast pojawia się w prawym dolnym rogu ekranu, pokazując imię i nazwisko klienta, podgląd jego komentarza (pierwsze ~50 znaków) i tytuł oferty. Powiadomienie jest kodowane kolorami według priorytetu — prośby o poprawki pojawiają się na żółto, ogólne komentarze na niebiesko. Toast znika automatycznie po 5 sekundach, ale możesz na niego kliknąć, aby przejść bezpośrednio do oferty.',
+        tip: 'Utrzymuj aplikację CueQuote aktywną w przeglądarce, aby widzieć powiadomienia toast. Jeśli aplikacja nie jest otwarta, nadal otrzymasz powiadomienie e-mail i ikona dzwonka.',
+      },
+      {
+        title: 'Uzyskaj dostęp do komentarzy za pośrednictwem ikony dzwonka',
+        content: 'Kliknij ikonę dzwonka (🔔) w prawym górnym rogu paska nawigacji. Pojawia się lista rozwojana pokazująca wszystkie nieprzeczytane komentarze i powiadomienia, pogrupowane według oferty. Każda linia pokazuje imię i nazwisko klienta, tekst podglądu i tytuł oferty. Kliknij dowolny komentarz, aby otworzyć tę ofertę i przejść do karty Komentarze. Gdy otworzysz kartę Komentarze, licznik na dzwonku zmniejszy się.',
+      },
+      {
+        title: 'Kliknij „Wyświetl i odpowiedz", aby odpowiedzieć',
+        content: 'Z powiadomienia toast lub listy rozwojmej dzwonka kliknij link „Wyświetl i odpowiedz", aby przejść bezpośrednio do edytora oferty z otwartą kartą Komentarze. Wszystkie komentarze klientów pojawiają się w porządku chronologicznym. Wpisz swoją odpowiedź w polu tekstowym poniżej dowolnego komentarza i naciśnij Wyślij. Twoja odpowiedź jest widoczna dla klienta natychmiast na stronie udostępniania.',
+        tip: 'Klienci widzą czerwony badge na panelu Komentarze pokazujący, ile nieprzeczytanych odpowiedzi od Ciebie istnieje. Szybkie odpowiadanie utrzymuje rozmowę aktywną.',
+      },
+    ],
+  },
 ]

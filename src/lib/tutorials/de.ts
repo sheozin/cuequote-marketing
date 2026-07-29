@@ -1387,4 +1387,40 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'real-time-comment-notifications',
+    title: 'Echtzeit-Kommentar-Benachrichtigungen',
+    description: 'Erhalten Sie sofortige Benachrichtigungen, wenn Kunden Ihre freigegebenen Angebote kommentieren, damit Sie wichtige Rückmeldungen oder Überarbeitungsanfragen nie verpassen.',
+    duration: '2 Min.',
+    difficulty: 'beginner',
+    category: 'Angebote',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Wie Echtzeit-Benachrichtigungen funktionieren, wenn Kunden kommentieren',
+      'Was Sie in der Toast-Benachrichtigung sehen',
+      'Wie Sie auf Kommentare über das Glockensymbol zugreifen',
+      'Direkt vom Editor aus auf Kommentare antworten',
+    ],
+    steps: [
+      {
+        title: 'Kunde kommentiert Ihr freigegebenes Angebot',
+        content: 'Wenn Sie ein Angebot an einen Kunden senden, erhält dieser einen Freigabe-Link. Auf der Freigabe-Seite kann er Kommentare im Kommentar-Bereich unten hinterlassen. Jeder Kommentar wird mit einem Zeitstempel versehen und dem Namen des Kunden zugeordnet. In dem Moment, in dem er seinen Kommentar absendet, erhalten Sie sofort eine Benachrichtigung.',
+      },
+      {
+        title: 'Sie erhalten sofort eine Toast-Benachrichtigung',
+        content: 'Eine Toast-Benachrichtigung erscheint in der unteren rechten Ecke Ihres Bildschirms und zeigt den Namen des Kunden, eine Vorschau seines Kommentars (erste ~50 Zeichen) und den Angebotstitel. Die Benachrichtigung ist farbcodiert nach Priorität — Überarbeitungsanfragen erscheinen in Bernsteinfarbe, allgemeine Kommentare in Blau. Der Toast verschwindet nach 5 Sekunden automatisch, aber Sie können darauf klicken, um direkt zum Angebot zu springen.',
+        tip: 'Halten Sie die CueQuote-App aktiv in Ihrem Browser, um Toast-Benachrichtigungen zu sehen. Wenn die App nicht offen ist, erhalten Sie weiterhin eine E-Mail-Benachrichtigung und das Glockensymbol.',
+      },
+      {
+        title: 'Rufen Sie Kommentare über das Glockensymbol auf',
+        content: 'Klicken Sie auf das Glockensymbol (🔔) in der oberen rechten Ecke der Navigationsleiste. Ein Dropdown-Menü erscheint, das alle ungelesenen Kommentare und Benachrichtigungen anzeigt, gruppiert nach Angebot. Jede Zeile zeigt den Namen des Kunden, einen Vorschautext und den Angebotstitel. Klicken Sie auf einen Kommentar, um das Angebot zu öffnen und zum Kommentar-Tab zu springen. Sobald Sie den Kommentar-Tab öffnen, sinkt der Benachrichtigungs-Zähler an der Glocke.',
+      },
+      {
+        title: 'Klicken Sie auf "Ansicht & Antwort", um zu antworten',
+        content: 'Klicken Sie in der Toast-Benachrichtigung oder im Dropdown der Glocke auf den Link "Ansicht & Antwort", um direkt zum Angebots-Editor mit dem geöffneten Kommentar-Tab zu springen. Alle Kundenkommentare erscheinen in chronologischer Reihenfolge. Geben Sie Ihre Antwort in das Textfeld unter einem beliebigen Kommentar ein und drücken Sie Senden. Ihre Antwort ist für den Kunden sofort auf der Freigabe-Seite sichtbar.',
+        tip: 'Kunden sehen ein rotes Abzeichen auf dem Kommentar-Bereich, das anzeigt, wie viele ungelesene Antworten von Ihnen vorhanden sind. Schnelle Antworten halten das Gespräch aktiv.',
+      },
+    ],
+  },
 ]

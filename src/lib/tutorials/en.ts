@@ -1397,4 +1397,40 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'real-time-comment-notifications',
+    title: 'Real-Time Comment Notifications',
+    description: 'Get instant notifications when clients comment on your shared proposals so you never miss important feedback or revision requests.',
+    duration: '2 min',
+    difficulty: 'beginner',
+    category: 'Proposals',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'How real-time notifications work when clients comment',
+      'What you see in the toast notification',
+      'How to access comments from the bell icon',
+      'Replying to comments directly from the editor',
+    ],
+    steps: [
+      {
+        title: 'Client comments on your shared proposal',
+        content: 'When you send a proposal to a client, they receive a share link. On the share page, they can leave comments in the Comments panel at the bottom. Each comment is timestamped and attributed to their name. The moment they submit a comment, you are notified instantly.',
+      },
+      {
+        title: 'You receive an instant toast notification',
+        content: 'A toast notification appears in the bottom-right corner of your screen, showing the client\'s name, a preview of their comment (first ~50 characters), and the proposal title. The notification is color-coded by priority — revision requests appear in amber, general comments in blue. The toast auto-dismisses after 5 seconds, but you can click it to jump directly to the proposal.',
+        tip: 'Keep the CueQuote app active in your browser to see toast notifications. If the app is not open, you\'ll still be notified via email and the bell icon.',
+      },
+      {
+        title: 'Access comments via the bell icon',
+        content: 'Click the bell icon (🔔) at the top-right of the navigation bar. A dropdown appears showing all unread comments and notifications, grouped by proposal. Each line shows the client name, preview text, and proposal title. Click any comment to open that proposal and jump to the Comments tab. Once you open the Comments tab, the bell badge count decreases.',
+      },
+      {
+        title: 'Click "View & Reply" to respond',
+        content: 'From the notification toast or bell dropdown, click the "View & Reply" link to jump directly to the proposal editor with the Comments tab open. All client comments appear in chronological order. Type your reply in the text field below any comment and press Send. Your reply is visible to the client immediately on the share page.',
+        tip: 'Clients see a red badge on the Comments panel showing how many unread replies from you exist. Replying quickly keeps the conversation active.',
+      },
+    ],
+  },
 ]

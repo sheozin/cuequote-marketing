@@ -1387,4 +1387,40 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'real-time-comment-notifications',
+    title: 'Notifications de Commentaires en Temps Réel',
+    description: 'Recevez des notifications instantanées lorsque les clients commentent vos devis partagés pour ne jamais manquer des retours importants ou des demandes de révision.',
+    duration: '2 min',
+    difficulty: 'beginner',
+    category: 'Devis',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Fonctionnement des notifications en temps réel quand les clients commentent',
+      'Ce que vous voyez dans la notification toast',
+      'Comment accéder aux commentaires via l\'icône de cloche',
+      'Répondre aux commentaires directement depuis l\'éditeur',
+    ],
+    steps: [
+      {
+        title: 'Le client commente votre devis partagé',
+        content: 'Lorsque vous envoyez un devis à un client, il reçoit un lien de partage. Sur la page partagée, il peut laisser des commentaires dans le panneau Commentaires en bas. Chaque commentaire est horodaté et attribué au nom du client. Au moment où il soumet son commentaire, vous recevez immédiatement une notification.',
+      },
+      {
+        title: 'Vous recevez instantanément une notification toast',
+        content: 'Une notification toast apparaît dans le coin inférieur droit de votre écran, affichant le nom du client, un aperçu de son commentaire (environ 50 premiers caractères) et le titre du devis. La notification est codée par couleur selon la priorité — les demandes de révision apparaissent en ambre, les commentaires généraux en bleu. Le toast s\'efface automatiquement après 5 secondes, mais vous pouvez cliquer dessus pour accéder directement au devis.',
+        tip: 'Gardez l\'application CueQuote active dans votre navigateur pour voir les notifications toast. Si l\'application n\'est pas ouverte, vous recevrez quand même une notification par e-mail et l\'icône de cloche.',
+      },
+      {
+        title: 'Accédez aux commentaires via l\'icône de cloche',
+        content: 'Cliquez sur l\'icône de cloche (🔔) en haut à droite de la barre de navigation. Un menu déroulant apparaît affichant tous les commentaires et notifications non lus, groupés par devis. Chaque ligne affiche le nom du client, le texte d\'aperçu et le titre du devis. Cliquez sur n\'importe quel commentaire pour ouvrir ce devis et accéder à l\'onglet Commentaires. Une fois l\'onglet Commentaires ouvert, le compteur de badge sur la cloche diminue.',
+      },
+      {
+        title: 'Cliquez sur "Afficher et Répondre" pour répondre',
+        content: 'Depuis la notification toast ou le menu déroulant de la cloche, cliquez sur le lien "Afficher et Répondre" pour accéder directement à l\'éditeur de devis avec l\'onglet Commentaires ouvert. Tous les commentaires des clients apparaissent dans l\'ordre chronologique. Tapez votre réponse dans le champ de texte sous n\'importe quel commentaire et appuyez sur Envoyer. Votre réponse est immédiatement visible pour le client sur la page partagée.',
+        tip: 'Les clients voient un badge rouge sur le panneau Commentaires indiquant combien de réponses non lues de vous existent. Des réponses rapides maintiennent la conversation active.',
+      },
+    ],
+  },
 ]
