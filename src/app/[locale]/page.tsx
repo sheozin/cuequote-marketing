@@ -581,13 +581,13 @@ export default async function HomePage() {
                 <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
                   textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
                   padding: "14px 24px", borderRadius: 10, fontWeight: 600, fontSize: 15, marginTop: 24,
-                  background: ctaStyle === "primary" ? "#10b981" : "transparent",
-                  color: ctaStyle === "primary" ? "#fff" : "#08172E",
-                  border: ctaStyle === "primary" ? "none" : "1px solid #e5e7eb",
+                  background: (ctaStyle === "primary" || ctaStyle === "featured") ? "#10b981" : "transparent",
+                  color: (ctaStyle === "primary" || ctaStyle === "featured") ? "#fff" : "#08172E",
+                  border: (ctaStyle === "primary" || ctaStyle === "featured") ? "none" : "1px solid #e5e7eb",
                   transition: "all 0.2s",
                 }}>
                   {cta}
-                  {ctaStyle === "primary" && <ArrowRight size={16} />}
+                  {(ctaStyle === "primary" || ctaStyle === "featured") && <ArrowRight size={16} />}
                 </Link>
               </div>
             ))}
@@ -638,13 +638,13 @@ export default async function HomePage() {
                 <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
                   textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
                   padding: "14px 24px", borderRadius: 10, fontWeight: 600, fontSize: 15, marginTop: 24,
-                  background: ctaStyle === "primary" ? "#10b981" : "transparent",
-                  color: ctaStyle === "primary" ? "#fff" : "#08172E",
-                  border: ctaStyle === "primary" ? "none" : "1px solid #e5e7eb",
+                  background: (ctaStyle === "primary" || ctaStyle === "featured") ? "#10b981" : "transparent",
+                  color: (ctaStyle === "primary" || ctaStyle === "featured") ? "#fff" : "#08172E",
+                  border: (ctaStyle === "primary" || ctaStyle === "featured") ? "none" : "1px solid #e5e7eb",
                   transition: "all 0.2s",
                 }}>
                   {cta}
-                  {ctaStyle === "primary" && <ArrowRight size={16} />}
+                  {(ctaStyle === "primary" || ctaStyle === "featured") && <ArrowRight size={16} />}
                 </Link>
               </div>
             ))}
