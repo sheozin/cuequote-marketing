@@ -137,7 +137,11 @@ export default function SmartPopup() {
   }, [])
 
   // Lightweight tracking — fire-and-forget, non-blocking
+  // Only track when user has accepted analytics cookies (GDPR)
   const trackEvent = useCallback((event: 'view' | 'click' | 'dismiss', campaignId: string, variant: number) => {
+    if (typeof window === 'undefined') return
+    const consent = localStorage.getItem('cq_analytics_consent')
+    if (consent !== 'accepted') return
     supabase.from('popup_events').insert({
       campaign_id: campaignId,
       event,
