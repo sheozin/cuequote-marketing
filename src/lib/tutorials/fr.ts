@@ -97,7 +97,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Confirmez avant que l\'IA se lance',
-        content: 'Avant que CueQuote ne génère votre devis, une boîte de dialogue de confirmation s\'affiche : « Cela utilisera 1 de vos X devis IA ce mois-ci. Il vous en reste Y sur votre plan <plan>. » Chaque plan dispose d\'un quota mensuel d\'IA — Free : 3, Starter : 15, Pro : 50, Business : illimité. Chaque génération (y compris les relances) est décomptée de ce quota, vérifiez donc bien votre description avant de confirmer. Sur les plans illimités, cette boîte de dialogue est ignorée.',
+        content: 'Avant que CueQuote ne génère votre devis, une boîte de dialogue de confirmation s\'affiche : « Cela utilisera 1 de vos X devis IA ce mois-ci. Il vous en reste Y sur votre plan <plan>. » Chaque plan dispose d\'un quota mensuel d\'IA — Free : 3, Starter : 10, Pro : 40, Business : 120. Chaque génération (y compris les relances) est décomptée de ce quota, vérifiez donc bien votre description avant de confirmer. Sur les plans illimités, cette boîte de dialogue est ignorée.',
         tip: 'Passer 30 secondes de plus à affiner votre description vous fait généralement économiser un créneau entier — l\'IA récompense la précision, et une génération gaspillée vous coûte un devis complet sur votre plafond mensuel.',
       },
       {
@@ -383,7 +383,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Comparer les 4 plans d\'abonnement',
-      'Comment passer à la version supérieure avec un essai gratuit',
+      'Comment passer à un plan payant',
       'Gérer les moyens de paiement et les factures',
       'Packs de crédits pour le paiement à l\'usage',
     ],
@@ -394,11 +394,11 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Comparez les plans',
-        content: 'Quatre plans sont disponibles : Free (3 devis/mois, PDF basique), Starter à 39 par mois (15 devis, image de marque complète, gestion des clients), Pro à 99 par mois (50 devis, modèles personnalisés, analytics) et Business à 199 par mois (devis illimités, accès API, support dédié). Basculez entre facturation mensuelle et annuelle — l\'annuel vous fait économiser 20 %.',
+        content: 'Quatre plans sont disponibles : Free (3 devis/mois, PDF basique), Starter à €29 par mois (10 devis, image de marque complète, gestion des clients), Pro à €79 par mois (40 devis, modèles personnalisés, analytics) et Business à €179 par mois (120 devis, accès API, support dédié). Basculez entre facturation mensuelle et annuelle — l\'annuel vous fait économiser 20 %.',
       },
       {
         title: 'Passez à un plan payant',
-        content: 'Cliquez sur « Démarrer l\'essai de 3 jours » sur n\'importe quel plan payant. Vous serez redirigé vers Stripe Checkout où vous saisirez vos informations de paiement. Tous les plans payants incluent un essai gratuit de 3 jours — vous ne serez pas débité avant la fin de l\'essai. Vous pouvez annuler à tout moment pendant l\'essai sans frais.',
+        content: 'Cliquez sur « Commencer gratuitement » sur n\'importe quel plan payant. Vous serez redirigé vers Stripe Checkout où vous saisirez vos informations de paiement. Votre abonnement commence immédiatement après le paiement.',
         tip: 'Vous recevrez un e-mail de confirmation détaillant votre plan et ses fonctionnalités après la mise à niveau.',
       },
       {
@@ -411,7 +411,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Achetez des packs de crédits',
-        content: 'Vous ne souhaitez pas d\'abonnement mensuel ? Achetez plutôt des crédits de devis. Un pack de 3 coûte 19 (6,33 par unité) et un pack de 10 coûte 49 (4,90 par unité). Les crédits n\'expirent jamais et incluent toutes les fonctionnalités premium comme les PDF personnalisés. Idéal pour les entreprises qui devisent de manière saisonnière.',
+        content: 'Limite mensuelle atteinte ? Achetez un pack de 5 crédits de devis pour 29 (5,80 par unité). Les crédits sont valables 12 mois et incluent toutes les fonctionnalités premium comme les PDF personnalisés. Idéal pour les entreprises qui ont besoin de quelques devis supplémentaires au-delà de leur limite de plan.',
       },
       {
         title: 'Suivez votre utilisation',

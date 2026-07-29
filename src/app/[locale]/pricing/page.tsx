@@ -425,30 +425,16 @@ export default async function PricingPage() {
               {t("creditPacksSubtitle")}
             </p>
           </div>
-          <div className="packs-grid">
-            <div style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 20, padding: "32px 28px", textAlign: "center" }}>
+          <div style={{ maxWidth: 320, margin: "0 auto 32px" }}>
+            <div style={{ background: "#fff", border: "2px solid #10b981", borderRadius: 20, padding: "32px 28px", textAlign: "center", boxShadow: "0 8px 30px rgba(16,185,129,0.08)" }}>
               <div style={{ width: 56, height: 56, borderRadius: 16, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px" }}>
                 <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>5</span>
               </div>
               <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, marginBottom: 4 }}>{t("fiveProposals", { defaultValue: "5 Proposals" })}</h3>
-              <div><span style={{ fontSize: 36, fontWeight: 800 }}>€25</span></div>
-              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>{t("perProposal5", { defaultValue: "€5.00 each" })}</p>
-              <Link href={`${APP_URL}/signup?lang=${locale}`} style={{ textDecoration: "none", display: "block", padding: "12px", borderRadius: 10, fontWeight: 600, fontSize: 14, border: "1px solid #e5e7eb", color: "#08172E" }}>
-                {t("buy3Pack")}
-              </Link>
-            </div>
-            <div style={{ background: "#fff", border: "2px solid #10b981", borderRadius: 20, padding: "32px 28px", textAlign: "center", position: "relative", boxShadow: "0 8px 30px rgba(16,185,129,0.08)" }}>
-              <div style={{ position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)", background: "#10b981", color: "#fff", fontSize: 11, fontWeight: 700, padding: "4px 14px", borderRadius: 12 }}>
-                {t("bestValue")}
-              </div>
-              <div style={{ width: 56, height: 56, borderRadius: 16, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px" }}>
-                <span style={{ fontSize: 24, fontWeight: 800, color: "#10b981" }}>15</span>
-              </div>
-              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 18, marginBottom: 4 }}>{t("fifteenProposals", { defaultValue: "15 Proposals" })}</h3>
-              <div><span style={{ fontSize: 36, fontWeight: 800 }}>€59</span></div>
-              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>{t("perProposal15", { defaultValue: "€3.93 each" })}</p>
+              <div><span style={{ fontSize: 36, fontWeight: 800 }}>€29</span></div>
+              <p style={{ fontSize: 13, color: "#10b981", fontWeight: 600, marginBottom: 16 }}>{t("perProposal5", { defaultValue: "€5.80 each" })}</p>
               <Link href={`${APP_URL}/signup?lang=${locale}`} style={{ textDecoration: "none", display: "block", padding: "12px", borderRadius: 10, fontWeight: 600, fontSize: 14, background: "#10b981", color: "#fff" }}>
-                {t("buy10Pack")}
+                {t("buy3Pack")}
               </Link>
             </div>
           </div>

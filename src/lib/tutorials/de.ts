@@ -97,7 +97,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Bestätigen, bevor die KI startet',
-        content: 'Bevor CueQuote Ihr Angebot generiert, erscheint ein Bestätigungsdialog: "Dies verbraucht 1 Ihrer X KI-Angebote in diesem Monat. Sie haben Y verbleibend in Ihrem <Plan>-Tarif." Jeder Tarif hat ein monatliches KI-Kontingent — Free: 3, Starter: 15, Pro: 50, Business: unbegrenzt. Jede Generierung (einschließlich Wiederholungen) wird auf dieses Kontingent angerechnet, prüfen Sie daher Ihre Beschreibung vor der Bestätigung doppelt. Bei unbegrenzten Tarifen wird der Dialog übersprungen.',
+        content: 'Bevor CueQuote Ihr Angebot generiert, erscheint ein Bestätigungsdialog: "Dies verbraucht 1 Ihrer X KI-Angebote in diesem Monat. Sie haben Y verbleibend in Ihrem <Plan>-Tarif." Jeder Tarif hat ein monatliches KI-Kontingent — Free: 3, Starter: 10, Pro: 40, Business: 120. Jede Generierung (einschließlich Wiederholungen) wird auf dieses Kontingent angerechnet, prüfen Sie daher Ihre Beschreibung vor der Bestätigung doppelt. Bei unbegrenzten Tarifen wird der Dialog übersprungen.',
         tip: '30 zusätzliche Sekunden für eine präzisere Beschreibung sparen meist einen ganzen Slot — die KI belohnt Genauigkeit, und eine verschwendete Generierung kostet Sie ein komplettes Angebot aus Ihrem Monatskontingent.',
       },
       {
@@ -383,7 +383,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Die 4 Abo-Tarife vergleichen',
-      'Wie Sie mit einer kostenlosen Testphase upgraden',
+      'Wie Sie auf einen kostenpflichtigen Tarif upgraden',
       'Zahlungsmethoden und Rechnungen verwalten',
       'Credit-Pakete für Pay-as-you-go',
     ],
@@ -394,11 +394,11 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Tarife vergleichen',
-        content: 'Vier Tarife stehen zur Auswahl: Free (3 Angebote/Monat, Basis-PDF), Starter für 39 pro Monat (15 Angebote, vollständiges Branding, Kundenverwaltung), Pro für 99 pro Monat (50 Angebote, individuelle Vorlagen, Analytics) und Business für 199 pro Monat (unbegrenzte Angebote, API-Zugriff, Premium-Support). Wechseln Sie zwischen monatlicher und jährlicher Abrechnung — die jährliche spart 20 %.',
+        content: 'Vier Tarife stehen zur Auswahl: Free (3 Angebote/Monat, Basis-PDF), Starter für €29 pro Monat (10 Angebote, vollständiges Branding, Kundenverwaltung), Pro für €79 pro Monat (40 Angebote, individuelle Vorlagen, Analytics) und Business für €179 pro Monat (120 Angebote, API-Zugriff, Premium-Support). Wechseln Sie zwischen monatlicher und jährlicher Abrechnung — die jährliche spart 20 %.',
       },
       {
         title: 'Auf einen kostenpflichtigen Tarif upgraden',
-        content: 'Klicken Sie bei einem kostenpflichtigen Tarif auf "3-Tage-Test starten". Sie werden zum Stripe Checkout weitergeleitet, wo Sie Ihre Zahlungsdaten eingeben. Alle kostenpflichtigen Tarife enthalten eine 3-tägige kostenlose Testphase — es erfolgt keine Belastung bis zum Ende der Testphase. Sie können während der Testphase jederzeit kostenlos kündigen.',
+        content: 'Klicken Sie bei einem kostenpflichtigen Tarif auf "Kostenlos starten". Sie werden zum Stripe Checkout weitergeleitet, wo Sie Ihre Zahlungsdaten eingeben. Ihr Abonnement beginnt sofort nach der Zahlung.',
         tip: 'Nach dem Upgrade erhalten Sie eine Bestätigungs-E-Mail mit Ihren Tarifdetails und Funktionen.',
       },
       {
@@ -411,7 +411,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Credit-Pakete kaufen',
-        content: 'Sie möchten kein monatliches Abonnement? Kaufen Sie stattdessen Angebots-Credits. Ein 3er-Paket kostet 19 (6,33 je Credit) und ein 10er-Paket 49 (4,90 je Credit). Credits verfallen nie und enthalten alle Premium-Funktionen wie gebrandete PDFs. Ideal für Unternehmen, die saisonal Angebote erstellen.',
+        content: 'Monatslimit erreicht? Kaufen Sie ein 5er-Paket Angebots-Credits für 29 (5,80 je Credit). Credits sind 12 Monate gültig und enthalten alle Premium-Funktionen wie gebrandete PDFs. Ideal für Unternehmen, die einige zusätzliche Angebote über ihr Planlimit hinaus benötigen.',
       },
       {
         title: 'Nutzung überwachen',

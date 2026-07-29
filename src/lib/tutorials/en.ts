@@ -97,7 +97,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Confirm before the AI runs',
-        content: 'Before CueQuote generates your proposal, it shows a confirmation dialog: "This will use 1 of your X AI proposals this month. You have Y remaining on your <plan> plan." Each plan has a monthly AI quota — Free: 3, Starter: 15, Pro: 50, Business: unlimited. Every generation (including retries) counts against that quota, so double-check your description before confirming. On unlimited plans the dialog is skipped.',
+        content: 'Before CueQuote generates your proposal, it shows a confirmation dialog: "This will use 1 of your X AI proposals this month. You have Y remaining on your <plan> plan." Each plan has a monthly AI quota — Free: 3, Starter: 10, Pro: 40, Business: 120. Every generation (including retries) counts against that quota, so double-check your description before confirming. On unlimited plans the dialog is skipped.',
         tip: 'Spending 30 extra seconds tightening your description usually saves a whole slot — the AI rewards specificity, and a wasted generation costs you a full proposal from your monthly cap.',
       },
       {
@@ -384,7 +384,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Comparing the 4 subscription plans',
-      'How to upgrade with a free trial',
+      'How to upgrade from the free plan',
       'Managing payment methods and invoices',
       'Credit packs for pay-as-you-go',
     ],
@@ -399,7 +399,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Upgrade to a paid plan',
-        content: 'Click "Start 3-day Trial" on any paid plan. You\'ll be redirected to Stripe Checkout where you enter your payment details. All paid plans include a 3-day free trial — you won\'t be charged until the trial ends. You can cancel anytime during the trial at no cost.',
+        content: 'Click "Start Free" on any paid plan. You\'ll be redirected to Stripe Checkout where you enter your payment details. Your subscription starts immediately after checkout.',
         tip: 'You\'ll receive a confirmation email with your plan details and features after upgrading.',
       },
       {
@@ -412,7 +412,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Buy credit packs',
-        content: 'Don\'t want a monthly subscription? Buy proposal credits instead. A 3-pack costs 19 (6.33 each) and a 10-pack costs 49 (4.90 each). Credits never expire and include all premium features like branded PDFs. Great for companies that quote seasonally.',
+        content: 'Hit your monthly limit? Buy a 5-pack of proposal credits for 29 (5.80 each). Credits are valid for 12 months and include all premium features like branded PDFs. Great for companies that need a few extra proposals beyond their plan limit.',
       },
       {
         title: 'Monitor your usage',

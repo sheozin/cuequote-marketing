@@ -97,7 +97,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Potwierdź przed uruchomieniem AI',
-        content: 'Zanim CueQuote wygeneruje ofertę, pokaże okno potwierdzenia: „To wykorzysta 1 z X Twoich ofert AI w tym miesiącu. Zostało Ci Y w planie <plan>”. Każdy plan ma miesięczny limit AI — Free: 3, Starter: 15, Pro: 50, Business: bez limitu. Każda generacja (w tym ponowne próby) zmniejsza ten limit, więc sprawdź dokładnie opis przed potwierdzeniem. W planach bez limitu okno jest pomijane.',
+        content: 'Zanim CueQuote wygeneruje ofertę, pokaże okno potwierdzenia: „To wykorzysta 1 z X Twoich ofert AI w tym miesiącu. Zostało Ci Y w planie <plan>”. Każdy plan ma miesięczny limit AI — Free: 3, Starter: 10, Pro: 40, Business: 120. Każda generacja (w tym ponowne próby) zmniejsza ten limit, więc sprawdź dokładnie opis przed potwierdzeniem. W planach bez limitu okno jest pomijane.',
         tip: 'Poświęcenie 30 dodatkowych sekund na doprecyzowanie opisu zwykle oszczędza cały slot — AI nagradza konkret, a zmarnowana generacja to pełna oferta z Twojego miesięcznego limitu.',
       },
       {
@@ -383,7 +383,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     videoUrl: '/videos/billing-and-subscriptions.mp4',
     whatYouLearn: [
       'Porównanie 4 planów subskrypcji',
-      'Jak ulepszyć plan z darmowym okresem próbnym',
+      'Jak przejść na plan płatny',
       'Zarządzanie metodami płatności i fakturami',
       'Pakiety kredytów do płatności za wykorzystanie',
     ],
@@ -394,11 +394,11 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Porównaj plany',
-        content: 'Dostępne są cztery plany: Free (3 oferty/mies., podstawowy PDF), Starter za 39 miesięcznie (15 ofert, pełny branding, zarządzanie klientami), Pro za 99 miesięcznie (50 ofert, niestandardowe szablony, analityka) oraz Business za 199 miesięcznie (nielimitowane oferty, dostęp do API, dedykowane wsparcie). Przełączaj między rozliczeniem miesięcznym i rocznym — rocznie oszczędzasz 20%.',
+        content: 'Dostępne są cztery plany: Free (3 oferty/mies., podstawowy PDF), Starter za €29 miesięcznie (10 ofert, pełny branding, zarządzanie klientami), Pro za €79 miesięcznie (40 ofert, niestandardowe szablony, analityka) oraz Business za €179 miesięcznie (120 ofert, dostęp do API, dedykowane wsparcie). Przełączaj między rozliczeniem miesięcznym i rocznym — rocznie oszczędzasz 20%.',
       },
       {
         title: 'Ulepsz do planu płatnego',
-        content: 'Kliknij „Rozpocznij 3-dniowy okres próbny” w dowolnym planie płatnym. Zostaniesz przekierowany do Stripe Checkout, gdzie wpiszesz dane płatności. Wszystkie plany płatne obejmują 3-dniowy darmowy okres próbny — nie zostaniesz obciążony do zakończenia okresu próbnego. Możesz anulować w dowolnym momencie w trakcie próby bez kosztów.',
+        content: 'Kliknij „Zacznij za darmo” w dowolnym planie płatnym. Zostaniesz przekierowany do Stripe Checkout, gdzie wpiszesz dane płatności. Twoja subskrypcja rozpocznie się natychmiast po dokonaniu płatności.',
         tip: 'Po ulepszeniu planu otrzymasz e-mail potwierdzający z danymi planu i funkcjami.',
       },
       {
@@ -411,7 +411,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Kup pakiety kredytów',
-        content: 'Nie chcesz subskrypcji miesięcznej? Kup kredyty na oferty. Pakiet 3-sztuk kosztuje 19 (po 6,33 za sztukę), a pakiet 10-sztuk 49 (po 4,90 za sztukę). Kredyty nie wygasają i obejmują wszystkie funkcje premium, jak brandowane PDF-y. Świetne dla firm wyceniających sezonowo.',
+        content: 'Osiągnąłeś miesięczny limit? Kup pakiet 5 kredytów na oferty za 29 (5,80 za sztukę). Kredyty ważne 12 miesięcy i obejmują wszystkie funkcje premium, jak brandowane PDF-y. Świetne dla firm potrzebujących kilku dodatkowych ofert ponad limit planu.',
       },
       {
         title: 'Monitoruj zużycie',
