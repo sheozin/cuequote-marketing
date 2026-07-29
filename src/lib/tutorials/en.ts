@@ -1284,4 +1284,117 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'event-layout-designer',
+    title: 'Event Layout Designer',
+    description: 'Design your event floor plan visually — choose a venue template, place AV equipment shapes, and export a polished layout to PDF or PNG.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      'Opening the Layout tab inside a proposal',
+      'Choosing a venue template as a starting point',
+      'Adding and positioning AV equipment shapes',
+      'Saving your layout to the proposal',
+      'Exporting the layout as PDF or PNG',
+    ],
+    steps: [
+      {
+        title: 'Open the Layout tab',
+        content: 'Open any proposal in the editor. In the tab bar at the top (Equipment | Terms & Details | Risk Plan | Layout), click "Layout". The Layout designer opens as a full-width canvas — blank if this is a new proposal, or showing a previously saved layout if you\'ve been here before.',
+      },
+      {
+        title: 'Choose a venue template',
+        content: 'In the left panel, click "Templates" and browse the available venue templates: Ballroom, Conference Room, Theatre, Outdoor Stage, Boardroom, and Exhibition Hall. Click a template to load it onto the canvas as a starting point. The template pre-draws the room boundaries, stage area, and standard seating rows so you don\'t have to start from scratch.',
+        tip: 'Templates are starting points, not fixed layouts — every element can be moved, resized, or deleted after loading.',
+      },
+      {
+        title: 'Add AV equipment shapes',
+        content: 'In the left panel, switch to the "AV Elements" tab. Shapes are grouped by category: Audio (speakers, subwoofers, mixing position), Video (screens, LED panels, projectors, cameras), Lighting (moving heads, PAR cans, follow spots), and Staging (stage blocks, podium, truss). Drag any shape onto the canvas, then drag to reposition it. Use the handles to resize, and the rotate handle to angle speakers or screens correctly.',
+      },
+      {
+        title: 'Save the layout',
+        content: 'Click "Save Layout" in the top-right of the designer. The layout is attached to this proposal and visible to your client on the share page below the equipment table. Saving does not affect your equipment line items — it is a visual companion to the proposal, not a separate document.',
+      },
+      {
+        title: 'Export to PDF or PNG',
+        content: 'Click the "Export" button and choose PDF (for print-quality output suitable for including in a proposal pack) or PNG (for embedding in emails, presentations, or WhatsApp). The exported file includes your company logo in the corner, the event name, and a legend identifying each AV shape. PDF exports are A3 landscape by default for maximum detail.',
+        tip: 'Include the layout PDF with your proposal PDF when quoting large or complex events — clients appreciate seeing exactly where each piece of gear will be placed.',
+      },
+    ],
+  },
+  {
+    slug: 'two-factor-authentication',
+    title: 'Two-Factor Authentication',
+    description: 'Add an extra layer of security to your account by enabling two-factor authentication (2FA) with an authenticator app.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Account',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Enabling 2FA from your Account settings',
+      'Scanning the QR code with an authenticator app',
+      'Entering the 6-digit code to confirm setup',
+      'Storing backup codes safely',
+    ],
+    steps: [
+      {
+        title: 'Go to Account settings',
+        content: 'Click "Account" in the sidebar (or click your profile avatar in the bottom-left and select "Account Settings"). Scroll down to the "Security" section. You\'ll see a "Two-Factor Authentication" card showing the current status — Disabled by default.',
+      },
+      {
+        title: 'Click Enable 2FA',
+        content: 'Click the "Enable 2FA" button. A setup dialog opens showing a QR code and a manual setup key below it. Open your authenticator app (Google Authenticator, Authy, 1Password, or any TOTP-compatible app) and scan the QR code. If your app doesn\'t support QR scanning, tap "Enter code manually" and type the key shown below the QR code.',
+      },
+      {
+        title: 'Enter the 6-digit code',
+        content: 'Your authenticator app will show a 6-digit time-based code that refreshes every 30 seconds. Enter the current code in the confirmation field in CueQuote and click "Verify & Enable". Once verified, 2FA is active immediately — every future login will require your password plus a code from your authenticator app.',
+        tip: 'Enter the code promptly — TOTP codes expire after 30 seconds. If the code is rejected, wait for the next one to appear in your app and try again.',
+      },
+      {
+        title: 'Save your backup codes',
+        content: 'After enabling 2FA, CueQuote shows you 8 one-time backup codes. Download or copy them and store them in a secure place (password manager, printed sheet in a safe). If you ever lose access to your authenticator app, a backup code lets you log in and disable or reset 2FA. Each code can only be used once.',
+        tip: 'Never store backup codes in the same place as your password. If someone gets both, 2FA provides no protection. A password manager with a separate 2FA-codes note is a good approach.',
+      },
+    ],
+  },
+  {
+    slug: 'ocr-file-attachments',
+    title: 'OCR File Attachments',
+    description: 'Attach scanned PDFs or images to a proposal and let CueQuote automatically extract the text so the AI can read and use technical riders and equipment lists.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Proposals',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Attaching files to a new proposal',
+      'How OCR runs automatically on scanned documents',
+      'Verifying the extracted text before generating',
+      'Which file types and languages are supported',
+    ],
+    steps: [
+      {
+        title: 'Click Attachments on a new proposal',
+        content: 'Start a new proposal and go to the "Attachments" section below the event description field. Click "Upload File" or drag and drop a file onto the upload zone. Supported formats are PDF, JPG, PNG, and TIFF. You can attach up to 5 files per proposal — each file can be up to 10 MB.',
+      },
+      {
+        title: 'Upload a scanned PDF or image',
+        content: 'Select your scanned technical rider, equipment list, venue floor plan, or event brief. Files that are already machine-readable PDFs (exported from Word, Excel, or a design tool) are processed instantly. Scanned documents and images are automatically sent to the OCR engine, which detects and extracts all text from the file. A processing spinner appears while OCR runs — this usually takes 5-15 seconds per page.',
+      },
+      {
+        title: 'Verify the extracted text',
+        content: 'Once OCR completes, click the attachment chip to expand the extracted text preview. Review the output to check that key details — equipment names, quantities, technical specifications — were captured correctly. If a scan is low resolution or skewed, some words may be misread. You can edit the extracted text directly in the preview field before generating the proposal.',
+        tip: 'For best OCR accuracy, use scans at 300 DPI or higher. Avoid files where text overlaps graphics or uses very small fonts.',
+      },
+      {
+        title: 'Generate the proposal with extracted content',
+        content: 'Click "Generate Proposal". The AI receives both your written description and the full extracted text from all attachments as combined context. It merges both sources intelligently — picking up specific model numbers, quantities, and technical requirements from the rider even if you only wrote a brief summary in the description field.',
+        tip: 'OCR supports English and Arabic text. Mixed-language documents (e.g., an Arabic rider with English equipment model names) are handled correctly — the AI reads both languages in the same document.',
+      },
+    ],
+  },
 ]

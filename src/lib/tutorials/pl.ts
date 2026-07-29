@@ -1238,4 +1238,117 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'event-layout-designer',
+    title: 'Projektant układu imprezy',
+    description: 'Zaprojektuj wizualnie plan sali eventowej — wybierz szablon miejsca, rozmieść kształty sprzętu AV i wyeksportuj gotowy układ do PDF lub PNG.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      'Otwieranie zakładki Układ w ofercie',
+      'Wybieranie szablonu miejsca jako punktu startowego',
+      'Dodawanie i pozycjonowanie kształtów sprzętu AV',
+      'Zapisywanie układu do oferty',
+      'Eksportowanie układu jako PDF lub PNG',
+    ],
+    steps: [
+      {
+        title: 'Otwórz zakładkę Układ',
+        content: 'Otwórz dowolną ofertę w edytorze. Na pasku zakładek na górze (Sprzęt | Warunki i Szczegóły | Plan ryzyka | Układ) kliknij „Układ". Projektant układu otwiera się jako pełnowymiarowe płótno — puste dla nowej oferty lub pokazujące wcześniej zapisany układ.',
+      },
+      {
+        title: 'Wybierz szablon miejsca',
+        content: 'W lewym panelu kliknij „Szablony" i przejrzyj dostępne szablony miejsc: Sala balowa, Sala konferencyjna, Teatr, Scena plenerowa, Sala zarządu i Hala wystawiennicza. Kliknij szablon, aby załadować go na płótno jako punkt startowy. Szablon wstępnie rysuje granice sali, obszar sceny i standardowe rzędy siedzeń.',
+        tip: 'Szablony są punktami startowymi, a nie stałymi układami — każdy element można przesunąć, zmienić rozmiar lub usunąć po załadowaniu.',
+      },
+      {
+        title: 'Dodaj kształty sprzętu AV',
+        content: 'W lewym panelu przełącz się na zakładkę „Elementy AV". Kształty są pogrupowane według kategorii: Audio (głośniki, subwoofery, stanowisko mikserskie), Video (ekrany, panele LED, projektory, kamery), Oświetlenie (głowy ruchome, reflektory PAR, reflektory podążające) i Staging (bloki sceniczne, podium, kratownica). Przeciągnij dowolny kształt na płótno, a następnie przeciągnij, aby zmienić jego pozycję.',
+      },
+      {
+        title: 'Zapisz układ',
+        content: 'Kliknij „Zapisz układ" w prawym górnym rogu projektanta. Układ jest dołączony do tej oferty i widoczny dla klienta na stronie udostępniania poniżej tabeli sprzętu. Zapisanie nie wpływa na pozycje sprzętu — jest wizualnym uzupełnieniem oferty.',
+      },
+      {
+        title: 'Eksportuj do PDF lub PNG',
+        content: 'Kliknij przycisk „Eksportuj" i wybierz PDF (wysokiej jakości wydruk nadający się do dołączenia do pakietu oferty) lub PNG (do osadzenia w e-mailach, prezentacjach lub WhatsApp). Wyeksportowany plik zawiera logo Twojej firmy w rogu, nazwę wydarzenia i legendę identyfikującą każdy kształt AV.',
+        tip: 'Dołącz układ PDF do oferty PDF przy wycenie dużych lub złożonych eventów — klienci doceniają widok dokładnie, gdzie zostanie umieszczony każdy element sprzętu.',
+      },
+    ],
+  },
+  {
+    slug: 'two-factor-authentication',
+    title: 'Uwierzytelnianie dwuskładnikowe',
+    description: 'Dodaj dodatkową warstwę zabezpieczeń do swojego konta, włączając uwierzytelnianie dwuskładnikowe (2FA) za pomocą aplikacji uwierzytelniającej.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Account',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Włączanie 2FA z ustawień konta',
+      'Skanowanie kodu QR za pomocą aplikacji uwierzytelniającej',
+      'Wpisywanie 6-cyfrowego kodu w celu potwierdzenia konfiguracji',
+      'Bezpieczne przechowywanie kodów zapasowych',
+    ],
+    steps: [
+      {
+        title: 'Przejdź do ustawień konta',
+        content: 'Kliknij „Konto" na pasku bocznym (lub kliknij awatar swojego profilu w lewym dolnym rogu i wybierz „Ustawienia konta"). Przewiń do sekcji „Bezpieczeństwo". Zobaczysz kartę „Uwierzytelnianie dwuskładnikowe" pokazującą aktualny status — domyślnie wyłączone.',
+      },
+      {
+        title: 'Kliknij Włącz 2FA',
+        content: 'Kliknij przycisk „Włącz 2FA". Otwiera się okno konfiguracji z kodem QR i kluczem konfiguracji ręcznej poniżej. Otwórz aplikację uwierzytelniającą (Google Authenticator, Authy, 1Password lub dowolną aplikację zgodną z TOTP) i zeskanuj kod QR. Jeśli aplikacja nie obsługuje skanowania QR, dotknij „Wprowadź kod ręcznie" i wpisz pokazany klucz.',
+      },
+      {
+        title: 'Wprowadź 6-cyfrowy kod',
+        content: 'Twoja aplikacja uwierzytelniająca wyświetli 6-cyfrowy kod oparty na czasie, który odświeża się co 30 sekund. Wprowadź bieżący kod w polu potwierdzenia w CueQuote i kliknij „Zweryfikuj i włącz". Po weryfikacji 2FA jest natychmiast aktywne — każde przyszłe logowanie będzie wymagać hasła i kodu z aplikacji uwierzytelniającej.',
+        tip: 'Wprowadź kod szybko — kody TOTP wygasają po 30 sekundach. Jeśli kod zostanie odrzucony, poczekaj na pojawienie się następnego w aplikacji i spróbuj ponownie.',
+      },
+      {
+        title: 'Zapisz kody zapasowe',
+        content: 'Po włączeniu 2FA CueQuote pokazuje Ci 8 jednorazowych kodów zapasowych. Pobierz lub skopiuj je i przechowuj w bezpiecznym miejscu (menedżer haseł, wydruk w sejfie). Jeśli kiedykolwiek utracisz dostęp do aplikacji uwierzytelniającej, kod zapasowy pozwoli Ci się zalogować i wyłączyć lub zresetować 2FA. Każdy kod można użyć tylko raz.',
+        tip: 'Nigdy nie przechowuj kodów zapasowych w tym samym miejscu co hasło. Menedżer haseł z osobną notatką na kody 2FA to dobre podejście.',
+      },
+    ],
+  },
+  {
+    slug: 'ocr-file-attachments',
+    title: 'Załączniki z OCR',
+    description: 'Dołącz zeskanowane pliki PDF lub obrazy do oferty i pozwól CueQuote automatycznie wyodrębnić tekst, aby AI mogła odczytać i wykorzystać riderów technicznych i listy sprzętu.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Proposals',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Dołączanie plików do nowej oferty',
+      'Automatyczne uruchamianie OCR na zeskanowanych dokumentach',
+      'Weryfikacja wyodrębnionego tekstu przed wygenerowaniem',
+      'Obsługiwane typy plików i języki',
+    ],
+    steps: [
+      {
+        title: 'Kliknij Załączniki w nowej ofercie',
+        content: 'Rozpocznij nową ofertę i przejdź do sekcji „Załączniki" poniżej pola opisu wydarzenia. Kliknij „Prześlij plik" lub przeciągnij i upuść plik w strefie przesyłania. Obsługiwane formaty to PDF, JPG, PNG i TIFF. Możesz dołączyć do 5 plików na ofertę — każdy plik może mieć do 10 MB.',
+      },
+      {
+        title: 'Prześlij zeskanowany PDF lub obraz',
+        content: 'Wybierz swój zeskanowany rider techniczny, listę sprzętu, plan sali lub brief wydarzenia. Pliki, które są już maszynowo czytelnymi PDF-ami (wyeksportowane z Worda, Excela lub narzędzia projektowego), są przetwarzane natychmiast. Zeskanowane dokumenty i obrazy są automatycznie wysyłane do silnika OCR, który wykrywa i wyodrębnia cały tekst z pliku.',
+      },
+      {
+        title: 'Zweryfikuj wyodrębniony tekst',
+        content: 'Po zakończeniu OCR kliknij chip załącznika, aby rozwinąć podgląd wyodrębnionego tekstu. Przejrzyj wynik, aby sprawdzić, czy kluczowe szczegóły — nazwy sprzętu, ilości, specyfikacje techniczne — zostały poprawnie przechwycone. Możesz edytować wyodrębniony tekst bezpośrednio w polu podglądu przed wygenerowaniem oferty.',
+        tip: 'Dla najlepszej dokładności OCR używaj skanów o rozdzielczości 300 DPI lub wyższej. Unikaj plików, gdzie tekst nakłada się na grafikę lub używa bardzo małych czcionek.',
+      },
+      {
+        title: 'Wygeneruj ofertę z wyodrębnioną zawartością',
+        content: 'Kliknij „Generuj ofertę". AI otrzymuje zarówno Twój pisemny opis, jak i pełny wyodrębniony tekst ze wszystkich załączników jako połączony kontekst. Łączy oba źródła inteligentnie — pobierając konkretne numery modeli, ilości i wymagania techniczne z ridera.',
+        tip: 'OCR obsługuje tekst w języku angielskim i arabskim. Dokumenty dwujęzyczne (np. arabski rider z angielskimi nazwami modeli sprzętu) są obsługiwane poprawnie — AI odczytuje oba języki w tym samym dokumencie.',
+      },
+    ],
+  },
 ]

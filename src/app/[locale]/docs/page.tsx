@@ -201,6 +201,8 @@ const ARTICLE_KEYS = [
   { id: 'custom-categories', key: 'customCategories', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3'] },
   { id: 'price-sync', key: 'priceSync', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   { id: 'production-budget-planner', key: 'productionBudgetPlanner', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
+  { id: 'event-layout-designer', key: 'eventLayoutDesigner', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
+  { id: 'two-factor-authentication', key: 'twoFactorAuthentication', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
 ];
 
 export default async function DocsPage() {

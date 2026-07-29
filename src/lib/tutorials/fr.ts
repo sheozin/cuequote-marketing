@@ -1274,4 +1274,117 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'event-layout-designer',
+    title: 'Concepteur de plan de salle',
+    description: 'Concevez visuellement le plan de salle de votre événement — choisissez un modèle de lieu, placez des formes d\'équipements AV et exportez un plan soigné en PDF ou PNG.',
+    duration: '4 min',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      'Ouvrir l\'onglet Plan dans un devis',
+      'Choisir un modèle de lieu comme point de départ',
+      'Ajouter et positionner des formes d\'équipements AV',
+      'Enregistrer le plan dans le devis',
+      'Exporter le plan en PDF ou PNG',
+    ],
+    steps: [
+      {
+        title: 'Ouvrez l\'onglet Plan',
+        content: 'Ouvrez n\'importe quel devis dans l\'éditeur. Dans la barre d\'onglets en haut (Équipement | Termes et détails | Plan de risque | Plan), cliquez sur "Plan". Le concepteur de plan s\'ouvre comme un canevas pleine largeur — vide pour un nouveau devis, ou affichant un plan précédemment enregistré si vous y êtes déjà venu.',
+      },
+      {
+        title: 'Choisissez un modèle de lieu',
+        content: 'Dans le panneau de gauche, cliquez sur "Modèles" et parcourez les modèles de lieu disponibles : Salle de bal, Salle de conférence, Théâtre, Scène extérieure, Salle de réunion et Hall d\'exposition. Cliquez sur un modèle pour le charger sur le canevas comme point de départ. Le modèle pré-dessine les limites de la salle, l\'espace scène et les rangées de sièges standard.',
+        tip: 'Les modèles sont des points de départ, pas des plans fixes — chaque élément peut être déplacé, redimensionné ou supprimé après le chargement.',
+      },
+      {
+        title: 'Ajoutez des formes d\'équipements AV',
+        content: 'Dans le panneau de gauche, passez à l\'onglet "Éléments AV". Les formes sont regroupées par catégorie : Audio (enceintes, caissons de basse, position de mixage), Vidéo (écrans, panneaux LED, projecteurs, caméras), Éclairage (têtes mobiles, PAR, poursuite) et Scénographie (éléments de scène, podium, structure). Faites glisser n\'importe quelle forme sur le canevas, puis faites-la glisser pour la repositionner.',
+      },
+      {
+        title: 'Enregistrez le plan',
+        content: 'Cliquez sur "Enregistrer le plan" en haut à droite du concepteur. Le plan est attaché à ce devis et visible par votre client sur la page de partage sous le tableau d\'équipement. L\'enregistrement n\'affecte pas vos lignes d\'équipement — c\'est un complément visuel au devis.',
+      },
+      {
+        title: 'Exportez en PDF ou PNG',
+        content: 'Cliquez sur le bouton "Exporter" et choisissez PDF (sortie qualité impression convenant à l\'inclusion dans un dossier de devis) ou PNG (pour intégrer dans des e-mails, présentations ou WhatsApp). Le fichier exporté inclut le logo de votre entreprise dans le coin, le nom de l\'événement et une légende identifiant chaque forme AV.',
+        tip: 'Incluez le plan PDF avec le PDF de devis lors de la cotation d\'événements importants ou complexes — les clients apprécient de voir exactement où chaque équipement sera placé.',
+      },
+    ],
+  },
+  {
+    slug: 'two-factor-authentication',
+    title: 'Authentification à deux facteurs',
+    description: 'Ajoutez une couche de sécurité supplémentaire à votre compte en activant l\'authentification à deux facteurs (2FA) avec une application d\'authentification.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Account',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Activer la 2FA depuis les paramètres du compte',
+      'Scanner le code QR avec une application d\'authentification',
+      'Entrer le code à 6 chiffres pour confirmer la configuration',
+      'Conserver les codes de sauvegarde en lieu sûr',
+    ],
+    steps: [
+      {
+        title: 'Accédez aux paramètres du compte',
+        content: 'Cliquez sur "Compte" dans la barre latérale (ou cliquez sur votre avatar de profil en bas à gauche et sélectionnez "Paramètres du compte"). Faites défiler jusqu\'à la section "Sécurité". Vous verrez une carte "Authentification à deux facteurs" affichant l\'état actuel — désactivée par défaut.',
+      },
+      {
+        title: 'Cliquez sur Activer la 2FA',
+        content: 'Cliquez sur le bouton "Activer la 2FA". Une boîte de dialogue de configuration s\'ouvre avec un code QR et une clé de configuration manuelle en dessous. Ouvrez votre application d\'authentification (Google Authenticator, Authy, 1Password ou toute application compatible TOTP) et scannez le code QR. Si votre application ne prend pas en charge la numérisation QR, appuyez sur "Entrer le code manuellement" et tapez la clé affichée.',
+      },
+      {
+        title: 'Entrez le code à 6 chiffres',
+        content: 'Votre application d\'authentification affichera un code à 6 chiffres basé sur le temps qui se renouvelle toutes les 30 secondes. Entrez le code actuel dans le champ de confirmation dans CueQuote et cliquez sur "Vérifier et activer". Une fois vérifié, la 2FA est immédiatement active — toute connexion future nécessitera votre mot de passe plus un code de votre application d\'authentification.',
+        tip: 'Entrez le code rapidement — les codes TOTP expirent après 30 secondes. Si le code est rejeté, attendez que le prochain apparaisse dans votre application et réessayez.',
+      },
+      {
+        title: 'Sauvegardez vos codes de sauvegarde',
+        content: 'Après avoir activé la 2FA, CueQuote vous affiche 8 codes de sauvegarde à usage unique. Téléchargez-les ou copiez-les et conservez-les dans un endroit sûr (gestionnaire de mots de passe, feuille imprimée dans un coffre). Si vous perdez l\'accès à votre application d\'authentification, un code de sauvegarde vous permet de vous connecter et de désactiver ou réinitialiser la 2FA. Chaque code ne peut être utilisé qu\'une seule fois.',
+        tip: 'Ne stockez jamais les codes de sauvegarde au même endroit que votre mot de passe. Un gestionnaire de mots de passe avec une note séparée pour les codes 2FA est une bonne approche.',
+      },
+    ],
+  },
+  {
+    slug: 'ocr-file-attachments',
+    title: 'Pièces jointes avec OCR',
+    description: 'Joignez des PDF numérisés ou des images à un devis et laissez CueQuote extraire automatiquement le texte pour que l\'IA puisse lire et utiliser les fiches techniques et les listes d\'équipement.',
+    duration: '3 min',
+    difficulty: 'beginner',
+    category: 'Proposals',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Joindre des fichiers à un nouveau devis',
+      'Exécution automatique de l\'OCR sur les documents numérisés',
+      'Vérifier le texte extrait avant la génération',
+      'Types de fichiers et langues pris en charge',
+    ],
+    steps: [
+      {
+        title: 'Cliquez sur Pièces jointes dans un nouveau devis',
+        content: 'Démarrez un nouveau devis et accédez à la section "Pièces jointes" sous le champ de description de l\'événement. Cliquez sur "Télécharger un fichier" ou faites glisser un fichier dans la zone de téléchargement. Les formats pris en charge sont PDF, JPG, PNG et TIFF. Vous pouvez joindre jusqu\'à 5 fichiers par devis — chaque fichier peut peser jusqu\'à 10 Mo.',
+      },
+      {
+        title: 'Téléchargez un PDF numérisé ou une image',
+        content: 'Sélectionnez votre fiche technique numérisée, liste d\'équipement, plan de salle ou brief d\'événement. Les fichiers déjà lisibles par machine (exportés depuis Word, Excel ou un outil de design) sont traités instantanément. Les documents numérisés et les images sont automatiquement envoyés au moteur OCR qui détecte et extrait tout le texte du fichier.',
+      },
+      {
+        title: 'Vérifiez le texte extrait',
+        content: 'Une fois l\'OCR terminé, cliquez sur la puce de pièce jointe pour développer l\'aperçu du texte extrait. Vérifiez la sortie pour vous assurer que les détails clés — noms d\'équipements, quantités, spécifications techniques — ont été correctement capturés. Vous pouvez modifier le texte extrait directement dans le champ d\'aperçu avant de générer le devis.',
+        tip: 'Pour une meilleure précision OCR, utilisez des numérisations à 300 DPI ou plus. Évitez les fichiers où le texte se superpose aux graphiques ou utilise des polices très petites.',
+      },
+      {
+        title: 'Générez le devis avec le contenu extrait',
+        content: 'Cliquez sur "Générer le devis". L\'IA reçoit à la fois votre description écrite et le texte intégral extrait de toutes les pièces jointes comme contexte combiné. Elle fusionne intelligemment les deux sources — en reprenant les numéros de modèle spécifiques, les quantités et les exigences techniques de la fiche technique.',
+        tip: 'L\'OCR prend en charge le texte en anglais et en arabe. Les documents multilingues (par ex. une fiche technique en arabe avec des noms de modèles d\'équipements en anglais) sont traités correctement — l\'IA lit les deux langues dans le même document.',
+      },
+    ],
+  },
 ]

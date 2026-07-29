@@ -2150,6 +2150,27 @@
       "step3": "Consultez le budget par catégorie avec la liste d'équipement générée par l'IA. La carte 'AV & Technique' regroupe tous les besoins en audio, vidéo, éclairage et scénographie avec un sous-total et un nombre d'éléments. Cliquez sur la carte pour la développer et voir les lignes individuelles avec descriptions et fourchettes budgétaires.",
       "step4": "Utilisez les fourchettes budgétaires du marché et les recommandations d'équipe quand vous demandez des devis aux fournisseurs, et référencez le calendrier d'événement pour vous assurer que les fournisseurs comprennent le calendrier de montage et de démontage. Enregistrez ou exportez le plan en PDF pour le partager avec les parties prenantes.",
       "tip": "Les fourchettes budgétaires aux tarifs du marché vous aident à gérer les attentes des clients avant de contacter les fournisseurs. Si une fourchette semble élevée ou basse, ajustez la description de votre événement et régénérez — plus de détails produisent généralement des estimations plus précises."
+    },
+    "eventLayoutDesigner": {
+      "title": "Concepteur de plan d'événement",
+      "content1": "Le Concepteur de plan d'événement vous permet de créer un plan visuel de salle directement dans CueQuote. Ouvrez n'importe quel devis, cliquez sur l'onglet Plan en haut de l'éditeur et vous trouverez un canevas où vous pouvez concevoir la disposition de votre salle avec des formes AV, des zones de scène, des tables et bien plus.",
+      "content2": "Les plans terminés peuvent être exportés en tant que page PDF en mode paysage — idéal pour être joint à votre devis — ou téléchargés en tant qu'image PNG autonome pour les présentations et les visites de sites. Le Concepteur de plan est disponible avec les abonnements Pro et Business.",
+      "step1": "Ouvrez un devis dans l'éditeur et cliquez sur l'onglet Plan en haut — le canevas se charge avec un modèle de salle vide par défaut",
+      "step2": "Choisissez un modèle de salle dans le menu déroulant Modèles (salle de classe, théâtre, banquet, salle de réunion, scène ouverte) pour pré-remplir le canevas avec une configuration courante",
+      "step3": "Cliquez sur le menu déroulant Formes AV et sélectionnez les éléments à ajouter — enceintes, projecteurs, écrans, praticables, systèmes d'éclairage et plus — puis faites-les glisser en position sur le canevas",
+      "step4": "Double-cliquez sur une forme pour la renommer ou ajuster sa taille ; utilisez l'option d'alignement sur la grille pour un positionnement précis",
+      "step5": "Cliquez sur Exporter en PDF pour ajouter le plan comme page paysage au PDF du devis, ou Télécharger PNG pour enregistrer une image autonome du plan de salle",
+      "tip": "Étiquetez chaque forme AV avec le nom de modèle ou d'article spécifique de votre catalogue — cela renforce le professionnalisme et aide l'équipe de la salle à comprendre votre configuration en un coup d'œil."
+    },
+    "twoFactorAuthentication": {
+      "title": "Authentification à deux facteurs",
+      "content1": "L'authentification à deux facteurs (2FA) ajoute une deuxième couche de sécurité à votre compte CueQuote. Même si quelqu'un obtient votre mot de passe, il ne peut pas se connecter sans le code à usage unique généré par votre application d'authentification. Nous recommandons d'activer la 2FA pour tous les comptes, surtout si vous stockez des coordonnées de clients ou des tarifs dans CueQuote.",
+      "content2": "CueQuote prend en charge toute application d'authentification compatible TOTP. Google Authenticator et Authy sont les plus utilisés et fonctionnent sur iOS et Android. Une fois activée, un code à 6 chiffres vous sera demandé à chaque nouvelle connexion.",
+      "step1": "Accédez à Compte (menu avatar en haut à droite) → Sécurité → Activer l'authentification à deux facteurs",
+      "step2": "Un code QR apparaît à l'écran — ouvrez votre application d'authentification (Google Authenticator ou Authy), appuyez sur l'icône + et choisissez Scanner le code QR",
+      "step3": "Pointez votre caméra sur le code QR ; votre application ajoutera une entrée CueQuote et affichera un code à 6 chiffres qui se renouvelle automatiquement",
+      "step4": "Saisissez le code à 6 chiffres actuel de votre application dans le champ de confirmation et cliquez sur Vérifier et activer — la 2FA est maintenant active sur votre compte. Conservez vos codes de secours dans un endroit sûr.",
+      "tip": "Si vous perdez l'accès à votre application d'authentification, utilisez l'un des codes de secours fournis lors de la configuration pour retrouver l'accès. Conservez ces codes hors ligne ou dans un gestionnaire de mots de passe — ils ne peuvent pas être récupérés ultérieurement."
     }
   },
   "changelog": {

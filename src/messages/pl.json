@@ -2122,6 +2122,27 @@
       "step3": "Przejrzyj budżet kategorii z listą sprzętu wygenerowaną przez AI. Karta 'AV & Technical' grupuje wszystkie potrzeby audio, wideo, oświetlenia i scenografii z razem z subtotalem i liczbą elementów. Kliknij kartę, aby rozwinąć i zobaczyć indywidualne elementy liniowe z opisami i zakresami budżetu.",
       "step4": "Użyj zakresów budżetu rynkowego i rekomendacji zespołu, gdy prosisz dostawców o oferty, i odwołaj się do harmonogramu imprezy, aby upewnić się, że dostawcy rozumieją plan montażu i rozmontowania. Zapisz lub wyeksportuj plan jako PDF, aby udostępnić interesariuszom.",
       "tip": "Zakresy budżetu rynkowego pomagają zarządzać oczekiwaniami klienta przed zwróceniem się do dostawców. Jeśli zakres wydaje się wysoki lub niski, dostosuj opis imprezy i regeneruj — więcej szczegółów zwykle daje dokładniejsze szacunki."
+    },
+    "eventLayoutDesigner": {
+      "title": "Projektant układu imprez",
+      "content1": "Projektant układu imprez pozwala tworzyć wizualny plan sali bezpośrednio w CueQuote. Otwórz dowolną ofertę, kliknij zakładkę Układ u góry edytora i znajdziesz płótno, na którym możesz zaprojektować ustawienie pomieszczenia z kształtami AV, scenografią, stołami i innymi elementami.",
+      "content2": "Gotowe układy można wyeksportować jako poziomą stronę PDF — idealną do dołączenia do oferty — lub pobrać jako samodzielny obraz PNG do prezentacji i inspekcji miejsc. Projektant układu jest dostępny w planach Pro i Business.",
+      "step1": "Otwórz ofertę w edytorze i kliknij zakładkę Układ u góry — płótno ładuje się z domyślnym pustym szablonem pomieszczenia",
+      "step2": "Wybierz szablon pomieszczenia z listy Szablony (sala lekcyjna, teatr, bankiet, sala konferencyjna, otwarta scena), aby wstępnie wypełnić płótno typową konfiguracją",
+      "step3": "Kliknij listę Kształty AV i wybierz elementy do dodania — głośniki, projektory, ekrany, podwyższenia sceniczne, systemy oświetleniowe i inne — a następnie przeciągnij je na płótno",
+      "step4": "Kliknij dwukrotnie dowolny kształt, aby zmienić jego nazwę lub rozmiar; użyj opcji przyciągania do siatki dla precyzyjnego wyrównania",
+      "step5": "Kliknij Eksportuj do PDF, aby dołączyć układ jako poziomą stronę do PDF oferty, lub Pobierz PNG, aby zapisać samodzielny obraz planu sali",
+      "tip": "Oznacz każdy kształt AV konkretną nazwą modelu lub pozycji z katalogu — wzmacnia to profesjonalizm i pomaga ekipie sali zrozumieć Twój setup na pierwszy rzut oka."
+    },
+    "twoFactorAuthentication": {
+      "title": "Uwierzytelnianie dwuskładnikowe",
+      "content1": "Uwierzytelnianie dwuskładnikowe (2FA) dodaje drugą warstwę zabezpieczeń do konta CueQuote. Nawet jeśli ktoś uzyska dostęp do Twojego hasła, nie będzie mógł się zalogować bez jednorazowego kodu generowanego przez aplikację uwierzytelniającą. Zalecamy włączenie 2FA dla wszystkich kont, szczególnie jeśli przechowujesz dane kontaktowe klientów lub cenniki w CueQuote.",
+      "content2": "CueQuote obsługuje każdą aplikację uwierzytelniającą kompatybilną z TOTP. Google Authenticator i Authy są najszerzej używane i działają zarówno na iOS, jak i Androidzie. Po włączeniu będziesz proszony o 6-cyfrowy kod przy każdym nowym logowaniu.",
+      "step1": "Przejdź do Konto (menu awatara w prawym górnym rogu) → Bezpieczeństwo → Włącz uwierzytelnianie dwuskładnikowe",
+      "step2": "Na ekranie pojawi się kod QR — otwórz aplikację uwierzytelniającą (Google Authenticator lub Authy), dotknij ikony + i wybierz Skanuj kod QR",
+      "step3": "Skieruj aparat na kod QR; aplikacja doda wpis CueQuote i wyświetli obracający się 6-cyfrowy kod",
+      "step4": "Wprowadź aktualny 6-cyfrowy kod z aplikacji w polu potwierdzenia i kliknij Zweryfikuj i włącz — 2FA jest teraz aktywne na Twoim koncie. Przechowuj kody zapasowe w bezpiecznym miejscu.",
+      "tip": "Jeśli utracisz dostęp do aplikacji uwierzytelniającej, użyj jednego z kodów zapasowych dostarczonych podczas konfiguracji, aby odzyskać dostęp. Przechowuj te kody offline lub w menedżerze haseł — nie można ich pobrać później."
     }
   },
   "changelog": {

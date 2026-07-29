@@ -1274,4 +1274,117 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'event-layout-designer',
+    title: 'Veranstaltungs-Layout-Designer',
+    description: 'Gestalten Sie Ihren Veranstaltungsgrundriss visuell — wählen Sie eine Veranstaltungsort-Vorlage, platzieren Sie AV-Equipment-Formen und exportieren Sie ein professionelles Layout als PDF oder PNG.',
+    duration: '4 Min.',
+    difficulty: 'intermediate',
+    category: 'Proposals',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      'Öffnen des Layout-Tabs in einem Angebot',
+      'Auswählen einer Veranstaltungsort-Vorlage als Ausgangspunkt',
+      'Hinzufügen und Positionieren von AV-Equipment-Formen',
+      'Speichern des Layouts im Angebot',
+      'Exportieren des Layouts als PDF oder PNG',
+    ],
+    steps: [
+      {
+        title: 'Öffnen Sie den Layout-Tab',
+        content: 'Öffnen Sie ein beliebiges Angebot im Editor. Klicken Sie in der Tab-Leiste oben (Ausrüstung | Bedingungen & Details | Risikoplan | Layout) auf "Layout". Der Layout-Designer öffnet sich als vollbreite Leinwand — leer für neue Angebote oder mit einem zuvor gespeicherten Layout.',
+      },
+      {
+        title: 'Wählen Sie eine Veranstaltungsort-Vorlage',
+        content: 'Klicken Sie im linken Panel auf "Vorlagen" und durchsuchen Sie die verfügbaren Veranstaltungsort-Vorlagen: Ballsaal, Konferenzraum, Theater, Freilichtbühne, Konferenzraum und Ausstellungshalle. Klicken Sie auf eine Vorlage, um sie als Ausgangspunkt auf die Leinwand zu laden. Die Vorlage zeichnet vorab die Raumgrenzen, den Bühnenbereich und standardmäßige Sitzreihen.',
+        tip: 'Vorlagen sind Ausgangspunkte, keine festen Layouts — jedes Element kann nach dem Laden verschoben, in der Größe verändert oder gelöscht werden.',
+      },
+      {
+        title: 'Fügen Sie AV-Equipment-Formen hinzu',
+        content: 'Wechseln Sie im linken Panel zum Tab "AV-Elemente". Formen sind nach Kategorie gruppiert: Audio (Lautsprecher, Subwoofer, Mischpult-Position), Video (Bildschirme, LED-Panels, Projektoren, Kameras), Beleuchtung (Moving Heads, PAR-Strahler, Verfolger) und Bühnenbau (Bühnenblöcke, Podium, Traverse). Ziehen Sie eine beliebige Form auf die Leinwand und positionieren Sie sie per Drag.',
+      },
+      {
+        title: 'Speichern Sie das Layout',
+        content: 'Klicken Sie oben rechts im Designer auf "Layout speichern". Das Layout wird an dieses Angebot angehängt und ist für den Kunden auf der Freigabeseite unterhalb der Ausrüstungstabelle sichtbar. Das Speichern hat keinen Einfluss auf Ihre Ausrüstungszeilen — es ist ein visuelles Begleitdokument zum Angebot.',
+      },
+      {
+        title: 'Als PDF oder PNG exportieren',
+        content: 'Klicken Sie auf "Exportieren" und wählen Sie PDF (druckqualitätsgemäße Ausgabe, geeignet für die Aufnahme in ein Angebotspaket) oder PNG (zum Einbetten in E-Mails, Präsentationen oder WhatsApp). Die exportierte Datei enthält Ihr Firmenlogo in der Ecke, den Veranstaltungsnamen und eine Legende, die jede AV-Form identifiziert.',
+        tip: 'Fügen Sie das Layout-PDF bei Angeboten für große oder komplexe Veranstaltungen dem Angebot-PDF bei — Kunden schätzen es zu sehen, wo jedes Gerät platziert wird.',
+      },
+    ],
+  },
+  {
+    slug: 'two-factor-authentication',
+    title: 'Zwei-Faktor-Authentifizierung',
+    description: 'Fügen Sie Ihrem Konto eine zusätzliche Sicherheitsebene hinzu, indem Sie die Zwei-Faktor-Authentifizierung (2FA) mit einer Authentifizierungs-App aktivieren.',
+    duration: '3 Min.',
+    difficulty: 'beginner',
+    category: 'Account',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      '2FA in den Kontoeinstellungen aktivieren',
+      'QR-Code mit einer Authentifizierungs-App scannen',
+      '6-stelligen Code zur Bestätigung der Einrichtung eingeben',
+      'Backup-Codes sicher aufbewahren',
+    ],
+    steps: [
+      {
+        title: 'Gehen Sie zu Kontoeinstellungen',
+        content: 'Klicken Sie in der Seitenleiste auf "Konto" (oder klicken Sie auf Ihr Profilbild unten links und wählen Sie "Kontoeinstellungen"). Scrollen Sie zum Abschnitt "Sicherheit". Sie sehen eine Karte "Zwei-Faktor-Authentifizierung", die den aktuellen Status anzeigt — standardmäßig deaktiviert.',
+      },
+      {
+        title: 'Klicken Sie auf 2FA aktivieren',
+        content: 'Klicken Sie auf die Schaltfläche "2FA aktivieren". Ein Einrichtungsdialog öffnet sich mit einem QR-Code und einem manuellen Einrichtungsschlüssel darunter. Öffnen Sie Ihre Authentifizierungs-App (Google Authenticator, Authy, 1Password oder eine TOTP-kompatible App) und scannen Sie den QR-Code. Wenn Ihre App kein QR-Scannen unterstützt, tippen Sie auf "Code manuell eingeben" und geben Sie den angezeigten Schlüssel ein.',
+      },
+      {
+        title: 'Geben Sie den 6-stelligen Code ein',
+        content: 'Ihre Authentifizierungs-App zeigt einen zeitbasierten 6-stelligen Code an, der alle 30 Sekunden aktualisiert wird. Geben Sie den aktuellen Code in das Bestätigungsfeld in CueQuote ein und klicken Sie auf "Verifizieren und aktivieren". Nach der Verifizierung ist 2FA sofort aktiv — jede zukünftige Anmeldung erfordert Ihr Passwort plus einen Code aus Ihrer Authentifizierungs-App.',
+        tip: 'Geben Sie den Code zügig ein — TOTP-Codes laufen nach 30 Sekunden ab. Wenn der Code abgelehnt wird, warten Sie auf den nächsten Code in Ihrer App und versuchen Sie es erneut.',
+      },
+      {
+        title: 'Backup-Codes speichern',
+        content: 'Nach der Aktivierung von 2FA zeigt CueQuote 8 Einmal-Backup-Codes. Laden Sie diese herunter oder kopieren Sie sie und bewahren Sie sie an einem sicheren Ort auf (Passwort-Manager, ausgedrucktes Blatt in einem Safe). Wenn Sie jemals den Zugang zu Ihrer Authentifizierungs-App verlieren, ermöglicht Ihnen ein Backup-Code die Anmeldung und das Deaktivieren oder Zurücksetzen von 2FA. Jeder Code kann nur einmal verwendet werden.',
+        tip: 'Bewahren Sie Backup-Codes niemals am selben Ort wie Ihr Passwort auf. Ein Passwort-Manager mit einer separaten Notiz für 2FA-Codes ist ein guter Ansatz.',
+      },
+    ],
+  },
+  {
+    slug: 'ocr-file-attachments',
+    title: 'OCR-Dateianhänge',
+    description: 'Fügen Sie gescannte PDFs oder Bilder zu einem Angebot hinzu und lassen Sie CueQuote automatisch Text extrahieren, damit die KI technische Rider und Ausrüstungslisten lesen und verwenden kann.',
+    duration: '3 Min.',
+    difficulty: 'beginner',
+    category: 'Proposals',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Anhängen von Dateien an ein neues Angebot',
+      'Automatisches Ausführen von OCR bei gescannten Dokumenten',
+      'Überprüfen des extrahierten Textes vor der Generierung',
+      'Unterstützte Dateitypen und Sprachen',
+    ],
+    steps: [
+      {
+        title: 'Klicken Sie auf Anhänge in einem neuen Angebot',
+        content: 'Starten Sie ein neues Angebot und navigieren Sie zum Abschnitt "Anhänge" unterhalb des Ereignisbeschreibungsfeldes. Klicken Sie auf "Datei hochladen" oder ziehen Sie eine Datei in die Upload-Zone. Unterstützte Formate sind PDF, JPG, PNG und TIFF. Sie können bis zu 5 Dateien pro Angebot anhängen — jede Datei kann bis zu 10 MB groß sein.',
+      },
+      {
+        title: 'Laden Sie ein gescanntes PDF oder Bild hoch',
+        content: 'Wählen Sie Ihren gescannten technischen Rider, Ihre Ausrüstungsliste, Ihren Grundriss oder Ihr Veranstaltungs-Briefing. Bereits maschinenlesbare PDFs (exportiert aus Word, Excel oder einem Design-Tool) werden sofort verarbeitet. Gescannte Dokumente und Bilder werden automatisch an die OCR-Engine gesendet, die den gesamten Text aus der Datei erkennt und extrahiert.',
+      },
+      {
+        title: 'Überprüfen Sie den extrahierten Text',
+        content: 'Nach Abschluss der OCR klicken Sie auf den Anhang-Chip, um die Vorschau des extrahierten Textes zu erweitern. Überprüfen Sie die Ausgabe, um sicherzustellen, dass wichtige Details — Ausrüstungsnamen, Mengen, technische Spezifikationen — korrekt erfasst wurden. Sie können den extrahierten Text direkt im Vorschaufeld bearbeiten, bevor Sie das Angebot generieren.',
+        tip: 'Für beste OCR-Genauigkeit verwenden Sie Scans mit 300 DPI oder höher. Vermeiden Sie Dateien, bei denen Text Grafiken überlagert oder sehr kleine Schriftarten verwendet werden.',
+      },
+      {
+        title: 'Generieren Sie das Angebot mit extrahiertem Inhalt',
+        content: 'Klicken Sie auf "Angebot generieren". Die KI erhält sowohl Ihre schriftliche Beschreibung als auch den vollständigen extrahierten Text aus allen Anhängen als kombinierten Kontext. Sie fügt beide Quellen intelligent zusammen — dabei werden spezifische Modellnummern, Mengen und technische Anforderungen aus dem Rider aufgegriffen.',
+        tip: 'OCR unterstützt englischen und arabischen Text. Mehrsprachige Dokumente (z. B. ein arabischer Rider mit englischen Gerätemodellnamen) werden korrekt verarbeitet — die KI liest beide Sprachen im selben Dokument.',
+      },
+    ],
+  },
 ]

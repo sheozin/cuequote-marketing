@@ -2148,6 +2148,27 @@
       "step3": "Überprüfen Sie das kategorisierte Budget mit der von der KI generierten Ausrüstungsliste. Die Karte 'AV & Technical' fasst alle Audio-, Video-, Beleuchtungs- und Staging-Anforderungen zusammen mit einer Zwischensumme und Elementzahl. Klicken Sie auf die Karte, um sie zu erweitern und einzelne Positionen mit Beschreibungen und Budgetspannen anzuzeigen.",
       "step4": "Nutzen Sie die Budgetspannen und Team-Empfehlungen bei Angebotsanfragen an Lieferanten, und beziehen Sie sich auf den Veranstaltungsablauf, um sicherzustellen, dass Lieferanten die Aufbau- und Abbauplanung verstehen. Speichern oder exportieren Sie den Plan als PDF, um ihn mit Stakeholdern zu teilen.",
       "tip": "Die Marktpreis-Budgetspannen helfen Ihnen, Kundenerwartungen vor Lieferantenanfragen zu steuern. Wenn eine Spanne hoch oder niedrig erscheint, passen Sie die Veranstaltungsbeschreibung an und generieren Sie neu — mehr Details führen normalerweise zu genaueren Schätzungen."
+    },
+    "eventLayoutDesigner": {
+      "title": "Veranstaltungslayout-Designer",
+      "content1": "Der Veranstaltungslayout-Designer ermöglicht es Ihnen, direkt in CueQuote einen visuellen Grundriss für Ihre Veranstaltung zu erstellen. Öffnen Sie ein beliebiges Angebot, klicken Sie auf die Registerkarte Layout oben im Editor und Sie finden eine Zeichenfläche, auf der Sie Ihr Raumlayout mit AV-Formen, Bühnen, Tischen und mehr gestalten können.",
+      "content2": "Fertige Layouts können als querformatige PDF-Seite exportiert werden — ideal zum Anhängen an Ihr Angebot — oder als eigenständiges PNG-Bild für Präsentationen und Ortsbegehungen heruntergeladen werden. Der Layout-Designer ist in den Plänen Pro und Business verfügbar.",
+      "step1": "Öffnen Sie ein Angebot im Editor und klicken Sie oben auf die Registerkarte Layout — die Zeichenfläche wird mit einem leeren Raumvorlage standardmäßig geladen",
+      "step2": "Wählen Sie eine Raumvorlage aus dem Vorlagen-Dropdown (Schulraum, Theater, Bankett, Besprechungsraum, offene Bühne), um die Fläche mit einer gängigen Konfiguration vorzufüllen",
+      "step3": "Klicken Sie auf das AV-Formen-Dropdown und wählen Sie hinzuzufügende Elemente — Lautsprecher, Projektoren, Bildschirme, Bühnenpodeste, Beleuchtungsanlagen und mehr — und ziehen Sie sie in die gewünschte Position",
+      "step4": "Doppelklicken Sie auf eine Form, um sie umzubenennen oder deren Größe anzupassen; verwenden Sie die Einrastfunktion am Raster für präzise Ausrichtung",
+      "step5": "Klicken Sie auf Als PDF exportieren, um das Layout als Querformat-Seite an das Angebots-PDF anzuhängen, oder PNG herunterladen, um ein eigenständiges Bild des Grundrisses zu speichern",
+      "tip": "Beschriften Sie jede AV-Form mit dem spezifischen Modellnamen oder Katalogartikel — das unterstreicht Professionalität und hilft dem Veranstaltungspersonal, Ihr Setup auf einen Blick zu verstehen."
+    },
+    "twoFactorAuthentication": {
+      "title": "Zwei-Faktor-Authentifizierung",
+      "content1": "Die Zwei-Faktor-Authentifizierung (2FA) fügt Ihrem CueQuote-Konto eine zweite Sicherheitsebene hinzu. Selbst wenn jemand Ihr Passwort erhält, kann er sich ohne den Einmalcode, den Ihre Authentifizierungs-App generiert, nicht anmelden. Wir empfehlen, 2FA für alle Konten zu aktivieren, insbesondere wenn Sie Kundenkontaktdaten oder Preise in CueQuote speichern.",
+      "content2": "CueQuote unterstützt jede TOTP-kompatible Authentifizierungs-App. Google Authenticator und Authy sind am weitesten verbreitet und funktionieren sowohl auf iOS als auch auf Android. Nach der Aktivierung werden Sie bei jeder neuen Anmeldung nach einem 6-stelligen Code gefragt.",
+      "step1": "Gehen Sie zu Konto (Avatar-Menü oben rechts) → Sicherheit → Zwei-Faktor-Authentifizierung aktivieren",
+      "step2": "Ein QR-Code erscheint auf dem Bildschirm — öffnen Sie Ihre Authentifizierungs-App (Google Authenticator oder Authy), tippen Sie auf das +-Symbol und wählen Sie QR-Code scannen",
+      "step3": "Richten Sie Ihre Kamera auf den QR-Code; Ihre App fügt einen CueQuote-Eintrag hinzu und zeigt einen rotierenden 6-stelligen Code an",
+      "step4": "Geben Sie den aktuellen 6-stelligen Code aus Ihrer App in das Bestätigungsfeld ein und klicken Sie Verifizieren & Aktivieren — 2FA ist jetzt auf Ihrem Konto aktiv. Bewahren Sie Ihre Backup-Codes an einem sicheren Ort auf.",
+      "tip": "Wenn Sie den Zugang zu Ihrer Authentifizierungs-App verlieren, verwenden Sie einen der während der Einrichtung bereitgestellten Backup-Codes, um wieder Zugang zu erhalten. Bewahren Sie diese Codes offline oder in einem Passwort-Manager auf — sie können später nicht abgerufen werden."
     }
   },
   "changelog": {
