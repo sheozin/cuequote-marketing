@@ -97,7 +97,7 @@ export default async function BlogPostPage({
   // Extract key takeaways. Glossary paragraphs start with "1. TERM: ..." — handle separately.
   const isGlossaryParagraph = (p: string) => /^\d+\.\s[A-Z]{2,}/.test(p);
 
-  const nonGlossaryParagraphs = contentArray.filter((p, i) => i % 2 === 0 && !isGlossaryParagraph(p));
+  const nonGlossaryParagraphs = contentArray.filter((p, i) => i % 2 === 0 && !isGlossaryParagraph(p) && !p.startsWith('[IMAGE:'));
   const normalTakeaways = nonGlossaryParagraphs.slice(0, 5).map(p => {
     const firstSentence = p.match(/^[^.!?]+[.!?]/)?.[0] || p.slice(0, 120) + '...';
     return firstSentence;
