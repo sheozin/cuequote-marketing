@@ -504,6 +504,18 @@
     "forEventPlanners": "Dla organizatorów wydarzeń"
   },
   "posts": {
+    "event-layout-designer-floor-plans": {
+      "title": "Projektuj rzuty sal eventowych w swoich ofertach — poznaj Layout Designer",
+      "excerpt": "CueQuote oferuje teraz kreator rzutów metodą drag-and-drop z 12 kształtami AV, 6 szablonami sal i eksportem PDF jednym kliknięciem. Twórz profesjonalne układy bez wychodzenia z oferty.",
+      "readTime": "5 min czytania",
+      "content": [
+        "Każda oferta AV opowiada historię w liczbach — ilości sprzętu, stawki dzienne, sumy. Ale klienci myślą przestrzenią. Chcą wiedzieć, gdzie stanie scena, jak będzie rozmieszczona widownia, gdzie ustawione kamery. Do tej pory oznaczało to uruchamianie osobnego narzędzia, eksportowanie rzutu i ręczne dołączanie go do oferty. Dzięki nowemu Event Layout Designerowi w CueQuote, rzut sali jest częścią samej oferty.",
+        "Layout Designer to pełnoprawne płótno drag-and-drop osadzone jako nowa zakładka w edytorze ofert, tuż obok zakładek Sprzęt, Warunki, Plan ryzyka i Komentarze. Otwórz zakładkę Układ, wybierz szablon startowy — Teatr, Sala szkolna, Sala konferencyjna, U-kształt, Bankiet lub Koktajl — i masz profesjonalnie rozmieszczoną salę w kilka sekund. Każdy szablon jest wstępnie załadowany z odpowiednimi meblami, układem miejsc siedzących i pozycjami sprzętu AV dla danego typu wydarzenia.",
+        "Prawdziwa moc tkwi w bibliotece niestandardowych kształtów AV. Kliknij 'Kształty AV' na pasku narzędzi i wybieraj spośród 12 dedykowanych kształtów podzielonych na trzy kategorie. Kategoria Scena obejmuje platformy sceniczne, mównice i parkiety taneczne. Sprzęt AV zawiera ekrany LED, głośniki, projektory, kamery i stoły mikserskie FOH. Kategoria Miejsca siedzące oferuje okrągłe stoły z konfigurowalną liczbą krzeseł, prostokątne stoły z krzesłami oraz rzędy krzeseł w układzie teatralnym. Każdy kształt można zmieniać rozmiar, przesuwać i opisywać.",
+        "Po zaprojektowaniu układu masz trzy opcje. Zapisz przechowuje układ jako część oferty — zachowuje się po zamknięciu i ponownym otwarciu. Eksport do PDF renderuje rzut sali jako pełną stronę poziomą na końcu PDF-a z ofertą, wraz z nazwą firmy i tytułem oferty. Pobierz PNG daje samodzielny obraz w wysokiej rozdzielczości, który możesz wykorzystać w prezentacjach, załącznikach e-mail lub materiałach dla klientów. Eksport do PDF jest najpotężniejszy: gdy klient otwiera ofertę, widzi listę sprzętu, cennik, warunki, a następnie profesjonalny rzut sali — wszystko w jednym dokumencie.",
+        "Layout Designer jest dostępny w planach Pro i Business. Użytkownicy planów Free i Starter mogą wypróbować pełny edytor — wszystkie kształty, szablony i narzędzia do rysowania działają bez ograniczeń. Gdy będą gotowi do zapisania lub eksportu, pojawi się monit z propozycją uaktualnienia planu. Oznacza to, że każdy użytkownik CueQuote może poznać narzędzie przed podjęciem decyzji. Dla firm AV i organizatorów wydarzeń, którzy chcą wyróżnić się spośród konkurencji wysyłającej zwykłe listy sprzętu, Layout Designer zamienia ofertę w kompletną wizję wydarzenia."
+      ]
+    },
     "ile-kosztuje-organizacja-konferencji": {
       "title": "Ile kosztuje organizacja konferencji w 2026? Realny budżet krok po kroku",
       "excerpt": "Konkretne widełki cenowe w PLN dla każdej kategorii kosztów konferencji — od 50 do 500 uczestników. Bez marketingowych ogólników, same liczby.",

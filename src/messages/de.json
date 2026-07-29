@@ -504,6 +504,18 @@
     "forEventPlanners": "Für Veranstaltungsplaner"
   },
   "posts": {
+    "event-layout-designer-floor-plans": {
+      "title": "Grundrisse für Events direkt in Ihren Angeboten gestalten — der Layout Designer",
+      "excerpt": "CueQuote enthält jetzt einen Drag-and-Drop-Grundrissdesigner mit 12 AV-Formen, 6 Raumvorlagen und PDF-Export per Klick. Entwerfen Sie professionelle Event-Layouts, ohne Ihr Angebot zu verlassen.",
+      "readTime": "5 Min. Lesezeit",
+      "content": [
+        "Jedes AV-Angebot erzählt eine Geschichte in Zahlen — Geräteanzahl, Tagessätze, Gesamtbeträge. Doch Kunden denken in Räumen. Sie möchten sehen, wo die Bühne steht, wie das Publikum sitzt, wo die Kameras positioniert sind. Bisher bedeutete das: ein separates Tool öffnen, einen Grundriss exportieren und ihn manuell anhängen. Mit dem neuen Event Layout Designer in CueQuote lebt der Grundriss direkt im Angebot selbst.",
+        "Der Layout Designer ist eine vollständige Drag-and-Drop-Arbeitsfläche, die als neuer Tab im Angebotseditor eingebettet ist — direkt neben Ausstattung, Konditionen, Risikoplan und Kommentare. Öffnen Sie den Tab Grundriss, wählen Sie eine Ausgangsvorlage — Theater, Klassenzimmer, Konferenzraum, U-Form, Bankett oder Cocktail — und haben Sie in Sekunden einen professionell angeordneten Raum. Jede Vorlage wird mit den passenden Möbeln, der richtigen Sitzanordnung und den AV-Gerätepositionen für den jeweiligen Veranstaltungstyp vorgeladen.",
+        "Die eigentliche Stärke liegt in der benutzerdefinierten AV-Formbibliothek. Klicken Sie in der Symbolleiste auf 'AV-Formen' und wählen Sie aus 12 zweckgebauten Formen in drei Kategorien. Die Kategorie Bühne umfasst Bühnenpodeste, Rednerpulte und Tanzflächen. AV-Geräte beinhaltet LED-Screens, Lautsprecher, Projektoren, Kameras und FOH-Mischpulte. Die Kategorie Bestuhlung bietet runde Tische mit konfigurierbarer Stuhlanzahl, rechteckige Tische mit Stühlen sowie Stuhlreihen für theaterartiges Sitzen. Jede Form ist in Größe und Position veränderbar und beschriftbar.",
+        "Sobald Ihr Layout gestaltet ist, stehen Ihnen drei Optionen zur Verfügung. Speichern legt das Layout als Teil des Angebots fest — es bleibt beim Schließen und Wiederöffnen erhalten. Als PDF exportieren rendert den Grundriss als vollständige Querseite am Ende Ihres Angebots-PDFs, komplett mit Ihrem Firmennamen und dem Angebotstitel. PNG herunterladen liefert ein eigenständiges hochauflösendes Bild für Präsentationen, E-Mail-Anhänge oder Kundenbriefings. Der PDF-Export ist am wirkungsvollsten: Wenn Ihr Kunde das Angebot öffnet, sieht er Geräteliste, Preise, Konditionen und anschließend einen professionellen Grundriss — alles in einem Dokument.",
+        "Der Layout Designer ist in den Tarifen Pro und Business verfügbar. Nutzer der Tarife Free und Starter können den vollständigen Editor ausprobieren — alle Formen, Vorlagen und Zeichenwerkzeuge funktionieren ohne Einschränkungen. Wenn sie bereit sind zu speichern oder zu exportieren, werden sie mit einem Hinweis zum Upgrade geleitet. Das bedeutet: Jeder CueQuote-Nutzer kann das Tool testen, bevor er sich festlegt. Für AV-Unternehmen und Veranstaltungsplaner, die sich von Mitbewerbern mit schlichten Gerätelisten abheben möchten, verwandelt der Layout Designer ein Angebot in eine vollständige Eventvision."
+      ]
+    },
     "firmenevent-planen-ohne-erfahrung": {
       "title": "Firmenevent planen ohne Erfahrung: Der komplette Leitfaden",
       "excerpt": "Sie sollen ein Firmenevent organisieren und haben noch nie eines geplant? Dieser Leitfaden führt Sie Schritt für Schritt — vom ersten Briefing bis zum Nachbericht.",
