@@ -279,6 +279,29 @@ export default async function BlogPostPage({
                 );
               }
 
+              // Detect image paragraphs: [IMAGE:/path/to/image.png|Alt text]
+              const imageMatch = paragraph.match(/^\[IMAGE:(\/[^\]|]+)\|?([^\]]*)\]$/);
+              if (imageMatch) {
+                return (
+                  <div key={i} style={{ margin: "32px 0" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={imageMatch[1]}
+                      alt={imageMatch[2] || ''}
+                      style={{
+                        width: "100%", borderRadius: 16,
+                        boxShadow: "0 8px 32px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05)",
+                      }}
+                    />
+                    {imageMatch[2] && (
+                      <p style={{ fontSize: 13, color: "#9ca3af", textAlign: "center", marginTop: 10 }}>
+                        {imageMatch[2]}
+                      </p>
+                    )}
+                  </div>
+                );
+              }
+
               return (
               <div key={i}>
                 <p style={{ fontSize: 17, color: "#374151", lineHeight: 1.8, marginBottom: 28 }}>
