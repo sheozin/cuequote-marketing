@@ -1,6 +1,6 @@
 # CueQuote Marketing Site — Project Rules
 
-## i18n — Always All 5 Languages
+## i18n — Always All 5 Languages (ENFORCED)
 
 When adding or modifying content, ALWAYS update ALL 5 language files:
 - `src/messages/en.json`
@@ -10,6 +10,14 @@ When adding or modifying content, ALWAYS update ALL 5 language files:
 - `src/messages/fr.json`
 
 Same applies to tutorials: `src/lib/tutorials/en.ts`, `pl.ts`, `ar.ts`, `de.ts`, `fr.ts`
+
+**MANDATORY: Run `npm run check-translations` before every push.** This script compares all 5 language files and reports missing keys, untranslated values, and structural mismatches. It exits with error code 1 if any keys are missing — treat this as a build blocker.
+
+When adding new i18n keys:
+1. Add to en.json first
+2. IMMEDIATELY add translations to all 4 other languages (use a subagent if needed)
+3. Run `npm run check-translations` to verify zero errors
+4. Only then proceed with the push
 
 ## Blog Publishing
 

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check-translations": "node scripts/check-translations.cjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.10.2",
