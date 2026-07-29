@@ -86,7 +86,7 @@ export default async function PricingPage() {
       period: t("perMonth"),
       desc: t("proDesc"),
       icon: <Crown size={20} />,
-      features: [t("proF1"), t("proF2"), t("proF3"), t("proF4"), t("proF5"), t("proF6"), t("proF7"), t("proF8")],
+      features: [t("proF1"), t("proF2"), t("proF3"), t("proF4"), t("proF5"), t("proF6"), t("proF7"), t("proF8"), t("proF9")],
       cta: t("startTrial"),
       ctaStyle: "featured" as const,
       popular: true,
