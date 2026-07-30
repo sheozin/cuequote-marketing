@@ -60,18 +60,25 @@ export default function PageTracker() {
         // Extract site locale from URL path
         const pathLocale = pathname?.match(/^\/(en|pl|ar|de|fr)\//)?.[1] || 'en'
 
-        // Get country from free IP API (no key needed, ~50ms)
+        // Get country — only call external IP API if user hasn't declined tracking
+        // Basic page views always tracked, but geolocation (sends IP to third party) respects opt-out
         let country: string | null = null
-        try {
-          const geo = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(2000) })
-          const geoData = await geo.json()
-          const raw = geoData.country_name || geoData.country || null
-          // Validate: only accept plain strings up to 100 chars, no HTML/script
-          if (raw && typeof raw === 'string' && raw.length <= 100 && !/[<>"'&]/.test(raw)) {
-            country = raw
+        const consent = localStorage.getItem('cq_analytics_consent')
+        if (consent !== 'declined') {
+          try {
+            const geo = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(2000) })
+            const geoData = await geo.json()
+            const raw = geoData.country_name || geoData.country || null
+            // Validate: only accept plain strings up to 100 chars, no HTML/script
+            if (raw && typeof raw === 'string' && raw.length <= 100 && !/[<>"'&]/.test(raw)) {
+              country = raw
+            }
+          } catch {
+            // Fallback to timezone region
+            country = Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[1]?.replace(/_/g, ' ') || null
           }
-        } catch {
-          // Fallback to timezone region
+        } else {
+          // Declined: use timezone-based region only (no external API call)
           country = Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[1]?.replace(/_/g, ' ') || null
         }
 

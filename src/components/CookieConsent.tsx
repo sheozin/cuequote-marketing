@@ -38,8 +38,10 @@ export default function CookieConsent() {
       {/* SmartPopup always runs — it's a site feature, not tracking */}
       <SmartPopup />
 
-      {/* PageTracker loads by default — only disabled when user explicitly declines */}
-      {consent !== 'declined' && <PageTracker />}
+      {/* PageTracker always loads — basic page views are first-party analytics.
+          When user declines, PageTracker skips the external geolocation API call
+          but still records page path, device, browser, and locale. */}
+      <PageTracker />
 
       {/* Banner — only show if no choice made yet */}
       {loaded && consent === null && (
