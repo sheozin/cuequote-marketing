@@ -38,8 +38,8 @@ export default function CookieConsent() {
       {/* SmartPopup always runs — it's a site feature, not tracking */}
       <SmartPopup />
 
-      {/* PageTracker only loads when user has accepted analytics */}
-      {consent === 'accepted' && <PageTracker />}
+      {/* PageTracker loads by default — only disabled when user explicitly declines */}
+      {consent !== 'declined' && <PageTracker />}
 
       {/* Banner — only show if no choice made yet */}
       {loaded && consent === null && (
