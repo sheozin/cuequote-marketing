@@ -36,6 +36,16 @@ export default function ContactForm() {
         </div>
       )}
 
+      {/* Honeypot field — hidden from real users */}
+      <div style={{ position: "absolute", left: "-9999px", opacity: 0, height: 0 }} aria-hidden="true">
+        <input
+          type="text"
+          name="company_url"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div>
         <label
           style={{

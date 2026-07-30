@@ -36,6 +36,15 @@ export default function SubscribeForm() {
             style={{ display: "flex", gap: 8, maxWidth: 420, margin: "0 auto" }}
             className="email-form"
           >
+            {/* Honeypot field — hidden from real users */}
+            <div style={{ position: "absolute", left: "-9999px", opacity: 0, height: 0 }} aria-hidden="true">
+              <input
+                type="text"
+                name="company_url"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
             <input
               type="email"
               name="email"

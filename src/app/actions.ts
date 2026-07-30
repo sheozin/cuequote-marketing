@@ -18,6 +18,12 @@ export async function subscribeEmail(
   _prevState: SubscribeFormState,
   formData: FormData
 ): Promise<SubscribeFormState> {
+  // Honeypot bot protection — if filled, silently succeed
+  const honeypot = formData.get("company_url")?.toString() ?? "";
+  if (honeypot) {
+    return { success: true, message: "You're subscribed!" };
+  }
+
   const email = formData.get("email")?.toString().trim() ?? "";
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {

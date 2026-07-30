@@ -18,6 +18,12 @@ export async function submitContactForm(
   _prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
+  // Honeypot bot protection — if filled, silently succeed
+  const honeypot = formData.get("company_url")?.toString() ?? "";
+  if (honeypot) {
+    return { success: true, message: "Thanks for reaching out!" };
+  }
+
   const name = formData.get("name")?.toString().trim() ?? "";
   const email = formData.get("email")?.toString().trim() ?? "";
   const subject = formData.get("subject")?.toString().trim() ?? "";
