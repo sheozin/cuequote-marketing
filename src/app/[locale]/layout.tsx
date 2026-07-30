@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | CueQuote",
   },
   description:
-    "Create professional event proposals or detailed production plans in under 2 minutes. AI-powered for AV companies, event planners, and production professionals.",
+    "Your second brain for event proposals. CueQuote knows your equipment, prices, and clients — describe the event and get a proposal your client trusts.",
   keywords: [
     "event proposal software", "AI proposal generator", "event planning tool", "AV proposal software",
     "production planning", "event equipment quote", "proposal automation",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   creator: "CueQuote",
   openGraph: {
     title: "CueQuote — The AI Platform for Event Professionals",
-    description: "Create professional event proposals or detailed production plans in under 2 minutes.",
+    description: "Your second brain for event proposals. CueQuote knows your equipment, prices, and clients — describe the event and get a proposal your client trusts.",
     url: BASE_URL,
     siteName: "CueQuote",
     type: "website",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "CueQuote — The AI Platform for Event Professionals",
-    description: "Create professional event proposals or detailed production plans in under 2 minutes.",
+    description: "Your second brain for event proposals. CueQuote knows your equipment, prices, and clients — describe the event and get a proposal your client trusts.",
   },
   robots: {
     index: true,
