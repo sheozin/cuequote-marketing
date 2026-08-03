@@ -22,17 +22,17 @@ export const POSTS: BlogPostSummary[] = [
     date: "2026-07-28",
   },
   {
-    slug: "cout-evenement-entreprise-2026",
+    slug: "corporate-event-cost-2026",
     category: "Guides",
     date: "2026-07-28",
   },
   {
-    slug: "ile-kosztuje-organizacja-konferencji",
+    slug: "conference-cost-realistic-budget",
     category: "Guides",
     date: "2026-07-27",
   },
   {
-    slug: "firmenevent-planen-ohne-erfahrung",
+    slug: "plan-company-event-without-experience",
     category: "Guides",
     date: "2026-07-27",
   },
@@ -42,22 +42,22 @@ export const POSTS: BlogPostSummary[] = [
     date: "2026-07-26",
   },
   {
-    slug: "conference-planning-mistakes-arabic",
+    slug: "conference-planning-mistakes",
     category: "Guides",
     date: "2026-07-26",
   },
   {
-    slug: "cahier-des-charges-audiovisuel",
+    slug: "how-to-write-av-brief",
     category: "Guides",
     date: "2026-07-26",
   },
   {
-    slug: "jak-wybrac-firme-eventowa",
+    slug: "how-to-choose-event-company-checklist",
     category: "Guides",
     date: "2026-07-25",
   },
   {
-    slug: "veranstaltungstechnik-kosten-uebersicht",
+    slug: "event-av-cost-price-guide-2026",
     category: "Guides",
     date: "2026-07-25",
   },
@@ -72,17 +72,17 @@ export const POSTS: BlogPostSummary[] = [
     date: "2026-07-24",
   },
   {
-    slug: "organiser-seminaire-entreprise-checklist",
+    slug: "organize-company-seminar-checklist",
     category: "Guides",
     date: "2026-07-24",
   },
   {
-    slug: "planowanie-eventu-firmowego-od-zera",
+    slug: "plan-corporate-event-from-scratch",
     category: "Guides",
     date: "2026-07-23",
   },
   {
-    slug: "event-budget-vorlage-kostenlos",
+    slug: "event-budget-template-free-2026",
     category: "Guides",
     date: "2026-07-23",
   },
@@ -207,7 +207,7 @@ export const POSTS: BlogPostSummary[] = [
     date: "2026-05-28",
   },
   {
-    slug: "av-angebote-erstellen-deutschland",
+    slug: "av-proposals-germany-guide",
     category: "Business",
     date: "2026-05-27",
   },
@@ -217,12 +217,12 @@ export const POSTS: BlogPostSummary[] = [
     date: "2026-05-26",
   },
   {
-    slug: "devis-audiovisuel-entreprises-france",
+    slug: "av-proposals-france-guide",
     category: "Business",
     date: "2026-05-25",
   },
   {
-    slug: "av-oferty-eventowe-polska",
+    slug: "av-proposals-poland-guide",
     category: "Business",
     date: "2026-05-24",
   },
