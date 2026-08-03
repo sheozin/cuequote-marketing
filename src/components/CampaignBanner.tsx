@@ -11,7 +11,7 @@ const supabase = createClient(
 )
 
 const LS_KEY = 'cuequote_mkt_banner_dismissed'
-const LS_INDEX = 'cuequote_mkt_banner_index'
+const LS_VISITS = 'cuequote_mkt_visit_count'
 
 interface PopupCampaign {
   seats_taken: number
@@ -42,11 +42,7 @@ interface BarMessage {
 export default function CampaignBanner() {
   const locale = useLocale()
   const [dismissed, setDismissed] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(() => {
-    // Sequential per visit: read last index, advance by 1
-    const stored = typeof window !== 'undefined' ? parseInt(localStorage.getItem(LS_INDEX) || '0') : 0
-    return stored
-  })
+  const [selectedId, setSelectedId] = useState<string | null>(null)
   const [messages, setMessages] = useState<BarMessage[]>([])
   const [popupData, setPopupData] = useState<PopupCampaign | null>(null)
 
@@ -210,13 +206,40 @@ export default function CampaignBanner() {
         })
       }
 
-      // Set the index and advance for next visit
-      const storedIndex = parseInt(localStorage.getItem(LS_INDEX) || '0')
-      const currentIndex = storedIndex % bars.length
-      setActiveIndex(currentIndex)
-      // Store next index for the next visit
-      localStorage.setItem(LS_INDEX, String(storedIndex + 1))
+      // Smart bar selection based on visitor context
+      const visitCount = parseInt(localStorage.getItem(LS_VISITS) || '0') + 1
+      localStorage.setItem(LS_VISITS, String(visitCount))
 
+      const params = new URLSearchParams(window.location.search)
+      const utmCampaign = (params.get('utm_campaign') || '').toLowerCase()
+      const utmSource = (params.get('utm_source') || '').toLowerCase()
+      const path = window.location.pathname.toLowerCase()
+      const referrer = (document.referrer || '').toLowerCase()
+
+      // Detect visitor intent
+      const isAvIntent = path.includes('for-av-compan') || utmCampaign.includes('av') || referrer.includes('av')
+      const isPlannerIntent = path.includes('for-event-plan') || utmCampaign.includes('planner') || utmCampaign.includes('event') || referrer.includes('planner')
+      const isFromLinkedIn = utmSource.includes('linkedin') || referrer.includes('linkedin')
+      const isFromGoogle = utmSource.includes('google') || referrer.includes('google')
+
+      let pickId: string
+
+      // UTM/path override — show relevant bar for the audience
+      if (isAvIntent) {
+        pickId = visitCount <= 1 ? 'switch' : 'activity'
+      } else if (isPlannerIntent) {
+        pickId = visitCount <= 1 ? 'roi' : 'social'
+      } else if (isFromLinkedIn) {
+        pickId = visitCount <= 2 ? 'social' : 'promo'
+      } else if (isFromGoogle) {
+        pickId = visitCount <= 1 ? 'roi' : 'switch'
+      } else {
+        // Default journey: ROI → Social → Promo → Switch → Activity → Calculator
+        const journey = ['roi', 'social', 'promo', 'switch', 'activity', 'calculator']
+        pickId = journey[Math.min(visitCount - 1, journey.length - 1)]
+      }
+
+      setSelectedId(pickId)
       setMessages(bars)
     })
   }, [locale])
@@ -226,9 +249,9 @@ export default function CampaignBanner() {
     localStorage.setItem(LS_KEY, String(Date.now()))
   }, [])
 
-  if (dismissed || messages.length === 0) return null
+  if (dismissed || messages.length === 0 || !selectedId) return null
 
-  const msg = messages[activeIndex]
+  const msg = messages.find(m => m.id === selectedId) || messages[0]
 
   return (
     <div
