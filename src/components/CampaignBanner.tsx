@@ -11,7 +11,7 @@ const supabase = createClient(
 )
 
 const LS_KEY = 'cuequote_mkt_banner_dismissed'
-const ROTATE_INTERVAL = 8000 // 8 seconds per message
+const LS_INDEX = 'cuequote_mkt_banner_index'
 
 interface PopupCampaign {
   seats_taken: number
@@ -42,8 +42,11 @@ interface BarMessage {
 export default function CampaignBanner() {
   const locale = useLocale()
   const [dismissed, setDismissed] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [fade, setFade] = useState(true)
+  const [activeIndex, setActiveIndex] = useState(() => {
+    // Sequential per visit: read last index, advance by 1
+    const stored = typeof window !== 'undefined' ? parseInt(localStorage.getItem(LS_INDEX) || '0') : 0
+    return stored
+  })
   const [messages, setMessages] = useState<BarMessage[]>([])
   const [popupData, setPopupData] = useState<PopupCampaign | null>(null)
 
@@ -207,22 +210,16 @@ export default function CampaignBanner() {
         })
       }
 
+      // Set the index and advance for next visit
+      const storedIndex = parseInt(localStorage.getItem(LS_INDEX) || '0')
+      const currentIndex = storedIndex % bars.length
+      setActiveIndex(currentIndex)
+      // Store next index for the next visit
+      localStorage.setItem(LS_INDEX, String(storedIndex + 1))
+
       setMessages(bars)
     })
   }, [locale])
-
-  // Rotate messages
-  useEffect(() => {
-    if (messages.length <= 1) return
-    const interval = setInterval(() => {
-      setFade(false)
-      setTimeout(() => {
-        setActiveIndex(prev => (prev + 1) % messages.length)
-        setFade(true)
-      }, 300)
-    }, ROTATE_INTERVAL)
-    return () => clearInterval(interval)
-  }, [messages.length])
 
   const handleDismiss = useCallback(() => {
     setDismissed(true)
@@ -250,8 +247,6 @@ export default function CampaignBanner() {
         justifyContent: 'center',
         gap: 12,
         flexWrap: 'wrap',
-        transition: 'opacity 0.3s ease',
-        opacity: fade ? 1 : 0,
       }}>
         {/* Pulse dot for activity bar */}
         {msg.showPulse && (
@@ -304,21 +299,6 @@ export default function CampaignBanner() {
           {msg.cta}
         </a>
 
-        {/* Dot indicators */}
-        {messages.length > 1 && (
-          <div style={{ display: 'flex', gap: 4, marginLeft: 4 }}>
-            {messages.map((_, i) => (
-              <span
-                key={i}
-                style={{
-                  width: 5, height: 5, borderRadius: '50%',
-                  background: i === activeIndex ? '#fff' : 'rgba(255,255,255,0.3)',
-                  transition: 'background 0.3s',
-                }}
-              />
-            ))}
-          </div>
-        )}
       </div>
 
       {/* Dismiss button */}
