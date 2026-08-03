@@ -304,9 +304,10 @@ export default async function BlogPostPage({
 
               return (
               <div key={i}>
-                <p style={{ fontSize: 17, color: "#374151", lineHeight: 1.8, marginBottom: 28 }}>
-                  {paragraph}
-                </p>
+                <p
+                  style={{ fontSize: 17, color: "#374151", lineHeight: 1.8, marginBottom: 28 }}
+                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                />
                 {i === ctaInsertIndex && (
                   <div style={{
                     background: "linear-gradient(135deg, #ecfdf5, #d1fae5)",
