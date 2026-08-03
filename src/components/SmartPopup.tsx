@@ -125,10 +125,43 @@ export default function SmartPopup() {
       }
       localStorage.setItem(LS_VISITED_KEY, 'true')
 
-      // Variant rotation: increment visit count, pick variant by modulo
+      // Smart variant selection based on visitor context
       const visitCount = parseInt(localStorage.getItem('cq_popup_visit_count') || '0', 10)
       localStorage.setItem('cq_popup_visit_count', String(visitCount + 1))
-      const variantIdx = visitCount % camp.variant_count
+
+      const params = new URLSearchParams(window.location.search)
+      const utmCampaign = (params.get('utm_campaign') || '').toLowerCase()
+      const utmSource = (params.get('utm_source') || '').toLowerCase()
+      const path = window.location.pathname.toLowerCase()
+      const referrer = (document.referrer || '').toLowerCase()
+
+      // Pick best variant based on context
+      let variantIdx: number
+      const isAvIntent = path.includes('for-av-compan') || utmCampaign.includes('av')
+      const isPlannerIntent = path.includes('for-event-plan') || utmCampaign.includes('planner') || utmCampaign.includes('event')
+      const isFromLinkedIn = utmSource.includes('linkedin') || referrer.includes('linkedin')
+      const isPricingPage = path.includes('pricing')
+
+      if (isAvIntent) {
+        // AV visitors: show time-saving variants (index 1, 5, 6)
+        variantIdx = [1, 5, 6][visitCount % 3]
+      } else if (isPlannerIntent) {
+        // Planner visitors: show ease-of-use variants (index 2, 7, 8)
+        variantIdx = [2, 7, 8][visitCount % 3]
+      } else if (isPricingPage) {
+        // Pricing page: show ROI/value variants (index 4, 3)
+        variantIdx = [4, 3][visitCount % 2]
+      } else if (isFromLinkedIn) {
+        // LinkedIn: show social proof variants (index 3, 0)
+        variantIdx = [3, 0][visitCount % 2]
+      } else {
+        // Default: rotate through all variants
+        variantIdx = visitCount % camp.variant_count
+      }
+
+      // Clamp to available variants
+      variantIdx = Math.min(variantIdx, camp.variant_count - 1)
+
       // Attach selected variant for render convenience
       ;(camp as PopupCampaign & { _variantIdx: number })._variantIdx = variantIdx
 
