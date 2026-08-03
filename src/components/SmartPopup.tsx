@@ -125,10 +125,43 @@ export default function SmartPopup() {
       }
       localStorage.setItem(LS_VISITED_KEY, 'true')
 
-      // Variant rotation: increment visit count, pick variant by modulo
+      // Smart variant selection — pick best message for visitor context
+      // Only controls which variant text is shown. URL, promo, discount, phase untouched.
       const visitCount = parseInt(localStorage.getItem('cq_popup_visit_count') || '0', 10)
       localStorage.setItem('cq_popup_visit_count', String(visitCount + 1))
-      const variantIdx = visitCount % camp.variant_count
+
+      const params = new URLSearchParams(window.location.search)
+      const utmCampaign = (params.get('utm_campaign') || '').toLowerCase()
+      const utmSource = (params.get('utm_source') || '').toLowerCase()
+      const path = window.location.pathname.toLowerCase()
+      const referrer = (document.referrer || '').toLowerCase()
+
+      const isAvIntent = path.includes('for-av-compan') || utmCampaign.includes('av')
+      const isPlannerIntent = path.includes('for-event-plan') || utmCampaign.includes('planner') || utmCampaign.includes('event')
+      const isFromLinkedIn = utmSource.includes('linkedin') || referrer.includes('linkedin')
+      const isPricingPage = path.includes('pricing')
+
+      let variantIdx: number
+      if (isAvIntent) {
+        // AV: time-saving & urgency variants
+        variantIdx = [1, 5, 6][visitCount % 3]
+      } else if (isPlannerIntent) {
+        // Planners: ease & simplicity variants
+        variantIdx = [2, 7, 9][visitCount % 3]
+      } else if (isPricingPage) {
+        // Pricing: ROI & risk-free variants
+        variantIdx = [4, 8][visitCount % 2]
+      } else if (isFromLinkedIn) {
+        // LinkedIn: social proof & general
+        variantIdx = [3, 0, 9][visitCount % 3]
+      } else {
+        // Default: rotate all
+        variantIdx = visitCount % camp.variant_count
+      }
+
+      // Clamp to available variants
+      variantIdx = Math.min(variantIdx, camp.variant_count - 1)
+
       // Attach selected variant for render convenience
       ;(camp as PopupCampaign & { _variantIdx: number })._variantIdx = variantIdx
 
