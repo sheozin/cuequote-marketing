@@ -80,11 +80,11 @@ export default function CampaignBanner() {
       // 1. Live Activity Counter
       if (proposalsWeek > 0) {
         const texts: Record<string, string> = {
-          en: `${proposalsWeek} proposals created this week by AV companies worldwide`,
-          pl: `${proposalsWeek} ofert stworzonych w tym tygodniu przez firmy AV na calym swiecie`,
-          ar: `${proposalsWeek} عرض تم إنشاؤه هذا الأسبوع من شركات AV حول العالم`,
-          de: `${proposalsWeek} Angebote diese Woche von AV-Unternehmen weltweit erstellt`,
-          fr: `${proposalsWeek} devis créés cette semaine par des sociétés AV dans le monde`,
+          en: `${proposalsWeek} proposals and production plans created this week by event professionals`,
+          pl: `${proposalsWeek} ofert i planów produkcji stworzonych w tym tygodniu przez profesjonalistów eventowych`,
+          ar: `${proposalsWeek} عرض وخطة إنتاج تم إنشاؤها هذا الأسبوع من محترفي الفعاليات`,
+          de: `${proposalsWeek} Angebote und Produktionspläne diese Woche von Event-Profis erstellt`,
+          fr: `${proposalsWeek} devis et plans de production créés cette semaine par des pros de l'événementiel`,
         }
         const ctas: Record<string, string> = {
           en: 'Create yours free →', pl: 'Stwórz swój za darmo →', ar: 'أنشئ عرضك مجانا ←',
@@ -103,11 +103,11 @@ export default function CampaignBanner() {
       // 2. Social Proof
       if (companiesTotal > 0) {
         const texts: Record<string, string> = {
-          en: `Trusted by ${companiesTotal}+ AV companies and event planners across ${countriesCount} countries`,
-          pl: `Zaufanie ${companiesTotal}+ firm AV i organizatorów eventów w ${countriesCount} krajach`,
-          ar: `موثوق من ${companiesTotal}+ شركة AV ومنظمي فعاليات في ${countriesCount} دولة`,
-          de: `Vertraut von ${companiesTotal}+ AV-Unternehmen und Eventplanern in ${countriesCount} Ländern`,
-          fr: `Adopté par ${companiesTotal}+ sociétés AV et organisateurs dans ${countriesCount} pays`,
+          en: `Trusted by ${companiesTotal}+ event professionals — AV companies, planners & producers across ${countriesCount} countries`,
+          pl: `Zaufanie ${companiesTotal}+ profesjonalistów eventowych — firmy AV, organizatorzy i producenci w ${countriesCount} krajach`,
+          ar: `موثوق من ${companiesTotal}+ محترف فعاليات — شركات AV ومنظمين ومنتجين في ${countriesCount} دولة`,
+          de: `Vertraut von ${companiesTotal}+ Event-Profis — AV-Firmen, Planer & Produzenten in ${countriesCount} Ländern`,
+          fr: `Adopté par ${companiesTotal}+ pros de l'événementiel — sociétés AV, planificateurs & producteurs dans ${countriesCount} pays`,
         }
         const ctas: Record<string, string> = {
           en: 'Join them — Free →', pl: 'Dołącz do nich →', ar: 'انضم إليهم ←',
@@ -147,11 +147,11 @@ export default function CampaignBanner() {
       // 4. ROI Hook
       {
         const texts: Record<string, string> = {
-          en: 'You spend ~4 hours per proposal manually. CueQuote does it in 2 minutes. That\'s 208 hours/year back.',
-          pl: 'Spędzasz ~4 godziny na każdą ofertę. CueQuote robi to w 2 minuty. To 208 godzin/rok zaoszczędzonych.',
-          ar: 'تقضي ~4 ساعات في كل عرض يدويا. CueQuote ينجزه في دقيقتين. هذا يوفر 208 ساعة/سنة.',
-          de: 'Sie verbringen ~4 Stunden pro Angebot. CueQuote schafft es in 2 Minuten. Das sind 208 Stunden/Jahr zurück.',
-          fr: 'Vous passez ~4h par devis manuellement. CueQuote le fait en 2 min. Soit 208h/an récupérées.',
+          en: 'Proposals and production plans take ~4 hours manually. CueQuote does it in 2 minutes. That\'s 208 hours/year back.',
+          pl: 'Oferty i plany produkcji zajmują ~4 godziny. CueQuote robi to w 2 minuty. To 208 godzin/rok.',
+          ar: 'العروض وخطط الإنتاج تستغرق ~4 ساعات يدويا. CueQuote ينجزها في دقيقتين. 208 ساعة/سنة.',
+          de: 'Angebote und Produktionspläne dauern ~4 Std. CueQuote in 2 Min. Das sind 208 Std./Jahr.',
+          fr: 'Devis et plans de production prennent ~4h. CueQuote le fait en 2 min. Soit 208h/an.',
         }
         const ctas: Record<string, string> = {
           en: 'Get those hours back →', pl: 'Odzyskaj te godziny →', ar: 'استرجع هذه الساعات ←',
@@ -169,11 +169,11 @@ export default function CampaignBanner() {
       // 5. Interactive Calculator
       {
         const texts: Record<string, string> = {
-          en: 'Sending 5 proposals/month × 4 hrs each = 20 hours wasted on formatting. Automate it.',
-          pl: '5 ofert/miesiąc × 4 godz. = 20 godzin zmarnowanych na formatowanie. Zautomatyzuj to.',
-          ar: '5 عروض/شهر × 4 ساعات = 20 ساعة مهدرة على التنسيق. أتمته.',
-          de: '5 Angebote/Monat × 4 Std. = 20 Stunden verschwendet. Automatisieren Sie es.',
-          fr: '5 devis/mois × 4h = 20h perdues en mise en forme. Automatisez.',
+          en: '5 proposals/month × 4 hrs each = 20 hours on quoting instead of producing events. Automate it.',
+          pl: '5 ofert/miesiąc × 4 godz. = 20 godzin na wyceny zamiast produkcji eventów. Zautomatyzuj to.',
+          ar: '5 عروض/شهر × 4 ساعات = 20 ساعة في التسعير بدلا من إنتاج الفعاليات. أتمته.',
+          de: '5 Angebote/Monat × 4 Std. = 20 Std. für Kalkulation statt Eventproduktion. Automatisieren.',
+          fr: '5 devis/mois × 4h = 20h à chiffrer au lieu de produire des événements. Automatisez.',
         }
         const ctas: Record<string, string> = {
           en: 'Try free — 2 min setup →', pl: 'Wypróbuj za darmo →', ar: 'جرب مجانا ←',
@@ -191,11 +191,11 @@ export default function CampaignBanner() {
       // 6. Competitor Switch
       {
         const texts: Record<string, string> = {
-          en: 'Still building AV proposals in spreadsheets? Companies using CueQuote close deals 3× faster.',
-          pl: 'Nadal tworzysz oferty AV w arkuszach? Firmy z CueQuote zamykają deale 3× szybciej.',
-          ar: 'لا تزال تنشئ عروض AV في جداول البيانات؟ الشركات التي تستخدم CueQuote تغلق الصفقات أسرع 3 مرات.',
-          de: 'Erstellen Sie AV-Angebote noch in Tabellen? Unternehmen mit CueQuote schliessen Deals 3× schneller.',
-          fr: 'Vous faites encore vos devis AV sur tableur ? Les sociétés utilisant CueQuote concluent 3× plus vite.',
+          en: 'Still quoting events from spreadsheets? Event professionals using CueQuote close deals 3× faster.',
+          pl: 'Nadal wyceniasz eventy w arkuszach? Profesjonaliści z CueQuote zamykają deale 3× szybciej.',
+          ar: 'لا تزال تسعر الفعاليات من جداول البيانات؟ المحترفون الذين يستخدمون CueQuote يغلقون الصفقات أسرع 3 مرات.',
+          de: 'Kalkulieren Sie Events noch in Tabellen? Event-Profis mit CueQuote schliessen Deals 3× schneller.',
+          fr: 'Vous chiffrez encore vos événements sur tableur ? Les pros avec CueQuote concluent 3× plus vite.',
         }
         const ctas: Record<string, string> = {
           en: 'Switch in 2 minutes →', pl: 'Przejdź w 2 minuty →', ar: 'انتقل في دقيقتين ←',
