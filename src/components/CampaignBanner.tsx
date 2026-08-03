@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import { X } from 'lucide-react'
 import { useLocale } from 'next-intl'
@@ -10,17 +10,8 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
 
-interface ActiveCampaign {
-  id: string
-  title: string
-  subtitle: string | null
-  banner_text: string
-  promo_code: string | null
-  ends_at: string
-  show_countdown: boolean
-  banner_color: string
-  translations: Record<string, { banner_text?: string }> | null
-}
+const LS_KEY = 'cuequote_mkt_banner_dismissed'
+const ROTATE_INTERVAL = 8000 // 8 seconds per message
 
 interface PopupCampaign {
   seats_taken: number
@@ -32,161 +23,220 @@ interface PopupCampaign {
   phase: string
 }
 
-const LS_KEY = 'cuequote_mkt_campaign_dismissed'
-
-function getCountdownParts(endDate: Date): { d: number; h: number; m: number; s: number } | null {
-  const diff = endDate.getTime() - Date.now()
-  if (diff <= 0) return null
-  return {
-    d: Math.floor(diff / 86400000),
-    h: Math.floor((diff % 86400000) / 3600000),
-    m: Math.floor((diff % 3600000) / 60000),
-    s: Math.floor((diff % 60000) / 1000),
-  }
+interface LiveStats {
+  proposals_this_week: number
+  proposals_total: number
+  companies_total: number
+  countries: number
 }
 
-function CountdownBox({ value, label }: { value: number; label: string }) {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
-      <div style={{
-        background: 'rgba(0,0,0,0.25)',
-        borderRadius: 6,
-        padding: '4px 8px',
-        minWidth: 36,
-        textAlign: 'center',
-        fontWeight: 800,
-        fontSize: 16,
-        fontVariantNumeric: 'tabular-nums',
-        letterSpacing: -0.5,
-      }}>
-        {String(value).padStart(2, '0')}
-      </div>
-      <span style={{ fontSize: 9, opacity: 0.6, textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600 }}>{label}</span>
-    </div>
-  )
-}
-
-// Scarcity messages — different angle than popup
-const SCARCITY_MESSAGES: Record<string, Record<string, string>> = {
-  en: {
-    launch: '{taken} of {total} founding seats claimed — {code} saves {pct}%',
-    early_bird: 'Only {remaining} founding seats left — use {code} for {pct}% off',
-    urgency: '🔥 {remaining} seats remaining at founding price — {code}',
-    exclusive: '⚡ Almost full — {remaining} founding seats left',
-    last_call: '🚨 Final {remaining} seats — {code} expires soon',
-  },
-  pl: {
-    launch: '{taken} z {total} miejsc założycielskich zajętych — {code} daje {pct}% zniżki',
-    early_bird: 'Tylko {remaining} miejsc założycielskich — użyj {code} na {pct}% zniżki',
-    urgency: '🔥 Zostało {remaining} miejsc w cenie założycielskiej — {code}',
-    exclusive: '⚡ Prawie pełne — zostało {remaining} miejsc',
-    last_call: '🚨 Ostatnie {remaining} miejsca — {code} wygasa wkrótce',
-  },
-  ar: {
-    launch: '{taken} من {total} مقعد تأسيسي تم حجزه — {code} يوفر {pct}%',
-    early_bird: 'فقط {remaining} مقعد تأسيسي متبقي — استخدم {code} لخصم {pct}%',
-    urgency: '🔥 {remaining} مقعد متبقي بالسعر التأسيسي — {code}',
-    exclusive: '⚡ وشك الامتلاء — {remaining} مقعد تأسيسي متبقي',
-    last_call: '🚨 آخر {remaining} مقاعد — {code} ينتهي قريباً',
-  },
-  de: {
-    launch: '{taken} von {total} Gründerplätzen belegt — {code} spart {pct}%',
-    early_bird: 'Nur noch {remaining} Gründerplätze — {code} für {pct}% Rabatt',
-    urgency: '🔥 {remaining} Plätze zum Gründerpreis — {code}',
-    exclusive: '⚡ Fast voll — {remaining} Gründerplätze übrig',
-    last_call: '🚨 Letzte {remaining} Plätze — {code} läuft bald ab',
-  },
-  fr: {
-    launch: '{taken} des {total} places fondateur prises — {code} économise {pct}%',
-    early_bird: 'Plus que {remaining} places fondateur — {code} pour {pct}% de réduction',
-    urgency: '🔥 {remaining} places au prix fondateur — {code}',
-    exclusive: '⚡ Presque complet — {remaining} places fondateur restantes',
-    last_call: '🚨 Dernières {remaining} places — {code} expire bientôt',
-  },
+interface BarMessage {
+  id: string
+  text: string
+  cta: string
+  ctaUrl: string
+  bg: string
+  showPulse?: boolean
 }
 
 export default function CampaignBanner() {
   const locale = useLocale()
-  const [campaign, setCampaign] = useState<ActiveCampaign | null>(null)
-  const [popupData, setPopupData] = useState<PopupCampaign | null>(null)
   const [dismissed, setDismissed] = useState(false)
-  const [parts, setParts] = useState<{ d: number; h: number; m: number; s: number } | null>(null)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [fade, setFade] = useState(true)
+  const [messages, setMessages] = useState<BarMessage[]>([])
+  const [popupData, setPopupData] = useState<PopupCampaign | null>(null)
 
   useEffect(() => {
-    const dismissedId = typeof window !== 'undefined' ? localStorage.getItem(LS_KEY) : null
+    const dismissedTs = localStorage.getItem(LS_KEY)
+    // Re-show after 24 hours
+    if (dismissedTs && Date.now() - parseInt(dismissedTs) < 86400000) {
+      setDismissed(true)
+      return
+    }
 
-    // Fetch both the legacy campaign banner AND popup campaign data
+    // Fetch popup campaign data + live stats
     Promise.all([
-      supabase.rpc('get_active_campaign').then(({ data }) => data?.[0] ?? null),
       supabase.rpc('get_active_popup_campaign').then(({ data }) => {
         const d = Array.isArray(data) ? data[0] : data
         return d ?? null
       }),
-    ]).then(([camp, popup]) => {
-      if (camp && camp.id !== dismissedId) {
-        setCampaign(camp)
+      supabase.rpc('get_public_stats').then(({ data }) => data as LiveStats | null),
+    ]).then(([popup, stats]) => {
+      setPopupData(popup)
+      const signupUrl = popup?.signup_url || 'https://app.cuequote.com/signup'
+      const promoCode = popup?.promo_code || 'LAUNCH20'
+      const discountPct = popup?.discount_pct || 20
+
+      const proposalsWeek = stats?.proposals_this_week || 0
+      const companiesTotal = stats?.companies_total || 0
+      const countriesCount = stats?.countries || 0
+
+      const bars: BarMessage[] = []
+
+      // 1. Live Activity Counter
+      if (proposalsWeek > 0) {
+        const texts: Record<string, string> = {
+          en: `${proposalsWeek} proposals created this week by AV companies worldwide`,
+          pl: `${proposalsWeek} ofert stworzonych w tym tygodniu przez firmy AV na calym swiecie`,
+          ar: `${proposalsWeek} عرض تم إنشاؤه هذا الأسبوع من شركات AV حول العالم`,
+          de: `${proposalsWeek} Angebote diese Woche von AV-Unternehmen weltweit erstellt`,
+          fr: `${proposalsWeek} devis créés cette semaine par des sociétés AV dans le monde`,
+        }
+        const ctas: Record<string, string> = {
+          en: 'Create yours free →', pl: 'Stwórz swój za darmo →', ar: 'أنشئ عرضك مجانا ←',
+          de: 'Erstellen Sie Ihres kostenlos →', fr: 'Créez le vôtre gratuitement →',
+        }
+        bars.push({
+          id: 'activity',
+          text: texts[locale] || texts.en,
+          cta: ctas[locale] || ctas.en,
+          ctaUrl: signupUrl + '?utm_source=website&utm_medium=topbar&utm_campaign=activity',
+          bg: '#08172E',
+          showPulse: true,
+        })
       }
-      if (popup && popup.seats_remaining > 0) {
-        setPopupData(popup)
+
+      // 2. Social Proof
+      if (companiesTotal > 0) {
+        const texts: Record<string, string> = {
+          en: `Trusted by ${companiesTotal}+ AV companies and event planners across ${countriesCount} countries`,
+          pl: `Zaufanie ${companiesTotal}+ firm AV i organizatorów eventów w ${countriesCount} krajach`,
+          ar: `موثوق من ${companiesTotal}+ شركة AV ومنظمي فعاليات في ${countriesCount} دولة`,
+          de: `Vertraut von ${companiesTotal}+ AV-Unternehmen und Eventplanern in ${countriesCount} Ländern`,
+          fr: `Adopté par ${companiesTotal}+ sociétés AV et organisateurs dans ${countriesCount} pays`,
+        }
+        const ctas: Record<string, string> = {
+          en: 'Join them — Free →', pl: 'Dołącz do nich →', ar: 'انضم إليهم ←',
+          de: 'Jetzt beitreten →', fr: 'Rejoignez-les →',
+        }
+        bars.push({
+          id: 'social',
+          text: texts[locale] || texts.en,
+          cta: ctas[locale] || ctas.en,
+          ctaUrl: signupUrl + '?utm_source=website&utm_medium=topbar&utm_campaign=social_proof',
+          bg: '#059669',
+        })
       }
+
+      // 3. Promo Discount
+      if (promoCode) {
+        const texts: Record<string, string> = {
+          en: `Launch Special — ${discountPct}% off all plans for 3 months · Code:`,
+          pl: `Oferta startowa — ${discountPct}% zniżki na 3 miesiące · Kod:`,
+          ar: `عرض الإطلاق — خصم ${discountPct}% لمدة 3 أشهر · الرمز:`,
+          de: `Start-Angebot — ${discountPct}% Rabatt für 3 Monate · Code:`,
+          fr: `Offre de lancement — ${discountPct}% de réduction pendant 3 mois · Code :`,
+        }
+        const ctas: Record<string, string> = {
+          en: 'Claim offer →', pl: 'Odbierz →', ar: 'احصل على العرض ←',
+          de: 'Angebot sichern →', fr: 'Réclamez →',
+        }
+        bars.push({
+          id: 'promo',
+          text: texts[locale] || texts.en,
+          cta: ctas[locale] || ctas.en,
+          ctaUrl: signupUrl + `?code=${promoCode}&utm_source=website&utm_medium=topbar&utm_campaign=promo`,
+          bg: 'linear-gradient(135deg, #7C3AED, #4F46E5)',
+        })
+      }
+
+      // 4. ROI Hook
+      {
+        const texts: Record<string, string> = {
+          en: 'You spend ~4 hours per proposal manually. CueQuote does it in 2 minutes. That\'s 208 hours/year back.',
+          pl: 'Spędzasz ~4 godziny na każdą ofertę. CueQuote robi to w 2 minuty. To 208 godzin/rok zaoszczędzonych.',
+          ar: 'تقضي ~4 ساعات في كل عرض يدويا. CueQuote ينجزه في دقيقتين. هذا يوفر 208 ساعة/سنة.',
+          de: 'Sie verbringen ~4 Stunden pro Angebot. CueQuote schafft es in 2 Minuten. Das sind 208 Stunden/Jahr zurück.',
+          fr: 'Vous passez ~4h par devis manuellement. CueQuote le fait en 2 min. Soit 208h/an récupérées.',
+        }
+        const ctas: Record<string, string> = {
+          en: 'Get those hours back →', pl: 'Odzyskaj te godziny →', ar: 'استرجع هذه الساعات ←',
+          de: 'Holen Sie sich die Zeit zurück →', fr: 'Récupérez ces heures →',
+        }
+        bars.push({
+          id: 'roi',
+          text: texts[locale] || texts.en,
+          cta: ctas[locale] || ctas.en,
+          ctaUrl: signupUrl + '?utm_source=website&utm_medium=topbar&utm_campaign=roi',
+          bg: '#08172E',
+        })
+      }
+
+      // 5. Interactive Calculator
+      {
+        const texts: Record<string, string> = {
+          en: 'Sending 5 proposals/month × 4 hrs each = 20 hours wasted on formatting. Automate it.',
+          pl: '5 ofert/miesiąc × 4 godz. = 20 godzin zmarnowanych na formatowanie. Zautomatyzuj to.',
+          ar: '5 عروض/شهر × 4 ساعات = 20 ساعة مهدرة على التنسيق. أتمته.',
+          de: '5 Angebote/Monat × 4 Std. = 20 Stunden verschwendet. Automatisieren Sie es.',
+          fr: '5 devis/mois × 4h = 20h perdues en mise en forme. Automatisez.',
+        }
+        const ctas: Record<string, string> = {
+          en: 'Try free — 2 min setup →', pl: 'Wypróbuj za darmo →', ar: 'جرب مجانا ←',
+          de: 'Kostenlos testen →', fr: 'Essayez gratuitement →',
+        }
+        bars.push({
+          id: 'calculator',
+          text: texts[locale] || texts.en,
+          cta: ctas[locale] || ctas.en,
+          ctaUrl: signupUrl + '?utm_source=website&utm_medium=topbar&utm_campaign=calculator',
+          bg: 'linear-gradient(135deg, #0f2d50, #08172E)',
+        })
+      }
+
+      // 6. Competitor Switch
+      {
+        const texts: Record<string, string> = {
+          en: 'Still building AV proposals in spreadsheets? Companies using CueQuote close deals 3× faster.',
+          pl: 'Nadal tworzysz oferty AV w arkuszach? Firmy z CueQuote zamykają deale 3× szybciej.',
+          ar: 'لا تزال تنشئ عروض AV في جداول البيانات؟ الشركات التي تستخدم CueQuote تغلق الصفقات أسرع 3 مرات.',
+          de: 'Erstellen Sie AV-Angebote noch in Tabellen? Unternehmen mit CueQuote schliessen Deals 3× schneller.',
+          fr: 'Vous faites encore vos devis AV sur tableur ? Les sociétés utilisant CueQuote concluent 3× plus vite.',
+        }
+        const ctas: Record<string, string> = {
+          en: 'Switch in 2 minutes →', pl: 'Przejdź w 2 minuty →', ar: 'انتقل في دقيقتين ←',
+          de: 'In 2 Minuten wechseln →', fr: 'Basculez en 2 min →',
+        }
+        bars.push({
+          id: 'switch',
+          text: texts[locale] || texts.en,
+          cta: ctas[locale] || ctas.en,
+          ctaUrl: signupUrl + '?utm_source=website&utm_medium=topbar&utm_campaign=switch',
+          bg: '#991B1B',
+        })
+      }
+
+      setMessages(bars)
     })
+  }, [locale])
+
+  // Rotate messages
+  useEffect(() => {
+    if (messages.length <= 1) return
+    const interval = setInterval(() => {
+      setFade(false)
+      setTimeout(() => {
+        setActiveIndex(prev => (prev + 1) % messages.length)
+        setFade(true)
+      }, 300)
+    }, ROTATE_INTERVAL)
+    return () => clearInterval(interval)
+  }, [messages.length])
+
+  const handleDismiss = useCallback(() => {
+    setDismissed(true)
+    localStorage.setItem(LS_KEY, String(Date.now()))
   }, [])
 
-  useEffect(() => {
-    if (!campaign?.show_countdown) return
-    const endDate = new Date(campaign.ends_at)
-    const update = () => setParts(getCountdownParts(endDate))
-    update()
-    const interval = setInterval(update, 1000)
-    return () => clearInterval(interval)
-  }, [campaign])
+  if (dismissed || messages.length === 0) return null
 
-  if (dismissed) return null
-  // Need at least one data source
-  if (!campaign && !popupData) return null
-
-  const handleDismiss = () => {
-    setDismissed(true)
-    if (campaign) localStorage.setItem(LS_KEY, campaign.id)
-  }
-
-  // Build banner text — prefer dynamic scarcity from popup campaign
-  let bannerText = ''
-  let promoCode = campaign?.promo_code ?? popupData?.promo_code ?? null
-  let bannerColor = campaign?.banner_color ?? '#0F172A'
-  let ctaUrl = ''
-
-  if (popupData && popupData.seats_remaining > 0) {
-    const lang = SCARCITY_MESSAGES[locale] ?? SCARCITY_MESSAGES.en
-    const template = lang[popupData.phase] ?? lang.launch
-    bannerText = template
-      .replace('{taken}', String(popupData.seats_taken))
-      .replace('{total}', String(popupData.target_seats))
-      .replace('{remaining}', String(popupData.seats_remaining))
-      .replace('{code}', popupData.promo_code ?? '')
-      .replace('{pct}', String(popupData.discount_pct ?? 20))
-
-    promoCode = popupData.promo_code
-    ctaUrl = `${popupData.signup_url}?code=${promoCode}&utm_source=website&utm_medium=topbar&utm_campaign=${popupData.phase}`
-
-    // Phase-based colors
-    const phaseColors: Record<string, string> = {
-      launch: '#0F172A',
-      early_bird: '#059669',
-      urgency: '#DC2626',
-      exclusive: '#7C3AED',
-      last_call: '#991B1B',
-    }
-    bannerColor = phaseColors[popupData.phase] ?? '#0F172A'
-  } else if (campaign) {
-    bannerText = (locale !== 'en' && campaign.translations?.[locale]?.banner_text) || campaign.banner_text
-    promoCode = campaign.promo_code
-  }
+  const msg = messages[activeIndex]
 
   return (
     <div
       style={{
-        background: `linear-gradient(135deg, ${bannerColor} 0%, ${bannerColor}dd 50%, ${bannerColor}bb 100%)`,
+        background: msg.bg.includes('gradient') ? msg.bg : `linear-gradient(135deg, ${msg.bg} 0%, ${msg.bg}dd 50%, ${msg.bg}bb 100%)`,
         borderBottom: '1px solid rgba(255,255,255,0.1)',
       }}
       className="relative text-white z-50"
@@ -198,76 +248,75 @@ export default function CampaignBanner() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 16,
+        gap: 12,
         flexWrap: 'wrap',
+        transition: 'opacity 0.3s ease',
+        opacity: fade ? 1 : 0,
       }}>
-        {/* Banner text — clickable if we have a CTA url */}
-        {ctaUrl ? (
-          <a
-            href={ctaUrl}
-            style={{ fontSize: 14, fontWeight: 600, color: '#fff', textDecoration: 'none' }}
-          >
-            {bannerText}
-          </a>
-        ) : (
-          <span style={{ fontSize: 14, fontWeight: 600 }}>{bannerText}</span>
+        {/* Pulse dot for activity bar */}
+        {msg.showPulse && (
+          <span style={{
+            width: 8, height: 8, borderRadius: '50%', background: '#34D399',
+            animation: 'pulse 2s infinite', flexShrink: 0,
+          }} />
         )}
 
-        {/* Promo code badge */}
-        {promoCode && !bannerText.includes(promoCode) && (
-          <code style={{
-            background: 'rgba(255,255,255,0.2)',
-            backdropFilter: 'blur(4px)',
-            border: '1px solid rgba(255,255,255,0.25)',
-            padding: '5px 14px',
-            borderRadius: 8,
-            fontSize: 13,
-            fontWeight: 800,
-            letterSpacing: 1.5,
-          }}>
-            {promoCode}
-          </code>
-        )}
+        {/* Message text */}
+        <a
+          href={msg.ctaUrl}
+          style={{ fontSize: 13, fontWeight: 600, color: '#fff', textDecoration: 'none' }}
+        >
+          {msg.text}
+          {/* Inline promo code for promo bar */}
+          {msg.id === 'promo' && popupData?.promo_code && (
+            <code style={{
+              background: 'rgba(255,255,255,0.2)',
+              padding: '2px 10px',
+              borderRadius: 6,
+              fontSize: 13,
+              fontWeight: 800,
+              letterSpacing: 1.5,
+              marginLeft: 6,
+            }}>
+              {popupData.promo_code}
+            </code>
+          )}
+        </a>
 
-        {/* Seats remaining pill — live counter */}
-        {popupData && popupData.seats_remaining > 0 && (
-          <a
-            href={ctaUrl}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 6,
-              background: 'rgba(255,255,255,0.15)',
-              border: '1px solid rgba(255,255,255,0.2)',
-              borderRadius: 20,
-              padding: '4px 14px',
-              fontSize: 12,
-              fontWeight: 700,
-              color: '#fff',
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            <span style={{
-              width: 6, height: 6, borderRadius: '50%',
-              background: '#34D399',
-              animation: 'pulse 2s infinite',
-              flexShrink: 0,
-            }} />
-            {{ en: 'Claim yours →', ar: 'احجز مقعدك ←', pl: 'Odbierz swoje →', de: 'Jetzt sichern →', fr: 'Réclamez le vôtre →' }[locale] || 'Claim yours →'}
-          </a>
-        )}
+        {/* CTA button */}
+        <a
+          href={msg.ctaUrl}
+          style={{
+            background: 'rgba(255,255,255,0.15)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            color: '#fff',
+            padding: '4px 14px',
+            borderRadius: 6,
+            fontSize: 12,
+            fontWeight: 700,
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+            transition: 'background 0.2s',
+          }}
+          onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.25)')}
+          onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.15)')}
+        >
+          {msg.cta}
+        </a>
 
-        {/* Countdown — only from legacy campaign */}
-        {campaign?.show_countdown && parts && !popupData && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 11, opacity: 0.7, fontWeight: 600, marginRight: 2 }}>
-              {{ en: 'Ends in', ar: 'ينتهي خلال', pl: 'Kończy się za', de: 'Endet in', fr: 'Se termine dans' }[locale] || 'Ends in'}
-            </span>
-            {parts.d > 0 && <CountdownBox value={parts.d} label={{ en: 'days', ar: 'أيام', pl: 'dni', de: 'Tage', fr: 'j' }[locale] || 'days'} />}
-            <CountdownBox value={parts.h} label={{ en: 'hrs', ar: 'س', pl: 'godz', de: 'Std', fr: 'h' }[locale] || 'hrs'} />
-            <CountdownBox value={parts.m} label={{ en: 'min', ar: 'د', pl: 'min', de: 'Min', fr: 'min' }[locale] || 'min'} />
-            <CountdownBox value={parts.s} label={{ en: 'sec', ar: 'ث', pl: 'sek', de: 'Sek', fr: 'sec' }[locale] || 'sec'} />
+        {/* Dot indicators */}
+        {messages.length > 1 && (
+          <div style={{ display: 'flex', gap: 4, marginLeft: 4 }}>
+            {messages.map((_, i) => (
+              <span
+                key={i}
+                style={{
+                  width: 5, height: 5, borderRadius: '50%',
+                  background: i === activeIndex ? '#fff' : 'rgba(255,255,255,0.3)',
+                  transition: 'background 0.3s',
+                }}
+              />
+            ))}
           </div>
         )}
       </div>
@@ -280,19 +329,21 @@ export default function CampaignBanner() {
           right: 12,
           top: '50%',
           transform: 'translateY(-50%)',
-          color: 'rgba(255,255,255,0.4)',
           background: 'none',
           border: 'none',
+          color: 'rgba(255,255,255,0.5)',
           cursor: 'pointer',
           padding: 4,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
-        onMouseOver={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.8)')}
-        onMouseOut={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
+        aria-label="Dismiss"
       >
         <X size={16} />
       </button>
 
-      <style>{`@keyframes pulse { 0%,100% { opacity:1 } 50% { opacity:0.4 } }`}</style>
+      <style>{`@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }`}</style>
     </div>
   )
 }
