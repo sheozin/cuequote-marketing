@@ -45,77 +45,26 @@ export default async function Footer() {
     <footer style={{ background: "#08172E", color: "#94a3b8" }}>
       {/* Main footer */}
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "56px 24px 0" }}>
-        {/* Desktop: full grid | Mobile: brand + inline sections */}
-        <div className="footer-desktop" style={{
-          display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr 1fr",
-          gap: 40, marginBottom: 40,
-        }}>
-          {/* Brand */}
-          <div>
+        {/* One set of markup for both breakpoints. Desktop and mobile used to be two
+            separate blocks toggled with display:none, which put every heading and every
+            link into the DOM twice on every page. */}
+        <div className="footer-grid">
+          <div className="footer-brand">
             <div style={{ marginBottom: 12 }}>
               <span style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: "#fff" }}>Cue</span>
               <span style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: "#10b981" }}>Quote</span>
             </div>
-            <p style={{ fontSize: 13, lineHeight: 1.6, marginBottom: 20, maxWidth: 240 }}>
-              {t("tagline")}
-            </p>
+            <p className="footer-tagline">{t("tagline")}</p>
           </div>
 
-          {/* Link sections */}
           {sections.map((section) => (
             <div key={section.title}>
-              <h2 style={{
-                color: "#fff", fontSize: 12, fontWeight: 700, marginBottom: 14,
-                textTransform: "uppercase", letterSpacing: 1.2,
-              }}>
-                {section.title}
-              </h2>
+              <h2 className="footer-heading">{section.title}</h2>
               {section.links.map(({ label, href }) => (
-                <Link key={href} href={href} style={{
-                  display: "block", textDecoration: "none", color: "#94a3b8",
-                  fontSize: 13, marginBottom: 10, transition: "color 0.15s",
-                }}>
-                  {label}
-                </Link>
+                <Link key={href} href={href} className="footer-link">{label}</Link>
               ))}
             </div>
           ))}
-        </div>
-
-        {/* Mobile: collapsed accordion-style */}
-        <div className="footer-mobile" style={{ display: "none", marginBottom: 32 }}>
-          {/* Brand centered */}
-          <div style={{ textAlign: "center", marginBottom: 28, paddingBottom: 24, borderBottom: "1px solid #1e293b" }}>
-            <div style={{ marginBottom: 8 }}>
-              <span style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: "#fff" }}>Cue</span>
-              <span style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: "#10b981" }}>Quote</span>
-            </div>
-            <p style={{ fontSize: 13, lineHeight: 1.5, maxWidth: 280, margin: "0 auto" }}>
-              {t("tagline")}
-            </p>
-          </div>
-
-          {/* All links in a compact 2x2 grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px 32px" }}>
-            {sections.map((section) => (
-              <div key={section.title}>
-                <h2 style={{
-                  color: "#fff", fontSize: 11, fontWeight: 700, marginBottom: 10,
-                  textTransform: "uppercase", letterSpacing: 1.2,
-                }}>
-                  {section.title}
-                </h2>
-                {section.links.map(({ label, href }) => (
-                  <Link key={href} href={href} style={{
-                    display: "block", textDecoration: "none", color: "#94a3b8",
-                    fontSize: 13, marginBottom: 8, lineHeight: 1.4,
-                  }}>
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
@@ -136,9 +85,42 @@ export default async function Footer() {
       </div>
 
       <style>{`
+        .footer-grid {
+          display: grid;
+          grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+          gap: 40px;
+          margin-bottom: 40px;
+        }
+        .footer-tagline {
+          font-size: 13px; line-height: 1.6; margin-bottom: 20px; max-width: 240px;
+        }
+        .footer-heading {
+          color: #fff; font-size: 12px; font-weight: 700; margin: 0 0 14px;
+          text-transform: uppercase; letter-spacing: 1.2px;
+        }
+        .footer-link {
+          display: block; text-decoration: none; color: #94a3b8;
+          font-size: 13px; margin-bottom: 10px; transition: color 0.15s;
+        }
         @media (max-width: 768px) {
-          .footer-desktop { display: none !important; }
-          .footer-mobile { display: block !important; }
+          .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 32px;
+            margin-bottom: 32px;
+          }
+          /* Brand spans both columns and centres, as it did in the old mobile block */
+          .footer-brand {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-bottom: 24px;
+            margin-bottom: 4px;
+            border-bottom: 1px solid #1e293b;
+          }
+          .footer-tagline {
+            line-height: 1.5; max-width: 280px; margin: 0 auto;
+          }
+          .footer-heading { font-size: 11px; margin-bottom: 10px; }
+          .footer-link { margin-bottom: 8px; line-height: 1.4; }
         }
       `}</style>
     </footer>
