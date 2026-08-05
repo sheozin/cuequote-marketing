@@ -1,5 +1,9 @@
 import type { MetadataRoute } from 'next'
-import { POSTS } from '../lib/blog-posts'
+import { publishedPosts } from '../lib/blog-posts'
+
+// The sitemap is otherwise baked at build time, so a post scheduled for a future date
+// would not appear in it until the next deploy. Rebuild it hourly instead.
+export const revalidate = 3600
 import { getAllSlugs } from '../lib/tutorials'
 import { locales, defaultLocale } from '../i18n/config'
 
@@ -75,7 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Blog posts
-  for (const p of POSTS) {
+  for (const p of publishedPosts()) {
     for (const locale of sitemapLocales) {
       entries.push({
         url: localizedUrl(base, `/blog/${p.slug}`, locale),

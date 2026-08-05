@@ -4,7 +4,7 @@ import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { BlogGrid } from "../../../components/BlogGrid";
 import { ArrowRight } from "lucide-react";
-import { POSTS } from "../../../lib/blog-posts";
+import { publishedPosts } from "../../../lib/blog-posts";
 import { getTranslations, getLocale } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -68,9 +68,10 @@ export default async function BlogPage() {
   const ts = await getTranslations("subscribe");
   const locale = await getLocale();
 
-  const featured = POSTS[0];
-  const latestPosts = POSTS.slice(1, 4);
-  const gridPosts = POSTS.slice(4);
+  const posts = publishedPosts();
+  const featured = posts[0];
+  const latestPosts = posts.slice(1, 4);
+  const gridPosts = posts.slice(4);
   const featuredCat = CATEGORY_COLORS[featured.category] || CATEGORY_COLORS.Guides;
 
   // Build category list with counts

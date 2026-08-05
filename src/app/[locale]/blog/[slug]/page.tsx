@@ -5,7 +5,7 @@ import Nav from "../../../../components/Nav";
 import Footer from "../../../../components/Footer";
 import { ArrowLeft, ArrowRight, Clock, Calendar, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { POSTS } from "../../../../lib/blog-posts";
+import { publishedPosts } from "../../../../lib/blog-posts";
 import ShareButtons from "../../../../components/ShareButtons";
 
 /* ─── Category gradients for hero ─────────────────────────────────────────── */
@@ -22,7 +22,7 @@ const CATEGORY_STYLE: Record<string, { gradient: string; accent: string; badge: 
 export function generateStaticParams() {
   const locales = ['en', 'pl', 'ar', 'de', 'fr'];
   return locales.flatMap((locale) =>
-    POSTS.map((post) => ({ locale, slug: post.slug }))
+    publishedPosts().map((post) => ({ locale, slug: post.slug }))
   );
 }
 
@@ -34,7 +34,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = POSTS.find((p) => p.slug === slug);
+  const post = publishedPosts().find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
   const tp = await getTranslations("posts");
   const title = tp(`${slug}.title`);
@@ -83,7 +83,7 @@ export default async function BlogPostPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { slug } = await params;
-  const post = POSTS.find((p) => p.slug === slug);
+  const post = publishedPosts().find((p) => p.slug === slug);
   if (!post) notFound();
 
   const style = CATEGORY_STYLE[post.category] || CATEGORY_STYLE.Guides;
@@ -127,12 +127,12 @@ export default async function BlogPostPage({
   }
 
   // Related posts: same category, excluding current, max 3
-  const relatedPosts = POSTS
+  const relatedPosts = publishedPosts()
     .filter(p => p.category === post.category && p.slug !== slug)
     .slice(0, 3);
 
   // Popular posts: latest 3 from different slugs
-  const popularPosts = POSTS
+  const popularPosts = publishedPosts()
     .filter(p => p.slug !== slug)
     .slice(0, 3);
 

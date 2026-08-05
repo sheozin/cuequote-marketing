@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import SubscribeForm from "../../components/SubscribeForm";
-import { POSTS as ALL_BLOG_POSTS } from "../../lib/blog-posts";
+import { publishedPosts } from "../../lib/blog-posts";
 import { getTranslations, getLocale } from "next-intl/server";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
@@ -676,7 +676,7 @@ export default async function HomePage() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
-            {ALL_BLOG_POSTS.slice(0, 3).map(({ slug, date }) => (
+            {publishedPosts().slice(0, 3).map(({ slug, date }) => (
               <Link key={slug} href={`/blog/${slug}`} style={{ textDecoration: "none", cursor: "pointer" }}>
                 <article style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 28, height: "100%" }}>
                   <div style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginBottom: 12 }}>

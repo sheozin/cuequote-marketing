@@ -4,24 +4,37 @@ export interface BlogPostSummary {
   date: string;
 }
 
+/**
+ * Posts whose date has arrived. A date in the future genuinely holds the post back
+ * rather than merely labelling it — before this existed, everything in the array went
+ * live the moment it deployed, so a future date only printed a date nobody had reached.
+ *
+ * The blog routes render per request, so a scheduled post appears on its date without a
+ * deploy. The sitemap revalidates hourly for the same reason.
+ */
+export function publishedPosts(now: Date = new Date()): BlogPostSummary[] {
+  // Compare date-only, so a post dated today is live from midnight UTC rather than 00:00 local.
+  const today = now.toISOString().slice(0, 10);
+  return POSTS.filter((p) => p.date <= today);
+}
+
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
-  // Regional AV cost cluster — published together rather than on the usual 2-3 day
-  // cadence, since the three cross-link to each other and to the calculator.
   {
     slug: "av-cost-london-corporate-events",
     category: "Guides",
     date: "2026-08-05",
   },
-  {
-    slug: "av-cost-dubai-uae-events",
-    category: "Guides",
-    date: "2026-08-05",
-  },
+  // Scheduled — these go live on their own dates, three days apart from London.
   {
     slug: "av-cost-warsaw-poland-events",
     category: "Guides",
-    date: "2026-08-05",
+    date: "2026-08-11",
+  },
+  {
+    slug: "av-cost-dubai-uae-events",
+    category: "Guides",
+    date: "2026-08-08",
   },
   {
     slug: "event-risk-assessment-proposal-guide",
