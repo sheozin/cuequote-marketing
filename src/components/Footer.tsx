@@ -71,7 +71,7 @@ export default async function Footer() {
               </h2>
               {section.links.map(({ label, href }) => (
                 <Link key={href} href={href} style={{
-                  display: "block", textDecoration: "none", color: "#64748b",
+                  display: "block", textDecoration: "none", color: "#94a3b8",
                   fontSize: 13, marginBottom: 10, transition: "color 0.15s",
                 }}>
                   {label}
@@ -106,7 +106,7 @@ export default async function Footer() {
                 </h2>
                 {section.links.map(({ label, href }) => (
                   <Link key={href} href={href} style={{
-                    display: "block", textDecoration: "none", color: "#64748b",
+                    display: "block", textDecoration: "none", color: "#94a3b8",
                     fontSize: 13, marginBottom: 8, lineHeight: 1.4,
                   }}>
                     {label}
@@ -125,10 +125,10 @@ export default async function Footer() {
           display: "flex", justifyContent: "space-between", alignItems: "center",
           flexWrap: "wrap", gap: 12,
         }}>
-          <p style={{ fontSize: 12, color: "#475569" }}>
+          <p style={{ fontSize: 12, color: "#94a3b8" }}>
             &copy; {new Date().getFullYear()} CueQuote. {t("copyright")}
           </p>
-          <p style={{ fontSize: 12, color: "#475569" }}>
+          <p style={{ fontSize: 12, color: "#94a3b8" }}>
             {t("by")} <span style={{ color: "#10b981" }}>AVE Event Solutions</span>
           </p>
         </div>

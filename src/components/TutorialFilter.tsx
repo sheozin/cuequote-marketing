@@ -52,7 +52,7 @@ export function TutorialFilter({ categories, allLabel, filterLabel, totalCount }
         alignItems: 'center',
         gap: 8,
       }}>
-        <span style={{ fontSize: 12, color: '#9ca3af', fontWeight: 500, paddingLeft: 8, marginRight: 4 }}>
+        <span style={{ fontSize: 12, color: '#6b7280', fontWeight: 500, paddingLeft: 8, marginRight: 4 }}>
           {filterLabel}
         </span>
         <button onClick={() => handleCategory('all')} className={chipClass(activeCategory === 'all')}>

@@ -112,7 +112,7 @@ export default function LanguageSwitcher({ currentLocale, dropDirection = 'down'
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: 1,
-              color: '#9ca3af',
+              color: '#6b7280',
             }}
           >
             {langLabel}

@@ -268,7 +268,7 @@ export default async function ChangelogPage({ params }: { params: Promise<{ loca
                           <span
                             style={{
                               fontSize: 13,
-                              color: "#9ca3af",
+                              color: "#6b7280",
                               marginLeft: "auto",
                             }}
                           >

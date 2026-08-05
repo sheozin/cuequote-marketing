@@ -54,12 +54,12 @@ function ProposalMockup() {
               <div style={{ width: 8, height: 8, borderRadius: "50%", background: item.color }} />
               <div>
                 <div style={{ fontWeight: 500, color: "#111827" }}>{item.name}</div>
-                <div style={{ fontSize: 11, color: "#9ca3af" }}>{item.cat}</div>
+                <div style={{ fontSize: 11, color: "#6b7280" }}>{item.cat}</div>
               </div>
             </div>
             <div style={{ textAlign: "end" }}>
               <div style={{ fontWeight: 600, color: "#111827" }}>€{(item.qty * item.price).toLocaleString()}</div>
-              <div style={{ fontSize: 11, color: "#9ca3af" }}>{item.qty} × €{item.price}</div>
+              <div style={{ fontSize: 11, color: "#6b7280" }}>{item.qty} × €{item.price}</div>
             </div>
           </div>
         ))}
@@ -189,7 +189,7 @@ export default async function HomePage() {
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 32, flexWrap: "wrap" }}>
             {["AV Production Co.", "EventTech GmbH", "Sound & Vision", "ProStage Europe", "LiveTech ME"].map((name) => (
-              <span key={name} style={{ fontSize: 14, fontWeight: 600, color: "#9ca3af", whiteSpace: "nowrap" }}>
+              <span key={name} style={{ fontSize: 14, fontWeight: 600, color: "#6b7280", whiteSpace: "nowrap" }}>
                 {name}
               </span>
             ))}
@@ -568,7 +568,7 @@ export default async function HomePage() {
                 </div>
                 <div style={{ marginBottom: 24 }}>
                   <span style={{ fontSize: 44, fontWeight: 800, color: "#08172E", letterSpacing: -1 }}>{price}</span>
-                  <span style={{ fontSize: 15, color: "#9ca3af", fontWeight: 500 }}>{period}</span>
+                  <span style={{ fontSize: 15, color: "#6b7280", fontWeight: 500 }}>{period}</span>
                 </div>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
                   {features.map((f) => (
@@ -625,7 +625,7 @@ export default async function HomePage() {
                 </div>
                 <div style={{ marginBottom: 24 }}>
                   <span style={{ fontSize: 44, fontWeight: 800, color: "#08172E", letterSpacing: -1 }}>{price}</span>
-                  <span style={{ fontSize: 15, color: "#9ca3af", fontWeight: 500 }}>{period}</span>
+                  <span style={{ fontSize: 15, color: "#6b7280", fontWeight: 500 }}>{period}</span>
                 </div>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
                   {features.map((f) => (
@@ -726,7 +726,7 @@ export default async function HomePage() {
                 cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center",
               }}>
                 {q}
-                <ChevronDown size={18} style={{ color: "#9ca3af", flexShrink: 0 }} />
+                <ChevronDown size={18} style={{ color: "#6b7280", flexShrink: 0 }} />
               </summary>
               <p style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.7, marginTop: 12 }}>{a}</p>
             </details>
@@ -782,7 +782,7 @@ export default async function HomePage() {
           }}>
             <Sparkles size={20} /> {tHomeCta("cta")}
           </Link>
-          <p style={{ fontSize: 13, color: "#64748b", marginTop: 16 }}>{tHomeCta("noCreditCard")}</p>
+          <p style={{ fontSize: 13, color: "#94a3b8", marginTop: 16 }}>{tHomeCta("noCreditCard")}</p>
         </div>
       </section>
 

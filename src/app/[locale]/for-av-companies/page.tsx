@@ -480,7 +480,7 @@ export default async function ForAvCompaniesPage() {
                   display: "flex", alignItems: "center", justifyContent: "space-between",
                 }}>
                   {t(qKey)}
-                  <ChevronDown size={18} style={{ color: "#9ca3af", flexShrink: 0 }} />
+                  <ChevronDown size={18} style={{ color: "#6b7280", flexShrink: 0 }} />
                 </summary>
                 <div style={{ padding: "0 24px 20px", fontSize: 15, color: "#6b7280", lineHeight: 1.7 }}>
                   {t(aKey)}

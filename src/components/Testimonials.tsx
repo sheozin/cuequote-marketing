@@ -65,12 +65,12 @@ function Card({ t }: { t: Testimonial }) {
             {displayName || displayRole}
           </p>
           {displayName && (
-            <p style={{ fontSize: 11, color: '#9ca3af', margin: 0 }}>
+            <p style={{ fontSize: 11, color: '#6b7280', margin: 0 }}>
               {[displayRole, t.show_company ? t.company_name : null].filter(Boolean).join(' · ')}
             </p>
           )}
           {!displayName && t.show_company && t.company_name && (
-            <p style={{ fontSize: 11, color: '#9ca3af', margin: 0 }}>{t.company_name}</p>
+            <p style={{ fontSize: 11, color: '#6b7280', margin: 0 }}>{t.company_name}</p>
           )}
         </div>
       </div>

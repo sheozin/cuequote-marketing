@@ -88,7 +88,7 @@ export default function CookieConsent() {
                   borderRadius: 8,
                   fontSize: 14,
                   fontWeight: 600,
-                  color: '#6b7280',
+                  color: '#4b5563',
                   background: '#f3f4f6',
                   border: '1px solid #e5e7eb',
                   cursor: 'pointer',

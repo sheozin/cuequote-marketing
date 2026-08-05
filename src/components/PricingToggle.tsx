@@ -23,7 +23,7 @@ export function PricingToggle({ avLabel, plannerLabel }: { avLabel: string; plan
           padding: '10px 24px', borderRadius: 10, fontSize: 13, fontWeight: 600,
           border: 'none', cursor: 'pointer', transition: 'all 0.2s',
           background: mode === 'av' ? '#08172E' : 'transparent',
-          color: mode === 'av' ? '#fff' : '#64748b',
+          color: mode === 'av' ? '#fff' : '#4b5563',
         }}
       >
         {avLabel}
@@ -34,7 +34,7 @@ export function PricingToggle({ avLabel, plannerLabel }: { avLabel: string; plan
           padding: '10px 24px', borderRadius: 10, fontSize: 13, fontWeight: 600,
           border: 'none', cursor: 'pointer', transition: 'all 0.2s',
           background: mode === 'planner' ? '#10b981' : 'transparent',
-          color: mode === 'planner' ? '#fff' : '#64748b',
+          color: mode === 'planner' ? '#fff' : '#4b5563',
         }}
       >
         {plannerLabel}

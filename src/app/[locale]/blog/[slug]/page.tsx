@@ -296,7 +296,7 @@ export default async function BlogPostPage({
                       }}
                     />
                     {imageMatch[2] && (
-                      <p style={{ fontSize: 13, color: "#9ca3af", textAlign: "center", marginTop: 10 }}>
+                      <p style={{ fontSize: 13, color: "#6b7280", textAlign: "center", marginTop: 10 }}>
                         {imageMatch[2]}
                       </p>
                     )}
@@ -381,7 +381,7 @@ export default async function BlogPostPage({
             }}>
               <h3 style={{
                 fontSize: 11, fontWeight: 700, textTransform: "uppercase",
-                letterSpacing: 1.5, color: "#9ca3af", marginBottom: 12,
+                letterSpacing: 1.5, color: "#6b7280", marginBottom: 12,
               }}>
                 {t("shareThisPost", { defaultValue: "Share This Post" })}
               </h3>
@@ -391,7 +391,7 @@ export default async function BlogPostPage({
             <div style={{ background: "#f9fafb", borderRadius: 12, padding: 24 }}>
               <h3 style={{
                 fontSize: 11, fontWeight: 700, textTransform: "uppercase",
-                letterSpacing: 1.5, color: "#9ca3af", marginBottom: 16,
+                letterSpacing: 1.5, color: "#6b7280", marginBottom: 16,
               }}>
                 {t("popularThisWeek", { defaultValue: "Popular This Week" })}
               </h3>

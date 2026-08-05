@@ -88,7 +88,7 @@ export default function Nav() {
                     </div>
                     <div>
                       <div style={{ fontSize: 13, fontWeight: 600, color: "#08172E" }}>{t("forAv")}</div>
-                      <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 1 }}>{t("forAvNavDesc", { defaultValue: "Create proposals from your catalog, send branded PDFs" })}</div>
+                      <div style={{ fontSize: 11, color: "#6b7280", marginTop: 1 }}>{t("forAvNavDesc", { defaultValue: "Create proposals from your catalog, send branded PDFs" })}</div>
                     </div>
                   </Link>
                   <Link href="/for-event-planners" onClick={() => setShowSolutions(false)} style={{
@@ -106,7 +106,7 @@ export default function Nav() {
                             {t("new", { defaultValue: "New" })}
                           </span>
                         </div>
-                        <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 1 }}>{t("forPlannersNavDesc", { defaultValue: "Plan your event's AV with budget estimates and vendor briefs" })}</div>
+                        <div style={{ fontSize: 11, color: "#6b7280", marginTop: 1 }}>{t("forPlannersNavDesc", { defaultValue: "Plan your event's AV with budget estimates and vendor briefs" })}</div>
                       </div>
                     </div>
                   </Link>

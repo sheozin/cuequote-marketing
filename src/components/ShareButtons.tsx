@@ -70,7 +70,7 @@ export default function ShareButtons({ url, title, description }: ShareButtonsPr
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-      <span style={{ fontSize: 12, fontWeight: 600, color: '#9ca3af', textTransform: 'uppercase', letterSpacing: 1, marginRight: 4 }}>{shareLabel}</span>
+      <span style={{ fontSize: 12, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase', letterSpacing: 1, marginRight: 4 }}>{shareLabel}</span>
       {platforms.map((p) => (
         <a
           key={p.name}

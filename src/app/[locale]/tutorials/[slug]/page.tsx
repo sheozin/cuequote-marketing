@@ -123,9 +123,9 @@ export default async function TutorialPage({
               }}>
                 {difficultyLabel}
               </span>
-              <span style={{ fontSize: 13, color: '#9ca3af' }}>{tutorial.duration}</span>
+              <span style={{ fontSize: 13, color: '#6b7280' }}>{tutorial.duration}</span>
               <span style={{ fontSize: 13, color: '#d1d5db' }}>&bull;</span>
-              <span style={{ fontSize: 13, color: '#9ca3af' }}>{tutorial.category}</span>
+              <span style={{ fontSize: 13, color: '#6b7280' }}>{tutorial.category}</span>
             </div>
 
             <h1 style={{
@@ -239,7 +239,7 @@ export default async function TutorialPage({
               borderRadius: 16, textDecoration: 'none', marginTop: 48,
             }}>
               <div>
-                <span style={{ fontSize: 12, color: '#9ca3af', textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600 }}>
+                <span style={{ fontSize: 12, color: '#6b7280', textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600 }}>
                   {t('nextTutorial')}
                 </span>
                 <h4 style={{

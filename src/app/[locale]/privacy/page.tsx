@@ -124,7 +124,7 @@ export default function PrivacyPage() {
           <p style={{ fontSize: 17, color: "#6b7280", marginBottom: 8, lineHeight: 1.7 }}>
             How we collect, use, and protect your data at CueQuote.
           </p>
-          <p style={{ fontSize: 14, color: "#9ca3af" }}>
+          <p style={{ fontSize: 14, color: "#6b7280" }}>
             Last updated: March 16, 2026
           </p>
         </div>

@@ -273,11 +273,11 @@ export default async function PricingPage() {
                         }}>{icon}</div>
                         <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 22, color: isFeat ? "#fff" : "#08172E", letterSpacing: -0.5 }}>{name}</h3>
                       </div>
-                      <p style={{ fontSize: 13, color: isFeat ? "rgba(255,255,255,0.45)" : "#9ca3af", marginBottom: 20, lineHeight: 1.4 }}>{desc}</p>
+                      <p style={{ fontSize: 13, color: isFeat ? "rgba(255,255,255,0.45)" : "#6b7280", marginBottom: 20, lineHeight: 1.4 }}>{desc}</p>
 
                       <div style={{ marginBottom: 4 }}>
                         <span style={{ fontSize: 48, fontWeight: 800, color: isFeat ? "#fff" : "#08172E", letterSpacing: -2 }}>{price}</span>
-                        <span style={{ fontSize: 16, fontWeight: 500, color: isFeat ? "rgba(255,255,255,0.35)" : "#9ca3af" }}>{period}</span>
+                        <span style={{ fontSize: 16, fontWeight: 500, color: isFeat ? "rgba(255,255,255,0.35)" : "#6b7280" }}>{period}</span>
                       </div>
                       <p style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginBottom: 20, minHeight: 18 }}>
                         {save || note || "\u00A0"}
@@ -344,7 +344,7 @@ export default async function PricingPage() {
                   if ('cat' in row && !('label' in row)) {
                     return (
                       <tr key={i}>
-                        <td style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, color: "#9ca3af", paddingTop: 28, borderBottom: "none" }}>{row.cat}</td>
+                        <td style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, color: "#6b7280", paddingTop: 28, borderBottom: "none" }}>{row.cat}</td>
                         <td style={{ borderBottom: "none" }}></td>
                         <td style={{ borderBottom: "none" }}></td>
                         <td className="pro-col" style={{ borderBottom: "none" }}></td>
@@ -459,7 +459,7 @@ export default async function PricingPage() {
           {faqs.map(({ q, a }, i) => (
             <details key={i} style={{ borderBottom: "1px solid #e5e7eb", padding: "20px 0" }}>
               <summary style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 600, fontSize: 16, color: "#08172E", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                {q} <ChevronDown size={18} style={{ color: "#9ca3af", flexShrink: 0 }} />
+                {q} <ChevronDown size={18} style={{ color: "#6b7280", flexShrink: 0 }} />
               </summary>
               <p style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.7, marginTop: 12 }}>{a}</p>
             </details>
@@ -480,7 +480,7 @@ export default async function PricingPage() {
           }}>
             <Sparkles size={18} /> {t("startFree")}
           </Link>
-          <p style={{ fontSize: 13, color: "#64748b", marginTop: 14 }}>{t("noCreditCard")}</p>
+          <p style={{ fontSize: 13, color: "#94a3b8", marginTop: 14 }}>{t("noCreditCard")}</p>
         </div>
       </section>
 

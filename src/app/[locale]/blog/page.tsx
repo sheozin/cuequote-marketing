@@ -204,10 +204,10 @@ export default async function BlogPage() {
                 </p>
 
                 <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-                  <span style={{ fontSize: 13, color: "#9ca3af", fontWeight: 500 }}>
+                  <span style={{ fontSize: 13, color: "#6b7280", fontWeight: 500 }}>
                     {new Date(featured.date).toLocaleDateString(locale, { month: "long", day: "numeric", year: "numeric" })}
                   </span>
-                  <span style={{ fontSize: 13, color: "#9ca3af" }}>{tp(`${featured.slug}.readTime`)}</span>
+                  <span style={{ fontSize: 13, color: "#6b7280" }}>{tp(`${featured.slug}.readTime`)}</span>
                   <span style={{
                     display: "inline-flex", alignItems: "center", gap: 6,
                     fontSize: 14, fontWeight: 700, color: featuredCat.text,
@@ -297,7 +297,7 @@ export default async function BlogPage() {
                       display: "flex", alignItems: "center", justifyContent: "space-between",
                       paddingTop: 12, borderTop: "1px solid #f3f4f6", marginTop: "auto",
                     }}>
-                      <span style={{ fontSize: 13, color: "#9ca3af" }}>
+                      <span style={{ fontSize: 13, color: "#6b7280" }}>
                         {new Date(post.date).toLocaleDateString(locale, { month: "short", day: "numeric", year: "numeric" })}
                       </span>
                       <span className="blog-card-arrow" style={{
@@ -419,7 +419,7 @@ export default async function BlogPage() {
           color: #fff !important;
         }
         .blog-newsletter-cta input[type="email"]::placeholder {
-          color: #64748b !important;
+          color: #94a3b8 !important;
         }
         .blog-newsletter-cta .email-form {
           max-width: 440px !important;

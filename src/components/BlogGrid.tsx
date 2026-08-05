@@ -87,7 +87,7 @@ export function BlogGrid({ posts, categories, locale, labels }: Props) {
       </div>
 
       {/* Post count */}
-      <p style={{ fontSize: 14, color: '#9ca3af', marginBottom: 24 }}>
+      <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 24 }}>
         {labels.showingOf
           .replace('{shown}', String(visible.length))
           .replace('{total}', String(filtered.length))}
@@ -95,7 +95,7 @@ export function BlogGrid({ posts, categories, locale, labels }: Props) {
 
       {filtered.length === 0 ? (
         <div style={{
-          padding: '64px 24px', textAlign: 'center', color: '#9ca3af',
+          padding: '64px 24px', textAlign: 'center', color: '#6b7280',
           fontSize: 16, background: '#f9fafb', borderRadius: 16, border: '1px dashed #e5e7eb',
         }}>
           {labels.noPostsFound}
@@ -183,7 +183,7 @@ export function BlogGrid({ posts, categories, locale, labels }: Props) {
                         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                         paddingTop: 12, borderTop: '1px solid #f3f4f6', marginTop: 'auto',
                       }}>
-                        <span style={{ fontSize: 13, color: '#9ca3af' }}>
+                        <span style={{ fontSize: 13, color: '#6b7280' }}>
                           {new Date(post.date).toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' })}
                         </span>
                         <span className="blog-card-arrow" style={{
@@ -249,7 +249,7 @@ function countBadge(isActive: boolean, cat?: string): React.CSSProperties {
   return {
     fontSize: 11, fontWeight: 700, padding: '1px 7px', borderRadius: 100,
     background: isActive ? 'rgba(255,255,255,0.25)' : '#f3f4f6',
-    color: isActive ? '#fff' : '#9ca3af',
+    color: isActive ? '#fff' : '#4b5563',
   }
 }
 

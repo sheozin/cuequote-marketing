@@ -179,7 +179,7 @@ export default async function TutorialsPage() {
                 }}>
                   {t("productTour", { defaultValue: "PRODUCT TOUR" })}
                 </span>
-                <span style={{ color: "#9ca3af", fontSize: 13 }}>{t("tourDuration", { defaultValue: "8 min" })}</span>
+                <span style={{ color: "#6b7280", fontSize: 13 }}>{t("tourDuration", { defaultValue: "8 min" })}</span>
               </div>
               <h2 style={{
                 fontFamily: "var(--font-dm-sans)",

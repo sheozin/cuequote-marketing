@@ -139,7 +139,7 @@ export default function TermsPage() {
           <p style={{ fontSize: 17, color: "#6b7280", marginBottom: 8, lineHeight: 1.7 }}>
             The rules and guidelines for using CueQuote.
           </p>
-          <p style={{ fontSize: 14, color: "#9ca3af" }}>
+          <p style={{ fontSize: 14, color: "#6b7280" }}>
             Last updated: March 16, 2026
           </p>
         </div>

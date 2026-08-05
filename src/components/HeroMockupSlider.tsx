@@ -87,7 +87,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
             {active === 0 ? avCta : plannerCta}
           </a>
         </div>
-        <p style={{ fontSize: 12, color: "#64748b" }}>
+        <p style={{ fontSize: 12, color: "#94a3b8" }}>
           {t.plannerNoCreditCard || 'No credit card required'} • {active === 0 ? (t.freeProposals || '3 free proposals/month') : (t.plannerFreePlans || '3 free plans/month')}
         </p>
       </div>
@@ -115,17 +115,17 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
                       <div style={{ width: 8, height: 8, borderRadius: "50%", background: item.color }} />
                       <div>
                         <div style={{ fontWeight: 500, color: "#111827" }}>{item.name}</div>
-                        <div style={{ fontSize: 11, color: "#9ca3af" }}>{item.cat}</div>
+                        <div style={{ fontSize: 11, color: "#6b7280" }}>{item.cat}</div>
                       </div>
                     </div>
                     <div style={{ textAlign: "end" }}>
                       <div style={{ fontWeight: 600, color: "#111827" }}>€{(item.qty * item.price).toLocaleString()}</div>
-                      <div style={{ fontSize: 11, color: "#9ca3af" }}>{item.qty} × €{item.price}</div>
+                      <div style={{ fontSize: 11, color: "#6b7280" }}>{item.qty} × €{item.price}</div>
                     </div>
                   </div>
                 ))}
               </div>
-              <div style={{ padding: "10px 20px", borderTop: "1px solid #f3f4f6", fontSize: 10, color: "#94a3b8", textAlign: "center" }}>
+              <div style={{ padding: "10px 20px", borderTop: "1px solid #f3f4f6", fontSize: 10, color: "#6b7280", textAlign: "center" }}>
                 {t.heroAvFooter || 'For AV Companies — proposal with your catalog prices'}
               </div>
             </>
@@ -138,7 +138,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
                 </div>
                 <div style={{ textAlign: "right" }}>
                   <div style={{ fontSize: 13, color: "#059669", fontWeight: 700 }}>€15K — €22K</div>
-                  <div style={{ fontSize: 9, color: "#94a3b8" }}>{t.heroPlannerEstimated || 'estimated budget'}</div>
+                  <div style={{ fontSize: 9, color: "#6b7280" }}>{t.heroPlannerEstimated || 'estimated budget'}</div>
                 </div>
               </div>
               <div style={{ padding: "12px 20px", borderBottom: "1px solid #f3f4f6", fontSize: 12, color: "#64748b", lineHeight: 1.5, background: "#fafbfc" }}>
@@ -157,7 +157,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
                         </div>
                         <div>
                           <div style={{ fontSize: 12, fontWeight: 600, color: "#08172E" }}>{catName}</div>
-                          <div style={{ fontSize: 10, color: "#94a3b8" }}>{catItems}</div>
+                          <div style={{ fontSize: 10, color: "#6b7280" }}>{catItems}</div>
                         </div>
                       </div>
                       <div style={{ fontSize: 12, fontWeight: 600, color: "#059669", whiteSpace: "nowrap" }}>{cat.range}</div>
@@ -169,7 +169,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#d97706" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 1 }}><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                 <span>{t.heroPlannerTip || 'Check if your venue has AV exclusivity'}</span>
               </div>
-              <div style={{ padding: "10px 20px", borderTop: "1px solid #f3f4f6", fontSize: 10, color: "#94a3b8", textAlign: "center" }}>
+              <div style={{ padding: "10px 20px", borderTop: "1px solid #f3f4f6", fontSize: 10, color: "#6b7280", textAlign: "center" }}>
                 {t.heroPlannerFooter || 'For Event Planners — complete production plan with budget & tips'}
               </div>
             </>
