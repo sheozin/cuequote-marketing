@@ -18,7 +18,10 @@
     "solutions": "Solutions",
     "forAvNavDesc": "Créez des devis depuis votre catalogue, envoyez des PDF brandés",
     "forPlannersNavDesc": "Planifiez la production AV avec estimations de budget",
-    "new": "Nouveau"
+    "new": "Nouveau",
+    "avCalculator": "Calculateur de coût AV",
+    "avCalculatorDesc": "Estimez un budget AV en quelques secondes",
+    "freeBadge": "Gratuit"
   },
   "hero": {
     "metaTitle": "CueQuote — La plateforme IA pour les professionnels de l'événementiel",
@@ -2533,6 +2536,9 @@
     "faq4A": "Non. Cela vous dit si le devis que vous avez sous les yeux se situe dans une fourchette sensée et ce qu'il devrait contenir. Quand vous avez besoin d'une proposition chiffrée depuis votre propre catalogue de matériel, c'est le rôle de CueQuote.",
     "ctaTitle": "Transformez l'estimation en proposition",
     "ctaBody": "CueQuote construit une proposition chiffrée depuis votre propre catalogue et vos propres tarifs — décrivez l'événement et obtenez un document prêt pour le client en moins de deux minutes.",
-    "ctaButton": "Essayer CueQuote gratuitement"
+    "ctaButton": "Essayer CueQuote gratuitement",
+    "sidebarTitle": "N'estimez pas votre budget AV au hasard",
+    "sidebarBody": "Indiquez votre effectif et votre niveau de production pour obtenir une fourchette détaillée en quelques secondes — d'après les tarifs journaliers 2026.",
+    "sidebarCta": "Ouvrir le calculateur"
   }
 }

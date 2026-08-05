@@ -18,7 +18,10 @@
     "solutions": "Rozwiązania",
     "forAvNavDesc": "Twórz oferty z własnego katalogu, wysyłaj markowe PDF",
     "forPlannersNavDesc": "Planuj, budżetuj i produkuj eventy z narzędziami AI",
-    "new": "Nowość"
+    "new": "Nowość",
+    "avCalculator": "Kalkulator kosztów AV",
+    "avCalculatorDesc": "Oszacuj budżet techniki w kilka sekund",
+    "freeBadge": "Za darmo"
   },
   "hero": {
     "metaTitle": "CueQuote — Platforma AI dla profesjonalistów eventowych",
@@ -2505,6 +2508,9 @@
     "faq4A": "Nie. Pokazuje, czy oferta, którą masz przed sobą, mieści się w rozsądnym zakresie i co powinno się w niej znaleźć. Gdy potrzebujesz realnej wyceny z własnego katalogu sprzętu — od tego jest CueQuote.",
     "ctaTitle": "Zamień szacunek w ofertę",
     "ctaBody": "CueQuote tworzy wycenioną ofertę z Twojego katalogu i Twoich stawek — opisz event i otrzymaj dokument gotowy dla klienta w mniej niż dwie minuty.",
-    "ctaButton": "Wypróbuj CueQuote za darmo"
+    "ctaButton": "Wypróbuj CueQuote za darmo",
+    "sidebarTitle": "Nie zgaduj budżetu na technikę",
+    "sidebarBody": "Ustaw liczbę uczestników i specyfikację produkcji, a w kilka sekund otrzymasz rozpisany zakres kosztów — na podstawie stawek rynkowych 2026.",
+    "sidebarCta": "Otwórz kalkulator"
   }
 }

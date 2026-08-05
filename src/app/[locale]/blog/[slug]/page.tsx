@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import Nav from "../../../../components/Nav";
 import Footer from "../../../../components/Footer";
-import { ArrowLeft, Clock, Calendar, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Calendar, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { POSTS } from "../../../../lib/blog-posts";
 import ShareButtons from "../../../../components/ShareButtons";
@@ -88,6 +88,7 @@ export default async function BlogPostPage({
 
   const style = CATEGORY_STYLE[post.category] || CATEGORY_STYLE.Guides;
   const t = await getTranslations("blog");
+  const tCalc = await getTranslations("avCalculator");
   const tp = await getTranslations("posts");
 
   const title = tp(`${slug}.title`);
@@ -374,6 +375,37 @@ export default async function BlogPostPage({
                 ))}
               </ul>
             </div>
+
+            {/* Free tool promo — every post, so the calculator is reachable from the
+                highest-traffic pages on the site rather than only the footer. */}
+            <Link href="/av-cost-calculator" style={{ textDecoration: "none", display: "block", marginBottom: 24 }}>
+              <div style={{
+                background: "linear-gradient(135deg, #08172E 0%, #0f2d50 100%)",
+                borderRadius: 12, padding: 22, color: "#fff",
+              }}>
+                <div style={{
+                  fontSize: 10, fontWeight: 700, textTransform: "uppercase",
+                  letterSpacing: 1.4, color: "#10b981", marginBottom: 9,
+                }}>
+                  {tCalc("badge")}
+                </div>
+                <h3 style={{
+                  fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 17,
+                  lineHeight: 1.3, marginBottom: 8, letterSpacing: -0.3,
+                }}>
+                  {tCalc("sidebarTitle")}
+                </h3>
+                <p style={{ fontSize: 12.5, color: "#94a3b8", lineHeight: 1.55, marginBottom: 14 }}>
+                  {tCalc("sidebarBody")}
+                </p>
+                <span style={{
+                  display: "inline-flex", alignItems: "center", gap: 6,
+                  fontSize: 13, fontWeight: 700, color: "#10b981",
+                }}>
+                  {tCalc("sidebarCta")} <ArrowRight size={14} />
+                </span>
+              </div>
+            </Link>
 
             <div style={{
               background: "#f9fafb", borderRadius: 12, padding: 20,

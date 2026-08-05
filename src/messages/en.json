@@ -18,7 +18,10 @@
     "solutions": "Solutions",
     "forAvNavDesc": "Create proposals from your catalog, send branded PDFs",
     "forPlannersNavDesc": "Plan, budget, and produce events with AI-powered tools",
-    "new": "New"
+    "new": "New",
+    "avCalculator": "AV cost calculator",
+    "avCalculatorDesc": "Estimate an event AV budget in seconds",
+    "freeBadge": "Free"
   },
   "hero": {
     "metaTitle": "CueQuote — The AI Platform for Event Professionals",
@@ -2532,6 +2535,9 @@
     "faq4A": "No. It tells you whether the quote in front of you is in a sensible range and what should be on it. When you need a real priced proposal from your own equipment catalogue, that is what CueQuote does.",
     "ctaTitle": "Turn the estimate into a proposal",
     "ctaBody": "CueQuote builds a priced proposal from your own catalogue and your own rates — describe the event, and get a client-ready document in under two minutes.",
-    "ctaButton": "Try CueQuote free"
+    "ctaButton": "Try CueQuote free",
+    "sidebarTitle": "Do not guess your AV budget",
+    "sidebarBody": "Set your headcount and production spec and get an itemised cost range in seconds — built from 2026 market day rates.",
+    "sidebarCta": "Open the calculator"
   }
 }

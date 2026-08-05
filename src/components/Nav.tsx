@@ -110,6 +110,24 @@ export default function Nav() {
                       </div>
                     </div>
                   </Link>
+                  <div style={{ height: 1, background: "#f1f5f9", margin: "6px 10px" }} />
+                  <Link href="/av-cost-calculator" onClick={() => setShowSolutions(false)} style={{
+                    display: "flex", alignItems: "center", gap: 12, padding: "12px 14px",
+                    borderRadius: 10, textDecoration: "none", color: "#374151", transition: "background 0.15s",
+                  }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 10, background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="8" x2="8" y1="14" y2="14" /><line x1="12" x2="12" y1="14" y2="14" /><line x1="16" x2="16" y1="14" y2="14" /><line x1="8" x2="8" y1="18" y2="18" /><line x1="12" x2="12" y1="18" y2="18" /><line x1="16" x2="16" y1="18" y2="18" /></svg>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: 13, fontWeight: 600, color: "#08172E", display: "flex", alignItems: "center", gap: 6 }}>
+                        {t("avCalculator", { defaultValue: "AV cost calculator" })}
+                        <span style={{ fontSize: 9, fontWeight: 700, color: "#fff", background: "#047857", padding: "2px 6px", borderRadius: 4, textTransform: "uppercase", letterSpacing: 0.5 }}>
+                          {t("freeBadge", { defaultValue: "Free" })}
+                        </span>
+                      </div>
+                      <div style={{ fontSize: 11, color: "#6b7280", marginTop: 1 }}>{t("avCalculatorDesc", { defaultValue: "Estimate an event AV budget in seconds" })}</div>
+                    </div>
+                  </Link>
                 </div>
               </div>
             )}
@@ -170,6 +188,10 @@ export default function Nav() {
           <Link href="/for-event-planners" onClick={() => setOpen(false)} style={{ textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#08172E", display: "flex", alignItems: "center", gap: 6 }}>
             {t("forPlanners")}
             <span style={{ fontSize: 9, fontWeight: 700, color: "#fff", background: "#10b981", padding: "2px 6px", borderRadius: 4, textTransform: "uppercase" }}>{t("new", { defaultValue: "New" })}</span>
+          </Link>
+          <Link href="/av-cost-calculator" onClick={() => setOpen(false)} style={{ textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#08172E", display: "flex", alignItems: "center", gap: 6 }}>
+            {t("avCalculator", { defaultValue: "AV cost calculator" })}
+            <span style={{ fontSize: 9, fontWeight: 700, color: "#fff", background: "#047857", padding: "2px 6px", borderRadius: 4, textTransform: "uppercase" }}>{t("freeBadge", { defaultValue: "Free" })}</span>
           </Link>
           {links.slice(1).map(({ label, href }) => (
             <Link key={label} href={href} onClick={() => setOpen(false)} style={{ textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#08172E" }}>{label}</Link>

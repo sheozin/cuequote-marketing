@@ -18,7 +18,10 @@
     "solutions": "Lösungen",
     "forAvNavDesc": "Angebote aus Ihrem Katalog erstellen, gebrandete PDFs versenden",
     "forPlannersNavDesc": "Planen Sie die AV-Produktion mit Budgetschätzungen",
-    "new": "Neu"
+    "new": "Neu",
+    "avCalculator": "AV-Kostenrechner",
+    "avCalculatorDesc": "Technikbudget in Sekunden schätzen",
+    "freeBadge": "Gratis"
   },
   "hero": {
     "metaTitle": "CueQuote — Die KI-Plattform für Event-Profis",
@@ -2531,6 +2534,9 @@
     "faq4A": "Nein. Es zeigt Ihnen, ob das vorliegende Angebot in einem sinnvollen Rahmen liegt und was darin stehen sollte. Wenn Sie ein echtes kalkuliertes Angebot aus Ihrem eigenen Gerätekatalog brauchen, ist das die Aufgabe von CueQuote.",
     "ctaTitle": "Aus der Schätzung ein Angebot machen",
     "ctaBody": "CueQuote erstellt ein kalkuliertes Angebot aus Ihrem eigenen Katalog und Ihren Sätzen — Event beschreiben und in unter zwei Minuten ein kundenfertiges Dokument erhalten.",
-    "ctaButton": "CueQuote kostenlos testen"
+    "ctaButton": "CueQuote kostenlos testen",
+    "sidebarTitle": "Raten Sie Ihr Technikbudget nicht",
+    "sidebarBody": "Teilnehmerzahl und Produktionsumfang eingeben und in Sekunden eine aufgeschlüsselte Kostenspanne erhalten — auf Basis der Markttagessätze 2026.",
+    "sidebarCta": "Rechner öffnen"
   }
 }
