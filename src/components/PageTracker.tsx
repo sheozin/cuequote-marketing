@@ -9,6 +9,79 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
 
+// When the IP lookup is unavailable we infer the country from the browser's timezone.
+// It has to resolve to a country, not a city: writing "Los Angeles" into a column called
+// `country` split the US across five rows and was indistinguishable from a real lookup.
+// An unmapped timezone yields null rather than a guess.
+const TZ_COUNTRY: Record<string, string> = {
+  // Europe
+  'Europe/London': 'United Kingdom', 'Europe/Dublin': 'Ireland', 'Europe/Lisbon': 'Portugal',
+  'Europe/Madrid': 'Spain', 'Europe/Paris': 'France', 'Europe/Brussels': 'Belgium',
+  'Europe/Amsterdam': 'Netherlands', 'Europe/Luxembourg': 'Luxembourg', 'Europe/Berlin': 'Germany',
+  'Europe/Zurich': 'Switzerland', 'Europe/Vienna': 'Austria', 'Europe/Rome': 'Italy',
+  'Europe/Malta': 'Malta', 'Europe/Prague': 'Czechia', 'Europe/Bratislava': 'Slovakia',
+  'Europe/Warsaw': 'Poland', 'Europe/Budapest': 'Hungary', 'Europe/Ljubljana': 'Slovenia',
+  'Europe/Zagreb': 'Croatia', 'Europe/Belgrade': 'Serbia', 'Europe/Bucharest': 'Romania',
+  'Europe/Sofia': 'Bulgaria', 'Europe/Athens': 'Greece', 'Europe/Istanbul': 'Turkey',
+  'Europe/Copenhagen': 'Denmark', 'Europe/Oslo': 'Norway', 'Europe/Stockholm': 'Sweden',
+  'Europe/Helsinki': 'Finland', 'Europe/Tallinn': 'Estonia', 'Europe/Riga': 'Latvia',
+  'Europe/Vilnius': 'Lithuania', 'Europe/Kyiv': 'Ukraine', 'Europe/Kiev': 'Ukraine',
+  'Europe/Minsk': 'Belarus', 'Europe/Moscow': 'Russia', 'Europe/Reykjavik': 'Iceland',
+  'Atlantic/Reykjavik': 'Iceland',
+  // North America
+  'America/New_York': 'United States', 'America/Detroit': 'United States',
+  'America/Chicago': 'United States', 'America/Denver': 'United States',
+  'America/Phoenix': 'United States', 'America/Los_Angeles': 'United States',
+  'America/Anchorage': 'United States', 'Pacific/Honolulu': 'United States',
+  'America/Toronto': 'Canada', 'America/Vancouver': 'Canada', 'America/Edmonton': 'Canada',
+  'America/Winnipeg': 'Canada', 'America/Halifax': 'Canada',
+  'America/Mexico_City': 'Mexico', 'America/Monterrey': 'Mexico', 'America/Tijuana': 'Mexico',
+  // South America
+  'America/Sao_Paulo': 'Brazil', 'America/Bogota': 'Colombia', 'America/Lima': 'Peru',
+  'America/Santiago': 'Chile', 'America/Argentina/Buenos_Aires': 'Argentina',
+  // Middle East
+  'Asia/Dubai': 'United Arab Emirates', 'Asia/Riyadh': 'Saudi Arabia', 'Asia/Qatar': 'Qatar',
+  'Asia/Kuwait': 'Kuwait', 'Asia/Bahrain': 'Bahrain', 'Asia/Muscat': 'Oman',
+  'Asia/Amman': 'Jordan', 'Asia/Beirut': 'Lebanon', 'Asia/Jerusalem': 'Israel',
+  'Asia/Tel_Aviv': 'Israel', 'Asia/Baghdad': 'Iraq', 'Asia/Tehran': 'Iran',
+  // Africa
+  'Africa/Cairo': 'Egypt', 'Africa/Casablanca': 'Morocco', 'Africa/Algiers': 'Algeria',
+  'Africa/Tunis': 'Tunisia', 'Africa/Tripoli': 'Libya', 'Africa/Lagos': 'Nigeria',
+  'Africa/Accra': 'Ghana', 'Africa/Nairobi': 'Kenya', 'Africa/Kampala': 'Uganda',
+  'Africa/Dar_es_Salaam': 'Tanzania', 'Africa/Kigali': 'Rwanda',
+  'Africa/Johannesburg': 'South Africa', 'Africa/Addis_Ababa': 'Ethiopia',
+  // Asia-Pacific
+  'Asia/Karachi': 'Pakistan', 'Asia/Kolkata': 'India', 'Asia/Calcutta': 'India',
+  'Asia/Colombo': 'Sri Lanka', 'Asia/Dhaka': 'Bangladesh', 'Asia/Kathmandu': 'Nepal',
+  'Asia/Bangkok': 'Thailand', 'Asia/Ho_Chi_Minh': 'Vietnam', 'Asia/Saigon': 'Vietnam',
+  'Asia/Jakarta': 'Indonesia', 'Asia/Kuala_Lumpur': 'Malaysia', 'Asia/Singapore': 'Singapore',
+  'Asia/Manila': 'Philippines', 'Asia/Hong_Kong': 'Hong Kong', 'Asia/Macau': 'Macao',
+  'Asia/Taipei': 'Taiwan', 'Asia/Shanghai': 'China', 'Asia/Chongqing': 'China',
+  'Asia/Seoul': 'South Korea', 'Asia/Tokyo': 'Japan', 'Asia/Almaty': 'Kazakhstan',
+  'Asia/Tashkent': 'Uzbekistan', 'Asia/Baku': 'Azerbaijan', 'Asia/Tbilisi': 'Georgia',
+  'Asia/Yerevan': 'Armenia',
+  'Australia/Sydney': 'Australia', 'Australia/Melbourne': 'Australia',
+  'Australia/Brisbane': 'Australia', 'Australia/Perth': 'Australia',
+  'Australia/Adelaide': 'Australia', 'Pacific/Auckland': 'New Zealand',
+}
+
+// ipapi is not consistent about a few names; keep one spelling per country.
+const COUNTRY_ALIASES: Record<string, string> = {
+  'The Netherlands': 'Netherlands',
+  'Czech Republic': 'Czechia',
+  'Russian Federation': 'Russia',
+  'Republic of Korea': 'South Korea',
+  'Viet Nam': 'Vietnam',
+}
+
+function countryFromTimezone(): string | null {
+  try {
+    return TZ_COUNTRY[Intl.DateTimeFormat().resolvedOptions().timeZone] ?? null
+  } catch {
+    return null
+  }
+}
+
 function getSessionId(): string {
   const key = 'cq_sid'
   let sid = sessionStorage.getItem(key)
@@ -62,9 +135,6 @@ export default function PageTracker() {
 
         // Get country — only call external IP API if user hasn't declined tracking
         // Basic page views always tracked, but geolocation (sends IP to third party) respects opt-out
-        const timezoneRegion = () =>
-          Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[1]?.replace(/_/g, ' ') || null
-
         let country: string | null = null
         const consent = localStorage.getItem('cq_analytics_consent')
         if (consent !== 'declined') {
@@ -73,7 +143,7 @@ export default function PageTracker() {
           // error on each view and (below) used to be parsed as if it were a real answer.
           const cached = sessionStorage.getItem('cq_geo_country')
           if (cached) {
-            country = cached === '-' ? timezoneRegion() : cached
+            country = cached === '-' ? null : cached
           } else {
             try {
               const geo = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(2000) })
@@ -82,17 +152,17 @@ export default function PageTracker() {
               const raw = geoData.country_name || geoData.country || null
               // Validate: only accept plain strings up to 100 chars, no HTML/script
               if (raw && typeof raw === 'string' && raw.length <= 100 && !/[<>"'&]/.test(raw)) {
-                country = raw
+                country = COUNTRY_ALIASES[raw] ?? raw
               }
             } catch {
-              // Rate limited, blocked or timed out — fall back to the timezone region
-              country = timezoneRegion()
+              // Rate limited, blocked or timed out — infer the country from the timezone
+              country = countryFromTimezone()
             }
             sessionStorage.setItem('cq_geo_country', country ?? '-')
           }
         } else {
-          // Declined: use timezone-based region only (no external API call)
-          country = timezoneRegion()
+          // Declined: infer from the timezone only, no external call and no IP sent anywhere
+          country = countryFromTimezone()
         }
 
         await supabase.from('page_views').insert({
