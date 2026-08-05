@@ -799,37 +799,8 @@ export default async function HomePage() {
           { "@type": "Offer", name: "Business", price: "179", priceCurrency: "EUR" },
         ],
         description: "The AI platform for event professionals — proposals, production planning, and more.",
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "5.0",
-          bestRating: "5",
-          worstRating: "1",
-          ratingCount: "3",
-          reviewCount: "3",
-        },
-        review: [
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Johne S." },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-            reviewBody: "CueQuote has completely changed the way we work. It generates professional proposals in minutes directly from our equipment catalog, creates risk assessments, and helps us manage inventory — all in one platform.",
-            publisher: { "@type": "Organization", name: "AVE Events" },
-          },
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Alex D." },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-            reviewBody: "I was skeptical about AI writing our proposals — we have very specific pricing. But CueQuote uses our exact catalog prices, not estimates. The first proposal it generated was 95% ready.",
-            publisher: { "@type": "Organization", name: "SoundPro Events" },
-          },
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Aneta M." },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-            reviewBody: "CueQuote has shortened our proposal preparation time and increased the efficiency of our sales process.",
-            publisher: { "@type": "Organization", name: "AVE Events" },
-          },
-        ],
+        // No aggregateRating/review here: self-published reviews are ineligible for review rich
+        // results under Google's structured data policy. Re-add only from a third-party source.
       }) }} />
 
       <Footer />

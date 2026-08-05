@@ -466,7 +466,9 @@
     "popularThisWeek": "Beliebt diese Woche",
     "ctaTitle": "Bereit, Angebote in Minuten zu erstellen?",
     "ctaDescription": "CueQuote erstellt professionelle Event-Angebote mit KI. Kostenlos starten, keine Kreditkarte erforderlich.",
-    "ctaButton": "CueQuote kostenlos testen →"
+    "ctaButton": "CueQuote kostenlos testen →",
+    "archiveTitle": "Alle Artikel durchsuchen",
+    "archiveSubtitle": "Die vollständige Bibliothek, nach Themen geordnet."
   },
   "subscribe": {
     "title": "Bleiben Sie auf dem Laufenden",
@@ -878,7 +880,7 @@
         "Rentman gehört zu den meistgenutzten AV-Mietmanagement-Plattformen in Europa. Die Software hat sich in der Branche einen soliden Ruf erarbeitet, weil sie die operative Komplexität von AV-Produktionsunternehmen bewältigt — Geräte über Aufträge hinweg verfolgen, Fremdmiete von anderen Lieferanten verwalten, Crews planen und das Lager organisieren. CueQuote ist ein anderes Werkzeug: speziell für das Angebots- und Kalkulationswesen gebaut, mit KI-Generierung als Kern. Beide Plattformen bedienen angrenzende, aber unterschiedliche Bereiche desselben Geschäftszyklus.",
         "Rentman hat seine Wurzeln im Betriebsmanagement. Die Plattform wuchs rund um die zentrale Herausforderung von Verleihfirmen: Wo sind unsere Geräte, wer hat sie, in welchem Zustand sind sie und wann kommen sie zurück. QR-Code- und Barcode-Scanning für einzelne Assets, Echtzeit-Verfügbarkeitsansichten, Fremdmiete-Tracking und Crew-Planung sind echte Stärken von Rentman. Für ein Unternehmen mit großem Verleihbestand, das mehrere parallele Produktionen abwickelt, sind Rentmans Lager- und Logistikfähigkeiten kaum zu ersetzen. CueQuote versucht nicht, diese zu replizieren.",
         "Das Preismodell von Rentman ist benutzerbasiert — ab etwa 14 Euro pro Benutzer und Monat im Basisplan bis zu rund 39 Euro pro Benutzer im vollen Paket. Für ein fünfköpfiges Team bedeutet das monatliche Kosten zwischen 70 und 195 Euro. Bei einem 15-köpfigen Team steigen die Kosten auf 210 bis 585 Euro pro Monat. Das Per-Seat-Modell ist für eine Betriebsplattform sinnvoll, wird aber bei großen Teams teurer als Pauschalpreise.",
-        "CueQuote berechnet pro Plan statt pro Benutzer. Der Starter-Plan für 29 Euro pro Monat deckt Teams ab, die bis zu zehn Angebote pro Monat mit vollständigem Branding versenden. Pro für 79 Euro schaltet 40 Angebote, Teamzusammenarbeit, E-Signaturen, Kundenportal und Mehrwährungsunterstützung frei. Business für 149 Euro verarbeitet 120 Angebote. Für ein fünfköpfiges Team, das zwanzig Angebote pro Monat erstellt, kostet CueQuote Pro 79 Euro — das Äquivalent von zwei oder drei Rentman-Plätzen.",
+        "CueQuote berechnet pro Plan statt pro Benutzer. Der Starter-Plan für 29 Euro pro Monat deckt Teams ab, die bis zu zehn Angebote pro Monat mit vollständigem Branding versenden. Pro für 79 Euro schaltet 40 Angebote, Teamzusammenarbeit, E-Signaturen, Kundenportal und Mehrwährungsunterstützung frei. Business für 179 Euro verarbeitet 120 Angebote. Für ein fünfköpfiges Team, das zwanzig Angebote pro Monat erstellt, kostet CueQuote Pro 79 Euro — das Äquivalent von zwei oder drei Rentman-Plätzen.",
         "Das Angebotserlebnis ist der Bereich, wo die Plattformen am deutlichsten auseinandergehen. Rentmans Kalkulationswerkzeuge ermöglichen die Erstellung von Angeboten durch Auswahl aus dem Gerätekatalog und Erstellung von PDF-Ausgaben. Die Integration mit dem Lager ist wertvoll — Sie sehen die Verfügbarkeit beim Aufbau des Angebots. Rentman wurde jedoch nicht als Angebotswerkzeug konzipiert: Die PDF-Ausgaben sind weniger visuell ausgefeilt, als Firmenkunden erwarten, Anpassungsoptionen sind begrenzt, und es gibt keine KI-Unterstützung im Prozess.",
         "KI-gestützte Angebotsgenerierung ist CueQuotes definierende Funktion. Beschreiben Sie das Event — Art, Umfang, Veranstaltungsort, Teilnehmerzahl und technische Anforderungen — und CueQuotes KI erstellt in unter zwei Minuten eine vollständige Geräteliste mit Mengen und Preisen aus Ihrem Katalog. Die KI versteht Event-Produktionsvokabular: Bei einer Beschreibung einer Hybrid-Konferenz mit 600 Personen, Hauptbühne, zwei Breakout-Räumen und Livestream weiß das System, welche Audio-, Video- und Beleuchtungsausstattung sowie welches technische Personal benötigt wird. Rentman bietet keine vergleichbare Funktion.",
         "Das Kundenerlebnis unterscheidet sich erheblich. CueQuote umfasst ein gebrandetes Kundenportal, in dem Kunden sich anmelden, alle Angebote und Rechnungen einsehen, Angebote digital mit zeitgestempelter E-Signatur annehmen und den Status ihrer Anfragen verfolgen können. Das Portal ist darauf ausgelegt, eine professionelle, gebrandete Kontaktpunkt darzustellen. Rentmans kundenseitige Funktionen sind auf der Angebotsseite begrenzter — der Fokus liegt auf Betriebsdaten für Ihr internes Team.",
@@ -1821,9 +1823,9 @@
       "title": "Abrechnung & Pläne",
       "content1": "CueQuote bietet flexible Pläne passend zu Ihrer Unternehmensgröße. Starten Sie kostenlos und wachsen Sie.",
       "step1": "Free — 3 Angebote/Monat, 1 Benutzer, einfache PDF-Vorlage",
-      "step2": "Starter (19 $/Monat) — 20 Angebote/Monat, 2 Benutzer, alle Vorlagen, Kundenverwaltung",
-      "step3": "Pro (49 $/Monat) — Unbegrenzte Angebote, 5 Benutzer, individuelles Branding, Prioritäts-Support",
-      "step4": "Business (99 $/Monat) — Alles aus Pro + Teamverwaltung, API-Zugang, dedizierter Support",
+      "step2": "Starter (29 €/Monat) — 10 Angebote/Monat, 1 Benutzer, vollständiges Branding, Kundenverwaltung",
+      "step3": "Pro (79 €/Monat) — 40 Angebote/Monat, 5 Benutzer, individuelle Vorlagen, Prioritäts-Support",
+      "step4": "Business (179 €/Monat) — 120 Angebote/Monat, 20 Benutzer, API-Zugang, dedizierter Support",
       "tip": "Sie können Ihren Plan jederzeit unter Einstellungen → Abrechnung ändern. Änderungen treten zu Beginn des nächsten Abrechnungszyklus in Kraft."
     },
     "settings": {

@@ -466,7 +466,9 @@
     "popularThisWeek": "Populaire cette semaine",
     "ctaTitle": "Prêt à créer des devis en quelques minutes ?",
     "ctaDescription": "CueQuote génère des devis événementiels professionnels avec l'IA. Commencez gratuitement, sans carte bancaire.",
-    "ctaButton": "Essayer CueQuote gratuitement →"
+    "ctaButton": "Essayer CueQuote gratuitement →",
+    "archiveTitle": "Parcourir tous les articles",
+    "archiveSubtitle": "La bibliothèque complète, organisée par thème."
   },
   "subscribe": {
     "title": "Restez informé",
@@ -881,7 +883,7 @@
         "Rentman est l'une des plateformes de gestion de location AV les plus utilisées en Europe. Elle s'est forgé une solide réputation dans le secteur pour sa gestion de la complexité opérationnelle des sociétés de production AV — suivre le matériel entre les missions, gérer la sous-location auprès d'autres fournisseurs, planifier les équipes et organiser le stock. CueQuote est un outil différent : conçu spécifiquement pour le devis et la tarification côté AV, avec la génération par IA comme cœur du processus. Les deux plateformes servent des étapes adjacentes mais distinctes du même cycle commercial.",
         "Rentman est né de la gestion opérationnelle. La plateforme a grandi autour du défi fondamental des sociétés de location de matériel : où est notre équipement, qui l'a, dans quel état est-il et quand revient-il. Le scan QR et code-barres pour les actifs individuels, les vues de disponibilité en temps réel, le suivi des sous-locations et la planification des équipes sont de vraies forces de Rentman. Pour une société avec un grand parc de matériel gérant plusieurs productions simultanées, les capacités logistiques de Rentman sont difficiles à remplacer. CueQuote ne cherche pas à les reproduire.",
         "Le modèle tarifaire de Rentman est par utilisateur — à partir d'environ 14 euros par utilisateur par mois pour le plan de base, jusqu'à environ 39 euros par utilisateur pour le plan complet. Pour une équipe de cinq personnes, cela représente un coût mensuel de 70 à 195 euros. Pour une équipe de quinze personnes, le coût passe à 210-585 euros par mois. Le modèle par siège est logique pour une plateforme opérationnelle, mais plus coûteux qu'une tarification forfaitaire pour les grandes équipes.",
-        "CueQuote facture un tarif fixe par plan plutôt que par utilisateur. Le plan Starter à 29 euros par mois couvre les équipes envoyant jusqu'à dix devis par mois avec tout le branding. Pro à 79 euros débloque 40 devis, la collaboration d'équipe, les signatures électroniques, le portail client et le support multi-devises. Business à 149 euros gère 120 devis. Pour une équipe de cinq personnes générant vingt devis par mois, CueQuote Pro coûte 79 euros — l'équivalent de deux ou trois sièges Rentman.",
+        "CueQuote facture un tarif fixe par plan plutôt que par utilisateur. Le plan Starter à 29 euros par mois couvre les équipes envoyant jusqu'à dix devis par mois avec tout le branding. Pro à 79 euros débloque 40 devis, la collaboration d'équipe, les signatures électroniques, le portail client et le support multi-devises. Business à 179 euros gère 120 devis. Pour une équipe de cinq personnes générant vingt devis par mois, CueQuote Pro coûte 79 euros — l'équivalent de deux ou trois sièges Rentman.",
         "La génération de devis est là où les plateformes divergent le plus nettement. Les outils de devis de Rentman permettent de créer des propositions en sélectionnant du matériel dans le catalogue et en générant des PDF. L'intégration avec le stock est précieuse — vous voyez la disponibilité lors de la construction du devis. Cependant, Rentman n'a pas été conçu comme un outil de devis, et cela se voit : les sorties PDF sont moins peaufinées visuellement que ce qu'attendent les clients corporate et agences, les options de personnalisation sont limitées, et il n'y a aucune assistance IA dans le processus.",
         "La génération de devis par IA est la fonctionnalité centrale de CueQuote. Décrivez l'événement — le type, l'échelle, le lieu, le nombre de participants et les exigences techniques — et l'IA de CueQuote produit une liste complète de matériel avec quantités et prix de votre catalogue en moins de deux minutes. L'IA comprend le vocabulaire de la production événementielle : lors de la description d'une conférence hybride de 600 personnes avec une scène principale, deux salles de réunion et un flux live, le système sait quel équipement audio, vidéo, éclairage et quel personnel technique cet événement nécessite. Rentman n'offre pas de capacité comparable.",
         "L'expérience client diffère significativement. CueQuote inclut un portail client brandé où les clients peuvent se connecter, voir tous les devis et factures envoyés, accepter les devis numériquement avec une e-signature horodatée et suivre le statut de leurs demandes. Le portail est conçu pour être un point de contact professionnel et brandé. Les capacités de Rentman côté client sont plus limitées sur la partie devis — le focus est sur les données opérationnelles pour votre équipe interne.",
@@ -1823,9 +1825,9 @@
       "title": "Facturation et forfaits",
       "content1": "CueQuote propose des forfaits flexibles adaptés à la taille de votre entreprise. Commencez gratuitement et évoluez selon vos besoins.",
       "step1": "Gratuit — 3 devis/mois, 1 utilisateur, modèle PDF de base",
-      "step2": "Starter (19 $/mois) — 20 devis/mois, 2 utilisateurs, tous les modèles, gestion des clients",
-      "step3": "Pro (49 $/mois) — Devis illimités, 5 utilisateurs, branding personnalisé, support prioritaire",
-      "step4": "Business (99 $/mois) — Tout de Pro + gestion d'équipe, accès API, support dédié",
+      "step2": "Starter (29 €/mois) — 10 devis/mois, 1 utilisateur, branding complet, gestion des clients",
+      "step3": "Pro (79 €/mois) — 40 devis/mois, 5 utilisateurs, modèles personnalisés, support prioritaire",
+      "step4": "Business (179 €/mois) — 120 devis/mois, 20 utilisateurs, accès API, support dédié",
       "tip": "Vous pouvez changer de forfait à tout moment depuis Paramètres → Facturation. Les modifications prennent effet au début du prochain cycle de facturation."
     },
     "settings": {

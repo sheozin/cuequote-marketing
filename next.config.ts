@@ -42,6 +42,14 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Host canonicalisation — must stay first. www served 200 alongside the apex, so
+      // Google indexed both and split the ranking signals between them.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.cuequote.com" }],
+        destination: "https://cuequote.com/:path*",
+        permanent: true,
+      },
       // /features is not a standalone page — features live as a section on the homepage.
       // Catch stale inbound links (external sites, old social shares, mistyped app-side
       // layout links) and send them to the homepage features anchor.
