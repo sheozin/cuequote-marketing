@@ -136,14 +136,20 @@ export default function PageTracker() {
         // Get country — only call external IP API if user hasn't declined tracking
         // Basic page views always tracked, but geolocation (sends IP to third party) respects opt-out
         let country: string | null = null
+        // 'ipapi' means the IP was actually looked up; 'timezone' means we inferred it from
+        // the browser clock. They used to be indistinguishable once stored.
+        let countrySource: 'ipapi' | 'timezone' | null = null
+
         const consent = localStorage.getItem('cq_analytics_consent')
         if (consent !== 'declined') {
           // Country can't change mid-session, so resolve it once. Calling ipapi.co on every
           // page view was burning the free tier — it now answers 429, which logged a console
           // error on each view and (below) used to be parsed as if it were a real answer.
           const cached = sessionStorage.getItem('cq_geo_country')
+          const cachedSource = sessionStorage.getItem('cq_geo_source')
           if (cached) {
             country = cached === '-' ? null : cached
+            countrySource = country ? (cachedSource as 'ipapi' | 'timezone' | null) : null
           } else {
             try {
               const geo = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(2000) })
@@ -153,16 +159,20 @@ export default function PageTracker() {
               // Validate: only accept plain strings up to 100 chars, no HTML/script
               if (raw && typeof raw === 'string' && raw.length <= 100 && !/[<>"'&]/.test(raw)) {
                 country = COUNTRY_ALIASES[raw] ?? raw
+                countrySource = 'ipapi'
               }
             } catch {
               // Rate limited, blocked or timed out — infer the country from the timezone
               country = countryFromTimezone()
+              countrySource = country ? 'timezone' : null
             }
             sessionStorage.setItem('cq_geo_country', country ?? '-')
+            if (countrySource) sessionStorage.setItem('cq_geo_source', countrySource)
           }
         } else {
           // Declined: infer from the timezone only, no external call and no IP sent anywhere
           country = countryFromTimezone()
+          countrySource = country ? 'timezone' : null
         }
 
         await supabase.from('page_views').insert({
@@ -171,6 +181,7 @@ export default function PageTracker() {
           page_path: pathname || '/',
           referrer: document.referrer || null,
           country,
+          country_source: countrySource,
           device_type: getDeviceType(),
           browser: getBrowser(),
           screen_width: window.innerWidth,
