@@ -95,17 +95,6 @@ export default async function BlogPage() {
     readTime: tp(`${post.slug}.readTime`),
   }));
 
-  // Archive index — every post, grouped by category, largest group first
-  const byCategory = new Map<string, typeof POSTS>();
-  for (const p of POSTS) {
-    const bucket = byCategory.get(p.category);
-    if (bucket) bucket.push(p);
-    else byCategory.set(p.category, [p]);
-  }
-  const archiveGroups = [...byCategory.entries()]
-    .map(([category, posts]) => ({ category, posts }))
-    .sort((a, b) => b.posts.length - a.posts.length);
-
   // Safe: breadcrumbLd is built from static data, not user input
   const breadcrumbLd = JSON.stringify({
     '@context': 'https://schema.org',
@@ -338,63 +327,15 @@ export default async function BlogPage() {
               allPosts: t("allPosts", { defaultValue: "All Posts" }),
               readMore: t("readMore"),
               loadMore: t("loadMore", { defaultValue: "Load More" }),
-              showingOf: t("showingOf", { defaultValue: "Showing {shown} of {total} posts" }),
+              // t.raw, not t(): the message carries {shown}/{total} placeholders that only the
+              // client knows, and t() treats its second argument as interpolation values — so
+              // calling it here returned the literal key "blog.showingOf" to the page.
+              showingOf: t.raw("showingOf") as string,
               noPostsFound: t("noPostsFound", { defaultValue: "No posts found in this category." }),
               subscribeTitle: ts("title"),
               subscribeSubtitle: ts("subtitle"),
             }}
           />
-        </div>
-      </section>
-
-      {/* ── Archive index ────────────────────────────────────────── */}
-      {/* Every post gets a crawlable server-rendered link here. The grid above
-          paginates client-side, which left most posts with no internal link. */}
-      <section style={{ padding: "0 24px 96px" }}>
-        <div style={{ maxWidth: 1120, margin: "0 auto", borderTop: "1px solid #e5e7eb", paddingTop: 56 }}>
-          <h2 style={{
-            fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 24,
-            color: "#08172E", letterSpacing: -0.5, marginBottom: 8,
-          }}>
-            {t("archiveTitle", { defaultValue: "Browse every article" })}
-          </h2>
-          <p style={{ fontSize: 15, color: "#6b7280", marginBottom: 36 }}>
-            {t("archiveSubtitle", { defaultValue: "The full library, organised by topic." })}
-          </p>
-
-          <div className="blog-archive-grid" style={{
-            display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "40px 48px",
-          }}>
-            {archiveGroups.map(({ category, posts }) => (
-              <div key={category}>
-                <h3 style={{
-                  fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 13,
-                  color: (CATEGORY_COLORS[category] || CATEGORY_COLORS.Guides).text,
-                  textTransform: "uppercase", letterSpacing: 0.8, marginBottom: 14,
-                  paddingBottom: 10, borderBottom: "1px solid #f3f4f6",
-                }}>
-                  {t(`category${category}`, { defaultValue: category })}
-                  <span style={{ color: "#b0b8c4", fontWeight: 600, marginLeft: 6 }}>{posts.length}</span>
-                </h3>
-                <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-                  {posts.map((post) => (
-                    <li key={post.slug}>
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="blog-archive-link"
-                        style={{
-                          fontSize: 14.5, color: "#374151", lineHeight: 1.5,
-                          textDecoration: "none", transition: "color 0.15s ease",
-                        }}
-                      >
-                        {tp(`${post.slug}.title`)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -409,9 +350,6 @@ export default async function BlogPage() {
         }
         .blog-card-link:hover .blog-card-arrow {
           gap: 8px;
-        }
-        .blog-archive-link:hover {
-          color: #10b981 !important;
         }
         .blog-newsletter-cta input[type="email"] {
           background: rgba(255,255,255,0.1) !important;
@@ -439,10 +377,6 @@ export default async function BlogPage() {
           }
           .blog-grid, .blog-latest-grid {
             grid-template-columns: 1fr !important;
-          }
-          .blog-archive-grid {
-            grid-template-columns: 1fr !important;
-            gap: 32px !important;
           }
           .blog-newsletter-cta {
             padding: 36px 24px !important;

@@ -55,7 +55,9 @@ export function BlogGrid({ posts, categories, locale, labels }: Props) {
     return posts.filter((p) => p.category === activeCategory)
   }, [posts, activeCategory])
 
-  const visible = filtered.slice(0, visibleCount)
+  // Every filtered post is rendered; Load More only reveals them. Slicing here meant the
+  // server HTML carried 13 of 71 posts and the rest had no internal link pointing at them.
+  const shownCount = Math.min(visibleCount, filtered.length)
   const hasMore = visibleCount < filtered.length
 
   const handleCategoryChange = (cat: string) => {
@@ -89,7 +91,7 @@ export function BlogGrid({ posts, categories, locale, labels }: Props) {
       {/* Post count */}
       <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 24 }}>
         {labels.showingOf
-          .replace('{shown}', String(visible.length))
+          .replace('{shown}', String(shownCount))
           .replace('{total}', String(filtered.length))}
       </p>
 
@@ -106,13 +108,14 @@ export function BlogGrid({ posts, categories, locale, labels }: Props) {
           <div className="blog-grid" style={{
             display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24,
           }}>
-            {visible.map((post, index) => {
+            {filtered.map((post, index) => {
               const cat = CATEGORY_COLORS[post.category] || CATEGORY_COLORS.Guides
+              const revealed = index < visibleCount
 
               return (
                 <React.Fragment key={post.slug}>
                   {/* Newsletter CTA after 6th post */}
-                  {index === NEWSLETTER_INDEX && activeCategory === 'all' && (
+                  {index === NEWSLETTER_INDEX && activeCategory === 'all' && revealed && (
                     <div
                       className="blog-newsletter-cta"
                       style={{
@@ -138,7 +141,7 @@ export function BlogGrid({ posts, categories, locale, labels }: Props) {
                   <Link
                     href={`/blog/${post.slug}`}
                     className="blog-card-link"
-                    style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+                    style={{ textDecoration: 'none', color: 'inherit', display: revealed ? 'block' : 'none' }}
                   >
                     <article
                       className="blog-card"
