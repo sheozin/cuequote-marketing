@@ -64,7 +64,9 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
   return (
     <div className="hero-slider-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
       {/* LEFT: Text */}
-      <div style={{ transition: "opacity 0.4s ease", opacity: fading ? 0 : 1, minHeight: 280 }}>
+      {/* min-height covers the taller of the two slides. Without it the column resized on
+          every auto-rotation, moving the whole page ~25px every 6s — most of the mobile CLS. */}
+      <div className="hero-slider-text" style={{ transition: "opacity 0.4s ease", opacity: fading ? 0 : 1 }}>
         <h1 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 44, color: "#fff", lineHeight: 1.1, letterSpacing: -1.5, marginBottom: 16 }}>
           {active === 0 ? (
             <>{t.title} <span style={{ color: "#10b981" }}>{t.titleHighlight}</span> {t.titleEnd}</>
@@ -92,10 +94,10 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
 
       {/* RIGHT: Card */}
       <div>
-        <div style={{
+        <div className="hero-slider-card" style={{
           background: "#fff", borderRadius: 16, border: "1px solid #e5e7eb",
           boxShadow: "0 20px 60px rgba(0,0,0,0.08)", overflow: "hidden",
-          maxWidth: 480, width: "100%", minHeight: 480, transition: "opacity 0.4s ease", opacity: fading ? 0 : 1,
+          maxWidth: 480, width: "100%", transition: "opacity 0.4s ease", opacity: fading ? 0 : 1,
         }}>
           {active === 0 ? (
             <>
@@ -195,10 +197,26 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
         </div>
       </div>
       <style>{`
+        /* Both slides must reserve the height of the taller one, or the auto-rotation
+           resizes the hero every 6s and drags the whole page with it. The floors step up
+           as the viewport narrows because the copy wraps onto more lines; values come
+           from measuring both slides in all five locales at each width. */
+        .hero-slider-text { min-height: 340px; }
+        .hero-slider-card { min-height: 520px; }
         @media (max-width: 768px) {
+          .hero-slider-text { min-height: 390px; }
+          .hero-slider-card { min-height: 545px; }
           .hero-slider-grid { grid-template-columns: 1fr !important; gap: 32px !important; text-align: center; }
           .hero-slider-grid h1 { font-size: 28px !important; }
           .hero-slider-grid p { max-width: 100% !important; }
+        }
+        @media (max-width: 375px) {
+          .hero-slider-text { min-height: 415px; }
+          .hero-slider-card { min-height: 570px; }
+        }
+        @media (max-width: 340px) {
+          .hero-slider-text { min-height: 445px; }
+          .hero-slider-card { min-height: 605px; }
         }
       `}</style>
     </div>
