@@ -62,24 +62,37 @@ export default function PageTracker() {
 
         // Get country — only call external IP API if user hasn't declined tracking
         // Basic page views always tracked, but geolocation (sends IP to third party) respects opt-out
+        const timezoneRegion = () =>
+          Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[1]?.replace(/_/g, ' ') || null
+
         let country: string | null = null
         const consent = localStorage.getItem('cq_analytics_consent')
         if (consent !== 'declined') {
-          try {
-            const geo = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(2000) })
-            const geoData = await geo.json()
-            const raw = geoData.country_name || geoData.country || null
-            // Validate: only accept plain strings up to 100 chars, no HTML/script
-            if (raw && typeof raw === 'string' && raw.length <= 100 && !/[<>"'&]/.test(raw)) {
-              country = raw
+          // Country can't change mid-session, so resolve it once. Calling ipapi.co on every
+          // page view was burning the free tier — it now answers 429, which logged a console
+          // error on each view and (below) used to be parsed as if it were a real answer.
+          const cached = sessionStorage.getItem('cq_geo_country')
+          if (cached) {
+            country = cached === '-' ? timezoneRegion() : cached
+          } else {
+            try {
+              const geo = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(2000) })
+              if (!geo.ok) throw new Error(`ipapi ${geo.status}`)
+              const geoData = await geo.json()
+              const raw = geoData.country_name || geoData.country || null
+              // Validate: only accept plain strings up to 100 chars, no HTML/script
+              if (raw && typeof raw === 'string' && raw.length <= 100 && !/[<>"'&]/.test(raw)) {
+                country = raw
+              }
+            } catch {
+              // Rate limited, blocked or timed out — fall back to the timezone region
+              country = timezoneRegion()
             }
-          } catch {
-            // Fallback to timezone region
-            country = Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[1]?.replace(/_/g, ' ') || null
+            sessionStorage.setItem('cq_geo_country', country ?? '-')
           }
         } else {
           // Declined: use timezone-based region only (no external API call)
-          country = Intl.DateTimeFormat().resolvedOptions().timeZone.split('/')[1]?.replace(/_/g, ' ') || null
+          country = timezoneRegion()
         }
 
         await supabase.from('page_views').insert({
