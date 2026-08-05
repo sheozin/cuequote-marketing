@@ -6,8 +6,20 @@ export interface BlogPostSummary {
 
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
+  // Regional AV cost cluster — published together rather than on the usual 2-3 day
+  // cadence, since the three cross-link to each other and to the calculator.
   {
     slug: "av-cost-london-corporate-events",
+    category: "Guides",
+    date: "2026-08-05",
+  },
+  {
+    slug: "av-cost-dubai-uae-events",
+    category: "Guides",
+    date: "2026-08-05",
+  },
+  {
+    slug: "av-cost-warsaw-poland-events",
     category: "Guides",
     date: "2026-08-05",
   },
