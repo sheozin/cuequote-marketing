@@ -30,6 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
         'ar': `https://cuequote.com/ar${pagePath}`,
         'de': `https://cuequote.com/de${pagePath}`,
         'fr': `https://cuequote.com/fr${pagePath}`,
+        'x-default': `https://cuequote.com${pagePath}`,
       },
     },
     openGraph: {
@@ -94,6 +95,7 @@ export default async function ForEventPlannersPage() {
   return (
     <>
       <Nav />
+      <main>
 
       {/* ── Hero ───────────────────────────────────────────────────────────── */}
       <section style={{
@@ -504,6 +506,7 @@ export default async function ForEventPlannersPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </>
   );

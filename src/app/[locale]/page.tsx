@@ -93,6 +93,7 @@ export async function generateMetadata(): Promise<Metadata> {
         'ar': `https://cuequote.com/ar${pagePath}`,
         'de': `https://cuequote.com/de${pagePath}`,
         'fr': `https://cuequote.com/fr${pagePath}`,
+        'x-default': `https://cuequote.com${pagePath}`,
       },
     },
     openGraph: {
@@ -135,6 +136,7 @@ export default async function HomePage() {
   return (
     <>
       <Nav />
+      <main>
 
       {/* ── 1. Hero ─────────────────────────────────────────────────────────── */}
       <section style={{
@@ -803,6 +805,7 @@ export default async function HomePage() {
         // results under Google's structured data policy. Re-add only from a third-party source.
       }) }} />
 
+      </main>
       <Footer />
     </>
   );

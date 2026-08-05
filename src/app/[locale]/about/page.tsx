@@ -26,6 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
         'ar': `https://cuequote.com/ar${pagePath}`,
         'de': `https://cuequote.com/de${pagePath}`,
         'fr': `https://cuequote.com/fr${pagePath}`,
+        'x-default': `https://cuequote.com${pagePath}`,
       },
     },
     openGraph: {
@@ -60,6 +61,7 @@ export default async function AboutPage() {
   return (
     <>
       <Nav />
+      <main>
 
       {/* ── Section 1: Hero ─────────────────────────────────────────────── */}
       <section style={{
@@ -242,6 +244,7 @@ export default async function AboutPage() {
         subtitle={t("testimonialsSubtitle", { defaultValue: "See what AV companies and event planners say about CueQuote" })}
       />
 
+      </main>
       <Footer />
     </>
   );

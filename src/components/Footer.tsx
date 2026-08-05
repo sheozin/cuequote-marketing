@@ -63,12 +63,12 @@ export default async function Footer() {
           {/* Link sections */}
           {sections.map((section) => (
             <div key={section.title}>
-              <h4 style={{
+              <h2 style={{
                 color: "#fff", fontSize: 12, fontWeight: 700, marginBottom: 14,
                 textTransform: "uppercase", letterSpacing: 1.2,
               }}>
                 {section.title}
-              </h4>
+              </h2>
               {section.links.map(({ label, href }) => (
                 <Link key={href} href={href} style={{
                   display: "block", textDecoration: "none", color: "#64748b",
@@ -98,12 +98,12 @@ export default async function Footer() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px 32px" }}>
             {sections.map((section) => (
               <div key={section.title}>
-                <h4 style={{
+                <h2 style={{
                   color: "#fff", fontSize: 11, fontWeight: 700, marginBottom: 10,
                   textTransform: "uppercase", letterSpacing: 1.2,
                 }}>
                   {section.title}
-                </h4>
+                </h2>
                 {section.links.map(({ label, href }) => (
                   <Link key={href} href={href} style={{
                     display: "block", textDecoration: "none", color: "#64748b",

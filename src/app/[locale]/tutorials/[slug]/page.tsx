@@ -40,6 +40,7 @@ export async function generateMetadata({
         'ar': `https://cuequote.com/ar${pagePath}`,
         'de': `https://cuequote.com/de${pagePath}`,
         'fr': `https://cuequote.com/fr${pagePath}`,
+        'x-default': `https://cuequote.com${pagePath}`,
       },
     },
     openGraph: { title, description },
@@ -100,6 +101,7 @@ export default async function TutorialPage({
   return (
     <>
       <Nav />
+      <main>
       {/* Safe: structuredData is built from trusted static tutorial content, not user input */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
       <article style={{ padding: '80px 24px 60px' }}>
@@ -259,6 +261,7 @@ export default async function TutorialPage({
           </div>
         </div>
       </article>
+      </main>
       <Footer />
     </>
   )

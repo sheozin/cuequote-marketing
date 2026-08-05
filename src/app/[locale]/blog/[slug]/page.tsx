@@ -53,6 +53,7 @@ export async function generateMetadata({
         'ar': `https://cuequote.com/ar${pagePath}`,
         'de': `https://cuequote.com/de${pagePath}`,
         'fr': `https://cuequote.com/fr${pagePath}`,
+        'x-default': `https://cuequote.com${pagePath}`,
       },
     },
     openGraph: {
@@ -166,6 +167,7 @@ export default async function BlogPostPage({
   return (
     <>
       <Nav />
+      <main>
       {/* Safe: structuredData is built from trusted static data, not user input */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData }} />
 
@@ -460,6 +462,7 @@ export default async function BlogPostPage({
         </section>
       )}
 
+      </main>
       <Footer />
 
       <style>{`

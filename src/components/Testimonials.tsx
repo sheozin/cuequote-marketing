@@ -199,17 +199,24 @@ export function Testimonials({ title, subtitle }: { title: string; subtitle: str
           </div>
 
           {/* Dots */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 6, marginTop: 20 }}>
+          {/* The dot stays small; the button around it is a 24px tap target with a label. */}
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 2, marginTop: 12 }}>
             {testimonials.map((_, i) => (
               <button
                 key={i}
                 onClick={() => scrollTo(i)}
+                aria-label={`${title} — ${i + 1}`}
+                aria-current={active === i}
                 style={{
-                  width: active === i ? 24 : 8, height: 8, borderRadius: 4,
-                  background: active === i ? '#10b981' : '#d1d5db',
-                  border: 'none', cursor: 'pointer', transition: 'all 0.3s', padding: 0,
+                  width: 24, height: 24, padding: 0, display: 'flex', alignItems: 'center',
+                  justifyContent: 'center', background: 'none', border: 'none', cursor: 'pointer',
                 }}
-              />
+              >
+                <span style={{
+                  display: 'block', width: active === i ? 24 : 8, height: 8, borderRadius: 4,
+                  background: active === i ? '#10b981' : '#d1d5db', transition: 'all 0.3s',
+                }} />
+              </button>
             ))}
           </div>
         </div>

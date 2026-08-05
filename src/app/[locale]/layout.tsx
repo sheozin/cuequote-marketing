@@ -101,6 +101,16 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const dir = locale === "ar" ? "rtl" : "ltr";
 
+  // Only these namespaces reach the browser. Handing the provider the whole message
+  // file serialised ~600KB of docs and blog prose into every page's payload, none of
+  // which any Client Component reads — server components use getTranslations instead.
+  // Add a namespace here when a new Client Component calls useTranslations on it,
+  // otherwise next-intl will throw MISSING_MESSAGE at runtime.
+  const clientNamespaces = ["nav", "subscribe", "consent", "contact"] as const;
+  const clientMessages = Object.fromEntries(
+    clientNamespaces.map((ns) => [ns, messages[ns]]),
+  );
+
   return (
     <html lang={locale} dir={dir} className={`${inter.variable} ${dmSans.variable} ${cairo.variable}`}>
       <head>
@@ -109,7 +119,7 @@ export default async function LocaleLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString }} />
       </head>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={clientMessages}>
           <Analytics />
           <CampaignBanner />
           <CookieConsent />

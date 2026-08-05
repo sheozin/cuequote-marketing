@@ -23,6 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
         'ar': `https://cuequote.com/ar${pagePath}`,
         'de': `https://cuequote.com/de${pagePath}`,
         'fr': `https://cuequote.com/fr${pagePath}`,
+        'x-default': `https://cuequote.com${pagePath}`,
       },
     },
     openGraph: {
@@ -211,6 +212,7 @@ export default async function DocsPage() {
   return (
     <>
       <Nav />
+      <main>
 
       {/* Hero */}
       <section
@@ -466,6 +468,7 @@ export default async function DocsPage() {
         }
       `}</style>
 
+      </main>
       <Footer />
     </>
   );

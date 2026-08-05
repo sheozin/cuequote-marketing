@@ -24,6 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
         'ar': `https://cuequote.com/ar${pagePath}`,
         'de': `https://cuequote.com/de${pagePath}`,
         'fr': `https://cuequote.com/fr${pagePath}`,
+        'x-default': `https://cuequote.com${pagePath}`,
       },
     },
     openGraph: {
@@ -67,6 +68,7 @@ export default async function TutorialsPage() {
   return (
     <>
       <Nav />
+      <main>
       {/* Safe: breadcrumbLd is built from static data, not user input */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: breadcrumbLd }} />
 
@@ -434,6 +436,7 @@ export default async function TutorialsPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </>
   );

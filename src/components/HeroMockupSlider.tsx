@@ -173,9 +173,25 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
             </>
           )}
         </div>
-        <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 16 }}>
-          <button onClick={() => handleDotClick(0)} style={{ width: active === 0 ? 24 : 8, height: 8, borderRadius: 4, background: active === 0 ? "#10b981" : "#d1d5db", border: "none", cursor: "pointer", transition: "all 0.3s" }} />
-          <button onClick={() => handleDotClick(1)} style={{ width: active === 1 ? 24 : 8, height: 8, borderRadius: 4, background: active === 1 ? "#10b981" : "#d1d5db", border: "none", cursor: "pointer", transition: "all 0.3s" }} />
+        {/* The dot stays small; the button around it is a 24px tap target with a label. */}
+        <div style={{ display: "flex", justifyContent: "center", gap: 4, marginTop: 8 }}>
+          {[t.heroAvGenerated || "AI Generated Proposal", t.heroPlannerGenerated || "AI Production Plan"].map((label, i) => (
+            <button
+              key={i}
+              onClick={() => handleDotClick(i)}
+              aria-label={label}
+              aria-current={active === i}
+              style={{
+                width: 24, height: 24, padding: 0, display: "flex", alignItems: "center",
+                justifyContent: "center", background: "none", border: "none", cursor: "pointer",
+              }}
+            >
+              <span style={{
+                display: "block", width: active === i ? 24 : 8, height: 8, borderRadius: 4,
+                background: active === i ? "#10b981" : "#d1d5db", transition: "all 0.3s",
+              }} />
+            </button>
+          ))}
         </div>
       </div>
       <style>{`
