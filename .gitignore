@@ -42,3 +42,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Playwright/test output — this repo has no test runner; the dir is stray.
+test-results/

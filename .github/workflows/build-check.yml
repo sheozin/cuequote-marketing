@@ -1,0 +1,71 @@
+name: Build Check
+
+# Catches a broken commit BEFORE Vercel does.
+#
+# This repo had no push-triggered CI at all — its only workflow was the Monday
+# security audit — so a build error surfaced only as a failed Vercel deploy
+# after the fact, with the bad commit already on main. The app repo has a
+# pre-push typecheck hook plus three workflows; this closes that asymmetry.
+#
+# Deliberately two cheap checks and nothing else. It gates every push to main,
+# so it has to stay fast or it gets ignored.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# A newer push supersedes an in-flight run for the same ref — only the tip
+# matters, and stale runs waste minutes on a private repo.
+concurrency:
+  group: build-check-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Translations and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # --ignore-scripts prevents postinstall RCE from malicious packages,
+      # matching security-audit.yml.
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      # First, because it is the fastest and the most frequently broken: adding
+      # an en.json key without the other four locales ships raw translation keys
+      # to users. This was a manual pre-push step that depended on remembering.
+      - name: Check translations are complete
+        run: npm run check-translations
+
+      # Lint is deliberately NOT run here. `npm run lint` is broken independently
+      # of any commit: eslint-config-next@16 bundles an eslint-plugin-react that
+      # throws on ESLint 10 ("contextOrFilename.getFilename is not a function").
+      # Its peer range says eslint >=9, so npm installs it happily and it fails
+      # at runtime. Fixing means downgrading ESLint 10 -> 9, which is a call to
+      # make deliberately, not a side effect of adding CI. Add the step back the
+      # moment `npm run lint` exits 0 locally.
+
+      # Next reads NEXT_PUBLIC_* at build time. Supply placeholders so a missing
+      # secret cannot fail the build for a reason unrelated to the commit — this
+      # gate is about broken code, not about environment parity with Vercel.
+      - name: Build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder-anon-key
+        run: npm run build
