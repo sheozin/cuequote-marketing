@@ -11,26 +11,31 @@
  * drift the damage is limited to the indicative number on this page and can
  * never reach a real proposal.
  *
- * Base reference = Western Europe (1.0x). The day-rates in AvCostCalculator are
- * quoted from /blog/event-av-cost-price-guide-2026 and sit at that base.
+ * Base reference = Western Europe (1.0x). Two multipliers, not one: AV hardware
+ * is bought on a global market so its rental barely moves between countries,
+ * while crew is local and varies enormously. A 2026-08-07 audit of published
+ * rates in 13 regions found the two moving independently in every market.
+ *
+ * The day-rates in AvCostCalculator are quoted from
+ * /blog/event-av-cost-price-guide-2026 and sit at that base.
  */
 
-export const REGION_MULTIPLIERS: Record<string, number> = {
-  gulf: 2.5,
-  usa_tier1: 1.8,
-  usa_tier2: 1.4,
-  uk: 1.4,
-  western_eu: 1.0,
-  scandinavia: 1.3,
-  eastern_eu: 1.0, // parity, not a discount — see regionPricing.ts for why
-  egypt: 0.4,
-  turkey: 0.45,
-  india: 0.3,
-  southeast_asia: 0.5,
-  east_asia: 1.3,
-  australia: 1.5,
-  latam: 0.5,
-  africa: 0.4,
+export const REGION_MULTIPLIERS: Record<string, { equipment: number; labour: number }> = {
+  gulf: { equipment: 0.8, labour: 0.65 },
+  usa_tier1: { equipment: 1.0, labour: 1.6 },
+  usa_tier2: { equipment: 1.0, labour: 1.35 },
+  uk: { equipment: 1.4, labour: 0.75 },
+  western_eu: { equipment: 1.0, labour: 1.0 },
+  scandinavia: { equipment: 1.3, labour: 1.4 },
+  eastern_eu: { equipment: 1.0, labour: 0.8 },
+  egypt: { equipment: 0.4, labour: 0.4 },
+  turkey: { equipment: 0.35, labour: 0.3 },
+  india: { equipment: 0.3, labour: 0.3 },
+  southeast_asia: { equipment: 0.5, labour: 0.5 },
+  east_asia: { equipment: 1.3, labour: 0.4 },
+  australia: { equipment: 1.5, labour: 1.4 },
+  latam: { equipment: 0.5, labour: 0.5 },
+  africa: { equipment: 0.4, labour: 0.4 },
 }
 
 /**

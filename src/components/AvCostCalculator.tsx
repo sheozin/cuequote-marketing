@@ -49,6 +49,9 @@ const RATES = {
   setupCrew: { low: 250, high: 400 },
 } as const
 
+/** Lines billed per person-day — these take the labour multiplier, not equipment. */
+const CREW_KEYS = new Set(['audioEngineer', 'lightingTech', 'technician', 'projectLead', 'setupCrew'])
+
 const SHORT_NOTICE_SURCHARGE = { low: 0.2, high: 0.5 }  // booking inside 2 weeks
 
 type Range = { low: number; high: number }
@@ -111,9 +114,15 @@ export function AvCostCalculator({
   const market: Market = findMarket(marketId)
   // Base rates are Western-European USD. Two steps get us to the visitor's
   // market: the regional multiplier, then the currency conversion.
-  const multiplier = REGION_MULTIPLIERS[market.region] ?? 1
+  //
+  // Equipment and crew take different multipliers. AV hardware is bought on a
+  // global market so its rental barely moves between countries; crew is local
+  // and varies enormously — in Japan the equipment costs more than the Western
+  // European base while the crew costs about a third of it.
+  const region = REGION_MULTIPLIERS[market.region] ?? { equipment: 1, labour: 1 }
   const fx = rates[market.currency] ?? 1
-  const factor = multiplier * fx
+  const equipmentFactor = region.equipment * fx
+  const labourFactor = region.labour * fx
 
   // Country names come from Intl in the visitor's own language, so the list of
   // 65 markets needs no translation and cannot fall out of sync with the locales.
@@ -142,6 +151,7 @@ export function AvCostCalculator({
     const push = (key: string, label: string, detail: string, rate: Range, qty: number) => {
       if (qty <= 0) return
       // Scaling by qty and by the market factor at once — both are linear.
+      const factor = CREW_KEYS.has(key) ? labourFactor : equipmentFactor
       const r = times(rate, qty * factor)
       lines.push({ key, label, detail, qty, ...r })
     }
@@ -214,7 +224,7 @@ export function AvCostCalculator({
       : { low: 0, high: 0 }
 
     return { lines, subtotal, surcharge, total: add(subtotal, surcharge) }
-  }, [attendees, days, video, lighting, staging, streaming, shortNotice, labels, factor])
+  }, [attendees, days, video, lighting, staging, streaming, shortNotice, labels, equipmentFactor, labourFactor])
 
   const categories = [labels.catAudio, labels.catVideo, labels.catLighting, labels.catStaging, labels.catCrew]
     .map((cat) => {
