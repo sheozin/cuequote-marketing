@@ -53,13 +53,18 @@ jobs:
       - name: Check translations are complete
         run: npm run check-translations
 
-      # Lint is deliberately NOT run here. `npm run lint` is broken independently
-      # of any commit: eslint-config-next@16 bundles an eslint-plugin-react that
-      # throws on ESLint 10 ("contextOrFilename.getFilename is not a function").
-      # Its peer range says eslint >=9, so npm installs it happily and it fails
-      # at runtime. Fixing means downgrading ESLint 10 -> 9, which is a call to
-      # make deliberately, not a side effect of adding CI. Add the step back the
-      # moment `npm run lint` exits 0 locally.
+      # Ratcheted, not absolute: `lint:ci` is `eslint --max-warnings 37`, today's
+      # count. It cannot fail on the pre-existing debt, and it fails the moment a
+      # commit adds even one new warning.
+      #
+      # A plain `eslint` would be decorative here — Next's recommended config
+      # sets most of its rules (no-img-element included) to warn, so lint exits 0
+      # with brand new violations present. Verified by planting one: plain lint
+      # exited 0, lint:ci exited 1.
+      #
+      # Lower the 37 as debt is paid down; it should only ever go down.
+      - name: Lint
+        run: npm run lint:ci
 
       # Next reads NEXT_PUBLIC_* at build time. Supply placeholders so a missing
       # secret cannot fail the build for a reason unrelated to the commit — this
