@@ -2259,6 +2259,16 @@
       "step3": "Pointez votre caméra sur le code QR ; votre application ajoutera une entrée CueQuote et affichera un code à 6 chiffres qui se renouvelle automatiquement",
       "step4": "Saisissez le code à 6 chiffres actuel de votre application dans le champ de confirmation et cliquez sur Vérifier et activer — la 2FA est maintenant active sur votre compte. Conservez vos codes de secours dans un endroit sûr.",
       "tip": "Si vous perdez l'accès à votre application d'authentification, utilisez l'un des codes de secours fournis lors de la configuration pour retrouver l'accès. Conservez ces codes hors ligne ou dans un gestionnaire de mots de passe — ils ne peuvent pas être récupérés ultérieurement."
+    },
+    "costCalculator": {
+      "title": "Démarrer depuis le calculateur de coûts",
+      "content1": "Le calculateur de coûts AV sur cuequote.com chiffre un événement dans votre marché et votre devise. Une fois l’estimation satisfaisante, elle est reprise directement dans CueQuote : votre premier devis s’ouvre déjà rempli avec l’événement chiffré, au lieu d’un formulaire vide.",
+      "content2": "L’estimation est indicative, ce n’est pas un devis. CueQuote rechiffre tout à partir de votre catalogue et de vos tarifs : ce que reçoit le client, ce sont toujours vos prix, jamais ceux du calculateur.",
+      "step1": "Ouvrez le calculateur de coûts AV et choisissez le pays de l’événement. Les prix et la devise s’adaptent à ce marché.",
+      "step2": "Indiquez le nombre de participants et de jours, puis choisissez vidéo, éclairage et scène. Le détail affiche chaque ligne au fur et à mesure.",
+      "step3": "Cliquez sur « Continuer avec cette estimation ». Votre configuration vous suit jusqu’à la page d’inscription.",
+      "step4": "Créez votre compte et confirmez votre e-mail. À l’ouverture du premier devis, participants, jours, devise et matériel sont déjà là — modifiables avant génération.",
+      "tip": "Le matériel et les équipes sont chiffrés séparément selon le marché. Le matériel AV coûte à peu près pareil partout car il s’achète mondialement, alors que les tarifs des équipes sont locaux — d’où deux pays aux coûts matériel proches mais aux coûts d’équipe très différents."
     }
   },
   "changelog": {

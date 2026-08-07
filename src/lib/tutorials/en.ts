@@ -18,6 +18,11 @@ export const TUTORIALS_EN: Tutorial[] = [
     ],
     steps: [
       {
+        title: 'Start from the cost calculator (optional)',
+        content: 'If you are not sure what your event should cost, open the AV cost calculator on cuequote.com first. Choose the country where the event takes place, set the attendee count and days, and pick your video, lighting and staging. When the estimate looks right, click "Continue with this estimate" — your configuration travels with you through signup and your first proposal opens already filled in.',
+        tip: 'Equipment and crew are priced separately by market, so the estimate reflects where your event actually is rather than a single global average.',
+      },
+      {
         title: 'Sign up for CueQuote',
         content: 'Go to app.cuequote.com and click "Create account". Enter your full name, email address, and a password (minimum 8 characters). You\'ll receive a confirmation email — click the link to verify your account. The confirmation screen will automatically redirect you once verified.',
         tip: 'Use your work email so clients see a professional sender when you share proposals.',

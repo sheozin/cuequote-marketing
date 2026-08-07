@@ -59,6 +59,12 @@ const ARTICLE_KEYS = [
     contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
   },
+  {
+    id: "cost-calculator",
+    key: "costCalculator",
+    contentKeys: ["content1", "content2"],
+    stepKeys: ["step1", "step2", "step3", "step4"],
+  },
   // ── Set up your equipment ──
   {
     id: "equipment-catalog",

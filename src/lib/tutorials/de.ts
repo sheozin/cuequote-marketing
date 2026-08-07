@@ -18,6 +18,11 @@ export const TUTORIALS_DE: Tutorial[] = [
     ],
     steps: [
       {
+        title: 'Mit dem Kostenrechner beginnen (optional)',
+        content: 'Wenn Sie unsicher sind, was Ihre Veranstaltung kosten sollte, öffnen Sie zuerst den AV-Kostenrechner auf cuequote.com. Wählen Sie das Land der Veranstaltung, legen Sie Teilnehmerzahl und Tage fest und wählen Sie Video, Licht und Bühne. Passt die Schätzung, klicken Sie auf „Mit dieser Schätzung fortfahren“ — Ihre Konfiguration wird durch die Registrierung mitgenommen und Ihr erstes Angebot öffnet sich bereits ausgefüllt.',
+        tip: 'Technik und Personal werden je Markt getrennt kalkuliert, sodass die Schätzung den tatsächlichen Veranstaltungsort abbildet statt eines globalen Mittelwerts.',
+      },
+      {
         title: 'Bei CueQuote registrieren',
         content: 'Rufen Sie app.cuequote.com auf und klicken Sie auf "Konto erstellen". Geben Sie Ihren vollständigen Namen, Ihre E-Mail-Adresse und ein Passwort (mindestens 8 Zeichen) ein. Sie erhalten eine Bestätigungs-E-Mail — klicken Sie auf den Link, um Ihr Konto zu verifizieren. Der Bestätigungsbildschirm leitet Sie nach der Verifizierung automatisch weiter.',
         tip: 'Verwenden Sie Ihre geschäftliche E-Mail-Adresse, damit Kunden beim Versand von Angeboten einen professionellen Absender sehen.',

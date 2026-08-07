@@ -2257,6 +2257,16 @@
       "step3": "Richten Sie Ihre Kamera auf den QR-Code; Ihre App fügt einen CueQuote-Eintrag hinzu und zeigt einen rotierenden 6-stelligen Code an",
       "step4": "Geben Sie den aktuellen 6-stelligen Code aus Ihrer App in das Bestätigungsfeld ein und klicken Sie Verifizieren & Aktivieren — 2FA ist jetzt auf Ihrem Konto aktiv. Bewahren Sie Ihre Backup-Codes an einem sicheren Ort auf.",
       "tip": "Wenn Sie den Zugang zu Ihrer Authentifizierungs-App verlieren, verwenden Sie einen der während der Einrichtung bereitgestellten Backup-Codes, um wieder Zugang zu erhalten. Bewahren Sie diese Codes offline oder in einem Passwort-Manager auf — sie können später nicht abgerufen werden."
+    },
+    "costCalculator": {
+      "title": "Mit dem Kostenrechner beginnen",
+      "content1": "Der AV-Kostenrechner auf cuequote.com kalkuliert eine Veranstaltung in Ihrem Markt und Ihrer Währung. Wenn die Schätzung passt, wird sie direkt nach CueQuote übernommen — Ihr erstes Angebot öffnet sich bereits mit der kalkulierten Veranstaltung ausgefüllt statt als leeres Formular.",
+      "content2": "Die Schätzung dient der Orientierung und ist kein Angebot. CueQuote kalkuliert alles neu aus Ihrem eigenen Katalog und Ihren Sätzen — was der Kunde erhält, sind immer Ihre Preise, nie die des Rechners.",
+      "step1": "Öffnen Sie den AV-Kostenrechner und wählen Sie das Land der Veranstaltung. Preise und Währung passen sich diesem Markt an.",
+      "step2": "Legen Sie Teilnehmerzahl und Tage fest und wählen Sie Video, Licht und Bühne. Die Aufschlüsselung zeigt jede Position mit.",
+      "step3": "Klicken Sie auf „Mit dieser Schätzung fortfahren“. Ihre Konfiguration wird zur Registrierung mitgenommen.",
+      "step4": "Konto anlegen und E-Mail bestätigen. Beim ersten Angebot sind Teilnehmerzahl, Tage, Währung und Technik bereits eingetragen — vor dem Generieren beliebig anpassbar.",
+      "tip": "Technik und Personal werden je Markt getrennt kalkuliert. AV-Technik kostet weltweit annähernd gleich, weil sie global eingekauft wird, während Crew-Sätze lokal sind — deshalb können zwei Länder ähnliche Technikkosten, aber sehr unterschiedliche Personalkosten haben."
     }
   },
   "changelog": {

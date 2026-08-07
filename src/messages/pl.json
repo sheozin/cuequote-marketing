@@ -2231,6 +2231,16 @@
       "step3": "Skieruj aparat na kod QR; aplikacja doda wpis CueQuote i wyświetli obracający się 6-cyfrowy kod",
       "step4": "Wprowadź aktualny 6-cyfrowy kod z aplikacji w polu potwierdzenia i kliknij Zweryfikuj i włącz — 2FA jest teraz aktywne na Twoim koncie. Przechowuj kody zapasowe w bezpiecznym miejscu.",
       "tip": "Jeśli utracisz dostęp do aplikacji uwierzytelniającej, użyj jednego z kodów zapasowych dostarczonych podczas konfiguracji, aby odzyskać dostęp. Przechowuj te kody offline lub w menedżerze haseł — nie można ich pobrać później."
+    },
+    "costCalculator": {
+      "title": "Zacznij od kalkulatora kosztów",
+      "content1": "Kalkulator kosztów AV na cuequote.com wycenia wydarzenie w Twoim rynku i Twojej walucie. Kiedy wycena Ci odpowiada, przechodzi prosto do CueQuote — pierwsza oferta otworzy się już wypełniona wycenionym wydarzeniem, zamiast pustego formularza.",
+      "content2": "Wycena ma charakter orientacyjny i nie jest ofertą. CueQuote przelicza wszystko na podstawie Twojego katalogu i Twoich stawek, więc to, co wysyłasz klientowi, to zawsze Twoje ceny, nigdy ceny kalkulatora.",
+      "step1": "Otwórz kalkulator kosztów AV i wybierz kraj, w którym odbywa się wydarzenie. Ceny i waluta dostosują się do tego rynku.",
+      "step2": "Ustaw liczbę uczestników i dni, następnie wybierz opcje wideo, oświetlenia i sceny. Zestawienie pokazuje każdą pozycję na bieżąco.",
+      "step3": "Kliknij „Kontynuuj z tą wyceną”. Twoja konfiguracja przechodzi razem z Tobą na stronę rejestracji.",
+      "step4": "Załóż konto i potwierdź adres e-mail. Gdy otworzysz pierwszą ofertę, liczba uczestników, dni, waluta i sprzęt już tam będą — możesz wszystko zmienić przed wygenerowaniem.",
+      "tip": "Sprzęt i obsługa są wyceniane osobno dla każdego rynku. Sprzęt AV kosztuje podobnie na całym świecie, bo kupowany jest globalnie, natomiast stawki ekipy są lokalne — dlatego dwa kraje mogą mieć zbliżone koszty sprzętu, ale bardzo różne koszty obsługi."
     }
   },
   "changelog": {

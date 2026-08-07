@@ -2258,6 +2258,16 @@
       "step3": "Point your camera at the QR code; your app will add a CueQuote entry and display a rotating 6-digit code",
       "step4": "Enter the current 6-digit code from your app into the confirmation field and click Verify & Enable — 2FA is now active on your account. Store your backup codes in a safe place.",
       "tip": "If you lose access to your authenticator app, use one of the backup codes provided during setup to regain entry. Store these codes offline or in a password manager — they cannot be retrieved later."
+    },
+    "costCalculator": {
+      "title": "Start From the Cost Calculator",
+      "content1": "The AV cost calculator on cuequote.com prices an event in your own market and currency. Once you are happy with the estimate, it carries straight into CueQuote — your first proposal opens already filled in with the event you priced, rather than an empty form.",
+      "content2": "The estimate is orientation, not a quote. CueQuote re-prices everything from your own catalogue and your own rates, so what you send a client is always your pricing, never the calculator’s.",
+      "step1": "Open the AV cost calculator and choose the country where the event takes place. Prices and currency update to that market.",
+      "step2": "Set the attendee count and number of days, then pick your video, lighting and staging options. The breakdown shows each line as you go.",
+      "step3": "Click \"Continue with this estimate\". Your configuration travels with you to the signup page.",
+      "step4": "Create your account and confirm your email. When you open your first proposal, the attendee count, days, currency and equipment are already there — adjust anything before generating.",
+      "tip": "Equipment and crew are priced separately by market. AV hardware costs much the same worldwide because it is bought globally, while crew rates are local — which is why two countries can show similar equipment costs but very different crew costs."
     }
   },
   "changelog": {

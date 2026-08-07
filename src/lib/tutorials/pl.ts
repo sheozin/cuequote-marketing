@@ -18,6 +18,11 @@ export const TUTORIALS_PL: Tutorial[] = [
     ],
     steps: [
       {
+        title: 'Zacznij od kalkulatora kosztów (opcjonalnie)',
+        content: 'Jeśli nie masz pewności, ile powinno kosztować Twoje wydarzenie, otwórz najpierw kalkulator kosztów AV na cuequote.com. Wybierz kraj wydarzenia, ustaw liczbę uczestników i dni oraz opcje wideo, oświetlenia i sceny. Gdy wycena będzie odpowiednia, kliknij „Kontynuuj z tą wyceną” — konfiguracja przejdzie z Tobą przez rejestrację, a pierwsza oferta otworzy się już wypełniona.',
+        tip: 'Sprzęt i obsługa wyceniane są osobno dla każdego rynku, więc wycena odzwierciedla miejsce wydarzenia, a nie jedną globalną średnią.',
+      },
+      {
         title: 'Zarejestruj się w CueQuote',
         content: 'Wejdź na app.cuequote.com i kliknij „Utwórz konto”. Wpisz imię i nazwisko, adres e-mail oraz hasło (minimum 8 znaków). Otrzymasz e-mail z potwierdzeniem — kliknij link, aby zweryfikować konto. Ekran potwierdzenia automatycznie Cię przekieruje po weryfikacji.',
         tip: 'Użyj służbowego adresu e-mail, aby klienci widzieli profesjonalnego nadawcę podczas udostępniania ofert.',
