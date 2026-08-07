@@ -28,7 +28,7 @@ export const REGION_MULTIPLIERS: Record<string, { equipment: number; labour: num
   western_eu: { equipment: 1.0, labour: 1.0 },
   scandinavia: { equipment: 1.3, labour: 1.4 },
   eastern_eu: { equipment: 1.0, labour: 0.8 },
-  egypt: { equipment: 0.4, labour: 0.4 },
+  egypt: { equipment: 0.4, labour: 0.2 },
   turkey: { equipment: 0.35, labour: 0.3 },
   india: { equipment: 0.3, labour: 0.3 },
   southeast_asia: { equipment: 0.5, labour: 0.5 },
