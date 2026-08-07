@@ -35,6 +35,7 @@ export const REGION_MULTIPLIERS: Record<string, { equipment: number; labour: num
   east_asia: { equipment: 1.3, labour: 0.4 },
   australia: { equipment: 1.5, labour: 1.4 },
   latam: { equipment: 0.5, labour: 0.5 },
+  south_africa: { equipment: 0.65, labour: 0.5 },
   africa: { equipment: 0.4, labour: 0.4 },
 }
 
@@ -104,7 +105,7 @@ export const MARKETS: Market[] = [
   // Middle East / Africa
   { id: 'eg', country: 'EG', region: 'egypt', currency: 'EGP' },
   { id: 'tr', country: 'TR', region: 'turkey', currency: 'TRY' },
-  { id: 'za', country: 'ZA', region: 'africa', currency: 'ZAR' },
+  { id: 'za', country: 'ZA', region: 'south_africa', currency: 'ZAR' },
   { id: 'ke', country: 'KE', region: 'africa', currency: 'KES' },
   { id: 'ng', country: 'NG', region: 'africa', currency: 'NGN' },
   { id: 'gh', country: 'GH', region: 'africa', currency: 'GHS' },
