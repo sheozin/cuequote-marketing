@@ -1,12 +1,18 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { MARKETS, REGION_MULTIPLIERS, findMarket, type Market } from '../lib/marketPricing'
 
 /**
  * Every figure below is quoted from our own published price guide,
  * /blog/event-av-cost-price-guide-2026, so the calculator and the article can never
- * drift apart. They are market day-rates in USD, and they are orientation rather than
- * a binding quote — the UI says so, and the article says so.
+ * drift apart. They are day-rates in USD for the Western European market, which is
+ * the 1.0x base the app prices proposals against (see lib/marketPricing.ts). Every
+ * other market is derived from these by multiplier, so the two can never disagree
+ * about which market a number belongs to.
+ *
+ * They are orientation rather than a binding quote — the UI says so, and the
+ * article says so.
  *
  * If the guide is updated, update these together.
  */
@@ -51,7 +57,19 @@ type Line = { key: string; label: string; detail: string; qty: number } & Range
 const add = (a: Range, b: Range): Range => ({ low: a.low + b.low, high: a.high + b.high })
 const times = (r: Range, n: number): Range => ({ low: r.low * n, high: r.high * n })
 
+/**
+ * An estimate that reads 18,432 claims a precision it does not have. Three
+ * significant figures keeps it honest without rounding a €900 line to nothing.
+ */
+function roundish(n: number): number {
+  if (n <= 0) return 0
+  const mag = Math.pow(10, Math.floor(Math.log10(n)) - 2)
+  return Math.round(n / mag) * mag
+}
+
 export interface CalculatorLabels {
+  market: string; marketHint: string; marketMetro: string; marketOther: string
+  ratesNote: string
   attendees: string; days: string; video: string; lighting: string; staging: string
   streaming: string; shortNotice: string; shortNoticeHint: string
   none: string; projector: string; ledSmall: string; ledLarge: string
@@ -60,16 +78,26 @@ export interface CalculatorLabels {
   yourEstimate: string; perDay: string; oneOff: string; qty: string
   breakdown: string; catAudio: string; catVideo: string; catLighting: string
   catStaging: string; catCrew: string; catSurcharge: string
+  /** Equipment name per RATES key — the detail strings alone ("for 2 × 1") mean nothing. */
+  items: Record<string, string>
   excludedTitle: string; excluded: string
   sourceNote: string; sourceLink: string
   ctaTitle: string; ctaBody: string; ctaButton: string
 }
 
-export function AvCostCalculator({ labels, guideHref, signupHref }: {
+export function AvCostCalculator({
+  labels, guideHref, signupHref, defaultMarket, rates, locale,
+}: {
   labels: CalculatorLabels
   guideHref: string
   signupHref: string
+  /** Market id preselected from the visitor's IP country, overridable below. */
+  defaultMarket: string
+  /** Units of currency per 1 USD. */
+  rates: Record<string, number>
+  locale: string
 }) {
+  const [marketId, setMarketId] = useState(defaultMarket)
   const [attendees, setAttendees] = useState(200)
   const [days, setDays] = useState(1)
   const [video, setVideo] = useState<'none' | 'projector' | 'ledSmall' | 'ledLarge'>('projector')
@@ -80,11 +108,41 @@ export function AvCostCalculator({ labels, guideHref, signupHref }: {
   const [streaming, setStreaming] = useState(false)
   const [shortNotice, setShortNotice] = useState(false)
 
+  const market: Market = findMarket(marketId)
+  // Base rates are Western-European USD. Two steps get us to the visitor's
+  // market: the regional multiplier, then the currency conversion.
+  const multiplier = REGION_MULTIPLIERS[market.region] ?? 1
+  const fx = rates[market.currency] ?? 1
+  const factor = multiplier * fx
+
+  // Country names come from Intl in the visitor's own language, so the list of
+  // 65 markets needs no translation and cannot fall out of sync with the locales.
+  const marketOptions = useMemo(() => {
+    const names = new Intl.DisplayNames([locale], { type: 'region' })
+    return MARKETS
+      .map((m) => {
+        const base = names.of(m.country) ?? m.country
+        const suffix = m.suffix === 'metro' ? labels.marketMetro
+          : m.suffix === 'other' ? labels.marketOther : null
+        return { id: m.id, currency: m.currency, name: suffix ? `${base} (${suffix})` : base }
+      })
+      .sort((a, b) => a.name.localeCompare(b.name, locale))
+  }, [locale, labels.marketMetro, labels.marketOther])
+
+  const money = useMemo(() => {
+    const fmt = new Intl.NumberFormat(locale, {
+      style: 'currency', currency: market.currency,
+      maximumFractionDigits: 0, minimumFractionDigits: 0,
+    })
+    return (n: number) => fmt.format(roundish(n))
+  }, [locale, market.currency])
+
   const { lines, subtotal, surcharge, total } = useMemo(() => {
     const lines: Line[] = []
     const push = (key: string, label: string, detail: string, rate: Range, qty: number) => {
       if (qty <= 0) return
-      const r = times(rate, qty)
+      // Scaling by qty and by the market factor at once — both are linear.
+      const r = times(rate, qty * factor)
       lines.push({ key, label, detail, qty, ...r })
     }
 
@@ -103,7 +161,9 @@ export function AvCostCalculator({ labels, guideHref, signupHref }: {
     // ── Video
     if (video === 'projector') {
       const big = attendees > 300
-      push('projector', labels.catVideo, labels.projector, big ? RATES.projectorLarge : RATES.projector, days)
+      // Detail is the day count, not labels.projector — the line already carries
+      // the name, and the screen is billed as its own line below.
+      push('projector', labels.catVideo, `${days} × ${labels.perDay}`, big ? RATES.projectorLarge : RATES.projector, days)
       push('screen', labels.catVideo, `${days} × ${labels.perDay}`,
         attendees <= 100 ? RATES.screenTripod : RATES.screen, days)
     } else if (video === 'ledSmall') {
@@ -154,7 +214,7 @@ export function AvCostCalculator({ labels, guideHref, signupHref }: {
       : { low: 0, high: 0 }
 
     return { lines, subtotal, surcharge, total: add(subtotal, surcharge) }
-  }, [attendees, days, video, lighting, staging, streaming, shortNotice, labels])
+  }, [attendees, days, video, lighting, staging, streaming, shortNotice, labels, factor])
 
   const categories = [labels.catAudio, labels.catVideo, labels.catLighting, labels.catStaging, labels.catCrew]
     .map((cat) => {
@@ -163,11 +223,54 @@ export function AvCostCalculator({ labels, guideHref, signupHref }: {
     })
     .filter(Boolean) as { cat: string; total: Range; lines: Line[] }[]
 
+  /**
+   * Everything the visitor configured, encoded onto the signup link so the app
+   * can open a proposal already filled in. Without this the estimate is thrown
+   * away at the click and they land on an empty form.
+   *
+   * We send the region KEY, not the multiplier — the app re-prices from its own
+   * table, so an indicative figure from this page can never become a real one.
+   * The totals travel only so the app can show "you estimated X" for continuity.
+   *
+   * Field names are short because this sits in a shared URL. v pins the shape:
+   * the app ignores anything it does not recognise.
+   */
+  const ctaHref = useMemo(() => {
+    const payload = {
+      v: 1,
+      a: attendees, d: days,
+      vid: video, li: lighting, st: staging,
+      sr: streaming, sn: shortNotice,
+      m: market.id, r: market.region, cur: market.currency,
+      lo: Math.round(total.low), hi: Math.round(total.high),
+    }
+    // JSON is ASCII-only here (ids and enums), so btoa is safe without escaping.
+    const encoded = btoa(JSON.stringify(payload))
+      .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
+    const sep = signupHref.includes('?') ? '&' : '?'
+    return `${signupHref}${sep}calc=${encoded}`
+  }, [attendees, days, video, lighting, staging, streaming, shortNotice, market, total, signupHref])
+
   return (
     <div className="avcalc">
       <div className="avcalc-grid">
         {/* ── Inputs ─────────────────────────────────────────── */}
         <div className="avcalc-inputs">
+          <label className="avcalc-field">
+            <span className="avcalc-label">{labels.market}</span>
+            <select
+              className="avcalc-select"
+              value={marketId}
+              onChange={(e) => setMarketId(e.target.value)}
+              aria-label={labels.market}
+            >
+              {marketOptions.map((m) => (
+                <option key={m.id} value={m.id}>{m.name} · {m.currency}</option>
+              ))}
+            </select>
+            <span className="avcalc-hint">{labels.marketHint}</span>
+          </label>
+
           <label className="avcalc-field">
             <span className="avcalc-label">{labels.attendees}</span>
             <div className="avcalc-rowline">
@@ -217,30 +320,42 @@ export function AvCostCalculator({ labels, guideHref, signupHref }: {
           <div className="avcalc-total">
             <span className="avcalc-totlabel">{labels.yourEstimate}</span>
             <span className="avcalc-figure">
-              ${Math.round(total.low).toLocaleString('en-US')}
+              {money(total.low)}
               <span className="avcalc-dash"> – </span>
-              ${Math.round(total.high).toLocaleString('en-US')}
+              {money(total.high)}
             </span>
           </div>
 
           <div className="avcalc-breakdown">
             <span className="avcalc-bdtitle">{labels.breakdown}</span>
-            {categories.map(({ cat, total: t }) => (
-              <div className="avcalc-bdrow" key={cat}>
-                <span>{cat}</span>
-                <span className="avcalc-bdfig">
-                  ${Math.round(t.low).toLocaleString('en-US')} – ${Math.round(t.high).toLocaleString('en-US')}
-                </span>
+            {categories.map(({ cat, total: t, lines: catLines }) => (
+              <div key={cat}>
+                <div className="avcalc-bdrow">
+                  <span>{cat}</span>
+                  <span className="avcalc-bdfig">{money(t.low)} – {money(t.high)}</span>
+                </div>
+                {/* The individual lines were always computed; showing them is what
+                    makes this read like a proposal rather than a black box. */}
+                {catLines.map((l) => (
+                  <div className="avcalc-bdline" key={l.key}>
+                    <span>
+                      {labels.items[l.key] ?? l.key}
+                      <span className="avcalc-bdqty"> · {l.detail}</span>
+                    </span>
+                    <span className="avcalc-bdlinefig">{money(l.low)} – {money(l.high)}</span>
+                  </div>
+                ))}
               </div>
             ))}
             {shortNotice && (
               <div className="avcalc-bdrow">
                 <span>{labels.catSurcharge}</span>
                 <span className="avcalc-bdfig">
-                  +${Math.round(surcharge.low).toLocaleString('en-US')} – ${Math.round(surcharge.high).toLocaleString('en-US')}
+                  +{money(surcharge.low)} – {money(surcharge.high)}
                 </span>
               </div>
             )}
+            <p className="avcalc-fxnote">{labels.ratesNote}</p>
           </div>
 
           <div className="avcalc-excluded">
@@ -258,7 +373,7 @@ export function AvCostCalculator({ labels, guideHref, signupHref }: {
       <div className="avcalc-cta">
         <h2>{labels.ctaTitle}</h2>
         <p>{labels.ctaBody}</p>
-        <a href={signupHref} className="avcalc-ctabtn">{labels.ctaButton}</a>
+        <a href={ctaHref} className="avcalc-ctabtn">{labels.ctaButton}</a>
       </div>
 
       <style>{`
@@ -269,6 +384,22 @@ export function AvCostCalculator({ labels, guideHref, signupHref }: {
           display: flex; flex-direction: column; gap: 22px;
         }
         .avcalc-field { display: flex; flex-direction: column; gap: 9px; }
+        .avcalc-select {
+          width: 100%; padding: 11px 12px; border: 1px solid #d1d5db; border-radius: 10px;
+          font-size: 15px; color: #08172E; background: #fff; cursor: pointer;
+          font-family: inherit; appearance: auto;
+        }
+        .avcalc-select:focus { outline: 2px solid #047857; outline-offset: 1px; }
+        .avcalc-hint { font-size: 12px; color: #6b7280; line-height: 1.5; }
+        .avcalc-bdline {
+          display: flex; justify-content: space-between; gap: 14px;
+          padding: 3px 0 3px 14px; font-size: 12.5px; color: #6b7280;
+        }
+        .avcalc-bdlinefig { white-space: nowrap; font-variant-numeric: tabular-nums; }
+        .avcalc-bdqty { opacity: .62; }
+        .avcalc-fxnote {
+          margin: 12px 0 0; font-size: 11.5px; color: #9ca3af; line-height: 1.5;
+        }
         .avcalc-label {
           font-size: 12px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase;
           color: #4b5563;

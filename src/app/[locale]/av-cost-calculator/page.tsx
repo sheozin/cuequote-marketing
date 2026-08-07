@@ -3,6 +3,18 @@ import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { AvCostCalculator } from "../../../components/AvCostCalculator";
 import { getTranslations, getLocale } from "next-intl/server";
+import { headers } from "next/headers";
+import { fetchRates, marketFromCountry } from "../../../lib/marketPricing";
+
+/** Equipment names shown on the breakdown lines — one per RATES key in AvCostCalculator. */
+const ITEM_KEYS = [
+  "audioSystem", "microphone", "audioEngineer",
+  "projector", "screen", "ledSmall", "ledLarge",
+  "camera", "switcher", "streamPlatform",
+  "lightingBasic", "lightingAmbient", "lightingPro", "lightingTech",
+  "stageSmall", "stageLarge", "backdrop",
+  "technician", "projectLead", "setupCrew",
+] as const;
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("avCalculator");
@@ -42,6 +54,12 @@ export default async function AvCostCalculatorPage() {
   const locale = await getLocale();
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const guideHref = `${localePath}/blog/event-av-cost-price-guide-2026`;
+
+  // Vercel resolves the visitor's country at the edge, so the calculator opens on
+  // their own market without asking. The dropdown still lets them change it.
+  const country = (await headers()).get("x-vercel-ip-country");
+  const defaultMarket = marketFromCountry(country);
+  const { rates } = await fetchRates();
 
   const faqs = [1, 2, 3, 4].map((n) => ({
     q: t(`faq${n}Q`),
@@ -102,7 +120,13 @@ export default async function AvCostCalculatorPage() {
           <AvCostCalculator
             guideHref={guideHref}
             signupHref="https://app.cuequote.com/signup?utm_source=website&utm_medium=calculator&utm_campaign=av_cost"
+            defaultMarket={defaultMarket}
+            rates={rates}
+            locale={locale}
             labels={{
+              market: t("market"), marketHint: t("marketHint"),
+              marketMetro: t("marketMetro"), marketOther: t("marketOther"),
+              ratesNote: t("ratesNote"),
               attendees: t("attendees"), days: t("days"), video: t("video"),
               lighting: t("lighting"), staging: t("staging"), streaming: t("streaming"),
               shortNotice: t("shortNotice"), shortNoticeHint: t("shortNoticeHint"),
@@ -114,6 +138,9 @@ export default async function AvCostCalculatorPage() {
               breakdown: t("breakdown"), catAudio: t("catAudio"), catVideo: t("catVideo"),
               catLighting: t("catLighting"), catStaging: t("catStaging"), catCrew: t("catCrew"),
               catSurcharge: t("catSurcharge"),
+              items: Object.fromEntries(
+                ITEM_KEYS.map((k) => [k, t(`items.${k}`)])
+              ),
               excludedTitle: t("excludedTitle"), excluded: t("excluded"),
               sourceNote: t("sourceNote"), sourceLink: t("sourceLink"),
               ctaTitle: t("ctaTitle"), ctaBody: t("ctaBody"), ctaButton: t("ctaButton"),
