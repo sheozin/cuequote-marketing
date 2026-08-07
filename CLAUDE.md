@@ -1,5 +1,7 @@
 # CueQuote Marketing Site — Project Rules
 
+See `deploy.md` for the deployment runbook and `team-rules.md` for additional conventions not covered below.
+
 ## i18n — Always All 5 Languages (ENFORCED)
 
 When adding or modifying content, ALWAYS update ALL 5 language files:
