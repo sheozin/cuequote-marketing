@@ -8,6 +8,7 @@ import {
   getTutorialNeighbors,
 } from '@/lib/tutorials'
 import type { Metadata } from 'next'
+import { longTailRobots } from '@/lib/seo-indexing'
 import { getLocale, getTranslations } from 'next-intl/server'
 
 export async function generateStaticParams() {
@@ -32,6 +33,8 @@ export async function generateMetadata({
   return {
     title,
     description,
+    // Tutorials are translated, never market-specific, so no slug exemption.
+    robots: longTailRobots(locale),
     alternates: {
       canonical: `https://cuequote.com${localePath}${pagePath}`,
       languages: {

@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, Clock, Calendar, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { publishedPosts } from "../../../../lib/blog-posts";
 import ShareButtons from "../../../../components/ShareButtons";
+import { longTailRobots } from "../../../../lib/seo-indexing";
 
 /* ─── Category gradients for hero ─────────────────────────────────────────── */
 
@@ -45,6 +46,8 @@ export async function generateMetadata({
   return {
     title,
     description,
+    // Undefined for locales we still index, so no robots tag is emitted at all.
+    robots: longTailRobots(locale, slug),
     alternates: {
       canonical: `https://cuequote.com${localePath}${pagePath}`,
       languages: {
