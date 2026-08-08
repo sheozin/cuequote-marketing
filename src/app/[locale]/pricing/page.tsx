@@ -164,7 +164,7 @@ export default async function PricingPage() {
   const comparisonRows = [
     { cat: t("compProposals", { defaultValue: "Proposals" }) },
     { label: t("compAiPerMonth", { defaultValue: "AI proposals/month" }), free: "3", starter: "10", pro: "40", business: "120" },
-    { label: t("compBrandedPdf", { defaultValue: "Branded PDFs" }), free: false, starter: true, pro: true, business: true },
+    { label: t("compBrandedPdf", { defaultValue: "Your logo & colors on PDFs" }), free: false, starter: true, pro: true, business: true },
     { label: t("compTemplates", { defaultValue: "PDF templates" }), free: "1", starter: "4", pro: "4", business: "4" },
     { label: t("compRecurring", { defaultValue: "Recurring proposals" }), free: false, starter: false, pro: true, business: true },
     { cat: t("compClientExp", { defaultValue: "Client Experience" }) },
@@ -176,7 +176,7 @@ export default async function PricingPage() {
     { label: t("compOcrAttachments", { defaultValue: "OCR file attachments" }), free: true, starter: true, pro: true, business: true },
     { label: t("compRegenerate", { defaultValue: "Regenerate proposals" }), free: false, starter: false, pro: true, business: true },
     { cat: t("compCustomization", { defaultValue: "Customization" }) },
-    { label: t("compWhiteLabel", { defaultValue: "White-label PDFs" }), free: false, starter: false, pro: true, business: true },
+    { label: t("compWhiteLabel", { defaultValue: "Remove \u201CPowered by CueQuote\u201D" }), free: false, starter: false, pro: true, business: true },
     { label: t("compTerms", { defaultValue: "Custom terms & T&C" }), free: true, starter: true, pro: true, business: true },
     { label: t("compMultiLang", { defaultValue: "Multi-language" }), free: true, starter: true, pro: true, business: true },
     { label: t("compCsvImport", { defaultValue: "CSV catalog import" }), free: false, starter: true, pro: true, business: true },
