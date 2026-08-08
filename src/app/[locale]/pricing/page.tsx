@@ -279,6 +279,13 @@ export default async function PricingPage() {
                         <span style={{ fontSize: 48, fontWeight: 800, color: isFeat ? "#fff" : "#08172E", letterSpacing: -2 }}>{price}</span>
                         <span style={{ fontSize: 16, fontWeight: 500, color: isFeat ? "rgba(255,255,255,0.35)" : "#6b7280" }}>{period}</span>
                       </div>
+                      {/* Stripe Tax adds VAT on top of these figures at checkout, so a
+                          Polish customer sees ~23% more than the number above. */}
+                      {period && (
+                        <p style={{ fontSize: 11, color: isFeat ? "rgba(255,255,255,0.4)" : "#9ca3af", marginBottom: 0 }}>
+                          {t("vatNote")}
+                        </p>
+                      )}
                       <p style={{ fontSize: 12, color: "#10b981", fontWeight: 600, marginBottom: 20, minHeight: 18 }}>
                         {save || note || "\u00A0"}
                       </p>
@@ -425,6 +432,9 @@ export default async function PricingPage() {
             </div>
             <p style={{ fontSize: 17, color: "#6b7280", maxWidth: 480, margin: "0 auto" }}>
               {t("creditPacksSubtitle")}
+            </p>
+            <p style={{ fontSize: 12, color: "#9ca3af", marginTop: 8 }}>
+              {t("vatNote")}
             </p>
           </div>
           <div style={{ maxWidth: 320, margin: "0 auto 32px" }}>
