@@ -56,6 +56,12 @@ const MARKET_POSTS: Record<string, string> = {
   'av-proposals-germany-guide': 'de',
   'av-proposals-france-guide': 'fr',
   'av-proposals-poland-guide': 'pl',
+  // Position 11.4 in GSC on 2026-08-08 — the best position of any page or query
+  // on the site outside brand terms, and it earned a click. The 2026-08-07
+  // blanket noindex caught it because comparison posts were never considered
+  // market posts; Rentman is an EU vendor with real DACH presence, so the German
+  // copy is exactly what this list exists to protect.
+  'cuequote-vs-rentman': 'de',
 }
 
 /**
