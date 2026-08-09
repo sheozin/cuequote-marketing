@@ -109,7 +109,7 @@ export default async function McpDocsPage() {
           Create an API key in <strong>Settings → API keys</strong>, then point your client at the server
           URL with the key as a bearer token.
         </p>
-        <Code>{`Server URL:  https://rurazinghbfskuoeikwi.supabase.co/functions/v1/mcp
+        <Code>{`Server URL:  https://api.cuequote.com/mcp
 Transport:   HTTP (JSON-RPC 2.0)
 Auth header: Authorization: Bearer cq_live_...`}</Code>
         <p style={P}>
@@ -119,7 +119,7 @@ Auth header: Authorization: Bearer cq_live_...`}</Code>
   "mcpServers": {
     "cuequote": {
       "type": "http",
-      "url": "https://rurazinghbfskuoeikwi.supabase.co/functions/v1/mcp",
+      "url": "https://api.cuequote.com/mcp",
       "headers": {
         "Authorization": "Bearer cq_live_your_key_here"
       }

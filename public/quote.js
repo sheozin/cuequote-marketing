@@ -25,7 +25,7 @@
   var KEY = script.getAttribute('data-key') || '';
   var ACCENT = script.getAttribute('data-color') || '#10b981';
   var TARGET = script.getAttribute('data-target');
-  var ENDPOINT = 'https://rurazinghbfskuoeikwi.supabase.co/functions/v1/api-v1/v1/widget/quote';
+  var ENDPOINT = 'https://api.cuequote.com/v1/widget/quote';
 
   if (KEY.indexOf('cq_pub_') !== 0) {
     // A secret key on a public page would be a serious mistake, so say so

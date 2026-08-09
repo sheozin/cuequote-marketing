@@ -129,7 +129,7 @@ export default async function ApiDocsPage() {
         </p>
 
         <H2 id="base-url">Base URL</H2>
-        <Code>{`https://rurazinghbfskuoeikwi.supabase.co/functions/v1/api-v1`}</Code>
+        <Code>{`https://api.cuequote.com`}</Code>
 
         <H2 id="create-proposal">Create a proposal</H2>
         <p style={P}>
@@ -141,7 +141,7 @@ export default async function ApiDocsPage() {
           else improves the result: attendee count and duration drive equipment quantities, and the venue
           affects regional pricing.
         </p>
-        <Code>{`curl -X POST https://rurazinghbfskuoeikwi.supabase.co/functions/v1/api-v1/v1/proposals \\
+        <Code>{`curl -X POST https://api.cuequote.com/v1/proposals \\
   -H "Authorization: Bearer $CUEQUOTE_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
@@ -210,7 +210,7 @@ export default async function ApiDocsPage() {
           <Tag color="#3b82f6">GET</Tag>
           <span style={{ fontFamily: MONO, fontSize: 14 }}>/v1/proposals/{"{id}"}</span>
         </p>
-        <Code>{`curl https://rurazinghbfskuoeikwi.supabase.co/functions/v1/api-v1/v1/proposals/4b888edb-... \\
+        <Code>{`curl https://api.cuequote.com/v1/proposals/4b888edb-... \\
   -H "Authorization: Bearer $CUEQUOTE_API_KEY"`}</Code>
         <p style={P}>
           Returns the proposal with its line items and current status, so you can poll for acceptance
