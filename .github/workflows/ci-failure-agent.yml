@@ -1,0 +1,233 @@
+name: CI Failure Agent
+
+# Investigates a red Build Check on main and opens a pull request with a fix.
+#
+# Same shape as the app repo's agent — read that file's threat model too. The
+# containment is inherited: the model step holds no secret but its own API key,
+# checkout keeps no push credential, the agent writes findings to a file that a
+# later step turns into the PR, and a PR is where it stops.
+#
+# WHAT IS PROTECTED HERE, AND WHY
+#
+# In the app repo the agent may not touch `tests/`, because a red test is an
+# incentive to delete the assertion. This repo has no test directory — its
+# checks live somewhere less obvious:
+#
+#   scripts/          check-translations.cjs, check-tutorial-videos.cjs
+#   eslint.config.mjs the lint rules
+#   package.json      `lint:ci` is `eslint --max-warnings 37`
+#
+# That warning number is the ratchet. Raising it from 37 to 50 would turn the
+# build green while letting thirteen new warnings through — the exact
+# equivalent of deleting a test, and far easier to miss in review because it
+# looks like a config tweak. So package.json is protected alongside the rest.
+#
+# Notification is deliberately NOT handled here. ci-alert.yml notifies on every
+# Build Check failure independently, so admins still hear about a break even
+# when this agent cannot run at all.
+
+on:
+  workflow_run:
+    workflows: ["Build Check"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Workflow run id to investigate"
+        required: true
+
+concurrency:
+  group: ci-failure-agent
+  cancel-in-progress: false
+
+jobs:
+  investigate:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'failure' &&
+       github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: read
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 20
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Ensure the label exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh label create ci-failure-agent --color B60205 --description "Opened by the CI failure agent" --force
+
+      - name: Stop if an attempt is already open
+        id: breaker
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -uo pipefail
+          open=$(gh pr list --state open --label ci-failure-agent --json number --jq 'length' 2>/dev/null || echo 0)
+          if [ "${open:-0}" -gt 0 ]; then
+            echo "::notice::An agent PR is already open; not starting another."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Collect the failure
+        if: steps.breaker.outputs.proceed == 'true'
+        id: failure
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID_RAW: ${{ github.event.inputs.run_id || github.event.workflow_run.id }}
+        run: |
+          set -uo pipefail
+          case "$RUN_ID_RAW" in
+            ''|*[!0-9]*) echo "::error::run_id must be numeric"; exit 1 ;;
+          esac
+          gh run view "$RUN_ID_RAW" --json displayTitle,headSha,workflowName,conclusion,url > /tmp/ci-run.json
+          gh run view "$RUN_ID_RAW" --log-failed 2>/dev/null | tail -c 120000 > /tmp/ci-failure.log || true
+          {
+            echo "sha=$(jq -r .headSha /tmp/ci-run.json)"
+            echo "wf=$(jq -r .workflowName /tmp/ci-run.json)"
+            echo "url=$(jq -r .url /tmp/ci-run.json)"
+            echo "bytes=$(wc -c < /tmp/ci-failure.log | tr -d ' ')"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Install dependencies
+        if: steps.breaker.outputs.proceed == 'true' && steps.failure.outputs.bytes != '0'
+        run: |
+          npm ci --no-audit --no-fund
+          npm install -g @anthropic-ai/claude-code
+          chmod +x .github/ci-agent-guard.sh
+
+      - name: Investigate and fix
+        if: steps.breaker.outputs.proceed == 'true' && steps.failure.outputs.bytes != '0'
+        continue-on-error: true
+        id: agent
+        env:
+          # The only secret this step holds.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SHA: ${{ steps.failure.outputs.sha }}
+        run: |
+          set -uo pipefail
+          git config user.name  "cuequote-ci-agent[bot]"
+          git config user.email "ci-agent@cuequote.com"
+          git checkout -b "fix/ci-${SHA:0:12}"
+
+          claude -p "$(cat .github/ci-failure-agent-prompt.md)" \
+            --append-system-prompt "The failing log is /tmp/ci-failure.log and the run summary is /tmp/ci-run.json. Write findings to /tmp/investigation.json. You cannot edit .github/, scripts/, eslint.config.mjs or package.json, and you cannot push; later steps enforce both." \
+            --settings .github/ci-agent-settings.json \
+            --allowedTools "Bash,Read,Write,Edit,Grep,Glob" \
+            --max-turns 60 \
+            --permission-mode acceptEdits \
+            2>&1 | tail -c 200000
+          rc=$?
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          if [ "$rc" -ne 0 ]; then
+            echo "::error::The agent exited $rc — it did not complete an investigation."
+          fi
+
+      - name: Reject a diff that edits the checks
+        if: steps.breaker.outputs.proceed == 'true' && steps.failure.outputs.bytes != '0'
+        id: diffcheck
+        run: |
+          set -uo pipefail
+          git add -A
+          # package.json holds the --max-warnings ratchet; scripts/ holds the
+          # translation and video checks. Both are the judge, not the code.
+          blocked=$(git diff --cached --name-only \
+            | grep -E '^(\.github/|scripts/|eslint\.config\.mjs|package\.json|package-lock\.json|next\.config)' || true)
+          if [ -n "$blocked" ]; then
+            echo "::error::Agent tried to edit protected paths — refusing:"
+            echo "$blocked"
+            echo "safe=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          {
+            echo "changed=$(git diff --cached --name-only | wc -l | tr -d ' ')"
+            echo "safe=true"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Re-run the gates
+        if: steps.diffcheck.outputs.safe == 'true' && steps.diffcheck.outputs.changed != '0'
+        continue-on-error: true
+        id: verify
+        run: |
+          set -uo pipefail
+          ok=pass
+          npm run lint:ci            || ok=fail
+          npm run check-translations || ok=fail
+          npm run check-videos       || ok=fail
+          npm run build              || ok=fail
+          echo "gates=$ok" >> "$GITHUB_OUTPUT"
+
+      - name: Open the pull request
+        if: steps.diffcheck.outputs.safe == 'true' && steps.diffcheck.outputs.changed != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ steps.failure.outputs.sha }}
+          WF: ${{ steps.failure.outputs.wf }}
+          GATES: ${{ steps.verify.outputs.gates }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -uo pipefail
+          cause=$(jq -r '.root_cause // "not reported"' /tmp/investigation.json 2>/dev/null || echo "not reported")
+          fix=$(jq -r '.fix // "not reported"' /tmp/investigation.json 2>/dev/null || echo "not reported")
+          verified=$(jq -r '.verified // "not reported"' /tmp/investigation.json 2>/dev/null || echo "not reported")
+          conf=$(jq -r '.confidence // "unknown"' /tmp/investigation.json 2>/dev/null || echo unknown)
+
+          printf 'Fix %s on %s\n\n%s\n\nInvestigated automatically from the failing run. Review before merging.\n' \
+            "$WF" "$SHA" "$cause" > /tmp/commit-msg
+          git commit -q -F /tmp/commit-msg
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git" "HEAD:$branch"
+
+          {
+            printf 'Opened automatically after **%s** failed on `%s`.\n\n' "$WF" "$SHA"
+            printf '**Root cause**\n%s\n\n' "$cause"
+            printf '**Fix**\n%s\n\n' "$fix"
+            printf '**Verified**\n%s\n\n' "$verified"
+            printf 'All gates after the change: `%s`\nAgent confidence: **%s**\n\n' "$GATES" "$conf"
+            printf -- '---\nThe agent could not edit `.github/`, `scripts/`, `eslint.config.mjs` or `package.json`. If this change makes the build pass by loosening a check, that is a bug in the fix and it should be rejected. Merging this PR is the human approval.\n'
+          } > /tmp/pr-body
+          gh pr create --title "CI fix: $WF" --head "$branch" --label ci-failure-agent --body-file /tmp/pr-body
+
+      - name: Escalate instead of guessing
+        if: >
+          steps.breaker.outputs.proceed == 'true' &&
+          steps.failure.outputs.bytes != '0' &&
+          (steps.diffcheck.outputs.safe != 'true' || steps.diffcheck.outputs.changed == '0')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ steps.failure.outputs.sha }}
+          WF: ${{ steps.failure.outputs.wf }}
+          RUN_URL: ${{ steps.failure.outputs.url }}
+          SAFE: ${{ steps.diffcheck.outputs.safe }}
+          AGENT_RC: ${{ steps.agent.outputs.rc }}
+        run: |
+          set -uo pipefail
+          cause=$(jq -r '.root_cause // "The agent did not report a root cause."' /tmp/investigation.json 2>/dev/null || echo "No report written.")
+          why=$(jq -r '.reason_for_human // "No fix was produced."' /tmp/investigation.json 2>/dev/null || echo "No report written.")
+          {
+            printf '**%s** failed on `%s` and no safe automated fix was produced.\n\n' "$WF" "$SHA"
+            printf '**What the agent found**\n%s\n\n' "$cause"
+            printf '**Why it stopped**\n%s\n\n' "$why"
+            if [ "$SAFE" != "true" ]; then
+              printf '**The agent tried to edit a protected path and was refused.** That usually means it was about to loosen a check rather than fix the content — read its reasoning carefully.\n\n'
+            fi
+            if [ "${AGENT_RC:-0}" != "0" ]; then
+              printf '**The agent did not run to completion** (exit %s). That is an infrastructure problem with the workflow, not a verdict on the failure.\n\n' "$AGENT_RC"
+            fi
+            printf 'Failing run: %s\n' "$RUN_URL"
+          } > /tmp/issue-body
+          gh issue create --title "CI failing: $WF on $SHA" --label ci-failure-agent --body-file /tmp/issue-body
