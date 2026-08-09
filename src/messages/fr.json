@@ -2288,7 +2288,8 @@
     "developersTitle": "Pour les développeurs",
     "devApi": "Référence API",
     "devWidget": "Formulaire de devis du site",
-    "devMcp": "Assistants IA (MCP)"
+    "devMcp": "Assistants IA (MCP)",
+    "devWebhooks": "Webhooks"
   },
   "changelog": {
     "metaTitle": "Journal des modifications — Nouveautés",

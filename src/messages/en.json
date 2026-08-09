@@ -2287,7 +2287,8 @@
     "developersTitle": "For developers",
     "devApi": "API reference",
     "devWidget": "Website quote form",
-    "devMcp": "AI assistants (MCP)"
+    "devMcp": "AI assistants (MCP)",
+    "devWebhooks": "Webhooks"
   },
   "changelog": {
     "metaTitle": "Changelog — What's New",

@@ -1480,4 +1480,46 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'webhooks',
+    title: 'Send proposal events to your CRM',
+    description: 'Get an instant signed callback when a client views, accepts or rejects a proposal — so your own systems stay in step without anyone re-typing anything.',
+    duration: '5 min',
+    difficulty: 'advanced',
+    category: 'Setup',
+    mode: 'av',
+    whatYouLearn: [
+      'Adding an endpoint and choosing events',
+      'Keeping your signing secret safe',
+      'Verifying that a request really came from CueQuote',
+      'Spotting an endpoint that has stopped working',
+    ],
+    steps: [
+      {
+        title: 'Add your endpoint',
+        content: 'Open Settings and find "Webhooks". Click "Add endpoint" and paste the https URL that should receive the events. Tick the events you care about — most people start with proposal.accepted, because that is the one worth telling a CRM about.',
+        tip: 'Webhooks are available on the Business plan. The URL must be https; plain http is refused.',
+      },
+      {
+        title: 'Copy the signing secret',
+        content: 'As soon as the endpoint is created you are shown a secret starting whsec_. Copy it into your environment variables now — it is shown exactly once, and there is no way to display it again.',
+        tip: 'Lost it? Delete the endpoint and add it back. You will get a fresh secret.',
+      },
+      {
+        title: 'Verify the signature',
+        content: 'Every request carries an X-CueQuote-Signature header holding a timestamp and an HMAC-SHA256 of that timestamp plus the raw body, keyed with your secret. Recompute it and compare before trusting anything. Without this check, anyone who learns your URL can post fake proposals at you.',
+        tip: 'Hash the raw body bytes. Parsing the JSON and re-serialising it changes the bytes, and the signature will never match — this is the single most common mistake.',
+      },
+      {
+        title: 'Answer quickly',
+        content: 'Return any 2xx status as soon as you have accepted the payload, then do the slow work afterwards. We give up after 10 seconds, and a timeout is recorded as a failure.',
+        tip: 'Treat your handler as idempotent — key off the proposal id and event rather than assuming each event arrives exactly once.',
+      },
+      {
+        title: 'Watch for failures',
+        content: 'Back in Settings, each endpoint shows how many deliveries it received in the last 7 days and how many failed. A red "Failing" badge means your endpoint returned an error or timed out.',
+        tip: 'Worth glancing at occasionally: when a CRM integration quietly breaks, nothing else tells you — proposals simply stop arriving.',
+      },
+    ],
+  },
 ]

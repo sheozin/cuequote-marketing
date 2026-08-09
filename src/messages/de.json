@@ -2286,7 +2286,8 @@
     "developersTitle": "Für Entwickler",
     "devApi": "API-Referenz",
     "devWidget": "Angebotsformular für die Website",
-    "devMcp": "KI-Assistenten (MCP)"
+    "devMcp": "KI-Assistenten (MCP)",
+    "devWebhooks": "Webhooks"
   },
   "changelog": {
     "metaTitle": "Änderungsprotokoll — Neuigkeiten",

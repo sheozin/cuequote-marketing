@@ -1434,4 +1434,46 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'webhooks',
+    title: 'Wysyłaj zdarzenia ofert do swojego CRM',
+    description: 'Otrzymuj natychmiastowe podpisane wywołanie zwrotne, gdy klient wyświetli, zaakceptuje lub odrzuci ofertę — dzięki czemu Twoje systemy pozostają zsynchronizowane bez ręcznego przepisywania.',
+    duration: '5 min',
+    difficulty: 'advanced',
+    category: 'Setup',
+    mode: 'av',
+    whatYouLearn: [
+      'Dodawanie adresu i wybór zdarzeń',
+      'Bezpieczne przechowywanie sekretu podpisu',
+      'Weryfikacja, że żądanie naprawdę pochodzi z CueQuote',
+      'Wykrywanie adresu, który przestał działać',
+    ],
+    steps: [
+      {
+        title: 'Dodaj swój adres',
+        content: 'Otwórz Ustawienia i znajdź „Webhooki”. Kliknij „Dodaj adres” i wklej adres https, który ma otrzymywać zdarzenia. Zaznacz interesujące Cię zdarzenia — większość osób zaczyna od proposal.accepted, bo to o nim warto powiadomić CRM.',
+        tip: 'Webhooki są dostępne w planie Business. Adres musi być https; zwykły http jest odrzucany.',
+      },
+      {
+        title: 'Skopiuj sekret podpisu',
+        content: 'Zaraz po utworzeniu adresu zobaczysz sekret zaczynający się od whsec_. Skopiuj go teraz do zmiennych środowiskowych — jest pokazywany dokładnie raz i nie da się go wyświetlić ponownie.',
+        tip: 'Zgubiłeś go? Usuń adres i dodaj go ponownie. Otrzymasz nowy sekret.',
+      },
+      {
+        title: 'Zweryfikuj podpis',
+        content: 'Każde żądanie zawiera nagłówek X-CueQuote-Signature ze znacznikiem czasu i HMAC-SHA256 tego znacznika oraz surowej treści, podpisany Twoim sekretem. Przelicz go i porównaj, zanim czemukolwiek zaufasz. Bez tej weryfikacji każdy, kto pozna Twój adres, może wysyłać Ci fałszywe oferty.',
+        tip: 'Haszuj surowe bajty treści. Sparsowanie JSON i ponowne zserializowanie zmienia bajty, a podpis nigdy się nie zgodzi — to najczęstszy błąd.',
+      },
+      {
+        title: 'Odpowiadaj szybko',
+        content: 'Zwróć dowolny status 2xx, gdy tylko przyjmiesz ładunek, a powolną pracę wykonaj później. Rezygnujemy po 10 sekundach, a przekroczenie czasu jest zapisywane jako błąd.',
+        tip: 'Traktuj swój kod jako idempotentny — opieraj się na identyfikatorze oferty i zdarzeniu, zamiast zakładać, że każde zdarzenie dotrze dokładnie raz.',
+      },
+      {
+        title: 'Obserwuj błędy',
+        content: 'W Ustawieniach każdy adres pokazuje, ile dostaw otrzymał w ciągu ostatnich 7 dni i ile się nie powiodło. Czerwona plakietka „Błąd” oznacza, że Twój adres zwrócił błąd lub przekroczył limit czasu.',
+        tip: 'Warto zaglądać tam od czasu do czasu: gdy integracja z CRM po cichu się zepsuje, nic innego Cię o tym nie poinformuje — oferty po prostu przestają docierać.',
+      },
+    ],
+  },
 ]

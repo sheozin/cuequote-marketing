@@ -1470,4 +1470,46 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'webhooks',
+    title: 'Angebotsereignisse an Ihr CRM senden',
+    description: 'Erhalten Sie einen sofortigen signierten Rückruf, wenn ein Kunde ein Angebot ansieht, annimmt oder ablehnt — so bleiben Ihre eigenen Systeme auf dem Stand, ohne dass jemand etwas abtippt.',
+    duration: '5 Min.',
+    difficulty: 'advanced',
+    category: 'Setup',
+    mode: 'av',
+    whatYouLearn: [
+      'Einen Endpunkt hinzufügen und Ereignisse auswählen',
+      'Ihr Signaturgeheimnis sicher aufbewahren',
+      'Prüfen, ob eine Anfrage wirklich von CueQuote stammt',
+      'Einen Endpunkt erkennen, der nicht mehr funktioniert',
+    ],
+    steps: [
+      {
+        title: 'Endpunkt hinzufügen',
+        content: 'Öffnen Sie die Einstellungen und suchen Sie „Webhooks“. Klicken Sie auf „Endpunkt hinzufügen“ und fügen Sie die https-URL ein, die die Ereignisse empfangen soll. Haken Sie die gewünschten Ereignisse an — die meisten beginnen mit proposal.accepted, denn das ist das Ereignis, das ein CRM wissen sollte.',
+        tip: 'Webhooks sind im Business-Tarif enthalten. Die URL muss https sein; einfaches http wird abgelehnt.',
+      },
+      {
+        title: 'Signaturgeheimnis kopieren',
+        content: 'Sobald der Endpunkt angelegt ist, wird Ihnen ein Geheimnis angezeigt, das mit whsec_ beginnt. Kopieren Sie es jetzt in Ihre Umgebungsvariablen — es wird genau einmal angezeigt und kann nicht erneut aufgerufen werden.',
+        tip: 'Verloren? Löschen Sie den Endpunkt und legen Sie ihn neu an. Sie erhalten ein neues Geheimnis.',
+      },
+      {
+        title: 'Signatur prüfen',
+        content: 'Jede Anfrage enthält einen X-CueQuote-Signature-Header mit einem Zeitstempel und einem HMAC-SHA256 aus diesem Zeitstempel und dem Rohtext, signiert mit Ihrem Geheimnis. Berechnen Sie ihn neu und vergleichen Sie, bevor Sie irgendetwas vertrauen. Ohne diese Prüfung kann jeder, der Ihre URL kennt, Ihnen gefälschte Angebote schicken.',
+        tip: 'Hashen Sie die rohen Bytes. Das JSON zu parsen und neu zu serialisieren ändert die Bytes, und die Signatur passt nie — das ist der mit Abstand häufigste Fehler.',
+      },
+      {
+        title: 'Schnell antworten',
+        content: 'Geben Sie einen beliebigen 2xx-Status zurück, sobald Sie das Payload angenommen haben, und erledigen Sie die langsame Arbeit danach. Wir brechen nach 10 Sekunden ab, und eine Zeitüberschreitung wird als Fehler erfasst.',
+        tip: 'Behandeln Sie Ihren Handler als idempotent — richten Sie sich nach Angebots-ID und Ereignis, statt davon auszugehen, dass jedes Ereignis genau einmal ankommt.',
+      },
+      {
+        title: 'Auf Fehler achten',
+        content: 'In den Einstellungen zeigt jeder Endpunkt, wie viele Zustellungen er in den letzten 7 Tagen erhalten hat und wie viele fehlgeschlagen sind. Ein rotes „Fehlerhaft“-Abzeichen bedeutet, dass Ihr Endpunkt einen Fehler zurückgab oder das Zeitlimit überschritt.',
+        tip: 'Ein gelegentlicher Blick lohnt sich: Wenn eine CRM-Integration stillschweigend ausfällt, sagt Ihnen nichts anderes Bescheid — es kommen einfach keine Angebote mehr an.',
+      },
+    ],
+  },
 ]

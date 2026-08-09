@@ -1470,4 +1470,46 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'webhooks',
+    title: 'Envoyer les événements de devis à votre CRM',
+    description: 'Recevez un rappel signé instantané lorsqu’un client consulte, accepte ou refuse un devis — pour que vos propres systèmes restent à jour sans que personne ne resaisisse quoi que ce soit.',
+    duration: '5 min',
+    difficulty: 'advanced',
+    category: 'Setup',
+    mode: 'av',
+    whatYouLearn: [
+      'Ajouter un point de terminaison et choisir les événements',
+      'Garder votre secret de signature en sécurité',
+      'Vérifier qu’une requête vient bien de CueQuote',
+      'Repérer un point de terminaison qui ne fonctionne plus',
+    ],
+    steps: [
+      {
+        title: 'Ajoutez votre point de terminaison',
+        content: 'Ouvrez les Paramètres et trouvez « Webhooks ». Cliquez sur « Ajouter un point de terminaison » et collez l’URL https qui doit recevoir les événements. Cochez les événements qui vous intéressent — la plupart commencent par proposal.accepted, car c’est celui qui mérite d’être transmis à un CRM.',
+        tip: 'Les webhooks sont inclus dans le plan Business. L’URL doit être en https ; le http simple est refusé.',
+      },
+      {
+        title: 'Copiez le secret de signature',
+        content: 'Dès que le point de terminaison est créé, un secret commençant par whsec_ s’affiche. Copiez-le maintenant dans vos variables d’environnement — il n’est montré qu’une seule fois et ne peut pas être réaffiché.',
+        tip: 'Perdu ? Supprimez le point de terminaison et recréez-le. Vous obtiendrez un nouveau secret.',
+      },
+      {
+        title: 'Vérifiez la signature',
+        content: 'Chaque requête porte un en-tête X-CueQuote-Signature contenant un horodatage et un HMAC-SHA256 de cet horodatage et du corps brut, signé avec votre secret. Recalculez-le et comparez avant de faire confiance à quoi que ce soit. Sans cette vérification, quiconque connaît votre URL peut vous envoyer de faux devis.',
+        tip: 'Hachez les octets bruts du corps. Analyser le JSON puis le re-sérialiser change les octets, et la signature ne correspondra jamais — c’est de loin l’erreur la plus fréquente.',
+      },
+      {
+        title: 'Répondez rapidement',
+        content: 'Renvoyez n’importe quel statut 2xx dès que vous avez accepté la charge utile, puis faites le travail lent ensuite. Nous abandonnons après 10 secondes, et un dépassement est enregistré comme un échec.',
+        tip: 'Traitez votre gestionnaire comme idempotent — appuyez-vous sur l’identifiant du devis et l’événement plutôt que de supposer que chaque événement arrive exactement une fois.',
+      },
+      {
+        title: 'Surveillez les échecs',
+        content: 'Dans les Paramètres, chaque point de terminaison indique combien de livraisons il a reçues ces 7 derniers jours et combien ont échoué. Un badge rouge « En échec » signifie que votre point de terminaison a renvoyé une erreur ou a expiré.',
+        tip: 'Cela vaut un coup d’œil de temps en temps : quand une intégration CRM casse en silence, rien d’autre ne vous prévient — les devis cessent simplement d’arriver.',
+      },
+    ],
+  },
 ]

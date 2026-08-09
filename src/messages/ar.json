@@ -2332,7 +2332,8 @@
     "developersTitle": "للمطوّرين",
     "devApi": "مرجع الـ API",
     "devWidget": "نموذج التسعير على الموقع",
-    "devMcp": "مساعدو الذكاء الاصطناعي (MCP)"
+    "devMcp": "مساعدو الذكاء الاصطناعي (MCP)",
+    "devWebhooks": "الويب هوك"
   },
   "changelog": {
     "metaTitle": "سجل التغييرات — ما الجديد",

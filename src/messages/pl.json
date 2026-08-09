@@ -2260,7 +2260,8 @@
     "developersTitle": "Dla programistów",
     "devApi": "Dokumentacja API",
     "devWidget": "Formularz wyceny na stronie",
-    "devMcp": "Asystenci AI (MCP)"
+    "devMcp": "Asystenci AI (MCP)",
+    "devWebhooks": "Webhooki"
   },
   "changelog": {
     "metaTitle": "Historia zmian — Co nowego",
