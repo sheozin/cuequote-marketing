@@ -1,0 +1,60 @@
+name: CI Alert
+
+# Turns a red build on main into an in-app notification for platform admins.
+#
+# GitHub already emails on failure, but it emails for every push while a branch
+# is red — which is exactly how you learn to ignore the emails. A bell
+# notification carrying the workflow, the commit and a link to the run is the
+# thing worth reading, and it can be turned into the only signal by switching
+# GitHub's Actions email off.
+#
+# The secret here is CI_ALERT_SECRET, minted for this one purpose. It buys
+# nothing except the ability to write a notification, so it is safe to hold in
+# a repo that does not otherwise carry credentials.
+#
+# The app repo has an agent that investigates and opens a fix. This repo only
+# reports — worth adding the agent here too if these failures become frequent.
+
+on:
+  workflow_run:
+    workflows: ["Build Check"]
+    types: [completed]
+
+jobs:
+  notify:
+    if: >
+      github.event.workflow_run.conclusion == 'failure' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify admins in-app
+        env:
+          FUNCTIONS_URL: ${{ secrets.SUPABASE_FUNCTIONS_URL }}
+          ALERT_SECRET: ${{ secrets.CI_ALERT_SECRET }}
+          WF: ${{ github.event.workflow_run.name }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          TITLE: ${{ github.event.workflow_run.display_title }}
+        run: |
+          set -uo pipefail
+          # Everything the API sees is built by jq from environment variables —
+          # a commit message is attacker-influenced text and must never be
+          # interpolated into the shell or into JSON by hand.
+          body=$(jq -nc \
+            --arg repo "marketing" \
+            --arg workflow "$WF" \
+            --arg sha "$SHA" \
+            --arg url "$RUN_URL" \
+            --arg cause "Build Check failed on \"$TITLE\". Most often lint or the translation check — run npm run lint:ci and npm run check-translations locally to reproduce." \
+            '{repo:$repo, workflow:$workflow, sha:$sha, url:$url, rootCause:$cause}')
+
+          code=$(curl -s -o /tmp/resp -w '%{http_code}' -X POST \
+            "$FUNCTIONS_URL/ci-alert" \
+            -H 'Content-Type: application/json' \
+            -H "x-webhook-secret: $ALERT_SECRET" \
+            -d "$body")
+
+          echo "ci-alert responded $code"
+          cat /tmp/resp
+          # A failure to notify must not be silent, or the whole point is lost.
+          [ "$code" = "200" ]
