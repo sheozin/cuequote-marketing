@@ -213,8 +213,82 @@ export default async function ApiDocsPage() {
         <Code>{`curl https://api.cuequote.com/v1/proposals/4b888edb-... \\
   -H "Authorization: Bearer $CUEQUOTE_API_KEY"`}</Code>
         <p style={P}>
-          Returns the proposal with its line items and current status, so you can poll for acceptance
-          from your CRM.
+          Returns the proposal with its line items and current status.
+        </p>
+
+        <H2 id="list-proposals">List proposals</H2>
+        <p style={P}>
+          <Tag color="#3b82f6">GET</Tag>
+          <span style={{ fontFamily: MONO, fontSize: 14 }}>/v1/proposals</span>
+        </p>
+        <p style={P}>
+          Newest first, without line items. Pass{" "}
+          <span style={{ fontFamily: MONO }}>since</span> to fetch only what has appeared since your
+          last check — the usual way to drive an integration without re-reading everything.
+        </p>
+        <Code>{`curl "https://api.cuequote.com/v1/proposals?since=2026-08-01T00:00:00Z&status=accepted&limit=50" \\
+  -H "Authorization: Bearer $CUEQUOTE_API_KEY"`}</Code>
+        <table style={{ width: "100%", borderCollapse: "collapse", margin: "8px 0 24px" }}>
+          <thead>
+            <tr><th style={TH}>Query</th><th style={TH}>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style={{ ...TD, fontFamily: MONO }}>since</td><td style={TD}>ISO 8601 timestamp. Returns proposals created strictly after it.</td></tr>
+            <tr><td style={{ ...TD, fontFamily: MONO }}>status</td><td style={TD}>Filter to one status, e.g. <span style={{ fontFamily: MONO }}>accepted</span>.</td></tr>
+            <tr><td style={{ ...TD, fontFamily: MONO }}>limit</td><td style={TD}>1&ndash;100, defaults to 25.</td></tr>
+          </tbody>
+        </table>
+        <p style={P}>
+          For anything time-sensitive, prefer{" "}
+          <Link href="/docs/webhooks" style={{ color: "#10b981", fontWeight: 600 }}>webhooks</Link> over
+          polling — you hear about an acceptance in about a second instead of whenever you next look.
+        </p>
+
+        <H2 id="me">Check a key</H2>
+        <p style={P}>
+          <Tag color="#3b82f6">GET</Tag>
+          <span style={{ fontFamily: MONO, fontSize: 14 }}>/v1/me</span>
+        </p>
+        <p style={P}>
+          Returns the account a key belongs to. Cheap and instant — use it to verify a key works
+          rather than generating a proposal, which takes about a minute and counts against your
+          allowance.
+        </p>
+        <Code>{`{
+  "company_id": "f5afe678-...",
+  "company_name": "Nordic Stage AV",
+  "currency": "PLN",
+  "country": "PL",
+  "plan": "business"
+}`}</Code>
+
+        <H2 id="manage-webhooks">Subscribe to events</H2>
+        <p style={P}>
+          <Tag>POST</Tag>
+          <span style={{ fontFamily: MONO, fontSize: 14 }}>/v1/webhooks</span>
+          <span style={{ margin: "0 10px", color: "#9ca3af" }}>&middot;</span>
+          <Tag color="#ef4444">DELETE</Tag>
+          <span style={{ fontFamily: MONO, fontSize: 14 }}>/v1/webhooks/{"{id}"}</span>
+        </p>
+        <p style={P}>
+          The same endpoints you can add in Settings, managed programmatically — which is what
+          platforms like Zapier need in order to subscribe on your behalf.
+        </p>
+        <Code>{`curl -X POST https://api.cuequote.com/v1/webhooks \\
+  -H "Authorization: Bearer $CUEQUOTE_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "url": "https://example.com/hooks/cuequote",
+    "events": ["proposal.accepted"]
+  }'
+
+# -> { "id": "...", "url": "...", "events": [...], "signing_secret": "whsec_..." }`}</Code>
+        <p style={P}>
+          The signing secret is returned once, at creation. Keep it — it is what lets you verify a
+          delivery came from us. Omit <span style={{ fontFamily: MONO }}>events</span> to subscribe to
+          all four. Endpoints must be https and publicly addressable. See the{" "}
+          <Link href="/docs/webhooks" style={{ color: "#10b981", fontWeight: 600 }}>webhook guide</Link>{" "}
+          for payloads and signature verification.
         </p>
 
         <H2 id="errors">Errors</H2>
