@@ -73,8 +73,24 @@ jobs:
         id: breaker
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WF_FILE: ci-failure-agent.yml
         run: |
           set -uo pipefail
+          # Daily cap. The open-PR breaker above stops a second attempt while a
+          # fix is waiting, but nothing stopped a build that flaps red from
+          # being investigated over and over. Each investigation is a real
+          # model session and costs real money — 9 of them in one day is what
+          # $10 looks like.
+          today=$(date -u +%Y-%m-%d)
+          ran=$(gh run list --workflow="${WF_FILE}" --limit 60 \
+                  --json createdAt,conclusion \
+                  --jq "[.[] | select(.createdAt >= \"$today\" and .conclusion != \"skipped\")] | length" 2>/dev/null || echo 0)
+          if [ "${ran:-0}" -ge 6 ]; then
+            echo "::warning::${ran} investigations already today — stopping. Raise the cap deliberately if this is a busy day."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           open=$(gh pr list --state open --label ci-failure-agent --json number --jq 'length' 2>/dev/null || echo 0)
           if [ "${open:-0}" -gt 0 ]; then
             echo "::notice::An agent PR is already open; not starting another."
@@ -128,7 +144,8 @@ jobs:
             --append-system-prompt "The failing log is /tmp/ci-failure.log and the run summary is /tmp/ci-run.json. Write findings to /tmp/investigation.json. You cannot edit .github/, scripts/, eslint.config.mjs or package.json, and you cannot push; later steps enforce both." \
             --settings .github/ci-agent-settings.json \
             --allowedTools "Bash,Read,Write,Edit,Grep,Glob" \
-            --max-turns 60 \
+            --model claude-sonnet-5 \
+            --max-turns 30 \
             --permission-mode acceptEdits \
             2>&1 | tail -c 200000
           rc=$?
