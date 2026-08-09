@@ -494,6 +494,44 @@ export default async function PricingPage() {
         </div>
       </section>
 
+      {/* Product/price structured data. The homepage carried this and the pricing
+          page did not, which is backwards — this is the page Google expects to
+          find offers on, and it is our best-positioned commercial page.
+          valueAddedTaxIncluded is false because Stripe Tax adds VAT on top of
+          these figures at checkout; saying otherwise would misdescribe the price. */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "CueQuote",
+        applicationCategory: "BusinessApplication",
+        applicationSubCategory: "Proposal and quoting software for AV companies and event planners",
+        operatingSystem: "Web",
+        url: `https://cuequote.com${locale === "en" ? "" : `/${locale}`}/pricing`,
+        description: t("metaDescription", { defaultValue: "Simple, transparent pricing for event proposal automation. Start free, upgrade as you grow." }),
+        offers: [
+          { name: t("freeName"), price: "0" },
+          { name: t("starterName"), price: "29" },
+          { name: t("proName"), price: "79" },
+          { name: t("businessName"), price: "179" },
+        ].map(({ name, price }) => ({
+          "@type": "Offer",
+          name,
+          price,
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url: `https://cuequote.com${locale === "en" ? "" : `/${locale}`}/pricing`,
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price,
+            priceCurrency: "EUR",
+            valueAddedTaxIncluded: false,
+            ...(price === "0" ? {} : { billingIncrement: 1, unitCode: "MON" }),
+          },
+        })),
+        // No aggregateRating/review: self-published reviews are ineligible for
+        // review rich results under Google's structured data policy.
+      }) }} />
+
       {/* FAQ structured data for rich search results — content is from trusted i18n keys, not user input */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
