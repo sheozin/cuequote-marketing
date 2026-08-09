@@ -1392,4 +1392,46 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'website-quote-form',
+    title: 'Umieść formularz wyceny na swojej stronie',
+    description: 'Pozwól odwiedzającym opisać wydarzenie na twojej stronie i od razu otrzymać widełki budżetu — a ty dostajesz kontakt i wycenioną ofertę roboczą.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Setup',
+    mode: 'av',
+    whatYouLearn: [
+      'Tworzenie klucza widgetu dla twoich domen',
+      'Wklejanie formularza na stronę',
+      'Co widzi odwiedzający, a co pozostaje prywatne',
+      'Obsługa napływających zapytań',
+    ],
+    steps: [
+      {
+        title: 'Utwórz formularz w Ustawieniach',
+        content: 'Otwórz Ustawienia i znajdź „Formularz wyceny na stronie". Kliknij „Skonfiguruj formularz", nadaj nazwę, na przykład „Strona główna", i wypisz domeny, na których ma działać. Podaj zarówno twojafirma.pl, jak i www.twojafirma.pl, jeśli strona odpowiada na obu — formularz działa wyłącznie na wskazanych domenach, a brak wersji www to najczęstszy powód, dla którego wydaje się nie działać.',
+        tip: 'Widget jest dostępny w planie Pro i wyższych.',
+      },
+      {
+        title: 'Skopiuj znacznik script',
+        content: 'CueQuote pokaże gotowy znacznik script z twoim kluczem i kolorem marki. Skopiuj go — nic nie trzeba edytować.',
+        tip: 'Klucz zaczyna się od cq_pub_ i jest przeznaczony do publikacji. Nigdy nie wklejaj na stronę klucza API cq_live_ — to sekret.',
+      },
+      {
+        title: 'Wklej go na stronę',
+        content: 'Umieść znacznik na stronie w miejscu, gdzie ma pojawić się formularz. W WordPressie użyj bloku Custom HTML, w Squarespace bloku Code, w Wix lub Webflow elementu embed. Formularz pojawi się dokładnie tam, gdzie znacznik, albo we wskazanym miejscu przez data-target.',
+        tip: 'Renderuje się w izolowanym shadow root, więc nie zepsuje układu strony, a twój CSS nie zepsuje jego.',
+      },
+      {
+        title: 'Przetestuj jak odwiedzający',
+        content: 'Wejdź na stronę, opisz prawdziwe wydarzenie, podaj liczbę gości oraz własne imię i e-mail, a następnie wyślij. W ciągu minuty powinieneś zobaczyć widełki budżetu z podziałem na kategorie.',
+        tip: 'Jeśli widzisz „This key is not enabled for…", testowana domena nie jest na liście klucza — dodaj ją w Ustawieniach.',
+      },
+      {
+        title: 'Zajmij się zapytaniem',
+        content: 'Od razu dostajesz e-mail z danymi odwiedzającego, pokazanymi widełkami i przyciskiem do wersji roboczej. W CueQuote czeka w pełni wyceniona oferta z przypisanym klientem. Sprawdź ceny, popraw co trzeba i wyślij.',
+        tip: 'Odwiedzający widzą wyłącznie widełki. Twoje ceny jednostkowe i lista sprzętu nigdy nie trafiają na publiczną stronę.',
+      },
+    ],
+  },
 ]

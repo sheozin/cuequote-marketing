@@ -1438,4 +1438,46 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'website-quote-form',
+    title: 'Put a quote form on your website',
+    description: 'Let visitors describe their event on your own site and get an instant budget range — while you get the lead and a costed draft proposal.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Setup',
+    mode: 'av',
+    whatYouLearn: [
+      'Creating a widget key for your domains',
+      'Pasting the form into your website',
+      'What visitors see, and what stays private',
+      'Handling the leads that arrive',
+    ],
+    steps: [
+      {
+        title: 'Create the form in Settings',
+        content: 'Open Settings and find "Website quote form". Click "Set up the form", give it a name like "Main website", and list the domains it will run on. Enter both yourcompany.com and www.yourcompany.com if your site answers on both — the form only works on the domains you list, so a missing www is the most common reason it appears to do nothing.',
+        tip: 'The widget is available on the Pro plan and above.',
+      },
+      {
+        title: 'Copy the script tag',
+        content: 'CueQuote shows a finished script tag with your key and brand colour already filled in. Copy it — there is nothing to edit.',
+        tip: 'The key starts with cq_pub_ and is meant to be public. Never paste a cq_live_ API key onto a website; it is a secret.',
+      },
+      {
+        title: 'Paste it into your website',
+        content: 'Put the tag on the page where you want the form to appear. In WordPress use a Custom HTML block; in Squarespace a Code block; in Wix or Webflow an embed element. The form renders exactly where the tag sits, or you can point it somewhere specific with data-target.',
+        tip: 'It renders in an isolated shadow root, so it cannot break your site layout and your CSS cannot break it.',
+      },
+      {
+        title: 'Try it as a visitor would',
+        content: 'Load the page, describe a real event, add a guest count and your own name and email, and submit. You should get a total budget range with a breakdown by category within a minute.',
+        tip: 'If you see "This key is not enabled for…", the domain you are testing on is not on the key list — add it in Settings.',
+      },
+      {
+        title: 'Handle the lead',
+        content: 'You get an email straight away with the visitor\'s details, the range they were shown, and a button to the draft. In CueQuote there is a fully costed proposal waiting with the client already attached. Review the pricing, adjust anything, and send it.',
+        tip: 'Visitors only ever see ranges. Your unit prices and equipment list are never exposed on your public site.',
+      },
+    ],
+  },
 ]

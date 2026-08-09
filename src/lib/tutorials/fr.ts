@@ -1428,4 +1428,46 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'website-quote-form',
+    title: 'Ajoutez un formulaire de devis à votre site',
+    description: 'Vos visiteurs décrivent leur événement sur votre propre site et obtiennent aussitôt une fourchette budgétaire — vous récupérez le contact et une proposition chiffrée en brouillon.',
+    duration: '4 min',
+    difficulty: 'beginner',
+    category: 'Setup',
+    mode: 'av',
+    whatYouLearn: [
+      'Créer une clé de widget pour vos domaines',
+      'Coller le formulaire dans votre site',
+      'Ce que voient les visiteurs, et ce qui reste privé',
+      'Traiter les demandes qui arrivent',
+    ],
+    steps: [
+      {
+        title: 'Créer le formulaire dans les Réglages',
+        content: 'Ouvrez les Réglages et trouvez « Formulaire de devis du site ». Cliquez sur « Configurer le formulaire », donnez-lui un nom comme « Site principal » et listez les domaines sur lesquels il tournera. Saisissez votresociete.fr et www.votresociete.fr si votre site répond aux deux — le formulaire ne fonctionne que sur les domaines listés, et un www manquant est la première raison pour laquelle il semble ne rien faire.',
+        tip: 'Le widget est disponible à partir du plan Pro.',
+      },
+      {
+        title: 'Copier la balise script',
+        content: 'CueQuote affiche une balise script prête, avec votre clé et votre couleur de marque. Copiez-la — il n\'y a rien à modifier.',
+        tip: 'La clé commence par cq_pub_ et est destinée à être publique. Ne collez jamais une clé API cq_live_ sur un site : c\'est un secret.',
+      },
+      {
+        title: 'La coller dans votre site',
+        content: 'Placez la balise sur la page où le formulaire doit apparaître. Dans WordPress utilisez un bloc HTML personnalisé, dans Squarespace un bloc Code, dans Wix ou Webflow un élément embed. Le formulaire s\'affiche exactement où se trouve la balise, ou à un endroit précis via data-target.',
+        tip: 'Il s\'affiche dans un shadow root isolé : il ne peut pas casser votre mise en page, et votre CSS ne peut pas le casser.',
+      },
+      {
+        title: 'Tester comme un visiteur',
+        content: 'Chargez la page, décrivez un événement réel, indiquez le nombre d\'invités ainsi que vos nom et e-mail, puis envoyez. En moins d\'une minute vous devriez voir une fourchette budgétaire avec le détail par catégorie.',
+        tip: 'Si « This key is not enabled for… » apparaît, le domaine testé n\'est pas dans la liste de la clé — ajoutez-le dans les Réglages.',
+      },
+      {
+        title: 'Traiter la demande',
+        content: 'Vous recevez immédiatement un e-mail avec les coordonnées du visiteur, la fourchette affichée et un bouton vers le brouillon. Dans CueQuote vous trouverez une proposition entièrement chiffrée, le client déjà rattaché. Vérifiez les prix, ajustez, envoyez.',
+        tip: 'Les visiteurs ne voient que des fourchettes. Vos prix unitaires et votre liste de matériel n\'apparaissent jamais sur votre site public.',
+      },
+    ],
+  },
 ]

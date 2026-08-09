@@ -1428,4 +1428,46 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'website-quote-form',
+    title: 'Angebotsformular auf Ihrer Website',
+    description: 'Besucher beschreiben ihre Veranstaltung auf Ihrer eigenen Website und erhalten sofort eine Budgetspanne — Sie erhalten den Kontakt und ein kalkuliertes Angebot als Entwurf.',
+    duration: '4 Min.',
+    difficulty: 'beginner',
+    category: 'Setup',
+    mode: 'av',
+    whatYouLearn: [
+      'Einen Widget-Schlüssel für Ihre Domains anlegen',
+      'Das Formular in die Website einfügen',
+      'Was Besucher sehen und was privat bleibt',
+      'Eingehende Anfragen bearbeiten',
+    ],
+    steps: [
+      {
+        title: 'Formular in den Einstellungen anlegen',
+        content: 'Öffnen Sie die Einstellungen und suchen Sie „Angebotsformular für die Website". Klicken Sie auf „Formular einrichten", vergeben Sie einen Namen wie „Hauptwebsite" und tragen Sie die Domains ein, auf denen es laufen soll. Tragen Sie ihrefirma.de und www.ihrefirma.de ein, wenn Ihre Seite auf beiden antwortet — das Formular läuft nur auf den eingetragenen Domains, und ein fehlendes www ist der häufigste Grund, warum scheinbar nichts passiert.',
+        tip: 'Das Widget ist ab dem Pro-Plan verfügbar.',
+      },
+      {
+        title: 'Script-Tag kopieren',
+        content: 'CueQuote zeigt ein fertiges Script-Tag mit Ihrem Schlüssel und Ihrer Markenfarbe. Kopieren Sie es — es gibt nichts zu bearbeiten.',
+        tip: 'Der Schlüssel beginnt mit cq_pub_ und ist für die Öffentlichkeit gedacht. Fügen Sie niemals einen cq_live_ API-Schlüssel auf einer Website ein; der ist geheim.',
+      },
+      {
+        title: 'In die Website einfügen',
+        content: 'Setzen Sie das Tag auf die Seite, wo das Formular erscheinen soll. In WordPress nutzen Sie einen Custom-HTML-Block, in Squarespace einen Code-Block, in Wix oder Webflow ein Embed-Element. Das Formular erscheint genau dort, wo das Tag steht, oder per data-target an einer bestimmten Stelle.',
+        tip: 'Es rendert in einem isolierten Shadow Root: Es kann Ihr Layout nicht zerstören und Ihr CSS kann es nicht zerstören.',
+      },
+      {
+        title: 'Wie ein Besucher testen',
+        content: 'Laden Sie die Seite, beschreiben Sie eine echte Veranstaltung, geben Sie Gästezahl sowie Ihren Namen und Ihre E-Mail an und senden Sie ab. Innerhalb einer Minute sollten Sie eine Budgetspanne mit Aufschlüsselung nach Kategorien sehen.',
+        tip: 'Erscheint „This key is not enabled for…", steht die getestete Domain nicht auf der Liste — ergänzen Sie sie in den Einstellungen.',
+      },
+      {
+        title: 'Die Anfrage bearbeiten',
+        content: 'Sie erhalten sofort eine E-Mail mit den Daten des Besuchers, der gezeigten Spanne und einem Button zum Entwurf. In CueQuote wartet ein vollständig kalkuliertes Angebot mit bereits zugeordnetem Kunden. Preise prüfen, anpassen, senden.',
+        tip: 'Besucher sehen ausschließlich Spannen. Ihre Einzelpreise und Ihre Geräteliste erscheinen nie auf Ihrer öffentlichen Seite.',
+      },
+    ],
+  },
 ]
