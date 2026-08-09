@@ -19,6 +19,7 @@ export default async function Footer() {
       title: t("resources"),
       links: [
         { label: t("docs"), href: "/docs" },
+        { label: t("api"), href: "/docs/api" },
         { label: t("tutorials"), href: "/tutorials" },
         { label: t("blog"), href: "/blog" },
         { label: t("avCostCalculator"), href: "/av-cost-calculator" },

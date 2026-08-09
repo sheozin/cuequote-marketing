@@ -506,7 +506,8 @@
     "resources": "Ressources",
     "forAvCompanies": "Pour les prestataires AV",
     "forEventPlanners": "Pour les planificateurs d'événements",
-    "avCostCalculator": "Calculateur de coût AV"
+    "avCostCalculator": "Calculateur de coût AV",
+    "api": "API et intégrations"
   },
   "posts": {
     "event-layout-designer-floor-plans": {
@@ -1769,6 +1770,27 @@
         "Soyez clair sur ce à quoi vous renoncez. CueQuote ne suit pas le matériel par code-barres, ne gère pas d'entrepôt, ne planifie pas les équipes sur des missions qui se chevauchent et ne gère pas la sous-location. Si vous avez besoin de cela, il vous faut Rentman ou équivalent, et aucune rapidité de devis ne compense. Choisir un outil orienté proposition, c'est affirmer que votre inventaire reste assez petit pour être géré sans logiciel — vrai pour beaucoup de petites sociétés AV, et qui cesse de l'être avec la croissance.",
         "Les deux ne s'excluent d'ailleurs pas. Beaucoup de sociétés utilisent un logiciel d'exploitation pour l'entrepôt et quelque chose de plus rapide en front, parce que les outils optimisent des moments différents de la mission. L'erreur coûteuse est de payer une plateforme d'exploitation complète par poste et de rédiger malgré tout les devis à la main dans un traitement de texte — le pire des deux mondes.",
         "La façon pratique de décider prend environ une semaine. Comptez les propositions envoyées le mois dernier et les heures qu'elles ont coûté. Comptez les missions où des problèmes de matériel vous ont coûté de l'argent. Le plus grand des deux chiffres désigne le logiciel à acheter en premier. Les deux plateformes ont une entrée gratuite : la question se tranche donc avec des preuves plutôt qu'avec des opinions."
+      ]
+    },
+    "cuequote-integrations-api-widget-webhooks": {
+      "title": "CueQuote se connecte à votre site, à votre CRM et à l’IA",
+      "excerpt": "Quatre nouvelles façons de connecter CueQuote : un formulaire de devis pour votre site, une API REST, des webhooks vers votre CRM et un serveur MCP.",
+      "readTime": "6 min de lecture",
+      "content": [
+        "Jusqu’ici, CueQuote était un endroit où l’on se rendait. Vous ouvriez l’application, décriviez un événement et obteniez un devis. Cela reste le cœur — mais il subsistait une lacune évidente : le devis vivait dans CueQuote et nulle part ailleurs. Cette version comble cette lacune dans quatre directions : votre site, vos propres systèmes, votre CRM et votre assistant IA.",
+        "Un formulaire de devis instantané pour votre site. La plupart des sites de sociétés audiovisuelles s’arrêtent à « contactez-nous pour un devis ». Le visiteur remplit un formulaire, attend deux ou trois jours et, entre-temps, interroge aussi deux de vos concurrents. Le nouveau formulaire remplace cela par un chiffre réel pendant qu’il lit encore votre page.",
+        "[IMAGE:/blog/widget-form.png|Le formulaire tel que le voit un visiteur — une balise script, sans iframe ni étape de build.]",
+        "L’installation tient en une seule balise script. Collez-la dans WordPress, Squarespace, Wix, Webflow ou du HTML brut, et le formulaire s’affiche là où vous l’avez placé. Il s’exécute dans un shadow root isolé : le CSS de votre site ne peut pas casser le formulaire, et le formulaire ne peut pas casser votre mise en page.",
+        "Le visiteur décrit son événement, indique le nombre d’invités et ses coordonnées, puis obtient une fourchette budgétaire détaillée par catégorie — audio, lumière, vidéo, scénographie et équipe.",
+        "[IMAGE:/blog/widget-estimate.png|L’estimation : une fourchette totale et une répartition par catégorie, calculée à partir du catalogue de l’entreprise. Les prix unitaires ne sont jamais affichés.]",
+        "Le plus important est ce que le visiteur ne voit pas. Aucun prix unitaire, aucune liste de matériel, aucune ligne — seulement des fourchettes, clairement présentées comme indicatives et non comme un devis. Votre grille tarifaire est ce qui rend l’estimation juste, et c’est aussi ce que vous ne publieriez jamais. Elle reste de notre côté — c’est précisément ce qui rend l’outil sûr sur une page publique que vos concurrents peuvent lire.",
+        "Ce que vous obtenez vaut bien mieux qu’un formulaire de contact : un e-mail avec la demande et, déjà prêt dans CueQuote, un brouillon de devis entièrement chiffré à vos vrais prix, avec le client déjà créé et rattaché. La partie lente du travail est terminée avant même que vous ayez lu l’e-mail.",
+        "Une API REST. Si vous préférez piloter CueQuote depuis vos propres systèmes, envoyez une description d’événement en POST sur <code>/v1/proposals</code> et recevez un devis chiffré en JSON — total, lignes et lien de partage. Créez une clé dans les Paramètres, envoyez-la comme jeton bearer, et l’intégration est terminée. Référence complète dans la <a href=\"https://cuequote.com/docs/api\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">documentation API</a>.",
+        "Des webhooks. Interroger une API pour savoir si un client a accepté est à la fois coûteux et lent. Ajoutez plutôt un point de terminaison : nous envoyons une charge utile signée dès qu’un devis est envoyé, consulté, accepté ou refusé. Chaque livraison est signée en HMAC-SHA256, ce qui vous permet de prouver qu’elle vient bien de nous et non de quelqu’un qui connaît votre URL. Les Paramètres affichent le nombre de livraisons et signalent un point de terminaison qui ne répond plus — car une intégration CRM qui casse en silence ne prévient personne, et les devis cessent simplement d’arriver.",
+        "Un serveur MCP. Connectez CueQuote à Claude, ChatGPT ou tout assistant compatible Model Context Protocol, puis demandez en langage courant : « Chiffre la conférence de Varsovie — 300 personnes, scène principale avec LED, quatre salles d’atelier, 14 octobre. » Il répond à partir de votre propre catalogue et enregistre un brouillon. Il ne devine pas les prix : il interroge votre compte.",
+        "Les quatre utilisent le même estimateur. Cela compte plus qu’il n’y paraît. Un devis produit par le formulaire de votre site, par l’API depuis votre CRM, par un assistant ou par vous dans l’application est le même devis — même catalogue, mêmes prix régionaux, mêmes règles. Il n’y a pas de second moteur de tarification, moins bon, caché derrière les intégrations.",
+        "Aucun d’eux ne peut envoyer quoi que ce soit à un client. Tout ce que les intégrations créent est un brouillon. L’envoi reste un acte délibéré que vous effectuez dans l’application après avoir relu le résultat — exactement là où cette décision doit rester quand une machine a rédigé la première version.",
+        "Le formulaire de devis est disponible à partir du plan Pro. L’API, les webhooks et le serveur MCP sont inclus dans le plan Business. Les quatre sont documentés avec du code fonctionnel : <a href=\"https://cuequote.com/docs/widget\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">formulaire de devis</a>, <a href=\"https://cuequote.com/docs/api\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">API</a>, <a href=\"https://cuequote.com/docs/webhooks\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">webhooks</a> et <a href=\"https://cuequote.com/docs/mcp\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">MCP</a>. Si vous construisez quelque chose que nous n’avons pas couvert, dites-le-nous — nous préférons l’apprendre tôt."
       ]
     }
   },

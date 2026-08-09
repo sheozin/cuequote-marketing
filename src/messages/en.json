@@ -506,7 +506,8 @@
     "resources": "Resources",
     "forAvCompanies": "For AV Companies",
     "forEventPlanners": "For Event Planners",
-    "avCostCalculator": "AV cost calculator"
+    "avCostCalculator": "AV cost calculator",
+    "api": "API & integrations"
   },
   "posts": {
     "event-layout-designer-floor-plans": {
@@ -1768,6 +1769,27 @@
         "Be clear about what you give up. CueQuote does not track equipment with barcodes, does not manage a warehouse, does not schedule crew across overlapping jobs, and does not handle subhire. If you need those things you need Rentman or something like it, and no amount of proposal speed compensates. Choosing a proposal-first tool is a statement that your inventory is still small enough to manage without software — true for a lot of small AV companies, and it stops being true as you grow.",
         "The two are not mutually exclusive either. Plenty of companies run operations software for the warehouse and something faster at the front end, because the tools optimise for different moments in the job. The expensive mistake is paying for a full operations platform per seat and then still writing proposals by hand in a word processor — that is the worst of both.",
         "The practical way to decide takes about a week. Count the proposals you sent last month and the hours they took. Count the jobs where equipment problems cost you money. Whichever number is bigger is the software you should buy first. Both platforms have free entry points, so this is a question you can answer with evidence rather than opinion."
+      ]
+    },
+    "cuequote-integrations-api-widget-webhooks": {
+      "title": "CueQuote Now Connects to Your Website, CRM and AI",
+      "excerpt": "Four new ways to connect CueQuote: an instant quote form for your site, a REST API, webhooks into your CRM, and an MCP server for AI assistants.",
+      "readTime": "6 min read",
+      "content": [
+        "Until now, CueQuote was somewhere you went. You opened the app, described an event, and got a proposal back. That is still the centre of it — but it left an obvious gap: the quote lived in CueQuote and nowhere else. This release closes that gap in four directions: your website, your own systems, your CRM, and your AI assistant.",
+        "An instant quote form for your website. Most AV company websites end at “contact us for a quote”. The visitor fills in a form, waits two or three days, and in the meantime asks two of your competitors as well. The new website quote form replaces that with a real number while they are still reading your page.",
+        "[IMAGE:/blog/widget-form.png|The form as a visitor sees it — one script tag, no iframe, no build step.]",
+        "Installation is a single script tag. Paste it into WordPress, Squarespace, Wix, Webflow or plain HTML and the form renders where you put it. It runs inside an isolated shadow root, so your site's CSS cannot break the form and the form cannot break your layout.",
+        "The visitor describes their event, adds a guest count and their contact details, and gets a budget range broken down by category — audio, lighting, video, staging, crew.",
+        "[IMAGE:/blog/widget-estimate.png|The estimate: a total range and a category breakdown, priced from the company's own catalogue. Unit prices are never shown.]",
+        "What matters most here is what the visitor does not see. No unit prices, no equipment list, no line items — only ranges, and clearly labelled as indicative rather than as a quote. Your rate card is the thing that makes the estimate accurate, and it is also the thing you would never publish. It stays on our side of the line, which is what makes this safe to put on a public page a competitor can read.",
+        "What you get is considerably better than a contact form: an email with the enquiry and, waiting in CueQuote, a fully costed draft proposal at your real prices, with the client already created and attached. The slow part of answering an enquiry is finished before you have read the email.",
+        "A REST API. If you would rather drive CueQuote from your own systems, POST an event description to <code>/v1/proposals</code> and get a costed proposal back as JSON — total, line items and a share link. Create a key in Settings, send it as a bearer token, and that is the entire integration. Full reference in the <a href=\"https://cuequote.com/docs/api\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">API docs</a>.",
+        "Webhooks. Polling an API to find out whether a client accepted is both wasteful and slow. Add an endpoint instead, and we post a signed payload the moment a proposal is sent, viewed, accepted or rejected. Every delivery is signed with HMAC-SHA256 so you can prove it came from us and not from anyone who learned your URL. Settings shows delivery counts and flags an endpoint that has stopped responding — because a CRM integration that quietly breaks otherwise tells nobody, and proposals simply stop arriving.",
+        "An MCP server. Connect CueQuote to Claude, ChatGPT or any assistant that speaks Model Context Protocol, then ask in plain language: “Quote the Warsaw conference — 300 people, keynote stage with LED, four breakout rooms, 14 October.” It answers from your own equipment catalogue and saves a draft. It is not guessing at prices; it is calling your account.",
+        "All four run the same estimator. This matters more than it sounds. A quote produced by the form on your website, by the API from your CRM, by an assistant, or by you in the app is the same quote — same catalogue, same regional pricing, same rules. There is no second, worse pricing engine hiding behind the integrations.",
+        "None of them can send anything to a client. Everything the integrations create is a draft. Sending stays a deliberate act you take in the app after reviewing what was generated, which is exactly where that decision belongs when a machine wrote the first version.",
+        "The website quote form is available on Pro and above. The API, webhooks and the MCP server are on Business. All four are documented with working code: <a href=\"https://cuequote.com/docs/widget\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">website quote form</a>, <a href=\"https://cuequote.com/docs/api\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">API</a>, <a href=\"https://cuequote.com/docs/webhooks\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">webhooks</a> and <a href=\"https://cuequote.com/docs/mcp\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">MCP</a>. If you are building something we have not covered, tell us — we would rather hear about it early."
       ]
     }
   },

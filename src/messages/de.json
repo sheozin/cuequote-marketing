@@ -506,7 +506,8 @@
     "resources": "Ressourcen",
     "forAvCompanies": "Für AV-Firmen",
     "forEventPlanners": "Für Veranstaltungsplaner",
-    "avCostCalculator": "AV-Kostenrechner"
+    "avCostCalculator": "AV-Kostenrechner",
+    "api": "API & Integrationen"
   },
   "posts": {
     "event-layout-designer-floor-plans": {
@@ -1767,6 +1768,27 @@
         "Seien Sie sich im Klaren, worauf Sie verzichten. CueQuote verfolgt keine Technik per Barcode, führt kein Lager, plant keine Crew über überlappende Jobs und wickelt kein Subhire ab. Wenn Sie das brauchen, brauchen Sie Rentman oder Vergleichbares, und keine Angebotsgeschwindigkeit gleicht das aus. Ein angebotsorientiertes Werkzeug zu wählen ist die Aussage, dass Ihr Bestand noch klein genug ist, um ihn ohne Software zu beherrschen — für viele kleine AV-Firmen wahr, und mit dem Wachstum irgendwann nicht mehr.",
         "Beides schließt sich auch nicht aus. Viele Firmen betreiben Betriebssoftware fürs Lager und etwas Schnelleres an der Front, weil die Werkzeuge unterschiedliche Momente im Job optimieren. Der teure Fehler ist, eine volle Betriebsplattform pro Platz zu bezahlen und Angebote trotzdem von Hand im Textprogramm zu schreiben — das ist das Schlechteste aus beiden Welten.",
         "Der praktische Weg zur Entscheidung dauert etwa eine Woche. Zählen Sie die Angebote des letzten Monats und die Stunden, die sie gekostet haben. Zählen Sie die Jobs, bei denen Technikprobleme Geld gekostet haben. Die größere Zahl zeigt, welche Software Sie zuerst kaufen sollten. Beide Plattformen haben kostenlose Einstiege — das lässt sich also mit Belegen statt mit Meinung beantworten."
+      ]
+    },
+    "cuequote-integrations-api-widget-webhooks": {
+      "title": "CueQuote verbindet sich mit Website, CRM und KI",
+      "excerpt": "Vier neue Wege, CueQuote anzubinden: ein Angebotsformular für Ihre Website, eine REST-API, Webhooks ins CRM und ein MCP-Server für KI-Assistenten.",
+      "readTime": "6 Min. Lesezeit",
+      "content": [
+        "Bisher war CueQuote ein Ort, den man aufsuchte. Sie öffneten die App, beschrieben ein Event und bekamen ein Angebot. Das bleibt der Kern — aber es blieb eine offensichtliche Lücke: das Angebot lebte in CueQuote und sonst nirgends. Diese Version schließt sie in vier Richtungen: Ihre Website, Ihre eigenen Systeme, Ihr CRM und Ihr KI-Assistent.",
+        "Ein Angebotsformular für Ihre Website. Die meisten AV-Websites enden bei „Kontaktieren Sie uns für ein Angebot“. Der Besucher füllt ein Formular aus, wartet zwei oder drei Tage und fragt in der Zwischenzeit auch zwei Ihrer Wettbewerber. Das neue Formular ersetzt das durch eine echte Zahl, während er noch auf Ihrer Seite liest.",
+        "[IMAGE:/blog/widget-form.png|Das Formular aus Sicht des Besuchers — ein Script-Tag, kein iframe, kein Build-Schritt.]",
+        "Die Installation ist ein einziges Script-Tag. Fügen Sie es in WordPress, Squarespace, Wix, Webflow oder reines HTML ein, und das Formular erscheint genau dort, wo Sie es platzieren. Es läuft in einem isolierten Shadow Root: Ihr CSS kann das Formular nicht zerstören und das Formular nicht Ihr Layout.",
+        "Der Besucher beschreibt sein Event, gibt Gästezahl und Kontaktdaten an und erhält eine Budgetspanne, aufgeschlüsselt nach Kategorien — Ton, Licht, Video, Bühne und Crew.",
+        "[IMAGE:/blog/widget-estimate.png|Die Schätzung: Gesamtspanne und Aufschlüsselung nach Kategorien, kalkuliert aus dem eigenen Katalog des Unternehmens. Einzelpreise werden nie gezeigt.]",
+        "Entscheidend ist, was der Besucher nicht sieht. Keine Einzelpreise, keine Gerätelevorlage, keine Positionen — nur Spannen, klar als Orientierung und nicht als Angebot gekennzeichnet. Ihre Preisliste macht die Schätzung genau, und sie ist zugleich das, was Sie nie veröffentlichen würden. Sie bleibt auf unserer Seite — und genau deshalb lässt sich das gefahrlos auf eine öffentliche Seite stellen, die auch ein Wettbewerber liest.",
+        "Was Sie bekommen, ist deutlich mehr als ein Kontaktformular: eine E-Mail mit der Anfrage und, in CueQuote bereitliegend, ein vollständig kalkulierter Angebotsentwurf zu Ihren echten Preisen, mit bereits angelegtem und zugeordnetem Kunden. Der langsame Teil der Anfragebeantwortung ist erledigt, bevor Sie die Mail gelesen haben.",
+        "Eine REST-API. Wenn Sie CueQuote lieber aus Ihren eigenen Systemen steuern: Senden Sie eine Eventbeschreibung per POST an <code>/v1/proposals</code> und erhalten Sie ein kalkuliertes Angebot als JSON zurück — Summe, Positionen und einen Freigabelink. Schlüssel in den Einstellungen anlegen, als Bearer-Token senden, fertig. Vollständige Referenz in der <a href=\"https://cuequote.com/docs/api\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">API-Dokumentation</a>.",
+        "Webhooks. Eine API abzufragen, um herauszufinden, ob ein Kunde zugesagt hat, ist verschwenderisch und langsam. Fügen Sie stattdessen einen Endpunkt hinzu, und wir senden ein signiertes Payload in dem Moment, in dem ein Angebot gesendet, angesehen, angenommen oder abgelehnt wird. Jede Zustellung ist mit HMAC-SHA256 signiert, sodass Sie belegen können, dass sie von uns stammt und nicht von jemandem, der Ihre URL kennt. Die Einstellungen zeigen Zustellzahlen und markieren einen Endpunkt, der nicht mehr antwortet — denn eine CRM-Anbindung, die still ausfällt, sagt sonst niemandem Bescheid, und es kommen einfach keine Angebote mehr an.",
+        "Ein MCP-Server. Verbinden Sie CueQuote mit Claude, ChatGPT oder einem beliebigen Assistenten, der Model Context Protocol spricht, und fragen Sie in normaler Sprache: „Kalkuliere die Warschauer Konferenz — 300 Personen, Hauptbühne mit LED, vier Breakout-Räume, 14. Oktober.“ Er antwortet aus Ihrem eigenen Gerätekatalog und speichert einen Entwurf. Er rät nicht bei Preisen, er ruft Ihr Konto ab.",
+        "Alle vier nutzen denselben Kalkulator. Das wiegt schwerer, als es klingt. Ein Angebot aus dem Formular auf Ihrer Website, aus der API in Ihrem CRM, von einem Assistenten oder von Ihnen in der App ist dasselbe Angebot — gleicher Katalog, gleiche regionale Preise, gleiche Regeln. Hinter den Integrationen versteckt sich keine zweite, schlechtere Preis-Engine.",
+        "Keine davon kann etwas an einen Kunden senden. Alles, was die Integrationen erzeugen, ist ein Entwurf. Das Senden bleibt eine bewusste Handlung, die Sie in der App vornehmen, nachdem Sie das Ergebnis geprüft haben — genau dort gehört diese Entscheidung hin, wenn eine Maschine die erste Fassung geschrieben hat.",
+        "Das Angebotsformular gibt es ab dem Pro-Tarif. API, Webhooks und MCP-Server sind im Business-Tarif enthalten. Alle vier sind mit funktionierendem Code dokumentiert: <a href=\"https://cuequote.com/docs/widget\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">Angebotsformular</a>, <a href=\"https://cuequote.com/docs/api\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">API</a>, <a href=\"https://cuequote.com/docs/webhooks\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">Webhooks</a> und <a href=\"https://cuequote.com/docs/mcp\" style=\"color:#10b981;text-decoration:underline;font-weight:500;\">MCP</a>. Wenn Sie etwas bauen, das wir nicht abgedeckt haben, sagen Sie uns Bescheid — lieber früh als spät."
       ]
     }
   },
