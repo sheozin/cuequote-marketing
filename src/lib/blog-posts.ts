@@ -222,11 +222,6 @@ export const POSTS: BlogPostSummary[] = [
     date: "2026-06-07",
   },
   {
-    slug: "free-av-proposal-template-download",
-    category: "Guides",
-    date: "2026-06-05",
-  },
-  {
     slug: "how-to-price-av-services-events",
     category: "Guides",
     date: "2026-06-03",

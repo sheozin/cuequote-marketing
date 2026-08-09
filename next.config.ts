@@ -55,6 +55,13 @@ const nextConfig: NextConfig = {
       // layout links) and send them to the homepage features anchor.
       { source: "/features", destination: "/#features", permanent: true },
       // Blog slug renames — old non-English slugs → new English slugs
+      // Merged 2026-08-09, not renamed: this post and av-proposal-template-guide
+      // were near-duplicates targeting "AV proposal template", and the query sat
+      // at position 15.1 with 18 impressions and no clicks because the signal was
+      // split across both. Its scope-summary, common-mistakes and maintenance
+      // sections now live in the guide.
+      { source: "/blog/free-av-proposal-template-download", destination: "/blog/av-proposal-template-guide", permanent: true },
+      { source: "/:locale/blog/free-av-proposal-template-download", destination: "/:locale/blog/av-proposal-template-guide", permanent: true },
       { source: "/blog/cout-evenement-entreprise-2026", destination: "/blog/corporate-event-cost-2026", permanent: true },
       { source: "/:locale/blog/cout-evenement-entreprise-2026", destination: "/:locale/blog/corporate-event-cost-2026", permanent: true },
       { source: "/blog/ile-kosztuje-organizacja-konferencji", destination: "/blog/conference-cost-realistic-budget", permanent: true },
