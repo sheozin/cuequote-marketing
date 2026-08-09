@@ -2256,7 +2256,11 @@
       "step3": "Kliknij „Kontynuuj z tą wyceną”. Twoja konfiguracja przechodzi razem z Tobą na stronę rejestracji.",
       "step4": "Załóż konto i potwierdź adres e-mail. Gdy otworzysz pierwszą ofertę, liczba uczestników, dni, waluta i sprzęt już tam będą — możesz wszystko zmienić przed wygenerowaniem.",
       "tip": "Sprzęt i obsługa są wyceniane osobno dla każdego rynku. Sprzęt AV kosztuje podobnie na całym świecie, bo kupowany jest globalnie, natomiast stawki ekipy są lokalne — dlatego dwa kraje mogą mieć zbliżone koszty sprzętu, ale bardzo różne koszty obsługi."
-    }
+    },
+    "developersTitle": "Dla programistów",
+    "devApi": "Dokumentacja API",
+    "devWidget": "Formularz wyceny na stronie",
+    "devMcp": "Asystenci AI (MCP)"
   },
   "changelog": {
     "metaTitle": "Historia zmian — Co nowego",

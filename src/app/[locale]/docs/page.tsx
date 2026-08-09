@@ -356,6 +356,33 @@ export default async function DocsPage() {
                   {t(`${a.key}.title`)}
                 </a>
               ))}
+
+              {/* The three developer guides are their own pages, not articles in
+                  this list — they need code blocks this renderer does not do.
+                  Without a link here nobody finds them. */}
+              <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "#9ca3af", margin: "18px 0 6px 12px" }}>
+                {t("developersTitle", { defaultValue: "For developers" })}
+              </p>
+              {[
+                { href: "/docs/api", label: t("devApi", { defaultValue: "API reference" }) },
+                { href: "/docs/widget", label: t("devWidget", { defaultValue: "Website quote form" }) },
+                { href: "/docs/mcp", label: t("devMcp", { defaultValue: "AI assistants (MCP)" }) },
+              ].map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  style={{
+                    textDecoration: "none",
+                    fontSize: 14,
+                    fontWeight: 500,
+                    color: "#4b5563",
+                    padding: "8px 12px",
+                    borderRadius: 8,
+                  }}
+                >
+                  {l.label} →
+                </a>
+              ))}
             </nav>
           </aside>
 

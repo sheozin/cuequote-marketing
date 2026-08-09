@@ -2283,7 +2283,11 @@
       "step3": "Click \"Continue with this estimate\". Your configuration travels with you to the signup page.",
       "step4": "Create your account and confirm your email. When you open your first proposal, the attendee count, days, currency and equipment are already there — adjust anything before generating.",
       "tip": "Equipment and crew are priced separately by market. AV hardware costs much the same worldwide because it is bought globally, while crew rates are local — which is why two countries can show similar equipment costs but very different crew costs."
-    }
+    },
+    "developersTitle": "For developers",
+    "devApi": "API reference",
+    "devWidget": "Website quote form",
+    "devMcp": "AI assistants (MCP)"
   },
   "changelog": {
     "metaTitle": "Changelog — What's New",

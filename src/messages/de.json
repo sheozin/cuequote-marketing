@@ -2282,7 +2282,11 @@
       "step3": "Klicken Sie auf „Mit dieser Schätzung fortfahren“. Ihre Konfiguration wird zur Registrierung mitgenommen.",
       "step4": "Konto anlegen und E-Mail bestätigen. Beim ersten Angebot sind Teilnehmerzahl, Tage, Währung und Technik bereits eingetragen — vor dem Generieren beliebig anpassbar.",
       "tip": "Technik und Personal werden je Markt getrennt kalkuliert. AV-Technik kostet weltweit annähernd gleich, weil sie global eingekauft wird, während Crew-Sätze lokal sind — deshalb können zwei Länder ähnliche Technikkosten, aber sehr unterschiedliche Personalkosten haben."
-    }
+    },
+    "developersTitle": "Für Entwickler",
+    "devApi": "API-Referenz",
+    "devWidget": "Angebotsformular für die Website",
+    "devMcp": "KI-Assistenten (MCP)"
   },
   "changelog": {
     "metaTitle": "Änderungsprotokoll — Neuigkeiten",

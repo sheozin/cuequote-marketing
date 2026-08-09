@@ -2284,7 +2284,11 @@
       "step3": "Cliquez sur « Continuer avec cette estimation ». Votre configuration vous suit jusqu’à la page d’inscription.",
       "step4": "Créez votre compte et confirmez votre e-mail. À l’ouverture du premier devis, participants, jours, devise et matériel sont déjà là — modifiables avant génération.",
       "tip": "Le matériel et les équipes sont chiffrés séparément selon le marché. Le matériel AV coûte à peu près pareil partout car il s’achète mondialement, alors que les tarifs des équipes sont locaux — d’où deux pays aux coûts matériel proches mais aux coûts d’équipe très différents."
-    }
+    },
+    "developersTitle": "Pour les développeurs",
+    "devApi": "Référence API",
+    "devWidget": "Formulaire de devis du site",
+    "devMcp": "Assistants IA (MCP)"
   },
   "changelog": {
     "metaTitle": "Journal des modifications — Nouveautés",
