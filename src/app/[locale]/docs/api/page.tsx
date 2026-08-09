@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
 import Nav from "../../../../components/Nav";
 import Footer from "../../../../components/Footer";
 import { getLocale } from "next-intl/server";
@@ -263,7 +264,7 @@ export default async function ApiDocsPage() {
         <div style={{ marginTop: 56, padding: 24, background: "#f0fdf4", border: "1px solid #a7f3d0", borderRadius: 14 }}>
           <p style={{ ...P, marginBottom: 8, fontWeight: 700, color: "#065f46" }}>Need something not here?</p>
           <p style={{ ...P, marginBottom: 0 }}>
-            The <a href="/docs/widget" style={{ color: "#10b981", fontWeight: 600 }}>website quote form</a> puts this same engine on your own site with one script tag. Or connect it to an <a href="/docs/mcp" style={{ color: "#10b981", fontWeight: 600 }}>AI assistant</a> over MCP. Webhooks and Zapier are on the roadmap.
+            The <Link href="/docs/widget" style={{ color: "#10b981", fontWeight: 600 }}>website quote form</Link> puts this same engine on your own site with one script tag. Or connect it to an <Link href="/docs/mcp" style={{ color: "#10b981", fontWeight: 600 }}>AI assistant</Link> over MCP. Webhooks and Zapier are on the roadmap.
             Tell us what you are building at{" "}
             <a href="mailto:hello@cuequote.com" style={{ color: "#10b981", fontWeight: 600 }}>hello@cuequote.com</a>{" "}
             and it will shape what ships next.

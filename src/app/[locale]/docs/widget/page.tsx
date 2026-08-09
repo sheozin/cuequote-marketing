@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
 import Nav from "../../../../components/Nav";
 import Footer from "../../../../components/Footer";
 import { getLocale } from "next-intl/server";
@@ -202,7 +203,7 @@ export default async function WidgetDocsPage() {
           <p style={{ ...P, marginBottom: 8, fontWeight: 700, color: "#065f46" }}>Want it to do more?</p>
           <p style={{ ...P, marginBottom: 0 }}>
             If you need the quote pushed into your CRM, or a fuller integration, the{" "}
-            <a href="/docs/api" style={{ color: "#10b981", fontWeight: 600 }}>API</a> does that on the
+            <Link href="/docs/api" style={{ color: "#10b981", fontWeight: 600 }}>API</Link> does that on the
             Business plan. Tell us what you are building at{" "}
             <a href="mailto:hello@cuequote.com" style={{ color: "#10b981", fontWeight: 600 }}>hello@cuequote.com</a>.
           </p>

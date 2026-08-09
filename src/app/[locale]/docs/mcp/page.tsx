@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
 import Nav from "../../../../components/Nav";
 import Footer from "../../../../components/Footer";
 import { getLocale } from "next-intl/server";
@@ -199,9 +200,9 @@ Auth header: Authorization: Bearer cq_live_...`}</Code>
         <div style={{ marginTop: 56, padding: 24, background: "#f0fdf4", border: "1px solid #a7f3d0", borderRadius: 14 }}>
           <p style={{ ...P, marginBottom: 8, fontWeight: 700, color: "#065f46" }}>Also available</p>
           <p style={{ ...P, marginBottom: 0 }}>
-            The <a href="/docs/api" style={{ color: "#10b981", fontWeight: 600 }}>REST API</a> for your own
-            systems, and the <a href="/docs/widget" style={{ color: "#10b981", fontWeight: 600 }}>website
-            quote form</a> for your visitors. All three call the same estimator, so a quote is a quote
+            The <Link href="/docs/api" style={{ color: "#10b981", fontWeight: 600 }}>REST API</Link> for your own
+            systems, and the <Link href="/docs/widget" style={{ color: "#10b981", fontWeight: 600 }}>website
+            quote form</Link> for your visitors. All three call the same estimator, so a quote is a quote
             wherever it came from.
           </p>
         </div>
