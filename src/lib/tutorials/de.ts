@@ -1243,7 +1243,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     difficulty: 'beginner',
     category: 'Planer',
     mode: 'planner',
-    videoUrl: '/videos/production-budget-planning.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'Umschalten in den Planer-Modus für Veranstaltungsproduktionsbudgetierung',
       'Beschreiben Ihrer Veranstaltung für genaue KI-generierte Budgetschätzungen',

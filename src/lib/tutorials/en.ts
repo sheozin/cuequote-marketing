@@ -674,7 +674,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     difficulty: 'intermediate',
     category: 'Setup',
     mode: 'av',
-    videoUrl: '/videos/inventory-management.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'Adding units with serial numbers and asset tags',
       'Tracking condition and status (available, assigned, maintenance, retired)',
@@ -715,7 +715,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     difficulty: 'intermediate',
     category: 'Setup',
     mode: 'av',
-    videoUrl: '/videos/crew-scheduling.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'Building your crew roster with roles, skills, and day rates',
       'Assigning crew members to won proposals',
@@ -756,7 +756,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     difficulty: 'intermediate',
     category: 'Proposals',
     mode: 'both',
-    videoUrl: '/videos/proposal-comparison.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'Adding proposals to a comparison via share URLs or tokens',
       'Reading vendor cards with value scores',
@@ -797,7 +797,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     difficulty: 'beginner',
     category: 'Proposals',
     mode: 'both',
-    videoUrl: '/videos/proposal-comments.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'How clients leave comments on the share page',
       'Referencing specific line items in a comment',
@@ -834,7 +834,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     difficulty: 'advanced',
     category: 'Setup',
     mode: 'av',
-    videoUrl: '/videos/costing-margins.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'Configuring who can see cost data (owner/admin vs. sales)',
       'Setting a default margin target and per-category overrides',
@@ -1253,7 +1253,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     difficulty: 'beginner',
     category: 'Planner',
     mode: 'planner',
-    videoUrl: '/videos/production-budget-planning.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'Switching to Planner mode for event production budgeting',
       'Describing your event for accurate AI-generated budget estimates',

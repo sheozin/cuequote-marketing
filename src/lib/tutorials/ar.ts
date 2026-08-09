@@ -1243,7 +1243,7 @@ export const TUTORIALS_AR: Tutorial[] = [
     difficulty: 'beginner',
     category: 'منظم الفعاليات',
     mode: 'planner',
-    videoUrl: '/videos/production-budget-planning.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'التبديل إلى وضع منظم الفعاليات لميزانية إنتاج الفعالية',
       'وصف فعاليتك للحصول على تقديرات ميزانية دقيقة بواسطة الذكاء الاصطناعي',

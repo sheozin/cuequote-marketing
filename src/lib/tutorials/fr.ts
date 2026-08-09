@@ -1243,7 +1243,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     difficulty: 'beginner',
     category: 'Planificateur',
     mode: 'planner',
-    videoUrl: '/videos/production-budget-planning.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'Basculer vers le mode Planificateur pour la budgétisation de la production événementielle',
       'Décrire votre événement pour obtenir des estimations de budget générées avec précision par l\'IA',

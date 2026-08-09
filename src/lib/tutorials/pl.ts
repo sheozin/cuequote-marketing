@@ -1207,7 +1207,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     difficulty: 'beginner',
     category: 'Planista',
     mode: 'planner',
-    videoUrl: '/videos/production-budget-planning.mp4',
+    videoUrl: '',
     whatYouLearn: [
       'Przełączanie do trybu Planista w celu budżetowania produkcji imprezy',
       'Opisywanie imprezy w celu uzyskania dokładnych szacunków budżetu wygenerowanych przez AI',
