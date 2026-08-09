@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/docs', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/docs/api', changeFrequency: 'monthly' as const, priority: 0.6 },
     { path: '/docs/widget', changeFrequency: 'monthly' as const, priority: 0.6 },
+    { path: '/docs/mcp', changeFrequency: 'monthly' as const, priority: 0.6 },
     { path: '/tutorials', changeFrequency: 'monthly' as const, priority: 0.6 },
     { path: '/changelog', changeFrequency: 'weekly' as const, priority: 0.5 },
   ]
