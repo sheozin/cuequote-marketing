@@ -103,7 +103,7 @@
     prefill = prefill || {};
     wrap.innerHTML =
       '<h3>Get an instant estimate</h3>' +
-      '<p class="sub">Describe your event and we&rsquo;ll send an indicative budget straight away.</p>' +
+      '<p class="sub">Describe your event and we&rsquo;ll price an indicative budget in about a minute.</p>' +
       '<div class="field"><label>What are you planning?</label>' +
       '<textarea id="cq-desc" placeholder="e.g. Awards dinner for 120 guests with a stage, lectern, screen and background music">' + esc(prefill.description || '') + '</textarea></div>' +
       '<div class="row">' +
@@ -142,28 +142,61 @@
     if (!payload.name || !payload.email) { errBox.innerHTML = '<div class="err">We need your name and email to send the full proposal.</div>'; return; }
 
     btn.disabled = true;
-    btn.innerHTML = '<span class="spin"></span>Building your estimate…';
+
+    // Pricing a real event against a full catalogue takes the better part of a
+    // minute. One frozen label for that long reads as a broken page, so the
+    // button narrates what is actually happening and says up front how long it
+    // takes. The visitor leaving at second 20 is the expensive failure here.
+    var stages = [
+      [0,  'Reading your brief…'],
+      [6,  'Choosing equipment…'],
+      [16, 'Pricing from our catalogue…'],
+      [30, 'Almost there — this takes about a minute…']
+    ];
+    var startedAt = Date.now();
+    function paint() {
+      var elapsed = (Date.now() - startedAt) / 1000;
+      var label = stages[0][1];
+      for (var i = 0; i < stages.length; i++) if (elapsed >= stages[i][0]) label = stages[i][1];
+      btn.innerHTML = '<span class="spin"></span>' + label;
+    }
+    paint();
+    var ticker = setInterval(paint, 1000);
+
+    // Without this a stalled request leaves the button spinning forever.
+    var controller = typeof AbortController === 'function' ? new AbortController() : null;
+    var timeout = setTimeout(function () { if (controller) controller.abort(); }, 120000);
+
+    function reset() {
+      clearInterval(ticker);
+      clearTimeout(timeout);
+      btn.disabled = false;
+      btn.textContent = 'Get my estimate';
+    }
 
     fetch(ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
+      signal: controller ? controller.signal : undefined
     })
       .then(function (r) { return r.json().then(function (b) { return { ok: r.ok, body: b }; }); })
       .then(function (res) {
         if (!res.ok) {
-          btn.disabled = false;
-          btn.textContent = 'Get my estimate';
+          reset();
           var m = (res.body && res.body.error && res.body.error.message) || 'Something went wrong. Please try again.';
           errBox.innerHTML = '<div class="err">' + esc(m) + '</div>';
           return;
         }
+        clearInterval(ticker);
+        clearTimeout(timeout);
         renderResult(res.body, payload);
       })
-      .catch(function () {
-        btn.disabled = false;
-        btn.textContent = 'Get my estimate';
-        errBox.innerHTML = '<div class="err">Could not reach the estimator. Please try again.</div>';
+      .catch(function (e) {
+        reset();
+        errBox.innerHTML = '<div class="err">' + (e && e.name === 'AbortError'
+          ? 'That took longer than expected. Please try again, or send us your brief directly.'
+          : 'Could not reach the estimator. Please try again.') + '</div>';
       });
   }
 
