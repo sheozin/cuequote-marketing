@@ -26,6 +26,7 @@
   var ACCENT = script.getAttribute('data-color') || '#10b981';
   var TARGET = script.getAttribute('data-target');
   var ENDPOINT = 'https://api.cuequote.com/v1/widget/quote';
+  var POLL_ENDPOINT = 'https://api.cuequote.com/v1/widget/quote';
 
   if (KEY.indexOf('cq_pub_') !== 0) {
     // A secret key on a public page would be a serious mistake, so say so
@@ -163,41 +164,71 @@
     paint();
     var ticker = setInterval(paint, 1000);
 
-    // Without this a stalled request leaves the button spinning forever.
-    var controller = typeof AbortController === 'function' ? new AbortController() : null;
-    var timeout = setTimeout(function () { if (controller) controller.abort(); }, 120000);
-
+    var stopped = false;
     function reset() {
+      stopped = true;
       clearInterval(ticker);
-      clearTimeout(timeout);
       btn.disabled = false;
       btn.textContent = 'Get my estimate';
     }
 
+    function fail(msg) {
+      reset();
+      errBox.innerHTML = '<div class="err">' + esc(msg) + '</div>';
+    }
+
+    // Submission returns in about a second and records the enquiry; the estimate
+    // is generated behind it and collected by polling. The visitor's details
+    // therefore reach the company even if they close the tab while it works.
     fetch(ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-      signal: controller ? controller.signal : undefined
+      body: JSON.stringify(payload)
     })
       .then(function (r) { return r.json().then(function (b) { return { ok: r.ok, body: b }; }); })
       .then(function (res) {
-        if (!res.ok) {
-          reset();
-          var m = (res.body && res.body.error && res.body.error.message) || 'Something went wrong. Please try again.';
-          errBox.innerHTML = '<div class="err">' + esc(m) + '</div>';
+        if (!res.ok || !res.body || !res.body.quote_id) {
+          fail((res.body && res.body.error && res.body.error.message) || 'Something went wrong. Please try again.');
           return;
         }
-        clearInterval(ticker);
-        clearTimeout(timeout);
-        renderResult(res.body, payload);
+        poll(res.body.quote_id, res.body.poll_after_ms || 4000);
       })
-      .catch(function (e) {
+      .catch(function () { fail('Could not reach the estimator. Please try again.'); });
+
+    function poll(quoteId, delay) {
+      // Give up well after a normal generation (~50-70s) but long before the
+      // visitor would anyway. The enquiry is already recorded either way, so
+      // this is only about what they see, never about losing the lead.
+      if (stopped) return;
+      if (Date.now() - startedAt > 180000) {
         reset();
-        errBox.innerHTML = '<div class="err">' + (e && e.name === 'AbortError'
-          ? 'That took longer than expected. Please try again, or send us your brief directly.'
-          : 'Could not reach the estimator. Please try again.') + '</div>';
-      });
+        errBox.innerHTML = '<div class="err">This is taking longer than usual. We have your details and will come back to you directly.</div>';
+        return;
+      }
+
+      setTimeout(function () {
+        if (stopped) return;
+        fetch(POLL_ENDPOINT + '/' + encodeURIComponent(quoteId) + '?key=' + encodeURIComponent(KEY))
+          .then(function (r) { return r.json(); })
+          .then(function (b) {
+            if (stopped) return;
+            if (b.status === 'ready') {
+              clearInterval(ticker);
+              stopped = true;
+              renderResult(b, payload);
+            } else if (b.status === 'failed') {
+              fail(b.message || 'We could not price this automatically. Your enquiry has reached us.');
+            } else if (b.error) {
+              fail(b.error.message || 'Something went wrong. Please try again.');
+            } else {
+              poll(quoteId, b.poll_after_ms || 4000);
+            }
+          })
+          // A dropped poll is not fatal — the estimate is still being built
+          // server-side, so keep asking rather than discarding the attempt.
+          .catch(function () { poll(quoteId, 6000); });
+      }, delay);
+    }
   }
 
   function renderResult(data, sent) {
