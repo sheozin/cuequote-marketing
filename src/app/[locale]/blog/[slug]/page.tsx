@@ -9,6 +9,7 @@ import { publishedPosts } from "../../../../lib/blog-posts";
 import ShareButtons from "../../../../components/ShareButtons";
 import { longTailRobots } from "../../../../lib/seo-indexing";
 import { jsonLd } from "@/lib/json-ld";
+import { sanitizeHtml } from "@/lib/sanitize-html";
 
 /* ─── Category gradients for hero ─────────────────────────────────────────── */
 
@@ -313,7 +314,7 @@ export default async function BlogPostPage({
               <div key={i}>
                 <p
                   style={{ fontSize: 17, color: "#374151", lineHeight: 1.8, marginBottom: 28 }}
-                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeHtml(paragraph) }}
                 />
                 {i === ctaInsertIndex && (
                   <div style={{
