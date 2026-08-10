@@ -249,7 +249,15 @@
       '<div class="amt">' + money(data.total.low) + ' – ' + money(data.total.high) +
       '<span class="cur">' + esc(data.currency) + '</span></div></div>' +
       '<div class="bars">' + bars + '</div>' +
-      '<div class="note">This is an indicative range, not a quote. A detailed proposal with the full equipment list is on its way to <strong>' + esc(sent.email) + '</strong>.</div>' +
+      // Says what actually happens. The previous wording promised the visitor a
+      // detailed proposal was "on its way to" their address — nothing is ever
+      // sent to the visitor. What really happens is that the company receives
+      // the enquiry with a costed draft ready, and replies when they have
+      // reviewed it. Promising a delivery that depends on someone else acting
+      // is a promise the AV company gets judged on.
+      '<div class="note">This is an indicative range, not a quote. Your enquiry has gone to ' +
+        esc(data.company || 'the team') + ' along with your details — they will follow up at <strong>' +
+        esc(sent.email) + '</strong> with a detailed proposal.</div>' +
       '<button class="again" id="cq-again">Estimate another event</button>' +
       '<p class="foot">Powered by <a href="https://cuequote.com" target="_blank" rel="noopener">CueQuote</a></p>';
 
