@@ -10,6 +10,7 @@ import {
 import type { Metadata } from 'next'
 import { longTailRobots } from '@/lib/seo-indexing'
 import { getLocale, getTranslations } from 'next-intl/server'
+import { jsonLd } from "@/lib/json-ld";
 
 export async function generateStaticParams() {
   const locales = ['en', 'pl', 'ar', 'de', 'fr'];
@@ -74,7 +75,7 @@ export default async function TutorialPage({
   const difficultyLabel = t(tutorial.difficulty as 'beginner' | 'intermediate' | 'advanced')
 
   // HowTo + Breadcrumb structured data for rich search results — all data is trusted/static
-  const structuredData = JSON.stringify([
+  const structuredData = jsonLd([
     {
       '@context': 'https://schema.org',
       '@type': 'HowTo',

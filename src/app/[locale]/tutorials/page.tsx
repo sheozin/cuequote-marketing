@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { getTranslations, getLocale } from "next-intl/server";
 import { getTutorials, getTutorialCategories, type Tutorial } from "@/lib/tutorials";
 import { TutorialFilter } from "@/components/TutorialFilter";
+import { jsonLd } from "@/lib/json-ld";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("tutorials");
@@ -56,7 +57,7 @@ export default async function TutorialsPage() {
   const locale = await getLocale();
   const tutorials = getTutorials(locale);
 
-  const breadcrumbLd = JSON.stringify({
+  const breadcrumbLd = jsonLd({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [

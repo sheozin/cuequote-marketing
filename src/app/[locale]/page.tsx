@@ -14,6 +14,7 @@ import { PricingToggle } from "../../components/PricingToggle";
 import { HeroMockupSlider } from "../../components/HeroMockupSlider";
 import { Testimonials } from "../../components/Testimonials";
 import { ProductShowcase } from "../../components/ProductShowcase";
+import { jsonLd } from "@/lib/json-ld";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -734,7 +735,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd({
         "@context": "https://schema.org",
         "@type": "FAQPage",
         mainEntity: Array.from({ length: 10 }, (_, i) => ({
@@ -787,7 +788,7 @@ export default async function HomePage() {
       </section>
 
       {/* SoftwareApplication schema — homepage only; static trusted JSON-LD, not user input */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd({
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         name: "CueQuote",

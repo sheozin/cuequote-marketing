@@ -8,6 +8,7 @@ import { getTranslations } from "next-intl/server";
 import { publishedPosts } from "../../../../lib/blog-posts";
 import ShareButtons from "../../../../components/ShareButtons";
 import { longTailRobots } from "../../../../lib/seo-indexing";
+import { jsonLd } from "@/lib/json-ld";
 
 /* ─── Category gradients for hero ─────────────────────────────────────────── */
 
@@ -143,7 +144,7 @@ export default async function BlogPostPage({
   const ctaInsertIndex = Math.floor(contentArray.length * 0.4);
 
   // Structured data — built from trusted static data (post titles/dates), not user input
-  const structuredData = JSON.stringify([
+  const structuredData = jsonLd([
     {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',

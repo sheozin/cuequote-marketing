@@ -272,7 +272,21 @@ for (const file of tsFiles) {
 
     if (check.checkNoDomPurify) {
       if (!/DOMPurify|sanitizeHtml|sanitize-html/.test(content)) {
+        // jsonLd() from @/lib/json-ld is the correct sanitiser for a
+        // <script type="application/ld+json"> body — DOMPurify is an HTML
+        // sanitiser and would be the wrong tool there. jsonLd escapes <, > and
+        // & so the payload cannot terminate the tag, which is the only way that
+        // block becomes markup. Treat its output as sanitised, whether it is
+        // inlined or assigned to a variable first.
+        const jsonLdVars = [...content.matchAll(/(?:const|let)\s+(\w+)\s*=\s*jsonLd\(/g)]
+          .map(m => m[1]);
+        const sanitised = new RegExp(
+          `__html:\\s*(?:jsonLd\\(${jsonLdVars.length ? `|(?:${jsonLdVars.join('|')})\\s*\\}` : ''})`
+        );
+
         for (let i = 0; i < lines.length; i++) {
+          if (sanitised.test(lines[i])) continue;
+
           if (check.regex.test(lines[i])) {
             results.sast.findings.push({
               check: check.name, file: rel, line: i + 1,
@@ -363,7 +377,15 @@ if (configContent) {
     }
   }
 
-  if (configContent.includes("'unsafe-eval'")) {
+  // Only flag 'unsafe-eval' when it can actually reach production. next.config
+  // gates it behind NODE_ENV === 'development' (the dev overlay needs it), and
+  // a plain substring match reported that as a finding every week. An audit
+  // that is permanently amber for a non-issue is one people stop reading.
+  const unsafeEvalLines = configContent
+    .split('\n')
+    .filter((line) => line.includes("'unsafe-eval'") && !line.includes('development'));
+
+  if (unsafeEvalLines.length > 0) {
     results.headers.findings.push({
       header: 'Content-Security-Policy', issue: "script-src contains 'unsafe-eval'",
       severity: 'LOW', recommendation: "Remove 'unsafe-eval'. Use nonce-based CSP.",

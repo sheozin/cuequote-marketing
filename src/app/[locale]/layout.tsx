@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import CampaignBanner from "../../components/CampaignBanner";
 import CookieConsent from "../../components/CookieConsent";
 import "../globals.css";
+import { jsonLd } from "@/lib/json-ld";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", weight: ["500", "600", "700", "800"], display: "swap" });
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
 
 // JSON-LD structured data — static, trusted content (no user input)
 // SoftwareApplication schema is intentionally excluded here; it lives only on the homepage and pricing page.
-const jsonLdString = JSON.stringify({
+const jsonLdString = jsonLd({
   "@context": "https://schema.org",
   "@graph": [
     {

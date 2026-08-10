@@ -5,6 +5,7 @@ import Footer from "../../../components/Footer";
 import { PricingToggle } from "../../../components/PricingToggle";
 import { Check, ChevronDown, Package, Sparkles, ArrowRight, Zap, CreditCard, Crown, Rocket, Building2 } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
+import { jsonLd } from "@/lib/json-ld";
 
 const APP_URL = "https://app.cuequote.com";
 
@@ -499,7 +500,7 @@ export default async function PricingPage() {
           find offers on, and it is our best-positioned commercial page.
           valueAddedTaxIncluded is false because Stripe Tax adds VAT on top of
           these figures at checkout; saying otherwise would misdescribe the price. */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd({
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         name: "CueQuote",
@@ -533,7 +534,7 @@ export default async function PricingPage() {
       }) }} />
 
       {/* FAQ structured data for rich search results — content is from trusted i18n keys, not user input */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd({
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": faqs.map(({ q, a }) => ({

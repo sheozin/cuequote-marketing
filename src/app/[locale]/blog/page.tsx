@@ -6,6 +6,7 @@ import { BlogGrid } from "../../../components/BlogGrid";
 import { ArrowRight } from "lucide-react";
 import { publishedPosts } from "../../../lib/blog-posts";
 import { getTranslations, getLocale } from "next-intl/server";
+import { jsonLd } from "@/lib/json-ld";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("blog");
@@ -97,7 +98,7 @@ export default async function BlogPage() {
   }));
 
   // Safe: breadcrumbLd is built from static data, not user input
-  const breadcrumbLd = JSON.stringify({
+  const breadcrumbLd = jsonLd({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [

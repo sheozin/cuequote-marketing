@@ -86,7 +86,10 @@ function getSessionId(): string {
   const key = 'cq_sid'
   let sid = sessionStorage.getItem(key)
   if (!sid) {
-    sid = `s_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`
+    // crypto.randomUUID rather than Math.random: this id groups a visitor's
+    // page views, and Math.random's 6 base-36 characters collide often enough
+    // across concurrent visitors to merge two people's sessions in analytics.
+    sid = `s_${Date.now()}_${crypto.randomUUID().slice(0, 8)}`
     sessionStorage.setItem(key, sid)
   }
   return sid

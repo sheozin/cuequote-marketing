@@ -5,6 +5,7 @@ import { AvCostCalculator } from "../../../components/AvCostCalculator";
 import { getTranslations, getLocale } from "next-intl/server";
 import { headers } from "next/headers";
 import { fetchRates, marketFromCountry } from "../../../lib/marketPricing";
+import { jsonLd } from "@/lib/json-ld";
 
 /** Equipment names shown on the breakdown lines — one per RATES key in AvCostCalculator. */
 const ITEM_KEYS = [
@@ -67,7 +68,7 @@ export default async function AvCostCalculatorPage() {
   }));
 
   // Safe: built from static translation strings, not user input
-  const structuredData = JSON.stringify({
+  const structuredData = jsonLd({
     '@context': 'https://schema.org',
     '@graph': [
       {
