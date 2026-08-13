@@ -180,7 +180,7 @@ export default async function PricingPage() {
     { label: t("compWhiteLabel", { defaultValue: "Remove \u201CPowered by CueQuote\u201D" }), free: false, starter: false, pro: true, business: true },
     { label: t("compTerms", { defaultValue: "Custom terms & T&C" }), free: true, starter: true, pro: true, business: true },
     { label: t("compMultiLang", { defaultValue: "Multi-language" }), free: true, starter: true, pro: true, business: true },
-    { label: t("compCsvImport", { defaultValue: "CSV catalog import" }), free: false, starter: true, pro: true, business: true },
+    { label: t("compCsvImport", { defaultValue: "CSV catalog import" }), free: true, starter: true, pro: true, business: true },
     { label: t("compCrewPrepSheet", { defaultValue: "Crew prep sheet PDF" }), free: false, starter: true, pro: true, business: true },
     { label: t("compLayoutDesigner", { defaultValue: "Event layout designer" }), free: false, starter: false, pro: true, business: true },
     { label: t("compCostMargin", { defaultValue: "Cost & margin tracking" }), free: false, starter: false, pro: true, business: true },
