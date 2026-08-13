@@ -1075,7 +1075,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     slug: 'planner-budget-review',
     title: 'Ihr Veranstaltungsbudget verstehen',
     description: 'Lesen und nutzen Sie den KI-generierten Budgetplan im Planner-Modus.',
-    duration: '4 Min.',
+    duration: '7 Min.',
     difficulty: 'beginner',
     category: 'Planner',
     mode: 'planner',
@@ -1086,6 +1086,9 @@ export const TUTORIALS_DE: Tutorial[] = [
       'Den Veranstaltungszeitplan für die Planung nutzen',
       'Profitipps bei der Arbeit mit AV-Dienstleistern anwenden',
       'Inklusivleistungen und Ausschlüsse verstehen',
+      'Auf- und Abbautage so kalkulieren, wie ein Veranstalter sie bezahlt',
+      'Planungsnotizen im Editor kl\u00e4ren und erkennen, wann sie veraltet sind',
+      'Die Marktpreispr\u00fcfung und die Liste offener Leistungen lesen',
     ],
     steps: [
       {
@@ -1108,6 +1111,21 @@ export const TUTORIALS_DE: Tutorial[] = [
       {
         title: 'Profitipps und Inklusivleistungen/Ausschlüsse lesen',
         content: 'Praxistipps speziell für Ihren Veranstaltungstyp und eine Übersicht, was die Schätzung abdeckt und was nicht.',
+      },
+      {
+        title: 'Sagen Sie dem Plan, wie lange Sie zum Auf- und Abbau haben',
+        content: 'Im Formular f\u00fcr ein neues Angebot sind Aufbautage und Abbautage die Tage, an denen die Location vor und nach der Veranstaltung Ihnen geh\u00f6rt. Im Planner-Modus werden sie dort kalkuliert, wo ein Veranstalter tats\u00e4chlich zahlt \u2014 Hallenbelegung und Crew-Zeit \u2014 und nicht als zus\u00e4tzliche Miettage f\u00fcr Technik; deshalb steht daneben auch keine Ger\u00e4tesatz-Option. L\u00e4sst sich die Veranstaltung realistisch nicht am letzten Abend r\u00e4umen und haben Sie den Abbau auf null gelassen, weist der Plan darauf hin.',
+        tip: 'Fragen Sie vorher die Location nach den Load-in- und Load-out-Fenstern. Ein Raum, den Sie erst um 6 Uhr am Showtag bekommen, ist ein ganz anderes Budget als einer, den Sie am Vorabend haben.',
+      },
+      {
+        title: 'Halten Sie die Planungsnotizen beim Bearbeiten in Gebrauch',
+        content: '\u00d6ffnen Sie das Angebot, und die Planungsnotizen stehen im Tab Equipment \u00fcber Ihren Positionen \u2014 als Punkte zum Kl\u00e4ren, nicht als Text zum \u00dcberscrollen. Haken Sie einen Punkt ab, sobald Sie ihn best\u00e4tigt haben, oder markieren Sie ihn als nicht zutreffend. \u00c4ndern Sie danach Teilnehmerzahl, Tage, Budget oder Datum, benennt das Panel genau, was sich verschoben hat \u2014 so wissen Sie, dass der Rat auf anderen Zahlen beruhte.',
+        tip: 'Die Notizen sind die Fragen, die die KI nicht f\u00fcr Sie beantworten konnte: Stromversorgung, Load-in-Fenster, Genehmigungen. Genau dort wird aus einer Sch\u00e4tzung ein echtes Budget.',
+      },
+      {
+        title: 'Pr\u00fcfen Sie markierte Preise und L\u00fccken im Leistungsumfang',
+        content: 'Dasselbe Panel meldet zwei weitere Dinge. Eine Preispr\u00fcfung vergleicht jede Position mit dem, was dieser Posten in der Region Ihrer Veranstaltung \u00fcblicherweise kostet, wobei Ger\u00e4te- und Crew-S\u00e4tze getrennt bewertet werden \u2014 so f\u00e4llt ein als Stundensatz eingetragener Tagessatz sofort auf. Eine Umfangsliste zeigt alles, was Ihr angeh\u00e4ngtes Briefing verlangt hat und der Plan noch nicht abdeckt \u2014 Catering, Genehmigungen, Fotografie, G\u00e4stetransport \u2014 und jeder Eintrag verschwindet, sobald Sie die passende Position erg\u00e4nzen.',
+        tip: 'Die Preisspannen sind bewusst weit. Sie fangen eine fehlende Null ab, nicht 15% Meinungsverschiedenheit \u2014 lesen Sie eine Markierung als \u201enochmal ansehen\u201c, nicht als \u201edas ist falsch\u201c.',
       },
     ],
   },

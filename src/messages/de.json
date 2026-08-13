@@ -2309,7 +2309,17 @@
     "devApi": "API-Referenz",
     "devWidget": "Angebotsformular für die Website",
     "devMcp": "KI-Assistenten (MCP)",
-    "devWebhooks": "Webhooks"
+    "devWebhooks": "Webhooks",
+    "plannerPlanChecks": {
+      "title": "Wenn der Plan sich selbst prüft",
+      "content1": "Im Planner-Modus bleiben die bei der Erstellung Ihres Plans geschriebenen Hinweise beim Angebot, statt einmal aufzutauchen und zu verschwinden. Sie stehen im Tab Equipment über Ihren Positionen als offene Punkte zum Klären — Stromversorgung bestätigen, Load-in-Fenster prüfen — und lassen sich abhaken oder als nicht zutreffend markieren.",
+      "content2": "Das Panel beobachtet den Plan außerdem, während Sie ihn bearbeiten. Es sagt, wann die Hinweise auf anderen Zahlen beruhten, markiert Preise weit außerhalb der üblichen Spanne für die Region Ihrer Veranstaltung und listet alles auf, was Ihr angehängtes Briefing verlangt hat und der Plan noch nicht abdeckt.",
+      "step1": "Tragen Sie Aufbautage und Abbautage im Formular für ein neues Angebot ein. Im Planner-Modus werden sie als Hallenbelegung und Crew-Zeit kalkuliert — das, was ein Veranstalter tatsächlich zahlt — und nicht als zusätzliche Miettage für Technik",
+      "step2": "Öffnen Sie das Angebot und arbeiten Sie die Planungsnotizen im Tab Equipment durch; haken Sie jede ab, sobald Sie sie mit Location oder Dienstleister bestätigt haben",
+      "step3": "Ändern Sie danach Teilnehmerzahl, Tage, Budget oder Datum, benennt das Panel genau, was sich verschoben hat — so wissen Sie, dass der Hinweis älter ist",
+      "step4": "Prüfen Sie die markierten Preise und die Lücken im Leistungsumfang — eine Lücke verschwindet, sobald Sie die passende Position ergänzen, und eine Preismarkierung erlischt, sobald der Satz wieder in der üblichen Spanne liegt",
+      "tip": "Die Preisspannen sind bewusst weit. Sie sollen eine fehlende Null oder einen als Stundensatz eingetragenen Tagessatz abfangen — nicht über 15% streiten"
+    }
   },
   "changelog": {
     "metaTitle": "Änderungsprotokoll — Neuigkeiten",

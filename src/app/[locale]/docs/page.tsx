@@ -199,6 +199,7 @@ const ARTICLE_KEYS = [
   { id: 'vendor-management', key: 'vendorManagement', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   { id: 'quote-comparison', key: 'quoteComparison', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   { id: 'market-rate-budgets', key: 'marketRateBudgets', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
+  { id: 'planner-plan-checks', key: 'plannerPlanChecks', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   // ── New features ──
   { id: 'feedback-support', key: 'feedbackSupport', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   { id: 'catalog-suggestions', key: 'catalogSuggestions', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3'] },

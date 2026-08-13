@@ -2310,7 +2310,17 @@
     "devApi": "API reference",
     "devWidget": "Website quote form",
     "devMcp": "AI assistants (MCP)",
-    "devWebhooks": "Webhooks"
+    "devWebhooks": "Webhooks",
+    "plannerPlanChecks": {
+      "title": "When the Plan Checks Itself",
+      "content1": "In Planner mode, the advice written while your plan was generated stays with the proposal instead of appearing once and vanishing. It sits above your line items on the Equipment tab as open questions to resolve — confirm the power supply, check the load-in window — and each one can be ticked off or marked not applicable.",
+      "content2": "The panel also watches the plan as you edit it. It says when the advice was written against different numbers, flags prices that are far outside the normal band for your event's region, and lists anything your attached brief asked for that the plan does not yet cover.",
+      "step1": "Set Setup days and Strike days on the new-proposal form. In Planner mode they are priced as venue occupancy and crew time — what an organizer actually pays — not as extra days of equipment rental",
+      "step2": "Open the proposal and work through the planning notes on the Equipment tab, ticking off each one as you confirm it with the venue or the vendor",
+      "step3": "If you change the headcount, days, budget or event date afterwards, the panel names exactly what moved so you know the advice predates it",
+      "step4": "Review the flagged prices and the scope gaps — a gap disappears as soon as you add the line that fills it, and a price flag clears once the rate is inside the normal band",
+      "tip": "The price bands are wide on purpose. They are there to catch a missing zero or a day rate typed as an hourly one — not to argue about 15%"
+    }
   },
   "changelog": {
     "metaTitle": "Changelog — What's New",

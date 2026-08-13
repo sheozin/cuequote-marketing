@@ -1039,7 +1039,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     slug: 'planner-budget-review',
     title: 'Rozumienie budżetu wydarzenia',
     description: 'Czytaj i wykorzystuj plan budżetowy generowany przez AI w trybie Planner.',
-    duration: '4 min',
+    duration: '7 min',
     difficulty: 'beginner',
     category: 'Planner',
     mode: 'planner',
@@ -1050,6 +1050,9 @@ export const TUTORIALS_PL: Tutorial[] = [
       'Używanie harmonogramu wydarzenia do planowania',
       'Stosowanie wskazówek podczas pracy z dostawcami AV',
       'Rozumienie elementów uwzględnionych i wyłączonych',
+      'Wycena dni monta\u017cu i demonta\u017cu tak, jak p\u0142aci za nie organizator',
+      'Rozstrzyganie notatek planowania w edytorze i wychwytywanie, kiedy s\u0105 nieaktualne',
+      'Czytanie kontroli cen rynkowych i listy niepokrytego zakresu',
     ],
     steps: [
       {
@@ -1072,6 +1075,21 @@ export const TUTORIALS_PL: Tutorial[] = [
       {
         title: 'Przeczytaj wskazówki i elementy uwzględnione/wyłączone',
         content: 'Sekcja Wskazówki zawiera praktyczne porady specyficzne dla Twojego typu wydarzenia. Sekcja Uwzględnione/Wyłączone precyzuje, co obejmuje szacunek budżetowy.',
+      },
+      {
+        title: 'Powiedz planowi, ile masz czasu na monta\u017c i demonta\u017c',
+        content: 'W formularzu nowej propozycji Dni monta\u017cu i Dni demonta\u017cu to dni, w kt\u00f3rych obiekt jest Tw\u00f3j przed wydarzeniem i po nim. W trybie Planner s\u0105 wyceniane tam, gdzie organizator naprawd\u0119 p\u0142aci \u2014 zaj\u0119to\u015b\u0107 obiektu i czas ekipy \u2014 a nie jako dodatkowe dni wynajmu sprz\u0119tu, dlatego nie ma przy nich opcji stawki za sprz\u0119t. Je\u015bli wydarzenia realnie nie da si\u0119 sprz\u0105tn\u0105\u0107 ostatniego wieczoru, a demonta\u017c zostawi\u0142e\u015b na zero, plan to zg\u0142osi.',
+        tip: 'Zanim to wype\u0142nisz, zapytaj obiekt o okna load-in i load-out. Sala dost\u0119pna dopiero o 6 rano w dniu show to zupe\u0142nie inny bud\u017cet ni\u017c taka, kt\u00f3r\u0105 masz od poprzedniego wieczoru.',
+      },
+      {
+        title: 'Utrzymuj notatki planowania w u\u017cyciu podczas edycji',
+        content: 'Otw\u00f3rz propozycj\u0119, a notatki planowania znajdziesz nad pozycjami na zak\u0142adce Sprz\u0119t \u2014 jako rzeczy do rozstrzygni\u0119cia, nie tekst do przewini\u0119cia. Odhacz notatk\u0119, gdy j\u0105 potwierdzisz, albo oznacz jako nieistotn\u0105. Je\u015bli p\u00f3\u017aniej zmienisz liczb\u0119 go\u015bci, liczb\u0119 dni, bud\u017cet albo dat\u0119, panel poda dok\u0142adnie, co si\u0119 zmieni\u0142o \u2014 \u017ceby\u015b wiedzia\u0142, \u017ce rada powsta\u0142a przy innych liczbach.',
+        tip: 'Notatki to pytania, na kt\u00f3re AI nie mog\u0142a odpowiedzie\u0107 za Ciebie: zasilanie, okno load-in, pozwolenia. To zwykle w nich szacunek zamienia si\u0119 w prawdziwy bud\u017cet.',
+      },
+      {
+        title: 'Sprawd\u017a oznaczone ceny i luki w zakresie',
+        content: 'Ten sam panel zwraca uwag\u0119 na dwie rzeczy. Kontrola cen por\u00f3wnuje ka\u017cd\u0105 pozycj\u0119 z tym, ile zwykle kosztuje w regionie Twojego wydarzenia, oceniaj\u0105c osobno stawki sprz\u0119tu i ekipy \u2014 dzi\u0119ki temu stawka dzienna wpisana jako godzinowa od razu si\u0119 wyr\u00f3\u017cnia. Lista zakresu pokazuje wszystko, o co prosi\u0142 za\u0142\u0105czony brief, a czego plan jeszcze nie obejmuje \u2014 catering, pozwolenia, fotografi\u0119, transport go\u015bci \u2014 i ka\u017cdy wpis znika, gdy dodasz pozycj\u0119, kt\u00f3ra go wype\u0142nia.',
+        tip: 'Widelki cenowe s\u0105 celowo szerokie. Wy\u0142apuj\u0105 brakuj\u0105ce zero, a nie 15% r\u00f3\u017cnicy zda\u0144 \u2014 czytaj ostrze\u017cenie jako \u201esprawd\u017a jeszcze raz\u201d, nie \u201eto jest b\u0142\u0105d\u201d.',
       },
     ],
   },

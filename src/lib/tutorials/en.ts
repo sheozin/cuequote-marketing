@@ -1085,7 +1085,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     slug: 'planner-budget-review',
     title: 'Understanding Your Event Budget',
     description: 'Read and use the AI-generated budget plan in Planner mode.',
-    duration: '4 min',
+    duration: '7 min',
     difficulty: 'beginner',
     category: 'Planner',
     mode: 'planner',
@@ -1096,6 +1096,9 @@ export const TUTORIALS_EN: Tutorial[] = [
       'Using the event timeline for planning',
       'Applying pro tips when working with AV vendors',
       'Understanding inclusions and exclusions',
+      'Costing setup and strike days the way an organizer pays for them',
+      'Resolving the planning notes in the editor and spotting when they are out of date',
+      'Reading the market price check and the list of unmet scope',
     ],
     steps: [
       {
@@ -1118,6 +1121,21 @@ export const TUTORIALS_EN: Tutorial[] = [
       {
         title: 'Read pro tips and inclusions/exclusions',
         content: 'The Pro Tips section gives practical advice specific to your event type — things to watch out for, questions to ask vendors, and common cost drivers. The Inclusions/Exclusions section clarifies what the budget estimate covers and what is not included (e.g., venue fees, content creation, customs duties for international events).',
+      },
+      {
+        title: 'Tell the plan how long you have to build and clear',
+        content: 'On the new-proposal form, Setup days and Strike days are the days the venue is yours before and after the event. In Planner mode they are priced where an organizer actually pays \u2014 venue occupancy and crew time \u2014 rather than as extra days of equipment rental, which is why there is no equipment-rate option beside them. If the event realistically cannot be cleared on the final night and you have left strike at zero, the plan says so.',
+        tip: 'Ask the venue for the load-in and load-out windows before filling these in. A room you only get at 6am on show day is a very different budget from one you have the night before.',
+      },
+      {
+        title: 'Keep the planning notes working while you edit',
+        content: 'Open the proposal and the planning notes sit above your line items on the Equipment tab, as things to resolve rather than text to scroll past. Tick one off once you have confirmed it, or mark it not applicable. If you then change the headcount, the number of days, the budget or the event date, the panel names exactly what moved \u2014 so you know the advice was written against different numbers.',
+        tip: 'The notes are the questions the AI could not answer for you: power supply, load-in window, permits. Resolving them is usually where an estimate turns into a real budget.',
+      },
+      {
+        title: 'Check the flagged prices and the scope gaps',
+        content: 'The same panel raises two other things. A price check compares each line with what that item usually costs in your event\'s region, judging equipment rates and crew rates separately, so a day rate typed as an hourly one stands out. A scope list shows anything your attached brief asked for that the plan does not yet cover \u2014 catering, permits, photography, guest transport \u2014 and each entry disappears as soon as you add the line that fills it.',
+        tip: 'The price bands are deliberately wide. They catch a missing zero, not a 15% difference of opinion \u2014 read a flag as \u201clook again\u201d, not \u201cthis is wrong\u201d.',
       },
     ],
   },

@@ -1075,7 +1075,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     slug: 'planner-budget-review',
     title: 'Comprendre votre budget événementiel',
     description: 'Lisez et utilisez le plan budgétaire généré par l\'IA en mode Planificateur.',
-    duration: '4 min',
+    duration: '7 min',
     difficulty: 'beginner',
     category: 'Planificateur',
     mode: 'planner',
@@ -1086,6 +1086,9 @@ export const TUTORIALS_FR: Tutorial[] = [
       'Utiliser le calendrier événementiel pour la planification',
       'Appliquer les conseils pro lors du travail avec les prestataires AV',
       'Comprendre les inclusions et exclusions',
+      'Chiffrer les jours de montage et de d\u00e9montage comme un organisateur les paie',
+      'Trancher les notes de planification dans l\'\u00e9diteur et rep\u00e9rer quand elles sont p\u00e9rim\u00e9es',
+      'Lire la v\u00e9rification des prix du march\u00e9 et la liste du p\u00e9rim\u00e8tre non couvert',
     ],
     steps: [
       {
@@ -1108,6 +1111,21 @@ export const TUTORIALS_FR: Tutorial[] = [
       {
         title: 'Lire les conseils pro et inclusions/exclusions',
         content: 'Des conseils pratiques spécifiques à votre type d\'événement, et une clarification de ce que couvre l\'estimation budgétaire.',
+      },
+      {
+        title: 'Indiquez au plan le temps dont vous disposez pour monter et d\u00e9monter',
+        content: 'Dans le formulaire de nouvelle proposition, les jours de montage et de d\u00e9montage sont les jours o\u00f9 le lieu est \u00e0 vous avant et apr\u00e8s l\'\u00e9v\u00e9nement. En mode Planificateur, ils sont chiffr\u00e9s l\u00e0 o\u00f9 un organisateur paie r\u00e9ellement \u2014 occupation du lieu et temps des \u00e9quipes \u2014 et non comme des jours de location de mat\u00e9riel suppl\u00e9mentaires, d\'o\u00f9 l\'absence d\'option de tarif mat\u00e9riel \u00e0 c\u00f4t\u00e9. Si l\'\u00e9v\u00e9nement ne peut raisonnablement pas \u00eatre d\u00e9mont\u00e9 le dernier soir et que vous avez laiss\u00e9 le d\u00e9montage \u00e0 z\u00e9ro, le plan vous le signale.',
+        tip: 'Demandez au lieu ses cr\u00e9neaux de load-in et de load-out avant de remplir ces champs. Une salle que vous n\'obtenez qu\'\u00e0 6h le jour J n\'a rien \u00e0 voir, budg\u00e9tairement, avec une salle disponible la veille au soir.',
+      },
+      {
+        title: 'Gardez les notes de planification utiles pendant l\'\u00e9dition',
+        content: 'Ouvrez la proposition : les notes de planification se trouvent au-dessus de vos lignes dans l\'onglet Mat\u00e9riel, comme des points \u00e0 trancher et non du texte \u00e0 faire d\u00e9filer. Cochez-en un une fois confirm\u00e9, ou marquez-le non applicable. Si vous changez ensuite le nombre de participants, de jours, le budget ou la date, le panneau nomme pr\u00e9cis\u00e9ment ce qui a boug\u00e9 \u2014 vous savez ainsi que le conseil reposait sur d\'autres chiffres.',
+        tip: 'Les notes sont les questions auxquelles l\'IA ne pouvait pas r\u00e9pondre \u00e0 votre place : alimentation \u00e9lectrique, cr\u00e9neau de load-in, autorisations. C\'est g\u00e9n\u00e9ralement l\u00e0 qu\'une estimation devient un vrai budget.',
+      },
+      {
+        title: 'V\u00e9rifiez les prix signal\u00e9s et les manques de p\u00e9rim\u00e8tre',
+        content: 'Le m\u00eame panneau signale deux autres choses. Une v\u00e9rification des prix compare chaque ligne \u00e0 ce que cet \u00e9l\u00e9ment co\u00fbte habituellement dans la r\u00e9gion de votre \u00e9v\u00e9nement, en jugeant s\u00e9par\u00e9ment les tarifs mat\u00e9riel et les tarifs \u00e9quipe \u2014 un tarif journalier saisi comme horaire saute alors aux yeux. Une liste de p\u00e9rim\u00e8tre montre tout ce que votre brief joint demandait et que le plan ne couvre pas encore \u2014 traiteur, autorisations, photographie, transport des invit\u00e9s \u2014 et chaque entr\u00e9e dispara\u00eet d\u00e8s que vous ajoutez la ligne qui la comble.',
+        tip: 'Les fourchettes de prix sont volontairement larges. Elles attrapent un z\u00e9ro manquant, pas 15% de divergence d\'opinion \u2014 lisez un signalement comme \u00ab\u00a0\u00e0 rev\u00e9rifier\u00a0\u00bb, pas \u00ab\u00a0c\'est faux\u00a0\u00bb.',
       },
     ],
   },
