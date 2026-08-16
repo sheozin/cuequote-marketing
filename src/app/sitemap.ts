@@ -69,6 +69,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // English-only pages.
+  //
+  // Comparison pages are written once, in English, because 92 non-English pages
+  // produced one click in six months. They carry no alternates and appear once,
+  // so the sitemap says the same thing the page's canonical and robots do.
+  const englishOnlyPages = [
+    { path: '/compare/rentman-alternative', changeFrequency: 'monthly' as const, priority: 0.7 },
+  ]
+  for (const page of englishOnlyPages) {
+    entries.push({
+      url: localizedUrl(base, page.path, 'en'),
+      lastModified: siteLastUpdated,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+    })
+  }
+
   // Tutorial pages
   for (const slug of getAllSlugs()) {
     for (const locale of sitemapLocales) {
