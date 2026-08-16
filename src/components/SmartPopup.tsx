@@ -36,6 +36,36 @@ const LS_DISMISSED_PREFIX = 'cq_popup_dismissed_'
 const LS_VISITED_KEY = 'cq_visited_before'
 const THREE_DAYS_MS = 3 * 24 * 60 * 60 * 1000
 
+/**
+ * When, if ever, this page may interrupt someone.
+ *
+ * Four weeks of data decided this rather than taste: 586 views, 361 dismissals
+ * and one click. 379 of those views were on blog posts — a reader who arrived
+ * from Google mid-article, ten seconds in, being offered a discount on a
+ * product they had not heard of. That is the wrong ask at the wrong moment, and
+ * a 62% dismiss rate is what it looks like in the numbers.
+ *
+ * The server still picks the trigger from how full the promo is, escalating
+ * timed → scroll → exit_intent as seats sell. That escalation now decides the
+ * message only. Where the visitor is beats how keen we are to sell.
+ */
+type PopupTrigger = 'none' | 'timed' | 'exit_intent'
+
+/** Timed popups fire here only, after long enough to read the page. */
+const PRICING_DELAY_MS = 25_000
+
+export function triggerForPath(pathname: string): PopupTrigger {
+  const path = (pathname || '').toLowerCase()
+  // Blog: never. Two thirds of the interruptions and, on the evidence, none of
+  // the conversions — and these are the pages that earn the organic
+  // impressions a timed interstitial puts at risk.
+  if (path.includes('/blog')) return 'none'
+  // Pricing: someone here is evaluating, so the ask is fair.
+  if (path.includes('/pricing')) return 'timed'
+  // Everywhere else: only on the way out, where interrupting costs nothing.
+  return 'exit_intent'
+}
+
 const POPUP_CSS = `
 .cq-popup-backdrop {
   position: fixed; inset: 0; z-index: 9998;
@@ -107,6 +137,10 @@ export default function SmartPopup() {
   const triggeredRef = useRef(false)
 
   useEffect(() => {
+    // Decided before the request, so a blog reader costs no round trip and
+    // generates no campaign fetch at all.
+    if (triggerForPath(window.location.pathname) === 'none') return
+
     supabase.rpc('get_active_popup_campaign').then(({ data, error }) => {
       if (error) return
       const camp = (Array.isArray(data) ? data[0] : data) as PopupCampaign | undefined
@@ -118,11 +152,6 @@ export default function SmartPopup() {
         if (Date.now() - dismissedAt < THREE_DAYS_MS) return
       }
 
-      const hasVisitedBefore = localStorage.getItem(LS_VISITED_KEY) === 'true'
-      if (camp.trigger_type === 'returning' && !hasVisitedBefore) {
-        localStorage.setItem(LS_VISITED_KEY, 'true')
-        return
-      }
       localStorage.setItem(LS_VISITED_KEY, 'true')
 
       // Smart variant selection — pick best message for visitor context
@@ -199,28 +228,22 @@ export default function SmartPopup() {
 
   useEffect(() => {
     if (!campaign) return
-    const type = campaign.trigger_type
+    const type = triggerForPath(window.location.pathname)
     let timer: ReturnType<typeof setTimeout> | null = null
-    let scrollHandler: (() => void) | null = null
     let mouseHandler: ((e: MouseEvent) => void) | null = null
 
-    if (type === 'timed') timer = setTimeout(showPopup, 10_000)
-    else if (type === 'returning') timer = setTimeout(showPopup, 5_000)
-    else if (type === 'all') timer = setTimeout(showPopup, 10_000)
-    else if (type === 'scroll') {
-      scrollHandler = () => {
-        const pct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight
-        if (pct >= 0.6) showPopup()
-      }
-      window.addEventListener('scroll', scrollHandler, { passive: true })
+    if (type === 'timed') {
+      timer = setTimeout(showPopup, PRICING_DELAY_MS)
     } else if (type === 'exit_intent') {
+      // Leaving through the top of the window. Note this never fires on touch
+      // devices, so phones now see no popup at all — which is the outcome we
+      // want on the pages Google reads.
       mouseHandler = (e: MouseEvent) => { if (e.clientY <= 0) showPopup() }
       document.addEventListener('mouseleave', mouseHandler)
     }
 
     return () => {
       if (timer) clearTimeout(timer)
-      if (scrollHandler) window.removeEventListener('scroll', scrollHandler)
       if (mouseHandler) document.removeEventListener('mouseleave', mouseHandler)
     }
   }, [campaign, showPopup])
