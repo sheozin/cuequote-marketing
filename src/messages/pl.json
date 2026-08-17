@@ -2294,6 +2294,17 @@
       "step3": "Jeśli później zmienisz liczbę gości, dni, budżet albo datę wydarzenia, panel poda dokładnie, co się zmieniło — będziesz wiedzieć, że rada jest wcześniejsza",
       "step4": "Przejrzyj oznaczone ceny i luki w zakresie — luka znika, gdy dodasz pozycję, która ją wypełnia, a oznaczenie ceny gaśnie, gdy stawka wróci do normy",
       "tip": "Widełki cenowe są celowo szerokie. Mają wyłapać brakujące zero albo stawkę dzienną wpisaną jako godzinowa — nie spierać się o 15%"
+    },
+    "supplierWorkOrders": {
+      "title": "Zlecanie prac podwykonawcom",
+      "content1": "Kiedy część realizacji trafia do wypożyczalni, dealera albo wyspecjalizowanej firmy, zakładka Podwykonawcy wystawia im zlecenie: ich zakres, ich cenę, obiekt i okno montażu — jeden link, bez logowania. Nie ma w nim natomiast Twojego klienta. Nazwa klienta końcowego, dane kontaktowe i podsumowanie zakresu z propozycji zostają u Ciebie, podobnie jak Twoje ceny sprzedaży — klauzula o zakazie pozyskiwania klientów niewiele znaczy, jeśli dokument, na którym stoi, wskazuje chronionego klienta.",
+      "content2": "Tekst zakresu powstaje z wybranych pozycji, więc opisuje to, co dostarcza podwykonawca, a nie czym jest wydarzenie. Jeśli treść — albo opis pozycji skopiowany z propozycji — wskazuje Twojego klienta, CueQuote odmówi wystawienia zlecenia i wskaże pozycję do poprawy. Słowa, które u Ciebie są zwykłym słownictwem, a nie tożsamością klienta, oznaczasz raz przy kliencie i nie są już zgłaszane.",
+      "step1": "Otwórz realizację, przejdź na zakładkę Podwykonawcy i kliknij „Zleć podwykonawcy”. W trybie AV zaznaczasz pozycje, w trybie planisty przyznajesz całą sekcję, na przykład Catering",
+      "step2": "Wybierz podwykonawcę albo utwórz go od razu — wystarczy nazwa. Od razu podaj datę wygaśnięcia OC, bo bez niej wysyłka jest zablokowana",
+      "step3": "Sprawdź wygenerowany zakres, dodaj adres obiektu, uwagi o wjeździe i warunki płatności, a potem wystaw i wyślij",
+      "step4": "Skopiuj link do podwykonawcy. Zobaczy swój zakres i cenę, a akceptuje wpisując imię i nazwisko — data, godzina i odpowiedź zapisują się przy zleceniu",
+      "step5": "Możesz w każdej chwili unieważnić link, jeśli realizacja się zmieni albo link zostanie przekazany dalej. Unieważnienie zwalnia też miejsce w limicie Twojego planu",
+      "tip": "OC sprawdzamy względem daty demontażu, nie względem dzisiaj. Polisa ważna przy rezerwacji i wygasła na obiekcie to awaria, która naprawdę kosztuje."
     }
   },
   "changelog": {

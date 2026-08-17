@@ -2321,6 +2321,17 @@
       "step3": "If you change the headcount, days, budget or event date afterwards, the panel names exactly what moved so you know the advice predates it",
       "step4": "Review the flagged prices and the scope gaps — a gap disappears as soon as you add the line that fills it, and a price flag clears once the rate is inside the normal band",
       "tip": "The price bands are wide on purpose. They are there to catch a missing zero or a day rate typed as an hourly one — not to argue about 15%"
+    },
+    "supplierWorkOrders": {
+      "title": "Subbing Work Out to Suppliers",
+      "content1": "When part of a job goes to a dry-hire house, a dealer or a specialist trade, the Suppliers tab issues them a work order: their scope, their price, the venue and the load-in window, on one link with no login. What it never contains is your client. The end client's name, contact details and the proposal's scope summary stay behind, along with what you are charging — a non-solicitation clause is worth very little if the document it sits on names the client it protects.",
+      "content2": "The scope text is generated from the lines you selected, so it describes what the supplier is supplying rather than what the event is about. If the wording — or an item description copied from the proposal — happens to name your client, CueQuote refuses to issue the order and tells you which line to fix. Words that are ordinary vocabulary for you rather than a client's identity can be marked as such once per client and are never flagged again.",
+      "step1": "Open a job and go to the Suppliers tab, then click \"Sub work out\". In AV mode you tick the line items; in Planner mode you award a whole section, such as Catering",
+      "step2": "Pick a supplier or create one on the spot — you only need a name. Add their public liability expiry while you are there, because sending is blocked without it",
+      "step3": "Review the generated scope, add the site address, access notes and payment terms, then issue and send",
+      "step4": "Copy the link to the supplier. They see their scope and price, and accept by typing their name — the date, time and their answer are recorded on the order",
+      "step5": "Revoke the link at any time if the job changes or the link is forwarded. Revoking also frees a slot against your plan's limit",
+      "tip": "Insurance is checked against your load-out date, not against today. Cover that is valid when you book and expired on site is the failure that actually costs money."
     }
   },
   "changelog": {

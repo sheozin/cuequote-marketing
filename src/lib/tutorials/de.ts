@@ -706,6 +706,48 @@ export const TUTORIALS_DE: Tutorial[] = [
     ],
   },
   {
+    slug: 'supplier-work-orders',
+    title: 'Arbeit an Dienstleister vergeben',
+    description: 'Stellen Sie einem H\u00e4ndler oder Verleih einen Auftrag aus: sein Umfang, sein Preis und nichts \u00fcber Ihren Kunden.',
+    duration: '6 min',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Auftr\u00e4ge aus einem Job heraus ausstellen, im AV- und im Planer-Modus',
+      'Was ein Dienstleister sieht \u2014 und welche Kundendaten nie herausgehen',
+      'Versicherung gegen Ihren Abbautag gepr\u00fcft, nicht gegen heute',
+      'Annehmen, widerrufen und was am Auftrag festgehalten wird',
+      'Wie viele Auftr\u00e4ge jeder Tarif gleichzeitig aktiv halten kann',
+    ],
+    steps: [
+      {
+        title: '\u00d6ffnen Sie den Tab Dienstleister',
+        content: '\u00d6ffnen Sie einen Job mit Positionen, gehen Sie auf den Tab Dienstleister und klicken Sie \u201eArbeit vergeben\u201c. Im AV-Modus haken Sie einzelne Positionen an. Im Planer-Modus vergeben Sie einen ganzen Abschnitt \u2014 Catering, Produktion, Transport \u2014 auf einmal.',
+        tip: 'Dienstleister entstehen innerhalb eines Jobs und sonst nirgends, Sie starten also nie vor einem leeren Verzeichnis.',
+      },
+      {
+        title: 'Dienstleister w\u00e4hlen oder anlegen',
+        content: 'W\u00e4hlen Sie einen vorhandenen Dienstleister oder legen Sie einen mit blo\u00dfem Namen an. Tragen Sie gleich das Ablaufdatum der Haftpflicht ein: ohne Versicherungsdatum l\u00e4sst sich kein Auftrag senden, und dies ist der eine Moment, in dem Sie die Antwort vor sich haben.',
+      },
+      {
+        title: 'Pr\u00fcfen Sie den Umfang',
+        content: 'Der Umfangstext entsteht aus den gew\u00e4hlten Positionen und beschreibt, was der Dienstleister liefert, nicht worum es bei der Veranstaltung geht. \u00c4ndern Sie ihn bei Bedarf \u2014 er ist das, was unterschrieben wird. Nennt er Ihren Kunden, verweigert CueQuote die Ausstellung und nennt die Zeile.',
+        tip: 'Positionsbeschreibungen sind f\u00fcr Ihren Kunden geschrieben und werden mit \u00fcbernommen. Deshalb pr\u00fcft die Kontrolle auch sie, nicht nur Ihren eigenen Text.',
+      },
+      {
+        title: 'Link senden und Antwort erhalten',
+        content: 'Kopieren Sie den Link zum Dienstleister. Er \u00f6ffnet ihn ohne Login und sieht Umfang, Preis, Location, Load-in-Fenster und den Ansprechpartner vor Ort \u2014 nie den Endkunden und nie Ihren Verkaufspreis. Er nimmt per Namenseingabe an; Datum, Uhrzeit und Antwort werden am Auftrag festgehalten.',
+      },
+      {
+        title: 'Widerrufen, wenn sich etwas \u00e4ndert',
+        content: '\u00c4ndert sich der Job oder wurde der Link weitergeleitet, widerrufen Sie ihn. Lesen und Annehmen enden sofort, und der Dienstleister sieht dieselbe Meldung wie bei einem falschen Link. Ein Widerruf gibt zudem einen Platz frei: Gratis 2 aktive Auftr\u00e4ge, Starter 10, Pro und h\u00f6her unbegrenzt.',
+        tip: 'Ein widerrufener Link, der noch eine Buchung best\u00e4tigen k\u00f6nnte, w\u00e4re schlimmer als einer, der noch einen Standort zeigt \u2014 deshalb schlie\u00dfen beide H\u00e4lften gemeinsam.',
+      },
+    ],
+  },
+  {
     slug: 'crew-scheduling',
     title: 'Crew-Einsatzplanung',
     description: 'Verwalten Sie Ihr technisches Personal — Festangestellte und Freelancer — weisen Sie es Veranstaltungen zu, erstellen Sie Crew-Vorbereitungsbögen und verfolgen Sie den Verfügbarkeitskalender.',

@@ -706,6 +706,48 @@ export const TUTORIALS_FR: Tutorial[] = [
     ],
   },
   {
+    slug: 'supplier-work-orders',
+    title: 'Sous-traiter une partie du projet',
+    description: '\u00c9mettez un bon de commande \u00e0 un revendeur ou un loueur : son p\u00e9rim\u00e8tre, son prix, et rien sur votre client.',
+    duration: '6 min',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      '\u00c9mettre un bon depuis un projet, en mode AV et organisateur',
+      'Ce que voit un prestataire \u2014 et les donn\u00e9es client qui ne sortent jamais',
+      'Assurance v\u00e9rifi\u00e9e \u00e0 votre date de d\u00e9montage, pas \u00e0 aujourd\'hui',
+      'Accepter, r\u00e9voquer, et ce qui est conserv\u00e9 sur le bon',
+      'Combien de bons chaque formule garde actifs',
+    ],
+    steps: [
+      {
+        title: 'Ouvrez l\'onglet Prestataires',
+        content: 'Ouvrez un projet comportant des lignes, allez dans l\'onglet Prestataires et cliquez \u00ab Sous-traiter \u00bb. En mode AV vous cochez des lignes. En mode organisateur vous attribuez une section enti\u00e8re \u2014 Traiteur, Production, Transport \u2014 d\'un coup.',
+        tip: 'Les prestataires se cr\u00e9ent dans un projet et nulle part ailleurs : vous ne partez jamais d\'un annuaire vide \u00e0 remplir.',
+      },
+      {
+        title: 'Choisissez ou cr\u00e9ez le prestataire',
+        content: 'Choisissez un prestataire existant ou cr\u00e9ez-le sur place avec un simple nom. Renseignez au passage l\'expiration de sa RC pro : sans date d\'assurance, aucun bon ne peut partir, et c\'est le seul moment o\u00f9 vous avez la r\u00e9ponse sous les yeux.',
+      },
+      {
+        title: 'V\u00e9rifiez le p\u00e9rim\u00e8tre envoy\u00e9',
+        content: 'Le texte est r\u00e9dig\u00e9 \u00e0 partir des lignes choisies : il d\u00e9crit ce que le prestataire fournit, pas ce qu\'est l\'\u00e9v\u00e9nement. Modifiez-le si besoin \u2014 c\'est ce qu\'il signe. S\'il nomme votre client, CueQuote refuse d\'\u00e9mettre et indique la ligne \u00e0 corriger.',
+        tip: 'Les descriptions de lignes sont \u00e9crites pour votre client et sont reprises sur le bon. C\'est pourquoi le contr\u00f4le les lit aussi, pas seulement votre texte.',
+      },
+      {
+        title: 'Envoyez le lien et obtenez une r\u00e9ponse',
+        content: 'Copiez le lien vers le prestataire. Il l\'ouvre sans connexion et voit son p\u00e9rim\u00e8tre, son prix, le lieu, le cr\u00e9neau de montage et le contact sur site \u2014 jamais le client final, jamais votre prix de vente. Il accepte en saisissant son nom ; date, heure et r\u00e9ponse sont conserv\u00e9es sur le bon.',
+      },
+      {
+        title: 'R\u00e9voquez en cas de changement',
+        content: 'Si le projet change ou si le lien a \u00e9t\u00e9 transf\u00e9r\u00e9, r\u00e9voquez-le. La lecture et l\'acceptation s\'arr\u00eatent aussit\u00f4t, et le prestataire voit le m\u00eame message qu\'avec un lien erron\u00e9. Une r\u00e9vocation lib\u00e8re aussi une place : formule gratuite 2 bons actifs, Starter 10, Pro et au-del\u00e0 illimit\u00e9.',
+        tip: 'Un lien r\u00e9voqu\u00e9 qui pourrait encore confirmer une r\u00e9servation serait pire qu\'un lien montrant encore un nom de lieu \u2014 les deux moiti\u00e9s se ferment donc ensemble.',
+      },
+    ],
+  },
+  {
     slug: 'crew-scheduling',
     title: 'Planification de l\'équipe technique',
     description: 'Gérez votre liste d\'équipe technique — salariés et freelances — affectez-les aux événements, générez des fiches de préparation et consultez le calendrier de disponibilité.',

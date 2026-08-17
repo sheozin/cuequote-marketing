@@ -2322,6 +2322,17 @@
       "step3": "Si vous changez ensuite le nombre de participants, de jours, le budget ou la date, le panneau nomme précisément ce qui a bougé — vous savez ainsi que le conseil lui est antérieur",
       "step4": "Passez en revue les prix signalés et les manques de périmètre — un manque disparaît dès que vous ajoutez la ligne qui le comble, et un signalement de prix s'efface dès que le tarif revient dans la fourchette normale",
       "tip": "Les fourchettes de prix sont larges à dessein. Elles servent à attraper un zéro manquant ou un tarif journalier saisi comme horaire — pas à discuter 15%"
+    },
+    "supplierWorkOrders": {
+      "title": "Sous-traiter une partie du projet",
+      "content1": "Quand une partie d'un projet part chez un loueur, un revendeur ou un corps de métier spécialisé, l'onglet Prestataires lui émet un bon de commande : son périmètre, son prix, le lieu et le créneau de montage, sur un lien sans connexion. Ce qu'il ne contient jamais, c'est votre client. Le nom du client final, ses coordonnées et le résumé de périmètre de la proposition restent chez vous, tout comme vos prix de vente — une clause de non-sollicitation ne vaut pas grand-chose si le document qui la porte nomme le client qu'elle protège.",
+      "content2": "Le texte de périmètre est rédigé à partir des lignes choisies : il décrit ce que le prestataire fournit, pas ce qu'est l'événement. Si la formulation — ou une description de ligne reprise de la proposition — nomme votre client, CueQuote refuse d'émettre le bon et vous indique la ligne à corriger. Les mots qui relèvent de votre vocabulaire courant plutôt que de l'identité d'un client se marquent une fois par client et ne sont plus jamais signalés.",
+      "step1": "Ouvrez un projet, allez dans l'onglet Prestataires et cliquez « Sous-traiter ». En mode AV vous cochez des lignes ; en mode organisateur vous attribuez une section entière, par exemple Traiteur",
+      "step2": "Choisissez un prestataire ou créez-le sur place — un nom suffit. Renseignez dans la foulée l'expiration de sa RC pro, sans laquelle l'envoi est bloqué",
+      "step3": "Relisez le périmètre généré, ajoutez l'adresse du site, les notes d'accès et les conditions de paiement, puis émettez et envoyez",
+      "step4": "Copiez le lien vers le prestataire. Il voit son périmètre et son prix, et accepte en saisissant son nom — la date, l'heure et sa réponse sont conservées sur le bon",
+      "step5": "Révoquez le lien à tout moment si le projet change ou si le lien a été transféré. Une révocation libère aussi une place dans la limite de votre formule",
+      "tip": "L'assurance est vérifiée à votre date de démontage, pas à aujourd'hui. Une couverture valable à la réservation et expirée sur site, c'est la panne qui coûte vraiment."
     }
   },
   "changelog": {

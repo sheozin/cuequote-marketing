@@ -708,6 +708,48 @@ export const TUTORIALS_EN: Tutorial[] = [
     ],
   },
   {
+    slug: 'supplier-work-orders',
+    title: 'Subbing Work Out to Suppliers',
+    description: 'Issue a work order to a dealer or dry-hire house: their scope, their price, and nothing about your client.',
+    duration: '6 min',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Issuing a work order from inside a job, in AV or Planner mode',
+      'What a supplier sees \u2014 and the client details that never leave',
+      'Insurance checked against your load-out date, not against today',
+      'Accepting, revoking, and what is recorded on the order',
+      'How many work orders each plan can keep live',
+    ],
+    steps: [
+      {
+        title: 'Open the Suppliers tab',
+        content: 'Open any job with line items and go to the Suppliers tab, then click \u201cSub work out\u201d. In AV mode you tick the individual line items you are subbing out. In Planner mode you award a whole section \u2014 Catering, Production, Transport \u2014 in one go.',
+        tip: 'Suppliers are created inside a job and nowhere else, so you never face an empty directory to fill in before you can start.',
+      },
+      {
+        title: 'Pick or create the supplier',
+        content: 'Choose an existing supplier, or create one on the spot with just a name. Add their public liability expiry at the same time: a work order cannot be sent to a supplier with no insurance date on file, and this is the one moment the answer is in front of you.',
+      },
+      {
+        title: 'Check the scope you are sending',
+        content: 'The scope text is written from the lines you picked, so it describes what the supplier is supplying rather than what the event is about. Edit it if you need to \u2014 it is what they sign. If it names your client, CueQuote refuses to issue the order and tells you which line to fix.',
+        tip: 'Item descriptions are written for your client and get copied onto the order. That is why the check reads them too, not just the text you typed.',
+      },
+      {
+        title: 'Send the link and get an answer',
+        content: 'Copy the link to the supplier. They open it with no login and see their scope, their price, the venue, the load-in window and the site contact \u2014 never the end client, and never your sell price. They accept by typing their name, and the date, time and answer are recorded on the order.',
+      },
+      {
+        title: 'Revoke when it changes',
+        content: 'If the job changes or the link gets forwarded, revoke it. Both reading and accepting stop at once, and the supplier sees the same message a wrong link would give. Revoking also frees a slot: Free plans keep 2 work orders live at a time, Starter 10, Pro and above unlimited.',
+        tip: 'A revoked link that could still confirm a booking would be worse than one that could still read a venue name, so both halves close together.',
+      },
+    ],
+  },
+  {
     slug: 'crew-scheduling',
     title: 'Crew Scheduling',
     description: 'Manage your crew roster, assign staff and freelancers to events, and share public prep sheets so your team arrives fully briefed.',

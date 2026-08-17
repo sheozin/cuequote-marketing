@@ -671,6 +671,48 @@ export const TUTORIALS_PL: Tutorial[] = [
     ],
   },
   {
+    slug: 'supplier-work-orders',
+    title: 'Zlecanie prac podwykonawcom',
+    description: 'Wystaw zlecenie dealerowi albo wypo\u017cyczalni: ich zakres, ich cena i nic o Twoim kliencie.',
+    duration: '6 min',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'both',
+    videoUrl: '',
+    whatYouLearn: [
+      'Wystawianie zlecenia z wn\u0119trza realizacji, w trybie AV i planisty',
+      'Co widzi podwykonawca \u2014 i jakie dane klienta nigdy nie wychodz\u0105',
+      'OC sprawdzane wzgl\u0119dem daty demonta\u017cu, nie wzgl\u0119dem dzisiaj',
+      'Akceptacja, uniewa\u017cnianie i co zapisuje si\u0119 przy zleceniu',
+      'Ile zlece\u0144 mo\u017ce by\u0107 aktywnych w ka\u017cdym planie',
+    ],
+    steps: [
+      {
+        title: 'Otw\u00f3rz zak\u0142adk\u0119 Podwykonawcy',
+        content: 'Otw\u00f3rz realizacj\u0119 z pozycjami, przejd\u017a na zak\u0142adk\u0119 Podwykonawcy i kliknij \u201eZle\u0107 podwykonawcy\u201d. W trybie AV zaznaczasz pojedyncze pozycje. W trybie planisty przyznajesz ca\u0142\u0105 sekcj\u0119 \u2014 Catering, Produkcja, Transport \u2014 za jednym razem.',
+        tip: 'Podwykonawc\u00f3w tworzysz wewn\u0105trz realizacji i nigdzie indziej, wi\u0119c nie zaczynasz od pustej kartoteki do wype\u0142nienia.',
+      },
+      {
+        title: 'Wybierz albo utw\u00f3rz podwykonawc\u0119',
+        content: 'Wybierz istniej\u0105cego podwykonawc\u0119 albo utw\u00f3rz nowego, podaj\u0105c samo nazw\u0119. Od razu dodaj dat\u0119 wyga\u015bni\u0119cia OC: bez niej zlecenia nie da si\u0119 wys\u0142a\u0107, a to jedyny moment, w kt\u00f3rym masz t\u0119 informacj\u0119 pod r\u0119k\u0105.',
+      },
+      {
+        title: 'Sprawd\u017a wysy\u0142any zakres',
+        content: 'Tekst zakresu powstaje z wybranych pozycji, wi\u0119c opisuje to, co dostarcza podwykonawca, a nie czym jest wydarzenie. Mo\u017cesz go zmieni\u0107 \u2014 to jest to, co podpisuje. Je\u015bli wskazuje Twojego klienta, CueQuote odm\u00f3wi wystawienia i poka\u017ce pozycj\u0119 do poprawy.',
+        tip: 'Opisy pozycji pisane s\u0105 dla klienta i trafiaj\u0105 na zlecenie. Dlatego sprawdzamy tak\u017ce je, nie tylko tekst, kt\u00f3ry wpisa\u0142e\u015b.',
+      },
+      {
+        title: 'Wy\u015blij link i odbierz odpowied\u017a',
+        content: 'Skopiuj link do podwykonawcy. Otwiera go bez logowania i widzi sw\u00f3j zakres, swoj\u0105 cen\u0119, obiekt, okno monta\u017cu i kontakt na miejscu \u2014 nigdy klienta ko\u0144cowego ani Twojej ceny sprzeda\u017cy. Akceptuje wpisuj\u0105c imi\u0119 i nazwisko, a data, godzina i odpowied\u017a zapisuj\u0105 si\u0119 przy zleceniu.',
+      },
+      {
+        title: 'Uniewa\u017cnij, gdy co\u015b si\u0119 zmieni',
+        content: 'Je\u015bli realizacja si\u0119 zmieni albo link zostanie przekazany dalej, uniewa\u017cnij go. Odczyt i akceptacja przestaj\u0105 dzia\u0142a\u0107 natychmiast, a podwykonawca widzi ten sam komunikat co przy b\u0142\u0119dnym linku. Uniewa\u017cnienie zwalnia te\u017c miejsce: plan darmowy trzyma 2 aktywne zlecenia, Starter 10, Pro i wy\u017cej bez limitu.',
+        tip: 'Uniewa\u017cniony link, kt\u00f3ry wci\u0105\u017c m\u00f3g\u0142by potwierdzi\u0107 rezerwacj\u0119, by\u0142by gorszy ni\u017c taki, kt\u00f3ry wci\u0105\u017c pokazuje nazw\u0119 obiektu \u2014 dlatego zamykaj\u0105 si\u0119 obie po\u0142owy naraz.',
+      },
+    ],
+  },
+  {
     slug: 'crew-scheduling',
     title: 'Planowanie obsady technicznej',
     description: 'Zarządzaj listą ekipy technicznej — pracowników etatowych i freelancerów — przypisuj ich do wydarzeń, generuj karty przygotowania ekipy i przeglądaj kalendarz obsady.',

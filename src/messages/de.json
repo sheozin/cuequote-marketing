@@ -2320,6 +2320,17 @@
       "step3": "Ändern Sie danach Teilnehmerzahl, Tage, Budget oder Datum, benennt das Panel genau, was sich verschoben hat — so wissen Sie, dass der Hinweis älter ist",
       "step4": "Prüfen Sie die markierten Preise und die Lücken im Leistungsumfang — eine Lücke verschwindet, sobald Sie die passende Position ergänzen, und eine Preismarkierung erlischt, sobald der Satz wieder in der üblichen Spanne liegt",
       "tip": "Die Preisspannen sind bewusst weit. Sie sollen eine fehlende Null oder einen als Stundensatz eingetragenen Tagessatz abfangen — nicht über 15% streiten"
+    },
+    "supplierWorkOrders": {
+      "title": "Arbeit an Dienstleister vergeben",
+      "content1": "Wenn ein Teil eines Jobs an einen Dry-Hire-Verleih, einen Händler oder ein Spezialgewerk geht, stellt der Tab Dienstleister ihm einen Auftrag aus: sein Umfang, sein Preis, die Location und das Load-in-Fenster — ein Link, ohne Login. Was nie darin steht, ist Ihr Kunde. Name und Kontaktdaten des Endkunden und die Umfangszusammenfassung des Angebots bleiben bei Ihnen, ebenso Ihre Verkaufspreise — eine Abwerbeklausel ist wenig wert, wenn das Dokument, auf dem sie steht, den geschützten Kunden benennt.",
+      "content2": "Der Umfangstext entsteht aus den gewählten Positionen und beschreibt daher, was der Dienstleister liefert, nicht worum es bei der Veranstaltung geht. Nennt die Formulierung — oder eine aus dem Angebot übernommene Positionsbeschreibung — Ihren Kunden, verweigert CueQuote die Ausstellung und nennt die betroffene Zeile. Wörter, die bei Ihnen normales Vokabular und nicht die Identität eines Kunden sind, markieren Sie einmal pro Kunde und werden nie wieder gemeldet.",
+      "step1": "Öffnen Sie einen Job, gehen Sie auf den Tab Dienstleister und klicken Sie „Arbeit vergeben“. Im AV-Modus haken Sie Positionen an, im Planer-Modus vergeben Sie einen ganzen Abschnitt, etwa Catering",
+      "step2": "Wählen Sie einen Dienstleister oder legen Sie ihn sofort an — ein Name genügt. Tragen Sie gleich das Ablaufdatum der Haftpflicht ein, denn ohne sie ist der Versand blockiert",
+      "step3": "Prüfen Sie den erzeugten Umfang, ergänzen Sie Adresse, Zufahrtshinweise und Zahlungsbedingungen, dann erstellen und senden",
+      "step4": "Kopieren Sie den Link zum Dienstleister. Er sieht Umfang und Preis und nimmt per Namenseingabe an — Datum, Uhrzeit und Antwort werden am Auftrag festgehalten",
+      "step5": "Widerrufen Sie den Link jederzeit, wenn sich der Job ändert oder der Link weitergeleitet wurde. Ein Widerruf gibt außerdem einen Platz im Tariflimit frei",
+      "tip": "Die Versicherung wird gegen Ihren Abbautag geprüft, nicht gegen heute. Deckung, die bei der Buchung gilt und vor Ort erloschen ist, ist der Fehler, der wirklich Geld kostet."
     }
   },
   "changelog": {
