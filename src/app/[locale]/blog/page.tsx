@@ -65,6 +65,17 @@ const CATEGORY_EMOJI: Record<string, string> = {
 
 export default async function BlogPage() {
   const t = await getTranslations("blog");
+
+  // next-intl has no defaultValue: the second argument is interpolation values,
+  // ignored when the key is missing, and the raw path renders instead —
+  // "blog.categoryProduct Updates" was live on /blog. Spaces are stripped so a
+  // multi-word category maps to a key that can exist at all, and the category
+  // name itself is the real fallback.
+  const catLabel = (category: string) => {
+    const key = `category${category.replace(/\s+/g, "")}`;
+    const label = t(key);
+    return label === `blog.${key}` ? category : label;
+  };
   const tp = await getTranslations("posts");
   const ts = await getTranslations("subscribe");
   const locale = await getLocale();
@@ -85,6 +96,7 @@ export default async function BlogPage() {
     { key: "Industry", label: t("categoryIndustry", { defaultValue: "Industry" }), count: categoryCounts.Industry || 0 },
     { key: "Technology", label: t("categoryTechnology", { defaultValue: "Technology" }), count: categoryCounts.Technology || 0 },
     { key: "Business", label: t("categoryBusiness", { defaultValue: "Business" }), count: categoryCounts.Business || 0 },
+    { key: "Product Updates", label: catLabel("Product Updates"), count: categoryCounts["Product Updates"] || 0 },
   ];
 
   // Prepare posts data for client component
@@ -176,7 +188,7 @@ export default async function BlogPage() {
                     fontSize: 12, fontWeight: 600, color: featuredCat.text,
                     background: featuredCat.bg, padding: "4px 12px", borderRadius: 100,
                   }}>
-                    {t(`category${featured.category}`, { defaultValue: featured.category })}
+                    {catLabel(featured.category)}
                   </span>
                 </div>
 
@@ -264,7 +276,7 @@ export default async function BlogPage() {
                         fontSize: 11, fontWeight: 700, color: cat.text,
                         background: cat.bg, padding: "3px 10px", borderRadius: 100, letterSpacing: 0.3,
                       }}>
-                        {t(`category${post.category}`, { defaultValue: post.category })}
+                        {catLabel(post.category)}
                       </span>
                       <span style={{ fontSize: 12, color: "#b0b8c4" }}>{tp(`${post.slug}.readTime`)}</span>
                     </div>
