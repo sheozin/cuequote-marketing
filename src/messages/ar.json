@@ -2390,7 +2390,8 @@
     "typeNew": "جديد",
     "typeImproved": "محسّن",
     "typeFixed": "مُصلَح",
-    "typeDeprecated": "متوقف"
+    "typeDeprecated": "متوقف",
+    "showOlder": "عرض {count} إصدارًا سابقًا"
   },
   "tutorialDetail": {
     "backToTutorials": "العودة إلى الدروس",

@@ -63,6 +63,151 @@ export default async function ChangelogPage({ params }: { params: Promise<{ loca
     deprecated: { bg: "#fef2f2", text: "#ef4444", labelKey: "typeDeprecated" },
   };
 
+  // 89 entries across 46 versions in one timeline made this a very long
+  // scroll. A changelog is read for "what changed lately", so recent releases
+  // stay open and the rest sit behind a native <details> — no client component,
+  // one click to the full history, and all of it still in the HTML for search.
+  const RECENT = 12;
+  const recentEntries = (entries ?? []).slice(0, RECENT);
+  const olderEntries = (entries ?? []).slice(RECENT);
+
+  const renderEntry = (
+  entry: {
+    id: string;
+    version: string;
+    title: string;
+    description: string;
+    change_type: string;
+    published_at: string;
+    translations?: Record<string, { title?: string; description?: string }>;
+  },
+  idx: number
+) => {
+  const typeInfo =
+    TYPE_COLORS[entry.change_type] || TYPE_COLORS.new;
+  const localeMap: Record<string, string> = { en: "en-US", pl: "pl-PL", ar: "ar-EG", de: "de-DE", fr: "fr-FR" };
+  const date = new Date(entry.published_at).toLocaleDateString(
+    localeMap[locale] || "en-US",
+    { year: "numeric", month: "long", day: "numeric" }
+  );
+  const tr = entry.translations?.[locale];
+  const displayTitle = (locale !== "en" && tr?.title) ? tr.title : entry.title;
+  const displayDesc = (locale !== "en" && tr?.description) ? tr.description : entry.description;
+
+  return (
+    <div
+      key={entry.id || idx}
+      style={{
+        position: "relative",
+        marginBottom: 40,
+      }}
+    >
+      {/* Timeline dot */}
+      <div
+        style={{
+          position: "absolute",
+          left: -41,
+          top: 6,
+          width: 16,
+          height: 16,
+          borderRadius: "50%",
+          background: "#fff",
+          border: "3px solid #10b981",
+        }}
+      />
+
+      {/* Card */}
+      <div
+        style={{
+          background: "#fff",
+          borderRadius: 16,
+          padding: "28px 28px 24px",
+          border: "1px solid #e5e7eb",
+          boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+        }}
+      >
+        {/* Meta row */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            marginBottom: 12,
+            flexWrap: "wrap",
+          }}
+        >
+          {/* Version badge */}
+          <span
+            style={{
+              fontSize: 12,
+              fontWeight: 700,
+              color: "#08172E",
+              background: "#f3f4f6",
+              padding: "4px 10px",
+              borderRadius: 6,
+              fontFamily: "monospace",
+            }}
+          >
+            {entry.version}
+          </span>
+
+          {/* Type badge */}
+          <span
+            style={{
+              fontSize: 11,
+              fontWeight: 700,
+              color: typeInfo.text,
+              background: typeInfo.bg,
+              padding: "4px 10px",
+              borderRadius: 6,
+              textTransform: "uppercase",
+              letterSpacing: 0.5,
+            }}
+          >
+            {t(typeInfo.labelKey)}
+          </span>
+
+          {/* Date */}
+          <span
+            style={{
+              fontSize: 13,
+              color: "#6b7280",
+              marginLeft: "auto",
+            }}
+          >
+            {date}
+          </span>
+        </div>
+
+        {/* Title */}
+        <h3
+          style={{
+            fontFamily: "var(--font-dm-sans)",
+            fontWeight: 700,
+            fontSize: 18,
+            color: "#08172E",
+            marginBottom: 8,
+          }}
+        >
+          {displayTitle}
+        </h3>
+
+        {/* Description */}
+        <p
+          style={{
+            fontSize: 15,
+            color: "#4b5563",
+            lineHeight: 1.7,
+            margin: 0,
+          }}
+        >
+          {displayDesc}
+        </p>
+      </div>
+    </div>
+  );
+};
+
   return (
     <>
       <Nav />
@@ -167,143 +312,24 @@ export default async function ChangelogPage({ params }: { params: Promise<{ loca
                 borderLeft: "2px solid #e5e7eb",
               }}
             >
-              {entries.map(
-                (
-                  entry: {
-                    id: string;
-                    version: string;
-                    title: string;
-                    description: string;
-                    change_type: string;
-                    published_at: string;
-                    translations?: Record<string, { title?: string; description?: string }>;
-                  },
-                  idx: number
-                ) => {
-                  const typeInfo =
-                    TYPE_COLORS[entry.change_type] || TYPE_COLORS.new;
-                  const localeMap: Record<string, string> = { en: "en-US", pl: "pl-PL", ar: "ar-EG", de: "de-DE", fr: "fr-FR" };
-                  const date = new Date(entry.published_at).toLocaleDateString(
-                    localeMap[locale] || "en-US",
-                    { year: "numeric", month: "long", day: "numeric" }
-                  );
-                  const tr = entry.translations?.[locale];
-                  const displayTitle = (locale !== "en" && tr?.title) ? tr.title : entry.title;
-                  const displayDesc = (locale !== "en" && tr?.description) ? tr.description : entry.description;
+              {recentEntries.map(renderEntry)}
 
-                  return (
-                    <div
-                      key={entry.id || idx}
-                      style={{
-                        position: "relative",
-                        marginBottom: 40,
-                      }}
-                    >
-                      {/* Timeline dot */}
-                      <div
-                        style={{
-                          position: "absolute",
-                          left: -41,
-                          top: 6,
-                          width: 16,
-                          height: 16,
-                          borderRadius: "50%",
-                          background: "#fff",
-                          border: "3px solid #10b981",
-                        }}
-                      />
-
-                      {/* Card */}
-                      <div
-                        style={{
-                          background: "#fff",
-                          borderRadius: 16,
-                          padding: "28px 28px 24px",
-                          border: "1px solid #e5e7eb",
-                          boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-                        }}
-                      >
-                        {/* Meta row */}
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 10,
-                            marginBottom: 12,
-                            flexWrap: "wrap",
-                          }}
-                        >
-                          {/* Version badge */}
-                          <span
-                            style={{
-                              fontSize: 12,
-                              fontWeight: 700,
-                              color: "#08172E",
-                              background: "#f3f4f6",
-                              padding: "4px 10px",
-                              borderRadius: 6,
-                              fontFamily: "monospace",
-                            }}
-                          >
-                            {entry.version}
-                          </span>
-
-                          {/* Type badge */}
-                          <span
-                            style={{
-                              fontSize: 11,
-                              fontWeight: 700,
-                              color: typeInfo.text,
-                              background: typeInfo.bg,
-                              padding: "4px 10px",
-                              borderRadius: 6,
-                              textTransform: "uppercase",
-                              letterSpacing: 0.5,
-                            }}
-                          >
-                            {t(typeInfo.labelKey)}
-                          </span>
-
-                          {/* Date */}
-                          <span
-                            style={{
-                              fontSize: 13,
-                              color: "#6b7280",
-                              marginLeft: "auto",
-                            }}
-                          >
-                            {date}
-                          </span>
-                        </div>
-
-                        {/* Title */}
-                        <h3
-                          style={{
-                            fontFamily: "var(--font-dm-sans)",
-                            fontWeight: 700,
-                            fontSize: 18,
-                            color: "#08172E",
-                            marginBottom: 8,
-                          }}
-                        >
-                          {displayTitle}
-                        </h3>
-
-                        {/* Description */}
-                        <p
-                          style={{
-                            fontSize: 15,
-                            color: "#4b5563",
-                            lineHeight: 1.7,
-                            margin: 0,
-                          }}
-                        >
-                          {displayDesc}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                }
+              {olderEntries.length > 0 && (
+                <details style={{ marginTop: 8 }}>
+                  <summary
+                    style={{
+                      cursor: "pointer",
+                      fontFamily: "var(--font-dm-sans)",
+                      fontWeight: 600,
+                      fontSize: 15,
+                      color: "#08172E",
+                      padding: "12px 0",
+                    }}
+                  >
+                    {t("showOlder", { count: olderEntries.length })}
+                  </summary>
+                  <div style={{ marginTop: 24 }}>{olderEntries.map(renderEntry)}</div>
+                </details>
               )}
             </div>
           )}

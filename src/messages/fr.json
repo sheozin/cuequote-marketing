@@ -2346,7 +2346,8 @@
     "typeNew": "Nouveau",
     "typeImproved": "Amélioré",
     "typeFixed": "Corrigé",
-    "typeDeprecated": "Obsolète"
+    "typeDeprecated": "Obsolète",
+    "showOlder": "Afficher {count} versions antérieures"
   },
   "tutorialDetail": {
     "backToTutorials": "Retour aux tutoriels",

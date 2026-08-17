@@ -2318,7 +2318,8 @@
     "typeNew": "Nowe",
     "typeImproved": "Ulepszone",
     "typeFixed": "Naprawione",
-    "typeDeprecated": "Wycofane"
+    "typeDeprecated": "Wycofane",
+    "showOlder": "Pokaż {count} wcześniejszych wydań"
   },
   "tutorialDetail": {
     "backToTutorials": "Powrót do poradników",
