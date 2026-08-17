@@ -20,6 +20,14 @@ export function publishedPosts(now: Date = new Date()): BlogPostSummary[] {
 
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
+  // Scheduled for 18 Aug: the same morning the in-app announcement email goes
+  // out, so the release has somewhere to land rather than pointing only at the
+  // changelog. publishedPosts() genuinely holds it back until then.
+  {
+    slug: "sub-hire-work-orders-without-sharing-your-client",
+    category: "Product Updates",
+    date: "2026-08-18",
+  },
   {
     slug: "cuequote-integrations-api-widget-webhooks",
     category: "Product Updates",
