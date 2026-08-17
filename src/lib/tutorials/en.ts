@@ -1091,6 +1091,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     mode: 'planner',
     videoUrl: '',
     whatYouLearn: [
+      'Reading the plan by section, and renaming the sections yourself',
       'Reading the budget overview with low-high range',
       'Understanding crew recommendations and roles',
       'Using the event timeline for planning',
@@ -1128,8 +1129,13 @@ export const TUTORIALS_EN: Tutorial[] = [
         tip: 'Ask the venue for the load-in and load-out windows before filling these in. A room you only get at 6am on show day is a very different budget from one you have the night before.',
       },
       {
+        title: 'Read the plan by section, and name the sections yourself',
+        content: 'Open the proposal and the Plan tab groups your lines the way an organizer thinks about a budget \u2014 Venue, Catering, Production, Staffing, Transport and so on, in that order, with Other last. Click any section title to rename it: \u201cCatering\u201d becomes \u201cFood & Beverage\u201d if that is what your client calls it. The names you choose carry through to the PDF and to the link you share with the client.',
+        tip: 'Rename sections before you send, not after. The client reads your wording, and matching the language of their own budget sheet saves a round of questions.',
+      },
+      {
         title: 'Keep the planning notes working while you edit',
-        content: 'Open the proposal and the planning notes sit above your line items on the Equipment tab, as things to resolve rather than text to scroll past. Tick one off once you have confirmed it, or mark it not applicable. If you then change the headcount, the number of days, the budget or the event date, the panel names exactly what moved \u2014 so you know the advice was written against different numbers.',
+        content: 'Open the proposal and the planning notes sit above your line items on the Plan tab, as things to resolve rather than text to scroll past. Tick one off once you have confirmed it, or mark it not applicable. If you then change the headcount, the number of days, the budget or the event date, the panel names exactly what moved \u2014 so you know the advice was written against different numbers.',
         tip: 'The notes are the questions the AI could not answer for you: power supply, load-in window, permits. Resolving them is usually where an estimate turns into a real budget.',
       },
       {

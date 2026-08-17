@@ -2315,10 +2315,10 @@
     "devWebhooks": "Webhooks",
     "plannerPlanChecks": {
       "title": "Quand le plan se vérifie lui-même",
-      "content1": "En mode Planificateur, les conseils rédigés pendant la génération de votre plan restent attachés à la proposition au lieu d'apparaître une fois puis de disparaître. Ils figurent au-dessus de vos lignes dans l'onglet Matériel comme des points ouverts à trancher — confirmer l'alimentation électrique, vérifier le créneau de load-in — et chacun peut être coché ou marqué non applicable.",
+      "content1": "En mode Planificateur, les conseils rédigés pendant la génération de votre plan restent attachés à la proposition au lieu d'apparaître une fois puis de disparaître. Ils figurent au-dessus de vos lignes dans l'onglet Plan comme des points ouverts à trancher — confirmer l'alimentation électrique, vérifier le créneau de load-in — et chacun peut être coché ou marqué non applicable.",
       "content2": "Le panneau surveille aussi le plan pendant que vous l'éditez. Il indique quand le conseil reposait sur d'autres chiffres, signale les prix très éloignés de la fourchette normale pour la région de votre événement, et liste tout ce que votre brief joint demandait et que le plan ne couvre pas encore.",
       "step1": "Renseignez les jours de montage et de démontage dans le formulaire de nouvelle proposition. En mode Planificateur, ils sont chiffrés comme occupation du lieu et temps des équipes — ce qu'un organisateur paie réellement — et non comme des jours de location de matériel supplémentaires",
-      "step2": "Ouvrez la proposition et parcourez les notes de planification dans l'onglet Matériel, en cochant chacune dès que vous l'avez confirmée avec le lieu ou le prestataire",
+      "step2": "Ouvrez la proposition et parcourez les notes de planification dans l'onglet Plan, en cochant chacune dès que vous l'avez confirmée avec le lieu ou le prestataire",
       "step3": "Si vous changez ensuite le nombre de participants, de jours, le budget ou la date, le panneau nomme précisément ce qui a bougé — vous savez ainsi que le conseil lui est antérieur",
       "step4": "Passez en revue les prix signalés et les manques de périmètre — un manque disparaît dès que vous ajoutez la ligne qui le comble, et un signalement de prix s'efface dès que le tarif revient dans la fourchette normale",
       "tip": "Les fourchettes de prix sont larges à dessein. Elles servent à attraper un zéro manquant ou un tarif journalier saisi comme horaire — pas à discuter 15%"

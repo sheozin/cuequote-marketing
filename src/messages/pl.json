@@ -2287,10 +2287,10 @@
     "devWebhooks": "Webhooki",
     "plannerPlanChecks": {
       "title": "Kiedy plan sprawdza sam siebie",
-      "content1": "W trybie Planner rady zapisane podczas generowania planu zostają przy propozycji, zamiast pojawić się raz i zniknąć. Znajdziesz je nad pozycjami na zakładce Sprzęt jako otwarte kwestie do rozstrzygnięcia — potwierdź zasilanie, sprawdź okno load-in — a każdą można odhaczyć albo oznaczyć jako nieistotną.",
+      "content1": "W trybie Planner rady zapisane podczas generowania planu zostają przy propozycji, zamiast pojawić się raz i zniknąć. Znajdziesz je nad pozycjami na zakładce Plan jako otwarte kwestie do rozstrzygnięcia — potwierdź zasilanie, sprawdź okno load-in — a każdą można odhaczyć albo oznaczyć jako nieistotną.",
       "content2": "Panel obserwuje też plan podczas edycji. Mówi, kiedy rada powstała przy innych liczbach, oznacza ceny mocno odbiegające od normy dla regionu Twojego wydarzenia i wypisuje wszystko, o co prosił załączony brief, a czego plan jeszcze nie obejmuje.",
       "step1": "Ustaw Dni montażu i Dni demontażu w formularzu nowej propozycji. W trybie Planner są wyceniane jako zajętość obiektu i czas ekipy — to, za co organizator naprawdę płaci — a nie jako dodatkowe dni wynajmu sprzętu",
-      "step2": "Otwórz propozycję i przejdź przez notatki planowania na zakładce Sprzęt, odhaczając każdą po potwierdzeniu jej z obiektem albo dostawcą",
+      "step2": "Otwórz propozycję i przejdź przez notatki planowania na zakładce Plan, odhaczając każdą po potwierdzeniu jej z obiektem albo dostawcą",
       "step3": "Jeśli później zmienisz liczbę gości, dni, budżet albo datę wydarzenia, panel poda dokładnie, co się zmieniło — będziesz wiedzieć, że rada jest wcześniejsza",
       "step4": "Przejrzyj oznaczone ceny i luki w zakresie — luka znika, gdy dodasz pozycję, która ją wypełnia, a oznaczenie ceny gaśnie, gdy stawka wróci do normy",
       "tip": "Widełki cenowe są celowo szerokie. Mają wyłapać brakujące zero albo stawkę dzienną wpisaną jako godzinowa — nie spierać się o 15%"

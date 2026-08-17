@@ -1081,6 +1081,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     mode: 'planner',
     videoUrl: '',
     whatYouLearn: [
+      'Lire le plan par section et renommer les sections soi-m\u00eame',
       'Lire la vue d\'ensemble du budget avec la fourchette basse-haute',
       'Comprendre les recommandations d\'équipe et les rôles',
       'Utiliser le calendrier événementiel pour la planification',
@@ -1118,8 +1119,13 @@ export const TUTORIALS_FR: Tutorial[] = [
         tip: 'Demandez au lieu ses cr\u00e9neaux de load-in et de load-out avant de remplir ces champs. Une salle que vous n\'obtenez qu\'\u00e0 6h le jour J n\'a rien \u00e0 voir, budg\u00e9tairement, avec une salle disponible la veille au soir.',
       },
       {
+        title: 'Lisez le plan par section, et nommez les sections vous-m\u00eame',
+        content: 'Ouvrez la proposition : l\'onglet Plan regroupe vos lignes comme un organisateur pense un budget \u2014 Lieu, Traiteur, Production, Personnel, Transport et ainsi de suite, dans cet ordre, avec Autre en dernier. Cliquez sur le titre d\'une section pour la renommer : \u00ab Traiteur \u00bb devient \u00ab Restauration \u00bb si c\'est le mot de votre client. Les noms que vous choisissez se retrouvent dans le PDF et dans le lien que vous partagez avec le client.',
+        tip: 'Renommez les sections avant l\'envoi, pas apr\u00e8s. Le client lit vos mots, et les accorder \u00e0 sa propre feuille de budget \u00e9vite une s\u00e9rie de questions.',
+      },
+      {
         title: 'Gardez les notes de planification utiles pendant l\'\u00e9dition',
-        content: 'Ouvrez la proposition : les notes de planification se trouvent au-dessus de vos lignes dans l\'onglet Mat\u00e9riel, comme des points \u00e0 trancher et non du texte \u00e0 faire d\u00e9filer. Cochez-en un une fois confirm\u00e9, ou marquez-le non applicable. Si vous changez ensuite le nombre de participants, de jours, le budget ou la date, le panneau nomme pr\u00e9cis\u00e9ment ce qui a boug\u00e9 \u2014 vous savez ainsi que le conseil reposait sur d\'autres chiffres.',
+        content: 'Ouvrez la proposition : les notes de planification se trouvent au-dessus de vos lignes dans l\'onglet Plan, comme des points \u00e0 trancher et non du texte \u00e0 faire d\u00e9filer. Cochez-en un une fois confirm\u00e9, ou marquez-le non applicable. Si vous changez ensuite le nombre de participants, de jours, le budget ou la date, le panneau nomme pr\u00e9cis\u00e9ment ce qui a boug\u00e9 \u2014 vous savez ainsi que le conseil reposait sur d\'autres chiffres.',
         tip: 'Les notes sont les questions auxquelles l\'IA ne pouvait pas r\u00e9pondre \u00e0 votre place : alimentation \u00e9lectrique, cr\u00e9neau de load-in, autorisations. C\'est g\u00e9n\u00e9ralement l\u00e0 qu\'une estimation devient un vrai budget.',
       },
       {

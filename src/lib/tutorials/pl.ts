@@ -1045,6 +1045,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     mode: 'planner',
     videoUrl: '',
     whatYouLearn: [
+      'Czytanie planu sekcjami i samodzielna zmiana nazw sekcji',
       'Odczytywanie przeglądu budżetu z zakresem niski-wysoki',
       'Rozumienie rekomendacji ekipy i ról',
       'Używanie harmonogramu wydarzenia do planowania',
@@ -1082,8 +1083,13 @@ export const TUTORIALS_PL: Tutorial[] = [
         tip: 'Zanim to wype\u0142nisz, zapytaj obiekt o okna load-in i load-out. Sala dost\u0119pna dopiero o 6 rano w dniu show to zupe\u0142nie inny bud\u017cet ni\u017c taka, kt\u00f3r\u0105 masz od poprzedniego wieczoru.',
       },
       {
+        title: 'Czytaj plan sekcjami i nazwij je po swojemu',
+        content: 'Otw\u00f3rz propozycj\u0119 \u2014 zak\u0142adka Plan grupuje pozycje tak, jak organizator my\u015bli o bud\u017cecie: Miejsce, Catering, Produkcja, Obs\u0142uga, Transport i tak dalej, w tej kolejno\u015bci, z sekcj\u0105 Inne na ko\u0144cu. Kliknij tytu\u0142 sekcji, aby zmieni\u0107 nazw\u0119: \u201eCatering\u201d stanie si\u0119 \u201eJedzenie i napoje\u201d, je\u015bli tak nazywa to Tw\u00f3j klient. Wybrane nazwy trafiaj\u0105 do PDF i do linku, kt\u00f3ry wysy\u0142asz klientowi.',
+        tip: 'Zmieniaj nazwy sekcji przed wys\u0142aniem, nie po. Klient czyta Twoje s\u0142ownictwo, a dopasowanie go do jego w\u0142asnego arkusza bud\u017cetu oszcz\u0119dza rund\u0119 pyta\u0144.',
+      },
+      {
         title: 'Utrzymuj notatki planowania w u\u017cyciu podczas edycji',
-        content: 'Otw\u00f3rz propozycj\u0119, a notatki planowania znajdziesz nad pozycjami na zak\u0142adce Sprz\u0119t \u2014 jako rzeczy do rozstrzygni\u0119cia, nie tekst do przewini\u0119cia. Odhacz notatk\u0119, gdy j\u0105 potwierdzisz, albo oznacz jako nieistotn\u0105. Je\u015bli p\u00f3\u017aniej zmienisz liczb\u0119 go\u015bci, liczb\u0119 dni, bud\u017cet albo dat\u0119, panel poda dok\u0142adnie, co si\u0119 zmieni\u0142o \u2014 \u017ceby\u015b wiedzia\u0142, \u017ce rada powsta\u0142a przy innych liczbach.',
+        content: 'Otw\u00f3rz propozycj\u0119, a notatki planowania znajdziesz nad pozycjami na zak\u0142adce Plan \u2014 jako rzeczy do rozstrzygni\u0119cia, nie tekst do przewini\u0119cia. Odhacz notatk\u0119, gdy j\u0105 potwierdzisz, albo oznacz jako nieistotn\u0105. Je\u015bli p\u00f3\u017aniej zmienisz liczb\u0119 go\u015bci, liczb\u0119 dni, bud\u017cet albo dat\u0119, panel poda dok\u0142adnie, co si\u0119 zmieni\u0142o \u2014 \u017ceby\u015b wiedzia\u0142, \u017ce rada powsta\u0142a przy innych liczbach.',
         tip: 'Notatki to pytania, na kt\u00f3re AI nie mog\u0142a odpowiedzie\u0107 za Ciebie: zasilanie, okno load-in, pozwolenia. To zwykle w nich szacunek zamienia si\u0119 w prawdziwy bud\u017cet.',
       },
       {

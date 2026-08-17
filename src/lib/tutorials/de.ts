@@ -1081,6 +1081,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     mode: 'planner',
     videoUrl: '',
     whatYouLearn: [
+      'Den Plan nach Abschnitten lesen und die Abschnitte selbst benennen',
       'Budget-Übersicht mit Niedrig-Hoch-Spanne lesen',
       'Crew-Empfehlungen und Rollen verstehen',
       'Den Veranstaltungszeitplan für die Planung nutzen',
@@ -1118,8 +1119,13 @@ export const TUTORIALS_DE: Tutorial[] = [
         tip: 'Fragen Sie vorher die Location nach den Load-in- und Load-out-Fenstern. Ein Raum, den Sie erst um 6 Uhr am Showtag bekommen, ist ein ganz anderes Budget als einer, den Sie am Vorabend haben.',
       },
       {
+        title: 'Lesen Sie den Plan nach Abschnitten \u2014 und benennen Sie sie selbst',
+        content: '\u00d6ffnen Sie das Angebot: Der Tab Plan gruppiert Ihre Positionen so, wie ein Veranstalter \u00fcber ein Budget denkt \u2014 Location, Catering, Produktion, Personal, Transport und so weiter, in dieser Reihenfolge, mit Sonstiges am Ende. Klicken Sie auf einen Abschnittstitel, um ihn umzubenennen: Aus \u201eCatering\u201c wird \u201eSpeisen & Getr\u00e4nke\u201c, wenn Ihr Kunde es so nennt. Die gew\u00e4hlten Namen erscheinen im PDF und in dem Link, den Sie mit dem Kunden teilen.',
+        tip: 'Benennen Sie Abschnitte vor dem Versand um, nicht danach. Der Kunde liest Ihre Formulierung, und wenn sie zur Sprache seiner eigenen Budgettabelle passt, spart das eine R\u00fcckfragerunde.',
+      },
+      {
         title: 'Halten Sie die Planungsnotizen beim Bearbeiten in Gebrauch',
-        content: '\u00d6ffnen Sie das Angebot, und die Planungsnotizen stehen im Tab Equipment \u00fcber Ihren Positionen \u2014 als Punkte zum Kl\u00e4ren, nicht als Text zum \u00dcberscrollen. Haken Sie einen Punkt ab, sobald Sie ihn best\u00e4tigt haben, oder markieren Sie ihn als nicht zutreffend. \u00c4ndern Sie danach Teilnehmerzahl, Tage, Budget oder Datum, benennt das Panel genau, was sich verschoben hat \u2014 so wissen Sie, dass der Rat auf anderen Zahlen beruhte.',
+        content: '\u00d6ffnen Sie das Angebot, und die Planungsnotizen stehen im Tab Plan \u00fcber Ihren Positionen \u2014 als Punkte zum Kl\u00e4ren, nicht als Text zum \u00dcberscrollen. Haken Sie einen Punkt ab, sobald Sie ihn best\u00e4tigt haben, oder markieren Sie ihn als nicht zutreffend. \u00c4ndern Sie danach Teilnehmerzahl, Tage, Budget oder Datum, benennt das Panel genau, was sich verschoben hat \u2014 so wissen Sie, dass der Rat auf anderen Zahlen beruhte.',
         tip: 'Die Notizen sind die Fragen, die die KI nicht f\u00fcr Sie beantworten konnte: Stromversorgung, Load-in-Fenster, Genehmigungen. Genau dort wird aus einer Sch\u00e4tzung ein echtes Budget.',
       },
       {
