@@ -122,13 +122,19 @@ export default function PageTracker() {
       localStorage.setItem('cq_internal', '1')
     } else if (params.get('cq_internal') === '0') {
       localStorage.removeItem('cq_internal')
+      // Clear the cross-domain cookie too, or the URL says off while the cookie
+      // still says on and tracking stays silently disabled.
+      document.cookie = 'cq_internal=; max-age=0; domain=.cuequote.com; path=/'
     }
   }, [])
 
   useEffect(() => {
     // Don't track admin pages or internal users
     if (pathname?.startsWith('/admin')) return
+    // The admin toggle lives on app.cuequote.com and cannot write this origin's
+    // localStorage, so it sets a cookie on the shared parent domain instead.
     if (localStorage.getItem('cq_internal') === '1') return
+    if (document.cookie.split('; ').includes('cq_internal=1')) return
 
     const track = async () => {
       try {
