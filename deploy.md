@@ -45,3 +45,20 @@ Avoid proving a deploy by grepping a built/minified bundle: minifiers can turn s
 
 ## Migration-drift caution
 Schema changes for this project happen in `av-proposal`, not here — but if a session working in this repo ever needs to touch Supabase schema, know that `av-proposal`'s `supabase/migrations` directory cannot rebuild the database from scratch, and `supabase db push` needs the ledger state checked first (it does now stop at a pre-flight check rather than replaying blindly, as of 2026-08-04). Do schema work from the `av-proposal` repo.
+
+## When a push does not trigger a build
+Vercel builds this repo through the GitHub App, so a dropped webhook means the
+push lands on `main` and nothing happens — `vercel ls` just shows the previous
+deployment quietly getting older. That is not a broken project config, and the
+first check is not the config:
+
+    curl -s https://www.githubstatus.com/api/v2/summary.json | grep -i webhook
+
+On 2026-08-17 the Webhooks component was degraded for hours and two pushes were
+never delivered. To deploy without waiting for it to clear:
+
+    curl -X POST https://api.vercel.com/v1/integrations/deploy/prj_h6CiBLpPDcnFRHA8ohECuWlEjTb8/f0GQdU3OKm
+
+That hook builds `main` from GitHub, so it ships exactly what is committed.
+Prefer it to `vercel deploy --prod`, which uploads the local working tree and
+will happily put uncommitted files into production.
