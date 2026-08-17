@@ -2550,8 +2550,8 @@
     "ctaBottomButton": "Plan My Event — Free"
   },
   "avCalculator": {
-    "metaTitle": "AV Cost Calculator — Estimate Your Event AV Budget in Seconds",
-    "metaDescription": "Free AV cost calculator for events. Enter your attendee count, days, and production needs to get a realistic equipment and crew budget range, based on 2026 market day-rates.",
+    "metaTitle": "AV Cost Calculator — Estimate Your Event AV Budget",
+    "metaDescription": "Free AV cost calculator for events. Get a budget range by audio, video, lighting, staging and crew — an orientation range for planning, not a quote.",
     "badge": "Free tool",
     "h1": "What will the AV for your event actually cost?",
     "intro": "Set your attendee count and what you need on stage, and get a realistic budget range broken down by audio, video, lighting, staging and crew. Built from 2026 market day-rates, not guesswork.",
@@ -2628,6 +2628,8 @@
       "technician": "Show technician",
       "projectLead": "Project lead",
       "setupCrew": "Load-in and load-out crew"
-    }
+    },
+    "budgetNoteTitle": "This is a budgeting tool, not a quote.",
+    "budgetNote": "Use it to set a realistic number before you brief suppliers. Actual pricing depends on your venue, rig, dates and each company's own rates — so confirm with AV companies before you commit a budget."
   }
 }

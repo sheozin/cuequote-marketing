@@ -2601,6 +2601,8 @@
       "technician": "Technik realizacji",
       "projectLead": "Kierownik projektu",
       "setupCrew": "Ekipa montażowa"
-    }
+    },
+    "budgetNoteTitle": "To narzędzie do budżetowania, nie wycena.",
+    "budgetNote": "Użyj go, aby ustalić realną kwotę zanim wyślesz zapytania. Rzeczywista cena zależy od obiektu, zakresu, terminu i stawek konkretnej firmy — potwierdź ją u firm AV, zanim zatwierdzisz budżet."
   }
 }

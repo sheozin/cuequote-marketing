@@ -2629,6 +2629,8 @@
       "technician": "Technicien plateau",
       "projectLead": "Chef de projet",
       "setupCrew": "Équipe de montage"
-    }
+    },
+    "budgetNoteTitle": "Un outil de budgétisation, pas un devis.",
+    "budgetNote": "Utilisez-le pour fixer un montant réaliste avant de consulter des prestataires. Le prix réel dépend du lieu, du dispositif, des dates et des tarifs de chaque société — confirmez-le auprès de prestataires AV avant d'arrêter un budget."
   }
 }

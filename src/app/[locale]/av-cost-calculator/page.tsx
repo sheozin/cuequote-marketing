@@ -145,6 +145,7 @@ export default async function AvCostCalculatorPage() {
               excludedTitle: t("excludedTitle"), excluded: t("excluded"),
               sourceNote: t("sourceNote"), sourceLink: t("sourceLink"),
               ctaTitle: t("ctaTitle"), ctaBody: t("ctaBody"), ctaButton: t("ctaButton"),
+              budgetNoteTitle: t("budgetNoteTitle"), budgetNote: t("budgetNote"),
             }}
           />
         </section>

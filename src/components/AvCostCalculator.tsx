@@ -86,6 +86,7 @@ export interface CalculatorLabels {
   excludedTitle: string; excluded: string
   sourceNote: string; sourceLink: string
   ctaTitle: string; ctaBody: string; ctaButton: string
+  budgetNoteTitle: string; budgetNote: string
 }
 
 export function AvCostCalculator({
@@ -386,8 +387,20 @@ export function AvCostCalculator({
         <a href={ctaHref} className="avcalc-ctabtn">{labels.ctaButton}</a>
       </div>
 
+      {/* Says plainly what the number is for. The page already carries "not a
+          quote" next to the figure; this states the positive version — what to
+          DO with it — because a planner who treats a range as a price starts
+          the supplier conversation by being corrected. */}
+      <div className="avcalc-budgetnote">
+        <b>{labels.budgetNoteTitle}</b> {labels.budgetNote}
+      </div>
+
       <style>{`
         .avcalc { max-width: 1120px; margin: 0 auto; }
+        .avcalc-budgetnote { max-width: 1120px; margin: 24px auto 0; padding: 18px 20px;
+          background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 12px;
+          font-size: 14px; line-height: 1.65; color: #475569; }
+        .avcalc-budgetnote b { color: #0f172a; }
         .avcalc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
         .avcalc-inputs {
           background: #fff; border: 1px solid #e5e7eb; border-radius: 18px; padding: 28px;

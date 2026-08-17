@@ -2627,6 +2627,8 @@
       "technician": "Showtechniker",
       "projectLead": "Projektleitung",
       "setupCrew": "Auf- und Abbaucrew"
-    }
+    },
+    "budgetNoteTitle": "Ein Budgetierungswerkzeug, kein Angebot.",
+    "budgetNote": "Damit setzen Sie eine realistische Zahl an, bevor Sie Anbieter anfragen. Der tatsächliche Preis hängt von Venue, Setup, Terminen und den Sätzen des jeweiligen Unternehmens ab — bestätigen Sie ihn bei AV-Firmen, bevor Sie ein Budget freigeben."
   }
 }
