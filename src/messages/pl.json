@@ -2324,6 +2324,28 @@
       "step4": "Skopiuj link do podwykonawcy. Zobaczy swój zakres i cenę, a akceptuje wpisując imię i nazwisko — data, godzina i odpowiedź zapisują się przy zleceniu",
       "step5": "Możesz w każdej chwili unieważnić link, jeśli realizacja się zmieni albo link zostanie przekazany dalej. Unieważnienie zwalnia też miejsce w limicie Twojego planu",
       "tip": "OC sprawdzamy względem daty demontażu, nie względem dzisiaj. Polisa ważna przy rezerwacji i wygasła na obiekcie to awaria, która naprawdę kosztuje."
+    },
+    "supplierQuotes": {
+      "title": "Zbieranie cen od dostawców, zanim się zobowiążesz",
+      "content1": "Zlecenie mówi podwykonawcy, ile mu zapłacisz. Zapytanie pyta go, ile bierze. To jest różnica i ma znaczenie, bo taka jest realna kolejność pracy: pytasz dwie–trzy wypożyczalnie o cenę pakietu, porównujesz i dopiero wtedy wybierasz jedną. Do tej pory CueQuote potrafił tylko drugą połowę tego procesu.",
+      "content2": "Wyślij to samo zapytanie do kilku dostawców jednym działaniem. Każdy dostaje własny link i widzi ilości, terminy i obiekt — nigdy Twoich cen, nigdy Twojego klienta i nigdy tego, kogo jeszcze zapytałeś. Podają cenę jednostkową za pozycję, zaznaczają to, czego nie zrealizują, i wysyłają. Wycena pozostaje edytowalna po ich stronie aż do przyznania zlecenia, bo poprawienie własnej ceny przed terminem to normalna praktyka, a nie zmiana umowy.",
+      "step1": "Otwórz zlecenie, przejdź do zakładki Dostawcy i kliknij „Zbierz oferty”. Zaznacz pozycje do wyceny — lub w trybie Planner wybierz całą sekcję",
+      "step2": "Zaznacz każdego dostawcę, którego chcesz zapytać. Pytanie pojedynczo kończy się jedną ofertą, dlatego lista jest celowo wielokrotnego wyboru",
+      "step3": "Ustaw termin odpowiedzi i dodaj wiadomość, jeśli cena od czegoś zależy. Opis zakresu powstaje z wybranych pozycji i jest sprawdzany pod kątem nazwy Twojego klienta, zanim cokolwiek zostanie wysłane",
+      "step4": "Wyślij, a potem przekaż każdemu dostawcy jego link. Oferty wracają do tej samej zakładki, od najtańszej, z różnicą do kolejnej podaną w kwocie",
+      "step5": "Przyznaj wybraną ofertę. Zamienia się w zlecenie po cenie, którą ten dostawca faktycznie podał, a jego link przestaje działać",
+      "tip": "Zwracaj uwagę na oznaczenie „nie zrealizuje”. Oferta bez dwóch z sześciu Twoich pozycji nie jest najtańsza — jest inna, i porównanie mówi to wprost, zamiast pozwolić niższej sumie mówić za siebie."
+    },
+    "supplierCompliance": {
+      "title": "Certyfikaty dostawców i wiedza, zanim wygasną",
+      "content1": "OC, LOLER, higiena żywności, uprawnienia elektryczne, ubezpieczenie towaru w transporcie — dokumenty, które powinien mieć każdy pracujący przy Twoim zleceniu, i te, których nikt nie może znaleźć rano, gdy coś pójdzie nie tak. Zakładka Dostawcy trzyma je przy każdym dostawcy, z datą ważności, i nie pozwoli wysłać zlecenia komuś, czyja ochrona nie sięga końca pracy.",
+      "content2": "Nie gonisz ich mailami. Poproś o brakujące dokumenty, a dostawca dostanie link — bez konta i hasła — gdzie prześle każdy certyfikat z datą ważności. Nic nie liczy się, dopóki tego nie sprawdzisz: przesłany dokument czeka na Twoją weryfikację i nie odblokowuje wysyłki, więc dostawca nie odblokuje własnego zlecenia, załączając pusty PDF.",
+      "step1": "Otwórz zakładkę Dostawcy w zleceniu i wybierz dostawcę. To, co ma i czego brakuje dla tego zlecenia, jest wypisane nad zleceniami",
+      "step2": "Kliknij „Poproś o dokumenty”. Brakujące są już zaznaczone; dodaj inne, które chcesz mieć w aktach, i utwórz link",
+      "step3": "Wyślij dostawcy link. Prześle każdy certyfikat z datą ważności, która jest wymagana — certyfikat bez daty nie spełni kontroli liczonej względem demontażu",
+      "step4": "Zatwierdź lub odrzuć każdy plik. Tylko zatwierdzony dokument odblokowuje wysyłkę, a odrzucenie zapisuje powód",
+      "step5": "W planie Pro i wyżej dostajesz informację, zanim coś wygaśnie — 30 dni, 7 dni i w dniu wygaśnięcia — ale tylko dla dostawców, z którymi faktycznie pracowałeś w ostatnim roku",
+      "tip": "Kontrola liczy się względem dnia, w którym ekipa jest na miejscu, a nie względem dzisiaj. Ochrona ważna przy rezerwacji, a wygasająca w tygodniu wydarzenia, to właśnie ten przypadek — sprawdzanie względem dzisiaj przepuszcza go bez słowa."
     }
   },
   "changelog": {

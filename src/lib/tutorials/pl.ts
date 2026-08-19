@@ -1542,4 +1542,96 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'getting-supplier-quotes',
+    title: 'Zbieranie ofert od dostawców',
+    description: 'Zapytaj kilku podwykonawców o cenę, porównaj odpowiedzi obok siebie i przyznaj zlecenie — bez pokazywania im Twoich cen ani Twojego klienta.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Konfiguracja',
+    mode: 'both',
+    whatYouLearn: [
+      'Pytanie kilku dostawców o cenę jednym działaniem',
+      'Co widzi dostawca po otwarciu linku',
+      'Porównywanie ofert, także tych nieporównywalnych wprost',
+      'Przyznanie oferty i zamiana jej w zlecenie',
+      'Ile otwartych zapytań pozwala każdy plan',
+    ],
+    steps: [
+      {
+        title: 'Otwórz zakładkę Dostawcy i kliknij Zbierz oferty',
+        content: 'Otwórz zlecenie z pozycjami, przejdź do zakładki Dostawcy i kliknij „Zbierz oferty”. Przycisk stoi obok „Zleć na zewnątrz” i przed nim, bo pytanie o cenę poprzedza zobowiązanie do jej zapłacenia.',
+        tip: 'W trybie AV zaznaczasz pojedyncze pozycje. W trybie Planner wybierasz całą sekcję, dokładnie jak przy zleceniach.',
+      },
+      {
+        title: 'Wybierz więcej niż jednego dostawcę',
+        content: 'Lista dostawców jest wielokrotnego wyboru celowo. Pytanie pojedynczo kończy się jedną ofertą i niczym do porównania — zaznacz każdą wypożyczalnię lub firmę, od której chcesz cenę, a każda dostanie własny link.',
+      },
+      {
+        title: 'Podaj, kiedy potrzebujesz ceny',
+        content: 'Ustaw datę „wycena potrzebna do” i dodaj wiadomość, jeśli cena od czegoś zależy — transport wliczony, obsługa nie, tego typu rzeczy. Opis zakresu powstaje z wybranych pozycji i mówi, co dostawca dostarcza, a nie o czym jest wydarzenie.',
+        tip: 'Jeśli opis lub wiadomość nazywa Twojego klienta, CueQuote odmawia wysyłki i wskazuje słowo do poprawy. Zapytanie opuszcza firmę tak samo jak zlecenie.',
+      },
+      {
+        title: 'Wyślij i przekaż linki',
+        content: 'Każdy dostawca dostaje własny link z przyciskiem kopiowania. Widzi ilości, terminy i obiekt. Nigdy nie widzi Twoich cen, Twojego klienta ani tego, kogo jeszcze zapytałeś.',
+      },
+      {
+        title: 'Czytaj porównanie uważnie',
+        content: 'Oferty wracają do tej samej zakładki, od najtańszej, z różnicą do kolejnej podaną w kwocie zamiast zostawioną Tobie do policzenia. Pozycje, których dostawca nie zrealizuje, są oznaczone na jego karcie.',
+        tip: 'Oferta bez dwóch z sześciu Twoich pozycji nie jest najtańsza — jest inna. Dlatego jest tam oznaczenie, zamiast pozwolić niższej sumie mówić za siebie.',
+      },
+      {
+        title: 'Przyznaj jedną',
+        content: '„Przyznaj tę ofertę” zamienia zwycięzcę w zlecenie po cenie, którą ten dostawca faktycznie podał, a nie po Twoim szacunku. Jego link przestaje działać, a zlecenie zachowuje się jak każde inne — ta sama kontrola ubezpieczenia, ta sama akceptacja, ten sam podpis.',
+        tip: 'Plan darmowy pozwala mieć 6 otwartych zapytań naraz, Starter 30, Pro i wyżej bez limitu. Wycofanie zapytania zwalnia miejsce.',
+      },
+    ],
+  },
+  {
+    slug: 'supplier-compliance',
+    title: 'Certyfikaty dostawców i alerty o wygaśnięciu',
+    description: 'Zbierz OC, LOLER i pozostałe dokumenty od każdego dostawcy, zweryfikuj je samodzielnie i dowiedz się, zanim wygasną.',
+    duration: '6 min',
+    difficulty: 'intermediate',
+    category: 'Konfiguracja',
+    mode: 'both',
+    whatYouLearn: [
+      'Podgląd tego, co dostawca ma i czego brakuje dla tego zlecenia',
+      'Prośba o przesłanie certyfikatów bez zakładania konta',
+      'Weryfikacja pliku, zanim zacznie się liczyć',
+      'Dlaczego kontrola liczy się względem demontażu',
+      'Przypomnienia o wygaśnięciu i kto je dostaje',
+    ],
+    steps: [
+      {
+        title: 'Zobacz, czego brakuje',
+        content: 'Otwórz zakładkę Dostawcy w zleceniu i wybierz dostawcę. Nad zleceniami widzisz, co ma i czego brakuje — liczone względem dnia, w którym ekipa jest na miejscu, a nie względem dzisiaj.',
+        tip: 'Ochrona ważna przy rezerwacji i wygasająca w tygodniu wydarzenia to właśnie ten przypadek. Sprawdzanie względem dzisiaj przepuściłoby go bez słowa.',
+      },
+      {
+        title: 'Poproś o brakujące',
+        content: 'Kliknij „Poproś o dokumenty”. Brakujące są już zaznaczone; dodaj inne, które chcesz mieć w aktach. Dostajesz link do wysłania.',
+        tip: 'Proś o to, czego naprawdę potrzebujesz. Proszenie za każdym razem o wszystko uczy dostawcę ignorowania Twoich próśb.',
+      },
+      {
+        title: 'Dostawca przesyła',
+        content: 'Otwiera link bez konta i hasła i przesyła każdy certyfikat z datą wystawienia i ważności. Data ważności jest wymagana — certyfikat bez niej nie spełni kontroli liczonej względem demontażu, więc przyjęcie go byłoby przesłaniem, które niczego nie zmienia.',
+      },
+      {
+        title: 'Zatwierdź, zanim zacznie się liczyć',
+        content: 'Przesłany dokument czeka jako „Czeka na Twoją weryfikację”. Nie odblokowuje wysyłki, dopóki go nie zatwierdzisz, więc dostawca nie odblokuje własnego zlecenia pustym PDF-em. Odrzucenie zapisuje powód.',
+        tip: 'To celowe. Ekran nigdy nie pokazuje dokumentu jako spełniającego wymóg, którego baza danych nie uznaje.',
+      },
+      {
+        title: 'Zablokowane? Poproś zamiast obchodzić',
+        content: 'Gdy zlecenie jest zablokowane, masz trzy wyjścia: obejść z zapisanym powodem, zmienić dostawcę albo „Poproś dostawcę” — co wysyła link do przesłania, nie ruszając szkicu zlecenia. Tylko ostatnie faktycznie rozwiązuje problem.',
+      },
+      {
+        title: 'Przypomnienia o wygaśnięciu',
+        content: 'W planie Pro i wyżej dostajesz informację 30 dni wcześniej, 7 dni wcześniej i w dniu wygaśnięcia — ale tylko dla dostawców, z którymi faktycznie pracowałeś w ostatnim roku. Certyfikat kogoś, kogo użyłeś raz w 2024, to nie wiadomość, a przypominajka, która krzyczy bez powodu, ląduje w koszu.',
+        tip: 'Sam zbiór dokumentów — przesyłanie, przechowywanie, weryfikacja i blokada wysyłki — jest darmowy w każdym planie. Plany płatne dodają zakres i automatyczne przypomnienia.',
+      },
+    ],
+  },
 ]

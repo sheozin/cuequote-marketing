@@ -198,6 +198,8 @@ const ARTICLE_KEYS = [
   // ── Event Planner ──
   { id: 'vendor-management', key: 'vendorManagement', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   { id: 'supplier-work-orders', key: 'supplierWorkOrders', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
+  { id: 'supplier-quotes', key: 'supplierQuotes', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
+  { id: 'supplier-compliance', key: 'supplierCompliance', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5'] },
   { id: 'quote-comparison', key: 'quoteComparison', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   { id: 'market-rate-budgets', key: 'marketRateBudgets', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },
   { id: 'planner-plan-checks', key: 'plannerPlanChecks', contentKeys: ['content1', 'content2'], stepKeys: ['step1', 'step2', 'step3', 'step4'] },

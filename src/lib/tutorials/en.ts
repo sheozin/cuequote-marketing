@@ -1588,4 +1588,96 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'getting-supplier-quotes',
+    title: 'Getting Quotes From Suppliers',
+    description: 'Ask several subcontractors what they charge, compare the answers side by side, and award one — without any of them seeing your prices or your client.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'both',
+    whatYouLearn: [
+      'Asking several suppliers for a price in one action',
+      'What a supplier sees when they open the link',
+      'Comparing quotes, including the ones that are not like-for-like',
+      'Awarding a quote and turning it into a work order',
+      'How many open inquiries each plan allows',
+    ],
+    steps: [
+      {
+        title: 'Open the Suppliers tab and click Get quotes',
+        content: 'Open a job with line items, go to the Suppliers tab and click “Get quotes”. It sits next to “Sub work out”, and reads before it, because asking what something costs comes before committing to pay it.',
+        tip: 'In AV mode you tick individual line items. In Planner mode you choose a whole section, exactly as work orders do.',
+      },
+      {
+        title: 'Pick more than one supplier',
+        content: 'The supplier list is multi-select on purpose. Asking one at a time is how you end up with a single quote and nothing to compare it against — tick every dry-hire house or trade you want a price from, and they each get their own link.',
+      },
+      {
+        title: 'Say when you need the price',
+        content: 'Set a “price needed by” date and add a covering note if the number depends on something — delivery included, crew not included, that sort of thing. The scope text is generated from the lines you picked and describes what they are supplying, not what the event is about.',
+        tip: 'If the scope or your note names your client, CueQuote refuses to send and tells you which word to fix. An RFQ leaves the building exactly as a work order does.',
+      },
+      {
+        title: 'Send, and pass on the links',
+        content: 'Each supplier gets their own link with a Copy button. What they see is the quantities, the dates and the venue. What they never see is your prices, your client, or who else you asked.',
+      },
+      {
+        title: 'Read the comparison properly',
+        content: 'Quotes come back in the same tab, cheapest first, with the gap to the next quote shown in money rather than left for you to work out. Lines a supplier said they cannot cover are flagged on their card.',
+        tip: 'A quote missing two of your six lines is not the cheapest quote — it is a different quote. That is why the flag is there rather than letting a smaller total speak for itself.',
+      },
+      {
+        title: 'Award one',
+        content: '“Award this quote” turns the winner into a work order at the price that supplier actually gave you, not at your own estimate. Their link stops working, and the work order behaves exactly like one you issued directly — same insurance check, same acceptance, same signature.',
+        tip: 'Free plans can keep 6 inquiries open at once, Starter 30, Pro and above unlimited. Withdrawing one frees the slot.',
+      },
+    ],
+  },
+  {
+    slug: 'supplier-compliance',
+    title: 'Supplier Certificates and Expiry Alerts',
+    description: 'Collect public liability, LOLER and the rest from each supplier, verify them yourself, and get told before they lapse.',
+    duration: '6 min',
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'both',
+    whatYouLearn: [
+      'Seeing what a supplier holds and what is missing for this job',
+      'Asking a supplier to upload certificates with no account',
+      'Verifying an upload before it counts',
+      'Why the check is dated against your load-out',
+      'Expiry reminders, and who gets them',
+    ],
+    steps: [
+      {
+        title: 'Look at what is missing',
+        content: 'Open a job\'s Suppliers tab and pick a supplier. Above the work orders you see what they hold and what is missing — dated against the day your crew is on site, not against today.',
+        tip: 'Cover that is valid when you book and expires the week of the show is the failure this exists to catch. Checking against today would wave it straight through.',
+      },
+      {
+        title: 'Ask for what is missing',
+        content: 'Click “Request documents”. Whatever is already missing is pre-ticked; add anything else you want on file. You get a link to send them.',
+        tip: 'Ask for what you actually need. Requesting everything every time is how a supplier learns to ignore your requests.',
+      },
+      {
+        title: 'The supplier uploads',
+        content: 'They open the link with no account and no password, and upload each certificate with an issue and expiry date. The expiry is required — a certificate with no expiry cannot satisfy a check dated against your load-out, so accepting one would be an upload that changes nothing.',
+      },
+      {
+        title: 'Verify before it counts',
+        content: 'An uploaded document sits as “Awaiting your check”. It does not clear the send gate until you verify it, so a supplier cannot unblock their own job by attaching a blank PDF. Rejecting one records why.',
+        tip: 'This is deliberate. The screen never shows a document as satisfying a requirement that the database does not honour.',
+      },
+      {
+        title: 'Blocked? Ask instead of overriding',
+        content: 'If a work order is blocked, you now have three ways forward: override with a recorded reason, change supplier, or “Ask the supplier for it” — which sends the upload link without touching the draft order. Only the last one actually fixes the problem.',
+      },
+      {
+        title: 'Expiry reminders',
+        content: 'On Pro and above you are told 30 days out, 7 days out and on the day — but only for suppliers you have actually worked with in the last year. A certificate expiring for someone you used once in 2024 is not news, and a reminder feature that cries wolf gets filtered to trash.',
+        tip: 'The vault itself — uploads, storage, verification and the send gate — is free on every plan. What the paid plans add is breadth and the automatic reminders.',
+      },
+    ],
+  },
 ]

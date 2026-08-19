@@ -2350,6 +2350,28 @@
       "step4": "Kopieren Sie den Link zum Dienstleister. Er sieht Umfang und Preis und nimmt per Namenseingabe an — Datum, Uhrzeit und Antwort werden am Auftrag festgehalten",
       "step5": "Widerrufen Sie den Link jederzeit, wenn sich der Job ändert oder der Link weitergeleitet wurde. Ein Widerruf gibt außerdem einen Platz im Tariflimit frei",
       "tip": "Die Versicherung wird gegen Ihren Abbautag geprüft, nicht gegen heute. Deckung, die bei der Buchung gilt und vor Ort erloschen ist, ist der Fehler, der wirklich Geld kostet."
+    },
+    "supplierQuotes": {
+      "title": "Preise von Lieferanten einholen, bevor Sie sich binden",
+      "content1": "Ein Auftrag sagt einem Subunternehmer, was Sie ihm zahlen. Eine Anfrage fragt ihn, was er verlangt. Das ist der Unterschied, und er zählt, weil die Arbeit genau in dieser Reihenfolge abläuft: Sie fragen zwei, drei Dry-Hire-Häuser nach dem Preis für ein Paket, vergleichen, und erst dann binden Sie sich. Bisher konnte CueQuote nur die zweite Hälfte davon.",
+      "content2": "Senden Sie dieselbe Anfrage in einem Schritt an mehrere Lieferanten. Jeder erhält seinen eigenen Link und sieht Mengen, Termine und den Veranstaltungsort — nie Ihre Preise, nie Ihren Kunden und nie, wen Sie sonst gefragt haben. Sie tragen je Position einen Einzelpreis ein, markieren, was sie nicht liefern können, und senden ab. Angebote bleiben auf ihrer Seite änderbar, bis Sie vergeben: Ein Lieferant, der seinen eigenen Preis vor Fristablauf korrigiert, ist normales Geschäft und keine Vertragsänderung.",
+      "step1": "Öffnen Sie einen Auftrag, gehen Sie auf den Reiter Lieferanten und klicken Sie auf „Angebote einholen“. Haken Sie die zu kalkulierenden Positionen an — im Planner-Modus wählen Sie einen ganzen Bereich",
+      "step2": "Haken Sie jeden Lieferanten an, den Sie fragen wollen. Einzeln zu fragen endet mit einem einzigen Angebot, deshalb ist die Auswahl bewusst mehrfach",
+      "step3": "Setzen Sie die Frist für eine Antwort und ergänzen Sie eine Notiz, falls der Preis von etwas abhängt. Der Leistungstext entsteht aus den gewählten Positionen und wird vor dem Versand auf den Namen Ihres Kunden geprüft",
+      "step4": "Senden, dann jedem Lieferanten seinen Link geben. Angebote laufen im selben Reiter ein, das günstigste zuerst, mit dem Abstand zum nächsten in Euro",
+      "step5": "Vergeben Sie das gewünschte Angebot. Es wird zum Auftrag zu genau dem Preis, den dieser Lieferant genannt hat, und sein Link erlischt",
+      "tip": "Achten Sie auf die Markierung „nicht lieferbar“. Ein Angebot, dem zwei Ihrer sechs Positionen fehlen, ist nicht das günstigste — es ist ein anderes, und der Vergleich sagt das, statt eine kleinere Summe für sich sprechen zu lassen."
+    },
+    "supplierCompliance": {
+      "title": "Lieferantenzertifikate — und Bescheid wissen, bevor sie ablaufen",
+      "content1": "Betriebshaftpflicht, LOLER, Lebensmittelhygiene, Elektro-Nachweis, Transportversicherung — die Nachweise, die jeder auf Ihrer Baustelle haben sollte, und genau die, die am Morgen eines Zwischenfalls niemand findet. Der Reiter Lieferanten hält sie je Lieferant mit Ablaufdatum und lässt keinen Auftrag an jemanden hinausgehen, dessen Deckung nicht bis zum Ende des Jobs reicht.",
+      "content2": "Sie hinterhertelefonieren nicht. Fordern Sie an, was fehlt, und der Lieferant bekommt einen Link — ohne Konto, ohne Passwort — auf dem er jedes Zertifikat mit Ablaufdatum hochlädt. Nichts zählt, bevor Sie es angesehen haben: Ein Upload steht auf „wartet auf Ihre Prüfung“ und öffnet die Sendesperre nicht, bis Sie ihn freigeben. So kann ein Lieferant seinen eigenen Auftrag nicht mit einem leeren PDF freischalten.",
+      "step1": "Öffnen Sie im Auftrag den Reiter Lieferanten und wählen Sie einen Lieferanten. Was vorliegt und was für diesen Job fehlt, steht über den Aufträgen",
+      "step2": "Klicken Sie auf „Dokumente anfordern“. Fehlendes ist bereits angehakt; ergänzen Sie, was Sie sonst hinterlegt haben möchten, und erstellen Sie den Link",
+      "step3": "Senden Sie dem Lieferanten den Link. Er lädt jedes Zertifikat mit Ablaufdatum hoch — das ist Pflicht, denn ein Nachweis ohne Ablaufdatum kann eine gegen Ihren Abbau datierte Prüfung nicht erfüllen",
+      "step4": "Geben Sie jeden Upload frei oder lehnen Sie ihn ab. Nur ein freigegebenes Dokument öffnet die Sperre, und eine Ablehnung hält den Grund fest",
+      "step5": "Ab Pro werden Sie vorgewarnt, bevor etwas abläuft — 30 Tage, 7 Tage und am Tag selbst — aber nur für Lieferanten, mit denen Sie im letzten Jahr tatsächlich gearbeitet haben",
+      "tip": "Geprüft wird gegen den Tag, an dem Ihr Team vor Ort ist, nicht gegen heute. Deckung, die bei der Buchung gilt und in der Veranstaltungswoche ausläuft, ist genau der Fall, für den es das gibt — eine Prüfung gegen heute winkt ihn durch."
     }
   },
   "changelog": {

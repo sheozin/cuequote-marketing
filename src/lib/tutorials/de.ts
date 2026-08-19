@@ -1578,4 +1578,96 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'getting-supplier-quotes',
+    title: 'Angebote von Lieferanten einholen',
+    description: 'Fragen Sie mehrere Subunternehmer nach ihrem Preis, vergleichen Sie die Antworten nebeneinander und vergeben Sie — ohne dass einer Ihre Preise oder Ihren Kunden sieht.',
+    duration: '5 Min.',
+    difficulty: 'intermediate',
+    category: 'Einrichtung',
+    mode: 'both',
+    whatYouLearn: [
+      'Mehrere Lieferanten in einem Schritt um einen Preis bitten',
+      'Was ein Lieferant beim Öffnen des Links sieht',
+      'Angebote vergleichen, auch die nicht direkt vergleichbaren',
+      'Ein Angebot vergeben und in einen Auftrag verwandeln',
+      'Wie viele offene Anfragen jeder Tarif erlaubt',
+    ],
+    steps: [
+      {
+        title: 'Reiter Lieferanten öffnen, „Angebote einholen“ klicken',
+        content: 'Öffnen Sie einen Auftrag mit Positionen, gehen Sie auf den Reiter Lieferanten und klicken Sie „Angebote einholen“. Der Knopf steht neben „Fremdvergabe“ und davor, weil die Frage nach dem Preis der Zusage vorausgeht.',
+        tip: 'Im AV-Modus haken Sie einzelne Positionen an. Im Planner-Modus wählen Sie einen ganzen Bereich, genau wie bei Aufträgen.',
+      },
+      {
+        title: 'Mehr als einen Lieferanten wählen',
+        content: 'Die Liste ist bewusst mehrfach auswählbar. Einzeln zu fragen endet mit einem Angebot und nichts zum Vergleichen — haken Sie jedes Dry-Hire-Haus oder Gewerk an, von dem Sie einen Preis wollen, und jeder erhält seinen eigenen Link.',
+      },
+      {
+        title: 'Sagen, bis wann Sie den Preis brauchen',
+        content: 'Setzen Sie ein „Preis benötigt bis“-Datum und ergänzen Sie eine Notiz, falls die Zahl von etwas abhängt — Anlieferung inklusive, Personal nicht, solche Dinge. Der Leistungstext entsteht aus den gewählten Positionen und beschreibt, was geliefert wird, nicht worum es bei der Veranstaltung geht.',
+        tip: 'Nennt der Text oder Ihre Notiz Ihren Kunden, verweigert CueQuote den Versand und nennt das Wort. Eine Anfrage verlässt das Haus genau wie ein Auftrag.',
+      },
+      {
+        title: 'Senden und Links weitergeben',
+        content: 'Jeder Lieferant bekommt seinen eigenen Link mit Kopier-Knopf. Er sieht Mengen, Termine und den Ort. Nie Ihre Preise, nie Ihren Kunden, nie wen Sie sonst gefragt haben.',
+      },
+      {
+        title: 'Den Vergleich richtig lesen',
+        content: 'Die Angebote laufen im selben Reiter ein, das günstigste zuerst, mit dem Abstand zum nächsten in Euro statt zum Selbstausrechnen. Positionen, die ein Lieferant nicht liefern kann, sind auf seiner Karte markiert.',
+        tip: 'Ein Angebot, dem zwei Ihrer sechs Positionen fehlen, ist nicht das günstigste — es ist ein anderes. Darum die Markierung, statt eine kleinere Summe für sich sprechen zu lassen.',
+      },
+      {
+        title: 'Eines vergeben',
+        content: '„Dieses Angebot vergeben“ macht daraus einen Auftrag zu dem Preis, den dieser Lieferant genannt hat, nicht zu Ihrer Schätzung. Sein Link erlischt, und der Auftrag verhält sich wie jeder direkt erstellte — gleiche Versicherungsprüfung, gleiche Annahme, gleiche Unterschrift.',
+        tip: 'Free erlaubt 6 offene Anfragen gleichzeitig, Starter 30, ab Pro unbegrenzt. Eine zurückgezogene Anfrage gibt den Platz frei.',
+      },
+    ],
+  },
+  {
+    slug: 'supplier-compliance',
+    title: 'Lieferantenzertifikate und Ablauf-Warnungen',
+    description: 'Sammeln Sie Haftpflicht, LOLER und den Rest je Lieferant, geben Sie sie selbst frei, und erfahren Sie es, bevor sie ablaufen.',
+    duration: '6 Min.',
+    difficulty: 'intermediate',
+    category: 'Einrichtung',
+    mode: 'both',
+    whatYouLearn: [
+      'Sehen, was ein Lieferant hat und was für diesen Auftrag fehlt',
+      'Einen Lieferanten ohne Konto hochladen lassen',
+      'Einen Upload freigeben, bevor er zählt',
+      'Warum gegen Ihren Abbau geprüft wird',
+      'Ablauf-Erinnerungen und wer sie bekommt',
+    ],
+    steps: [
+      {
+        title: 'Sehen, was fehlt',
+        content: 'Öffnen Sie im Auftrag den Reiter Lieferanten und wählen Sie einen Lieferanten. Über den Aufträgen steht, was vorliegt und was fehlt — datiert auf den Tag, an dem Ihr Team vor Ort ist, nicht auf heute.',
+        tip: 'Deckung, die bei der Buchung gilt und in der Veranstaltungswoche ausläuft, ist genau der Fall dafür. Eine Prüfung gegen heute winkt sie durch.',
+      },
+      {
+        title: 'Das Fehlende anfordern',
+        content: 'Klicken Sie „Dokumente anfordern“. Was fehlt, ist bereits angehakt; ergänzen Sie, was Sie sonst hinterlegt haben möchten. Sie erhalten einen Link zum Versenden.',
+        tip: 'Fordern Sie an, was Sie wirklich brauchen. Jedes Mal alles anzufordern bringt Lieferanten bei, Ihre Anfragen zu ignorieren.',
+      },
+      {
+        title: 'Der Lieferant lädt hoch',
+        content: 'Er öffnet den Link ohne Konto und ohne Passwort und lädt jedes Zertifikat mit Ausstellungs- und Ablaufdatum hoch. Das Ablaufdatum ist Pflicht — ein Nachweis ohne Ablauf kann eine gegen den Abbau datierte Prüfung nicht erfüllen, ihn anzunehmen wäre ein Upload ohne Wirkung.',
+      },
+      {
+        title: 'Vor dem Zählen freigeben',
+        content: 'Ein Upload steht auf „Wartet auf Ihre Prüfung“. Er öffnet die Sperre erst nach Ihrer Freigabe, damit kein Lieferant seinen eigenen Auftrag mit einem leeren PDF freischaltet. Eine Ablehnung hält den Grund fest.',
+        tip: 'Das ist Absicht. Der Bildschirm zeigt nie ein Dokument als erfüllend an, das die Datenbank nicht anerkennt.',
+      },
+      {
+        title: 'Blockiert? Anfordern statt übergehen',
+        content: 'Ist ein Auftrag blockiert, haben Sie drei Wege: mit festgehaltener Begründung übergehen, den Lieferanten wechseln, oder „Beim Lieferanten anfordern“ — das sendet den Upload-Link, ohne den Entwurf anzufassen. Nur der letzte behebt das Problem wirklich.',
+      },
+      {
+        title: 'Ablauf-Erinnerungen',
+        content: 'Ab Pro werden Sie 30 Tage, 7 Tage und am Tag selbst gewarnt — aber nur für Lieferanten, mit denen Sie im letzten Jahr tatsächlich gearbeitet haben. Ein Zertifikat von jemandem, den Sie 2024 einmal eingesetzt haben, ist keine Nachricht, und eine Erinnerung, die grundlos ruft, landet im Papierkorb.',
+        tip: 'Der Bestand selbst — Upload, Ablage, Freigabe und die Sendesperre — ist in jedem Tarif kostenlos. Die bezahlten Tarife ergänzen Breite und die automatischen Erinnerungen.',
+      },
+    ],
+  },
 ]

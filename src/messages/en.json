@@ -2351,6 +2351,28 @@
       "step4": "Copy the link to the supplier. They see their scope and price, and accept by typing their name — the date, time and their answer are recorded on the order",
       "step5": "Revoke the link at any time if the job changes or the link is forwarded. Revoking also frees a slot against your plan's limit",
       "tip": "Insurance is checked against your load-out date, not against today. Cover that is valid when you book and expired on site is the failure that actually costs money."
+    },
+    "supplierQuotes": {
+      "title": "Getting Prices From Suppliers Before You Commit",
+      "content1": "A work order tells a subcontractor what you are paying them. An inquiry asks them what they charge. That is the difference, and it matters because it is the order the work actually happens in: you ask two or three dry-hire houses what a package costs, you compare, and only then do you commit to one. Until now CueQuote could only do the second half of that.",
+      "content2": "Send the same request to several suppliers in one action. Each gets their own link, and what they see is the quantities, the dates and the venue — never your prices, never your client, and never who else you asked. They enter a unit price per line, flag anything they cannot supply, and submit. Quotes stay editable on their side until you award, because a supplier correcting their own number before the deadline is ordinary business rather than a change of contract.",
+      "step1": "Open a job, go to the Suppliers tab and click \"Get quotes\". Tick the line items you want priced — or, in Planner mode, choose a whole section",
+      "step2": "Tick every supplier you want to ask. Asking one at a time is how you end up with one quote, so the picker is deliberately multi-select",
+      "step3": "Set the date you need an answer by, and add a covering note if the price depends on something. The scope text is generated from the lines you picked and is checked for your client's name before anything is sent",
+      "step4": "Send, then pass each supplier their link. Quotes come back in the same tab, sorted cheapest first, with the gap to the next quote shown in money",
+      "step5": "Award the one you want. It becomes a work order at the price that supplier actually quoted, and their link stops working",
+      "tip": "Watch the \"cannot supply\" flag. A quote missing two of your six lines is not the cheapest quote — it is a different quote, and the comparison says so rather than letting a smaller total speak for itself."
+    },
+    "supplierCompliance": {
+      "title": "Supplier Certificates, and Knowing Before They Lapse",
+      "content1": "Public liability, LOLER, food hygiene, electrical, goods in transit — the certificates you are supposed to hold for anyone working on your job, and the ones nobody can find on the morning something goes wrong. The Suppliers tab keeps them per supplier, with an expiry date on each, and refuses to let a work order go out to someone whose cover does not reach the end of the job.",
+      "content2": "You do not chase them by email. Ask for what is missing and the supplier gets a link — no account, no password — where they upload each certificate with its expiry. Nothing counts until you have looked at it: an uploaded document sits as \"awaiting your check\" and does not satisfy the send gate until you verify it, so a supplier cannot unblock their own job by attaching a blank PDF.",
+      "step1": "Open a job's Suppliers tab and pick a supplier. What they hold, and what is missing for this job, is listed above the work orders",
+      "step2": "Click \"Request documents\". What is already missing is pre-ticked; add anything else you want on file, then create the link",
+      "step3": "Send the supplier their link. They upload each certificate with an expiry date, which is required — a certificate with no expiry cannot satisfy a check dated against your load-out",
+      "step4": "Verify or reject each upload. Only a verified document clears the gate, and a rejection records why",
+      "step5": "On Pro and above, you are told when something is about to lapse — 30 days out, 7 days out, and on the day — but only for suppliers you have actually worked with in the last year",
+      "tip": "The check is dated against the day your crew is on site, not against today. Cover that is valid when you book and expires the week of the show is the failure this exists to catch, and checking against today waves it straight through."
     }
   },
   "changelog": {

@@ -2352,6 +2352,28 @@
       "step4": "Copiez le lien vers le prestataire. Il voit son périmètre et son prix, et accepte en saisissant son nom — la date, l'heure et sa réponse sont conservées sur le bon",
       "step5": "Révoquez le lien à tout moment si le projet change ou si le lien a été transféré. Une révocation libère aussi une place dans la limite de votre formule",
       "tip": "L'assurance est vérifiée à votre date de démontage, pas à aujourd'hui. Une couverture valable à la réservation et expirée sur site, c'est la panne qui coûte vraiment."
+    },
+    "supplierQuotes": {
+      "title": "Obtenir des prix des fournisseurs avant de vous engager",
+      "content1": "Un ordre de travail dit à un sous-traitant ce que vous allez lui payer. Une demande lui demande ce qu'il facture. C'est toute la différence, et elle compte parce que c'est l'ordre réel des choses : vous demandez à deux ou trois loueurs le prix d'un ensemble, vous comparez, et seulement ensuite vous vous engagez. Jusqu'ici CueQuote ne savait faire que la seconde moitié.",
+      "content2": "Envoyez la même demande à plusieurs fournisseurs en une seule action. Chacun reçoit son propre lien et voit les quantités, les dates et le lieu — jamais vos prix, jamais votre client, et jamais qui d'autre a été consulté. Ils saisissent un prix unitaire par ligne, signalent ce qu'ils ne peuvent pas fournir, et envoient. Le devis reste modifiable de leur côté jusqu'à l'attribution : un fournisseur qui corrige son propre prix avant l'échéance fait son métier, il ne change pas un contrat.",
+      "step1": "Ouvrez un chantier, allez dans l'onglet Fournisseurs et cliquez sur « Demander des devis ». Cochez les lignes à chiffrer — ou, en mode Planner, choisissez une section entière",
+      "step2": "Cochez chaque fournisseur à consulter. Consulter un seul à la fois, c'est finir avec un seul devis : la sélection est volontairement multiple",
+      "step3": "Fixez la date de réponse attendue et ajoutez une note si le prix dépend de quelque chose. Le texte de prestation est généré à partir des lignes choisies et vérifié — le nom de votre client ne peut pas partir avec",
+      "step4": "Envoyez, puis transmettez à chaque fournisseur son lien. Les devis reviennent dans le même onglet, du moins cher au plus cher, avec l'écart chiffré",
+      "step5": "Attribuez celui que vous retenez. Il devient un ordre de travail au prix que ce fournisseur a réellement donné, et son lien cesse de fonctionner",
+      "tip": "Surveillez le marqueur « ne peut pas fournir ». Un devis auquel il manque deux de vos six lignes n'est pas le moins cher : c'est un autre devis, et la comparaison le dit plutôt que de laisser un total plus faible parler pour lui."
+    },
+    "supplierCompliance": {
+      "title": "Les certificats fournisseurs, et savoir avant qu'ils n'expirent",
+      "content1": "Responsabilité civile, LOLER, hygiène alimentaire, habilitation électrique, marchandises transportées — les attestations que devrait détenir quiconque travaille sur votre chantier, et précisément celles que personne ne retrouve le matin où quelque chose tourne mal. L'onglet Fournisseurs les conserve par fournisseur, avec une date d'expiration, et refuse d'envoyer un ordre de travail à quelqu'un dont la couverture ne va pas jusqu'à la fin du chantier.",
+      "content2": "Vous ne les relancez pas par e-mail. Demandez ce qui manque et le fournisseur reçoit un lien — sans compte ni mot de passe — où il dépose chaque attestation avec sa date d'expiration. Rien ne compte tant que vous n'avez pas regardé : un dépôt reste « en attente de votre vérification » et n'ouvre pas le blocage tant que vous ne l'avez pas validé. Un fournisseur ne peut donc pas débloquer son propre chantier avec un PDF vide.",
+      "step1": "Ouvrez l'onglet Fournisseurs d'un chantier et choisissez un fournisseur. Ce qu'il détient, et ce qui manque pour ce chantier, est listé au-dessus des ordres",
+      "step2": "Cliquez sur « Demander des documents ». Ce qui manque est déjà coché ; ajoutez ce que vous voulez au dossier, puis créez le lien",
+      "step3": "Envoyez-lui le lien. Il dépose chaque attestation avec sa date d'expiration, qui est obligatoire — une attestation sans date ne peut pas satisfaire un contrôle daté sur votre démontage",
+      "step4": "Validez ou refusez chaque dépôt. Seul un document validé lève le blocage, et un refus enregistre son motif",
+      "step5": "À partir de Pro, vous êtes prévenu avant expiration — à 30 jours, à 7 jours et le jour même — mais uniquement pour les fournisseurs avec qui vous avez réellement travaillé dans l'année",
+      "tip": "Le contrôle est daté sur le jour où votre équipe est sur site, pas sur aujourd'hui. Une couverture valable à la réservation et expirée la semaine de l'événement est exactement le cas visé — contrôler par rapport à aujourd'hui le laisse passer."
     }
   },
   "changelog": {

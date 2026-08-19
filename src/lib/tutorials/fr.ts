@@ -1578,4 +1578,96 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
     ],
   },
+  {
+    slug: 'getting-supplier-quotes',
+    title: 'Obtenir des devis de fournisseurs',
+    description: 'Demandez leur prix à plusieurs sous-traitants, comparez les réponses côte à côte et attribuez — sans qu\'aucun ne voie vos prix ni votre client.',
+    duration: '5 min',
+    difficulty: 'intermediate',
+    category: 'Configuration',
+    mode: 'both',
+    whatYouLearn: [
+      'Consulter plusieurs fournisseurs en une seule action',
+      'Ce que voit un fournisseur en ouvrant le lien',
+      'Comparer des devis, y compris ceux qui ne sont pas équivalents',
+      'Attribuer un devis et le transformer en ordre de travail',
+      'Combien de demandes ouvertes chaque formule autorise',
+    ],
+    steps: [
+      {
+        title: 'Ouvrir l\'onglet Fournisseurs et cliquer sur Demander des devis',
+        content: 'Ouvrez un chantier comportant des lignes, allez dans l\'onglet Fournisseurs et cliquez sur « Demander des devis ». Le bouton est à côté de « Sous-traiter », et avant lui, parce que demander un prix précède l\'engagement de le payer.',
+        tip: 'En mode AV vous cochez des lignes. En mode Planner vous choisissez une section entière, exactement comme pour les ordres de travail.',
+      },
+      {
+        title: 'Choisir plusieurs fournisseurs',
+        content: 'La liste est à sélection multiple à dessein. Consulter un seul fournisseur, c\'est finir avec un devis et rien pour le comparer — cochez chaque loueur ou corps de métier dont vous voulez un prix, et chacun reçoit son propre lien.',
+      },
+      {
+        title: 'Dire quand vous voulez le prix',
+        content: 'Fixez une date « prix attendu pour le » et ajoutez une note si le montant dépend de quelque chose : livraison comprise, équipe non comprise, ce genre de précision. Le texte de prestation est généré à partir des lignes choisies et décrit ce qui est fourni, pas ce dont parle l\'événement.',
+        tip: 'Si le texte ou votre note nomme votre client, CueQuote refuse d\'envoyer et indique le mot. Une demande sort de chez vous exactement comme un ordre de travail.',
+      },
+      {
+        title: 'Envoyer et transmettre les liens',
+        content: 'Chaque fournisseur reçoit son lien avec un bouton Copier. Il voit les quantités, les dates et le lieu. Jamais vos prix, jamais votre client, jamais qui d\'autre a été consulté.',
+      },
+      {
+        title: 'Lire la comparaison correctement',
+        content: 'Les devis reviennent dans le même onglet, du moins cher au plus cher, avec l\'écart au suivant chiffré plutôt que laissé à votre calcul. Les lignes qu\'un fournisseur ne peut pas couvrir sont signalées sur sa fiche.',
+        tip: 'Un devis auquel il manque deux de vos six lignes n\'est pas le moins cher : c\'est un autre devis. D\'où le marqueur, plutôt que de laisser un total plus faible parler pour lui.',
+      },
+      {
+        title: 'Attribuer',
+        content: '« Attribuer ce devis » transforme le gagnant en ordre de travail au prix que ce fournisseur a réellement donné, pas à votre estimation. Son lien cesse de fonctionner, et l\'ordre se comporte comme n\'importe quel autre : même contrôle d\'assurance, même acceptation, même signature.',
+        tip: 'La formule gratuite permet 6 demandes ouvertes à la fois, Starter 30, Pro et au-delà sans limite. Retirer une demande libère la place.',
+      },
+    ],
+  },
+  {
+    slug: 'supplier-compliance',
+    title: 'Certificats fournisseurs et alertes d\'expiration',
+    description: 'Rassemblez responsabilité civile, LOLER et le reste pour chaque fournisseur, validez-les vous-même, et soyez prévenu avant qu\'ils n\'expirent.',
+    duration: '6 min',
+    difficulty: 'intermediate',
+    category: 'Configuration',
+    mode: 'both',
+    whatYouLearn: [
+      'Voir ce qu\'un fournisseur détient et ce qui manque pour ce chantier',
+      'Faire déposer des certificats sans créer de compte',
+      'Valider un dépôt avant qu\'il ne compte',
+      'Pourquoi le contrôle est daté sur votre démontage',
+      'Les rappels d\'expiration et qui les reçoit',
+    ],
+    steps: [
+      {
+        title: 'Voir ce qui manque',
+        content: 'Ouvrez l\'onglet Fournisseurs d\'un chantier et choisissez un fournisseur. Au-dessus des ordres figure ce qu\'il détient et ce qui manque — daté sur le jour où votre équipe est sur site, pas sur aujourd\'hui.',
+        tip: 'Une couverture valable à la réservation et expirée la semaine de l\'événement est exactement le cas visé. Contrôler par rapport à aujourd\'hui la laisserait passer.',
+      },
+      {
+        title: 'Demander ce qui manque',
+        content: 'Cliquez sur « Demander des documents ». Ce qui manque est déjà coché ; ajoutez ce que vous voulez au dossier. Vous obtenez un lien à leur envoyer.',
+        tip: 'Demandez ce dont vous avez réellement besoin. Tout demander à chaque fois apprend au fournisseur à ignorer vos demandes.',
+      },
+      {
+        title: 'Le fournisseur dépose',
+        content: 'Il ouvre le lien sans compte ni mot de passe et dépose chaque certificat avec sa date de délivrance et d\'expiration. L\'expiration est obligatoire — une attestation sans date ne peut pas satisfaire un contrôle daté sur le démontage, l\'accepter serait un dépôt sans effet.',
+      },
+      {
+        title: 'Valider avant que cela compte',
+        content: 'Un dépôt reste « En attente de votre vérification ». Il ne lève le blocage qu\'après votre validation, pour qu\'un fournisseur ne débloque pas son propre chantier avec un PDF vide. Un refus enregistre son motif.',
+        tip: 'C\'est délibéré. L\'écran ne présente jamais un document comme satisfaisant une exigence que la base de données ne reconnaît pas.',
+      },
+      {
+        title: 'Bloqué ? Demandez plutôt que passer outre',
+        content: 'Si un ordre est bloqué, vous avez trois issues : passer outre avec un motif enregistré, changer de fournisseur, ou « Le demander au fournisseur » — ce qui envoie le lien de dépôt sans toucher au brouillon. Seule la dernière règle vraiment le problème.',
+      },
+      {
+        title: 'Rappels d\'expiration',
+        content: 'À partir de Pro, vous êtes prévenu à 30 jours, à 7 jours et le jour même — mais uniquement pour les fournisseurs avec qui vous avez réellement travaillé dans l\'année. Un certificat qui expire chez quelqu\'un utilisé une fois en 2024 n\'est pas une information, et un rappel qui crie pour rien finit filtré.',
+        tip: 'Le dossier lui-même — dépôt, conservation, validation et blocage à l\'envoi — est gratuit dans toutes les formules. Les formules payantes ajoutent l\'étendue et les rappels automatiques.',
+      },
+    ],
+  },
 ]
