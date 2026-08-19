@@ -2220,8 +2220,9 @@
       "content2": "Jede Einreichung enthält automatischen Kontext (Ihr Browser, Plan und aktuelle Seite), damit unser Team schneller helfen kann. Sie können den Status Ihrer Einreichungen verfolgen und Antworten direkt in der App sehen.",
       "step1": "Gehen Sie zu Feedback & Support in der Seitenleiste und wählen Sie Ihren Typ: Fehlerbericht, Funktionsanfrage, Allgemeines Feedback oder Support-Anfrage",
       "step2": "Füllen Sie Betreff und Details aus — die App erfasst automatisch Browser, Plan und Seitenkontext",
-      "step3": "Sehen Sie Ihre bisherigen Anfragen im Tab Meine Anfragen — jede zeigt ein Status-Badge (Eingereicht, In Prüfung, Geplant, Umgesetzt)",
-      "step4": "Prüfen Sie den Tab Help Center für Links zu Tutorials, Dokumentation und Antworten auf häufige Fragen",
+      "step3": "Hängen Sie Screenshots an, wenn etwas falsch aussieht — bis zu 3 Bilder (PNG, JPG oder WebP, je 5 MB). Ein Bild des Problems erspart meist eine Rückfrage.",
+      "step4": "Sehen Sie Ihre bisherigen Anfragen im Tab Meine Anfragen — jede zeigt ein Status-Badge (Eingereicht, In Prüfung, Geplant, Umgesetzt)",
+      "step5": "Prüfen Sie den Tab Help Center für Links zu Tutorials, Dokumentation und Antworten auf häufige Fragen",
       "tip": "Feedback von Pro- und Business-Plan-Nutzern wird automatisch priorisiert für schnellere Bearbeitung"
     },
     "catalogSuggestions": {

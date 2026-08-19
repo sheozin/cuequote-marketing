@@ -2222,8 +2222,9 @@
       "content2": "Chaque soumission inclut un contexte automatique (votre navigateur, plan et page actuelle) afin que notre équipe puisse aider plus rapidement. Vous pouvez suivre le statut de vos soumissions et voir les réponses directement dans l'application.",
       "step1": "Accédez à Retours & Support dans la barre latérale et choisissez votre type : Signalement de bug, Demande de fonctionnalité, Retour général ou Demande d'assistance",
       "step2": "Remplissez l'objet et les détails — l'application capture automatiquement votre navigateur, plan et contexte de page",
-      "step3": "Consultez vos soumissions passées dans l'onglet Mes demandes — chacune affiche un badge de statut (Soumis, En cours d'examen, Planifié, Livré)",
-      "step4": "Consultez l'onglet Centre d'aide pour des liens vers des tutoriels, la documentation et des réponses aux questions courantes",
+      "step3": "Joignez des captures d'écran si quelque chose semble anormal — jusqu'à 3 images (PNG, JPG ou WebP, 5 Mo chacune). Une image du problème évite généralement un aller-retour.",
+      "step4": "Consultez vos soumissions passées dans l'onglet Mes demandes — chacune affiche un badge de statut (Soumis, En cours d'examen, Planifié, Livré)",
+      "step5": "Consultez l'onglet Centre d'aide pour des liens vers des tutoriels, la documentation et des réponses aux questions courantes",
       "tip": "Les retours des utilisateurs des plans Pro et Business sont automatiquement prioritaires pour une réponse plus rapide"
     },
     "catalogSuggestions": {

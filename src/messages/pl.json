@@ -2194,8 +2194,9 @@
       "content2": "Każde zgłoszenie zawiera automatyczny kontekst (przeglądarka, plan i bieżąca strona), dzięki czemu nasz zespół może szybciej pomóc. Możesz śledzić status swoich zgłoszeń i widzieć odpowiedzi bezpośrednio w aplikacji.",
       "step1": "Przejdź do sekcji Zgłoszenia i pomoc na pasku bocznym i wybierz typ: Raport błędu, Wniosek o funkcję, Ogólna opinia lub Prośba o wsparcie",
       "step2": "Wpisz temat i szczegóły — aplikacja automatycznie przechwytuje przeglądarkę, plan i kontekst strony",
-      "step3": "Sprawdź poprzednie zgłoszenia w zakładce Moje zgłoszenia — każde ma znacznik statusu (Zgłoszono, W trakcie przeglądu, Zaplanowano, Wdrożono)",
-      "step4": "Sprawdź zakładkę Centrum pomocy — linki do samouczków, dokumentacji i odpowiedzi na typowe pytania",
+      "step3": "Dołącz zrzuty ekranu, jeśli coś wygląda niepoprawnie — maksymalnie 3 obrazy (PNG, JPG lub WebP, po 5 MB). Obraz problemu zwykle oszczędza jedną rundę pytań.",
+      "step4": "Sprawdź poprzednie zgłoszenia w zakładce Moje zgłoszenia — każde ma znacznik statusu (Zgłoszono, W trakcie przeglądu, Zaplanowano, Wdrożono)",
+      "step5": "Sprawdź zakładkę Centrum pomocy — linki do samouczków, dokumentacji i odpowiedzi na typowe pytania",
       "tip": "Zgłoszenia od użytkowników planów Pro i Business są automatycznie priorytetyzowane dla szybszej odpowiedzi"
     },
     "catalogSuggestions": {

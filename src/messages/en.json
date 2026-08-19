@@ -2221,8 +2221,9 @@
       "content2": "Every submission includes automatic context (your browser, plan, and current page) so our team can help faster. You can track the status of your submissions and see replies directly in the app.",
       "step1": "Go to Feedback & Support in the sidebar and choose your feedback type: Bug Report, Feature Request, General Feedback, or Support Request",
       "step2": "Fill in the subject and details — the app automatically captures your browser, plan, and page context",
-      "step3": "View your past submissions in the My Submissions tab — each shows a status badge (Submitted, In Review, Planned, Shipped)",
-      "step4": "Check the Help Center tab for links to tutorials, documentation, and answers to common questions",
+      "step3": "Attach screenshots if something looks wrong — up to 3 images (PNG, JPG or WebP, 5 MB each). A picture of the problem usually saves a round of questions.",
+      "step4": "View your past submissions in the My Submissions tab — each shows a status badge (Submitted, In Review, Planned, Shipped)",
+      "step5": "Check the Help Center tab for links to tutorials, documentation, and answers to common questions",
       "tip": "Feedback from Pro and Business plan users is automatically prioritized for faster response"
     },
     "catalogSuggestions": {
