@@ -14,7 +14,10 @@ import { locales, defaultLocale } from '../i18n/config'
 //   Phase 2: Add DE (after EN/PL indexed ~50%+)
 //   Phase 3: Add FR + AR (after DE indexed)
 // To re-enable: change sitemapLocales below to include more locales.
-const sitemapLocales = ['en', 'pl'] as const
+// 'ar' joined 2026-08-19: its long-tail is indexable again (see
+// lib/seo-indexing.ts), and an indexable page that is never submitted is a page
+// Google finds late or not at all. These two lists must move together.
+const sitemapLocales = ['en', 'pl', 'ar'] as const
 
 function localizedUrl(base: string, path: string, locale: string): string {
   if (locale === defaultLocale) return `${base}${path}`

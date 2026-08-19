@@ -27,8 +27,18 @@
  * Only translated long-tail content is withdrawn.
  */
 
-/** Locales whose long-tail content is submitted for indexing. Matches sitemap.ts. */
-const INDEXABLE_LOCALES = new Set(['en', 'pl'])
+/** Locales whose long-tail content is submitted for indexing. Matches sitemap.ts.
+ *
+ * `ar` added 2026-08-19 on evidence, not preference. The weekly SEO watchdog
+ * found eight Arabic posts ranking at positions 3.0-9.0 while serving noindex —
+ * against a site-wide average of 27.9. Arabic queries in this niche are far less
+ * contested than English ones, so the copies that were withdrawn to save crawl
+ * budget were the ones best placed to earn it back. The Gulf and Egypt are also
+ * live markets for this business rather than hypothetical ones.
+ *
+ * Withdraw it again if the ranking positions decay or crawl budget visibly
+ * suffers; the reason it was out is recorded above and still applies to de/fr. */
+const INDEXABLE_LOCALES = new Set(['en', 'pl', 'ar'])
 
 /**
  * Posts written FOR a specific market rather than translated into it, mapped to
