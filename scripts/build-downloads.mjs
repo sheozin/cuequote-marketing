@@ -51,9 +51,9 @@ const footer = (cta) => [
 ]
 
 const CTA = {
-  proposal: 'Rather not fill this in by hand every time? Describe the event in plain English and CueQuote builds the whole document — scope, equipment list, pricing and terms — from your own catalogue and your own rates, in about two minutes.',
+  proposal: 'Rather not fill this in by hand every time? Describe the event in plain English and CueQuote builds the whole document — scope, equipment list, pricing and terms — from your own catalogue and your own rates, in minutes.',
   rfp: 'Sending this to suppliers? The ones running CueQuote can turn your brief into a fully priced proposal in minutes, which usually means a faster and more detailed reply. Worth asking who does.',
-  budget: 'The AV portion of this budget is the part that takes longest to estimate. Describe the event and CueQuote returns a costed equipment list you can paste straight into these rows, in about two minutes.',
+  budget: 'The AV portion of this budget is the part that takes longest to estimate. Describe the event and CueQuote returns a costed equipment list you can paste straight into these rows, in minutes.',
   checklist: 'Everything above happens after the job is won. CueQuote handles the part before it — describe the event and get a branded, priced proposal out the same hour instead of the same week.',
 }
 
@@ -240,7 +240,7 @@ async function budgetTemplate() {
     '',
     'Totals are formulas — they update as you type. If you insert rows, extend the SUM range.',
     '',
-    'The AV portion of this budget is the part that takes longest to estimate. Describe the event and CueQuote returns a costed equipment list you can paste straight into these rows, in about two minutes.',
+    'The AV portion of this budget is the part that takes longest to estimate. Describe the event and CueQuote returns a costed equipment list you can paste straight into these rows, in minutes.',
     'Start free at cuequote.com',
   ].forEach((line, i) => {
     const r = notes.addRow([line])
