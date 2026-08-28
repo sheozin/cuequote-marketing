@@ -81,6 +81,13 @@ const MARKET_POSTS: Record<string, string[]> = {
   // guide is language-neutral — "was kostet veranstaltungstechnik" is its own
   // query with its own competitors — so the German copy earns its own place.
   'how-much-does-av-cost-for-events': ['de'],
+  // 231 impressions in the week to 2026-08-28 — more than every other query on
+  // the site combined — for "glossaire audiovisuel pro", at position 37.9 while
+  // serving noindex. A glossary is the most language-bound content there is: the
+  // French terms ARE the page, and no English copy can rank for them. The
+  // watchdog missed it because suppressed_but_ranking only looks below position
+  // 20, and this ranks badly precisely because it is suppressed.
+  'av-industry-glossary': ['fr'],
 }
 
 
