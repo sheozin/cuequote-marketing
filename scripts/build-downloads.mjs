@@ -38,10 +38,24 @@ const fill = (label) => new Paragraph({
   spacing: { after: 100 },
   children: [new TextRun({ text: label, size: 22, color: GREY })],
 })
-const footer = () => [
+// The call to action is written per document, not shared, because the reader
+// differs. Whoever fills in the RFP template is the CLIENT buying AV — telling
+// them to go and generate proposals would be aimed at the wrong person.
+const footer = (cta) => [
   new Paragraph({ spacing: { before: 400 }, border: { top: { style: BorderStyle.SINGLE, size: 6, color: 'E5E7EB' } }, children: [] }),
-  p('Built by CueQuote — AV proposals in minutes. cuequote.com', { size: 18, color: GREY }),
+  new Paragraph({ spacing: { after: 80 }, children: [new TextRun({ text: cta, size: 21, color: '1F2937' })] }),
+  new Paragraph({ spacing: { after: 120 }, children: [
+    new TextRun({ text: 'Start free at cuequote.com', size: 21, bold: true, color: GREEN }),
+  ]}),
+  p('CueQuote — AV proposals in minutes.', { size: 18, color: GREY }),
 ]
+
+const CTA = {
+  proposal: 'Rather not fill this in by hand every time? Describe the event in plain English and CueQuote builds the whole document — scope, equipment list, pricing and terms — from your own catalogue and your own rates, in about two minutes.',
+  rfp: 'Sending this to suppliers? The ones running CueQuote can turn your brief into a fully priced proposal in minutes, which usually means a faster and more detailed reply. Worth asking who does.',
+  budget: 'The AV portion of this budget is the part that takes longest to estimate. Describe the event and CueQuote returns a costed equipment list you can paste straight into these rows, in about two minutes.',
+  checklist: 'Everything above happens after the job is won. CueQuote handles the part before it — describe the event and get a branded, priced proposal out the same hour instead of the same week.',
+}
 
 // ── 1. AV proposal template ────────────────────────────────────────────────
 async function proposalTemplate() {
@@ -103,7 +117,7 @@ async function proposalTemplate() {
     fill('Position: _______________________________'),
     fill('Date: ___________________________________'),
     p('By signing, [Client] accepts the scope, pricing and terms set out above.', { italic: true }),
-    ...footer(),
+    ...footer(CTA.proposal),
   ]}]})
   writeFileSync(`${OUT}/av-proposal-template.docx`, await Packer.toBuffer(doc))
 }
@@ -150,7 +164,7 @@ async function rfpTemplate() {
     fill('Decision date: [date]                 Format: [PDF by email / portal]'),
     p('Please price each department separately with subtotals, list optional items outside the total, and state clearly what is excluded.', { bold: true }),
     p('Ask every supplier for the same structure. Three quotes in three shapes cannot be compared, which is how the cheapest-looking one wins.', { italic: true, color: GREY }),
-    ...footer(),
+    ...footer(CTA.rfp),
   ]}]})
   writeFileSync(`${OUT}/av-rfp-template.docx`, await Packer.toBuffer(doc))
 }
@@ -226,7 +240,8 @@ async function budgetTemplate() {
     '',
     'Totals are formulas — they update as you type. If you insert rows, extend the SUM range.',
     '',
-    'cuequote.com',
+    'The AV portion of this budget is the part that takes longest to estimate. Describe the event and CueQuote returns a costed equipment list you can paste straight into these rows, in about two minutes.',
+    'Start free at cuequote.com',
   ].forEach((line, i) => {
     const r = notes.addRow([line])
     if (i === 0) r.font = { bold: true, size: 14, color: { argb: `FF${DARK}` } }
@@ -298,22 +313,26 @@ function avChecklist() {
 
     for (const [title, items] of sections) {
       if (doc.y > 690) doc.addPage()
-      doc.moveDown(0.5)
-      doc.fillColor(`#${GREEN}`).fontSize(13).font('Helvetica-Bold').text(title)
-      doc.moveDown(0.35)
+      doc.moveDown(0.28)
+      doc.fillColor(`#${GREEN}`).fontSize(12).font('Helvetica-Bold').text(title)
+      doc.moveDown(0.25)
       for (const item of items) {
         if (doc.y > 770) doc.addPage()
         const y = doc.y
         doc.lineWidth(0.8).strokeColor('#9CA3AF').rect(52, y + 1.5, 9, 9).stroke()
-        doc.fillColor('#1F2937').fontSize(10).font('Helvetica')
+        doc.fillColor('#1F2937').fontSize(9.5).font('Helvetica')
            .text(item, 70, y, { width: 470 })
-        doc.moveDown(0.35)
+        doc.moveDown(0.22)
       }
     }
 
-    doc.moveDown(1)
-    doc.fillColor(`#${GREY}`).fontSize(9)
-       .text('Built by CueQuote — AV proposals in minutes. cuequote.com', 50, doc.y, { width: 495 })
+    doc.moveDown(0.6)
+    if (doc.y > 748) doc.addPage()
+    doc.fillColor('#1F2937').fontSize(9.5).font('Helvetica')
+       .text(CTA.checklist, 50, doc.y, { width: 495 })
+    doc.moveDown(0.35)
+    doc.fillColor(`#${GREEN}`).fontSize(9.5).font('Helvetica-Bold')
+       .text('Start free at cuequote.com', 50, doc.y, { width: 495 })
     doc.end()
   })
 }
