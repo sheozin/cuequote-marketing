@@ -52,27 +52,37 @@ const INDEXABLE_LOCALES = new Set(['en', 'pl', 'ar'])
  * nothing broke, but the mapping from post to intended market only survives
  * here. Keep this list in step if market-specific posts are added.
  */
-const MARKET_POSTS: Record<string, string> = {
-  'corporate-event-cost-2026': 'fr',
-  'conference-cost-realistic-budget': 'pl',
-  'plan-company-event-without-experience': 'de',
-  'conference-planning-mistakes': 'ar',
-  'how-to-write-av-brief': 'fr',
-  'how-to-choose-event-company-checklist': 'pl',
-  'event-av-cost-price-guide-2026': 'de',
-  'organize-company-seminar-checklist': 'fr',
-  'plan-corporate-event-from-scratch': 'pl',
-  'event-budget-template-free-2026': 'de',
-  'av-proposals-germany-guide': 'de',
-  'av-proposals-france-guide': 'fr',
-  'av-proposals-poland-guide': 'pl',
+const MARKET_POSTS: Record<string, string[]> = {
+  'corporate-event-cost-2026': ['fr'],
+  'conference-cost-realistic-budget': ['pl'],
+  'plan-company-event-without-experience': ['de'],
+  // ar and fr. The 2026-08-24 watchdog found the French copy at position 6.0
+  // with a click while serving noindex — a post can genuinely land in more than
+  // one market, and the old Record<string, string> could only name one, so
+  // whichever market was written down silently suppressed the other.
+  'conference-planning-mistakes': ['ar', 'fr'],
+  'how-to-write-av-brief': ['fr'],
+  'how-to-choose-event-company-checklist': ['pl'],
+  'event-av-cost-price-guide-2026': ['de'],
+  'organize-company-seminar-checklist': ['fr'],
+  'plan-corporate-event-from-scratch': ['pl'],
+  'event-budget-template-free-2026': ['de'],
+  'av-proposals-germany-guide': ['de'],
+  'av-proposals-france-guide': ['fr'],
+  'av-proposals-poland-guide': ['pl'],
   // Position 11.4 in GSC on 2026-08-08 — the best position of any page or query
   // on the site outside brand terms, and it earned a click. The 2026-08-07
   // blanket noindex caught it because comparison posts were never considered
   // market posts; Rentman is an EU vendor with real DACH presence, so the German
   // copy is exactly what this list exists to protect.
-  'cuequote-vs-rentman': 'de',
+  'cuequote-vs-rentman': ['de'],
+  // Position 2.8 with a click, serving noindex, found by the watchdog on
+  // 2026-08-24. The best position anywhere on the site. Nothing about a pricing
+  // guide is language-neutral — "was kostet veranstaltungstechnik" is its own
+  // query with its own competitors — so the German copy earns its own place.
+  'how-much-does-av-cost-for-events': ['de'],
 }
+
 
 /**
  * Robots directive for a long-tail page, or undefined to leave it indexable.
@@ -85,6 +95,6 @@ export function longTailRobots(
   slug?: string,
 ): { index: false; follow: true } | undefined {
   if (INDEXABLE_LOCALES.has(locale)) return undefined
-  if (slug && MARKET_POSTS[slug] === locale) return undefined
+  if (slug && MARKET_POSTS[slug]?.includes(locale)) return undefined
   return { index: false, follow: true }
 }
