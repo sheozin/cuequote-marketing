@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
-import { Shield, Sparkles } from "lucide-react";
+import { Shield } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
