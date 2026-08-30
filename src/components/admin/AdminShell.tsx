@@ -352,11 +352,23 @@ export function useAudit() {
 export function useData<T>(table: string, orderBy: string = 'created_at', ascending = false) {
   const [data, setData] = useState<T[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
+  // Every CMS list in the admin goes through here. A failed read used to render
+  // `data ?? []` — an empty table, indistinguishable from a section that
+  // genuinely has no rows. "There are no blog posts" and "we could not load the
+  // blog posts" are very different things to show someone.
   const refresh = async () => {
     setLoading(true);
     const supabase = createClient();
-    const { data } = await supabase.from(table).select('*').order(orderBy, { ascending });
+    const { data, error: readError } = await supabase.from(table).select('*').order(orderBy, { ascending });
+    if (readError) {
+      console.error(`[useData] could not load ${table}:`, readError.message);
+      setError(readError.message);
+      setLoading(false);
+      return;   // keep whatever was last loaded rather than blanking the table
+    }
+    setError(null);
     setData((data ?? []) as T[]);
     setLoading(false);
   };
@@ -366,5 +378,7 @@ export function useData<T>(table: string, orderBy: string = 'created_at', ascend
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { data, loading, refresh };
+  // `error` is additive — existing callers destructure { data, loading, refresh }
+  // and are unaffected, but a page can now show why a list is empty.
+  return { data, loading, refresh, error };
 }

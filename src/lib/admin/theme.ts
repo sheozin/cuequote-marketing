@@ -180,6 +180,8 @@ export async function logAudit(
   diff?: Record<string, unknown>
 ) {
   try {
+    // A failed getUser still writes the audit row, just without an actor —
+    // better than losing the entry, but worth knowing it is anonymous.
     const { data } = await supabase.auth.getUser();
     const { error } = await supabase.from('cms_audit_log').insert({
       user_id: data.user?.id ?? null,
