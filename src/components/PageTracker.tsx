@@ -184,7 +184,10 @@ export default function PageTracker() {
           countrySource = country ? 'timezone' : null
         }
 
-        await supabase.from('page_views').insert({
+        // A tracker that silently stops recording does not look broken, it
+        // looks like a traffic decline — and that is a conclusion someone will
+        // act on.
+        const { error: trackError } = await supabase.from('page_views').insert({
           session_id: getSessionId(),
           page_url: window.location.href,
           page_path: pathname || '/',
@@ -197,6 +200,7 @@ export default function PageTracker() {
           language: lang,
           site_locale: pathLocale,
         })
+        if (trackError) console.error('[PageTracker] page view not recorded:', trackError.message)
       } catch {
         // Silent fail — analytics should never break the site
       }

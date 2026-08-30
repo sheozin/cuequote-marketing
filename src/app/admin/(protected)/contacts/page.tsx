@@ -30,7 +30,8 @@ export default function ContactsAdminPage() {
 
   const updateStatus = async (id: string, status: Contact['status']) => {
     const supabase = createClient();
-    await supabase.from('cms_contact_submissions').update({ status }).eq('id', id);
+    const { error } = await supabase.from('cms_contact_submissions').update({ status }).eq('id', id);
+    if (error) { alert(`Status not changed: ${error.message}`); return; }
     await audit('updated', 'contact_submission', id, { status });
     refresh();
     setSelected(null);
@@ -39,7 +40,8 @@ export default function ContactsAdminPage() {
   const remove = async (id: string) => {
     if (!confirm('Delete this submission?')) return;
     const supabase = createClient();
-    await supabase.from('cms_contact_submissions').delete().eq('id', id);
+    const { error } = await supabase.from('cms_contact_submissions').delete().eq('id', id);
+    if (error) { alert(`Not deleted: ${error.message}`); return; }
     await audit('deleted', 'contact_submission', id);
     refresh();
     setSelected(null);

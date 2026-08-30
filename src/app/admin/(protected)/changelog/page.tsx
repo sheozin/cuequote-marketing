@@ -45,10 +45,12 @@ export default function ChangelogAdminPage() {
     const payload = { ...draft };
     if (!draft.id) {
       delete (payload as Partial<ChangelogItem>).id;
-      const { data: c } = await supabase.from('cms_changelog').insert(payload).select().single();
-      if (c) await audit('created', 'changelog', c.id);
+      const { data: c, error } = await supabase.from('cms_changelog').insert(payload).select().single();
+      if (error || !c) { setSaving(false); alert(`Not saved: ${error?.message ?? 'unknown error'}`); return; }
+      await audit('created', 'changelog', c.id);
     } else {
-      await supabase.from('cms_changelog').update(payload).eq('id', draft.id);
+      const { error } = await supabase.from('cms_changelog').update(payload).eq('id', draft.id);
+      if (error) { setSaving(false); alert(`Not saved: ${error.message}`); return; }
       await audit('updated', 'changelog', draft.id);
     }
     setSaving(false);
@@ -58,7 +60,8 @@ export default function ChangelogAdminPage() {
 
   const remove = async (id: string) => {
     const supabase = createClient();
-    await supabase.from('cms_changelog').delete().eq('id', id);
+    const { error } = await supabase.from('cms_changelog').delete().eq('id', id);
+    if (error) { alert(`Not deleted: ${error.message}`); return; }
     await audit('deleted', 'changelog', id);
     refresh();
   };

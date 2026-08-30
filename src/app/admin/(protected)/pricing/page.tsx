@@ -54,10 +54,12 @@ export default function PricingAdminPage() {
     const payload = { ...draft };
     if (!draft.id) {
       delete (payload as Partial<Plan>).id;
-      const { data: c } = await supabase.from('cms_pricing_plans').insert(payload).select().single();
-      if (c) await audit('created', 'pricing_plan', c.id);
+      const { data: c, error } = await supabase.from('cms_pricing_plans').insert(payload).select().single();
+      if (error || !c) { setSaving(false); alert(`Not saved: ${error?.message ?? 'unknown error'}`); return; }
+      await audit('created', 'pricing_plan', c.id);
     } else {
-      await supabase.from('cms_pricing_plans').update(payload).eq('id', draft.id);
+      const { error } = await supabase.from('cms_pricing_plans').update(payload).eq('id', draft.id);
+      if (error) { setSaving(false); alert(`Not saved: ${error.message}`); return; }
       await audit('updated', 'pricing_plan', draft.id);
     }
     setSaving(false);
@@ -67,7 +69,8 @@ export default function PricingAdminPage() {
 
   const remove = async (id: string) => {
     const supabase = createClient();
-    await supabase.from('cms_pricing_plans').delete().eq('id', id);
+    const { error } = await supabase.from('cms_pricing_plans').delete().eq('id', id);
+    if (error) { alert(`Not deleted: ${error.message}`); return; }
     await audit('deleted', 'pricing_plan', id);
     refresh();
   };

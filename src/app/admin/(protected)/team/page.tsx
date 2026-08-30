@@ -42,10 +42,12 @@ export default function TeamAdminPage() {
     const payload = { ...draft };
     if (!draft.id) {
       delete (payload as Partial<TeamMember>).id;
-      const { data: c } = await supabase.from('cms_team_members').insert(payload).select().single();
-      if (c) await audit('created', 'team_member', c.id);
+      const { data: c, error } = await supabase.from('cms_team_members').insert(payload).select().single();
+      if (error || !c) { setSaving(false); alert(`Not saved: ${error?.message ?? 'unknown error'}`); return; }
+      await audit('created', 'team_member', c.id);
     } else {
-      await supabase.from('cms_team_members').update(payload).eq('id', draft.id);
+      const { error } = await supabase.from('cms_team_members').update(payload).eq('id', draft.id);
+      if (error) { setSaving(false); alert(`Not saved: ${error.message}`); return; }
       await audit('updated', 'team_member', draft.id);
     }
     setSaving(false);
@@ -55,7 +57,8 @@ export default function TeamAdminPage() {
 
   const remove = async (id: string) => {
     const supabase = createClient();
-    await supabase.from('cms_team_members').delete().eq('id', id);
+    const { error } = await supabase.from('cms_team_members').delete().eq('id', id);
+    if (error) { alert(`Not deleted: ${error.message}`); return; }
     await audit('deleted', 'team_member', id);
     refresh();
   };

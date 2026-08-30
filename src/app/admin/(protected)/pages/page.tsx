@@ -38,10 +38,12 @@ export default function PagesAdminPage() {
     const payload = { ...draft };
     if (!draft.id) {
       delete (payload as Partial<Page>).id;
-      const { data: c } = await supabase.from('cms_pages').insert(payload).select().single();
-      if (c) await audit('created', 'page', c.id);
+      const { data: c, error } = await supabase.from('cms_pages').insert(payload).select().single();
+      if (error || !c) { setSaving(false); alert(`Not saved: ${error?.message ?? 'unknown error'}`); return; }
+      await audit('created', 'page', c.id);
     } else {
-      await supabase.from('cms_pages').update(payload).eq('id', draft.id);
+      const { error } = await supabase.from('cms_pages').update(payload).eq('id', draft.id);
+      if (error) { setSaving(false); alert(`Not saved: ${error.message}`); return; }
       await audit('updated', 'page', draft.id);
     }
     setSaving(false);
@@ -51,7 +53,8 @@ export default function PagesAdminPage() {
 
   const remove = async (id: string) => {
     const supabase = createClient();
-    await supabase.from('cms_pages').delete().eq('id', id);
+    const { error } = await supabase.from('cms_pages').delete().eq('id', id);
+    if (error) { alert(`Not deleted: ${error.message}`); return; }
     await audit('deleted', 'page', id);
     refresh();
   };

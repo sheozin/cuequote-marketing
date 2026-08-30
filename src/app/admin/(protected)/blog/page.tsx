@@ -71,11 +71,13 @@ export default function BlogAdminPage() {
       author_name: draft.author_name,
     };
     if (draft.id) {
-      await supabase.from('cms_blog_posts').update(payload).eq('id', draft.id);
+      const { error } = await supabase.from('cms_blog_posts').update(payload).eq('id', draft.id);
+      if (error) { setSaving(false); alert(`Not saved: ${error.message}`); return; }
       await audit('updated', 'blog_post', draft.id);
     } else {
-      const { data: created } = await supabase.from('cms_blog_posts').insert(payload).select().single();
-      if (created) await audit('created', 'blog_post', created.id);
+      const { data: created, error } = await supabase.from('cms_blog_posts').insert(payload).select().single();
+      if (error || !created) { setSaving(false); alert(`Not saved: ${error?.message ?? 'unknown error'}`); return; }
+      await audit('created', 'blog_post', created.id);
     }
     setSaving(false);
     setOpen(false);
@@ -84,7 +86,8 @@ export default function BlogAdminPage() {
 
   const remove = async (id: string) => {
     const supabase = createClient();
-    await supabase.from('cms_blog_posts').delete().eq('id', id);
+    const { error } = await supabase.from('cms_blog_posts').delete().eq('id', id);
+    if (error) { alert(`Not deleted: ${error.message}`); return; }
     await audit('deleted', 'blog_post', id);
     refresh();
   };

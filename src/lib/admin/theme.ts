@@ -169,7 +169,9 @@ export const styles: Record<string, CSSProperties> = {
 
 export async function logAudit(
   supabase: {
-    from: (t: string) => { insert: (r: Record<string, unknown>) => Promise<unknown> };
+    // Promise<unknown> here is what made the error unreadable at the call site
+    // below: the structural type hid the { error } supabase-js actually returns.
+    from: (t: string) => { insert: (r: Record<string, unknown>) => Promise<{ error: { message: string } | null }> };
     auth: { getUser: () => Promise<{ data: { user: { id?: string; email?: string } | null } }> };
   },
   action: string,
@@ -179,7 +181,7 @@ export async function logAudit(
 ) {
   try {
     const { data } = await supabase.auth.getUser();
-    await supabase.from('cms_audit_log').insert({
+    const { error } = await supabase.from('cms_audit_log').insert({
       user_id: data.user?.id ?? null,
       user_email: data.user?.email ?? null,
       action,
@@ -187,7 +189,11 @@ export async function logAudit(
       entity_id: String(entityId),
       diff: diff ?? null,
     });
-  } catch {
-    // swallow audit failures
+    // Still non-fatal — an audit failure must not block the action being
+    // audited — but it is no longer invisible. supabase-js resolves rather
+    // than throwing, so the catch below never covered this case anyway.
+    if (error) console.error(`[audit] ${action} ${entityType} NOT recorded:`, error.message);
+  } catch (err) {
+    console.error('[audit] failed:', (err as Error).message);
   }
 }

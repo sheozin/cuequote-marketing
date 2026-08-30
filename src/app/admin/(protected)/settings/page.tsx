@@ -29,7 +29,14 @@ export default function SettingsAdminPage() {
       } catch {
         parsed = value;
       }
-      await supabase.from('cms_site_settings').update({ value: parsed }).eq('key', key);
+      const { error } = await supabase.from('cms_site_settings').update({ value: parsed }).eq('key', key);
+      if (error) {
+        // Inside a loop over every edited key: report the one that failed and
+        // keep going, rather than abandoning the settings that would save.
+        console.error(`[settings] ${key} not saved:`, error.message);
+        alert(`Setting "${key}" was not saved: ${error.message}`);
+        continue;
+      }
       await audit('updated', 'site_setting', null, { key, value: parsed });
     }
     setSaving(false);

@@ -334,7 +334,10 @@ export function useAudit() {
   const supabase = createClient();
   return async (action: string, entity_type: string, entity_id: string | null, diff?: unknown) => {
     const { data: { user } } = await supabase.auth.getUser();
-    await supabase.from('cms_audit_log').insert({
+    // The audit log is what someone reads to reconstruct what happened. A
+    // dropped row leaves no trace that it was dropped, so the trail reads as
+    // complete while having a hole in it.
+    const { error } = await supabase.from('cms_audit_log').insert({
       user_id: user?.id,
       user_email: user?.email,
       action,
@@ -342,6 +345,7 @@ export function useAudit() {
       entity_id,
       diff: diff ? (diff as object) : null,
     });
+    if (error) console.error(`[audit] ${action} ${entity_type} NOT recorded:`, error.message);
   };
 }
 

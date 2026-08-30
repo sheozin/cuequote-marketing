@@ -38,10 +38,12 @@ export default function FeaturesAdminPage() {
     const payload = { ...draft };
     if (!draft.id) {
       delete (payload as Partial<Feature>).id;
-      const { data: c } = await supabase.from('cms_features').insert(payload).select().single();
-      if (c) await audit('created', 'feature', c.id);
+      const { data: c, error } = await supabase.from('cms_features').insert(payload).select().single();
+      if (error || !c) { setSaving(false); alert(`Not saved: ${error?.message ?? 'unknown error'}`); return; }
+      await audit('created', 'feature', c.id);
     } else {
-      await supabase.from('cms_features').update(payload).eq('id', draft.id);
+      const { error } = await supabase.from('cms_features').update(payload).eq('id', draft.id);
+      if (error) { setSaving(false); alert(`Not saved: ${error.message}`); return; }
       await audit('updated', 'feature', draft.id);
     }
     setSaving(false);
@@ -51,7 +53,8 @@ export default function FeaturesAdminPage() {
 
   const remove = async (id: string) => {
     const supabase = createClient();
-    await supabase.from('cms_features').delete().eq('id', id);
+    const { error } = await supabase.from('cms_features').delete().eq('id', id);
+    if (error) { alert(`Not deleted: ${error.message}`); return; }
     await audit('deleted', 'feature', id);
     refresh();
   };

@@ -18,7 +18,9 @@ export default function NewsletterAdminPage() {
   const remove = async (id: string) => {
     if (!confirm('Delete this subscriber?')) return;
     const supabase = createClient();
-    await supabase.from('newsletter_subscribers').delete().eq('id', id);
+    // A subscriber who was not actually removed still receives the newsletter.
+    const { error } = await supabase.from('newsletter_subscribers').delete().eq('id', id);
+    if (error) { alert(`Subscriber not deleted: ${error.message}`); return; }
     await audit('deleted', 'newsletter_subscriber', id);
     refresh();
   };

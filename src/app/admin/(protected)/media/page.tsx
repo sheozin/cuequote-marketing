@@ -43,10 +43,12 @@ export default function MediaAdminPage() {
     delete (payload as Partial<Media>).created_at;
     if (!draft.id) {
       delete (payload as Partial<Media>).id;
-      const { data: c } = await supabase.from('cms_media').insert(payload).select().single();
-      if (c) await audit('created', 'media', c.id);
+      const { data: c, error } = await supabase.from('cms_media').insert(payload).select().single();
+      if (error || !c) { setSaving(false); alert(`Not saved: ${error?.message ?? 'unknown error'}`); return; }
+      await audit('created', 'media', c.id);
     } else {
-      await supabase.from('cms_media').update(payload).eq('id', draft.id);
+      const { error } = await supabase.from('cms_media').update(payload).eq('id', draft.id);
+      if (error) { setSaving(false); alert(`Not saved: ${error.message}`); return; }
       await audit('updated', 'media', draft.id);
     }
     setSaving(false);
@@ -56,7 +58,8 @@ export default function MediaAdminPage() {
 
   const remove = async (id: string) => {
     const supabase = createClient();
-    await supabase.from('cms_media').delete().eq('id', id);
+    const { error } = await supabase.from('cms_media').delete().eq('id', id);
+    if (error) { alert(`Not deleted: ${error.message}`); return; }
     await audit('deleted', 'media', id);
     refresh();
   };
