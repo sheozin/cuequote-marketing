@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import Nav from "../../../components/Nav";
 import Footer from "../../../components/Footer";
 import { Testimonials } from "../../../components/Testimonials";
-import { Sparkles, Check, ArrowRight, Globe, Calendar, BarChart3, Zap } from "lucide-react";
+import { Sparkles, Check, ArrowRight, Globe, BarChart3, Zap } from "lucide-react";
 import { getTranslations, getLocale } from "next-intl/server";
 
 const APP_URL = "https://app.cuequote.com";
