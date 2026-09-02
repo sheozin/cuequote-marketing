@@ -7,7 +7,7 @@ import { useLocale } from 'next-intl'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!
 )
 
 const LS_KEY = 'cuequote_mkt_banner_dismissed'
