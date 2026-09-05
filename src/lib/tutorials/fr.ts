@@ -289,7 +289,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Définissez les conditions de paiement',
-        content: 'Deux champs contrôlent votre échéancier de paiement : % d\'acompte (0-100) et solde dû (jours avant l\'événement). Une ligne d\'aperçu montre exactement ce qu\'indiquera le PDF : « 50 % d\'acompte à l\'acceptation, 50 % de solde dû 7 jours avant l\'événement ». L\'IA les fixe en fonction du type de client — les agences reçoivent 0 % d\'acompte avec des conditions à 30 jours.',
+        content: 'Deux facons de definir l acompte : en pourcentage (0-100) ou en montant convenu, via le petit selecteur a cote du champ. Un montant fixe convient lorsque le chiffre a ete negocie plutot que calcule, et il ne bouge pas quand les lignes changent. Dans les deux cas, l acompte et le solde sont affiches en euros a cote de vos totaux, et la clause de paiement de vos CGV se reecrit pour correspondre, afin qu un devis n annonce jamais deux chiffres differents. Si vous avez redige cette clause vous-meme, elle reste intacte et une note propose de la mettre a jour.',
       },
       {
         title: 'Tarification des jours de montage et démontage',

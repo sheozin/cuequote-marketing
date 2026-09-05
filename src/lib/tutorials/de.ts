@@ -289,7 +289,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Zahlungsbedingungen festlegen',
-        content: 'Zwei Felder steuern Ihren Zahlungsplan: Anzahlung in % (0–100) und Restzahlung (Tage vor dem Event). Eine Vorschauzeile zeigt genau, was im PDF stehen wird: "50 % Anzahlung bei Annahme, 50 % Restzahlung 7 Tage vor dem Event". Die KI setzt diese Werte anhand des Kundentyps — Agenturen erhalten 0 % Anzahlung mit 30-Tage-Bedingungen.',
+        content: 'Zwei Wege, die Anzahlung festzulegen: als Prozentsatz (0-100) oder als vereinbarter Betrag, umschaltbar mit dem kleinen Auswahlfeld daneben. Ein fester Betrag ist richtig, wenn die Zahl verhandelt und nicht berechnet wurde, und er bleibt unveraendert, wenn sich Positionen aendern. In beiden Faellen werden Anzahlung und Restbetrag als Geld neben Ihren Summen angezeigt, und die Zahlungsklausel in Ihren AGB schreibt sich selbst passend um, sodass ein Angebot nie zwei verschiedene Zahlen nennt. Haben Sie die Klausel selbst formuliert, bleibt sie unangetastet und ein Hinweis bietet die Aktualisierung an.',
       },
       {
         title: 'Auf-/Abbautage-Preisgestaltung',

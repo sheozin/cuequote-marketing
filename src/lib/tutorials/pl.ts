@@ -289,7 +289,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Ustaw warunki płatności',
-        content: 'Dwa pola kontrolują harmonogram płatności: Zaliczka % (0-100) oraz Saldo płatne (dni przed wydarzeniem). Linia podglądu pokazuje dokładnie, co będzie w PDF-ie: „50% zaliczki przy akceptacji, 50% salda płatne 7 dni przed wydarzeniem”. AI ustawia je na podstawie typu klienta — agencje otrzymują 0% zaliczki z warunkami 30-dniowymi.',
+        content: 'Dwa sposoby ustawienia zaliczki: jako procent (0-100) albo jako uzgodniona kwota, przelaczane malym selektorem obok pola. Stala kwota przydaje sie, gdy wartosc byla negocjowana, a nie wyliczona, i nie zmienia sie przy edycji pozycji. W obu przypadkach zaliczka i saldo sa pokazane jako kwoty obok podsumowania, a klauzula warunkow platnosci w regulaminie sama sie aktualizuje, wiec oferta nigdy nie podaje dwoch roznych kwot. Jesli napisales te klauzule samodzielnie, pozostaje nietknieta, a system proponuje jej aktualizacje.',
       },
       {
         title: 'Wycena dni montażu i demontażu',
