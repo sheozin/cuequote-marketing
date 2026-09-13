@@ -1956,7 +1956,9 @@
       "step4": "Wahlen Sie die Zahlungsmethode aus dem Dropdown-Menu, die auf der Rechnung angezeigt werden soll",
       "step5": "Laden Sie die Rechnungs-PDF herunter — sie enthalt Ihr Branding, Positionen, MwSt., Zahlungsanweisungen und Referenznummer",
       "step6": "Senden Sie die Rechnung per E-Mail an Ihren Kunden und verfolgen Sie den Status: Entwurf, Gesendet, Angesehen oder Bezahlt",
-      "tip": "Fugen Sie mindestens ein Bankkonto in den Einstellungen hinzu — die meisten B2B-Kunden bevorzugen Bankuberweisungen. Geben Sie die Rechnungsnummer als Zahlungsreferenz an, um den Abgleich zu erleichtern."
+      "tip": "Fugen Sie mindestens ein Bankkonto in den Einstellungen hinzu — die meisten B2B-Kunden bevorzugen Bankuberweisungen. Geben Sie die Rechnungsnummer als Zahlungsreferenz an, um den Abgleich zu erleichtern.",
+      "content3": "Eine Proforma ist eine Zahlungsaufforderung, keine Steuerrechnung. Klicken Sie auf der Rechnungsseite auf Neue Proforma, um eine von Grund auf zu erstellen, oder wandeln Sie ein Angebot um. Sie erhält eine eigene PI-Nummer, damit Ihre INV-Serie lückenlos bleibt, sie nimmt keine Zahlungen an und geht nie an KSeF, weil nichts davon für ein Dokument richtig wäre, das keine Rechnung ist. Bestätigt der Kunde, erstellt ein Klick eine echte Rechnung mit der nächsten Nummer Ihrer Serie und dem heutigen Datum; die Proforma bleibt erhalten und beide bleiben verknüpft, sodass die Kopie beim Kunden weiterhin abrufbar ist.",
+      "step7": "Für eine Anzahlungsanforderung zu Arbeit ohne förmliches Angebot klicken Sie auf der Rechnungsseite auf Neue Proforma und wandeln sie um, sobald der Kunde bestätigt"
     },
     "paymentTracking": {
       "title": "Zahlungsverfolgung",

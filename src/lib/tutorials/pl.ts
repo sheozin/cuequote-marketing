@@ -531,6 +531,11 @@ export const TUTORIALS_PL: Tutorial[] = [
         content: 'CueQuote rozdziela dni eventowe od dni montażu (instalacja) i demontażu (rozbiórka). Sprzęt jest naliczany według konfigurowalnej stawki za dni montażu/demontażu — 0% (gratis), 50% (połowa stawki) lub 100% (pełna stawka). Praca ludzka jest zawsze naliczana w pełnej stawce za wszystkie dni. Ustaw domyślną wartość firmy w Ustawienia > Oferty.',
         tip: 'W Polsce 50% stawki za sprzęt w dni montażowe to standard. W regionie Zatoki Perskiej i MENA standardem jest 100%. Ustaw domyślnie raz i zapomnij.',
       },
+      {
+        title: 'Wystaw pro formę, gdy nie ma oferty',
+        content: 'Pro forma prosi o zapłatę, nie będąc fakturą podatkową, co jest tym, czego potrzebujesz przy zaliczce za pracę uzgodnioną przez telefon. Kliknij Nowa pro forma na stronie Faktury i wypełnij ją dokładnie jak fakturę. Dostaje własny numer PI-, więc seria INV- pozostaje bez luk, odmawia płatności i nigdy nie trafia do KSeF. Gdy klient potwierdzi, Konwertuj na fakturę wystawia prawdziwą fakturę z kolejnym numerem serii i dzisiejszą datą, zachowując powiązanie z pro formą.',
+        tip: 'Konwertuj przy potwierdzeniu, nie przy wysyłce. Obowiązek podatkowy powstaje, gdy klient się zgodzi, a zbyt wczesna konwersja wprowadza do serii numer za pracę, która może się nie odbyć.',
+      },
     ],
   },
   {

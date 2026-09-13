@@ -133,8 +133,8 @@ const ARTICLE_KEYS = [
   {
     id: "invoicing",
     key: "invoicing",
-    contentKeys: ["content1", "content2"],
-    stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
+    contentKeys: ["content1", "content2", "content3"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6", "step7"],
   },
   {
     id: "payment-tracking",

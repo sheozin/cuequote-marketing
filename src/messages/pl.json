@@ -1930,7 +1930,9 @@
       "step4": "Wybierz metode platnosci do wyswietlenia na fakturze z listy rozwijanej",
       "step5": "Pobierz fakture PDF — zawiera branding, pozycje, VAT, instrukcje platnosci i numer referencyjny",
       "step6": "Wyslij fakture do klienta e-mailem i sledz jej status: Wersja robocza, Wyslana, Przeczytana lub Oplacona",
-      "tip": "Dodaj co najmniej jedno konto bankowe w Ustawieniach — wiekszosc klientow B2B preferuje przelew bankowy. Dolacz numer faktury jako referencje platnosci dla latwego uzgadniania."
+      "tip": "Dodaj co najmniej jedno konto bankowe w Ustawieniach — wiekszosc klientow B2B preferuje przelew bankowy. Dolacz numer faktury jako referencje platnosci dla latwego uzgadniania.",
+      "content3": "Pro forma to prośba o zapłatę, nie faktura podatkowa. Kliknij Nowa pro forma na stronie Faktury, aby wystawić ją od zera, albo skonwertuj ofertę. Dostaje własny numer PI-, więc seria INV- pozostaje bez luk, nie przyjmuje płatności i nigdy nie trafia do KSeF, bo żadna z tych rzeczy nie byłaby właściwa dla dokumentu, który nie jest fakturą. Gdy klient potwierdzi, jedno kliknięcie wystawia prawdziwą fakturę z kolejnym numerem serii i dzisiejszą datą; pro forma zostaje zachowana i obie pozostają powiązane, więc kopia, którą ma klient, nadal jest dostępna.",
+      "step7": "Aby poprosić o zaliczkę za pracę bez formalnej oferty, kliknij Nowa pro forma na stronie Faktury, a po potwierdzeniu przez klienta skonwertuj ją na prawdziwą fakturę"
     },
     "paymentTracking": {
       "title": "Śledzenie płatności",

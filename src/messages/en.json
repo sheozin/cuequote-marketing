@@ -1966,7 +1966,9 @@
       "step4": "Select which payment method to display on the invoice from the dropdown",
       "step5": "Download the invoice PDF — it includes your branding, line items, VAT, payment instructions, and reference number",
       "step6": "Send the invoice to your client via email and track its status: Draft, Sent, Viewed, or Paid",
-      "tip": "Add at least one bank account in Settings — most B2B clients prefer bank transfer for AV equipment payments. Include the invoice number as the payment reference for easy reconciliation."
+      "tip": "Add at least one bank account in Settings — most B2B clients prefer bank transfer for AV equipment payments. Include the invoice number as the payment reference for easy reconciliation.",
+      "content3": "A proforma is a request for payment, not a tax invoice. Click New Proforma on the Invoices page to raise one from scratch, or convert a proposal into one. It takes its own PI- number so your INV- series stays gapless, it will not accept payments, and it is never sent to KSeF, because none of those would be correct for a document that is not an invoice. When the client confirms, one click issues a real invoice with the next number in your series and today's date; the proforma is kept and the two stay linked, so the copy your client holds is still retrievable.",
+      "step7": "For a deposit request on work you have not formally quoted, click New Proforma on the Invoices page, then convert it to a real invoice once the client confirms"
     },
     "paymentTracking": {
       "title": "Payment Tracking",

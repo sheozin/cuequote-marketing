@@ -552,6 +552,11 @@ export const TUTORIALS_DE: Tutorial[] = [
         content: 'CueQuote unterscheidet zwischen Eventtagen und Aufbau- (Installation) sowie Abbautagen (Demontage). Equipment wird an Auf-/Abbautagen zu einem konfigurierbaren Satz berechnet — 0 % (kostenlos), 50 % (halber Tarif) oder 100 % (voller Tarif). Personal wird immer zum vollen Tagessatz für alle Tage berechnet. Ihren Unternehmensstandard legen Sie unter Einstellungen > Angebote fest.',
         tip: 'In Polen sind 50 % Equipment-Satz an Aufbautagen üblich. Im Golf und MENA-Raum sind 100 % typisch. Legen Sie Ihren Standard einmal fest und vergessen Sie es.',
       },
+      {
+        title: 'Eine Proforma erstellen, wenn es kein Angebot gibt',
+        content: 'Eine Proforma fordert Zahlung, ohne eine Steuerrechnung zu sein, genau das Richtige für eine Anzahlung auf telefonisch vereinbarte Arbeit. Klicken Sie auf der Rechnungsseite auf Neue Proforma und füllen Sie sie aus wie eine Rechnung. Sie erhält eine eigene PI-Nummer, damit Ihre INV-Serie lückenlos bleibt, sie verweigert Zahlungen und wird nie an KSeF übermittelt. Bestätigt der Kunde, erstellt In Rechnung umwandeln eine echte Rechnung mit der nächsten Nummer Ihrer Serie und dem heutigen Datum und hält die Proforma damit verknüpft.',
+        tip: 'Wandeln Sie bei der Bestätigung um, nicht beim Versand. Der Steuerzeitpunkt ist die Zusage des Kunden, und ein zu frühes Umwandeln vergibt eine Nummer für Arbeit, die vielleicht nicht stattfindet.',
+      },
     ],
   },
   {

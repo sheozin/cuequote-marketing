@@ -1958,7 +1958,9 @@
       "step4": "Selectionnez la methode de paiement a afficher sur la facture dans le menu deroulant",
       "step5": "Telechargez la facture PDF — elle inclut votre marque, les lignes, la TVA, les instructions de paiement et le numero de reference",
       "step6": "Envoyez la facture a votre client par e-mail et suivez son statut : Brouillon, Envoyee, Vue ou Payee",
-      "tip": "Ajoutez au moins un compte bancaire dans les Parametres — la plupart des clients B2B preferent le virement bancaire. Incluez le numero de facture comme reference de paiement pour faciliter le rapprochement."
+      "tip": "Ajoutez au moins un compte bancaire dans les Parametres — la plupart des clients B2B preferent le virement bancaire. Incluez le numero de facture comme reference de paiement pour faciliter le rapprochement.",
+      "content3": "Une pro forma est une demande de paiement, pas une facture fiscale. Cliquez sur Nouvelle pro forma dans la page Factures pour en créer une de zéro, ou convertissez un devis. Elle prend son propre numéro PI-, votre série INV- reste donc sans trou, elle n'accepte pas de paiements et n'est jamais envoyée à KSeF, car rien de tout cela ne conviendrait à un document qui n'est pas une facture. Quand le client confirme, un clic émet une vraie facture avec le numéro suivant de votre série et la date du jour ; la pro forma est conservée et les deux restent liées, si bien que la copie détenue par votre client reste consultable.",
+      "step7": "Pour une demande d'acompte sur un travail non chiffré formellement, cliquez sur Nouvelle pro forma dans la page Factures, puis convertissez-la en vraie facture dès que le client confirme"
     },
     "paymentTracking": {
       "title": "Suivi des paiements",

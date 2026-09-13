@@ -553,6 +553,11 @@ export const TUTORIALS_EN: Tutorial[] = [
         content: 'CueQuote separates event days from setup (installation) and strike (teardown) days. Equipment is charged at a configurable rate for setup/strike days — 0% (included free), 50% (half rate), or 100% (full rate). Labor is always charged at full rate for all days. Set your company default in Settings > Proposals.',
         tip: 'In Poland, 50% equipment rate on setup days is standard. In the Gulf and MENA, 100% is typical. Set your default once and forget.',
       },
+      {
+        title: 'Raise a proforma when there is no proposal',
+        content: "A proforma requests payment without being a tax invoice, which is what you want for a deposit on work agreed by phone. Click New Proforma on the Invoices page and fill it in exactly like an invoice. It takes its own PI- number so your INV- series stays gapless, it refuses payments, and it is never filed to KSeF. When the client confirms, Convert to invoice issues a real invoice with the next number in your series and today's date, and keeps the proforma linked to it.",
+        tip: 'Convert on confirmation, not when you send it. The tax point is the client agreeing, and converting early puts a number into your series for work that may not happen.',
+      },
     ],
   },
   {

@@ -552,6 +552,11 @@ export const TUTORIALS_FR: Tutorial[] = [
         content: 'CueQuote distingue les jours d\'événement des jours de montage (installation) et de démontage. Le matériel est facturé à un taux configurable pour les jours de montage/démontage — 0 % (gratuit), 50 % (demi-tarif) ou 100 % (plein tarif). La main-d\'œuvre est toujours au plein tarif pour tous les jours. Définissez la valeur par défaut de votre entreprise dans Paramètres > Devis.',
         tip: 'En Pologne, 50 % du tarif matériel pour les jours de montage est la norme. Dans le Golfe et au MENA, c\'est 100 %. Définissez votre valeur par défaut une fois pour toutes.',
       },
+      {
+        title: "Émettre une pro forma quand il n'y a pas de devis",
+        content: "Une pro forma demande un paiement sans être une facture fiscale, ce qu'il vous faut pour un acompte sur un travail convenu par téléphone. Cliquez sur Nouvelle pro forma dans la page Factures et remplissez-la exactement comme une facture. Elle prend son propre numéro PI-, votre série INV- reste sans trou, elle refuse les paiements et n'est jamais transmise à KSeF. Quand le client confirme, Convertir en facture émet une vraie facture avec le numéro suivant de votre série et la date du jour, en gardant la pro forma liée.",
+        tip: "Convertissez à la confirmation, pas à l'envoi. Le fait générateur est l'accord du client, et convertir trop tôt attribue un numéro de votre série à un travail qui pourrait ne pas avoir lieu.",
+      },
     ],
   },
   {
