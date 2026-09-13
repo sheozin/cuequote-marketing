@@ -2008,7 +2008,9 @@
       "step3": "Track views in real-time — see when the client opens the proposal and how many times they viewed it",
       "step4": "When the client clicks \"Accept\" or \"Decline\" on the shared page, you receive an instant notification on your dashboard",
       "step5": "Follow up strategically — if a client viewed but hasn't responded within 48 hours, it's time to reach out",
-      "tip": "Use the \"Send Proposal\" button to email the share link directly from CueQuote with a personal message. The email includes a summary of the proposal with a branded CTA button."
+      "tip": "Use the \"Send Proposal\" button to email the share link directly from CueQuote with a personal message. The email includes a summary of the proposal with a branded CTA button.",
+      "content3": "Quotes expire on their own. Every new proposal carries a valid-until date, 30 days ahead by default, which you can change or clear in the Terms & Details tab. Three days before that date CueQuote emails your client a reminder with the share link, sent in your company name with replies coming back to you, and notifies you in the app at the same time. If the date passes with no response, the proposal moves to Expired and the client is told that too.",
+      "step6": "Set or clear the valid-until date in Terms & Details — the expiry reminder three days out, and the expiry notice itself, both run from it"
     },
     "teamManagement": {
       "title": "Team Management",

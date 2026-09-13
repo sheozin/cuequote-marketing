@@ -2000,7 +2000,9 @@
       "step3": "Suivez les consultations en temps réel — voyez quand le client a ouvert le devis et combien de fois il l'a consulté",
       "step4": "Lorsque le client clique sur \"Accepter\" ou \"Refuser\" sur la page partagée, vous recevez une notification instantanée sur votre tableau de bord",
       "step5": "Agissez de manière stratégique — si un client a consulté le devis mais n'a pas répondu sous 48 heures, il est temps de le relancer",
-      "tip": "Utilisez le bouton \"Envoyer le devis\" pour envoyer le lien de partage directement depuis CueQuote avec un message personnalisé. L'e-mail contient un résumé du devis avec un bouton CTA à votre image."
+      "tip": "Utilisez le bouton \"Envoyer le devis\" pour envoyer le lien de partage directement depuis CueQuote avec un message personnalisé. L'e-mail contient un résumé du devis avec un bouton CTA à votre image.",
+      "content3": "Les devis expirent d'eux-mêmes. Chaque nouveau devis porte une date de validité, fixée à 30 jours par défaut, que vous pouvez modifier ou effacer dans l'onglet Conditions & Détails. Trois jours avant cette date, CueQuote envoie à votre client un rappel avec le lien de partage, au nom de votre société et avec les réponses qui vous reviennent, et vous prévient dans l'application au même moment. Si la date passe sans réponse, le devis bascule en Expiré et le client en est informé également.",
+      "step6": "Définissez ou effacez la date de validité dans Conditions & Détails : le rappel trois jours avant et l'avis d'expiration en découlent tous les deux"
     },
     "teamManagement": {
       "title": "Gestion d'équipe",

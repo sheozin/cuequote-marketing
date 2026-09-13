@@ -376,6 +376,11 @@ export const TUTORIALS_EN: Tutorial[] = [
         title: 'Regenerate proposals',
         content: 'Need to update a proposal? Use Regenerate from the More menu instead of creating a new one. Choose Full (replace all items), Smart (keep your edits), or From File (upload an updated spec). Your client, dates, venue, and terms are preserved. Regenerating does not count against your monthly proposal quota.',
       },
+      {
+        title: 'Expiry reminders go out for you',
+        content: 'Every new proposal carries a valid-until date, set 30 days ahead by default in the Terms & Details tab. Change it to suit the job, or clear it for an open-ended quote. Three days before that date, CueQuote emails your client a reminder with the share link, sent in your company name with replies coming back to you, and puts a notice on your dashboard at the same time. If the date passes without a response, the proposal moves to Expired and the client is told.',
+        tip: 'Extend the valid-until date and the reminder resets, so a renegotiated quote gets its own notice rather than going quiet.',
+      },
     ],
   },
   {

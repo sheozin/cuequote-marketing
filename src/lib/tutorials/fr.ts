@@ -375,6 +375,11 @@ export const TUTORIALS_FR: Tutorial[] = [
         title: 'Régénérer les devis',
         content: 'Besoin de mettre à jour un devis ? Utilisez Régénérer depuis le menu Plus au lieu d\'en créer un nouveau. Choisissez Complète (remplacer tous les articles), Intelligente (conserver vos modifications) ou Depuis un fichier (téléverser un cahier des charges mis à jour). Votre client, dates, lieu et conditions sont préservés. La régénération ne compte pas dans votre quota mensuel de devis.',
       },
+      {
+        title: 'Les rappels d\'expiration partent tout seuls',
+        content: 'Chaque nouveau devis porte une date de validité, fixée à 30 jours par défaut, dans l\'onglet Conditions & Détails. Modifiez-la selon le dossier, ou effacez-la pour un devis sans limite. Trois jours avant cette date, CueQuote envoie à votre client un rappel avec le lien de partage, au nom de votre société et avec les réponses qui vous reviennent, et pose un avis sur votre tableau de bord au même moment. Si la date passe sans réponse, le devis bascule en Expiré et le client en est informé.',
+        tip: 'Repoussez la date de validité et le rappel se réinitialise : un devis renégocié reçoit son propre avis au lieu de rester silencieux.',
+      },
     ],
   },
   {

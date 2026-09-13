@@ -1998,7 +1998,9 @@
       "step3": "Verfolgen Sie Aufrufe in Echtzeit — sehen Sie, wann der Kunde das Angebot geöffnet hat und wie oft er es angesehen hat",
       "step4": "Wenn der Kunde auf der geteilten Seite auf \"Akzeptieren\" oder \"Ablehnen\" klickt, erhalten Sie eine sofortige Benachrichtigung auf Ihrem Dashboard",
       "step5": "Handeln Sie strategisch — wenn ein Kunde das Angebot angesehen, aber innerhalb von 48 Stunden nicht geantwortet hat, ist es Zeit nachzufassen",
-      "tip": "Verwenden Sie die Schaltfläche \"Angebot senden\", um den Teilen-Link direkt aus CueQuote mit einer persönlichen Nachricht zu versenden. Die E-Mail enthält eine Zusammenfassung des Angebots mit einer gebrandeten CTA-Schaltfläche."
+      "tip": "Verwenden Sie die Schaltfläche \"Angebot senden\", um den Teilen-Link direkt aus CueQuote mit einer persönlichen Nachricht zu versenden. Die E-Mail enthält eine Zusammenfassung des Angebots mit einer gebrandeten CTA-Schaltfläche.",
+      "content3": "Angebote laufen von selbst ab. Jedes neue Angebot hat ein Gültigkeitsdatum, standardmäßig 30 Tage im Voraus, das Sie im Reiter Bedingungen & Details ändern oder löschen können. Drei Tage vor diesem Datum schickt CueQuote Ihrem Kunden eine Erinnerung mit dem Freigabelink, im Namen Ihres Unternehmens und mit Antworten zurück an Sie, und benachrichtigt Sie gleichzeitig in der App. Verstreicht das Datum ohne Antwort, wechselt das Angebot auf Abgelaufen und der Kunde erfährt auch das.",
+      "step6": "Setzen oder löschen Sie das Gültigkeitsdatum unter Bedingungen & Details: daraus ergeben sich die Erinnerung drei Tage vorher und der Ablaufhinweis selbst"
     },
     "teamManagement": {
       "title": "Teamverwaltung",

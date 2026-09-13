@@ -375,6 +375,11 @@ export const TUTORIALS_PL: Tutorial[] = [
         title: 'Regeneracja ofert',
         content: 'Musisz zaktualizować ofertę? Użyj opcji Regeneruj z menu Więcej zamiast tworzenia nowej. Wybierz Pełna (zamień wszystkie pozycje), Inteligentna (zachowaj swoje edycje) lub Z pliku (wgraj zaktualizowaną specyfikację). Twój klient, daty, obiekt i warunki zostają zachowane. Regeneracja nie wlicza się do miesięcznego limitu ofert.',
       },
+      {
+        title: 'Przypomnienia o ważności wysyłają się same',
+        content: 'Każda nowa oferta ma datę ważności, domyślnie 30 dni do przodu, w zakładce Warunki i szczegóły. Zmień ją według potrzeb albo wyczyść, jeśli oferta ma być bezterminowa. Trzy dni przed tą datą CueQuote wysyła klientowi przypomnienie z linkiem, w imieniu Twojej firmy, a odpowiedzi wracają do Ciebie. W tym samym momencie dostajesz powiadomienie na pulpicie. Jeśli termin minie bez odpowiedzi, oferta zmienia status na Wygasła, a klient zostaje o tym poinformowany.',
+        tip: 'Przedłuż datę ważności, a przypomnienie zresetuje się, więc renegocjowana oferta dostanie własne powiadomienie zamiast zamilknąć.',
+      },
     ],
   },
   {

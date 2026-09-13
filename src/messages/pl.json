@@ -1972,7 +1972,9 @@
       "step3": "Śledź wyświetlenia w czasie rzeczywistym — sprawdzaj, kiedy klient otworzył ofertę i ile razy ją obejrzał",
       "step4": "Gdy klient kliknie \"Akceptuj\" lub \"Odrzuć\" na stronie udostępnionej oferty, otrzymasz natychmiastowe powiadomienie na panelu głównym",
       "step5": "Działaj strategicznie — jeśli klient obejrzał ofertę, ale nie odpowiedział w ciągu 48 godzin, pora się z nim skontaktować",
-      "tip": "Użyj przycisku \"Wyślij ofertę\", aby wysłać link udostępniania bezpośrednio z CueQuote wraz z osobistą wiadomością. E-mail zawiera podsumowanie oferty z markowym przyciskiem CTA."
+      "tip": "Użyj przycisku \"Wyślij ofertę\", aby wysłać link udostępniania bezpośrednio z CueQuote wraz z osobistą wiadomością. E-mail zawiera podsumowanie oferty z markowym przyciskiem CTA.",
+      "content3": "Oferty wygasają same. Każda nowa oferta ma datę ważności, domyślnie 30 dni do przodu, którą możesz zmienić lub wyczyścić w zakładce Warunki i szczegóły. Trzy dni przed tą datą CueQuote wysyła klientowi przypomnienie z linkiem, w imieniu Twojej firmy, a odpowiedzi wracają do Ciebie; w tym samym momencie dostajesz powiadomienie w aplikacji. Jeśli termin minie bez odpowiedzi, oferta zmienia status na Wygasła i klient również zostaje o tym poinformowany.",
+      "step6": "Ustaw lub wyczyść datę ważności w zakładce Warunki i szczegóły: to z niej wynika przypomnienie na trzy dni przed oraz samo powiadomienie o wygaśnięciu"
     },
     "teamManagement": {
       "title": "Zarządzanie zespołem",

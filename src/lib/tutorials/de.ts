@@ -375,6 +375,11 @@ export const TUTORIALS_DE: Tutorial[] = [
         title: 'Angebote regenerieren',
         content: 'Müssen Sie ein Angebot aktualisieren? Nutzen Sie Regenerieren im Mehr-Menü, anstatt ein neues zu erstellen. Wählen Sie Vollständig (alle Positionen ersetzen), Intelligent (Ihre Bearbeitungen beibehalten) oder Aus Datei (aktualisierte Spezifikation hochladen). Ihr Kunde, Termine, Veranstaltungsort und Konditionen bleiben erhalten. Die Regenerierung wird nicht auf Ihr monatliches Angebotskontingent angerechnet.',
       },
+      {
+        title: 'Ablauf-Erinnerungen gehen automatisch raus',
+        content: 'Jedes neue Angebot hat ein Gültigkeitsdatum, standardmäßig 30 Tage im Voraus, im Reiter Bedingungen & Details. Passen Sie es an oder löschen Sie es für ein unbefristetes Angebot. Drei Tage vor diesem Datum schickt CueQuote Ihrem Kunden eine Erinnerung mit dem Link, im Namen Ihres Unternehmens und mit Antworten zurück an Sie, und setzt gleichzeitig einen Hinweis auf Ihr Dashboard. Verstreicht das Datum ohne Antwort, wechselt das Angebot auf Abgelaufen und der Kunde wird informiert.',
+        tip: 'Verlängern Sie das Gültigkeitsdatum, wird die Erinnerung zurückgesetzt: ein nachverhandeltes Angebot bekommt so seinen eigenen Hinweis, statt still zu bleiben.',
+      },
     ],
   },
   {
