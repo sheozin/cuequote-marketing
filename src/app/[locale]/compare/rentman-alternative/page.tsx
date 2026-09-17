@@ -75,7 +75,7 @@ const CUEQUOTE_DOES = [
 ];
 
 const CUEQUOTE_DOES_NOT = [
-  "Barcode scanning or serial-number tracking",
+  "Scanning gear out and back in on jobs",
   "Warehouse locations and truck packing",
   "Sub-hire management between rental houses",
   "Crew timesheets and payroll export",
