@@ -15,10 +15,10 @@ name: CI Failure Agent
 #
 #   scripts/          check-translations.cjs, check-tutorial-videos.cjs
 #   eslint.config.mjs the lint rules
-#   package.json      `lint:ci` is `eslint --max-warnings 37`
+#   package.json      `lint:ci` is `eslint --max-warnings 36`
 #
-# That warning number is the ratchet. Raising it from 37 to 50 would turn the
-# build green while letting thirteen new warnings through — the exact
+# That warning number is the ratchet. Raising it from 36 to 50 would turn the
+# build green while letting fourteen new warnings through — the exact
 # equivalent of deleting a test, and far easier to miss in review because it
 # looks like a config tweak. So package.json is protected alongside the rest.
 #

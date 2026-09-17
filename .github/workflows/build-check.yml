@@ -53,7 +53,7 @@ jobs:
       - name: Check translations are complete
         run: npm run check-translations
 
-      # Ratcheted, not absolute: `lint:ci` is `eslint --max-warnings 37`, today's
+      # Ratcheted, not absolute: `lint:ci` is `eslint --max-warnings 36`, today's
       # count. It cannot fail on the pre-existing debt, and it fails the moment a
       # commit adds even one new warning.
       #
@@ -62,7 +62,7 @@ jobs:
       # with brand new violations present. Verified by planting one: plain lint
       # exited 0, lint:ci exited 1.
       #
-      # Lower the 37 as debt is paid down; it should only ever go down.
+      # Lower the 36 as debt is paid down; it should only ever go down.
       - name: Lint
         run: npm run lint:ci
 
