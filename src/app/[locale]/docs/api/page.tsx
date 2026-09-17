@@ -244,6 +244,37 @@ export default async function ApiDocsPage() {
           polling — you hear about an acceptance in about a second instead of whenever you next look.
         </p>
 
+        <H2 id="inventory-availability">Equipment availability</H2>
+        <p style={P}>
+          <Tag color="#3b82f6">GET</Tag>
+          <span style={{ fontFamily: MONO, fontSize: 14 }}>/v1/inventory/availability</span>
+        </p>
+        <p style={P}>
+          How many of each tracked product are free on each day, after confirmed jobs, repairs, losses
+          and equipment not yet back. Quotes that are sent but not won are reported as{" "}
+          <span style={{ fontFamily: MONO }}>provisional</span> and do not reduce{" "}
+          <span style={{ fontFamily: MONO }}>free</span>. These are the same numbers as the Availability tab in the app.
+        </p>
+        <Code>{`curl "https://api.cuequote.com/v1/inventory/availability?from=2026-10-12&to=2026-10-18" \\
+  -H "Authorization: Bearer $CUEQUOTE_API_KEY"`}</Code>
+        <table style={{ width: "100%", borderCollapse: "collapse", margin: "8px 0 24px" }}>
+          <thead>
+            <tr><th style={TH}>Query</th><th style={TH}>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td style={{ ...TD, fontFamily: MONO }}>from</td><td style={TD}>First day, YYYY-MM-DD, inclusive.</td></tr>
+            <tr><td style={{ ...TD, fontFamily: MONO }}>to</td><td style={TD}>Last day, YYYY-MM-DD, inclusive, at most 366 days after from.</td></tr>
+            <tr><td style={{ ...TD, fontFamily: MONO }}>items</td><td style={TD}>Optional. Comma-separated catalog item ids, up to 200. Defaults to every tracked product.</td></tr>
+          </tbody>
+        </table>
+        <Code>{`{
+  "data": [
+    { "day": "2026-10-12", "catalog_item_id": "0b7c...", "owned": 8, "in_repair": 1, "lost": 0,
+      "firm": 6, "provisional": 2, "overdue": 0, "free": 1 }
+  ],
+  "count": 1
+}`}</Code>
+
         <H2 id="me">Check a key</H2>
         <p style={P}>
           <Tag color="#3b82f6">GET</Tag>
