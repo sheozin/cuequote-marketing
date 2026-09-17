@@ -296,10 +296,11 @@ export default async function ApiDocsPage() {
         <p style={P}>
           Returns 400 <span style={{ fontFamily: MONO }}>invalid_request</span> when{" "}
           <span style={{ fontFamily: MONO }}>from</span> or <span style={{ fontFamily: MONO }}>to</span> is
-          missing or not <span style={{ fontFamily: MONO }}>YYYY-MM-DD</span>, when{" "}
-          <span style={{ fontFamily: MONO }}>to</span> is before <span style={{ fontFamily: MONO }}>from</span>{" "}
-          or more than 366 days after it, when <span style={{ fontFamily: MONO }}>items</span> is present but
-          empty, malformed, or lists more than 200 ids, or when the product-days ceiling above is exceeded.
+          missing, not <span style={{ fontFamily: MONO }}>YYYY-MM-DD</span>, or an impossible calendar date
+          such as 2026-02-30, when <span style={{ fontFamily: MONO }}>to</span> is before{" "}
+          <span style={{ fontFamily: MONO }}>from</span> or more than 366 days after it, when{" "}
+          <span style={{ fontFamily: MONO }}>items</span> is present but empty, malformed, or lists more than
+          200 ids, or when the product-days ceiling above is exceeded.
         </p>
 
         <H2 id="me">Check a key</H2>
