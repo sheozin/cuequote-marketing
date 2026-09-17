@@ -255,6 +255,10 @@ export default async function ApiDocsPage() {
           <span style={{ fontFamily: MONO }}>provisional</span> and do not reduce{" "}
           <span style={{ fontFamily: MONO }}>free</span>. These are the same numbers as the Availability tab in the app.
         </p>
+        <p style={P}>
+          <span style={{ fontFamily: MONO }}>free</span> can be negative: that means the product is overbooked
+          for that day, with more firm and overdue quantity out than owned.
+        </p>
         <Code>{`curl "https://api.cuequote.com/v1/inventory/availability?from=2026-10-12&to=2026-10-18" \\
   -H "Authorization: Bearer $CUEQUOTE_API_KEY"`}</Code>
         <table style={{ width: "100%", borderCollapse: "collapse", margin: "8px 0 24px" }}>
@@ -264,7 +268,14 @@ export default async function ApiDocsPage() {
           <tbody>
             <tr><td style={{ ...TD, fontFamily: MONO }}>from</td><td style={TD}>First day, YYYY-MM-DD, inclusive.</td></tr>
             <tr><td style={{ ...TD, fontFamily: MONO }}>to</td><td style={TD}>Last day, YYYY-MM-DD, inclusive, at most 366 days after from.</td></tr>
-            <tr><td style={{ ...TD, fontFamily: MONO }}>items</td><td style={TD}>Optional. Comma-separated catalog item ids, up to 200. Defaults to every tracked product.</td></tr>
+            <tr>
+              <td style={{ ...TD, fontFamily: MONO }}>items</td>
+              <td style={TD}>
+                Optional. Comma-separated catalog item ids, up to 200. Defaults to every tracked product.
+                Any id that does not exist, is not tracked, or belongs to another company is simply left out
+                of the response: it never causes an error.
+              </td>
+            </tr>
           </tbody>
         </table>
         <Code>{`{
@@ -274,6 +285,22 @@ export default async function ApiDocsPage() {
   ],
   "count": 1
 }`}</Code>
+        <p style={P}>
+          The number of products this resolves to (every tracked product, or the ones named in{" "}
+          <span style={{ fontFamily: MONO }}>items</span> that belong to your company), multiplied by the
+          number of days in the range, must be at most 20,000. A request over that ceiling returns 400. Ask
+          about a shorter <span style={{ fontFamily: MONO }}>from</span>/<span style={{ fontFamily: MONO }}>to</span>{" "}
+          range, or pass <span style={{ fontFamily: MONO }}>items</span> to narrow the products, to bring it
+          under the limit.
+        </p>
+        <p style={P}>
+          Returns 400 <span style={{ fontFamily: MONO }}>invalid_request</span> when{" "}
+          <span style={{ fontFamily: MONO }}>from</span> or <span style={{ fontFamily: MONO }}>to</span> is
+          missing or not <span style={{ fontFamily: MONO }}>YYYY-MM-DD</span>, when{" "}
+          <span style={{ fontFamily: MONO }}>to</span> is before <span style={{ fontFamily: MONO }}>from</span>{" "}
+          or more than 366 days after it, when <span style={{ fontFamily: MONO }}>items</span> is present but
+          empty, malformed, or lists more than 200 ids, or when the product-days ceiling above is exceeded.
+        </p>
 
         <H2 id="me">Check a key</H2>
         <p style={P}>
