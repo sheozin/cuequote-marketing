@@ -643,8 +643,8 @@ export const TUTORIALS_PL: Tutorial[] = [
   {
     slug: 'inventory-management',
     title: 'Inwentarz i etykiety QR',
-    description: 'Nadaj każdemu egzemplarzowi sprzętu numer ewidencyjny i etykietę QR, a dla każdej sztuki prowadź status i pełną historię.',
-    duration: '6 min',
+    description: 'Nadaj każdemu egzemplarzowi sprzętu numer ewidencyjny i etykietę QR, a dla każdej sztuki prowadź status i pełną historię. Zobacz też, co rezerwują Twoje oferty i co jest wolne każdego dnia.',
+    duration: '9 min',
     difficulty: 'intermediate',
     category: 'Konfiguracja',
     mode: 'av',
@@ -654,6 +654,9 @@ export const TUTORIALS_PL: Tutorial[] = [
       'Drukowanie etykiet QR na arkuszach A4 lub rolkach',
       'Naprawa, zgubienie i odnalezienie, wycofanie sztuki oraz jej historia',
       'Co widzi osoba skanująca etykietę i jaki limit ma Twój plan',
+      'Jak oferty rezerwują sprzęt: wstępnie lub wiążąco',
+      'Odczytywanie informacji o brakach i znacznika „Brakuje na stanie”',
+      'Sprawdzanie w zakładce Dostępność, co jest wolne każdego dnia',
     ],
     steps: [
       {
@@ -685,8 +688,26 @@ export const TUTORIALS_PL: Tutorial[] = [
         content: 'Etykietę można zeskanować aparatem dowolnego telefonu. Zalogowany członek Twojego zespołu trafia prosto do tej sztuki. Każdy inny widzi tylko nazwę Twojej firmy, numer ewidencyjny i sposób kontaktu: bez cen, klientów i zleceń. Jeśli zeskanowana zostanie sztuka oznaczona jako zagubiona, strona informuje, że zgłoszono jej zaginięcie, a Ty dostajesz powiadomienie. Telefon i e-mail pokazywane na tej stronie ustawisz w Ustawieniach, w sekcji Inwentarz; jeśli zostawisz je puste, użyte zostaną dane firmy.',
       },
       {
+        title: 'Jak oferty rezerwują sprzęt',
+        content: 'Oferta rezerwuje zawarty w niej śledzony sprzęt na cały okres rezerwacji: dni montażu przed datą wydarzenia, samo wydarzenie i dni demontażu po jego zakończeniu. Oferty o statusie Wysłano, Wyświetlono i Negocjacje rezerwują sprzęt wstępnie, a oferty o statusie Wygrana rezerwują go wiążąco. Szkice, pozycje oznaczone jako Opcjonalne i oferty bez daty wydarzenia niczego nie rezerwują. Liczą się tylko pozycje wybrane z katalogu: przy pozycji wpisanej ręcznie widać „Niepowiązane z inwentarzem”. Jeśli oferta ma kilka wersji, sprzęt rezerwuje tylko najnowsza wersja, która nie jest szkicem.',
+        tip: 'Chcesz, żeby pozycja rezerwowała sprzęt? Wybierz ją z katalogu zamiast wpisywać ręcznie i ustaw w ofercie datę wydarzenia.',
+      },
+      {
+        title: 'Odczytaj informację o brakach',
+        content: 'W edytorze oferty przy pozycji, która potrzebuje więcej sztuk, niż jest wolnych, pojawia się informacja, na przykład „Brakuje 1 sztuki od 21 wrz do 23 wrz: 3 posiadane, 2 na potwierdzonych zleceniach”. Widać w niej, ilu sztuk brakuje, w które dni i dlaczego. Jeśli ten sam sprzęt jest też na innych ofertach, które wciąż są wstępne, informacja dopisuje „także na 2 ofertach wstępnych”. Nic nie jest blokowane: nadal możesz wysłać ofertę albo oznaczyć ją jako wygraną. Na liście Ofert znacznik „Brakuje na stanie” wyróżnia każdą ofertę, w której czegoś brakuje.',
+        tip: 'Brak wykryty jeszcze podczas wyceny najłatwiej rozwiązać: masz czas, żeby podnająć sprzęt, zamienić go na inny albo zmienić ilości.',
+      },
+      {
+        title: 'Sprawdzaj dostępność dzień po dniu',
+        content: 'Inwentarz ma teraz dwie zakładki: Stan i Dostępność. Dostępność to siatka z wierszem dla każdej pozycji i kolumną dla każdego dnia, a każda liczba pokazuje, ile sztuk jest wolnych danego dnia. Wyświetl 2, 3 lub 4 tygodnie i przechodź dalej przyciskami Poprzedni tydzień, Następny tydzień i Ten tydzień. Dzisiejszy dzień jest wyróżniony. Czerwony dzień oznacza braki. Żółty dzień oznacza, że potwierdzone zlecenia jeszcze się mieszczą, ale oferty wstępne przekroczyłyby dostępny stan.',
+      },
+      {
+        title: 'Zobacz, co zajmuje dany dzień',
+        content: 'Kliknij dowolny dzień, aby zobaczyć, z czego wynika jego liczba: posiadane, w naprawie, zagubione, na potwierdzonych zleceniach, na ofertach wstępnych, niezwrócone ze zleceń i wolne. Poniżej są oferty, które rezerwują sprzęt tego dnia, każda z linkiem. Liczba wolnych sztuk może spaść poniżej zera, gdy stan jest przekroczony: widzisz wtedy dokładnie, ilu sztuk jeszcze brakuje.',
+      },
+      {
         title: 'Limity planów i czego jeszcze nie ma',
-        content: 'Plan Free obejmuje 10 pozycji inwentarza, Starter 50, a Pro i wyższe bez limitu. Każda sztuka śledzona liczy się jako jedna pozycja, każda pozycja zbiorcza liczy się raz niezależnie od ilości, a wycofane sztuki się nie liczą. Rezerwowanie sprzętu z ofert, kalendarz dostępności, listy pakowania oraz skanowanie wydania i zwrotu sprzętu na zleceniach są w przygotowaniu, ale nie ma ich jeszcze w aplikacji.',
+        content: 'Plan Free obejmuje 10 pozycji inwentarza, Starter 50, a Pro i wyższe bez limitu. Każda sztuka śledzona liczy się jako jedna pozycja, każda pozycja zbiorcza liczy się raz niezależnie od ilości, a wycofane sztuki się nie liczą. Listy pakowania oraz skanowanie wydania i zwrotu sprzętu na zleceniach są w przygotowaniu, ale nie ma ich jeszcze w aplikacji.',
       },
     ],
   },

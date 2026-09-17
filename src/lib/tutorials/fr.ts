@@ -678,8 +678,8 @@ export const TUTORIALS_FR: Tutorial[] = [
   {
     slug: 'inventory-management',
     title: 'Inventaire et étiquettes QR',
-    description: 'Donnez à chaque équipement que vous possédez un numéro d\'inventaire et une étiquette QR, avec un statut et un historique complet pour chaque unité.',
-    duration: '6 min',
+    description: 'Donnez à chaque équipement que vous possédez un numéro d\'inventaire et une étiquette QR, avec un statut et un historique complet pour chaque unité. Voyez ensuite ce que vos devis réservent et ce qui est disponible chaque jour.',
+    duration: '9 min',
     difficulty: 'intermediate',
     category: 'Configuration',
     mode: 'av',
@@ -689,6 +689,9 @@ export const TUTORIALS_FR: Tutorial[] = [
       'Imprimer des étiquettes QR sur feuilles A4 ou rouleaux',
       'Réparation, perte et récupération, retrait d\'une unité et son historique',
       'Ce que voient les personnes qui scannent une étiquette, et la limite de votre offre',
+      'Comment les devis réservent votre matériel, provisoirement ou fermement',
+      'Lire une alerte de manque et le badge « Stock insuffisant »',
+      'Voir ce qui est disponible chaque jour dans l\'onglet Disponibilité',
     ],
     steps: [
       {
@@ -720,8 +723,26 @@ export const TUTORIALS_FR: Tutorial[] = [
         content: 'Une étiquette se scanne avec l\'appareil photo de n\'importe quel téléphone. Un membre connecté de votre équipe arrive directement sur l\'unité. Toute autre personne ne voit que le nom de votre société, le numéro d\'inventaire et comment vous contacter : ni prix, ni clients, ni missions. Si une unité marquée perdue est scannée, la page indique qu\'elle a été signalée manquante et vous êtes alerté. Le téléphone et l\'e-mail affichés se règlent dans Paramètres, Inventaire ; laissés vides, ce sont ceux de votre société.',
       },
       {
+        title: 'Comment les devis réservent le matériel',
+        content: 'Un devis réserve le matériel suivi qu\'il contient pendant sa période de réservation : les jours de montage avant la date de l\'événement, l\'événement lui-même et les jours de démontage qui suivent. Les devis Envoyé, Consulté et En négociation le réservent provisoirement, et les devis gagnés le réservent fermement. Les brouillons, les lignes marquées Facultatif et les devis sans date d\'événement ne réservent rien. Seules les lignes choisies dans le catalogue comptent : une ligne saisie à la main affiche « Non lié à l\'inventaire ». Quand un devis a plusieurs versions, seule la plus récente qui n\'est pas un brouillon réserve du stock.',
+        tip: 'Vous voulez qu\'une ligne réserve du stock ? Choisissez-la dans le catalogue plutôt que de la saisir, et renseignez la date de l\'événement.',
+      },
+      {
+        title: 'Lire une alerte de manque',
+        content: 'Dans l\'éditeur de devis, une ligne qui demande plus que ce qui est disponible affiche une alerte comme « 1 manquant du 21 sept. au 23 sept. : 3 possédés, 2 sur des missions confirmées ». Elle indique combien il en manque, quels jours et pourquoi. Si d\'autres devis encore provisoires demandent le même matériel, l\'alerte ajoute « aussi sur 2 devis provisoires ». Rien n\'est jamais bloqué : vous pouvez toujours envoyer le devis ou le marquer gagné. Dans la liste des devis, le badge « Stock insuffisant » signale chaque devis où il manque du matériel.',
+        tip: 'Un manque repéré pendant le chiffrage est le plus simple à régler : vous avez encore le temps de sous-louer, de remplacer du matériel ou d\'ajuster les quantités.',
+      },
+      {
+        title: 'Vérifier la disponibilité jour par jour',
+        content: 'L\'Inventaire a désormais deux onglets : Stock et Disponibilité. Disponibilité est une grille avec une ligne par article et une colonne par jour, où chaque nombre indique combien d\'unités sont disponibles ce jour-là. Affichez 2, 3 ou 4 semaines et naviguez avec Semaine précédente, Semaine suivante et Cette semaine. Le jour même est mis en évidence. Un jour en rouge signale un manque. Un jour en jaune signifie que vos missions confirmées passent encore, mais que les devis provisoires entraîneraient une surréservation.',
+      },
+      {
+        title: 'Voir ce qui occupe une journée',
+        content: 'Cliquez sur un jour pour voir le détail de son chiffre : possédés, en réparation, perdus, sur des missions confirmées, sur des devis provisoires, non revenus de mission et disponibles. En dessous figurent les devis qui retiennent le matériel ce jour-là, chacun avec un lien. Le chiffre disponible peut passer sous zéro en cas de surréservation : vous voyez alors exactement combien d\'unités il vous reste à trouver.',
+      },
+      {
         title: 'Limites des offres, et ce qui n\'est pas encore là',
-        content: 'L\'offre Free comprend 10 articles d\'inventaire, Starter 50, et Pro et au-delà sont illimités. Chaque unité suivie compte pour un article, chaque lot compte une fois quelle que soit sa quantité, et les unités retirées ne comptent pas. La réservation de matériel depuis les devis, un calendrier de disponibilité, les listes de colisage et le scan de sortie et de retour du matériel sur les missions arrivent, mais ne sont pas encore dans l\'application.',
+        content: 'L\'offre Free comprend 10 articles d\'inventaire, Starter 50, et Pro et au-delà sont illimités. Chaque unité suivie compte pour un article, chaque lot compte une fois quelle que soit sa quantité, et les unités retirées ne comptent pas. Les listes de colisage et le scan de sortie et de retour du matériel sur les missions arrivent, mais ne sont pas encore dans l\'application.',
       },
     ],
   },

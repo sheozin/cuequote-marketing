@@ -678,8 +678,8 @@ export const TUTORIALS_DE: Tutorial[] = [
   {
     slug: 'inventory-management',
     title: 'Inventar und QR-Etiketten',
-    description: 'Geben Sie jedem Gerät, das Sie besitzen, eine Anlagennummer und ein QR-Etikett, und führen Sie für jede Einheit Status und vollständigen Verlauf.',
-    duration: '6 Min.',
+    description: 'Geben Sie jedem Gerät, das Sie besitzen, eine Anlagennummer und ein QR-Etikett, und führen Sie für jede Einheit Status und vollständigen Verlauf. Und sehen Sie, was Ihre Angebote reservieren und was an jedem Tag frei ist.',
+    duration: '9 Min.',
     difficulty: 'intermediate',
     category: 'Setup',
     mode: 'av',
@@ -689,6 +689,9 @@ export const TUTORIALS_DE: Tutorial[] = [
       'QR-Etiketten auf A4-Bögen oder Etikettenrollen drucken',
       'Reparatur, verloren und gefunden, Ausmustern und der Verlauf einer Einheit',
       'Was beim Scannen eines Etiketts angezeigt wird, und Ihr Planlimit',
+      'Wie Angebote Ihr Equipment reservieren, vorläufig oder fest',
+      'Einen Hinweis auf fehlenden Bestand und das Badge „Fehlbestand“ lesen',
+      'Im Tab Verfügbarkeit sehen, was an jedem Tag frei ist',
     ],
     steps: [
       {
@@ -720,8 +723,26 @@ export const TUTORIALS_DE: Tutorial[] = [
         content: 'Ein Etikett lässt sich mit jeder Handykamera scannen. Ein angemeldetes Mitglied Ihres Teams landet direkt bei dieser Einheit. Alle anderen sehen nur Ihren Firmennamen, die Anlagennummer und wie man Sie erreicht: keine Preise, Kunden oder Jobs. Wird eine als verloren markierte Einheit gescannt, zeigt die Seite an, dass sie als vermisst gemeldet ist, und Sie werden benachrichtigt. Telefon und E-Mail für diese Seite legen Sie unter Einstellungen, Inventar fest; bleiben die Felder leer, werden Telefon und E-Mail Ihrer Firma verwendet.',
       },
       {
+        title: 'Wie Angebote Equipment reservieren',
+        content: 'Ein Angebot reserviert das erfasste Equipment darin für seinen Reservierungszeitraum: die Aufbautage vor dem Veranstaltungsdatum, die Veranstaltung selbst und die Abbautage nach ihrem Ende. Angebote mit dem Status Gesendet, Angesehen und In Verhandlung reservieren vorläufig, gewonnene Angebote reservieren fest. Entwürfe, als Optional markierte Positionen und Angebote ohne Veranstaltungsdatum reservieren nichts. Es zählen nur Positionen, die Sie aus dem Katalog gewählt haben: Eine von Hand eingetippte Position zeigt „Nicht mit dem Inventar verknüpft“. Hat ein Angebot mehrere Versionen, reserviert nur die neueste Version, die kein Entwurf ist.',
+        tip: 'Soll eine Position Bestand reservieren? Wählen Sie sie aus dem Katalog, statt sie einzutippen, und tragen Sie im Angebot das Veranstaltungsdatum ein.',
+      },
+      {
+        title: 'Einen Fehlbestand-Hinweis lesen',
+        content: 'Braucht eine Position im Angebotseditor mehr, als frei ist, erscheint ein Hinweis wie „1 fehlend von 21. Sept. bis 23. Sept.: 3 im Bestand, 2 bei bestätigten Aufträgen“. Er zeigt, wie viele fehlen, an welchen Tagen und warum. Steht dasselbe Equipment auch auf anderen, noch vorläufigen Angeboten, ergänzt der Hinweis „auch bei 2 vorläufigen Angeboten“. Nichts wird blockiert: Sie können das Angebot trotzdem senden oder als gewonnen markieren. In der Angebotsliste kennzeichnet das Badge „Fehlbestand“ jedes Angebot, bei dem etwas fehlt.',
+        tip: 'Ein Engpass, der schon beim Kalkulieren auffällt, ist am leichtesten zu lösen: Sie haben noch Zeit, zuzumieten, Geräte zu tauschen oder Mengen anzupassen.',
+      },
+      {
+        title: 'Verfügbarkeit Tag für Tag prüfen',
+        content: 'Das Inventar hat jetzt zwei Tabs: Bestand und Verfügbarkeit. Verfügbarkeit ist ein Raster mit einer Zeile pro Artikel und einer Spalte pro Tag, und jede Zahl zeigt, wie viele Einheiten an diesem Tag frei sind. Lassen Sie 2, 3 oder 4 Wochen anzeigen und blättern Sie mit Vorherige Woche, Nächste Woche und Diese Woche. Der heutige Tag ist hervorgehoben. Ein roter Tag bedeutet Fehlbestand. Ein gelber Tag bedeutet, dass Ihre bestätigten Aufträge noch passen, die vorläufigen Angebote aber überbuchen würden.',
+      },
+      {
+        title: 'Sehen, was einen Tag belegt',
+        content: 'Klicken Sie auf einen Tag, um zu sehen, wie sich seine Zahl zusammensetzt: im Bestand, in Reparatur, verloren, bei bestätigten Aufträgen, bei vorläufigen Angeboten, nicht von Aufträgen zurück und frei. Darunter stehen die Angebote, die das Equipment an diesem Tag belegen, jeweils verlinkt. Frei kann unter null fallen, wenn Sie überbucht sind: Dann sehen Sie genau, wie viele Einheiten Ihnen noch fehlen.',
+      },
+      {
         title: 'Planlimits, und was noch fehlt',
-        content: 'Free umfasst 10 Inventarartikel, Starter 50, Pro und höher sind unbegrenzt. Jede erfasste Einheit zählt als ein Artikel, jeder Sammelposten zählt unabhängig von der Menge einmal, und ausgemusterte Einheiten zählen nicht. Reservierungen aus Angeboten, ein Verfügbarkeitskalender, Packlisten sowie das Aus- und Einscannen von Technik bei Jobs kommen noch, sind aber noch nicht in der App.',
+        content: 'Free umfasst 10 Inventarartikel, Starter 50, Pro und höher sind unbegrenzt. Jede erfasste Einheit zählt als ein Artikel, jeder Sammelposten zählt unabhängig von der Menge einmal, und ausgemusterte Einheiten zählen nicht. Packlisten sowie das Aus- und Einscannen von Technik bei Jobs kommen noch, sind aber noch nicht in der App.',
       },
     ],
   },

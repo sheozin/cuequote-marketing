@@ -679,8 +679,8 @@ export const TUTORIALS_EN: Tutorial[] = [
   {
     slug: 'inventory-management',
     title: 'Inventory and QR Labels',
-    description: 'Give every piece of equipment you own an asset number and a QR label, and keep a status and full history for each unit.',
-    duration: '6 min',
+    description: 'Give every piece of equipment you own an asset number and a QR label, and keep a status and full history for each unit. Then see what your quotes reserve and what is free on each day.',
+    duration: '9 min',
     difficulty: 'intermediate',
     category: 'Setup',
     mode: 'av',
@@ -691,6 +691,9 @@ export const TUTORIALS_EN: Tutorial[] = [
       'Printing QR labels on A4 sheets or label rolls',
       'Repair, lost and found, retiring a unit, and its history',
       'What people see when they scan a label, and your plan limit',
+      'How quotes reserve your equipment, provisionally or firmly',
+      'Reading a shortage note and the "Short on stock" badge',
+      'Checking what is free each day on the Availability tab',
     ],
     steps: [
       {
@@ -722,8 +725,26 @@ export const TUTORIALS_EN: Tutorial[] = [
         content: 'A label can be scanned with any phone camera. A signed-in member of your team goes straight to that unit. Anyone else sees only your company name, the asset number and how to contact you: no prices, clients or jobs. If a unit marked lost is scanned, the page says it has been reported missing and you are alerted. Set the phone and email shown there under Settings, Inventory; if you leave them empty, your company phone and email are used.',
       },
       {
+        title: 'How quotes reserve equipment',
+        content: 'A proposal holds the tracked equipment on it for its reservation window: the setup days before the event date, the event itself, and the strike days after it ends. Sent, Viewed and Negotiating quotes hold it provisionally, and Won quotes hold it firmly. Drafts, lines marked Optional and proposals without an event date hold nothing. Only lines picked from your catalog count: a line typed by hand shows "Not linked to inventory". When a proposal has revisions, only the newest version that is not a draft holds stock.',
+        tip: 'Want a line to reserve stock? Pick it from the catalog rather than typing it, and set the event date on the proposal.',
+      },
+      {
+        title: 'Read a shortage note',
+        content: 'In the proposal editor, a line that needs more than is free shows a note such as "1 short on Sep 21 to Sep 23: 3 owned, 2 on confirmed jobs". It tells you how many you are missing, on which days, and why. When other quotes that are still provisional want the same equipment, the note adds "also on 2 provisional quotes". Nothing is ever blocked: you can still send the quote or mark it Won. On the Proposals list, a "Short on stock" badge marks every quote that is short.',
+        tip: 'A shortage you spot while quoting is the easiest one to solve: there is still time to sub-rent, swap equipment or change the quantities.',
+      },
+      {
+        title: 'Check availability day by day',
+        content: 'Inventory now has two tabs, Stock and Availability. Availability is a grid with one row per item and one column per day, and each number is how many units are free that day. Show 2, 3 or 4 weeks, and move around with Previous week, Next week and This week. Today is highlighted. A red day means you are short. A yellow day means your confirmed jobs still fit, but the provisional quotes would overbook you.',
+      },
+      {
+        title: 'See what holds a day',
+        content: 'Click any day to see how its number is made up: owned, in repair, lost, on confirmed jobs, on provisional quotes, not back from jobs, and free. Below that are the quotes holding the equipment that day, each linked so you can open it. Free can drop below zero when you are overbooked, which tells you exactly how many units you still need to find.',
+      },
+      {
         title: 'Plan limits, and what is not here yet',
-        content: 'Free includes 10 inventory items, Starter 50, and Pro and above are unlimited. Each tracked unit counts as one item, each bulk item counts once whatever its quantity, and retired units do not count. Reserving equipment from quotes, an availability calendar, packing lists and scanning gear out and back in on jobs are coming, but they are not in the app yet.',
+        content: 'Free includes 10 inventory items, Starter 50, and Pro and above are unlimited. Each tracked unit counts as one item, each bulk item counts once whatever its quantity, and retired units do not count. Packing lists and scanning gear out and back in on jobs are coming, but they are not in the app yet.',
       },
     ],
   },
