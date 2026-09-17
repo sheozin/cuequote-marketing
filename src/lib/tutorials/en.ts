@@ -590,9 +590,9 @@ export const TUTORIALS_EN: Tutorial[] = [
         content: 'The invited person receives an email with a link. If they already have a CueQuote account, they click the link, log in, and see an accept/decline page. If they\'re new, they sign up first, then accept the invite.',
       },
       {
-        title: 'Data migrates automatically',
-        content: 'When a team member accepts your invite, their existing proposals, clients, catalog items, and invoices automatically move to your team\'s workspace. Nothing is lost — their old empty workspace is cleaned up. They see a confirmation before accepting.',
-        tip: 'This means new hires can start quoting on their own account, and when they join your team, all their work comes with them.',
+        title: 'A workspace is added, not merged',
+        content: 'When a team member accepts your invite, your company becomes another workspace they belong to. Their own company and all its data stay exactly as they were: nothing moves or is deleted. Their role in your team comes from the invite. They switch between workspaces using the workspace menu in the sidebar, which appears once they belong to two or more workspaces.',
+        tip: 'This means new hires can keep quoting on their own account, and switch to your team\'s workspace from the sidebar whenever they need it.',
       },
       {
         title: 'Change roles or remove members',

@@ -589,9 +589,9 @@ export const TUTORIALS_DE: Tutorial[] = [
         content: 'Die eingeladene Person erhält eine E-Mail mit einem Link. Hat sie bereits ein CueQuote-Konto, klickt sie auf den Link, meldet sich an und sieht eine Seite zum Annehmen/Ablehnen. Ist sie neu, registriert sie sich zuerst und nimmt dann die Einladung an.',
       },
       {
-        title: 'Daten werden automatisch migriert',
-        content: 'Wenn ein Teammitglied Ihre Einladung annimmt, werden seine bestehenden Angebote, Kunden, Katalogartikel und Rechnungen automatisch in den Workspace Ihres Teams verschoben. Nichts geht verloren — der alte, leere Workspace wird bereinigt. Eine Bestätigung wird vor dem Annehmen angezeigt.',
-        tip: 'Das bedeutet, neue Mitarbeiter können auf ihrem eigenen Konto Angebote erstellen, und wenn sie Ihrem Team beitreten, kommt die gesamte Arbeit mit.',
+        title: 'Ein Workspace wird hinzugefügt, nicht zusammengeführt',
+        content: 'Wenn ein Teammitglied Ihre Einladung annimmt, wird Ihr Unternehmen ein weiterer Workspace, dem es angehört. Sein eigenes Unternehmen und alle zugehörigen Daten bleiben genau so erhalten, wie sie waren: Nichts wird verschoben oder gelöscht. Seine Rolle in Ihrem Team ergibt sich aus der Einladung. Es wechselt über das Workspace-Menü in der Seitenleiste zwischen den Workspaces, das erscheint, sobald es zwei oder mehr Workspaces hat.',
+        tip: 'Das bedeutet, neue Mitarbeiter können weiterhin auf ihrem eigenen Konto Angebote erstellen und bei Bedarf einfach über das Workspace-Menü zu Ihrem Team wechseln.',
       },
       {
         title: 'Rollen ändern oder Mitglieder entfernen',

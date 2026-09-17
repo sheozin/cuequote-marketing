@@ -568,9 +568,9 @@ export const TUTORIALS_PL: Tutorial[] = [
         content: 'Zaproszona osoba otrzymuje e-mail z linkiem. Jeśli ma już konto CueQuote, klika link, loguje się i widzi stronę akceptacji/odrzucenia. Jeśli jest nowa, najpierw się rejestruje, a następnie akceptuje zaproszenie.',
       },
       {
-        title: 'Dane migrują automatycznie',
-        content: 'Gdy członek zespołu zaakceptuje zaproszenie, jego istniejące oferty, klienci, pozycje katalogowe i faktury automatycznie przenoszą się do workspace Twojego zespołu. Nic nie jest tracone — jego stary pusty workspace jest czyszczony. Widzi potwierdzenie przed akceptacją.',
-        tip: 'To znaczy, że nowi pracownicy mogą zacząć wyceniać na własnym koncie, a gdy dołączą do Twojego zespołu, cała ich praca przenosi się razem z nimi.',
+        title: 'Dodawany jest workspace, nic się nie scala',
+        content: 'Gdy członek zespołu zaakceptuje zaproszenie, Twoja firma staje się kolejnym workspace, do którego należy. Jego własna firma i wszystkie jej dane pozostają dokładnie takie, jakie były: nic nie jest przenoszone ani usuwane. Jego rola w Twoim zespole pochodzi z zaproszenia. Przełącza się między workspace\'ami z menu workspace w pasku bocznym, które pojawia się, gdy należy do dwóch lub więcej workspace\'ów.',
+        tip: 'To znaczy, że nowi pracownicy mogą dalej wyceniać na własnym koncie i przełączyć się na workspace Twojego zespołu, gdy tylko będzie potrzebny.',
       },
       {
         title: 'Zmień role lub usuń członków',

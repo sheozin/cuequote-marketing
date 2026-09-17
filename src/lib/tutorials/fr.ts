@@ -589,9 +589,9 @@ export const TUTORIALS_FR: Tutorial[] = [
         content: 'La personne invitée reçoit un e-mail avec un lien. Si elle possède déjà un compte CueQuote, elle clique sur le lien, se connecte et voit une page d\'acceptation/refus. Si elle est nouvelle, elle s\'inscrit d\'abord puis accepte l\'invitation.',
       },
       {
-        title: 'Les données migrent automatiquement',
-        content: 'Lorsqu\'un membre d\'équipe accepte votre invitation, ses devis, clients, articles de catalogue et factures existants sont automatiquement déplacés vers l\'espace de travail de votre équipe. Rien n\'est perdu — son ancien espace de travail vide est nettoyé. Une confirmation est affichée avant l\'acceptation.',
-        tip: 'Cela signifie que les nouvelles recrues peuvent commencer à créer des devis sur leur propre compte, et lorsqu\'elles rejoignent votre équipe, tout leur travail les accompagne.',
+        title: 'Un espace de travail est ajouté, rien n\'est fusionné',
+        content: 'Lorsqu\'un membre d\'équipe accepte votre invitation, votre entreprise devient un espace de travail supplémentaire auquel il appartient. Son entreprise et toutes ses données restent exactement telles quelles : rien n\'est déplacé ni supprimé. Son rôle dans votre équipe provient de l\'invitation. Il bascule entre les espaces de travail depuis le menu d\'espace de travail dans la barre latérale, qui apparaît dès qu\'il appartient à deux espaces de travail ou plus.',
+        tip: 'Cela signifie que les nouvelles recrues peuvent continuer à créer des devis sur leur propre compte et basculer vers l\'espace de votre équipe dès qu\'elles en ont besoin.',
       },
       {
         title: 'Modifier les rôles ou supprimer des membres',
