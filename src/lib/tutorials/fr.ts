@@ -679,7 +679,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     slug: 'inventory-management',
     title: 'Inventaire et étiquettes QR',
     description: 'Donnez à chaque équipement que vous possédez un numéro d\'inventaire et une étiquette QR, avec un statut et un historique complet pour chaque unité. Voyez ensuite ce que vos devis réservent et ce qui est disponible chaque jour.',
-    duration: '9 min',
+    duration: '12 min',
     difficulty: 'intermediate',
     category: 'Configuration',
     mode: 'av',
@@ -692,6 +692,9 @@ export const TUTORIALS_FR: Tutorial[] = [
       'Comment les devis réservent votre matériel, provisoirement ou fermement',
       'Lire une alerte de manque et le badge « Stock insuffisant »',
       'Voir ce qui est disponible chaque jour dans l\'onglet Disponibilité',
+      'Trouver une mission dans l\'onglet Missions et lire son état',
+      'Scanner les sorties et les retours à la caméra, à la douchette ou au numéro d\'inventaire',
+      'Marquer un retour endommagé, annuler un scan et terminer un retour',
     ],
     steps: [
       {
@@ -741,8 +744,22 @@ export const TUTORIALS_FR: Tutorial[] = [
         content: 'Cliquez sur un jour pour voir le détail de son chiffre : possédés, en réparation, perdus, sur des missions confirmées, sur des devis provisoires, non revenus de mission et disponibles. En dessous figurent les devis qui retiennent le matériel ce jour-là, chacun avec un lien. Le chiffre disponible peut passer sous zéro en cas de surréservation : vous voyez alors exactement combien d\'unités il vous reste à trouver.',
       },
       {
-        title: 'Limites des offres, et ce qui n\'est pas encore là',
-        content: 'L\'offre Free comprend 10 articles d\'inventaire, Starter 50, et Pro et au-delà sont illimités. Chaque unité suivie compte pour un article, chaque lot compte une fois quelle que soit sa quantité, et les unités retirées ne comptent pas. Les listes de colisage et le scan de sortie et de retour du matériel sur les missions arrivent, mais ne sont pas encore dans l\'application.',
+        title: 'Limites des offres',
+        content: 'L\'offre Free comprend 10 articles d\'inventaire, Starter 50, et Pro et au-delà sont illimités. Chaque unité suivie compte pour un article, chaque lot compte une fois quelle que soit sa quantité, et les unités retirées ne comptent pas.',
+      },
+      {
+        title: 'Trouver une mission dans l\'onglet Missions',
+        content: 'Inventaire comporte trois onglets : Stock, Missions et Disponibilité. Missions liste par date chaque devis gagné contenant du matériel suivi, avec son état : Pas commencé, Chargement, Sorti, Partiellement rentré, Rentré ou En retard. Les missions en retard passent en tête quelle que soit leur date, parce que ce sont celles dont il faut s\'occuper. Basculez entre Missions à venir et Missions passées. Ouvrez une mission pour voir sa liste de chargement, les boutons de scan et Terminer le retour.',
+        tip: 'Un devis gagné sans date d\'événement ne peut pas encore être chargé. Renseignez la date sur le devis et sa liste de chargement se remplit.',
+      },
+      {
+        title: 'Scanner la sortie du matériel',
+        content: 'Ouvrez une mission et cliquez sur « Scanner la sortie ». La liste de chargement indique ce dont la mission a besoin, ce qui est chargé et ce qui reste à charger. Scannez une étiquette avec l\'appareil photo du téléphone, visez-la avec une douchette Bluetooth ou USB, ou tapez le numéro d\'inventaire et cliquez sur Ajouter. Les articles en vrac demandent la quantité. Une unité déjà sortie sur une autre mission est refusée, et le message nomme cette mission pour que vous sachiez où chercher. Ce qui ne figure pas sur la liste de cette mission est quand même accepté, avec un avertissement orange, et enregistré comme extra : rien n\'est jamais bloqué.',
+        tip: 'Vous restez désormais connecté pendant quatre heures d\'inactivité réelle, et lire un PDF ou attendre une réponse de l\'application compte comme une utilisation : un long chargement ne vous déconnecte plus en plein scan.',
+      },
+      {
+        title: 'Scanner le retour, puis le terminer',
+        content: 'Quand le matériel rentre, ouvrez la même mission et cliquez sur « Scanner le retour ». Cochez « Marquer comme endommagé ce que je scanne au retour » et ajoutez une note pour consigner ce qui ne va pas sur une unité dès son arrivée. Mauvais scan ? « Annuler » l\'inverse, et rien ne disparaît jamais de l\'historique : le mouvement et son annulation y restent tous les deux. Quand le camion est vide, cliquez sur « Terminer le retour » : la liste de tout ce qui est encore sorti s\'affiche et vous marquez chaque pièce comme restée sur place ou perdue, avec une note facultative.',
       },
     ],
   },
@@ -792,7 +809,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     slug: 'crew-scheduling',
     title: 'Planification de l\'équipe technique',
     description: 'Gérez votre liste d\'équipe technique — salariés et freelances — affectez-les aux événements, générez des fiches de préparation et consultez le calendrier de disponibilité.',
-    duration: '5 min',
+    duration: '8 min',
     difficulty: 'intermediate',
     category: 'Configuration',
     mode: 'av',
@@ -802,6 +819,10 @@ export const TUTORIALS_FR: Tutorial[] = [
       'Affecter l\'équipe aux événements avec les rôles et horaires de travail',
       'Générer des fiches de préparation d\'équipe avec planning et liste de matériel',
       'Consulter le calendrier de disponibilité pour éviter les conflits',
+      'Ce que voit l\'équipe : convocation, lieu dans les cartes et ajout au calendrier',
+      'Matériel regroupé et coloré, avec descriptions et coches partagées',
+      'La fiche d\'équipe en PDF, et pourquoi coches et scans restent deux chiffres',
+      'Modifier, remplacer et retirer une affectation, et ce que contient une fiche',
     ],
     steps: [
       {
@@ -825,6 +846,23 @@ export const TUTORIALS_FR: Tutorial[] = [
       {
         title: 'Consulter le calendrier d\'équipe',
         content: 'Le calendrier de l\'équipe technique présente tous les membres sur un axe temporel commun avec leurs affectations enregistrées. Vous identifiez ainsi instantanément les techniciens disponibles à une date donnée et évaluez la charge de travail de l\'ensemble de l\'équipe. Cette vue est particulièrement utile pour planifier plusieurs événements simultanés et optimiser l\'utilisation des ressources humaines.',
+      },
+      {
+        title: 'Ce que l\'équipe voit sur son lien',
+        content: 'Chaque personne affectée reçoit son propre lien. Il commence par son heure de convocation, le lieu avec un bouton qui l\'ouvre dans les cartes, et « Ajouter au calendrier » : directement dans Google Agenda, ou sous forme de fichier pour Apple Calendrier et Outlook. Le planning est écrit en vraies dates, par exemple « Montage, lun. 12 oct. », et non en numéros de jour. Le matériel est regroupé en « Matériel à charger », « Impression et consommables » et « Personnes et services », coloré par catégorie exactement comme dans l\'éditeur de devis, et chaque ligne s\'ouvre sur sa description complète. Aucun prix client n\'y figure.',
+      },
+      {
+        title: 'Les coches de chargement partagées',
+        content: 'L\'équipe coche les lignes au fur et à mesure du chargement, et ces coches sont partagées : toutes les personnes qui détiennent un lien vers cette mission voient la même progression, et le bureau la voit aussi sur la page de la mission dans Inventaire. Les salariés ne sont plus invités à accepter une mission sur laquelle leur employeur les a placés : leur lien leur dit simplement qu\'ils en font partie. Les freelances confirment ou déclinent toujours, et leur réponse est enregistrée avec sa date.',
+      },
+      {
+        title: 'Télécharger la fiche d\'équipe en PDF',
+        content: 'La fiche d\'équipe est un document imprimable unique, téléchargeable depuis la page de la mission dans Inventaire, depuis la fiche de préparation et depuis le lien d\'équipe lui-même. Elle reprend les informations de convocation, chaque ligne avec sa description complète, qui a confirmé et quand, et des lignes de signature vierges pour la remise. Les coches de l\'équipe et les totaux du scanner figurent côte à côte et ne sont jamais fusionnés en un seul chiffre : la coche est ce que l\'équipe a marqué, le scan est ce qui est physiquement sorti de l\'entrepôt.',
+        tip: 'Imprimez-la et faites-la signer à la remise. Chaque exemplaire porte l\'instant de sa création, ce qui permet de distinguer deux impressions de la même mission.',
+      },
+      {
+        title: 'Modifier une affectation',
+        content: 'Modifier une affectation (rôle, dates, heure de convocation, notes, chef d\'équipe) conserve le lien de la personne et sa confirmation, et son lien indique ce qui a changé et à quelle date pour qu\'elle puisse le vérifier avec vous. Remplacer la personne émet un nouveau lien et annule l\'ancien : le lien du prédécesseur cesse de fonctionner. Retirer quelqu\'un tient en un bouton. La fiche d\'un membre d\'équipe contient désormais aussi ses compétences et certifications avec dates d\'expiration, sa ville de résidence, s\'il conduit, sa taille de t-shirt, un contact d\'urgence et des notes.',
       },
     ],
   },

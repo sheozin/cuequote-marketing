@@ -679,7 +679,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     slug: 'inventory-management',
     title: 'Inventar und QR-Etiketten',
     description: 'Geben Sie jedem Gerät, das Sie besitzen, eine Anlagennummer und ein QR-Etikett, und führen Sie für jede Einheit Status und vollständigen Verlauf. Und sehen Sie, was Ihre Angebote reservieren und was an jedem Tag frei ist.',
-    duration: '9 Min.',
+    duration: '12 Min.',
     difficulty: 'intermediate',
     category: 'Setup',
     mode: 'av',
@@ -692,6 +692,9 @@ export const TUTORIALS_DE: Tutorial[] = [
       'Wie Angebote Ihr Equipment reservieren, vorläufig oder fest',
       'Einen Hinweis auf fehlenden Bestand und das Badge „Fehlbestand“ lesen',
       'Im Tab Verfügbarkeit sehen, was an jedem Tag frei ist',
+      'Einen Job im Tab Jobs finden und seinen Zustand lesen',
+      'Technik per Kamera, Barcodescanner oder Anlagennummer aus- und einscannen',
+      'Eine Rückgabe als beschädigt markieren, einen Scan rückgängig machen und die Rückgabe abschließen',
     ],
     steps: [
       {
@@ -741,8 +744,22 @@ export const TUTORIALS_DE: Tutorial[] = [
         content: 'Klicken Sie auf einen Tag, um zu sehen, wie sich seine Zahl zusammensetzt: im Bestand, in Reparatur, verloren, bei bestätigten Aufträgen, bei vorläufigen Angeboten, nicht von Aufträgen zurück und frei. Darunter stehen die Angebote, die das Equipment an diesem Tag belegen, jeweils verlinkt. Frei kann unter null fallen, wenn Sie überbucht sind: Dann sehen Sie genau, wie viele Einheiten Ihnen noch fehlen.',
       },
       {
-        title: 'Planlimits, und was noch fehlt',
-        content: 'Free umfasst 10 Inventarartikel, Starter 50, Pro und höher sind unbegrenzt. Jede erfasste Einheit zählt als ein Artikel, jeder Sammelposten zählt unabhängig von der Menge einmal, und ausgemusterte Einheiten zählen nicht. Packlisten sowie das Aus- und Einscannen von Technik bei Jobs kommen noch, sind aber noch nicht in der App.',
+        title: 'Planlimits',
+        content: 'Free umfasst 10 Inventarartikel, Starter 50, Pro und höher sind unbegrenzt. Jede erfasste Einheit zählt als ein Artikel, jeder Sammelposten zählt unabhängig von der Menge einmal, und ausgemusterte Einheiten zählen nicht.',
+      },
+      {
+        title: 'Einen Job im Tab Jobs finden',
+        content: 'Inventar hat drei Tabs: Bestand, Jobs und Verfügbarkeit. Jobs listet jedes gewonnene Angebot mit erfasster Technik nach Datum auf, mit seinem Zustand: Nicht begonnen, Packen, Draußen, Teilweise zurück, Zurück oder Überfällig. Überfällige Jobs stehen unabhängig vom Datum ganz oben, denn um sie muss sich jemand kümmern. Wechseln Sie zwischen Kommende Jobs und Vergangene Jobs. Öffnen Sie einen Job, um seine Packliste, die Scan-Schaltflächen und Rückgabe abschließen zu sehen.',
+        tip: 'Ein gewonnenes Angebot ohne Eventdatum lässt sich noch nicht packen. Tragen Sie das Datum im Angebot ein, und die Packliste füllt sich.',
+      },
+      {
+        title: 'Technik auscannen',
+        content: 'Öffnen Sie einen Job und klicken Sie auf „Auscannen“. Die Packliste zeigt, was der Job braucht, was gepackt ist und was noch zu packen ist. Scannen Sie ein Etikett mit der Handykamera, halten Sie einen Bluetooth- oder USB-Barcodescanner darauf, oder tippen Sie die Anlagennummer ein und klicken Sie auf Hinzufügen. Bei Sammelposten wird nach der Menge gefragt. Eine Einheit, die bereits auf einem anderen Job draußen ist, wird abgelehnt, und die Meldung nennt diesen Job, damit Sie wissen, wo Sie suchen müssen. Etwas, das nicht auf der Liste dieses Jobs steht, wird trotzdem angenommen, mit einem gelben Hinweis, und als Zusatz erfasst: blockiert wird nie etwas.',
+        tip: 'Sie bleiben jetzt vier Stunden echter Inaktivität angemeldet, und ein geöffnetes PDF oder eine laufende Anfrage zählt als Nutzung, sodass ein langer Packvorgang Sie nicht mitten im Scannen abmeldet.',
+      },
+      {
+        title: 'Wieder einscannen und die Rückgabe abschließen',
+        content: 'Kommt die Technik zurück, öffnen Sie denselben Job und klicken Sie auf „Einscannen“. Setzen Sie den Haken bei „Was ich einscanne, als beschädigt markieren“ und schreiben Sie eine Notiz, um sofort festzuhalten, was mit einer Einheit nicht stimmt. Falsch gescannt? „Rückgängig“ dreht den Scan zurück, und aus der Historie verschwindet nie etwas: die Bewegung und ihre Rücknahme bleiben beide im Protokoll. Ist der Transporter leer, klicken Sie auf „Rückgabe abschließen“: Sie sehen alles, was noch draußen ist, und markieren jedes Teil als noch vor Ort oder als verloren, auf Wunsch mit einer Notiz.',
       },
     ],
   },
@@ -792,7 +809,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     slug: 'crew-scheduling',
     title: 'Crew-Einsatzplanung',
     description: 'Verwalten Sie Ihr technisches Personal — Festangestellte und Freelancer — weisen Sie es Veranstaltungen zu, erstellen Sie Crew-Vorbereitungsbögen und verfolgen Sie den Verfügbarkeitskalender.',
-    duration: '5 Min.',
+    duration: '8 Min.',
     difficulty: 'intermediate',
     category: 'Setup',
     mode: 'av',
@@ -802,6 +819,10 @@ export const TUTORIALS_DE: Tutorial[] = [
       'Crew zu Veranstaltungen mit Rollen und Arbeitszeiten zuweisen',
       'Crew-Vorbereitungsbögen mit Zeitplan und Equipment-Liste generieren',
       'Crew-Verfügbarkeitskalender einsehen, um Konflikte zu vermeiden',
+      'Was die Crew sieht: Crew-Call, Ort in Karten und Kalendereintrag',
+      'Gruppiertes und eingefärbtes Equipment mit Beschreibungen und gemeinsamen Haken',
+      'Der Crew-Bogen als PDF, und warum Haken und Scans zwei Zahlen bleiben',
+      'Eine Buchung bearbeiten, tauschen und auflösen, und was ein Crew-Datensatz hält',
     ],
     steps: [
       {
@@ -825,6 +846,23 @@ export const TUTORIALS_DE: Tutorial[] = [
       {
         title: 'Crew-Kalender einsehen',
         content: 'Der Crew-Kalender zeigt alle Mitglieder auf einer gemeinsamen Zeitachse mit ihren eingetragenen Einsätzen. So erkennen Sie auf Anhieb, welche Techniker an einem bestimmten Datum verfügbar sind, und können die Arbeitsbelastung des gesamten Teams beurteilen. Die Ansicht ist besonders hilfreich bei der Planung mehrerer paralleler Veranstaltungen und der Optimierung des Personaleinsatzes.',
+      },
+      {
+        title: 'Was die Crew auf ihrem Link sieht',
+        content: 'Jede eingeteilte Person bekommt ihren eigenen Link. Er beginnt mit ihrer Crew-Call-Zeit, dem Veranstaltungsort mit einer Schaltfläche, die ihn in Karten öffnet, und „Zum Kalender hinzufügen": direkt in Google Kalender oder als Datei für Apple Kalender und Outlook. Der Zeitplan steht mit echten Daten da, etwa „Aufbau, Mo 12. Okt.", statt mit Tageszählern. Das Equipment ist in „Technik zum Laden", „Druck und Verbrauchsmaterial" und „Personen und Dienstleistungen" gruppiert, nach Kategorie genauso eingefärbt wie im Angebotseditor, und jede Position lässt sich für ihre vollständige Beschreibung aufklappen. Kundenpreise erscheinen nirgends darauf.',
+      },
+      {
+        title: 'Gemeinsame Packhaken',
+        content: 'Die Crew hakt Positionen ab, während sie lädt, und diese Haken sind gemeinsam: Alle, die einen Link zu diesem Job haben, sehen denselben Fortschritt, und das Büro sieht ihn auf der Jobseite im Inventar ebenfalls. Festangestellte werden nicht mehr gebeten, einen Job anzunehmen, für den ihr Arbeitgeber sie eingeteilt hat; ihr Link sagt ihnen schlicht, dass sie dabei sind. Freelancer bestätigen oder sagen weiterhin ab, und ihre Antwort wird mit Datum festgehalten.',
+      },
+      {
+        title: 'Den Crew-Bogen als PDF herunterladen',
+        content: 'Der Crew-Bogen ist ein druckbares Dokument, herunterladbar von der Jobseite im Inventar, vom Crew-Vorbereitungsbogen und vom Crew-Link selbst. Er enthält die Angaben des Dispo-Zettels, jede Position mit ihrer vollständigen Beschreibung, wer wann bestätigt hat, und leere Unterschriftszeilen für die Übergabe. Die Haken der Crew und die Summen des Scanners stehen nebeneinander und werden nie zu einer Zahl verschmolzen: Der Haken ist, was die Crew markiert hat, der Scan ist, was das Lager tatsächlich verlassen hat.',
+        tip: 'Drucken Sie ihn aus und lassen Sie ihn bei der Übergabe unterschreiben. Jedes Exemplar trägt den Zeitpunkt seiner Erstellung, sodass sich zwei Ausdrucke desselben Jobs unterscheiden lassen.',
+      },
+      {
+        title: 'Eine Buchung ändern',
+        content: 'Das Bearbeiten einer Zuweisung (Rolle, Daten, Crew-Call, Notizen, wer die Crew leitet) erhält den Link der Person und ihre Bestätigung, und ihr Link zeigt, was sich wann geändert hat, damit sie es mit Ihnen klären kann. Ein Personenwechsel stellt einen neuen Link aus und entwertet den alten, sodass der Link des Vorgängers nicht mehr funktioniert. Das Entfernen aus der Einteilung ist ein Klick. Der Datensatz eines Crew-Mitglieds hält jetzt auch Fähigkeiten und Zertifikate mit Ablaufdatum, Wohnort, ob die Person fährt, Shirtgröße, Notfallkontakt und Notizen.',
       },
     ],
   },

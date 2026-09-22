@@ -680,7 +680,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     slug: 'inventory-management',
     title: 'Inventory and QR Labels',
     description: 'Give every piece of equipment you own an asset number and a QR label, and keep a status and full history for each unit. Then see what your quotes reserve and what is free on each day.',
-    duration: '9 min',
+    duration: '12 min',
     difficulty: 'intermediate',
     category: 'Setup',
     mode: 'av',
@@ -694,6 +694,9 @@ export const TUTORIALS_EN: Tutorial[] = [
       'How quotes reserve your equipment, provisionally or firmly',
       'Reading a shortage note and the "Short on stock" badge',
       'Checking what is free each day on the Availability tab',
+      'Finding a job on the Jobs tab and reading its state',
+      'Scanning gear out and back in by camera, barcode scanner or asset number',
+      'Marking a return damaged, undoing a scan, and finishing a return',
     ],
     steps: [
       {
@@ -743,8 +746,22 @@ export const TUTORIALS_EN: Tutorial[] = [
         content: 'Click any day to see how its number is made up: owned, in repair, lost, on confirmed jobs, on provisional quotes, not back from jobs, and free. Below that are the quotes holding the equipment that day, each linked so you can open it. Free can drop below zero when you are overbooked, which tells you exactly how many units you still need to find.',
       },
       {
-        title: 'Plan limits, and what is not here yet',
-        content: 'Free includes 10 inventory items, Starter 50, and Pro and above are unlimited. Each tracked unit counts as one item, each bulk item counts once whatever its quantity, and retired units do not count. Packing lists and scanning gear out and back in on jobs are coming, but they are not in the app yet.',
+        title: 'Plan limits',
+        content: 'Free includes 10 inventory items, Starter 50, and Pro and above are unlimited. Each tracked unit counts as one item, each bulk item counts once whatever its quantity, and retired units do not count.',
+      },
+      {
+        title: 'Find a job on the Jobs tab',
+        content: 'Inventory has three tabs: Stock, Jobs and Availability. Jobs lists every won proposal that carries tracked equipment, by date, with its state: Not started, Packing, Out, Partly returned, Returned or Overdue. Overdue jobs sort to the top whatever their date, because they are the ones somebody has to act on. Switch between Upcoming jobs and Past jobs. Open a job to see its pack list, the scan buttons and Finish return.',
+        tip: 'A won proposal with no event date cannot be packed yet. Add the date on the proposal and its pack list fills in.',
+      },
+      {
+        title: 'Scan equipment out',
+        content: 'Open a job and click "Scan out". The pack list shows what the job needs, what is packed and what is still to pack. Scan a label with the phone camera, fire a Bluetooth or USB barcode scanner at it, or type the asset number and click Add. Bulk items ask how many you are taking. A unit that is already out on another job is refused, and the message names that job so you know where to look. Something that is not on this job\'s list is still accepted, with an amber warning, and recorded as an extra: nothing is ever blocked.',
+        tip: 'You now stay signed in through four hours of real inactivity, and reading a PDF or waiting on the app counts as being in use, so a long pack will not sign you out mid-scan.',
+      },
+      {
+        title: 'Scan it back in, and finish the return',
+        content: 'When the gear comes home, open the same job and click "Scan in". Tick "Mark what I scan in as damaged" and write a note to record what is wrong with a unit as it lands. Scanned the wrong thing? "Undo" reverses it, and nothing is ever deleted from the history: the movement and its reversal both stay on the record. When the van is empty, click "Finish return": it lists everything still out and lets you mark each piece still at the venue or lost, with an optional note.',
       },
     ],
   },
@@ -794,7 +811,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     slug: 'crew-scheduling',
     title: 'Crew Scheduling',
     description: 'Manage your crew roster, assign staff and freelancers to events, and share public prep sheets so your team arrives fully briefed.',
-    duration: '5 min',
+    duration: '8 min',
     difficulty: 'intermediate',
     category: 'Setup',
     mode: 'av',
@@ -805,6 +822,10 @@ export const TUTORIALS_EN: Tutorial[] = [
       'Reading the mini crew calendar for staffing conflicts',
       'Sharing public prep sheets (equipment list, no prices)',
       'Crew stats and active/inactive management',
+      'What the crew see: call time, the venue in maps, and add to calendar',
+      'Equipment grouped and coloured, with descriptions and shared pack ticks',
+      'The crew sheet PDF, and why ticks and scans stay two separate numbers',
+      'Editing, swapping and unassigning a booking, and what a crew record holds',
     ],
     steps: [
       {
@@ -828,6 +849,23 @@ export const TUTORIALS_EN: Tutorial[] = [
       {
         title: 'View the crew calendar',
         content: 'The mini crew calendar in the sidebar shows weekly staffing status by event. Green indicates events that are fully staffed, amber means events that need more crew assigned. Click the "Events needing crew" widget at the top of the page to jump directly to upcoming events with open staffing gaps. Crew stats (total staff, total freelancers, events this month) appear in the summary header.',
+      },
+      {
+        title: 'What your crew see on their link',
+        content: 'Every assigned person gets their own link. It opens with their call time, the venue with a button that opens it in maps, and "Add to calendar": straight into Google Calendar, or a file for Apple Calendar and Outlook. The schedule reads as real dates, such as "Load in, Mon 12 Oct", rather than day counts. Equipment is grouped into "Gear to load", "Print and consumables" and "People and services", coloured by category the same way the proposal editor is, and each item opens to show its full description. No client pricing appears anywhere on it.',
+      },
+      {
+        title: 'Shared pack ticks',
+        content: 'The crew tick items off as they load them, and those ticks are shared: everyone holding a link to that job sees the same progress, and so does the office on the job page in Inventory. Staff are no longer asked to accept a job their employer scheduled them for, so their link simply tells them they are on it. Freelancers still confirm or decline, and their answer is recorded with its date.',
+      },
+      {
+        title: 'Download the crew sheet PDF',
+        content: 'The crew sheet is one printable document, downloadable from the job page in Inventory, from the crew prep card, and from the crew link itself. It carries the call sheet details, every item with its full description, who confirmed and when, and blank signature lines for handover. The crew\'s ticks and the scanner\'s totals sit side by side and are never merged into one number: the tick is what the crew marked, the scan is what physically left the warehouse.',
+        tip: 'Print it and have it signed at handover. Each copy is stamped with the moment it was created, so two printouts of the same job can be told apart.',
+      },
+      {
+        title: 'Change a booking',
+        content: 'Editing an assignment (role, dates, call time, notes, who is crew chief) keeps the person\'s link and their confirmation, and their link shows what changed and on what date so they can check it with you. Swapping the person issues a new link and clears the old one, so the previous holder\'s link stops working. Unassigning takes one button. A crew member\'s own record now also holds skills and certifications with expiry dates, home city, whether they drive, shirt size, emergency contact and notes.',
       },
     ],
   },

@@ -644,7 +644,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     slug: 'inventory-management',
     title: 'Inwentarz i etykiety QR',
     description: 'Nadaj każdemu egzemplarzowi sprzętu numer ewidencyjny i etykietę QR, a dla każdej sztuki prowadź status i pełną historię. Zobacz też, co rezerwują Twoje oferty i co jest wolne każdego dnia.',
-    duration: '9 min',
+    duration: '12 min',
     difficulty: 'intermediate',
     category: 'Konfiguracja',
     mode: 'av',
@@ -657,6 +657,9 @@ export const TUTORIALS_PL: Tutorial[] = [
       'Jak oferty rezerwują sprzęt: wstępnie lub wiążąco',
       'Odczytywanie informacji o brakach i znacznika „Brakuje na stanie”',
       'Sprawdzanie w zakładce Dostępność, co jest wolne każdego dnia',
+      'Znajdowanie zlecenia w zakładce Zlecenia i odczytywanie jego stanu',
+      'Skanowanie wydania i zwrotu aparatem, skanerem kodów lub numerem ewidencyjnym',
+      'Oznaczanie zwrotu jako uszkodzony, cofanie skanu i kończenie zwrotu',
     ],
     steps: [
       {
@@ -706,8 +709,22 @@ export const TUTORIALS_PL: Tutorial[] = [
         content: 'Kliknij dowolny dzień, aby zobaczyć, z czego wynika jego liczba: posiadane, w naprawie, zagubione, na potwierdzonych zleceniach, na ofertach wstępnych, niezwrócone ze zleceń i wolne. Poniżej są oferty, które rezerwują sprzęt tego dnia, każda z linkiem. Liczba wolnych sztuk może spaść poniżej zera, gdy stan jest przekroczony: widzisz wtedy dokładnie, ilu sztuk jeszcze brakuje.',
       },
       {
-        title: 'Limity planów i czego jeszcze nie ma',
-        content: 'Plan Free obejmuje 10 pozycji inwentarza, Starter 50, a Pro i wyższe bez limitu. Każda sztuka śledzona liczy się jako jedna pozycja, każda pozycja zbiorcza liczy się raz niezależnie od ilości, a wycofane sztuki się nie liczą. Listy pakowania oraz skanowanie wydania i zwrotu sprzętu na zleceniach są w przygotowaniu, ale nie ma ich jeszcze w aplikacji.',
+        title: 'Limity planów',
+        content: 'Plan Free obejmuje 10 pozycji inwentarza, Starter 50, a Pro i wyższe bez limitu. Każda sztuka śledzona liczy się jako jedna pozycja, każda pozycja zbiorcza liczy się raz niezależnie od ilości, a wycofane sztuki się nie liczą.',
+      },
+      {
+        title: 'Znajdź zlecenie w zakładce Zlecenia',
+        content: 'Inwentarz ma trzy zakładki: Stan, Zlecenia i Dostępność. Zlecenia to lista wszystkich wygranych ofert ze śledzonym sprzętem, ułożona według dat, z jej stanem: Nierozpoczęte, Pakowanie, Wydane, Częściowo zwrócone, Zwrócone lub Po terminie. Zlecenia po terminie trafiają na górę niezależnie od daty, bo to nimi trzeba się zająć. Przełączaj się między Nadchodzącymi a Minionymi zleceniami. Otwórz zlecenie, aby zobaczyć jego listę pakowania, przyciski skanowania i Zakończ zwrot.',
+        tip: 'Wygranej oferty bez daty wydarzenia nie da się jeszcze spakować. Uzupełnij datę na ofercie, a lista pakowania sama się wypełni.',
+      },
+      {
+        title: 'Zeskanuj wydanie sprzętu',
+        content: 'Otwórz zlecenie i kliknij „Skanuj wydanie”. Lista pakowania pokazuje, czego zlecenie potrzebuje, co jest już spakowane i co zostało do spakowania. Zeskanuj etykietę aparatem telefonu, użyj skanera kodów kreskowych na Bluetooth lub USB albo wpisz numer ewidencyjny i kliknij Dodaj. Przy pozycjach zbiorczych pojawia się pytanie o ilość. Sztuka wydana już na inne zlecenie zostanie odrzucona, a komunikat poda nazwę tamtego zlecenia, więc wiesz, gdzie szukać. Coś spoza listy tego zlecenia i tak zostanie przyjęte, z bursztynowym ostrzeżeniem, i zapisane jako pozycja dodatkowa: nic nigdy nie jest blokowane.',
+        tip: 'Zostajesz teraz zalogowany przez cztery godziny rzeczywistej bezczynności, a czytanie PDF-a czy czekanie na odpowiedź aplikacji liczy się jako praca, więc długie pakowanie nie wyloguje Cię w trakcie skanowania.',
+      },
+      {
+        title: 'Zeskanuj zwrot i zakończ go',
+        content: 'Gdy sprzęt wraca, otwórz to samo zlecenie i kliknij „Skanuj zwrot”. Zaznacz „Oznacz skanowane przy zwrocie jako uszkodzone” i dopisz notatkę, aby od razu zapisać, co jest ze sztuką nie tak. Zeskanowałeś nie to? „Cofnij” odwraca skan, a z historii nigdy nic nie znika: ruch i jego cofnięcie zostają w rejestrze. Gdy bus jest pusty, kliknij „Zakończ zwrot”: zobaczysz wszystko, co wciąż jest na zewnątrz, i oznaczysz każdą sztukę jako pozostawioną na obiekcie albo zagubioną, z opcjonalną notatką.',
       },
     ],
   },
@@ -757,7 +774,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     slug: 'crew-scheduling',
     title: 'Planowanie obsady technicznej',
     description: 'Zarządzaj listą ekipy technicznej — pracowników etatowych i freelancerów — przypisuj ich do wydarzeń, generuj karty przygotowania ekipy i przeglądaj kalendarz obsady.',
-    duration: '5 min',
+    duration: '8 min',
     difficulty: 'intermediate',
     category: 'Konfiguracja',
     mode: 'av',
@@ -767,6 +784,10 @@ export const TUTORIALS_PL: Tutorial[] = [
       'Przypisywanie ekipy do wydarzeń z określeniem ról i godzin pracy',
       'Generowanie kart przygotowania ekipy z harmonogramem i listą sprzętu',
       'Przeglądanie kalendarza dostępności ekipy w celu unikania konfliktów',
+      'Co widzi ekipa: godzina zbiórki, obiekt w mapach i dodanie do kalendarza',
+      'Sprzęt pogrupowany i pokolorowany, z opisami i wspólnym odhaczaniem',
+      'Karta ekipy w PDF i dlaczego odhaczenia i skany zostają dwiema liczbami',
+      'Edycja, podmiana i wypisanie z obsady oraz co zawiera karta członka ekipy',
     ],
     steps: [
       {
@@ -790,6 +811,23 @@ export const TUTORIALS_PL: Tutorial[] = [
       {
         title: 'Przeglądaj kalendarz ekipy',
         content: 'Widok kalendarza ekipy technicznej prezentuje wszystkich członków na wspólnej osi czasu z zaznaczonymi ich przypisaniami. Pozwala to błyskawicznie zidentyfikować wolnych techników w danym terminie oraz ocenić obciążenie pracą całego zespołu. Widok jest przydatny przy planowaniu wielu równoległych wydarzeń i optymalizacji wykorzystania zasobów ludzkich.',
+      },
+      {
+        title: 'Co widzi ekipa na swoim linku',
+        content: 'Każda przypisana osoba dostaje własny link. Otwiera się od jej godziny zbiórki, adresu obiektu z przyciskiem otwierającym mapy oraz „Dodaj do kalendarza": prosto do Kalendarza Google albo jako plik dla Apple i Outlooka. Harmonogram jest podany prawdziwymi datami, na przykład „Montaż, pon. 12 paź", a nie numerami dni. Sprzęt jest pogrupowany na „Sprzęt do załadunku", „Druk i materiały zużywalne" oraz „Ludzie i usługi", pokolorowany według kategorii tak samo jak w edytorze oferty, a każdą pozycję można rozwinąć i przeczytać jej pełny opis. Nigdzie nie widać cen dla klienta.',
+      },
+      {
+        title: 'Wspólne odhaczanie pakowania',
+        content: 'Ekipa odhacza pozycje w miarę ładowania, a te odhaczenia są wspólne: każdy, kto ma link do tego zlecenia, widzi ten sam postęp, i widzi go też biuro na stronie zlecenia w Inwentarzu. Pracownicy etatowi nie są już proszeni o akceptowanie zlecenia, na które skierował ich pracodawca, więc ich link po prostu informuje, że są w obsadzie. Freelancerzy nadal potwierdzają lub odmawiają, a ich odpowiedź zapisuje się wraz z datą.',
+      },
+      {
+        title: 'Pobierz kartę ekipy w PDF',
+        content: 'Karta ekipy to jeden dokument do druku, do pobrania ze strony zlecenia w Inwentarzu, z karty przygotowania ekipy oraz z samego linku ekipy. Zawiera dane zbiórki, każdą pozycję z pełnym opisem, kto potwierdził i kiedy, oraz puste linie na podpisy przy przekazaniu. Odhaczenia ekipy i sumy ze skanera stoją obok siebie i nigdy nie są łączone w jedną liczbę: odhaczenie to to, co zaznaczyła ekipa, a skan to to, co fizycznie wyjechało z magazynu.',
+        tip: 'Wydrukuj ją i zbierz podpisy przy przekazaniu. Każdy egzemplarz ma stempel z chwilą utworzenia, więc dwa wydruki tego samego zlecenia da się odróżnić.',
+      },
+      {
+        title: 'Zmień rezerwację osoby',
+        content: 'Edycja przypisania (rola, daty, godzina zbiórki, notatki, kto jest kierownikiem) zachowuje link tej osoby i jej potwierdzenie, a na jej linku pojawia się informacja, co i kiedy się zmieniło, żeby mogła to z Tobą sprawdzić. Podmiana osoby wystawia nowy link i unieważnia stary, więc link poprzednika przestaje działać. Wypisanie z obsady to jeden przycisk. Karta członka ekipy przechowuje teraz także umiejętności i certyfikaty z datami ważności, miasto zamieszkania, informację o prawie jazdy, rozmiar koszulki, kontakt na wypadek nagły i notatki.',
       },
     ],
   },
