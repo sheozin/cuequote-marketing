@@ -2218,7 +2218,8 @@
       "step7": "Ask the crew to tick items off as they load them. The ticks are shared, so the rest of the crew and the office see the same progress on the job page",
       "step8": "Download the crew sheet PDF from the job page, the crew prep card or the crew link itself: call sheet details, the crew's ticks and the scanner's totals side by side, who confirmed and when, every item with its full description, and signature lines for handover",
       "step9": "Edit an assignment and the person keeps their link and their confirmation, with their link showing what changed and when. Swapping the person issues a new link and clears the old one, and unassigning takes one button",
-      "tip": "Crew prep sheets are designed to be printed or shared on mobile — crew members don't need a CueQuote account to view them"
+      "tip": "Crew prep sheets are designed to be printed or shared on mobile — crew members don't need a CueQuote account to view them",
+      "step10": "Split the gear between people: when you assign or edit somebody on a job, choose what they carry — audio, lighting, staging — from the categories that job actually contains. Their link then shows only those items under \"Your gear\", with a line saying how many of the job's items belong to other crew, and their loading progress counts their own list. Choose nothing and they see the whole job, exactly as before"
     },
     "costingMargins": {
       "title": "Costing & Margins",
@@ -2432,7 +2433,9 @@
       "step4": "Watch the status on the job: each freelancer's row reads No contract, Sent, Signed with the date, or Declined. The office sees it beside the person, not on a separate screen",
       "step5": "Set up the NDA: add an NDA template under Terms, then send it from the Crew page with the ⋯ menu on anyone's row, or copy their NDA link and send it yourself. It is signed once and stays signed, so you never ask twice",
       "step6": "Optionally withhold client details: tick 'Withhold client details until the NDA is signed' in Settings. A freelancer who has not signed will not see the client's on-site contact or the scope summary on their sheet, and the page tells them why. It is off until you switch it on",
-      "tip": "Send the NDA when you add someone to your crew list, not when you book them. The point of it is to cover the conversation before the job exists."
+      "tip": "Send the NDA when you add someone to your crew list, not when you book them. The point of it is to cover the conversation before the job exists.",
+      "step7": "Produce the proof: once somebody has signed, the row shows Signed with the date and a Signed record link. It gives you a PDF of the terms exactly as they were signed, followed by who signed, when, from which IP address, on what device, and their signature drawn on the page",
+      "step8": "They get their own copy: the moment a freelancer signs, the same PDF is emailed to the address on their crew record. You do not have to send it, and a copy they received and did not object to strengthens yours"
     }
   },
   "changelog": {

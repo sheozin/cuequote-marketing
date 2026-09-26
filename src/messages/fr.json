@@ -2210,7 +2210,8 @@
       "step7": "Demandez à l'équipe de cocher les lignes au fur et à mesure du chargement. Les coches sont partagées : le reste de l'équipe et le bureau voient la même progression sur la page de la mission",
       "step8": "Téléchargez la fiche d'équipe en PDF depuis la page de la mission, depuis la fiche de préparation ou depuis le lien d'équipe : informations de convocation, coches de l'équipe et totaux du scanner côte à côte, qui a confirmé et quand, chaque ligne avec sa description complète, et des lignes de signature pour la remise",
       "step9": "Après modification d'une affectation, la personne conserve son lien et sa confirmation, et son lien indique ce qui a changé et quand. Remplacer la personne émet un nouveau lien et annule l'ancien, et la retirer tient en un bouton",
-      "tip": "Les fiches de préparation sont conçues pour être imprimées ou partagées sur mobile — les membres de l'équipe n'ont pas besoin d'un compte CueQuote pour les consulter"
+      "tip": "Les fiches de préparation sont conçues pour être imprimées ou partagées sur mobile — les membres de l'équipe n'ont pas besoin d'un compte CueQuote pour les consulter",
+      "step10": "Répartissez le matériel entre les personnes : en affectant ou en modifiant quelqu'un sur un chantier, choisissez ce dont il s'occupe — son, lumière, scène — parmi les catégories réellement présentes. Son lien n'affiche alors que ces postes sous « Votre matériel », avec une ligne indiquant combien de postes reviennent au reste de l'équipe, et sa progression compte sa propre liste. Si vous ne choisissez rien, il voit tout le chantier, comme avant"
     },
     "costingMargins": {
       "title": "Coûts et marges",
@@ -2424,7 +2425,9 @@
       "step4": "Suivez l'état sur le chantier : la ligne de chaque indépendant indique Aucun contrat, Envoyé, Signé avec la date, ou Refusé — à côté de la personne, pas sur un écran à part",
       "step5": "Mettez la NDA en place : ajoutez un modèle de NDA sous Conditions, puis envoyez-la depuis la page Équipe via le menu ⋯ de la ligne, ou copiez son lien NDA et transmettez-le vous-même. Elle se signe une fois et le reste : vous ne demandez jamais deux fois",
       "step6": "Masquez éventuellement les informations client : cochez « Masquer les informations client tant que la NDA n'est pas signée » dans les Paramètres. Un indépendant qui n'a pas signé ne verra ni le contact client sur site ni le résumé de prestation sur sa fiche, et la page lui en donne la raison. Désactivé tant que vous ne l'activez pas",
-      "tip": "Envoyez la NDA au moment où vous ajoutez quelqu'un à votre équipe, pas quand vous le réservez. Elle existe précisément pour couvrir la conversation qui précède le chantier."
+      "tip": "Envoyez la NDA au moment où vous ajoutez quelqu'un à votre équipe, pas quand vous le réservez. Elle existe précisément pour couvrir la conversation qui précède le chantier.",
+      "step7": "Produisez la preuve : dès que quelqu'un a signé, la ligne affiche Signé avec la date et un lien Preuve de signature. Vous obtenez un PDF du texte exactement tel qu'il a été signé, suivi de qui a signé, quand, depuis quelle adresse IP et sur quel appareil, avec la signature tracée sur la page",
+      "step8": "L'indépendant reçoit sa propre copie : au moment où il signe, le même PDF part vers l'adresse de sa fiche. Vous n'avez rien à envoyer, et une copie reçue sans objection renforce la vôtre"
     }
   },
   "changelog": {

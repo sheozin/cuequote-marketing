@@ -2182,7 +2182,8 @@
       "step7": "Poproś ekipę o odhaczanie pozycji w miarę ładowania. Odhaczenia są wspólne, więc reszta ekipy i biuro widzą ten sam postęp na stronie zlecenia",
       "step8": "Pobierz kartę ekipy w PDF ze strony zlecenia, z karty przygotowania ekipy albo z samego linku ekipy: dane zbiórki, odhaczenia ekipy i sumy ze skanera obok siebie, kto potwierdził i kiedy, każda pozycja z pełnym opisem oraz linie na podpisy przy przekazaniu",
       "step9": "Po edycji przypisania osoba zachowuje swój link i potwierdzenie, a na jej linku widać, co i kiedy się zmieniło. Podmiana osoby wystawia nowy link i unieważnia stary, a wypisanie z obsady to jeden przycisk",
-      "tip": "Arkusze przygotowawcze ekipy są zaprojektowane do drukowania lub przeglądania na urządzeniach mobilnych — członkowie ekipy nie potrzebują konta CueQuote, aby je wyświetlić"
+      "tip": "Arkusze przygotowawcze ekipy są zaprojektowane do drukowania lub przeglądania na urządzeniach mobilnych — członkowie ekipy nie potrzebują konta CueQuote, aby je wyświetlić",
+      "step10": "Podziel sprzęt między osoby: przypisując lub edytując kogoś na zleceniu, wybierz, za co odpowiada — dźwięk, światło, scenę — spośród kategorii faktycznie obecnych na zleceniu. Jego link pokaże wtedy tylko te pozycje pod nagłówkiem „Twój sprzęt”, z informacją, ile pozycji należy do innych osób, a postęp ładowania liczy jego własną listę. Nic nie wybierasz — widzi całe zlecenie, tak jak dotąd"
     },
     "costingMargins": {
       "title": "Koszty i marże",
@@ -2396,7 +2397,9 @@
       "step4": "Śledź status na zleceniu: wiersz każdego freelancera pokazuje Brak umowy, Wysłano, Podpisano z datą albo Odrzucona. Biuro widzi to przy osobie, a nie na osobnym ekranie",
       "step5": "Przygotuj NDA: dodaj szablon NDA w Warunkach, a potem wyślij je ze strony Ekipa z menu ⋯ przy dowolnej osobie albo skopiuj jej link do NDA i wyślij samodzielnie. Podpisuje się raz i pozostaje podpisane, więc nigdy nie pytasz drugi raz",
       "step6": "Opcjonalnie ukryj dane klienta: zaznacz „Ukryj dane klienta do czasu podpisania NDA” w Ustawieniach. Freelancer, który nie podpisał, nie zobaczy kontaktu klienta na miejscu ani opisu zakresu na swojej karcie, a strona wyjaśni mu dlaczego. Domyślnie jest to wyłączone",
-      "tip": "Wyślij NDA, gdy dodajesz kogoś do listy ekipy, a nie gdy go rezerwujesz. Chodzi właśnie o rozmowę, która odbywa się, zanim zlecenie powstanie."
+      "tip": "Wyślij NDA, gdy dodajesz kogoś do listy ekipy, a nie gdy go rezerwujesz. Chodzi właśnie o rozmowę, która odbywa się, zanim zlecenie powstanie.",
+      "step7": "Przygotuj dowód: gdy ktoś podpisze, w wierszu pojawia się Podpisano z datą oraz link Zapis podpisu. Otrzymasz PDF z treścią dokładnie w brzmieniu podpisanym, a pod nią informację, kto podpisał, kiedy, z jakiego adresu IP i na jakim urządzeniu, wraz z narysowanym podpisem",
+      "step8": "Freelancer dostaje własną kopię: w chwili podpisania ten sam PDF trafia e-mailem na adres z jego karty. Nie musisz nic wysyłać, a kopia, którą otrzymał i której nie zakwestionował, wzmacnia Twój dowód"
     }
   },
   "changelog": {
