@@ -62,7 +62,7 @@ const SECTIONS = [
   {
     id: "third-party",
     title: "4. Third-Party Services",
-    content: `CueQuote uses the following third-party services: Supabase (database & authentication), Stripe (payment processing), Vercel (hosting), and Anthropic (AI proposal generation). Each service has its own privacy policy and processes data according to their terms.`,
+    content: `CueQuote uses the following third-party services: Supabase (database & authentication), Stripe (payment processing), Vercel (hosting), Anthropic (AI proposal generation), and Cloudflare (the security check on the signup page). Each service has its own privacy policy and processes data according to their terms.`,
   },
   {
     id: "ai-content",
@@ -82,7 +82,7 @@ const SECTIONS = [
   {
     id: "data-retention",
     title: "8. Data Retention",
-    content: `We retain your account data for as long as your account is active. If you delete your account, we will delete your personal data within 30 days, except where we are required to retain it for legal or compliance purposes.`,
+    content: `We retain your account data for as long as your account is active. If you delete your account, we will delete your personal data within 30 days, except where we are required to retain it for legal or compliance purposes. When you sign up, we record the IP address and browser you signed up from to protect CueQuote and its users against fraud and abuse. These are deleted automatically after 30 days.`,
   },
   {
     id: "changes",
@@ -125,7 +125,7 @@ export default function PrivacyPage() {
             How we collect, use, and protect your data at CueQuote.
           </p>
           <p style={{ fontSize: 14, color: "#6b7280" }}>
-            Last updated: March 16, 2026
+            Last updated: September 30, 2026
           </p>
         </div>
       </section>
