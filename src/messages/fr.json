@@ -1902,7 +1902,8 @@
       "step3": "L'IA de CueQuote génère une liste complète d'équipements avec quantités et prix",
       "step4": "Vérifiez et modifiez : ajoutez, supprimez ou ajustez les lignes",
       "step5": "Téléchargez en PDF à votre marque ou partagez via un lien unique",
-      "tip": "Utilisez la fonction de lien de partage pour permettre aux clients de consulter les devis en ligne — ils peuvent approuver directement depuis le lien."
+      "tip": "Utilisez la fonction de lien de partage pour permettre aux clients de consulter les devis en ligne — ils peuvent approuver directement depuis le lien.",
+      "content3": "Chaque ligne a une colonne Jours. Le total d'une ligne est quantité × prix unitaire × jours : le prix unitaire reste votre tarif journalier du catalogue, et changer la durée de location revient à modifier un seul chiffre. Les jours de montage ou de démontage facturés à un tarif réduit s'affichent en décimal, par exemple 2,5 pour deux jours d'événement et un jour de montage à demi-tarif. Dans le PDF, le lien de partage et les factures, la colonne Jours n'apparaît que si au moins une ligne dure plus d'une journée."
     },
     "equipmentCatalog": {
       "title": "Catalogue d'équipements",

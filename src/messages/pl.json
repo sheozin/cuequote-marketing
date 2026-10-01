@@ -1874,7 +1874,8 @@
       "step3": "AI CueQuote generuje kompletną listę sprzętu z ilościami i cenami",
       "step4": "Przejrzyj i edytuj: dodaj, usuń lub zmień dowolne pozycje",
       "step5": "Pobierz jako markowy PDF lub udostępnij przez unikalny link",
-      "tip": "Użyj funkcji linku udostępniania, aby klienci mogli przeglądać oferty online — mogą zatwierdzić je bezpośrednio z linku."
+      "tip": "Użyj funkcji linku udostępniania, aby klienci mogli przeglądać oferty online — mogą zatwierdzić je bezpośrednio z linku.",
+      "content3": "Każda pozycja ma kolumnę Dni. Wartość pozycji to ilość × cena jednostkowa × dni, więc cena jednostkowa pozostaje Twoją dzienną stawką z katalogu, a zmiana czasu wynajmu to zmiana jednej liczby. Dni montażu lub demontażu liczone po obniżonej stawce widać jako ułamek, na przykład 2,5 dla dwóch dni wydarzenia i jednego dnia montażu za połowę stawki. W PDF, w linku udostępniania i na fakturach kolumna Dni pojawia się tylko wtedy, gdy co najmniej jedna pozycja trwa dłużej niż jeden dzień."
     },
     "equipmentCatalog": {
       "title": "Katalog sprzętu",

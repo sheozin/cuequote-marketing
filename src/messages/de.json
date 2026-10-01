@@ -1900,7 +1900,8 @@
       "step3": "CueQuotes KI generiert eine vollständige Ausrüstungsliste mit Mengen und Preisen",
       "step4": "Überprüfen und bearbeiten: Positionen hinzufügen, entfernen oder anpassen",
       "step5": "Als gebrandetes PDF herunterladen oder über einen einzigartigen Link teilen",
-      "tip": "Nutzen Sie die Teilen-Link-Funktion, damit Kunden Angebote online einsehen können — sie können direkt über den Link genehmigen."
+      "tip": "Nutzen Sie die Teilen-Link-Funktion, damit Kunden Angebote online einsehen können — sie können direkt über den Link genehmigen.",
+      "content3": "Jede Position hat eine Spalte Tage. Der Positionsbetrag ist Menge × Einzelpreis × Tage, sodass der Einzelpreis Ihr Tagessatz aus dem Katalog bleibt und eine längere Miete nur eine Zahl ändert. Auf- oder Abbautage zu einem reduzierten Satz erscheinen als Dezimalzahl, zum Beispiel 2,5 für zwei Veranstaltungstage plus einen Aufbautag zum halben Satz. Im PDF, im Freigabelink und auf Rechnungen erscheint die Spalte Tage nur, wenn mindestens eine Position länger als einen Tag läuft."
     },
     "equipmentCatalog": {
       "title": "Ausrüstungskatalog",

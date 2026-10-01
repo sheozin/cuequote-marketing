@@ -116,7 +116,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Fine-tune in the editor',
-        content: 'The editor has two tabs: "Equipment" for line items (edit quantities, prices, add/remove rows) and "Terms & Details" for inclusions, exclusions, payment schedule, and T&C. Everything the AI generated is fully editable — treat it as a smart starting point, not the final product.',
+        content: 'The editor has two tabs: "Equipment" for line items (edit quantities, days, prices, add/remove rows) and "Terms & Details" for inclusions, exclusions, payment schedule, and T&C. Each line\'s total is quantity × unit price × days, so to hire an item for longer you change its Days, not its price. Everything the AI generated is fully editable: treat it as a smart starting point, not the final product.',
       },
     ],
   },

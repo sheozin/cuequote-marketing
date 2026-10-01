@@ -1910,7 +1910,8 @@
       "step3": "CueQuote's AI generates a complete equipment list with quantities and pricing",
       "step4": "Review and edit: add, remove, or adjust any line items",
       "step5": "Download as a branded PDF or share via a unique link",
-      "tip": "Use the share link feature to let clients view proposals online — they can approve directly from the link."
+      "tip": "Use the share link feature to let clients view proposals online — they can approve directly from the link.",
+      "content3": "Every line has a Days column. A line's total is quantity × unit price × days, so the unit price stays your catalogue daily rate and changing how long an item is hired means changing one number. Setup or strike days charged at a reduced rate show as a decimal, for example 2.5 for two show days plus one setup day at half rate. On the PDF, the share link and invoices, the Days column only appears when at least one item runs longer than a day."
     },
     "equipmentCatalog": {
       "title": "Equipment Catalog",

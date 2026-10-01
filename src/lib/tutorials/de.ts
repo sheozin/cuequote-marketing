@@ -116,7 +116,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Im Editor feinjustieren',
-        content: 'Der Editor hat zwei Tabs: "Equipment" für Positionen (Mengen und Preise bearbeiten, Zeilen hinzufügen/entfernen) und "Bedingungen & Details" für Einschlüsse, Ausschlüsse, Zahlungsplan und AGB. Alles, was die KI erzeugt hat, ist vollständig editierbar — betrachten Sie es als intelligenten Ausgangspunkt, nicht als Endprodukt.',
+        content: 'Der Editor hat zwei Tabs: "Equipment" für Positionen (Mengen, Tage und Preise bearbeiten, Zeilen hinzufügen/entfernen) und "Bedingungen & Details" für Einschlüsse, Ausschlüsse, Zahlungsplan und AGB. Der Positionsbetrag ist Menge × Einzelpreis × Tage: Wenn Sie etwas länger mieten, ändern Sie die Tage, nicht den Preis. Alles, was die KI erzeugt hat, ist vollständig editierbar: Betrachten Sie es als intelligenten Ausgangspunkt, nicht als Endprodukt.',
       },
     ],
   },

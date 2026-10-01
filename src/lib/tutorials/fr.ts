@@ -116,7 +116,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Affinez dans l\'éditeur',
-        content: 'L\'éditeur comporte deux onglets : « Équipement » pour les lignes (modifier les quantités, les prix, ajouter/supprimer des lignes) et « Conditions et détails » pour les inclusions, les exclusions, l\'échéancier de paiement et les CGV. Tout ce que l\'IA a généré est entièrement modifiable — considérez-le comme un point de départ intelligent, et non comme le produit final.',
+        content: 'L\'éditeur comporte deux onglets : « Équipement » pour les lignes (modifier les quantités, les jours, les prix, ajouter/supprimer des lignes) et « Conditions et détails » pour les inclusions, les exclusions, l\'échéancier de paiement et les CGV. Le total d\'une ligne est quantité × prix unitaire × jours : pour louer un article plus longtemps, vous modifiez ses jours, pas son prix. Tout ce que l\'IA a généré est entièrement modifiable : considérez-le comme un point de départ intelligent, et non comme le produit final.',
       },
     ],
   },

@@ -116,7 +116,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Dopracuj w edytorze',
-        content: 'Edytor ma dwie zakładki: „Sprzęt” dla pozycji (edycja ilości, cen, dodawanie/usuwanie wierszy) oraz „Warunki i szczegóły” dla tego, co jest w cenie, wykluczeń, harmonogramu płatności i regulaminu. Wszystko, co wygenerowało AI, jest w pełni edytowalne — traktuj to jako inteligentny punkt wyjścia, nie produkt końcowy.',
+        content: 'Edytor ma dwie zakładki: „Sprzęt” dla pozycji (edycja ilości, dni, cen, dodawanie/usuwanie wierszy) oraz „Warunki i szczegóły” dla tego, co jest w cenie, wykluczeń, harmonogramu płatności i regulaminu. Wartość pozycji to ilość × cena jednostkowa × dni, więc aby wynająć coś na dłużej, zmieniasz liczbę dni, a nie cenę. Wszystko, co wygenerowało AI, jest w pełni edytowalne: traktuj to jako inteligentny punkt wyjścia, nie produkt końcowy.',
       },
     ],
   },
