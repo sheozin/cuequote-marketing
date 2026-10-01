@@ -106,7 +106,10 @@ export default async function BlogPostPage({
 
   const nonGlossaryParagraphs = contentArray.filter((p, i) => i % 2 === 0 && !isGlossaryParagraph(p) && !p.startsWith('[IMAGE:'));
   const normalTakeaways = nonGlossaryParagraphs.slice(0, 5).map(p => {
-    const firstSentence = p.match(/^[^.!?]+[.!?]/)?.[0] || p.slice(0, 120) + '...';
+    // A sentence ends at . ! ? followed by a space or the end, so a decimal
+    // ("Version 1.57", "2.5 days") does not cut it off: the v1.57 post's first
+    // takeaway rendered as "Version 1.".
+    const firstSentence = p.match(/^[\s\S]+?[.!?](?=\s|$)/)?.[0] || p.slice(0, 120) + '...';
     return firstSentence;
   });
 
