@@ -511,6 +511,20 @@
     "api": "API & Integrationen"
   },
   "posts": {
+    "cuequote-v157-whats-new": {
+      "title": "CueQuote 1.57: Eine Spalte Tage für jede Position",
+      "excerpt": "Angebots- und Rechnungspositionen haben jetzt ein Feld Tage. Der Einzelpreis bleibt Ihr Tagessatz, und längere Mieten ändern nur eine Zahl.",
+      "readTime": "4 Min. Lesezeit",
+      "content": [
+        "Version 1.57 fügt den Positionen in Angeboten und Rechnungen eine Spalte hinzu: Tage. Das klingt klein, behebt aber genau das, was mehrtägige Angebote mühsam zu bearbeiten machte, und es ändert, wie die KI sie kalkuliert.",
+        "[IMAGE:/blog/cuequote-v1-57-days-column-proposals-invoices.jpg|CueQuote 1.57: eine Spalte Tage in Angebots- und Rechnungspositionen, Betrag als Menge × Einzelpreis × Tage]",
+        "Bisher steckte die Anzahl der Tage im Preis. Ein Mischpult für 800 pro Tag auf einer dreitägigen Veranstaltung hatte einen Einzelpreis von 2.400, und die Rechnung mit den Tagen stand in der Beschreibung. Der Preis passte nicht mehr zum Katalog, und wenn der Kunde einen Tag hinzufügte, mussten Sie Preis und Beschreibung von Hand neu rechnen und schreiben. Jetzt hat jede Position ein eigenes Feld Tage, und der Betrag ist Menge × Einzelpreis × Tage. Der Einzelpreis bleibt Ihr Tagessatz, und eine längere Miete ist eine einzige Zahl.",
+        "Auf- und Abbautage werden oft zu einem reduzierten Satz berechnet, und das funktioniert weiterhin. Zwei Veranstaltungstage plus ein Aufbautag zum halben Satz werden als 2,5 Tage in derselben Position erfasst, sodass Equipment nie doppelt erscheint und Packlisten und Lagerreservierungen jedes Teil weiterhin einmal zählen. Personal wird für jeden Tag berechnet, ein Techniker bei einer zweitägigen Veranstaltung mit Aufbautag steht also bei 3.",
+        "Ihre Kunden sehen die Spalte nur, wenn sie zählt. Im Angebots-PDF, im Freigabelink, im Rechnungs-PDF und im Excel-Export erscheint Tage nur, wenn mindestens eine Position länger als einen Tag läuft. Eine eintägige Veranstaltung sieht genau so aus wie bisher. In Ihren eigenen Editoren ist das Feld immer da, damit Sie aus einer 1 eine 3 machen können, sobald sich der Plan ändert.",
+        "Die KI füllt die Tage jetzt für Sie aus. Beim Erstellen eines Angebots nimmt sie Ihren Katalogpreis als Tagessatz und berechnet die Tage aus den eingegebenen Veranstaltungs-, Auf- und Abbautagen, sodass Beschreibungen wieder das Equipment beschreiben statt Rechenwege zu enthalten. Die Tage werden außerdem überall mitgenommen, wo eine Position kopiert wird: neue Versionen, Rechnungen aus einem Angebot, in Rechnungen umgewandelte Proformas, wiederkehrende Angebote und Korrekturrechnungen.",
+        "Dadurch werden Margen ehrlicher. Einkaufspreise werden jetzt ebenfalls pro Tag gerechnet, sodass eine mehrtägige Position nicht mehr profitabler wirkt, als sie ist. Bestehende Angebote und Rechnungen bleiben unverändert: Jede Position, die vor diesem Release erstellt wurde, zählt als ein Tag, und ihre Tage stecken weiterhin genau wie vorher im Preis."
+      ]
+    },
     "qr-code-equipment-labels-av-rental": {
       "title": "QR-Etiketten für Technik von AV-Verleihern",
       "excerpt": "Jedes AV-Gerät mit Anlagennummer und QR-Etikett: was Sie einzeln erfassen, welche Etikettengrößen Sie drucken und was Fremde beim Scannen sehen.",

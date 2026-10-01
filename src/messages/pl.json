@@ -511,6 +511,20 @@
     "api": "API i integracje"
   },
   "posts": {
+    "cuequote-v157-whats-new": {
+      "title": "CueQuote 1.57: kolumna Dni przy każdej pozycji",
+      "excerpt": "Pozycje ofert i faktur mają teraz pole Dni. Cena jednostkowa pozostaje stawką dzienną, a dłuższy wynajem to zmiana jednej liczby.",
+      "readTime": "4 min czytania",
+      "content": [
+        "Wersja 1.57 dodaje do pozycji w ofertach i fakturach jedną kolumnę: Dni. Brzmi skromnie, ale rozwiązuje to, co utrudniało edycję wielodniowych wycen, i zmienia sposób, w jaki AI je wycenia.",
+        "[IMAGE:/blog/cuequote-v1-57-days-column-proposals-invoices.jpg|CueQuote 1.57: kolumna Dni w pozycjach ofert i faktur, wartość jako ilość × cena jednostkowa × dni]",
+        "Do tej pory liczba dni była ukryta w cenie. Mikser za 800 dziennie na trzydniowym wydarzeniu miał cenę jednostkową 2400, a rachunek dni był wpisany w opis. Cena nie zgadzała się z katalogiem, a gdy klient dodawał dzień, trzeba było ręcznie przeliczyć cenę i przepisać opis. Teraz każda pozycja ma własne pole Dni, a wartość to ilość × cena jednostkowa × dni. Cena jednostkowa pozostaje stawką dzienną, a zmiana czasu wynajmu to jedna liczba.",
+        "Dni montażu i demontażu często liczy się po obniżonej stawce i to nadal działa. Dwa dni wydarzenia i jeden dzień montażu za połowę stawki wpisujesz jako 2,5 dnia w tej samej pozycji, więc sprzęt nigdy nie pojawia się dwa razy, a listy pakowania i rezerwacje magazynowe liczą każdy element raz. Ekipa jest rozliczana za każdy dzień, więc technik na dwudniowym wydarzeniu z dniem montażu ma 3.",
+        "Klient widzi kolumnę tylko wtedy, gdy ma to znaczenie. W PDF oferty, w linku udostępniania, w PDF faktury i w eksporcie do Excela kolumna Dni pojawia się tylko wtedy, gdy co najmniej jedna pozycja trwa dłużej niż jeden dzień. Jednodniowe wydarzenie wygląda dokładnie tak jak wcześniej. W Twoich edytorach pole jest zawsze widoczne, więc gdy plan się zmienia, zamieniasz 1 na 3.",
+        "AI uzupełnia teraz Dni za Ciebie. Tworząc ofertę, bierze cenę z katalogu jako stawkę dzienną i wylicza dni z podanych dni wydarzenia, montażu i demontażu, więc opisy znów opisują sprzęt zamiast zawierać obliczenia. Dni są też przenoszone wszędzie, gdzie pozycja jest kopiowana: do nowych wersji, faktur tworzonych z oferty, proform zamienianych na faktury, ofert cyklicznych i faktur korygujących.",
+        "Dzięki temu marże są uczciwsze. Ceny kosztowe również liczone są teraz za dzień, więc wielodniowa pozycja nie wygląda na bardziej opłacalną, niż jest. Istniejące oferty i faktury się nie zmieniają: każda pozycja utworzona przed tą wersją liczy się jako jeden dzień, a jej dni pozostają w cenie dokładnie jak wcześniej."
+      ]
+    },
     "qr-code-equipment-labels-av-rental": {
       "title": "Etykiety QR na sprzęt dla wypożyczalni AV",
       "excerpt": "Nadaj każdemu egzemplarzowi sprzętu AV numer i etykietę QR: co śledzić sztuka po sztuce, jakie rozmiary etykiet drukować i co widzi obca osoba po zeskanowaniu.",

@@ -511,6 +511,20 @@
     "api": "API & integrations"
   },
   "posts": {
+    "cuequote-v157-whats-new": {
+      "title": "CueQuote 1.57: A Days Column on Every Line",
+      "excerpt": "Proposal and invoice lines now have a Days field. The unit price stays your daily rate, and hiring gear for longer means changing one number.",
+      "readTime": "4 min read",
+      "content": [
+        "Version 1.57 adds one column to the line items on proposals and invoices: Days. It sounds small, but it fixes the thing that made multi-day quotes messy to edit, and it changes how the AI prices them.",
+        "[IMAGE:/blog/cuequote-v1-57-days-column-proposals-invoices.jpg|CueQuote 1.57: a Days column on proposal and invoice lines, with the total as quantity × unit price × days]",
+        "Until now, the number of days lived inside the price. An 800-a-day mixer on a three-day event showed a unit price of 2,400, with the day maths written into the description. The price no longer matched your catalogue, and if the client added a day you had to recalculate the price and rewrite the description by hand. Now every line has its own Days field, and the total is quantity × unit price × days. The unit price stays your daily rate, and changing how long something is hired is one number.",
+        "Setup and strike days are often charged at a reduced rate, and that still works. Two show days plus one setup day at half rate is entered as 2.5 days on the same line, so equipment is never listed twice and your pack lists and inventory reservations keep counting each item once. Crew are charged for every day, so a technician on a two-day event with a setup day shows 3.",
+        "Your clients only see the column when it matters. On the proposal PDF, the share link, the invoice PDF and the Excel export, Days appears only when at least one item runs longer than a single day. A one-day event looks exactly as it did before. In your own editors the field is always there, so you can turn a 1 into a 3 whenever the plan changes.",
+        "The AI now fills Days in for you. When it builds a proposal it uses your catalogue price as the daily rate and works out the days from the event, setup and strike days you entered, so descriptions go back to describing the equipment instead of carrying arithmetic. Days also carries through everywhere a line is copied: new versions, invoices created from a proposal, proformas converted to invoices, recurring proposals and correction invoices.",
+        "Margins are more honest as a result. Cost prices are now counted per day as well, so a multi-day item no longer looks more profitable than it is. Existing proposals and invoices are unchanged: every line created before this release counts as one day, with its days still included in the price exactly as before."
+      ]
+    },
     "qr-code-equipment-labels-av-rental": {
       "title": "QR Code Equipment Labels for AV Rental Companies",
       "excerpt": "Give every piece of AV gear an asset number and a QR label: what to track unit by unit, which label sizes to print, and what a stranger sees when they scan.",

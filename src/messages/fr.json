@@ -511,6 +511,20 @@
     "api": "API et intégrations"
   },
   "posts": {
+    "cuequote-v157-whats-new": {
+      "title": "CueQuote 1.57 : une colonne Jours sur chaque ligne",
+      "excerpt": "Les lignes des propositions et des factures ont un champ Jours. Le prix unitaire reste votre tarif journalier : louer plus longtemps, c'est un chiffre.",
+      "readTime": "4 min de lecture",
+      "content": [
+        "La version 1.57 ajoute une colonne aux lignes des propositions et des factures : Jours. Cela paraît modeste, mais cela corrige ce qui rendait les devis sur plusieurs jours pénibles à modifier, et cela change la façon dont l'IA les chiffre.",
+        "[IMAGE:/blog/cuequote-v1-57-days-column-proposals-invoices.jpg|CueQuote 1.57 : une colonne Jours sur les lignes des propositions et des factures, total égal à quantité × prix unitaire × jours]",
+        "Jusqu'ici, le nombre de jours était caché dans le prix. Une console à 800 par jour sur un événement de trois jours affichait un prix unitaire de 2 400, avec le calcul des jours écrit dans la description. Le prix ne correspondait plus à votre catalogue, et si le client ajoutait un jour, il fallait recalculer le prix et réécrire la description à la main. Désormais, chaque ligne a son propre champ Jours, et le total est quantité × prix unitaire × jours. Le prix unitaire reste votre tarif journalier, et changer la durée de location tient en un chiffre.",
+        "Les jours de montage et de démontage sont souvent facturés à un tarif réduit, et cela fonctionne toujours. Deux jours d'événement plus un jour de montage à demi-tarif se saisissent comme 2,5 jours sur la même ligne : le matériel n'apparaît jamais deux fois, et vos listes de chargement et réservations de stock comptent chaque article une seule fois. L'équipe est facturée pour chaque jour, donc un technicien sur un événement de deux jours avec un jour de montage affiche 3.",
+        "Vos clients ne voient la colonne que lorsqu'elle compte. Dans le PDF de la proposition, le lien de partage, le PDF de la facture et l'export Excel, Jours n'apparaît que si au moins une ligne dure plus d'une journée. Un événement d'un jour s'affiche exactement comme avant. Dans vos propres éditeurs, le champ est toujours là, pour transformer un 1 en 3 dès que le planning change.",
+        "L'IA remplit désormais les jours pour vous. En construisant une proposition, elle prend le prix de votre catalogue comme tarif journalier et calcule les jours à partir des jours d'événement, de montage et de démontage saisis, si bien que les descriptions décrivent à nouveau le matériel au lieu de porter des calculs. Les jours suivent aussi partout où une ligne est copiée : nouvelles versions, factures créées depuis une proposition, proformas converties en factures, propositions récurrentes et factures rectificatives.",
+        "Les marges deviennent plus honnêtes. Les prix de revient sont désormais comptés par jour eux aussi, si bien qu'une ligne sur plusieurs jours ne paraît plus plus rentable qu'elle ne l'est. Les propositions et factures existantes ne changent pas : chaque ligne créée avant cette version compte pour un jour, avec ses jours toujours inclus dans le prix exactement comme avant."
+      ]
+    },
     "qr-code-equipment-labels-av-rental": {
       "title": "Étiquettes QR pour le matériel des loueurs AV",
       "excerpt": "Un numéro d'inventaire et une étiquette QR pour chaque équipement AV : que suivre unité par unité, quels formats imprimer, et ce que voit un inconnu qui scanne.",
