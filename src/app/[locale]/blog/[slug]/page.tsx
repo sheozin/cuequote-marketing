@@ -347,9 +347,10 @@ export default async function BlogPostPage({
             <div style={{
               borderTop: "1px solid #e5e7eb", marginTop: 56, paddingTop: 32,
               display: "flex", alignItems: "center", justifyContent: "space-between",
+              flexWrap: "wrap", gap: 16,
             }}>
               <Link href="/blog" style={{
-                display: "inline-flex", alignItems: "center", gap: 6,
+                display: "inline-flex", alignItems: "center", gap: 6, whiteSpace: "nowrap",
                 fontSize: 14, fontWeight: 600, color: "#10b981", textDecoration: "none",
               }}>
                 <ArrowLeft size={14} /> {t("allPosts")}
@@ -415,7 +416,7 @@ export default async function BlogPostPage({
               </div>
             </Link>
 
-            <div style={{
+            <div className="sidebar-share" style={{
               background: "#f9fafb", borderRadius: 12, padding: 20,
               marginBottom: 24, textAlign: "center",
             }}>
@@ -511,6 +512,7 @@ export default async function BlogPostPage({
           .blog-grid { grid-template-columns: 1fr !important; }
           .blog-sidebar { position: static !important; }
           .sidebar-sticky { position: static !important; }
+          .sidebar-share { display: none; }
           section:first-of-type h1 { font-size: 28px !important; }
           section:first-of-type > div > p { font-size: 15px !important; }
           .related-grid { grid-template-columns: 1fr !important; }

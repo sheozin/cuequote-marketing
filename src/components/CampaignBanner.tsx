@@ -99,14 +99,14 @@ export default function CampaignBanner() {
       // 2. Social Proof
       if (companiesTotal > 0) {
         const texts: Record<string, string> = {
-          en: `Trusted by ${companiesTotal}+ event professionals — AV companies, planners & producers across ${countriesCount} countries`,
-          pl: `Zaufanie ${companiesTotal}+ profesjonalistów eventowych — firmy AV, organizatorzy i producenci w ${countriesCount} krajach`,
-          ar: `موثوق من ${companiesTotal}+ محترف فعاليات — شركات AV ومنظمين ومنتجين في ${countriesCount} دولة`,
-          de: `Vertraut von ${companiesTotal}+ Event-Profis — AV-Firmen, Planer & Produzenten in ${countriesCount} Ländern`,
-          fr: `Adopté par ${companiesTotal}+ pros de l'événementiel — sociétés AV, planificateurs & producteurs dans ${countriesCount} pays`,
+          en: `Trusted by ${companiesTotal}+ event professionals: AV companies, planners & producers across ${countriesCount} countries`,
+          pl: `Zaufanie ${companiesTotal}+ profesjonalistów eventowych: firmy AV, organizatorzy i producenci w ${countriesCount} krajach`,
+          ar: `موثوق من ${companiesTotal}+ محترف فعاليات: شركات AV ومنظمين ومنتجين في ${countriesCount} دولة`,
+          de: `Vertraut von ${companiesTotal}+ Event-Profis: AV-Firmen, Planer & Produzenten in ${countriesCount} Ländern`,
+          fr: `Adopté par ${companiesTotal}+ pros de l'événementiel : sociétés AV, planificateurs & producteurs dans ${countriesCount} pays`,
         }
         const ctas: Record<string, string> = {
-          en: 'Join them — Free →', pl: 'Dołącz do nich →', ar: 'انضم إليهم ←',
+          en: 'Join them free →', pl: 'Dołącz do nich →', ar: 'انضم إليهم ←',
           de: 'Jetzt beitreten →', fr: 'Rejoignez-les →',
         }
         bars.push({
@@ -121,11 +121,11 @@ export default function CampaignBanner() {
       // 3. Promo Discount
       if (promoCode) {
         const texts: Record<string, string> = {
-          en: `Launch Special — ${discountPct}% off all plans for 3 months · Code:`,
-          pl: `Oferta startowa — ${discountPct}% zniżki na 3 miesiące · Kod:`,
-          ar: `عرض الإطلاق — خصم ${discountPct}% لمدة 3 أشهر · الرمز:`,
-          de: `Start-Angebot — ${discountPct}% Rabatt für 3 Monate · Code:`,
-          fr: `Offre de lancement — ${discountPct}% de réduction pendant 3 mois · Code :`,
+          en: `Launch Special: ${discountPct}% off all plans for 3 months · Code:`,
+          pl: `Oferta startowa: ${discountPct}% zniżki na 3 miesiące · Kod:`,
+          ar: `عرض الإطلاق: خصم ${discountPct}% لمدة 3 أشهر · الرمز:`,
+          de: `Start-Angebot: ${discountPct}% Rabatt für 3 Monate · Code:`,
+          fr: `Offre de lancement : ${discountPct}% de réduction pendant 3 mois · Code :`,
         }
         const ctas: Record<string, string> = {
           en: 'Claim offer →', pl: 'Odbierz →', ar: 'احصل على العرض ←',
@@ -172,7 +172,7 @@ export default function CampaignBanner() {
           fr: '5 devis/mois × 4h = 20h à chiffrer au lieu de produire des événements. Automatisez.',
         }
         const ctas: Record<string, string> = {
-          en: 'Try free — 2 min setup →', pl: 'Wypróbuj za darmo →', ar: 'جرب مجانا ←',
+          en: 'Try free: 2 min setup →', pl: 'Wypróbuj za darmo →', ar: 'جرب مجانا ←',
           de: 'Kostenlos testen →', fr: 'Essayez gratuitement →',
         }
         bars.push({
