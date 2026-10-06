@@ -116,7 +116,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Im Editor feinjustieren',
-        content: 'Der Editor hat zwei Tabs: "Equipment" für Positionen (Mengen, Tage und Preise bearbeiten, Zeilen hinzufügen/entfernen) und "Bedingungen & Details" für Einschlüsse, Ausschlüsse, Zahlungsplan und AGB. Der Positionsbetrag ist Menge × Einzelpreis × Tage: Wenn Sie etwas länger mieten, ändern Sie die Tage, nicht den Preis. Alles, was die KI erzeugt hat, ist vollständig editierbar: Betrachten Sie es als intelligenten Ausgangspunkt, nicht als Endprodukt.',
+        content: 'Der Editor hat zwei Tabs: "Equipment" für Positionen (Mengen, Tage und Preise bearbeiten, Zeilen hinzufügen/entfernen) und "Bedingungen & Details" für Einschlüsse, Ausschlüsse, Zahlungsplan und AGB. Der Positionsbetrag ist Menge × Einzelpreis × Tage: Wenn Sie etwas länger mieten, ändern Sie die Tage, nicht den Preis. Alles, was die KI erzeugt hat, ist vollständig editierbar: Betrachten Sie es als intelligenten Ausgangspunkt, nicht als Endprodukt. Für einen Rabatt auf eine Position tragen Sie einen Prozentsatz unter Rabatt % ein: Der Einzelpreis bleibt Ihr Katalogpreis und der Kunde sieht den Rabatt.',
       },
     ],
   },
@@ -556,6 +556,11 @@ export const TUTORIALS_DE: Tutorial[] = [
         title: 'Eine Proforma erstellen, wenn es kein Angebot gibt',
         content: 'Eine Proforma fordert Zahlung, ohne eine Steuerrechnung zu sein, genau das Richtige für eine Anzahlung auf telefonisch vereinbarte Arbeit. Klicken Sie auf der Rechnungsseite auf Neue Proforma und füllen Sie sie aus wie eine Rechnung. Sie erhält eine eigene PI-Nummer, damit Ihre INV-Serie lückenlos bleibt, sie verweigert Zahlungen und wird nie an KSeF übermittelt. Bestätigt der Kunde, erstellt In Rechnung umwandeln eine echte Rechnung mit der nächsten Nummer Ihrer Serie und dem heutigen Datum und hält die Proforma damit verknüpft.',
         tip: 'Wandeln Sie bei der Bestätigung um, nicht beim Versand. Der Steuerzeitpunkt ist die Zusage des Kunden, und ein zu frühes Umwandeln vergibt eine Nummer für Arbeit, die vielleicht nicht stattfindet.',
+      },
+      {
+        title: "Rechnungswährung wählen",
+        content: "Jede Rechnung und Proforma hat eine eigene Währung, festgelegt unter Details. Sie beginnt mit der Standardwährung aus den Einstellungen, aber Sie können für ein Dokument eine andere wählen, ohne Ihren Standard zu ändern, etwa USD für einen Kunden, während Ihre Buchhaltung in EGP bleibt. Im Entwurf können Sie sie noch ändern: CueQuote zeigt jede Position zum heutigen Kurs umgerechnet und ändert nichts, bevor Sie bestätigen. Eine aus einem Angebot erstellte Rechnung behält dessen Währung, ändern Sie also das Angebot.",
+        tip: "Wählen Sie die Währung, bevor Sie Positionen hinzufügen. Eine spätere Änderung rechnet die Preise zum heutigen Kurs um, was nicht der mit dem Kunden vereinbarte Betrag sein muss.",
       },
     ],
   },

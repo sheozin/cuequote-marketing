@@ -511,6 +511,20 @@
     "api": "API & Integrationen"
   },
   "posts": {
+    "cuequote-v158-whats-new": {
+      "title": "CueQuote 1.58: Positionsrabatte und Rechnungswährung",
+      "excerpt": "Rabattieren Sie eine einzelne Position, ohne ihren Katalogpreis anzutasten, und stellen Sie jede Rechnung in der Währung Ihres Kunden aus.",
+      "readTime": "3 Min. Lesezeit",
+      "content": [
+        "Version 1.58 bringt zwei Dinge, die bei echten Angeboten immer wieder auftauchen: einen Rabatt auf eine einzelne Position und eine eigene Währung für jede Rechnung.",
+        "[IMAGE:/blog/cuequote-v1-58-item-discounts-invoice-currency.jpg|CueQuote 1.58: eine Spalte Rabatt % in Angebots- und Rechnungspositionen und eine Währungsauswahl pro Rechnung]",
+        "Bisher galt ein Rabatt nur für das ganze Angebot. Für 15% allein auf die LED-Wand mussten Sie ihren Einzelpreis senken, sodass der Kunde keinen Rabatt sah und der Preis nicht mehr zum Katalog passte. Die Alternative war eine Position mit negativem Preis, die unbeholfen wirkte und die Marge verzerrte. Jede Angebots- und Rechnungsposition hat jetzt ein Feld Rabatt %. Der Positionsbetrag ist Menge × Einzelpreis × Tage, abzüglich dieses Prozentsatzes.",
+        "Der Einzelpreis bleibt Ihr Katalogpreis und der Kunde sieht den Rabatt. Im Angebots-PDF, im Freigabelink, im Rechnungs-PDF und im Excel-Export erscheint die Rabattspalte nur, wenn mindestens eine Position einen Rabatt hat. Ein Angebot ohne Positionsrabatte sieht also genau aus wie bisher. Ein Rabatt auf das ganze Angebot gilt weiterhin und wird nach den Positionsrabatten auf die Zwischensumme angewendet.",
+        "Positionsrabatte wandern überall mit, wo eine Position kopiert wird: in neue Versionen, aus Angeboten erstellte Rechnungen, in Rechnungen umgewandelte Proformas, wiederkehrende Angebote und Korrekturrechnungen. Die Marge rechnet mit dem rabattierten Betrag, sodass eine rabattierte Position den Gewinn zeigt, den Sie wirklich machen. Für Unternehmen, die an KSeF in Polen melden, steht der Rabatt jeder Position in einem eigenen Feld, und die Positionen ergeben weiterhin die Rechnungssumme.",
+        "Die zweite Änderung betrifft alle, die in mehr als einer Währung abrechnen. Jede Rechnung und Proforma hat jetzt eine eigene Währung, festgelegt unter Details. Sie beginnt mit der Standardwährung aus den Einstellungen, aber Sie können für ein Dokument eine andere wählen, ohne den Standard zu ändern, etwa eine Proforma in USD, während Ihre Buchhaltung in EUR bleibt.",
+        "Im Entwurf können Sie sie noch ändern. CueQuote zeigt jede Position zum heutigen Kurs umgerechnet und ändert nichts, bevor Sie bestätigen. Die Preise wandern also mit der Währung, statt nur umbenannt zu werden. Aus einem Angebot erstellte Rechnungen behalten dessen Währung, und versendete Rechnungen sind gesperrt, weil die Währung Teil dessen ist, was Ihr Kunde erhalten hat."
+      ]
+    },
     "cuequote-v157-whats-new": {
       "title": "CueQuote 1.57: Eine Spalte Tage für jede Position",
       "excerpt": "Angebots- und Rechnungspositionen haben jetzt ein Feld Tage. Der Einzelpreis bleibt Ihr Tagessatz, und längere Mieten ändern nur eine Zahl.",
@@ -1915,7 +1929,7 @@
       "step4": "Überprüfen und bearbeiten: Positionen hinzufügen, entfernen oder anpassen",
       "step5": "Als gebrandetes PDF herunterladen oder über einen einzigartigen Link teilen",
       "tip": "Nutzen Sie die Teilen-Link-Funktion, damit Kunden Angebote online einsehen können — sie können direkt über den Link genehmigen.",
-      "content3": "Jede Position hat eine Spalte Tage. Der Positionsbetrag ist Menge × Einzelpreis × Tage, sodass der Einzelpreis Ihr Tagessatz aus dem Katalog bleibt und eine längere Miete nur eine Zahl ändert. Auf- oder Abbautage zu einem reduzierten Satz erscheinen als Dezimalzahl, zum Beispiel 2,5 für zwei Veranstaltungstage plus einen Aufbautag zum halben Satz. Im PDF, im Freigabelink und auf Rechnungen erscheint die Spalte Tage nur, wenn mindestens eine Position länger als einen Tag läuft."
+      "content3": "Jede Position hat eine Spalte Tage. Der Positionsbetrag ist Menge × Einzelpreis × Tage, sodass der Einzelpreis Ihr Tagessatz aus dem Katalog bleibt und eine längere Miete nur eine Zahl ändert. Auf- oder Abbautage zu einem reduzierten Satz erscheinen als Dezimalzahl, zum Beispiel 2,5 für zwei Veranstaltungstage plus einen Aufbautag zum halben Satz. Im PDF, im Freigabelink und auf Rechnungen erscheint die Spalte Tage nur, wenn mindestens eine Position länger als einen Tag läuft. Jede Position hat außerdem ein Feld Rabatt % für einen Rabatt nur auf diese Position. Der Einzelpreis bleibt Ihr Katalogpreis, der Kunde sieht den Prozentsatz, und ein Rabatt auf das ganze Angebot gilt weiterhin zusätzlich. Die Rabattspalte erscheint im PDF, im Freigabelink und in Excel nur, wenn eine Position einen Rabatt hat."
     },
     "equipmentCatalog": {
       "title": "Ausrüstungskatalog",
@@ -1990,7 +2004,8 @@
       "step6": "Senden Sie die Rechnung per E-Mail an Ihren Kunden und verfolgen Sie den Status: Entwurf, Gesendet, Angesehen oder Bezahlt",
       "tip": "Fugen Sie mindestens ein Bankkonto in den Einstellungen hinzu — die meisten B2B-Kunden bevorzugen Bankuberweisungen. Geben Sie die Rechnungsnummer als Zahlungsreferenz an, um den Abgleich zu erleichtern.",
       "content3": "Eine Proforma ist eine Zahlungsaufforderung, keine Steuerrechnung. Klicken Sie auf der Rechnungsseite auf Neue Proforma, um eine von Grund auf zu erstellen, oder wandeln Sie ein Angebot um. Sie erhält eine eigene PI-Nummer, damit Ihre INV-Serie lückenlos bleibt, sie nimmt keine Zahlungen an und geht nie an KSeF, weil nichts davon für ein Dokument richtig wäre, das keine Rechnung ist. Bestätigt der Kunde, erstellt ein Klick eine echte Rechnung mit der nächsten Nummer Ihrer Serie und dem heutigen Datum; die Proforma bleibt erhalten und beide bleiben verknüpft, sodass die Kopie beim Kunden weiterhin abrufbar ist.",
-      "step7": "Für eine Anzahlungsanforderung zu Arbeit ohne förmliches Angebot klicken Sie auf der Rechnungsseite auf Neue Proforma und wandeln sie um, sobald der Kunde bestätigt"
+      "step7": "Für eine Anzahlungsanforderung zu Arbeit ohne förmliches Angebot klicken Sie auf der Rechnungsseite auf Neue Proforma und wandeln sie um, sobald der Kunde bestätigt",
+      "content4": "Jede Rechnung und Proforma hat eine eigene Währung, festgelegt unter Details. Sie beginnt mit der Standardwährung aus den Einstellungen, aber Sie können für ein Dokument eine andere wählen, ohne Ihren Standard zu ändern, etwa USD für einen Kunden, während Ihre Buchhaltung in EGP bleibt. Im Entwurf können Sie sie noch ändern: CueQuote zeigt jede Position zum heutigen Kurs umgerechnet und ändert nichts, bevor Sie bestätigen. Eine aus einem Angebot erstellte Rechnung behält dessen Währung, ändern Sie also das Angebot."
     },
     "paymentTracking": {
       "title": "Zahlungsverfolgung",

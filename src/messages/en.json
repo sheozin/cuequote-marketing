@@ -511,6 +511,20 @@
     "api": "API & integrations"
   },
   "posts": {
+    "cuequote-v158-whats-new": {
+      "title": "CueQuote 1.58: Item Discounts and Invoice Currencies",
+      "excerpt": "Discount a single line without touching its catalogue price, and issue each invoice in the currency your client pays in.",
+      "readTime": "3 min read",
+      "content": [
+        "Version 1.58 adds two things that come up when quoting real deals: a discount on one item, and a currency for each invoice.",
+        "[IMAGE:/blog/cuequote-v1-58-item-discounts-invoice-currency.jpg|CueQuote 1.58: a Disc. % column on proposal and invoice lines, and a currency picker on each invoice]",
+        "Until now a discount could only apply to the whole proposal. To give 15% off the LED wall alone, you had to lower its unit price, so the client never saw a discount and the price stopped matching your catalogue. The other option was a negative line, which read awkwardly and threw off your margins. Every proposal and invoice line now has a Disc. % field. The line total is quantity × unit price × days, less that percentage.",
+        "The unit price stays your catalogue price and the client sees the discount. On the proposal PDF, the share link, the invoice PDF and the Excel export, a Discount column appears only when at least one line has one, so a quote without line discounts looks exactly as before. A discount on the whole proposal still works, applied to the subtotal after the line discounts.",
+        "Line discounts carry through everywhere a line is copied: new versions, invoices created from a proposal, proformas converted to invoices, recurring proposals and correction invoices. Margins use the discounted total, so a discounted item shows the profit you will actually make. For companies filing to KSeF in Poland, each line's discount is reported in its own field and the lines still add up to the invoice total.",
+        "The second change is for anyone who invoices clients in more than one currency. Each invoice and proforma now has its own currency, set in Details. It starts at the default from Settings, but you can pick another for one document without touching that default, for example a USD proforma while your accounts stay in EGP.",
+        "On a draft you can still change it. CueQuote shows every line converted at today's exchange rate and changes nothing until you confirm, so the prices move with the currency rather than being relabelled. Invoices created from a proposal keep the proposal's currency, and sent invoices are locked, because the currency is part of what your client received."
+      ]
+    },
     "cuequote-v157-whats-new": {
       "title": "CueQuote 1.57: A Days Column on Every Line",
       "excerpt": "Proposal and invoice lines now have a Days field. The unit price stays your daily rate, and hiring gear for longer means changing one number.",
@@ -1925,7 +1939,7 @@
       "step4": "Review and edit: add, remove, or adjust any line items",
       "step5": "Download as a branded PDF or share via a unique link",
       "tip": "Use the share link feature to let clients view proposals online — they can approve directly from the link.",
-      "content3": "Every line has a Days column. A line's total is quantity × unit price × days, so the unit price stays your catalogue daily rate and changing how long an item is hired means changing one number. Setup or strike days charged at a reduced rate show as a decimal, for example 2.5 for two show days plus one setup day at half rate. On the PDF, the share link and invoices, the Days column only appears when at least one item runs longer than a day."
+      "content3": "Every line has a Days column. A line's total is quantity × unit price × days, so the unit price stays your catalogue daily rate and changing how long an item is hired means changing one number. Setup or strike days charged at a reduced rate show as a decimal, for example 2.5 for two show days plus one setup day at half rate. On the PDF, the share link and invoices, the Days column only appears when at least one item runs longer than a day. Each line also has a Disc. % field for a discount on that item alone. The unit price stays your catalogue price, the client sees the percentage off, and a discount on the whole proposal still applies on top. The Discount column only appears on the PDF, the share link and Excel when a line has one."
     },
     "equipmentCatalog": {
       "title": "Equipment Catalog",
@@ -2000,7 +2014,8 @@
       "step6": "Send the invoice to your client via email and track its status: Draft, Sent, Viewed, or Paid",
       "tip": "Add at least one bank account in Settings — most B2B clients prefer bank transfer for AV equipment payments. Include the invoice number as the payment reference for easy reconciliation.",
       "content3": "A proforma is a request for payment, not a tax invoice. Click New Proforma on the Invoices page to raise one from scratch, or convert a proposal into one. It takes its own PI- number so your INV- series stays gapless, it will not accept payments, and it is never sent to KSeF, because none of those would be correct for a document that is not an invoice. When the client confirms, one click issues a real invoice with the next number in your series and today's date; the proforma is kept and the two stay linked, so the copy your client holds is still retrievable.",
-      "step7": "For a deposit request on work you have not formally quoted, click New Proforma on the Invoices page, then convert it to a real invoice once the client confirms"
+      "step7": "For a deposit request on work you have not formally quoted, click New Proforma on the Invoices page, then convert it to a real invoice once the client confirms",
+      "content4": "Every invoice and proforma has its own currency, set in Details. It starts at the default from Settings, but you can pick another for one document without changing your default, for example USD for one client while your accounts stay in EGP. On a draft you can still change it: CueQuote shows every line converted at today's rate and changes nothing until you confirm. An invoice created from a proposal keeps the proposal's currency, so change the proposal instead."
     },
     "paymentTracking": {
       "title": "Payment Tracking",

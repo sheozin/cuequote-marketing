@@ -116,7 +116,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Fine-tune in the editor',
-        content: 'The editor has two tabs: "Equipment" for line items (edit quantities, days, prices, add/remove rows) and "Terms & Details" for inclusions, exclusions, payment schedule, and T&C. Each line\'s total is quantity × unit price × days, so to hire an item for longer you change its Days, not its price. Everything the AI generated is fully editable: treat it as a smart starting point, not the final product.',
+        content: 'The editor has two tabs: "Equipment" for line items (edit quantities, days, prices, add/remove rows) and "Terms & Details" for inclusions, exclusions, payment schedule, and T&C. Each line\'s total is quantity × unit price × days, so to hire an item for longer you change its Days, not its price. Everything the AI generated is fully editable: treat it as a smart starting point, not the final product. To discount one item, enter a percentage in its Disc. % field: the unit price stays your catalogue price and the client sees the discount.',
       },
     ],
   },
@@ -557,6 +557,11 @@ export const TUTORIALS_EN: Tutorial[] = [
         title: 'Raise a proforma when there is no proposal',
         content: "A proforma requests payment without being a tax invoice, which is what you want for a deposit on work agreed by phone. Click New Proforma on the Invoices page and fill it in exactly like an invoice. It takes its own PI- number so your INV- series stays gapless, it refuses payments, and it is never filed to KSeF. When the client confirms, Convert to invoice issues a real invoice with the next number in your series and today's date, and keeps the proforma linked to it.",
         tip: 'Convert on confirmation, not when you send it. The tax point is the client agreeing, and converting early puts a number into your series for work that may not happen.',
+      },
+      {
+        title: "Choose the invoice currency",
+        content: "Every invoice and proforma has its own currency, set in Details. It starts at the default from Settings, but you can pick another for one document without changing your default, for example USD for one client while your accounts stay in EGP. On a draft you can still change it: CueQuote shows every line converted at today's rate and changes nothing until you confirm. An invoice created from a proposal keeps the proposal's currency, so change the proposal instead.",
+        tip: "Pick the currency before adding lines. Changing it later converts the prices at today's rate, which may not be the figure you agreed with the client.",
       },
     ],
   },

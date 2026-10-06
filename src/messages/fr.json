@@ -511,6 +511,20 @@
     "api": "API et intégrations"
   },
   "posts": {
+    "cuequote-v158-whats-new": {
+      "title": "CueQuote 1.58 : remises par article et devise de facture",
+      "excerpt": "Remisez une seule ligne sans toucher à son prix catalogue, et émettez chaque facture dans la devise de votre client.",
+      "readTime": "3 min de lecture",
+      "content": [
+        "La version 1.58 apporte deux choses qui reviennent sur les vrais devis : une remise sur un seul article, et une devise propre à chaque facture.",
+        "[IMAGE:/blog/cuequote-v1-58-item-discounts-invoice-currency.jpg|CueQuote 1.58 : une colonne Remise % sur les lignes de devis et de facture, et un choix de devise par facture]",
+        "Jusqu'ici, une remise ne pouvait porter que sur tout le devis. Pour accorder 15% sur le seul mur LED, il fallait baisser son prix unitaire : le client ne voyait aucune remise et le prix ne correspondait plus au catalogue. L'autre solution était une ligne au prix négatif, peu élégante et qui faussait les marges. Chaque ligne de devis et de facture a désormais un champ Remise %. Le montant de la ligne est quantité × prix unitaire × jours, moins ce pourcentage.",
+        "Le prix unitaire reste celui du catalogue et le client voit la remise. Dans le PDF du devis, le lien de partage, le PDF de la facture et l'export Excel, la colonne Remise n'apparaît que si au moins une ligne en a une : un devis sans remise par ligne reste identique. Une remise sur tout le devis fonctionne toujours, appliquée au sous-total après les remises par ligne.",
+        "Les remises par ligne suivent partout où une ligne est copiée : nouvelles versions, factures créées depuis un devis, proformas converties en factures, devis récurrents et factures rectificatives. Les marges utilisent le montant remisé, donc un article remisé affiche le bénéfice réel. Pour les entreprises qui déclarent à KSeF en Pologne, la remise de chaque ligne figure dans son propre champ et les lignes totalisent toujours le montant de la facture.",
+        "Le second changement concerne tous ceux qui facturent dans plusieurs devises. Chaque facture et proforma a désormais sa propre devise, définie dans Détails. Elle part de la devise par défaut des Paramètres, mais vous pouvez en choisir une autre pour un document sans toucher à ce défaut, par exemple une proforma en USD alors que votre comptabilité reste en EUR.",
+        "Sur un brouillon, vous pouvez encore la changer. CueQuote affiche chaque ligne convertie au taux du jour et ne modifie rien avant votre confirmation : les prix suivent la devise au lieu d'être simplement réétiquetés. Les factures créées depuis un devis gardent la devise du devis, et les factures envoyées sont verrouillées, car la devise fait partie de ce que votre client a reçu."
+      ]
+    },
     "cuequote-v157-whats-new": {
       "title": "CueQuote 1.57 : une colonne Jours sur chaque ligne",
       "excerpt": "Les lignes des propositions et des factures ont un champ Jours. Le prix unitaire reste votre tarif journalier : louer plus longtemps, c'est un chiffre.",
@@ -1917,7 +1931,7 @@
       "step4": "Vérifiez et modifiez : ajoutez, supprimez ou ajustez les lignes",
       "step5": "Téléchargez en PDF à votre marque ou partagez via un lien unique",
       "tip": "Utilisez la fonction de lien de partage pour permettre aux clients de consulter les devis en ligne — ils peuvent approuver directement depuis le lien.",
-      "content3": "Chaque ligne a une colonne Jours. Le total d'une ligne est quantité × prix unitaire × jours : le prix unitaire reste votre tarif journalier du catalogue, et changer la durée de location revient à modifier un seul chiffre. Les jours de montage ou de démontage facturés à un tarif réduit s'affichent en décimal, par exemple 2,5 pour deux jours d'événement et un jour de montage à demi-tarif. Dans le PDF, le lien de partage et les factures, la colonne Jours n'apparaît que si au moins une ligne dure plus d'une journée."
+      "content3": "Chaque ligne a une colonne Jours. Le total d'une ligne est quantité × prix unitaire × jours : le prix unitaire reste votre tarif journalier du catalogue, et changer la durée de location revient à modifier un seul chiffre. Les jours de montage ou de démontage facturés à un tarif réduit s'affichent en décimal, par exemple 2,5 pour deux jours d'événement et un jour de montage à demi-tarif. Dans le PDF, le lien de partage et les factures, la colonne Jours n'apparaît que si au moins une ligne dure plus d'une journée. Chaque ligne a aussi un champ Remise % pour une remise sur cet article seul. Le prix unitaire reste celui du catalogue, le client voit le pourcentage, et une remise sur tout le devis s'applique toujours en plus. La colonne Remise n'apparaît dans le PDF, le lien de partage et Excel que lorsqu'une ligne en a une."
     },
     "equipmentCatalog": {
       "title": "Catalogue d'équipements",
@@ -1992,7 +2006,8 @@
       "step6": "Envoyez la facture a votre client par e-mail et suivez son statut : Brouillon, Envoyee, Vue ou Payee",
       "tip": "Ajoutez au moins un compte bancaire dans les Parametres — la plupart des clients B2B preferent le virement bancaire. Incluez le numero de facture comme reference de paiement pour faciliter le rapprochement.",
       "content3": "Une pro forma est une demande de paiement, pas une facture fiscale. Cliquez sur Nouvelle pro forma dans la page Factures pour en créer une de zéro, ou convertissez un devis. Elle prend son propre numéro PI-, votre série INV- reste donc sans trou, elle n'accepte pas de paiements et n'est jamais envoyée à KSeF, car rien de tout cela ne conviendrait à un document qui n'est pas une facture. Quand le client confirme, un clic émet une vraie facture avec le numéro suivant de votre série et la date du jour ; la pro forma est conservée et les deux restent liées, si bien que la copie détenue par votre client reste consultable.",
-      "step7": "Pour une demande d'acompte sur un travail non chiffré formellement, cliquez sur Nouvelle pro forma dans la page Factures, puis convertissez-la en vraie facture dès que le client confirme"
+      "step7": "Pour une demande d'acompte sur un travail non chiffré formellement, cliquez sur Nouvelle pro forma dans la page Factures, puis convertissez-la en vraie facture dès que le client confirme",
+      "content4": "Chaque facture et proforma a sa propre devise, définie dans Détails. Elle part de la devise par défaut des Paramètres, mais vous pouvez en choisir une autre pour un document sans changer votre défaut, par exemple USD pour un client alors que votre comptabilité reste en EGP. Sur un brouillon, vous pouvez encore la changer : CueQuote affiche chaque ligne convertie au taux du jour et ne modifie rien avant votre confirmation. Une facture créée depuis un devis garde la devise du devis : modifiez plutôt le devis."
     },
     "paymentTracking": {
       "title": "Suivi des paiements",

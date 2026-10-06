@@ -116,7 +116,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Affinez dans l\'éditeur',
-        content: 'L\'éditeur comporte deux onglets : « Équipement » pour les lignes (modifier les quantités, les jours, les prix, ajouter/supprimer des lignes) et « Conditions et détails » pour les inclusions, les exclusions, l\'échéancier de paiement et les CGV. Le total d\'une ligne est quantité × prix unitaire × jours : pour louer un article plus longtemps, vous modifiez ses jours, pas son prix. Tout ce que l\'IA a généré est entièrement modifiable : considérez-le comme un point de départ intelligent, et non comme le produit final.',
+        content: 'L\'éditeur comporte deux onglets : « Équipement » pour les lignes (modifier les quantités, les jours, les prix, ajouter/supprimer des lignes) et « Conditions et détails » pour les inclusions, les exclusions, l\'échéancier de paiement et les CGV. Le total d\'une ligne est quantité × prix unitaire × jours : pour louer un article plus longtemps, vous modifiez ses jours, pas son prix. Tout ce que l\'IA a généré est entièrement modifiable : considérez-le comme un point de départ intelligent, et non comme le produit final. Pour remiser un seul article, saisissez un pourcentage dans Remise % : le prix unitaire reste celui du catalogue et le client voit la remise.',
       },
     ],
   },
@@ -556,6 +556,11 @@ export const TUTORIALS_FR: Tutorial[] = [
         title: "Émettre une pro forma quand il n'y a pas de devis",
         content: "Une pro forma demande un paiement sans être une facture fiscale, ce qu'il vous faut pour un acompte sur un travail convenu par téléphone. Cliquez sur Nouvelle pro forma dans la page Factures et remplissez-la exactement comme une facture. Elle prend son propre numéro PI-, votre série INV- reste sans trou, elle refuse les paiements et n'est jamais transmise à KSeF. Quand le client confirme, Convertir en facture émet une vraie facture avec le numéro suivant de votre série et la date du jour, en gardant la pro forma liée.",
         tip: "Convertissez à la confirmation, pas à l'envoi. Le fait générateur est l'accord du client, et convertir trop tôt attribue un numéro de votre série à un travail qui pourrait ne pas avoir lieu.",
+      },
+      {
+        title: "Choisir la devise de la facture",
+        content: "Chaque facture et proforma a sa propre devise, définie dans Détails. Elle part de la devise par défaut des Paramètres, mais vous pouvez en choisir une autre pour un document sans changer votre défaut, par exemple USD pour un client alors que votre comptabilité reste en EGP. Sur un brouillon, vous pouvez encore la changer : CueQuote affiche chaque ligne convertie au taux du jour et ne modifie rien avant votre confirmation. Une facture créée depuis un devis garde la devise du devis : modifiez plutôt le devis.",
+        tip: "Choisissez la devise avant d'ajouter des lignes. La changer ensuite convertit les prix au taux du jour, qui n'est peut-être pas le montant convenu avec le client.",
       },
     ],
   },

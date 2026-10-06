@@ -511,6 +511,20 @@
     "api": "API i integracje"
   },
   "posts": {
+    "cuequote-v158-whats-new": {
+      "title": "CueQuote 1.58: rabaty na pozycje i waluta faktury",
+      "excerpt": "Udziel rabatu na jedną pozycję bez zmiany jej ceny katalogowej i wystaw każdą fakturę w walucie, w której płaci klient.",
+      "readTime": "3 min czytania",
+      "content": [
+        "Wersja 1.58 dodaje dwie rzeczy, które wracają przy prawdziwych wycenach: rabat na jedną pozycję i walutę dla każdej faktury.",
+        "[IMAGE:/blog/cuequote-v1-58-item-discounts-invoice-currency.jpg|CueQuote 1.58: kolumna Rabat % w pozycjach ofert i faktur oraz wybór waluty każdej faktury]",
+        "Dotąd rabat mógł dotyczyć tylko całej oferty. Żeby dać 15% na sam ekran LED, trzeba było obniżyć jego cenę jednostkową, więc klient nie widział rabatu, a cena przestawała zgadzać się z katalogiem. Drugą opcją była pozycja z ujemną ceną, która wyglądała niezręcznie i psuła marże. Każda pozycja oferty i faktury ma teraz pole Rabat %. Wartość pozycji to ilość × cena jednostkowa × dni, pomniejszona o ten procent.",
+        "Cena jednostkowa zostaje ceną z katalogu, a klient widzi rabat. W PDF oferty, w linku udostępniania, w PDF faktury i w eksporcie do Excela kolumna Rabat pojawia się tylko wtedy, gdy co najmniej jedna pozycja ma rabat, więc oferta bez rabatów na pozycje wygląda dokładnie jak dotąd. Rabat na całą ofertę nadal działa i liczy się od sumy po rabatach na pozycje.",
+        "Rabaty na pozycje przechodzą wszędzie tam, gdzie pozycja jest kopiowana: do nowych wersji, faktur utworzonych z oferty, faktur powstałych z proform, ofert cyklicznych i faktur korygujących. Marże liczą się od wartości po rabacie, więc pozycja z rabatem pokazuje zysk, który faktycznie osiągniesz. Firmy wysyłające faktury do KSeF mają rabat każdej pozycji w osobnym polu, a pozycje nadal sumują się do wartości faktury.",
+        "Druga zmiana jest dla każdego, kto wystawia faktury w więcej niż jednej walucie. Każda faktura i proforma ma teraz własną walutę, ustawianą w Szczegółach. Domyślnie jest to waluta z Ustawień, ale możesz wybrać inną dla jednego dokumentu bez zmiany waluty domyślnej, na przykład proformę w USD, gdy Twoje księgi są w PLN.",
+        "W wersji roboczej nadal możesz ją zmienić. CueQuote pokazuje każdą pozycję przeliczoną po dzisiejszym kursie i niczego nie zmienia przed zatwierdzeniem, więc ceny zmieniają się razem z walutą, a nie tylko etykieta. Faktury utworzone z oferty zachowują walutę oferty, a wysłane faktury są zablokowane, bo waluta jest częścią tego, co otrzymał klient."
+      ]
+    },
     "cuequote-v157-whats-new": {
       "title": "CueQuote 1.57: kolumna Dni przy każdej pozycji",
       "excerpt": "Pozycje ofert i faktur mają teraz pole Dni. Cena jednostkowa pozostaje stawką dzienną, a dłuższy wynajem to zmiana jednej liczby.",
@@ -1889,7 +1903,7 @@
       "step4": "Przejrzyj i edytuj: dodaj, usuń lub zmień dowolne pozycje",
       "step5": "Pobierz jako markowy PDF lub udostępnij przez unikalny link",
       "tip": "Użyj funkcji linku udostępniania, aby klienci mogli przeglądać oferty online — mogą zatwierdzić je bezpośrednio z linku.",
-      "content3": "Każda pozycja ma kolumnę Dni. Wartość pozycji to ilość × cena jednostkowa × dni, więc cena jednostkowa pozostaje Twoją dzienną stawką z katalogu, a zmiana czasu wynajmu to zmiana jednej liczby. Dni montażu lub demontażu liczone po obniżonej stawce widać jako ułamek, na przykład 2,5 dla dwóch dni wydarzenia i jednego dnia montażu za połowę stawki. W PDF, w linku udostępniania i na fakturach kolumna Dni pojawia się tylko wtedy, gdy co najmniej jedna pozycja trwa dłużej niż jeden dzień."
+      "content3": "Każda pozycja ma kolumnę Dni. Wartość pozycji to ilość × cena jednostkowa × dni, więc cena jednostkowa pozostaje Twoją dzienną stawką z katalogu, a zmiana czasu wynajmu to zmiana jednej liczby. Dni montażu lub demontażu liczone po obniżonej stawce widać jako ułamek, na przykład 2,5 dla dwóch dni wydarzenia i jednego dnia montażu za połowę stawki. W PDF, w linku udostępniania i na fakturach kolumna Dni pojawia się tylko wtedy, gdy co najmniej jedna pozycja trwa dłużej niż jeden dzień. Każda pozycja ma też pole Rabat % na rabat tylko dla tej pozycji. Cena jednostkowa zostaje ceną z katalogu, klient widzi procent rabatu, a rabat na całą ofertę nadal działa dodatkowo. Kolumna Rabat pojawia się w PDF, linku udostępniania i Excelu tylko wtedy, gdy któraś pozycja ma rabat."
     },
     "equipmentCatalog": {
       "title": "Katalog sprzętu",
@@ -1964,7 +1978,8 @@
       "step6": "Wyslij fakture do klienta e-mailem i sledz jej status: Wersja robocza, Wyslana, Przeczytana lub Oplacona",
       "tip": "Dodaj co najmniej jedno konto bankowe w Ustawieniach — wiekszosc klientow B2B preferuje przelew bankowy. Dolacz numer faktury jako referencje platnosci dla latwego uzgadniania.",
       "content3": "Pro forma to prośba o zapłatę, nie faktura podatkowa. Kliknij Nowa pro forma na stronie Faktury, aby wystawić ją od zera, albo skonwertuj ofertę. Dostaje własny numer PI-, więc seria INV- pozostaje bez luk, nie przyjmuje płatności i nigdy nie trafia do KSeF, bo żadna z tych rzeczy nie byłaby właściwa dla dokumentu, który nie jest fakturą. Gdy klient potwierdzi, jedno kliknięcie wystawia prawdziwą fakturę z kolejnym numerem serii i dzisiejszą datą; pro forma zostaje zachowana i obie pozostają powiązane, więc kopia, którą ma klient, nadal jest dostępna.",
-      "step7": "Aby poprosić o zaliczkę za pracę bez formalnej oferty, kliknij Nowa pro forma na stronie Faktury, a po potwierdzeniu przez klienta skonwertuj ją na prawdziwą fakturę"
+      "step7": "Aby poprosić o zaliczkę za pracę bez formalnej oferty, kliknij Nowa pro forma na stronie Faktury, a po potwierdzeniu przez klienta skonwertuj ją na prawdziwą fakturę",
+      "content4": "Każda faktura i proforma ma własną walutę, ustawianą w Szczegółach. Domyślnie jest to waluta z Ustawień, ale możesz wybrać inną dla jednego dokumentu bez zmiany waluty domyślnej, na przykład USD dla jednego klienta, gdy Twoje księgi są w EGP. W wersji roboczej nadal możesz ją zmienić: CueQuote pokazuje każdą pozycję przeliczoną po dzisiejszym kursie i niczego nie zmienia przed zatwierdzeniem. Faktura utworzona z oferty zachowuje walutę oferty, więc zmień ją w ofercie."
     },
     "paymentTracking": {
       "title": "Śledzenie płatności",

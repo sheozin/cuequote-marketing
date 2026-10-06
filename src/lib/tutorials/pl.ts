@@ -116,7 +116,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Dopracuj w edytorze',
-        content: 'Edytor ma dwie zakładki: „Sprzęt” dla pozycji (edycja ilości, dni, cen, dodawanie/usuwanie wierszy) oraz „Warunki i szczegóły” dla tego, co jest w cenie, wykluczeń, harmonogramu płatności i regulaminu. Wartość pozycji to ilość × cena jednostkowa × dni, więc aby wynająć coś na dłużej, zmieniasz liczbę dni, a nie cenę. Wszystko, co wygenerowało AI, jest w pełni edytowalne: traktuj to jako inteligentny punkt wyjścia, nie produkt końcowy.',
+        content: 'Edytor ma dwie zakładki: „Sprzęt” dla pozycji (edycja ilości, dni, cen, dodawanie/usuwanie wierszy) oraz „Warunki i szczegóły” dla tego, co jest w cenie, wykluczeń, harmonogramu płatności i regulaminu. Wartość pozycji to ilość × cena jednostkowa × dni, więc aby wynająć coś na dłużej, zmieniasz liczbę dni, a nie cenę. Wszystko, co wygenerowało AI, jest w pełni edytowalne: traktuj to jako inteligentny punkt wyjścia, nie produkt końcowy. Aby dać rabat na jedną pozycję, wpisz procent w polu Rabat %: cena jednostkowa zostaje ceną z katalogu, a klient widzi rabat.',
       },
     ],
   },
@@ -535,6 +535,11 @@ export const TUTORIALS_PL: Tutorial[] = [
         title: 'Wystaw pro formę, gdy nie ma oferty',
         content: 'Pro forma prosi o zapłatę, nie będąc fakturą podatkową, co jest tym, czego potrzebujesz przy zaliczce za pracę uzgodnioną przez telefon. Kliknij Nowa pro forma na stronie Faktury i wypełnij ją dokładnie jak fakturę. Dostaje własny numer PI-, więc seria INV- pozostaje bez luk, odmawia płatności i nigdy nie trafia do KSeF. Gdy klient potwierdzi, Konwertuj na fakturę wystawia prawdziwą fakturę z kolejnym numerem serii i dzisiejszą datą, zachowując powiązanie z pro formą.',
         tip: 'Konwertuj przy potwierdzeniu, nie przy wysyłce. Obowiązek podatkowy powstaje, gdy klient się zgodzi, a zbyt wczesna konwersja wprowadza do serii numer za pracę, która może się nie odbyć.',
+      },
+      {
+        title: "Wybierz walutę faktury",
+        content: "Każda faktura i proforma ma własną walutę, ustawianą w Szczegółach. Domyślnie jest to waluta z Ustawień, ale możesz wybrać inną dla jednego dokumentu bez zmiany waluty domyślnej, na przykład USD dla jednego klienta, gdy Twoje księgi są w EGP. W wersji roboczej nadal możesz ją zmienić: CueQuote pokazuje każdą pozycję przeliczoną po dzisiejszym kursie i niczego nie zmienia przed zatwierdzeniem. Faktura utworzona z oferty zachowuje walutę oferty, więc zmień ją w ofercie.",
+        tip: "Wybierz walutę przed dodaniem pozycji. Późniejsza zmiana przelicza ceny po dzisiejszym kursie, co może nie być kwotą uzgodnioną z klientem.",
       },
     ],
   },
