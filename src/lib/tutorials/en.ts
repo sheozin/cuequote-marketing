@@ -875,6 +875,53 @@ export const TUTORIALS_EN: Tutorial[] = [
     ],
   },
   {
+    slug: 'crew-badges',
+    title: "Crew Badges and Name Labels",
+    description: "Set up access zones and badge categories, then print an onsite name label for everyone on a job or crew event, on any label printer.",
+    duration: "6 min",
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      "Setting up access zones and badge categories",
+      "Previewing a badge before anything is printed",
+      "Giving each person a category, crew number and zones",
+      "Printing one label or the whole crew, on Brother, Zebra, DYMO or A4 sheets",
+      "Crew events for events that never went through a quote",
+      "Importing a crew list from CSV",
+    ],
+    steps: [
+      {
+        title: "Set up zones and categories",
+        content: "Open Settings, then Badges. Click Add the standard set for six access zones (Stage, FOH, Control, BOH, Load-in, Registration) and two categories, AV Crew and Staff, or add your own. Each category has a colour, the zones it grants by default, and can be the default for staff or for freelancers.",
+        tip: "Every category shows a live badge preview with your logo and colours, so you see the result before printing anything.",
+      },
+      {
+        title: "Choose your label size",
+        content: "In the same tab, pick the label stock your printer uses: 62 × 29 mm and other roll sizes, A4 label sheets, or a custom width and height. This is the company default; each laptop can choose its own when printing, because the printer is attached to it.",
+      },
+      {
+        title: "Open the crew list on a job",
+        content: "On a job, the Badges and labels card lists everyone booked. Each person gets the category for their crew type unless you choose another. Set a crew number, or click Number crew to fill them in, and click a zone to grant or remove it for that person.",
+        tip: "Use category zones puts a person back on their category's defaults, so a later change to the category reaches them too.",
+      },
+      {
+        title: "Preview and print",
+        content: "Click the eye icon to see a person's badge. Click the printer icon for one label, or Print all labels for everyone. In the print window, choose the label size and print a test label first: if it comes out shifted, move it by a millimetre or two and the laptop remembers it.",
+        tip: "Names that will not fit the label at a readable size are flagged before you print, not printed tiny.",
+      },
+      {
+        title: "Events without a job",
+        content: "Some events never go through a quote. Open Crew, then Crew events, and create one with a name, dates and venue. It has the same crew list as a job: add people from your crew or someone new, then number and print.",
+      },
+      {
+        title: "Import a crew list",
+        content: "Click Import CSV with columns name, email, role, category, crew number and zones. People already in your crew are matched by email, then by name; anyone else is added. A preview shows what each row will do, and rows with a problem are listed with the reason before anything is saved.",
+      },
+    ],
+  },
+  {
     slug: 'proposal-comparison',
     title: 'Proposal Comparison',
     description: 'Compare proposals from multiple vendors side by side — line items, pricing, terms, and an AI insight panel — so you can make the best decision fast.',

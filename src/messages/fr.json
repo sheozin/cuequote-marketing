@@ -511,6 +511,19 @@
     "api": "API et intégrations"
   },
   "posts": {
+    "cuequote-v159-whats-new": {
+      "title": "CueQuote 1.59 : badges d'équipe et étiquettes",
+      "excerpt": "Imprimez une étiquette nominative pour chaque personne d'un dossier, sur toute imprimante d'étiquettes, et prévisualisez chaque badge.",
+      "readTime": "3 min de lecture",
+      "content": [
+        "La version 1.59 concerne les personnes que vous envoyez sur place. Chacune peut désormais avoir un badge et une étiquette nominative imprimée, configurés une fois et imprimés en quelques clics.",
+        "[IMAGE:/blog/cuequote-v1-59-crew-badges-name-labels.jpg|CueQuote 1.59 : badges d'équipe avec zones d'accès et étiquettes nominatives]",
+        "Commencez dans Paramètres, Badges. Ajoutez vos zones d'accès, comme Scène, FOH, Régie et Déchargement, et vos catégories, comme AV Crew et Staff. Chaque catégorie a une couleur et des zones données par défaut, et peut être la catégorie par défaut des salariés ou des freelances : la plupart des personnes n'ont rien à modifier. Un bouton ajoute un ensemble standard, et chaque catégorie affiche un aperçu du badge avec votre logo et vos couleurs.",
+        "Sur chaque dossier, la carte Badges et étiquettes liste toutes les personnes réservées. Donnez à quelqu'un une autre catégorie, un numéro, ou une zone de plus ou de moins que sa catégorie. L'œil montre son badge, Numéroter l'équipe remplit tous les numéros d'un coup.",
+        "L'impression fonctionne avec l'imprimante que vous avez déjà. Les étiquettes sortent en PDF au format exact de vos étiquettes, donc toute imprimante dotée d'un pilote standard les imprime : Brother, Zebra, DYMO ou une imprimante de bureau sur planches A4. Chaque ordinateur retient son format et une petite correction de position, et une étiquette test montre si tout est aligné. Un nom qui ne tient pas à une taille lisible est signalé avant l'impression.",
+        "Certains événements ne passent jamais par un devis. Les événements équipe, dans Équipe, leur donnent un nom, des dates et un lieu, et la même liste qu'un dossier. Vous pouvez aussi importer une liste en CSV : les personnes de votre équipe sont reconnues par e-mail ou par nom, et chaque ligne est vérifiée avant l'enregistrement."
+      ]
+    },
     "cuequote-v158-whats-new": {
       "title": "CueQuote 1.58 : remises par article et devise de facture",
       "excerpt": "Remisez une seule ligne sans toucher à son prix catalogue, et émettez chaque facture dans la devise de votre client.",
@@ -2458,6 +2471,19 @@
       "tip": "Envoyez la NDA au moment où vous ajoutez quelqu'un à votre équipe, pas quand vous le réservez. Elle existe précisément pour couvrir la conversation qui précède le chantier.",
       "step7": "Produisez la preuve : dès que quelqu'un a signé, la ligne affiche Signé avec la date et un lien Preuve de signature. Vous obtenez un PDF du texte exactement tel qu'il a été signé, suivi de qui a signé, quand, depuis quelle adresse IP et sur quel appareil, avec la signature tracée sur la page",
       "step8": "L'indépendant reçoit sa propre copie : au moment où il signe, le même PDF part vers l'adresse de sa fiche. Vous n'avez rien à envoyer, et une copie reçue sans objection renforce la vôtre"
+    },
+    "crewBadges": {
+      "title": "Badges d'équipe et étiquettes nominatives",
+      "content1": "Imprimez une étiquette nominative pour chaque personne que vous envoyez sur un événement : nom, rôle, numéro et événement, au format de votre imprimante d'étiquettes. Les étiquettes sont un PDF au format exact, donc toute imprimante dotée d'un pilote standard les imprime : Brother, Zebra, DYMO ou une imprimante de bureau sur planches A4.",
+      "content2": "Les badges reposent sur vos zones d'accès (Scène, FOH, Déchargement, etc.) et vos catégories. Chaque catégorie a une couleur et des zones données par défaut, et peut être la catégorie par défaut des salariés ou des freelances : la plupart des personnes n'ont rien à modifier. L'aperçu montre chaque badge avec votre logo et vos couleurs avant toute impression.",
+      "content3": "Les événements équipe couvrent les événements qui ne sont jamais passés par un devis dans CueQuote. Ils ont un nom, des dates et un lieu, avec la même liste d'équipe, le même import CSV et les mêmes étiquettes qu'un dossier.",
+      "step1": "Ouvrez Paramètres, puis Badges, et cliquez sur Ajouter l'ensemble standard ou créez vos zones et catégories",
+      "step2": "Choisissez le format d'étiquette de votre imprimante ; chaque ordinateur peut le changer à l'impression",
+      "step3": "Sur un dossier ou un événement équipe, définissez la catégorie, le numéro et les zones de chacun dans Badges et étiquettes",
+      "step4": "Cliquez sur l'œil pour prévisualiser un badge",
+      "step5": "Imprimez une étiquette ou toutes ; imprimez d'abord une étiquette test et décalez-la si elle sort mal placée",
+      "step6": "Pour un événement sans dossier, ouvrez Équipe, puis Événements équipe, et créez-en un ; importez une liste d'équipe en CSV si vous en avez une",
+      "tip": "Dans la fenêtre d'impression, choisissez toujours Taille réelle plutôt qu'Ajuster à la page, sinon l'étiquette sort plus petite."
     }
   },
   "changelog": {

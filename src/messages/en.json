@@ -511,6 +511,19 @@
     "api": "API & integrations"
   },
   "posts": {
+    "cuequote-v159-whats-new": {
+      "title": "CueQuote 1.59: Crew Badges and Name Labels",
+      "excerpt": "Print an onsite name label for everyone on a job, on any label printer, and preview every crew badge before it is printed.",
+      "readTime": "3 min read",
+      "content": [
+        "Version 1.59 is about the people you put on site. Everyone on a job can now have a badge and a printed name label, set up once and printed in a few clicks.",
+        "[IMAGE:/blog/cuequote-v1-59-crew-badges-name-labels.jpg|CueQuote 1.59: crew badges with access zones and onsite name labels]",
+        "Start in Settings, Badges. Add your access zones, such as Stage, FOH, Control and Load-in, and your badge categories, such as AV Crew and Staff. Each category has a colour and the zones it grants by default, and it can be the default for staff or for freelancers, so most people need no editing at all. A button adds a standard set to start from, and every category shows a live badge preview with your logo and colours.",
+        "On each job, a Badges and labels card lists everyone booked. Give a person a different category, a crew number, or a zone more or less than their category grants. Click the eye to see their badge, or Number crew to fill in crew numbers in one go.",
+        "Printing works with the printer you already have. Labels come out as a PDF at the exact size of your label stock, so any printer with a normal driver prints them: a Brother, a Zebra, a DYMO, or an office printer on A4 label sheets. Each laptop remembers its own label size and a small position correction, and a test label shows whether it lines up. A name that will not fit at a readable size is flagged before printing, not printed tiny.",
+        "Some events you staff never go through a quote. Crew events, under Crew, give them a name, dates and venue, and the same crew list as a job. You can also import a crew list from CSV: people already in your crew are matched by email or name, and every row is checked before anything is saved."
+      ]
+    },
     "cuequote-v158-whats-new": {
       "title": "CueQuote 1.58: Item Discounts and Invoice Currencies",
       "excerpt": "Discount a single line without touching its catalogue price, and issue each invoice in the currency your client pays in.",
@@ -2466,6 +2479,19 @@
       "tip": "Send the NDA when you add someone to your crew list, not when you book them. The point of it is to cover the conversation before the job exists.",
       "step7": "Produce the proof: once somebody has signed, the row shows Signed with the date and a Signed record link. It gives you a PDF of the terms exactly as they were signed, followed by who signed, when, from which IP address, on what device, and their signature drawn on the page",
       "step8": "They get their own copy: the moment a freelancer signs, the same PDF is emailed to the address on their crew record. You do not have to send it, and a copy they received and did not object to strengthens yours"
+    },
+    "crewBadges": {
+      "title": "Crew badges and name labels",
+      "content1": "Print an onsite name label for everyone you put on an event: their name, role, crew number and the event, sized for your label printer. Labels are a PDF at the exact label size, so any printer with a normal driver prints them: Brother, Zebra, DYMO, or an office printer on A4 label sheets.",
+      "content2": "Badges are built from your access zones (Stage, FOH, Load-in and so on) and badge categories. Each category has a colour and the zones it grants by default, and can be the default for staff or for freelancers, so most people need no editing. The preview shows each badge with your logo and colours before anything is printed.",
+      "content3": "Crew events cover events that never went through a quote in CueQuote. They have a name, dates and venue, and the same crew list, CSV import and labels as a job.",
+      "step1": "Open Settings, then Badges, and click Add the standard set, or add your own zones and categories",
+      "step2": "Choose the label size your printer uses; each laptop can override it when printing",
+      "step3": "On a job or crew event, set each person's category, crew number and zones in Badges and labels",
+      "step4": "Click the eye icon to preview a badge",
+      "step5": "Print one label or all of them; print a test label first and nudge the position if it comes out shifted",
+      "step6": "For an event with no job, open Crew, then Crew events, and create one; import a crew list from CSV if you have one",
+      "tip": "In the print dialog, always choose Actual size rather than Fit to page, or the label prints smaller than the stock."
     }
   },
   "changelog": {

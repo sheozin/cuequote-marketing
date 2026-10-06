@@ -511,6 +511,19 @@
     "api": "API i integracje"
   },
   "posts": {
+    "cuequote-v159-whats-new": {
+      "title": "CueQuote 1.59: identyfikatory ekipy i etykiety",
+      "excerpt": "Drukuj etykiety z imionami dla każdego na zleceniu, na dowolnej drukarce etykiet, i oglądaj każdy identyfikator przed drukiem.",
+      "readTime": "3 min czytania",
+      "content": [
+        "Wersja 1.59 dotyczy ludzi, których wysyłasz na miejsce. Każdy na zleceniu może mieć identyfikator i wydrukowaną etykietę z imieniem, ustawione raz i drukowane kilkoma kliknięciami.",
+        "[IMAGE:/blog/cuequote-v1-59-crew-badges-name-labels.jpg|CueQuote 1.59: identyfikatory ekipy ze strefami dostępu i etykiety z imionami]",
+        "Zacznij w Ustawieniach, Identyfikatory. Dodaj strefy dostępu, na przykład Scena, FOH, Reżyserka i Rozładunek, oraz kategorie, na przykład Ekipa AV i Personel. Każda kategoria ma kolor i strefy przyznawane domyślnie i może być domyślna dla personelu lub freelancerów, więc większość osób nie wymaga edycji. Przycisk dodaje standardowy zestaw na start, a każda kategoria pokazuje podgląd identyfikatora z Twoim logo i kolorami.",
+        "Na każdym zleceniu karta Identyfikatory i etykiety pokazuje wszystkich przypisanych. Nadaj komuś inną kategorię, numer albo strefę więcej lub mniej niż daje kategoria. Kliknij oko, aby zobaczyć identyfikator, albo Ponumeruj ekipę, aby uzupełnić numery za jednym razem.",
+        "Drukowanie działa z drukarką, którą już masz. Etykiety powstają jako PDF w dokładnym rozmiarze etykiet, więc wydrukuje je każda drukarka ze zwykłym sterownikiem: Brother, Zebra, DYMO albo drukarka biurowa na arkuszach A4. Każdy laptop pamięta własny rozmiar i drobną korektę położenia, a etykieta testowa pokazuje, czy wszystko się zgadza. Imię, które nie zmieści się w czytelnym rozmiarze, jest oznaczane przed drukiem.",
+        "Część wydarzeń nigdy nie przechodzi przez ofertę. Wydarzenia ekipy w sekcji Ekipa mają nazwę, daty i miejsce oraz taką samą listę jak zlecenie. Listę ekipy możesz też zaimportować z CSV: osoby z Twojej ekipy są dopasowywane po e-mailu lub nazwisku, a każdy wiersz jest sprawdzany przed zapisem."
+      ]
+    },
     "cuequote-v158-whats-new": {
       "title": "CueQuote 1.58: rabaty na pozycje i waluta faktury",
       "excerpt": "Udziel rabatu na jedną pozycję bez zmiany jej ceny katalogowej i wystaw każdą fakturę w walucie, w której płaci klient.",
@@ -2430,6 +2443,19 @@
       "tip": "Wyślij NDA, gdy dodajesz kogoś do listy ekipy, a nie gdy go rezerwujesz. Chodzi właśnie o rozmowę, która odbywa się, zanim zlecenie powstanie.",
       "step7": "Przygotuj dowód: gdy ktoś podpisze, w wierszu pojawia się Podpisano z datą oraz link Zapis podpisu. Otrzymasz PDF z treścią dokładnie w brzmieniu podpisanym, a pod nią informację, kto podpisał, kiedy, z jakiego adresu IP i na jakim urządzeniu, wraz z narysowanym podpisem",
       "step8": "Freelancer dostaje własną kopię: w chwili podpisania ten sam PDF trafia e-mailem na adres z jego karty. Nie musisz nic wysyłać, a kopia, którą otrzymał i której nie zakwestionował, wzmacnia Twój dowód"
+    },
+    "crewBadges": {
+      "title": "Identyfikatory ekipy i etykiety z imionami",
+      "content1": "Wydrukuj etykietę z imieniem dla każdego, kogo wysyłasz na wydarzenie: imię, rola, numer i wydarzenie, w rozmiarze Twojej drukarki etykiet. Etykiety to PDF w dokładnym rozmiarze, więc wydrukuje je każda drukarka ze zwykłym sterownikiem: Brother, Zebra, DYMO albo drukarka biurowa na arkuszach A4.",
+      "content2": "Identyfikatory powstają ze stref dostępu (Scena, FOH, Rozładunek itd.) i kategorii. Każda kategoria ma kolor i strefy przyznawane domyślnie, i może być domyślna dla personelu lub freelancerów, więc większość osób nie wymaga edycji. Podgląd pokazuje identyfikator z Twoim logo i kolorami przed drukiem.",
+      "content3": "Wydarzenia ekipy obejmują wydarzenia, które nigdy nie przeszły przez ofertę w CueQuote. Mają nazwę, daty i miejsce oraz taką samą listę ekipy, import CSV i etykiety jak zlecenie.",
+      "step1": "Otwórz Ustawienia, potem Identyfikatory, i kliknij Dodaj standardowy zestaw albo dodaj własne strefy i kategorie",
+      "step2": "Wybierz rozmiar etykiet swojej drukarki; każdy laptop może go zmienić przy druku",
+      "step3": "Na zleceniu lub wydarzeniu ekipy ustaw każdemu kategorię, numer i strefy w karcie Identyfikatory i etykiety",
+      "step4": "Kliknij ikonę oka, aby zobaczyć podgląd identyfikatora",
+      "step5": "Wydrukuj jedną etykietę lub wszystkie; najpierw wydrukuj etykietę testową i przesuń ją, jeśli jest przesunięta",
+      "step6": "Dla wydarzenia bez zlecenia otwórz Ekipa, potem Wydarzenia ekipy, i utwórz je; listę ekipy możesz zaimportować z CSV",
+      "tip": "W oknie druku zawsze wybieraj Rzeczywisty rozmiar zamiast Dopasuj do strony, inaczej etykieta wydrukuje się mniejsza."
     }
   },
   "changelog": {

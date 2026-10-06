@@ -511,6 +511,19 @@
     "api": "API & Integrationen"
   },
   "posts": {
+    "cuequote-v159-whats-new": {
+      "title": "CueQuote 1.59: Crew-Ausweise und Namensetiketten",
+      "excerpt": "Drucken Sie Namensetiketten für alle auf einem Auftrag, auf jedem Etikettendrucker, und sehen Sie jeden Ausweis vor dem Druck.",
+      "readTime": "3 Min. Lesezeit",
+      "content": [
+        "Version 1.59 dreht sich um die Menschen, die Sie vor Ort einsetzen. Jede Person auf einem Auftrag kann jetzt einen Ausweis und ein gedrucktes Namensetikett haben, einmal eingerichtet und mit wenigen Klicks gedruckt.",
+        "[IMAGE:/blog/cuequote-v1-59-crew-badges-name-labels.jpg|CueQuote 1.59: Crew-Ausweise mit Zutrittszonen und Namensetiketten vor Ort]",
+        "Beginnen Sie unter Einstellungen, Ausweise. Legen Sie Zutrittszonen wie Bühne, FOH, Regie und Ladezone an und Ausweiskategorien wie AV Crew und Staff. Jede Kategorie hat eine Farbe und standardmäßig gewährte Zonen und kann Standard für Festangestellte oder Freelancer sein, sodass die meisten Personen keine Bearbeitung brauchen. Ein Knopf fügt einen Standardsatz hinzu, und jede Kategorie zeigt eine Live-Vorschau mit Ihrem Logo und Ihren Farben.",
+        "In jedem Auftrag listet die Karte Ausweise und Etiketten alle Gebuchten. Geben Sie einer Person eine andere Kategorie, eine Crew-Nummer oder eine Zone mehr oder weniger, als ihre Kategorie gewährt. Das Augensymbol zeigt den Ausweis, Crew nummerieren füllt alle Nummern auf einmal.",
+        "Gedruckt wird auf dem Drucker, den Sie schon haben. Etiketten entstehen als PDF in der exakten Größe Ihrer Etiketten, daher druckt sie jeder Drucker mit normalem Treiber: Brother, Zebra, DYMO oder ein Bürodrucker auf A4-Bögen. Jeder Laptop merkt sich seine Etikettengröße und eine kleine Positionskorrektur, und ein Testetikett zeigt, ob alles sitzt. Ein Name, der nicht in lesbarer Größe passt, wird vor dem Druck markiert.",
+        "Manche Veranstaltungen laufen nie über ein Angebot. Crew-Veranstaltungen unter Crew geben ihnen Namen, Daten und Ort und dieselbe Crew-Liste wie ein Auftrag. Crew-Listen lassen sich auch per CSV importieren: Personen aus Ihrer Crew werden per E-Mail oder Name zugeordnet, und jede Zeile wird vor dem Speichern geprüft."
+      ]
+    },
     "cuequote-v158-whats-new": {
       "title": "CueQuote 1.58: Positionsrabatte und Rechnungswährung",
       "excerpt": "Rabattieren Sie eine einzelne Position, ohne ihren Katalogpreis anzutasten, und stellen Sie jede Rechnung in der Währung Ihres Kunden aus.",
@@ -2456,6 +2469,19 @@
       "tip": "Senden Sie die NDA, wenn Sie jemanden in die Crew-Liste aufnehmen, nicht erst bei der Buchung. Sie soll genau das Gespräch abdecken, das vor dem Auftrag stattfindet.",
       "step7": "Nachweis erzeugen: sobald jemand unterschrieben hat, zeigt die Zeile Unterschrieben mit Datum und einen Link Nachweis. Sie erhalten ein PDF mit dem Text genau so, wie er unterschrieben wurde, darunter wer wann von welcher IP-Adresse und auf welchem Gerät unterschrieben hat, samt gezeichneter Unterschrift",
       "step8": "Die Person bekommt ihre eigene Kopie: sobald ein Freelancer unterschreibt, geht dasselbe PDF an die Adresse im Crew-Datensatz. Sie müssen nichts senden, und eine erhaltene und unwidersprochene Kopie stärkt Ihren Nachweis"
+    },
+    "crewBadges": {
+      "title": "Crew-Ausweise und Namensetiketten",
+      "content1": "Drucken Sie für jede Person, die Sie auf eine Veranstaltung schicken, ein Namensetikett: Name, Rolle, Crew-Nummer und Veranstaltung, passend für Ihren Etikettendrucker. Etiketten sind ein PDF in exakter Größe, daher druckt sie jeder Drucker mit normalem Treiber: Brother, Zebra, DYMO oder ein Bürodrucker auf A4-Etikettenbögen.",
+      "content2": "Ausweise entstehen aus Ihren Zutrittszonen (Bühne, FOH, Ladezone usw.) und Ausweiskategorien. Jede Kategorie hat eine Farbe und standardmäßig gewährte Zonen und kann Standard für Festangestellte oder Freelancer sein, sodass die meisten Personen keine Bearbeitung brauchen. Die Vorschau zeigt jeden Ausweis mit Ihrem Logo und Ihren Farben vor dem Druck.",
+      "content3": "Crew-Veranstaltungen decken Veranstaltungen ab, die nie über ein Angebot in CueQuote liefen. Sie haben Name, Daten und Ort und dieselbe Crew-Liste, denselben CSV-Import und dieselben Etiketten wie ein Auftrag.",
+      "step1": "Öffnen Sie Einstellungen, dann Ausweise, und klicken Sie Standardsatz hinzufügen oder legen Sie eigene Zonen und Kategorien an",
+      "step2": "Wählen Sie die Etikettengröße Ihres Druckers; jeder Laptop kann sie beim Drucken ändern",
+      "step3": "Setzen Sie im Auftrag oder in der Crew-Veranstaltung unter Ausweise und Etiketten Kategorie, Nummer und Zonen jeder Person",
+      "step4": "Klicken Sie das Augensymbol für die Ausweisvorschau",
+      "step5": "Drucken Sie ein Etikett oder alle; drucken Sie zuerst ein Testetikett und korrigieren Sie die Position, falls es versetzt ist",
+      "step6": "Für eine Veranstaltung ohne Auftrag öffnen Sie Crew, dann Crew-Veranstaltungen, und legen eine an; eine Crew-Liste lässt sich per CSV importieren",
+      "tip": "Wählen Sie im Druckdialog immer Tatsächliche Größe statt An Seite anpassen, sonst wird das Etikett kleiner gedruckt."
     }
   },
   "changelog": {

@@ -872,6 +872,53 @@ export const TUTORIALS_FR: Tutorial[] = [
     ],
   },
   {
+    slug: 'crew-badges',
+    title: "Badges d'équipe et étiquettes nominatives",
+    description: "Configurez zones d'accès et catégories de badges, puis imprimez une étiquette nominative pour chaque personne d'un dossier ou d'un événement équipe, sur n'importe quelle imprimante d'étiquettes.",
+    duration: "6 min",
+    difficulty: 'intermediate',
+    category: 'Configuration',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      "Configurer zones d'accès et catégories de badges",
+      "Prévisualiser un badge avant d'imprimer",
+      "Donner à chacun une catégorie, un numéro et des zones",
+      "Imprimer une étiquette ou toute l'équipe, sur Brother, Zebra, DYMO ou planches A4",
+      "Les événements équipe sans devis",
+      "Importer une liste d'équipe en CSV",
+    ],
+    steps: [
+      {
+        title: "Configurer zones et catégories",
+        content: "Ouvrez Paramètres, puis Badges. Cliquez sur Ajouter l'ensemble standard pour six zones d'accès et deux catégories, AV Crew et Staff, ou créez les vôtres. Chaque catégorie a une couleur, des zones données par défaut, et peut être la catégorie par défaut des salariés ou des freelances.",
+        tip: "Chaque catégorie affiche un aperçu du badge avec votre logo et vos couleurs, avant toute impression.",
+      },
+      {
+        title: "Choisir le format d'étiquette",
+        content: "Dans le même onglet, choisissez les étiquettes de votre imprimante : 62 × 29 mm et autres rouleaux, planches A4 ou un format personnalisé. C'est le choix par défaut de l'entreprise ; chaque ordinateur peut choisir le sien à l'impression, car l'imprimante y est branchée.",
+      },
+      {
+        title: "Ouvrir la liste d'équipe d'un dossier",
+        content: "Sur un dossier, la carte Badges et étiquettes liste toutes les personnes réservées. Chacune reçoit la catégorie de son type, sauf si vous en choisissez une autre. Saisissez un numéro ou cliquez sur Numéroter l'équipe, et cliquez sur une zone pour l'accorder ou la retirer.",
+        tip: "Zones de la catégorie remet une personne sur les zones par défaut, pour qu'un changement ultérieur de la catégorie la concerne aussi.",
+      },
+      {
+        title: "Aperçu et impression",
+        content: "Cliquez sur l'œil pour voir le badge d'une personne. L'icône imprimante imprime une étiquette, Imprimer les étiquettes les imprime toutes. Dans la fenêtre d'impression, choisissez le format et imprimez d'abord une étiquette test : si elle est décalée, déplacez-la d'un ou deux millimètres et l'ordinateur s'en souvient.",
+        tip: "Les noms qui ne tiennent pas à une taille lisible sont signalés avant l'impression, pas imprimés en tout petit.",
+      },
+      {
+        title: "Événements sans dossier",
+        content: "Certains événements ne passent jamais par un devis. Ouvrez Équipe, puis Événements équipe, et créez-en un avec un nom, des dates et un lieu. Il a la même liste qu'un dossier : ajoutez des personnes, numérotez et imprimez.",
+      },
+      {
+        title: "Importer une liste d'équipe",
+        content: "Cliquez sur Importer un CSV avec les colonnes name, email, role, category, crew number et zones. Les personnes de votre équipe sont reconnues par e-mail, puis par nom ; les autres sont ajoutées. Un aperçu montre chaque ligne, et les lignes en erreur sont listées avec la raison avant tout enregistrement.",
+      },
+    ],
+  },
+  {
     slug: 'proposal-comparison',
     title: 'Comparaison de devis',
     description: 'Comparez les devis de fournisseurs via des jetons de partage, des scores de valeur, la comparaison ligne à ligne, les conditions et les recommandations IA.',

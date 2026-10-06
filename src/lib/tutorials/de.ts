@@ -872,6 +872,53 @@ export const TUTORIALS_DE: Tutorial[] = [
     ],
   },
   {
+    slug: 'crew-badges',
+    title: "Crew-Ausweise und Namensetiketten",
+    description: "Richten Sie Zutrittszonen und Ausweiskategorien ein und drucken Sie Namensetiketten für alle auf einem Auftrag oder einer Crew-Veranstaltung, auf jedem Etikettendrucker.",
+    duration: "6 Min.",
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      "Zutrittszonen und Ausweiskategorien einrichten",
+      "Einen Ausweis vor dem Druck ansehen",
+      "Jeder Person Kategorie, Crew-Nummer und Zonen geben",
+      "Ein Etikett oder die ganze Crew drucken, auf Brother, Zebra, DYMO oder A4-Bögen",
+      "Crew-Veranstaltungen ohne Angebot",
+      "Eine Crew-Liste per CSV importieren",
+    ],
+    steps: [
+      {
+        title: "Zonen und Kategorien einrichten",
+        content: "Öffnen Sie Einstellungen, dann Ausweise. Klicken Sie Standardsatz hinzufügen für sechs Zutrittszonen und zwei Kategorien, AV Crew und Staff, oder legen Sie eigene an. Jede Kategorie hat eine Farbe, standardmäßig gewährte Zonen und kann Standard für Festangestellte oder Freelancer sein.",
+        tip: "Jede Kategorie zeigt eine Live-Vorschau mit Ihrem Logo und Ihren Farben, sodass Sie das Ergebnis vor dem Druck sehen.",
+      },
+      {
+        title: "Etikettengröße wählen",
+        content: "Wählen Sie im selben Tab die Etiketten Ihres Druckers: 62 × 29 mm und andere Rollen, A4-Bögen oder eine eigene Breite und Höhe. Das ist der Firmenstandard; jeder Laptop kann beim Drucken einen eigenen wählen, weil der Drucker daran hängt.",
+      },
+      {
+        title: "Crew-Liste im Auftrag öffnen",
+        content: "Im Auftrag listet die Karte Ausweise und Etiketten alle Gebuchten. Jede Person erhält die Kategorie ihres Typs, sofern Sie keine andere wählen. Setzen Sie eine Nummer oder klicken Sie Crew nummerieren, und klicken Sie eine Zone, um sie zu gewähren oder zu entziehen.",
+        tip: "Zonen der Kategorie setzt eine Person auf die Standardzonen zurück, sodass spätere Änderungen der Kategorie sie mit erfassen.",
+      },
+      {
+        title: "Vorschau und Druck",
+        content: "Klicken Sie das Augensymbol für den Ausweis einer Person. Das Druckersymbol druckt ein Etikett, Etiketten drucken alle. Wählen Sie im Druckfenster die Größe und drucken Sie zuerst ein Testetikett: Sitzt es versetzt, verschieben Sie es um ein, zwei Millimeter, und der Laptop merkt es sich.",
+        tip: "Namen, die nicht in lesbarer Größe passen, werden vor dem Druck markiert und nicht winzig gedruckt.",
+      },
+      {
+        title: "Veranstaltungen ohne Auftrag",
+        content: "Manche Veranstaltungen laufen nie über ein Angebot. Öffnen Sie Crew, dann Crew-Veranstaltungen, und legen Sie eine mit Name, Daten und Ort an. Sie hat dieselbe Crew-Liste wie ein Auftrag: Personen hinzufügen, nummerieren und drucken.",
+      },
+      {
+        title: "Crew-Liste importieren",
+        content: "Klicken Sie CSV importieren mit den Spalten name, email, role, category, crew number und zones. Personen aus Ihrer Crew werden per E-Mail, dann per Name zugeordnet; alle anderen werden hinzugefügt. Eine Vorschau zeigt jede Zeile, und fehlerhafte Zeilen werden mit Grund aufgeführt, bevor etwas gespeichert wird.",
+      },
+    ],
+  },
+  {
     slug: 'proposal-comparison',
     title: 'Angebotsvergleich',
     description: 'Vergleichen Sie Lieferantenangebote anhand von Share-Tokens, Wertebewertungen, Positionsvergleichen, Konditionen und KI-Empfehlungen.',

@@ -837,6 +837,53 @@ export const TUTORIALS_PL: Tutorial[] = [
     ],
   },
   {
+    slug: 'crew-badges',
+    title: "Identyfikatory ekipy i etykiety z imionami",
+    description: "Ustaw strefy dostępu i kategorie identyfikatorów, a potem drukuj etykiety z imionami dla każdego na zleceniu lub wydarzeniu ekipy, na dowolnej drukarce etykiet.",
+    duration: "6 min",
+    difficulty: 'intermediate',
+    category: 'Konfiguracja',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      "Ustawianie stref dostępu i kategorii identyfikatorów",
+      "Podgląd identyfikatora przed drukiem",
+      "Nadawanie kategorii, numeru i stref każdej osobie",
+      "Druk jednej etykiety lub całej ekipy na Brother, Zebra, DYMO lub arkuszach A4",
+      "Wydarzenia ekipy dla wydarzeń bez oferty",
+      "Import listy ekipy z CSV",
+    ],
+    steps: [
+      {
+        title: "Ustaw strefy i kategorie",
+        content: "Otwórz Ustawienia, a potem Identyfikatory. Kliknij Dodaj standardowy zestaw, aby dodać sześć stref dostępu i dwie kategorie, Ekipa AV i Personel, albo dodaj własne. Każda kategoria ma kolor, strefy przyznawane domyślnie i może być domyślna dla personelu lub freelancerów.",
+        tip: "Każda kategoria ma podgląd identyfikatora z Twoim logo i kolorami, więc widzisz efekt przed drukiem.",
+      },
+      {
+        title: "Wybierz rozmiar etykiety",
+        content: "W tej samej zakładce wybierz etykiety swojej drukarki: 62 × 29 mm i inne rolki, arkusze A4 albo własną szerokość i wysokość. To domyślne ustawienie firmy; każdy laptop może przy druku wybrać własne, bo to do niego podłączona jest drukarka.",
+      },
+      {
+        title: "Otwórz listę ekipy na zleceniu",
+        content: "Na zleceniu karta Identyfikatory i etykiety pokazuje wszystkich przypisanych. Każdy dostaje kategorię dla swojego typu, chyba że wybierzesz inną. Ustaw numer albo kliknij Ponumeruj ekipę, a kliknięciem strefy przyznaj ją lub odbierz danej osobie.",
+        tip: "Strefy z kategorii przywracają domyślne strefy kategorii, więc późniejsza zmiana kategorii obejmie też tę osobę.",
+      },
+      {
+        title: "Podgląd i druk",
+        content: "Kliknij ikonę oka, aby zobaczyć identyfikator. Kliknij ikonę drukarki dla jednej etykiety albo Drukuj etykiety dla wszystkich. W oknie druku wybierz rozmiar i najpierw wydrukuj etykietę testową: jeśli jest przesunięta, przesuń ją o milimetr lub dwa, a laptop to zapamięta.",
+        tip: "Imiona, które nie zmieszczą się w czytelnym rozmiarze, są oznaczane przed drukiem, a nie drukowane drobno.",
+      },
+      {
+        title: "Wydarzenia bez zlecenia",
+        content: "Część wydarzeń nigdy nie przechodzi przez ofertę. Otwórz Ekipa, potem Wydarzenia ekipy, i utwórz wydarzenie z nazwą, datami i miejscem. Ma taką samą listę jak zlecenie: dodaj ludzi z ekipy lub kogoś nowego, ponumeruj i drukuj.",
+      },
+      {
+        title: "Import listy ekipy",
+        content: "Kliknij Import CSV z kolumnami name, email, role, category, crew number i zones. Osoby z Twojej ekipy są dopasowywane po e-mailu, potem po nazwisku; pozostałe zostaną dodane. Podgląd pokazuje, co stanie się z każdym wierszem, a błędne wiersze są wypisane z powodem, zanim cokolwiek zostanie zapisane.",
+      },
+    ],
+  },
+  {
     slug: 'proposal-comparison',
     title: 'Porównanie ofert',
     description: 'Porównuj oferty dostawców za pomocą tokenów udostępniania, ocen wartości, zestawień pozycji, warunków i rekomendacji AI.',
