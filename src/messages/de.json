@@ -511,6 +511,19 @@
     "api": "API & Integrationen"
   },
   "posts": {
+    "cuequote-v160-whats-new": {
+      "title": "CueQuote 1.60: Ausweis-Layouts und eine Druckdatei",
+      "excerpt": "Wählen Sie, wie Ihre Crew-Ausweise aussehen, in Ihren Farben, und laden Sie eine Druckdatei für Ihre Druckerei herunter.",
+      "readTime": "3 Min. Lesezeit",
+      "content": [
+        "Version 1.59 brachte Namensetiketten vor Ort. Version 1.60 dreht sich um die Karte, auf die das Etikett kommt: wie sie aussieht und welche Datei Sie zum Drucken schicken.",
+        "[IMAGE:/blog/cuequote-v1-60-badge-layouts-print-file.jpg|CueQuote 1.60: Ausweis-Layouts in Ihren Farben und eine Druckdatei für vorgedruckte Karten]",
+        "Wählen Sie unter Einstellungen, Ausweise eines von vier Layouts: ein Farbband quer oder hoch oder eine Vollfarbkarte quer oder hoch. Jedes wird mit Ihrem Logo und Ihren Kategoriefarben gezeigt, Sie entscheiden also an Ihrem Design statt an einem Beispielbild. Jedes Layout lässt vorne ein freies Feld für das Etikett, passend zu Ihrem Etikett.",
+        "Die Rückseite trägt jetzt Ihr Logo, eine Überschrift und bis zu drei Zeilen je Kategorie, etwa Ihren Crew-Kodex, einen Slogan und einen QR-Code zu Ihrer Website oder einem gewählten Link. Für farbige Flächen können Sie eine weiße Version Ihres Logos hochladen.",
+        "Druckdatei lädt ein PDF herunter, das Ihre Druckerei direkt verwenden kann: CMYK, 3 mm Beschnitt, Schnittmarken, eingebettete Schriften und die Schneidlinie für Karte und Lanyard-Schlitz in einer eigenen Sonderfarbe, benannt als Die, CutContour oder Thru-cut, wie Ihre Druckerei es verlangt. Hinterlegen Sie je Kategorie die CMYK-Werte Ihres Designers; ohne sie wird die Bildschirmfarbe umgerechnet, und die Datei weist darauf hin.",
+        "Aus einem Auftrag oder einer Crew-Veranstaltung enthält die Datei ein Design je Kategorie und tatsächlich gebuchtem Zonensatz, mit der Anzahl benötigter Karten. Vor dem Download sehen Sie, was zu prüfen ist, etwa eine fehlende Druckfarbe oder ein Logo, das zu klein für einen scharfen Druck ist. Bitten Sie Ihre Druckerei vor der Auflage um einen gedruckten Proof."
+      ]
+    },
     "cuequote-v159-whats-new": {
       "title": "CueQuote 1.59: Crew-Ausweise und Namensetiketten",
       "excerpt": "Drucken Sie Namensetiketten für alle auf einem Auftrag, auf jedem Etikettendrucker, und sehen Sie jeden Ausweis vor dem Druck.",
@@ -2482,6 +2495,19 @@
       "step5": "Drucken Sie ein Etikett oder alle; drucken Sie zuerst ein Testetikett und korrigieren Sie die Position, falls es versetzt ist",
       "step6": "Für eine Veranstaltung ohne Auftrag öffnen Sie Crew, dann Crew-Veranstaltungen, und legen eine an; eine Crew-Liste lässt sich per CSV importieren",
       "tip": "Wählen Sie im Druckdialog immer Tatsächliche Größe statt An Seite anpassen, sonst wird das Etikett kleiner gedruckt."
+    },
+    "badgePrintFile": {
+      "title": "Ausweis-Layouts und die Druckdatei",
+      "content1": "Ihre vorgedruckten Ausweiskarten können eines von vier Layouts nutzen: ein Farbband quer oder hoch oder eine Vollfarbkarte quer oder hoch. Einstellungen, Ausweise zeigt jedes mit Ihrem eigenen Logo und Ihren Kategoriefarben, Sie wählen also an Ihrem eigenen Design. Das Namensetikett kommt in das Feld, das jedes Layout dafür freihält, passend zu Ihrem Etikett.",
+      "content2": "Die Rückseite trägt Ihr Logo, eine Überschrift und bis zu drei Zeilen je Kategorie (etwa Ihren Crew-Kodex), einen Slogan und einen QR-Code, der Ihre Website oder einen gewählten Link öffnet. Für farbige Flächen können Sie eine weiße oder helle Version Ihres Logos hochladen.",
+      "content3": "Die Druckdatei ist ein PDF, das Ihre Druckerei direkt verwenden kann: CMYK, 3 mm Beschnitt, Schnittmarken, eingebettete Schriften und die Schneidlinie für Karte und Lanyard-Schlitz in einer eigenen Sonderfarbe, benannt als Die, CutContour oder Thru-cut, wie Ihre Druckerei es verlangt. Aus einem Auftrag oder einer Crew-Veranstaltung exportiert, enthält sie ein Design je Kategorie und Zonensatz, mit der Anzahl benötigter Karten.",
+      "step1": "Öffnen Sie Einstellungen, dann Ausweise, und klicken Sie unter Ausweis-Layout das gewünschte Layout an",
+      "step2": "Wählen Sie abgerundete oder eckige Ecken und den Namen der Schneidlinie, den Ihre Druckerei nutzt",
+      "step3": "Laden Sie unter Ausweis-Branding ein Logo für farbige Hintergründe hoch und legen Sie Slogan und QR-Link fest",
+      "step4": "Bearbeiten Sie jede Kategorie: Druckfarbe in CMYK, Überschrift auf der Rückseite und bis zu drei Zeilen",
+      "step5": "Klicken Sie unter Ausweiskategorien oder in einem Auftrag oder einer Crew-Veranstaltung auf Druckdatei, lesen Sie die Hinweise und laden Sie das PDF herunter",
+      "step6": "Senden Sie das PDF an Ihre Druckerei und bitten Sie vor der Auflage um einen gedruckten Proof",
+      "tip": "Fragen Sie Ihren Designer nach den CMYK-Werten jeder Kategoriefarbe. Ohne sie wird die Bildschirmfarbe umgerechnet und der Druck weicht von dem ab, was Sie sehen."
     }
   },
   "changelog": {

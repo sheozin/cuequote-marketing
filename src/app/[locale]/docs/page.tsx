@@ -177,6 +177,7 @@ const ARTICLE_KEYS = [
   { id: 'crew-scheduling', key: 'crewScheduling', contentKeys: ['content1', 'content2', 'content3'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10'] },
   { id: 'crew-contracts', key: 'crewContracts', contentKeys: ['content1', 'content2', 'content3'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8'] },
   { id: 'crew-badges', key: 'crewBadges', contentKeys: ['content1', 'content2', 'content3'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'] },
+  { id: 'badge-print-file', key: 'badgePrintFile', contentKeys: ['content1', 'content2', 'content3'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'] },
   // ── Account & configuration ──
   {
     id: "billing-plans",

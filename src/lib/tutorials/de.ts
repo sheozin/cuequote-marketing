@@ -919,6 +919,48 @@ export const TUTORIALS_DE: Tutorial[] = [
     ],
   },
   {
+    slug: 'badge-print-file',
+    title: "Ausweis-Layouts und die Druckdatei",
+    description: "Wählen Sie ein Ausweis-Layout in Ihren Farben, gestalten Sie die Rückseite und exportieren Sie ein PDF, das Ihre Druckerei direkt verwenden kann.",
+    duration: "4 min",
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      "Ein Layout mit Ihrem eigenen Logo und Ihren Farben wählen",
+      "Die Rückseite: Überschrift, Crew-Kodex, Slogan und QR-Code",
+      "Die Druckfarbe jeder Kategorie in CMYK",
+      "Die Druckdatei aus den Einstellungen oder einem Auftrag exportieren",
+      "Was die Druckerei erhält: Beschnitt, Schnittmarken und Schneidlinie",
+    ],
+    steps: [
+      {
+        title: "Layout wählen",
+        content: "Öffnen Sie Einstellungen, dann Ausweise. Klicken Sie unter Ausweis-Layout auf eines der vier Layouts: Farbband quer oder hoch oder Vollfarbe quer oder hoch. Jedes wird mit Ihrem Logo und der Farbe Ihrer ersten Kategorie gezeigt.",
+        tip: "Das freie Feld auf der Vorderseite ist für das Namensetikett, passend zu Ihrem Etikett.",
+      },
+      {
+        title: "Schneidlinie festlegen",
+        content: "Wählen Sie abgerundete oder eckige Ecken und den Namen, den Ihre Druckerei für die Schneidlinie nutzt: Die, CutContour oder Thru-cut. Fragen Sie im Zweifel vor dem Versand nach.",
+      },
+      {
+        title: "Branding",
+        content: "Laden Sie unter Ausweis-Branding eine weiße oder helle Version Ihres Logos für die farbigen Flächen hoch, schreiben Sie einen Slogan für die Rückseite und legen Sie den QR-Link fest. Leer gelassen wird Ihre Website verwendet.",
+      },
+      {
+        title: "Kategorien vervollständigen",
+        content: "Bearbeiten Sie eine Kategorie: Druckfarbe als vier CMYK-Werte, eine Überschrift für die Rückseite und bis zu drei Zeilen, etwa Ihren Crew-Kodex. Die Vorschau zeigt Vorder- und Rückseite während der Eingabe.",
+        tip: "Ohne CMYK-Werte wird die Bildschirmfarbe umgerechnet und der Druck weicht ab.",
+      },
+      {
+        title: "Druckdatei exportieren",
+        content: "Klicken Sie unter Ausweiskategorien auf Druckdatei für ein Design je Kategorie. In einem Auftrag oder einer Crew-Veranstaltung entsteht ein Design je Kategorie und gebuchtem Zonensatz, mit der Kartenzahl. Lesen Sie die Hinweise, laden Sie das PDF herunter und senden Sie es an Ihre Druckerei.",
+        tip: "Bitten Sie vor der Auflage um einen gedruckten Proof und prüfen Sie Farbe, Schnitt und Lanyard-Schlitz.",
+      },
+    ],
+  },
+  {
     slug: 'proposal-comparison',
     title: 'Angebotsvergleich',
     description: 'Vergleichen Sie Lieferantenangebote anhand von Share-Tokens, Wertebewertungen, Positionsvergleichen, Konditionen und KI-Empfehlungen.',

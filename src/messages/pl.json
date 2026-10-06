@@ -511,6 +511,19 @@
     "api": "API i integracje"
   },
   "posts": {
+    "cuequote-v160-whats-new": {
+      "title": "CueQuote 1.60: układy identyfikatorów i plik do druku",
+      "excerpt": "Wybierz wygląd identyfikatorów ekipy w swoich kolorach i pobierz plik, którego drukarnia użyje bez poprawek.",
+      "readTime": "3 min czytania",
+      "content": [
+        "Wersja 1.59 przyniosła etykiety z imionami. Wersja 1.60 dotyczy karty, na którą trafia etykieta: jej wyglądu i pliku, który wysyłasz do druku.",
+        "[IMAGE:/blog/cuequote-v1-60-badge-layouts-print-file.jpg|CueQuote 1.60: układy identyfikatorów w Twoich kolorach i plik do druku kart]",
+        "W Ustawieniach, Identyfikatory, wybierz jeden z czterech układów: kolorowy pas w poziomie lub w pionie albo kartę w pełnym kolorze w poziomie lub w pionie. Każdy jest pokazany z Twoim logo i kolorami kategorii, więc wybierasz na własnym projekcie, a nie na przykładowym obrazku. Każdy układ zostawia na przodzie wolne pole na etykietę, dopasowane do Twojej etykiety.",
+        "Na odwrocie karty jest teraz logo, nagłówek i do trzech wierszy dla każdej kategorii, na przykład kodeks ekipy, hasło oraz kod QR otwierający Twoją stronę albo wybrany link. Możesz też wgrać białą wersję logo na kolorowe pola.",
+        "Plik do druku to PDF, którego drukarnia użyje bez poprawek: kolory CMYK, spad 3 mm, znaczniki cięcia, osadzone czcionki i linia cięcia karty oraz otworu na smycz w osobnym kolorze dodatkowym, nazwanym Die, CutContour lub Thru-cut, zależnie od drukarni. Wpisz dla każdej kategorii wartości CMYK od projektanta; bez nich przeliczamy kolor ekranowy i plik o tym informuje.",
+        "Ze zlecenia lub wydarzenia ekipy plik zawiera jeden projekt na kategorię i faktycznie przypisany zestaw stref, z liczbą potrzebnych kart. Przed pobraniem zobaczysz, co sprawdzić, na przykład brak koloru do druku albo logo zbyt małe do ostrego wydruku. Przed całym nakładem poproś drukarnię o wydruk próbny."
+      ]
+    },
     "cuequote-v159-whats-new": {
       "title": "CueQuote 1.59: identyfikatory ekipy i etykiety",
       "excerpt": "Drukuj etykiety z imionami dla każdego na zleceniu, na dowolnej drukarce etykiet, i oglądaj każdy identyfikator przed drukiem.",
@@ -2456,6 +2469,19 @@
       "step5": "Wydrukuj jedną etykietę lub wszystkie; najpierw wydrukuj etykietę testową i przesuń ją, jeśli jest przesunięta",
       "step6": "Dla wydarzenia bez zlecenia otwórz Ekipa, potem Wydarzenia ekipy, i utwórz je; listę ekipy możesz zaimportować z CSV",
       "tip": "W oknie druku zawsze wybieraj Rzeczywisty rozmiar zamiast Dopasuj do strony, inaczej etykieta wydrukuje się mniejsza."
+    },
+    "badgePrintFile": {
+      "title": "Układy identyfikatorów i plik do druku",
+      "content1": "Drukowane karty identyfikatorów mogą mieć jeden z czterech układów: kolorowy pas w poziomie lub w pionie albo kartę w pełnym kolorze w poziomie lub w pionie. Ustawienia, Identyfikatory pokazują każdy z Twoim logo i kolorami kategorii, więc wybierasz na własnym projekcie. Etykieta z imieniem trafia w pole, które każdy układ zostawia dla niej wolne, dopasowane do Twojej etykiety.",
+      "content2": "Na odwrocie karty jest logo, nagłówek i do trzech wierszy dla każdej kategorii (na przykład kodeks ekipy), hasło oraz kod QR, który otwiera Twoją stronę albo wybrany link. Na kolorowe pola możesz wgrać białą lub jasną wersję logo.",
+      "content3": "Plik do druku to PDF, którego drukarnia użyje bez poprawek: kolory CMYK, spad 3 mm, znaczniki cięcia, osadzone czcionki i linia cięcia karty oraz otworu na smycz w osobnym kolorze dodatkowym, nazwanym Die, CutContour lub Thru-cut, zależnie od drukarni. Wyeksportowany ze zlecenia lub wydarzenia ekipy zawiera jeden projekt na kategorię i zestaw stref, z liczbą potrzebnych kart.",
+      "step1": "Otwórz Ustawienia, potem Identyfikatory, i kliknij wybrany układ w sekcji Układ identyfikatora",
+      "step2": "Wybierz narożniki zaokrąglone lub proste oraz nazwę linii cięcia, której używa drukarnia",
+      "step3": "W sekcji Branding identyfikatora wgraj logo na kolorowe tło i ustaw hasło oraz link do kodu QR",
+      "step4": "Edytuj każdą kategorię: dodaj kolor do druku w CMYK, nagłówek na odwrocie i do trzech wierszy",
+      "step5": "Kliknij Plik do druku pod Kategoriami albo na zleceniu lub wydarzeniu ekipy, przeczytaj uwagi i pobierz PDF",
+      "step6": "Wyślij PDF do drukarni i poproś o wydruk próbny przed całym nakładem",
+      "tip": "Poproś projektanta o wartości CMYK każdego koloru kategorii. Bez nich przeliczamy kolor ekranowy, a wydruk będzie się różnił od tego, co widzisz."
     }
   },
   "changelog": {

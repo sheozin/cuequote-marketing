@@ -922,6 +922,48 @@ export const TUTORIALS_EN: Tutorial[] = [
     ],
   },
   {
+    slug: 'badge-print-file',
+    title: "Badge Layouts and the Print File",
+    description: "Choose a badge layout in your own colours, set the back of the card, and export a PDF your print house can use as it is.",
+    duration: "4 min",
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      "Choosing a layout drawn with your own logo and colours",
+      "Setting the back of the card: heading, crew code, slogan and QR code",
+      "Giving each category its print colour in CMYK",
+      "Exporting the print file from Settings or a job",
+      "What the print house receives: bleed, crop marks and the cut line",
+    ],
+    steps: [
+      {
+        title: "Choose a layout",
+        content: "Open Settings, then Badges. Under Badge layout, click one of the four layouts: colour band in landscape or portrait, or full colour in landscape or portrait. Each one is drawn with your logo and your first category's colour.",
+        tip: "The area left free on the front is where the onsite name label goes, sized from your label stock.",
+      },
+      {
+        title: "Set the cut line",
+        content: "Choose rounded or square corners, and the name your print house uses for the cut line: Die, CutContour or Thru-cut. If you are not sure, ask them before you send the file.",
+      },
+      {
+        title: "Brand the badge",
+        content: "In Badge branding, upload a white or light version of your logo for the coloured areas, write a slogan for the back, and set the QR code link. Leave the link empty to use your website.",
+      },
+      {
+        title: "Finish each category",
+        content: "Edit a category to add its print colour as four CMYK values, a heading for the back and up to three lines, such as your crew code. The preview shows the front and back as you type.",
+        tip: "Without CMYK values the screen colour is converted, and the printed colour will differ.",
+      },
+      {
+        title: "Export the print file",
+        content: "Click Print file under Badge categories for one design per category. On a job or crew event, Print file makes one design per category and set of zones booked, with how many cards of each. Read the checks, then download the PDF and send it to your print house.",
+        tip: "Ask for a printed proof before the full run, and check the colour, the cut and the lanyard slot.",
+      },
+    ],
+  },
+  {
     slug: 'proposal-comparison',
     title: 'Proposal Comparison',
     description: 'Compare proposals from multiple vendors side by side — line items, pricing, terms, and an AI insight panel — so you can make the best decision fast.',

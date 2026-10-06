@@ -511,6 +511,19 @@
     "api": "API & integrations"
   },
   "posts": {
+    "cuequote-v160-whats-new": {
+      "title": "CueQuote 1.60: Badge Layouts and a Print File",
+      "excerpt": "Choose how your crew badges look, in your own colours, and download a print file your print house can use as it is.",
+      "readTime": "3 min read",
+      "content": [
+        "Version 1.59 brought onsite name labels. Version 1.60 is about the card the label is stuck on: how it looks, and the file you send to have it printed.",
+        "[IMAGE:/blog/cuequote-v1-60-badge-layouts-print-file.jpg|CueQuote 1.60: badge layouts in your colours and a print file for pre-printed cards]",
+        "In Settings, Badges, choose one of four layouts: a colour band in landscape or portrait, or a full-colour card in landscape or portrait. Each one is drawn with your own logo and category colours, so you choose on your design rather than on a stock picture. Every layout leaves a free area on the front for the onsite label, sized from your label stock.",
+        "The back of the card now carries your logo, a heading and up to three lines per category, such as your crew code, a slogan, and a QR code that opens your website or a link you choose. You can also upload a white version of your logo for the coloured areas.",
+        "Print file downloads a PDF your print house can use as it is: CMYK colour, 3 mm bleed, crop marks, embedded fonts, and the cut line for the card and the lanyard slot in its own spot colour, named Die, CutContour or Thru-cut, as your print house asks. Give each category the CMYK values from your designer; without them the screen colour is converted, and the file tells you so.",
+        "From a job or crew event, the file holds one design per category and set of access zones that is actually booked, with how many cards of each you need. Before you download, it lists what to check, such as a missing print colour or a logo too small to print sharply. Ask your print house for a printed proof before the full run."
+      ]
+    },
     "cuequote-v159-whats-new": {
       "title": "CueQuote 1.59: Crew Badges and Name Labels",
       "excerpt": "Print an onsite name label for everyone on a job, on any label printer, and preview every crew badge before it is printed.",
@@ -2492,6 +2505,19 @@
       "step5": "Print one label or all of them; print a test label first and nudge the position if it comes out shifted",
       "step6": "For an event with no job, open Crew, then Crew events, and create one; import a crew list from CSV if you have one",
       "tip": "In the print dialog, always choose Actual size rather than Fit to page, or the label prints smaller than the stock."
+    },
+    "badgePrintFile": {
+      "title": "Badge layouts and the print file",
+      "content1": "Your pre-printed badge cards can use one of four layouts: a colour band in landscape or portrait, or a full-colour card in landscape or portrait. Settings, Badges shows each one drawn with your own logo and category colours, so you choose on your own design. The onsite name label is stuck in the area each layout keeps free for it, sized from your label stock.",
+      "content2": "The back of the card carries your logo, a heading and up to three lines per category (your crew code, for example), a slogan, and a QR code that opens your website or a link you choose. For coloured areas you can upload a white or light version of your logo.",
+      "content3": "The print file is a PDF your print house can use as it is: CMYK colour, 3 mm bleed, crop marks, embedded fonts, and the cut line for the card and the lanyard slot in its own spot colour, named Die, CutContour or Thru-cut as your print house asks. Exported from a job or crew event, it holds one design per category and set of zones, with how many cards of each you need.",
+      "step1": "Open Settings, then Badges, and click the layout you want in Badge layout",
+      "step2": "Choose rounded or square corners, and the cut line name your print house uses",
+      "step3": "In Badge branding, upload a logo for coloured backgrounds and set the slogan and QR code link",
+      "step4": "Edit each category to add its print colour in CMYK, the heading on the back and up to three lines",
+      "step5": "Click Print file under Badge categories, or on a job or crew event, read the checks and download the PDF",
+      "step6": "Send the PDF to your print house and ask for a printed proof before the full run",
+      "tip": "Ask your designer for the CMYK values of each category colour. Without them the screen colour is converted, and the printed colour will differ from what you see."
     }
   },
   "changelog": {

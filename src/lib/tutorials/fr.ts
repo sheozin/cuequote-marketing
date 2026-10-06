@@ -919,6 +919,48 @@ export const TUTORIALS_FR: Tutorial[] = [
     ],
   },
   {
+    slug: 'badge-print-file',
+    title: "Mises en page des badges et fichier d'impression",
+    description: "Choisissez une mise en page de badge à vos couleurs, réglez le verso et exportez un PDF que votre imprimeur peut utiliser tel quel.",
+    duration: "4 min",
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      "Choisir une mise en page affichée avec votre logo et vos couleurs",
+      "Le verso : titre, code d'équipe, slogan et QR code",
+      "La couleur d'impression CMJN de chaque catégorie",
+      "Exporter le fichier d'impression depuis les paramètres ou un dossier",
+      "Ce que reçoit l'imprimeur : fond perdu, traits de coupe et découpe",
+    ],
+    steps: [
+      {
+        title: "Choisir une mise en page",
+        content: "Ouvrez Paramètres, puis Badges. Dans Mise en page du badge, cliquez sur l'une des quatre mises en page : bandeau couleur en paysage ou en portrait, ou pleine couleur en paysage ou en portrait. Chacune s'affiche avec votre logo et la couleur de votre première catégorie.",
+        tip: "La zone libre au recto accueille l'étiquette nominative, dimensionnée selon votre étiquette.",
+      },
+      {
+        title: "Régler la découpe",
+        content: "Choisissez des coins arrondis ou droits, et le nom que votre imprimeur utilise pour la découpe : Die, CutContour ou Thru-cut. En cas de doute, demandez-lui avant d'envoyer le fichier.",
+      },
+      {
+        title: "Identité du badge",
+        content: "Dans Identité du badge, téléversez une version blanche ou claire de votre logo pour les zones colorées, rédigez un slogan pour le verso et réglez le lien du QR code. Laissé vide, c'est votre site web qui est utilisé.",
+      },
+      {
+        title: "Compléter les catégories",
+        content: "Modifiez une catégorie : couleur d'impression en quatre valeurs CMJN, titre au verso et jusqu'à trois lignes, comme votre code d'équipe. L'aperçu montre le recto et le verso pendant la saisie.",
+        tip: "Sans valeurs CMJN, la couleur écran est convertie et la couleur imprimée différera.",
+      },
+      {
+        title: "Exporter le fichier",
+        content: "Cliquez sur Fichier d'impression sous Catégories de badge pour un modèle par catégorie. Dans un dossier ou un événement d'équipe, le fichier contient un modèle par catégorie et jeu de zones réservé, avec le nombre de cartes. Lisez les vérifications, téléchargez le PDF et envoyez-le à votre imprimeur.",
+        tip: "Demandez une épreuve imprimée avant le tirage complet et vérifiez la couleur, la découpe et la fente du cordon.",
+      },
+    ],
+  },
+  {
     slug: 'proposal-comparison',
     title: 'Comparaison de devis',
     description: 'Comparez les devis de fournisseurs via des jetons de partage, des scores de valeur, la comparaison ligne à ligne, les conditions et les recommandations IA.',

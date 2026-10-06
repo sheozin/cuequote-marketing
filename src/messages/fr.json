@@ -511,6 +511,19 @@
     "api": "API et intégrations"
   },
   "posts": {
+    "cuequote-v160-whats-new": {
+      "title": "CueQuote 1.60 : badges et fichier d'impression",
+      "excerpt": "Choisissez l'apparence de vos badges d'équipe, à vos couleurs, et téléchargez un fichier que votre imprimeur peut utiliser tel quel.",
+      "readTime": "3 min de lecture",
+      "content": [
+        "La version 1.59 a apporté les étiquettes nominatives sur place. La version 1.60 concerne la carte sur laquelle se colle l'étiquette : son apparence et le fichier que vous envoyez pour l'imprimer.",
+        "[IMAGE:/blog/cuequote-v1-60-badge-layouts-print-file.jpg|CueQuote 1.60 : mises en page de badges à vos couleurs et fichier d'impression des cartes]",
+        "Dans Paramètres, Badges, choisissez l'une des quatre mises en page : bandeau couleur en paysage ou en portrait, ou carte pleine couleur en paysage ou en portrait. Chacune s'affiche avec votre logo et les couleurs de vos catégories : vous choisissez sur votre design, pas sur une image d'exemple. Chaque mise en page réserve au recto une zone libre pour l'étiquette, dimensionnée selon votre étiquette.",
+        "Le verso porte désormais votre logo, un titre et jusqu'à trois lignes par catégorie, comme votre code d'équipe, un slogan et un QR code vers votre site ou un lien de votre choix. Vous pouvez aussi téléverser une version blanche de votre logo pour les zones colorées.",
+        "Fichier d'impression télécharge un PDF que votre imprimeur peut utiliser tel quel : CMJN, 3 mm de fond perdu, traits de coupe, polices incorporées, et la découpe de la carte et de la fente du cordon dans son propre ton direct, nommé Die, CutContour ou Thru-cut selon votre imprimeur. Indiquez pour chaque catégorie les valeurs CMJN de votre graphiste ; sans elles, la couleur écran est convertie et le fichier vous le signale.",
+        "Depuis un dossier ou un événement d'équipe, le fichier contient un modèle par catégorie et jeu de zones réellement réservé, avec le nombre de cartes nécessaires. Avant le téléchargement, il liste ce qu'il faut vérifier, comme une couleur d'impression manquante ou un logo trop petit pour une impression nette. Demandez une épreuve imprimée à votre imprimeur avant le tirage complet."
+      ]
+    },
     "cuequote-v159-whats-new": {
       "title": "CueQuote 1.59 : badges d'équipe et étiquettes",
       "excerpt": "Imprimez une étiquette nominative pour chaque personne d'un dossier, sur toute imprimante d'étiquettes, et prévisualisez chaque badge.",
@@ -2484,6 +2497,19 @@
       "step5": "Imprimez une étiquette ou toutes ; imprimez d'abord une étiquette test et décalez-la si elle sort mal placée",
       "step6": "Pour un événement sans dossier, ouvrez Équipe, puis Événements équipe, et créez-en un ; importez une liste d'équipe en CSV si vous en avez une",
       "tip": "Dans la fenêtre d'impression, choisissez toujours Taille réelle plutôt qu'Ajuster à la page, sinon l'étiquette sort plus petite."
+    },
+    "badgePrintFile": {
+      "title": "Mises en page des badges et fichier d'impression",
+      "content1": "Vos cartes de badge préimprimées peuvent utiliser l'une de quatre mises en page : un bandeau couleur en paysage ou en portrait, ou une carte pleine couleur en paysage ou en portrait. Paramètres, Badges affiche chacune avec votre logo et les couleurs de vos catégories : vous choisissez sur votre propre design. L'étiquette nominative se colle dans la zone que chaque mise en page lui réserve, dimensionnée selon votre étiquette.",
+      "content2": "Le verso porte votre logo, un titre et jusqu'à trois lignes par catégorie (votre code d'équipe, par exemple), un slogan et un QR code qui ouvre votre site ou un lien de votre choix. Pour les zones colorées, vous pouvez téléverser une version blanche ou claire de votre logo.",
+      "content3": "Le fichier d'impression est un PDF que votre imprimeur peut utiliser tel quel : CMJN, 3 mm de fond perdu, traits de coupe, polices incorporées, et la découpe de la carte et de la fente du cordon dans son propre ton direct, nommé Die, CutContour ou Thru-cut selon votre imprimeur. Exporté depuis un dossier ou un événement d'équipe, il contient un modèle par catégorie et jeu de zones, avec le nombre de cartes nécessaires.",
+      "step1": "Ouvrez Paramètres, puis Badges, et cliquez sur la mise en page voulue dans Mise en page du badge",
+      "step2": "Choisissez des coins arrondis ou droits, et le nom du tracé de découpe utilisé par votre imprimeur",
+      "step3": "Dans Identité du badge, téléversez un logo pour fond coloré et renseignez le slogan et le lien du QR code",
+      "step4": "Modifiez chaque catégorie : couleur d'impression en CMJN, titre au verso et jusqu'à trois lignes",
+      "step5": "Cliquez sur Fichier d'impression sous Catégories de badge, ou dans un dossier ou un événement d'équipe, lisez les vérifications et téléchargez le PDF",
+      "step6": "Envoyez le PDF à votre imprimeur et demandez une épreuve imprimée avant le tirage complet",
+      "tip": "Demandez à votre graphiste les valeurs CMJN de chaque couleur de catégorie. Sans elles, la couleur écran est convertie et la couleur imprimée différera de ce que vous voyez."
     }
   },
   "changelog": {

@@ -884,6 +884,48 @@ export const TUTORIALS_PL: Tutorial[] = [
     ],
   },
   {
+    slug: 'badge-print-file',
+    title: "Układy identyfikatorów i plik do druku",
+    description: "Wybierz układ identyfikatora w swoich kolorach, ustaw odwrocie karty i wyeksportuj PDF, którego drukarnia użyje bez poprawek.",
+    duration: "4 min",
+    difficulty: 'intermediate',
+    category: 'Setup',
+    mode: 'av',
+    videoUrl: '',
+    whatYouLearn: [
+      "Wybór układu pokazanego z Twoim logo i kolorami",
+      "Odwrocie karty: nagłówek, kodeks ekipy, hasło i kod QR",
+      "Kolor do druku w CMYK dla każdej kategorii",
+      "Eksport pliku do druku z Ustawień lub ze zlecenia",
+      "Co dostaje drukarnia: spad, znaczniki i linię cięcia",
+    ],
+    steps: [
+      {
+        title: "Wybierz układ",
+        content: "Otwórz Ustawienia, potem Identyfikatory. W sekcji Układ identyfikatora kliknij jeden z czterech układów: kolorowy pas w poziomie lub w pionie albo pełny kolor w poziomie lub w pionie. Każdy jest pokazany z Twoim logo i kolorem pierwszej kategorii.",
+        tip: "Wolne pole na przodzie to miejsce na etykietę z imieniem, dopasowane do Twojej etykiety.",
+      },
+      {
+        title: "Ustaw linię cięcia",
+        content: "Wybierz narożniki zaokrąglone lub proste oraz nazwę linii cięcia używaną przez drukarnię: Die, CutContour lub Thru-cut. W razie wątpliwości zapytaj ich przed wysłaniem pliku.",
+      },
+      {
+        title: "Dodaj branding",
+        content: "W sekcji Branding identyfikatora wgraj białą lub jasną wersję logo na kolorowe pola, wpisz hasło na odwrocie i ustaw link do kodu QR. Zostaw link pusty, aby użyć strony WWW.",
+      },
+      {
+        title: "Uzupełnij kategorie",
+        content: "Edytuj kategorię: dodaj kolor do druku jako cztery wartości CMYK, nagłówek na odwrocie i do trzech wierszy, na przykład kodeks ekipy. Podgląd pokazuje przód i tył na bieżąco.",
+        tip: "Bez wartości CMYK przeliczamy kolor ekranowy, a wydruk będzie się różnił.",
+      },
+      {
+        title: "Wyeksportuj plik do druku",
+        content: "Kliknij Plik do druku pod Kategoriami, aby dostać jeden projekt na kategorię. Na zleceniu lub wydarzeniu ekipy plik zawiera jeden projekt na kategorię i zestaw stref, z liczbą kart. Przeczytaj uwagi, pobierz PDF i wyślij go do drukarni.",
+        tip: "Przed całym nakładem poproś o wydruk próbny i sprawdź kolor, cięcie i otwór na smycz.",
+      },
+    ],
+  },
+  {
     slug: 'proposal-comparison',
     title: 'Porównanie ofert',
     description: 'Porównuj oferty dostawców za pomocą tokenów udostępniania, ocen wartości, zestawień pozycji, warunków i rekomendacji AI.',
