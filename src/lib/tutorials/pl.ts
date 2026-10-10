@@ -404,7 +404,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Porównaj plany',
-        content: 'Dostępne są cztery plany: Free (3 oferty/mies., podstawowy PDF), Starter za €29 miesięcznie (10 ofert, pełny branding, zarządzanie klientami), Pro za €79 miesięcznie (40 ofert, niestandardowe szablony, analityka) oraz Business za €179 miesięcznie (120 ofert, dostęp do API, dedykowane wsparcie). Przełączaj między rozliczeniem miesięcznym i rocznym — rocznie oszczędzasz 20%.',
+        content: 'Dostępne są cztery plany: Free (3 oferty/mies., podstawowy PDF), Starter za €29 miesięcznie (10 generacji AI/miesiąc, oferty bez limitu, pełny branding, zarządzanie klientami), Pro za €79 miesięcznie (40 generacji AI/miesiąc, oferty bez limitu, niestandardowe szablony, analityka) oraz Business za €179 miesięcznie (120 generacji AI/miesiąc, oferty bez limitu, dostęp do API, dedykowane wsparcie). Przełączaj między rozliczeniem miesięcznym i rocznym — rocznie oszczędzasz 20%.',
       },
       {
         title: 'Ulepsz do planu płatnego',

@@ -404,7 +404,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Comparez les plans',
-        content: 'Quatre plans sont disponibles : Free (3 devis/mois, PDF basique), Starter à €29 par mois (10 devis, image de marque complète, gestion des clients), Pro à €79 par mois (40 devis, modèles personnalisés, analytics) et Business à €179 par mois (120 devis, accès API, support dédié). Basculez entre facturation mensuelle et annuelle — l\'annuel vous fait économiser 20 %.',
+        content: 'Quatre plans sont disponibles : Free (3 devis/mois, PDF basique), Starter à €29 par mois (10 générations IA/mois, devis illimités, image de marque complète, gestion des clients), Pro à €79 par mois (40 générations IA/mois, devis illimités, modèles personnalisés, analytics) et Business à €179 par mois (120 générations IA/mois, devis illimités, accès API, support dédié). Basculez entre facturation mensuelle et annuelle — l\'annuel vous fait économiser 20 %.',
       },
       {
         title: 'Passez à un plan payant',

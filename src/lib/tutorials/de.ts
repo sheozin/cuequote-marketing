@@ -404,7 +404,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Tarife vergleichen',
-        content: 'Vier Tarife stehen zur Auswahl: Free (3 Angebote/Monat, Basis-PDF), Starter für €29 pro Monat (10 Angebote, vollständiges Branding, Kundenverwaltung), Pro für €79 pro Monat (40 Angebote, individuelle Vorlagen, Analytics) und Business für €179 pro Monat (120 Angebote, API-Zugriff, Premium-Support). Wechseln Sie zwischen monatlicher und jährlicher Abrechnung — die jährliche spart 20 %.',
+        content: 'Vier Tarife stehen zur Auswahl: Free (3 Angebote/Monat, Basis-PDF), Starter für €29 pro Monat (10 KI-Generierungen/Monat, unbegrenzt Angebote, vollständiges Branding, Kundenverwaltung), Pro für €79 pro Monat (40 KI-Generierungen/Monat, unbegrenzt Angebote, individuelle Vorlagen, Analytics) und Business für €179 pro Monat (120 KI-Generierungen/Monat, unbegrenzt Angebote, API-Zugriff, Premium-Support). Wechseln Sie zwischen monatlicher und jährlicher Abrechnung — die jährliche spart 20 %.',
       },
       {
         title: 'Auf einen kostenpflichtigen Tarif upgraden',

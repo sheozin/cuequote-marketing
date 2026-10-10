@@ -164,7 +164,8 @@ export default async function PricingPage() {
 
   const comparisonRows = [
     { cat: t("compProposals", { defaultValue: "Proposals" }) },
-    { label: t("compAiPerMonth", { defaultValue: "AI proposals/month" }), free: "3", starter: "10", pro: "40", business: "120" },
+    { label: t("compAiPerMonth", { defaultValue: "AI generations/month" }), free: "3", starter: "10", pro: "40", business: "120" },
+    { label: t("compManualProposals", { defaultValue: "Proposals from your catalog or a template" }), free: t("compCountedInThree", { defaultValue: "Counted in the 3" }), starter: t("compUnlimited", { defaultValue: "Unlimited" }), pro: t("compUnlimited", { defaultValue: "Unlimited" }), business: t("compUnlimited", { defaultValue: "Unlimited" }) },
     { label: t("compBrandedPdf", { defaultValue: "Your logo & colors on PDFs" }), free: false, starter: true, pro: true, business: true },
     { label: t("compTemplates", { defaultValue: "PDF templates" }), free: "1", starter: "4", pro: "4", business: "4" },
     { label: t("compRecurring", { defaultValue: "Recurring proposals" }), free: false, starter: false, pro: true, business: true },

@@ -405,7 +405,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Compare plans',
-        content: 'Four plans are available: Free (3 proposals/month, basic PDF), Starter at 29 per month (10 proposals, full branding, client management), Pro at 79 per month (40 proposals, custom templates, analytics), and Business at 179 per month (120 proposals, API access, dedicated support). Toggle between monthly and annual billing — annual saves 20%.',
+        content: 'Four plans are available: Free (3 proposals/month, basic PDF), Starter at 29 per month (10 AI generations/month, unlimited proposals, full branding, client management), Pro at 79 per month (40 AI generations/month, unlimited proposals, custom templates, analytics), and Business at 179 per month (120 AI generations/month, unlimited proposals, API access, dedicated support). Toggle between monthly and annual billing — annual saves 20%.',
       },
       {
         title: 'Upgrade to a paid plan',
