@@ -2224,6 +2224,7 @@
       "step11": "Otwórz Zlecenia w menu bocznym: wszystkie wygrane wydarzenia według daty. Zlecenia z ewidencjonowanym sprzętem pokazują swój stan (nierozpoczęte, pakowanie, wydane, częściowo zwrócone, zwrócone, po terminie), a te po terminie są na górze. Otwórz zlecenie, aby zobaczyć harmonogram, ekipę, pełną listę rzeczy do przygotowania oraz — jeśli sprzęt jest ewidencjonowany — listę pakowania, przyciski skanowania i Zakończ zwrot",
       "step12": "Kliknij „Skanuj wydanie” i skanuj etykiety aparatem telefonu, skanerem kodów na Bluetooth lub USB albo wpisując numer ewidencyjny. Przy pozycjach zbiorczych pojawia się pytanie o ilość, a sztuka wydana już gdzie indziej zostaje odrzucona z nazwą tamtego zlecenia",
       "step13": "Kliknij „Skanuj zwrot”, gdy sprzęt wraca, zaznaczając w razie potrzeby „Oznacz skanowane przy zwrocie jako uszkodzone” wraz z notatką. „Cofnij” odwraca skan i nic nigdy nie znika z historii; „Zakończ zwrot” pokazuje, co wciąż jest na zewnątrz, i zapisuje, co zostało zgubione",
+      "step14": "Zlecenia bez oferty: kliknij Nowe zlecenie przy wypożyczeniu, naprawie, pokazie lub wydarzeniu bez oferty, podaj, kto ma sprzęt i termin zwrotu, a potem skanuj wydanie i zwrot jak przy każdym zleceniu; po terminie zmienia się na Zaległe",
       "tip": "Zanim użyjesz arkusza etykiet, wydrukuj jedną stronę na zwykłym papierze i przyłóż ją do arkusza. Limity planów: Free 10 pozycji inwentarza, Starter 50, Pro i wyższe bez limitu."
     },
     "crewScheduling": {

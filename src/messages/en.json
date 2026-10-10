@@ -2260,6 +2260,7 @@
       "step11": "Open Jobs in the sidebar: every won event by date. Jobs carrying tracked equipment show their state (not started, packing, out, partly returned, returned, overdue) with overdue first. Open one for its schedule, the crew on it, the full list of what to prepare, and — where equipment is tracked — its pack list, the scan buttons and Finish return",
       "step12": "Click 'Scan out' and scan a label with the phone camera, a Bluetooth or USB barcode scanner, or by typing the asset number. Bulk items ask how many you are taking, and a unit already out elsewhere is refused with that job named",
       "step13": "Click 'Scan in' when the gear comes home, ticking 'Mark what I scan in as damaged' with a note where it applies. 'Undo' reverses a scan and nothing ever leaves the history; 'Finish return' lists what is still out and records what is lost",
+      "step14": "Jobs without a quote: click New job for a loan, repair, demo or an event nobody quoted, say who has it and when it is due back, then scan it out and in like any job; it turns Overdue after the due date",
       "tip": "Print one page on plain paper and hold it against your label sheet before using label stock. Plan limits: Free 10 inventory items, Starter 50, Pro and above unlimited."
     },
     "crewScheduling": {
