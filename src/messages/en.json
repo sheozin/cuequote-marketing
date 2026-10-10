@@ -2248,7 +2248,7 @@
       "step1": "In your catalog, set each item's Inventory tracking: 'Tracked units, one label each' for gear you follow piece by piece, or 'Bulk, one label and a quantity' for things you count. Crew, transport and services stay not tracked",
       "step2": "Go to Inventory and click 'Set up inventory': mark what you own and choose your asset number prefix (numbers look like INV-00001 by default)",
       "step3": "Enter how many of each tracked item you own, or paste serial numbers one per line to create one unit per serial. Later, use 'Add units' or 'Import from spreadsheet (CSV)'",
-      "step4": "Click 'Print labels' and pick A4 sheets (70 × 37, 48.5 × 25.4 or 99.1 × 38.1 mm, or a custom grid) or label rolls (62 × 29 or 50 × 25 mm); the PDF prints on any printer",
+      "step4": "Click 'Print labels' and pick A4 sheets (70 × 37, 48.5 × 25.4 or 99.1 × 38.1 mm, or a custom grid) or label rolls (62 × 29 or 50 × 25 mm); the PDF prints on any printer. A unit with a serial number shows it under its name, and you can type that serial into the scanner too.",
       "step5": "Open a unit to mark it damaged, send it to repair and back, mark it lost or found, or retire it. Every change goes into its history, and 'Other codes on this unit' lets old stickers find it too",
       "step6": "Scan a label with a phone: your team goes straight to the unit, anyone else sees only your company and how to contact you, and you are alerted if a unit marked lost is scanned",
       "step7": "Pick equipment from your catalog rather than typing it, and set the event date. A hand-typed line shows 'Not linked to inventory' and reserves nothing",
