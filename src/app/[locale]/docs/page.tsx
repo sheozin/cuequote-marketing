@@ -174,7 +174,7 @@ const ARTICLE_KEYS = [
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
   },
   { id: 'inventory-management', key: 'inventoryManagement', contentKeys: ['content1', 'content2', 'content3', 'content4', 'content5'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10', 'step11', 'step12', 'step13', 'step14'] },
-  { id: 'crew-scheduling', key: 'crewScheduling', contentKeys: ['content1', 'content2', 'content3'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10'] },
+  { id: 'crew-scheduling', key: 'crewScheduling', contentKeys: ['content1', 'content2', 'content3'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10', 'step11'] },
   { id: 'crew-contracts', key: 'crewContracts', contentKeys: ['content1', 'content2', 'content3'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8'] },
   { id: 'crew-badges', key: 'crewBadges', contentKeys: ['content1', 'content2', 'content3'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'] },
   { id: 'badge-print-file', key: 'badgePrintFile', contentKeys: ['content1', 'content2', 'content3'], stepKeys: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'] },
