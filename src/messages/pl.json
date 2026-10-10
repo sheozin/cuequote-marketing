@@ -2102,7 +2102,7 @@
       "step2": "Plan Starter: 10 generowań AI miesięcznie",
       "step3": "Plan Pro: 40 generowań AI miesięcznie",
       "step4": "Plan Business: 120 generowań AI miesięcznie",
-      "step5": "Ręczne edycje wygenerowanych ofert są zawsze darmowe — tylko nowe generowania AI są liczone",
+      "step5": "Ręczne edycje wygenerowanych ofert są zawsze darmowe — tylko nowe generowania AI są liczone. Na planach płatnych oferty z katalogu lub szablonu są bezpłatne; plan ryzyka lub ponowne generowanie zużywa generację. Na planie Free liczy się każda oferta",
       "tip": "Napisz szczegółowy opis wydarzenia przed kliknięciem Generuj. Im bardziej szczegółowy opis, tym lepszy wynik AI — i mniejsze prawdopodobieństwo konieczności ponownego generowania."
     },
     "gettingStartedChecklist": {

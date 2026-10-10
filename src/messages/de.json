@@ -2128,7 +2128,7 @@
       "step2": "Starter-Plan: 10 KI-Generierungen pro Monat",
       "step3": "Pro-Plan: 40 KI-Generierungen pro Monat",
       "step4": "Business-Plan: 120 KI-Generierungen pro Monat",
-      "step5": "Manuelle Bearbeitungen generierter Angebote sind immer kostenlos — nur neue KI-Generierungen werden gezählt",
+      "step5": "Manuelle Bearbeitungen generierter Angebote sind immer kostenlos — nur neue KI-Generierungen werden gezählt. In bezahlten Tarifen sind Angebote aus dem Katalog oder einer Vorlage kostenlos; ein Risikoplan oder eine Neugenerierung verbraucht eine Generierung. Im Free-Tarif zählt jedes Angebot",
       "tip": "Schreiben Sie eine detaillierte Veranstaltungsbeschreibung, bevor Sie auf Generieren klicken. Je spezifischer Sie sind, desto besser ist das KI-Ergebnis — und desto unwahrscheinlicher ist es, dass Sie erneut generieren müssen."
     },
     "gettingStartedChecklist": {

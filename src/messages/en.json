@@ -2138,7 +2138,7 @@
       "step2": "Starter plan: 10 AI generations per month",
       "step3": "Pro plan: 40 AI generations per month",
       "step4": "Business plan: 120 AI generations per month",
-      "step5": "Manual edits to generated proposals are always free — only new AI generations count",
+      "step5": "Manual edits to generated proposals are always free — only new AI generations count. On paid plans, proposals built from your catalog or a template are free; a risk plan or a regeneration uses a generation. On the Free plan every proposal counts",
       "tip": "Write a detailed event description before clicking Generate. The more specific you are, the better the AI output — and the less likely you'll need to regenerate."
     },
     "gettingStartedChecklist": {

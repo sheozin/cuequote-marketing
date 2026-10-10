@@ -2130,7 +2130,7 @@
       "step2": "Plan Starter : 10 générations IA par mois",
       "step3": "Plan Pro : 40 générations IA par mois",
       "step4": "Plan Business : 120 générations IA par mois",
-      "step5": "Les modifications manuelles des devis générés sont toujours gratuites — seules les nouvelles générations IA sont comptabilisées",
+      "step5": "Les modifications manuelles des devis générés sont toujours gratuites — seules les nouvelles générations IA sont comptabilisées ; Dans les forfaits payants, les devis créés depuis le catalogue ou un modèle sont gratuits ; un plan de risques ou une régénération utilise une génération. Avec le forfait Free, chaque devis compte",
       "tip": "Rédigez une description détaillée de l'événement avant de cliquer sur Générer. Plus votre description est précise, meilleur sera le résultat de l'IA — et moins vous aurez besoin de regénérer."
     },
     "gettingStartedChecklist": {
