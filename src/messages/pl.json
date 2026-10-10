@@ -1926,7 +1926,7 @@
       "step1": "Kliknij «Nowa oferta» na panelu głównym",
       "step2": "Wpisz opis wydarzenia — podaj jak najwięcej szczegółów o miejscu i wymaganiach",
       "step3": "AI CueQuote generuje kompletną listę sprzętu z ilościami i cenami. Albo kliknij „Zbuduj z katalogu”, aby pominąć AI i samodzielnie dodać pozycje z katalogu",
-      "step4": "Przejrzyj i edytuj: dodaj, usuń lub zmień dowolne pozycje",
+      "step4": "Przejrzyj i edytuj: dodaj, usuń lub zmień dowolne pozycje; zacznij wpisywać nazwę pozycji, aby wybrać ją z katalogu razem z ceną",
       "step5": "Pobierz jako markowy PDF lub udostępnij przez unikalny link",
       "tip": "Użyj funkcji linku udostępniania, aby klienci mogli przeglądać oferty online — mogą zatwierdzić je bezpośrednio z linku.",
       "content3": "Każda pozycja ma kolumnę Dni. Wartość pozycji to ilość × cena jednostkowa × dni, więc cena jednostkowa pozostaje Twoją dzienną stawką z katalogu, a zmiana czasu wynajmu to zmiana jednej liczby. Dni montażu lub demontażu liczone po obniżonej stawce widać jako ułamek, na przykład 2,5 dla dwóch dni wydarzenia i jednego dnia montażu za połowę stawki. W PDF, w linku udostępniania i na fakturach kolumna Dni pojawia się tylko wtedy, gdy co najmniej jedna pozycja trwa dłużej niż jeden dzień. Każda pozycja ma też pole Rabat % na rabat tylko dla tej pozycji. Cena jednostkowa zostaje ceną z katalogu, klient widzi procent rabatu, a rabat na całą ofertę nadal działa dodatkowo. Kolumna Rabat pojawia się w PDF, linku udostępniania i Excelu tylko wtedy, gdy któraś pozycja ma rabat."

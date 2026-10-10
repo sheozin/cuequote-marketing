@@ -1954,7 +1954,7 @@
       "step1": "Cliquez sur « Nouveau devis » depuis votre tableau de bord",
       "step2": "Saisissez la description de l'événement — soyez aussi précis que possible sur le lieu et les exigences",
       "step3": "L'IA de CueQuote génère une liste complète d'équipements avec quantités et prix. Ou cliquez sur « Créer depuis le catalogue » pour passer l'IA et ajouter vous-même les éléments de votre catalogue",
-      "step4": "Vérifiez et modifiez : ajoutez, supprimez ou ajustez les lignes",
+      "step4": "Vérifiez et modifiez : ajoutez, supprimez ou ajustez les lignes ; commencez à saisir le nom d'un élément pour le choisir dans votre catalogue avec son prix",
       "step5": "Téléchargez en PDF à votre marque ou partagez via un lien unique",
       "tip": "Utilisez la fonction de lien de partage pour permettre aux clients de consulter les devis en ligne — ils peuvent approuver directement depuis le lien.",
       "content3": "Chaque ligne a une colonne Jours. Le total d'une ligne est quantité × prix unitaire × jours : le prix unitaire reste votre tarif journalier du catalogue, et changer la durée de location revient à modifier un seul chiffre. Les jours de montage ou de démontage facturés à un tarif réduit s'affichent en décimal, par exemple 2,5 pour deux jours d'événement et un jour de montage à demi-tarif. Dans le PDF, le lien de partage et les factures, la colonne Jours n'apparaît que si au moins une ligne dure plus d'une journée. Chaque ligne a aussi un champ Remise % pour une remise sur cet article seul. Le prix unitaire reste celui du catalogue, le client voit le pourcentage, et une remise sur tout le devis s'applique toujours en plus. La colonne Remise n'apparaît dans le PDF, le lien de partage et Excel que lorsqu'une ligne en a une."

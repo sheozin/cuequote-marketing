@@ -1962,7 +1962,7 @@
       "step1": "Click \"New Proposal\" from your dashboard",
       "step2": "Enter the event description — be as specific as possible about the venue and requirements",
       "step3": "CueQuote's AI generates a complete equipment list with quantities and pricing. Or click \"Build from catalog\" to skip the AI and add items from your catalog yourself",
-      "step4": "Review and edit: add, remove, or adjust any line items",
+      "step4": "Review and edit: add, remove, or adjust any line items; start typing an item name to pick it from your catalog with its price",
       "step5": "Download as a branded PDF or share via a unique link",
       "tip": "Use the share link feature to let clients view proposals online — they can approve directly from the link.",
       "content3": "Every line has a Days column. A line's total is quantity × unit price × days, so the unit price stays your catalogue daily rate and changing how long an item is hired means changing one number. Setup or strike days charged at a reduced rate show as a decimal, for example 2.5 for two show days plus one setup day at half rate. On the PDF, the share link and invoices, the Days column only appears when at least one item runs longer than a day. Each line also has a Disc. % field for a discount on that item alone. The unit price stays your catalogue price, the client sees the percentage off, and a discount on the whole proposal still applies on top. The Discount column only appears on the PDF, the share link and Excel when a line has one."
