@@ -1961,7 +1961,7 @@
       "content2": "Start by describing the event: the venue type, audience size, what kind of production is needed (sound, lighting, video, staging), and any special requirements. The more detail you provide, the more accurate the generated equipment list will be.",
       "step1": "Click \"New Proposal\" from your dashboard",
       "step2": "Enter the event description — be as specific as possible about the venue and requirements",
-      "step3": "CueQuote's AI generates a complete equipment list with quantities and pricing",
+      "step3": "CueQuote's AI generates a complete equipment list with quantities and pricing. Or click \"Build from catalog\" to skip the AI and add items from your catalog yourself",
       "step4": "Review and edit: add, remove, or adjust any line items",
       "step5": "Download as a branded PDF or share via a unique link",
       "tip": "Use the share link feature to let clients view proposals online — they can approve directly from the link.",

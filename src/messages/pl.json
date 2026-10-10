@@ -1925,7 +1925,7 @@
       "content2": "Zacznij od opisania wydarzenia: typ miejsca, wielkość widowni, rodzaj potrzebnej produkcji (dźwięk, oświetlenie, wideo, scena) i wszelkie specjalne wymagania. Im więcej szczegółów podasz, tym dokładniejsza będzie wygenerowana lista sprzętu.",
       "step1": "Kliknij «Nowa oferta» na panelu głównym",
       "step2": "Wpisz opis wydarzenia — podaj jak najwięcej szczegółów o miejscu i wymaganiach",
-      "step3": "AI CueQuote generuje kompletną listę sprzętu z ilościami i cenami",
+      "step3": "AI CueQuote generuje kompletną listę sprzętu z ilościami i cenami. Albo kliknij „Zbuduj z katalogu”, aby pominąć AI i samodzielnie dodać pozycje z katalogu",
       "step4": "Przejrzyj i edytuj: dodaj, usuń lub zmień dowolne pozycje",
       "step5": "Pobierz jako markowy PDF lub udostępnij przez unikalny link",
       "tip": "Użyj funkcji linku udostępniania, aby klienci mogli przeglądać oferty online — mogą zatwierdzić je bezpośrednio z linku.",

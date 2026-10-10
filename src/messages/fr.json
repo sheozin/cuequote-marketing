@@ -1953,7 +1953,7 @@
       "content2": "Commencez par décrire l'événement : le type de lieu, la taille du public, le type de production nécessaire (son, éclairage, vidéo, scène) et toute exigence particulière. Plus vous fournissez de détails, plus la liste d'équipements générée sera précise.",
       "step1": "Cliquez sur « Nouveau devis » depuis votre tableau de bord",
       "step2": "Saisissez la description de l'événement — soyez aussi précis que possible sur le lieu et les exigences",
-      "step3": "L'IA de CueQuote génère une liste complète d'équipements avec quantités et prix",
+      "step3": "L'IA de CueQuote génère une liste complète d'équipements avec quantités et prix. Ou cliquez sur « Créer depuis le catalogue » pour passer l'IA et ajouter vous-même les éléments de votre catalogue",
       "step4": "Vérifiez et modifiez : ajoutez, supprimez ou ajustez les lignes",
       "step5": "Téléchargez en PDF à votre marque ou partagez via un lien unique",
       "tip": "Utilisez la fonction de lien de partage pour permettre aux clients de consulter les devis en ligne — ils peuvent approuver directement depuis le lien.",
