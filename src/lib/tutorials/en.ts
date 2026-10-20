@@ -576,7 +576,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'How to invite team members to your workspace',
-      'The four roles and what each can access',
+      'The five roles and what each can access',
       'Managing and removing team members',
       'How data migrates when a member joins',
     ],
@@ -587,7 +587,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Invite a new member',
-        content: 'Click "Invite Member" and enter the person\'s email address. Select a role: Owner (full access including billing), Admin (full access except billing), Sales (create proposals, manage clients and catalog), or Viewer (read-only dashboard access).',
+        content: 'Click "Invite Member" and enter the person\'s email address. Select a role: Owner (full access including billing), Admin (full access except billing), Sales (create proposals, manage clients and catalog), or Viewer (read-only dashboard access). The Warehouse role appears in this list once you turn it on in Settings, Features.',
         tip: 'Use the Sales role for your quoting team — they can create proposals and manage clients but can\'t change billing or company settings.',
       },
       {
@@ -602,6 +602,10 @@ export const TUTORIALS_EN: Tutorial[] = [
       {
         title: 'Change roles or remove members',
         content: 'Click on any team member to change their role or remove them from your workspace. Only owners can manage other team members. Removing a member revokes their access immediately.',
+      },
+      {
+        title: 'Give warehouse staff the Warehouse role',
+        content: 'Turn on Warehouse role under Settings, Features, then invite your warehouse staff as Warehouse. They see Jobs, Inventory, Crew, Catalog and Suppliers: what to pack, scanning out and in, returns, who is on each job and how to reach suppliers. They never see prices, costs, proposals or invoices, and the system enforces that, not only the screen. Turning the switch off later stops new Warehouse invites but leaves existing members as they are, and Settings lists who still has the role.',
       },
     ],
   },
@@ -720,7 +724,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Print QR labels',
-        content: 'Click "Print labels" and pick a label size: A4 sheets of 70 × 37 mm (24 per sheet), 48.5 × 25.4 mm (40 per sheet) or 99.1 × 38.1 mm (14 per sheet), a custom A4 sheet where you enter the label size, columns, rows and gaps, or a label roll of 62 × 29 mm or 50 × 25 mm. CueQuote creates a PDF you can print on any printer. On a partly used sheet, use "Start at position" to skip the labels already used.',
+        content: 'Click "Print labels" and pick a label size: A4 sheets of 70 × 37 mm (24 per sheet), 48.5 × 25.4 mm (40 per sheet) or 99.1 × 38.1 mm (14 per sheet), a custom A4 sheet where you enter the label size, columns, rows and gaps, or a label roll of 62 × 29 mm or 50 × 25 mm. CueQuote creates a PDF you can print on any printer. On a partly used sheet, use "Start at position" to skip the labels already used. Tick Category and Model in the dialog to print them too: set the model on the catalog item, or on a single unit when it differs.',
         tip: 'Print one page on plain paper first and hold it against your label sheet to check the alignment.',
       },
       {

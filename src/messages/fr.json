@@ -2020,7 +2020,8 @@
       "step4": "Devise — Définissez votre devise par défaut (USD, EUR, GBP, PLN et plus)",
       "step5": "Langue — Définissez la langue des devis (affecte les titres et libellés du PDF)",
       "step6": "Valeurs par défaut des devis — Modèle par défaut, conditions, inclusions, exclusions et modalités de paiement",
-      "tip": "Votre logo est optimal à une largeur minimale de 400 px. CueQuote le redimensionnera automatiquement pour le PDF."
+      "tip": "Votre logo est optimal à une largeur minimale de 400 px. CueQuote le redimensionnera automatiquement pour le PDF.",
+      "step7": "Fonctionnalités: activer ou désactiver le scan par l’équipe, les chantiers sans devis et le rôle Entrepôt pour toute l’entreprise (propriétaire et admin uniquement)"
     },
     "invoicing": {
       "title": "Facturation",
@@ -2084,13 +2085,14 @@
     "teamManagement": {
       "title": "Gestion d'équipe",
       "content1": "CueQuote prend en charge les équipes multi-utilisateurs avec un accès basé sur les rôles. Le propriétaire de l'entreprise peut inviter des membres d'équipe et attribuer des rôles qui contrôlent ce que chaque personne peut voir et faire.",
-      "content2": "Il existe quatre rôles : Propriétaire (accès complet, peut gérer la facturation et l'équipe), Administrateur (accès complet sauf la facturation), Commercial (peut créer et gérer les devis, les clients et le catalogue) et Observateur (accès en lecture seule aux devis et au tableau de bord).",
+      "content2": "Il existe cinq rôles : Propriétaire (accès complet, gère la facturation et l’équipe), Admin (accès complet sauf la facturation), Commercial (crée et gère les devis, les clients et le catalogue), Lecteur (lecture seule des devis et du tableau de bord) et Entrepôt (chantiers, inventaire, scan, équipe et fournisseurs, jamais les prix, devis ni factures).",
       "step1": "Accédez à Équipe dans la barre latérale — vous verrez tous les membres actuels de l'équipe avec leurs rôles",
       "step2": "Cliquez sur \"Inviter un membre\" et saisissez l'adresse e-mail ainsi que le rôle souhaité",
       "step3": "La personne invitée reçoit un e-mail avec un lien pour rejoindre votre espace de travail CueQuote",
       "step4": "Une fois l'invitation acceptée, elle apparaît sur la page de l'équipe et peut accéder au tableau de bord selon le rôle attribué",
       "step5": "Vous pouvez modifier les rôles ou supprimer des membres d'équipe à tout moment depuis la page Équipe",
-      "tip": "Utilisez le rôle Commercial pour votre équipe de devis — ils peuvent créer des devis et gérer les clients mais ne peuvent pas modifier la facturation ni les paramètres de l'entreprise."
+      "tip": "Utilisez le rôle Commercial pour votre équipe de devis : ils peuvent créer des devis et gérer les clients mais ne peuvent pas modifier la facturation ni les paramètres de l'entreprise.",
+      "step6": "Pour ajouter le personnel d’entrepôt, activez le rôle Entrepôt dans Paramètres, Fonctionnalités, puis choisissez Entrepôt en les invitant. Ils gèrent les chantiers, l’inventaire, le scan, l’équipe et les fournisseurs. Tout le reste est bloqué par le système lui-même, pas seulement masqué à l’écran"
     },
     "scopeTemplates": {
       "title": "Modèles de périmètre",
@@ -2253,7 +2255,8 @@
       "step12": "Cliquez sur « Scanner la sortie » et scannez une étiquette avec l'appareil photo du téléphone, avec une douchette Bluetooth ou USB, ou en tapant le numéro d'inventaire. Les articles en vrac demandent la quantité, et une unité déjà sortie ailleurs est refusée avec le nom de cette mission",
       "step13": "Cliquez sur « Scanner le retour » au retour du matériel, en cochant si besoin « Marquer comme endommagé ce que je scanne au retour » avec une note. « Annuler » inverse un scan et rien ne quitte jamais l'historique ; « Terminer le retour » liste ce qui est encore sorti et consigne ce qui est perdu",
       "step14": "Chantiers sans devis : cliquez sur Nouveau chantier pour un prêt, une réparation, une démo ou un événement sans devis, indiquez qui a le matériel et la date de retour, puis scannez la sortie et le retour comme sur tout chantier ; il passe En retard après la date de retour",
-      "tip": "Imprimez une page sur du papier ordinaire et posez-la sur votre feuille d'étiquettes avant d'utiliser le support d'étiquettes. Limites : Free 10 articles d'inventaire, Starter 50, Pro et au-delà illimités."
+      "tip": "Imprimez une page sur du papier ordinaire et posez-la sur votre feuille d'étiquettes avant d'utiliser le support d'étiquettes. Limites : Free 10 articles d'inventaire, Starter 50, Pro et au-delà illimités.",
+      "step15": "Choisissez ce que vos étiquettes impriment : dans la fenêtre Imprimer les étiquettes (ou Paramètres, Inventaire), cochez Catégorie et Modèle. Indiquez le modèle sur l’article du catalogue, et sur une unité seulement si elle diffère, par exemple deux micros Sennheiser parmi des Shure. Chaque case s’enregistre aussitôt"
     },
     "crewScheduling": {
       "title": "Planification des équipes",
@@ -2282,7 +2285,8 @@
       "step3": "Ajoutez des prix de revient à vos articles du catalogue, ou saisissez des coûts par poste directement dans l'éditeur de devis",
       "step4": "Activez 'Afficher les coûts' dans l'éditeur de devis pour voir le panneau Résumé des marges — il affiche le Chiffre d'affaires, Votre coût, le Bénéfice et le % de Marge avec des indicateurs de santé codés par couleur",
       "step5": "Consultez les alertes de marge au-dessus de vos postes — les alertes rouges signalent les devis sous l'objectif, les alertes ambrées signalent les postes sans données de coût",
-      "tip": "Le calcul de marge inclut uniquement les éléments requis (pas les optionnels). Les éléments sans prix de revient sont exclus du total des coûts mais leur chiffre d'affaires compte toujours — ajoutez donc des coûts à tous les éléments pour des marges précises"
+      "tip": "Le calcul de marge inclut uniquement les éléments requis (pas les optionnels). Les éléments sans prix de revient sont exclus du total des coûts mais leur chiffre d'affaires compte toujours : ajoutez donc des coûts à tous les éléments pour des marges précises",
+      "step6": "Masquer les coûts à l’équipe (activé par défaut, dans la même section Coûts et marges) : les coûts, marges et prix d’achat ne parviennent qu’aux rôles que vous autorisez. Le système l’impose au lieu de seulement le masquer à l’écran, donc les chiffres ne sont accessibles par aucun autre moyen, exports compris. Désactivez-le pour que toute l’équipe voie les coûts"
     },
     "vendorManagement": {
       "title": "Gestion des fournisseurs",

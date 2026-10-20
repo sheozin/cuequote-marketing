@@ -2018,7 +2018,8 @@
       "step4": "Währung — Legen Sie Ihre Standardwährung fest (USD, EUR, GBP, PLN und mehr)",
       "step5": "Sprache — Legen Sie die Angebotssprache fest (betrifft PDF-Überschriften und -Beschriftungen)",
       "step6": "Angebotsstandards — Standardvorlage, Bedingungen, Einschlüsse, Ausschlüsse und Zahlungsbedingungen",
-      "tip": "Ihr Logo sieht am besten bei einer Mindestbreite von 400 px aus. CueQuote passt die Größe automatisch für das PDF an."
+      "tip": "Ihr Logo sieht am besten bei einer Mindestbreite von 400 px aus. CueQuote passt die Größe automatisch für das PDF an.",
+      "step7": "Funktionen: Crew-Scannen, Aufträge ohne Angebot und die Lager-Rolle für die ganze Firma ein- oder ausschalten (nur Inhaber und Admin)"
     },
     "invoicing": {
       "title": "Rechnungsstellung",
@@ -2082,13 +2083,14 @@
     "teamManagement": {
       "title": "Teamverwaltung",
       "content1": "CueQuote unterstützt Teams mit mehreren Benutzern und rollenbasiertem Zugriff. Der Firmeninhaber kann Teammitglieder einladen und Rollen zuweisen, die steuern, was jede Person sehen und tun kann.",
-      "content2": "Es gibt vier Rollen: Inhaber (voller Zugriff, kann Abrechnung und Team verwalten), Administrator (voller Zugriff außer Abrechnung), Vertrieb (kann Angebote, Kunden und Katalog erstellen und verwalten) und Betrachter (nur Lesezugriff auf Angebote und Dashboard).",
+      "content2": "Es gibt fünf Rollen: Inhaber (voller Zugriff, verwaltet Abrechnung und Team), Admin (voller Zugriff außer Abrechnung), Vertrieb (erstellt und verwaltet Angebote, Kunden und Katalog), Betrachter (nur Lesezugriff auf Angebote und Dashboard) und Lager (Aufträge, Inventar, Scannen, Crew und Lieferanten, nie Preise, Angebote oder Rechnungen).",
       "step1": "Gehen Sie zu Team in der Seitenleiste — Sie sehen alle aktuellen Teammitglieder mit ihren Rollen",
       "step2": "Klicken Sie auf \"Mitglied einladen\" und geben Sie die E-Mail-Adresse ein und wählen Sie eine Rolle",
       "step3": "Die eingeladene Person erhält eine E-Mail mit einem Link, um Ihrem CueQuote-Arbeitsbereich beizutreten",
       "step4": "Sobald sie die Einladung annehmen, erscheinen sie auf Ihrer Teamseite und können gemäß ihrer zugewiesenen Rolle auf das Dashboard zugreifen",
       "step5": "Sie können Rollen ändern oder Teammitglieder jederzeit von der Teamseite entfernen",
-      "tip": "Verwenden Sie die Vertriebsrolle für Ihr Angebotsteam — sie können Angebote erstellen und Kunden verwalten, aber keine Abrechnungs- oder Firmeneinstellungen ändern."
+      "tip": "Verwenden Sie die Vertriebsrolle für Ihr Angebotsteam: sie können Angebote erstellen und Kunden verwalten, aber keine Abrechnungs- oder Firmeneinstellungen ändern.",
+      "step6": "Um Lagerpersonal hinzuzufügen, schalten Sie die Lager-Rolle unter Einstellungen, Funktionen ein und wählen Sie beim Einladen Lager. Sie arbeiten mit Aufträgen, Inventar, Scannen, Crew und Lieferanten. Alles andere sperrt das System selbst, nicht nur die Oberfläche"
     },
     "scopeTemplates": {
       "title": "Umfangsvorlagen",
@@ -2251,7 +2253,8 @@
       "step12": "Klicken Sie auf „Auscannen“ und scannen Sie ein Etikett mit der Handykamera, mit einem Bluetooth- oder USB-Barcodescanner oder durch Eintippen der Anlagennummer. Bei Sammelposten wird nach der Menge gefragt, und eine anderswo bereits ausgegebene Einheit wird mit Nennung dieses Jobs abgelehnt",
       "step13": "Klicken Sie auf „Einscannen“, wenn die Technik zurückkommt, und setzen Sie bei Bedarf den Haken „Was ich einscanne, als beschädigt markieren“ samt Notiz. „Rückgängig“ dreht einen Scan zurück, und aus der Historie verschwindet nie etwas; „Rückgabe abschließen“ listet auf, was noch draußen ist, und hält fest, was verloren ist",
       "step14": "Aufträge ohne Angebot: Klicken Sie auf Neuer Auftrag für eine Leihe, Reparatur, Demo oder eine Veranstaltung ohne Angebot, geben Sie an, wer es hat und bis wann es zurück sein soll, und scannen Sie aus und ein wie bei jedem Auftrag; nach dem Rückgabedatum wird es Überfällig",
-      "tip": "Drucken Sie eine Seite auf normalem Papier und halten Sie sie gegen Ihren Etikettenbogen, bevor Sie Etikettenmaterial verwenden. Planlimits: Free 10 Inventarartikel, Starter 50, Pro und höher unbegrenzt."
+      "tip": "Drucken Sie eine Seite auf normalem Papier und halten Sie sie gegen Ihren Etikettenbogen, bevor Sie Etikettenmaterial verwenden. Planlimits: Free 10 Inventarartikel, Starter 50, Pro und höher unbegrenzt.",
+      "step15": "Wählen Sie, was Ihre Etiketten drucken: im Dialog Etiketten drucken (oder unter Einstellungen, Inventar) Kategorie und Modell anhaken. Das Modell legen Sie am Katalogartikel fest und an einem einzelnen Exemplar nur, wenn es abweicht, etwa zwei Sennheiser-Mikrofone unter Shure. Jedes Häkchen wird sofort gespeichert"
     },
     "crewScheduling": {
       "title": "Crew-Planung",
@@ -2280,7 +2283,8 @@
       "step3": "Fügen Sie Einkaufspreise zu Ihren Katalogartikeln hinzu oder geben Sie Kosten direkt im Angebotseditor pro Position ein",
       "step4": "Schalten Sie 'Kosten anzeigen' im Angebotseditor um, um das Margen-Übersichtspanel zu sehen — es zeigt Umsatz, Ihre Kosten, Gewinn und Marge % mit farbcodierten Gesundheitsindikatoren",
       "step5": "Überprüfen Sie Margenwarnungen über Ihren Positionen — rote Warnungen markieren Angebote unter dem Ziel, gelbe Warnungen markieren Positionen ohne Kostendaten",
-      "tip": "Die Margenberechnung umfasst nur erforderliche Positionen (keine optionalen). Positionen ohne Einkaufspreis werden aus der Kostensumme ausgeschlossen, ihr Umsatz zählt jedoch weiterhin — fügen Sie daher allen Positionen Kosten hinzu für genaue Margen"
+      "tip": "Die Margenberechnung umfasst nur erforderliche Positionen (keine optionalen). Positionen ohne Einkaufspreis werden aus der Kostensumme ausgeschlossen, ihr Umsatz zählt jedoch weiterhin: fügen Sie daher allen Positionen Kosten hinzu für genaue Margen",
+      "step6": "Kosten vor dem Team verbergen (standardmäßig an, im selben Bereich Kosten & Margen): Kosten, Margen und Einkaufspreise sehen nur die Rollen, die Sie zulassen. Das System setzt es durch, statt es nur auf dem Bildschirm auszublenden, sodass die Zahlen auf keinem anderen Weg erreichbar sind, Exporte eingeschlossen. Ausschalten, damit das ganze Team die Kosten sieht"
     },
     "vendorManagement": {
       "title": "Lieferantenverwaltung",

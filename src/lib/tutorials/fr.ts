@@ -575,7 +575,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'Comment inviter des membres d\'équipe dans votre espace de travail',
-      'Les quatre rôles et ce que chacun peut faire',
+      'Les cinq rôles et ce que chacun peut faire',
       'Gérer et supprimer des membres d\'équipe',
       'Comment les données migrent lorsqu\'un membre rejoint l\'équipe',
     ],
@@ -586,7 +586,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Invitez un nouveau membre',
-        content: 'Cliquez sur « Inviter un membre » et saisissez l\'adresse e-mail de la personne. Sélectionnez un rôle : Owner (accès complet y compris la facturation), Admin (accès complet sauf la facturation), Sales (créer des devis, gérer les clients et le catalogue) ou Viewer (accès en lecture seule au tableau de bord).',
+        content: 'Cliquez sur « Inviter un membre » et saisissez l\'adresse e-mail de la personne. Sélectionnez un rôle : Owner (accès complet y compris la facturation), Admin (accès complet sauf la facturation), Sales (créer des devis, gérer les clients et le catalogue) ou Viewer (accès en lecture seule au tableau de bord). Le rôle Warehouse (Entrepôt) apparaît dans cette liste une fois activé dans Paramètres, Fonctionnalités.',
         tip: 'Utilisez le rôle Sales pour votre équipe commerciale — ils peuvent créer des devis et gérer les clients mais ne peuvent pas modifier la facturation ni les paramètres de l\'entreprise.',
       },
       {
@@ -601,6 +601,10 @@ export const TUTORIALS_FR: Tutorial[] = [
       {
         title: 'Modifier les rôles ou supprimer des membres',
         content: 'Cliquez sur n\'importe quel membre d\'équipe pour modifier son rôle ou le retirer de votre espace de travail. Seuls les owners peuvent gérer les autres membres de l\'équipe. La suppression d\'un membre révoque immédiatement son accès.',
+      },
+      {
+        title: 'Donnez le rôle Entrepôt au personnel d’entrepôt',
+        content: 'Activez le rôle Entrepôt dans Paramètres, Fonctionnalités, puis invitez votre personnel d’entrepôt en tant qu’Entrepôt. Il voit Chantiers, Inventaire, Équipe, Catalogue et Fournisseurs : quoi préparer, le scan des sorties et retours, qui est sur chaque chantier et comment joindre les fournisseurs. Il ne voit jamais les prix, coûts, devis ni factures, et c’est le système qui l’impose, pas seulement l’écran. Désactiver le rôle plus tard bloque les nouvelles invitations Entrepôt sans toucher aux membres existants, et les Paramètres indiquent qui l’a encore.',
       },
     ],
   },
@@ -718,7 +722,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Imprimer les étiquettes QR',
-        content: 'Cliquez sur « Imprimer les étiquettes » et choisissez un format : feuilles A4 de 70 × 37 mm (24 par feuille), 48,5 × 25,4 mm (40 par feuille) ou 99,1 × 38,1 mm (14 par feuille), une feuille A4 personnalisée où vous indiquez la taille, les colonnes, les lignes et les espacements, ou un rouleau de 62 × 29 mm ou 50 × 25 mm. CueQuote crée un PDF imprimable sur n\'importe quelle imprimante. Sur une feuille entamée, utilisez « Commencer à la position » pour sauter les étiquettes déjà utilisées.',
+        content: 'Cliquez sur « Imprimer les étiquettes » et choisissez un format : feuilles A4 de 70 × 37 mm (24 par feuille), 48,5 × 25,4 mm (40 par feuille) ou 99,1 × 38,1 mm (14 par feuille), une feuille A4 personnalisée où vous indiquez la taille, les colonnes, les lignes et les espacements, ou un rouleau de 62 × 29 mm ou 50 × 25 mm. CueQuote crée un PDF imprimable sur n\'importe quelle imprimante. Sur une feuille entamée, utilisez « Commencer à la position » pour sauter les étiquettes déjà utilisées. Cochez Catégorie et Modèle dans la fenêtre pour les imprimer aussi : indiquez le modèle sur l’article du catalogue, ou sur une unité quand elle diffère.',
         tip: 'Imprimez d\'abord une page sur du papier ordinaire et posez-la sur votre feuille d\'étiquettes pour vérifier l\'alignement.',
       },
       {

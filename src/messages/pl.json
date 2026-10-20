@@ -1992,7 +1992,8 @@
       "step4": "Waluta — Ustaw domyślną walutę (USD, EUR, GBP, PLN i więcej)",
       "step5": "Język — Ustaw język oferty (wpływa na nagłówki i etykiety PDF)",
       "step6": "Domyślne oferty — Domyślny szablon, warunki, wliczenia, wyłączenia i warunki płatności",
-      "tip": "Logo wygląda najlepiej przy minimalnej szerokości 400 px. CueQuote automatycznie dostosuje rozmiar do PDF."
+      "tip": "Logo wygląda najlepiej przy minimalnej szerokości 400 px. CueQuote automatycznie dostosuje rozmiar do PDF.",
+      "step7": "Funkcje: włączanie i wyłączanie skanowania przez ekipę, zleceń bez oferty i roli Magazyn dla całej firmy (tylko właściciel i administrator)"
     },
     "invoicing": {
       "title": "Fakturowanie",
@@ -2056,13 +2057,14 @@
     "teamManagement": {
       "title": "Zarządzanie zespołem",
       "content1": "CueQuote obsługuje zespoły wieloosobowe z dostępem opartym na rolach. Właściciel firmy może zapraszać członków zespołu i przypisywać role kontrolujące, co każda osoba może widzieć i robić.",
-      "content2": "Istnieją cztery role: Właściciel (pełny dostęp, może zarządzać rozliczeniami i zespołem), Administrator (pełny dostęp z wyjątkiem rozliczeń), Sprzedawca (może tworzyć i zarządzać ofertami, klientami i katalogiem) oraz Obserwator (dostęp tylko do odczytu ofert i panelu głównego).",
+      "content2": "Dostępnych jest pięć ról: Właściciel (pełny dostęp, zarządza płatnościami i zespołem), Administrator (pełny dostęp poza płatnościami), Sprzedaż (tworzy i prowadzi oferty, klientów i katalog), Obserwator (tylko odczyt ofert i pulpitu) oraz Magazyn (zlecenia, magazyn, skanowanie, ekipa i dostawcy, bez cen, ofert i faktur).",
       "step1": "Przejdź do Zespół w pasku bocznym — zobaczysz wszystkich obecnych członków zespołu z ich rolami",
       "step2": "Kliknij \"Zaproś członka\" i wpisz adres e-mail oraz wybierz rolę",
       "step3": "Zaproszony użytkownik otrzyma e-mail z linkiem do dołączenia do Twojego workspace CueQuote",
       "step4": "Po zaakceptowaniu zaproszenia pojawi się na stronie zespołu i uzyska dostęp do panelu zgodnie z przypisaną rolą",
       "step5": "Możesz zmienić role lub usunąć członków zespołu w dowolnym momencie ze strony Zespół",
-      "tip": "Używaj roli Sprzedawca dla swojego zespołu ofertowego — mogą tworzyć oferty i zarządzać klientami, ale nie mogą zmieniać rozliczeń ani ustawień firmy."
+      "tip": "Używaj roli Sprzedaż dla swojego zespołu ofertowego: mogą tworzyć oferty i zarządzać klientami, ale nie mogą zmieniać rozliczeń ani ustawień firmy.",
+      "step6": "Aby dodać pracowników magazynu, włącz rolę Magazyn w Ustawieniach, w sekcji Funkcje, a potem wybierz Magazyn przy zapraszaniu. Obsługują zlecenia, magazyn, skanowanie, ekipę i dostawców. Wszystko inne blokuje sam system, a nie tylko ukrywa ekran"
     },
     "scopeTemplates": {
       "title": "Szablony zakresów",
@@ -2225,7 +2227,8 @@
       "step12": "Kliknij „Skanuj wydanie” i skanuj etykiety aparatem telefonu, skanerem kodów na Bluetooth lub USB albo wpisując numer ewidencyjny. Przy pozycjach zbiorczych pojawia się pytanie o ilość, a sztuka wydana już gdzie indziej zostaje odrzucona z nazwą tamtego zlecenia",
       "step13": "Kliknij „Skanuj zwrot”, gdy sprzęt wraca, zaznaczając w razie potrzeby „Oznacz skanowane przy zwrocie jako uszkodzone” wraz z notatką. „Cofnij” odwraca skan i nic nigdy nie znika z historii; „Zakończ zwrot” pokazuje, co wciąż jest na zewnątrz, i zapisuje, co zostało zgubione",
       "step14": "Zlecenia bez oferty: kliknij Nowe zlecenie przy wypożyczeniu, naprawie, pokazie lub wydarzeniu bez oferty, podaj, kto ma sprzęt i termin zwrotu, a potem skanuj wydanie i zwrot jak przy każdym zleceniu; po terminie zmienia się na Zaległe",
-      "tip": "Zanim użyjesz arkusza etykiet, wydrukuj jedną stronę na zwykłym papierze i przyłóż ją do arkusza. Limity planów: Free 10 pozycji inwentarza, Starter 50, Pro i wyższe bez limitu."
+      "tip": "Zanim użyjesz arkusza etykiet, wydrukuj jedną stronę na zwykłym papierze i przyłóż ją do arkusza. Limity planów: Free 10 pozycji inwentarza, Starter 50, Pro i wyższe bez limitu.",
+      "step15": "Wybierz, co drukują etykiety: w oknie Drukuj etykiety (lub w Ustawieniach, w sekcji Magazyn) zaznacz Kategorię i Model. Model ustaw w pozycji katalogu, a w pojedynczej sztuce tylko wtedy, gdy się różni, na przykład dwa mikrofony Sennheiser wśród Shure. Każde zaznaczenie zapisuje się od razu"
     },
     "crewScheduling": {
       "title": "Planowanie ekipy",
@@ -2254,7 +2257,8 @@
       "step3": "Dodaj ceny kosztowe do pozycji katalogu lub wprowadź koszty bezpośrednio w edytorze ofert dla każdej pozycji",
       "step4": "Włącz 'Pokaż koszty' w edytorze ofert, aby zobaczyć panel Podsumowania Marży — pokazuje Przychód, Twój Koszt, Zysk i Marżę % z kolorowymi wskaźnikami kondycji",
       "step5": "Przeglądaj alerty marżowe powyżej pozycji — czerwone alerty oznaczają oferty poniżej celu, bursztynowe alerty oznaczają pozycje bez danych kosztowych",
-      "tip": "Obliczenie marży uwzględnia tylko wymagane pozycje (nie opcjonalne). Pozycje bez ceny kosztowej są wykluczone z łącznych kosztów, ale ich przychód nadal jest wliczany — dodawaj koszty do wszystkich pozycji, aby uzyskać dokładne marże"
+      "tip": "Obliczenie marży uwzględnia tylko wymagane pozycje (nie opcjonalne). Pozycje bez ceny kosztowej są wykluczone z łącznych kosztów, ale ich przychód nadal jest wliczany: dodawaj koszty do wszystkich pozycji, aby uzyskać dokładne marże",
+      "step6": "Ukryj koszty przed zespołem (domyślnie włączone, w tej samej sekcji Koszty i marże): koszty, marże i ceny zakupu widzą tylko wybrane role. Pilnuje tego system, a nie tylko ekran, więc nie da się do nich dotrzeć inną drogą, także przez eksport. Wyłącz, aby cały zespół widział koszty"
     },
     "vendorManagement": {
       "title": "Zarządzanie dostawcami",

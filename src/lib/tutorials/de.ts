@@ -575,7 +575,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'Wie Sie Teammitglieder zu Ihrem Workspace einladen',
-      'Die vier Rollen und was jede darf',
+      'Die fünf Rollen und was jede darf',
       'Teammitglieder verwalten und entfernen',
       'Wie Daten beim Beitritt eines Mitglieds migriert werden',
     ],
@@ -586,7 +586,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Neues Mitglied einladen',
-        content: 'Klicken Sie auf „Mitglied einladen" und geben Sie die E-Mail-Adresse der Person ein. Wählen Sie eine Rolle: Owner (Vollzugriff einschließlich Abrechnung), Admin (Vollzugriff außer Abrechnung), Sales (Angebote erstellen, Kunden und Katalog verwalten) oder Viewer (nur Dashboard-Lesezugriff).',
+        content: 'Klicken Sie auf „Mitglied einladen" und geben Sie die E-Mail-Adresse der Person ein. Wählen Sie eine Rolle: Owner (Vollzugriff einschließlich Abrechnung), Admin (Vollzugriff außer Abrechnung), Sales (Angebote erstellen, Kunden und Katalog verwalten) oder Viewer (nur Dashboard-Lesezugriff). Die Rolle Warehouse (Lager) erscheint in dieser Liste, sobald Sie sie unter Einstellungen, Funktionen einschalten.',
         tip: 'Verwenden Sie die Sales-Rolle für Ihr Angebotsteam — sie können Angebote erstellen und Kunden verwalten, aber keine Abrechnungs- oder Unternehmenseinstellungen ändern.',
       },
       {
@@ -601,6 +601,10 @@ export const TUTORIALS_DE: Tutorial[] = [
       {
         title: 'Rollen ändern oder Mitglieder entfernen',
         content: 'Klicken Sie auf ein Teammitglied, um dessen Rolle zu ändern oder es aus Ihrem Workspace zu entfernen. Nur Owner können andere Teammitglieder verwalten. Das Entfernen eines Mitglieds entzieht sofort den Zugriff.',
+      },
+      {
+        title: 'Lagerpersonal die Lager-Rolle geben',
+        content: 'Schalten Sie die Lager-Rolle unter Einstellungen, Funktionen ein und laden Sie Ihr Lagerpersonal als Lager ein. Es sieht Aufträge, Inventar, Crew, Katalog und Lieferanten: was zu packen ist, Ein- und Ausscannen, Rückgaben, wer auf welchem Auftrag ist und wie Lieferanten erreichbar sind. Preise, Kosten, Angebote und Rechnungen sieht es nie, und das setzt das System durch, nicht nur die Oberfläche. Wird die Funktion später ausgeschaltet, sind keine neuen Lager-Einladungen mehr möglich, bestehende Mitglieder bleiben unverändert, und die Einstellungen zeigen, wer die Rolle noch hat.',
       },
     ],
   },
@@ -718,7 +722,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'QR-Etiketten drucken',
-        content: 'Klicken Sie auf „Etiketten drucken“ und wählen Sie eine Etikettengröße: A4-Bögen mit 70 × 37 mm (24 pro Bogen), 48,5 × 25,4 mm (40 pro Bogen) oder 99,1 × 38,1 mm (14 pro Bogen), einen benutzerdefinierten A4-Bogen mit eigener Etikettengröße, Spalten, Zeilen und Abständen, oder eine Etikettenrolle mit 62 × 29 mm oder 50 × 25 mm. CueQuote erstellt ein PDF, das auf jedem Drucker druckt. Bei einem angebrochenen Bogen überspringen Sie mit „An Position beginnen“ die bereits verwendeten Etiketten.',
+        content: 'Klicken Sie auf „Etiketten drucken“ und wählen Sie eine Etikettengröße: A4-Bögen mit 70 × 37 mm (24 pro Bogen), 48,5 × 25,4 mm (40 pro Bogen) oder 99,1 × 38,1 mm (14 pro Bogen), einen benutzerdefinierten A4-Bogen mit eigener Etikettengröße, Spalten, Zeilen und Abständen, oder eine Etikettenrolle mit 62 × 29 mm oder 50 × 25 mm. CueQuote erstellt ein PDF, das auf jedem Drucker druckt. Bei einem angebrochenen Bogen überspringen Sie mit „An Position beginnen“ die bereits verwendeten Etiketten. Haken Sie im Dialog Kategorie und Modell an, um auch diese zu drucken: das Modell am Katalogartikel festlegen oder an einem einzelnen Exemplar, wenn es abweicht.',
         tip: 'Drucken Sie zuerst eine Seite auf normalem Papier und halten Sie sie gegen Ihren Etikettenbogen, um die Ausrichtung zu prüfen.',
       },
       {

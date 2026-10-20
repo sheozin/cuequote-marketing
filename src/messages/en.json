@@ -2028,7 +2028,8 @@
       "step4": "Currency — Set your default currency (USD, EUR, GBP, PLN, and more)",
       "step5": "Language — Set the proposal language (affects PDF headings and labels)",
       "step6": "Proposal Defaults — Default template, terms, inclusions, exclusions, and payment terms",
-      "tip": "Your logo looks best at a minimum of 400px wide. CueQuote will automatically resize it for the PDF."
+      "tip": "Your logo looks best at a minimum of 400px wide. CueQuote will automatically resize it for the PDF.",
+      "step7": "Features: switch Crew scanning, Jobs without a quote and the Warehouse role on or off for your whole company (owner and admin only)"
     },
     "invoicing": {
       "title": "Invoicing",
@@ -2092,13 +2093,14 @@
     "teamManagement": {
       "title": "Team Management",
       "content1": "CueQuote supports multi-user teams with role-based access. The company owner can invite team members and assign roles that control what each person can see and do.",
-      "content2": "There are four roles: Owner (full access, can manage billing and team), Admin (full access except billing), Sales (can create and manage proposals, clients, and catalog), and Viewer (read-only access to proposals and dashboard).",
+      "content2": "There are five roles: Owner (full access, can manage billing and team), Admin (full access except billing), Sales (can create and manage proposals, clients, and catalog), Viewer (read-only access to proposals and dashboard), and Warehouse (jobs, inventory, scanning, crew and suppliers, never prices, proposals or invoices).",
       "step1": "Go to Team from the sidebar — you'll see all current team members with their roles",
       "step2": "Click \"Invite Member\" and enter their email address and select a role",
       "step3": "The invited person receives an email with a link to join your CueQuote workspace",
       "step4": "Once they accept, they appear on your team page and can access the dashboard based on their assigned role",
       "step5": "You can change roles or remove team members at any time from the Team page",
-      "tip": "Use the Sales role for your quoting team — they can create proposals and manage clients but can't change billing or company settings."
+      "tip": "Use the Sales role for your quoting team: they can create proposals and manage clients but can't change billing or company settings.",
+      "step6": "To add warehouse staff, turn on Warehouse role in Settings, Features, then choose Warehouse when you invite them. They work jobs, inventory, scanning, crew and suppliers. Everything else is blocked by the system itself, not only hidden on screen"
     },
     "scopeTemplates": {
       "title": "Scope Templates",
@@ -2261,7 +2263,8 @@
       "step12": "Click 'Scan out' and scan a label with the phone camera, a Bluetooth or USB barcode scanner, or by typing the asset number. Bulk items ask how many you are taking, and a unit already out elsewhere is refused with that job named",
       "step13": "Click 'Scan in' when the gear comes home, ticking 'Mark what I scan in as damaged' with a note where it applies. 'Undo' reverses a scan and nothing ever leaves the history; 'Finish return' lists what is still out and records what is lost",
       "step14": "Jobs without a quote: click New job for a loan, repair, demo or an event nobody quoted, say who has it and when it is due back, then scan it out and in like any job; it turns Overdue after the due date",
-      "tip": "Print one page on plain paper and hold it against your label sheet before using label stock. Plan limits: Free 10 inventory items, Starter 50, Pro and above unlimited."
+      "tip": "Print one page on plain paper and hold it against your label sheet before using label stock. Plan limits: Free 10 inventory items, Starter 50, Pro and above unlimited.",
+      "step15": "Choose what your labels print: in the Print labels dialog (or Settings, Inventory) tick Category and Model. Set the model on the catalog item, and on a single unit only when it differs, for example two Sennheiser mics among Shure ones. Each tick saves straight away"
     },
     "crewScheduling": {
       "title": "Crew Scheduling",
@@ -2290,7 +2293,8 @@
       "step3": "Add cost prices to your catalog items, or enter costs per-line-item directly in the proposal editor",
       "step4": "Toggle 'Show Costs' in the proposal editor to see the Margin Summary panel — it shows Revenue, Your Cost, Profit, and Margin % with color-coded health indicators",
       "step5": "Review margin alerts above your line items — red alerts flag proposals below target, amber alerts flag items missing cost data",
-      "tip": "The margin calculation only includes required items (not optional ones). Items without a cost price are excluded from the cost total but their revenue still counts — so add costs to all items for accurate margins"
+      "tip": "The margin calculation only includes required items (not optional ones). Items without a cost price are excluded from the cost total but their revenue still counts, so add costs to all items for accurate margins",
+      "step6": "Hide costs from team (on by default, in the same Costing & Margins section): costs, margins and purchase prices reach only the roles you allow. The system enforces it rather than only hiding it on screen, so the numbers cannot be reached another way, exports included. Turn it off to let your whole team see costs"
     },
     "vendorManagement": {
       "title": "Vendor Management",

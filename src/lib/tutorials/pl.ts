@@ -554,7 +554,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     videoUrl: '/videos/team-management.mp4',
     whatYouLearn: [
       'Jak zapraszać członków zespołu do workspace',
-      'Cztery role i co każda z nich daje',
+      'Pięć ról i co każda z nich daje',
       'Zarządzanie członkami zespołu i ich usuwanie',
       'Jak dane migrują po dołączeniu członka',
     ],
@@ -565,7 +565,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Zaproś nowego członka',
-        content: 'Kliknij „Zaproś członka" i wpisz adres e-mail osoby. Wybierz rolę: Owner (pełny dostęp wraz z rozliczeniami), Admin (pełny dostęp oprócz rozliczeń), Sales (tworzenie ofert, zarządzanie klientami i katalogiem) lub Viewer (dostęp tylko do odczytu pulpitu).',
+        content: 'Kliknij „Zaproś członka" i wpisz adres e-mail osoby. Wybierz rolę: Owner (pełny dostęp wraz z rozliczeniami), Admin (pełny dostęp oprócz rozliczeń), Sales (tworzenie ofert, zarządzanie klientami i katalogiem) lub Viewer (dostęp tylko do odczytu pulpitu). Rola Warehouse (Magazyn) pojawia się na tej liście po włączeniu jej w Ustawieniach, w sekcji Funkcje.',
         tip: 'Użyj roli Sales dla swojego zespołu wyceniającego — mogą tworzyć oferty i zarządzać klientami, ale nie mogą zmieniać rozliczeń ani ustawień firmy.',
       },
       {
@@ -580,6 +580,10 @@ export const TUTORIALS_PL: Tutorial[] = [
       {
         title: 'Zmień role lub usuń członków',
         content: 'Kliknij dowolnego członka zespołu, aby zmienić jego rolę lub usunąć go z workspace. Tylko właściciele mogą zarządzać innymi członkami zespołu. Usunięcie członka natychmiast odbiera mu dostęp.',
+      },
+      {
+        title: 'Nadaj pracownikom magazynu rolę Magazyn',
+        content: 'Włącz rolę Magazyn w Ustawieniach, w sekcji Funkcje, a potem zaproś pracowników magazynu z rolą Magazyn. Widzą Zlecenia, Magazyn, Ekipę, Katalog i Dostawców: co spakować, skanowanie wydań i zwrotów, kto jest przy zleceniu i jak skontaktować się z dostawcą. Nigdy nie widzą cen, kosztów, ofert ani faktur, a pilnuje tego system, nie tylko ekran. Późniejsze wyłączenie roli blokuje nowe zaproszenia, ale nie zmienia obecnych członków, a Ustawienia pokazują, kto ją nadal ma.',
       },
     ],
   },
@@ -683,7 +687,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Wydrukuj etykiety QR',
-        content: 'Kliknij „Drukuj etykiety” i wybierz rozmiar: arkusze A4 z etykietami 70 × 37 mm (24 na arkuszu), 48,5 × 25,4 mm (40 na arkuszu) lub 99,1 × 38,1 mm (14 na arkuszu), niestandardowy arkusz A4, w którym podajesz rozmiar etykiety, kolumny, wiersze i odstępy, albo rolkę 62 × 29 mm lub 50 × 25 mm. CueQuote tworzy PDF, który wydrukujesz na każdej drukarce. Na częściowo zużytym arkuszu użyj „Zacznij od pozycji”, aby pominąć wykorzystane etykiety.',
+        content: 'Kliknij „Drukuj etykiety” i wybierz rozmiar: arkusze A4 z etykietami 70 × 37 mm (24 na arkuszu), 48,5 × 25,4 mm (40 na arkuszu) lub 99,1 × 38,1 mm (14 na arkuszu), niestandardowy arkusz A4, w którym podajesz rozmiar etykiety, kolumny, wiersze i odstępy, albo rolkę 62 × 29 mm lub 50 × 25 mm. CueQuote tworzy PDF, który wydrukujesz na każdej drukarce. Na częściowo zużytym arkuszu użyj „Zacznij od pozycji”, aby pominąć wykorzystane etykiety. Zaznacz w oknie Kategorię i Model, aby też je drukować: model ustaw w pozycji katalogu albo w pojedynczej sztuce, gdy się różni.',
         tip: 'Najpierw wydrukuj jedną stronę na zwykłym papierze i przyłóż ją do arkusza etykiet, aby sprawdzić dopasowanie.',
       },
       {
