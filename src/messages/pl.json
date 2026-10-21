@@ -1857,6 +1857,21 @@
         "Tryb planisty działa tak samo, tylko inną jednostką. Organizator rzadko zleca trzy pozycje; przyznaje Catering, Produkcję albo Transport jednemu podwykonawcy za jednym razem. Wybierasz sekcję, a tekst zakresu pisze się sam ze wszystkiego, co się pod nią znajduje.",
         "Funkcja jest w każdym planie. Konta darmowe trzymają dwa aktywne zlecenia naraz, Starter dziesięć, a Pro i wyżej bez limitu — unieważnienie zwalnia miejsce, więc limit dotyczy tego, co jest w toku, a nie tego, co kiedykolwiek wysłałeś."
       ]
+    },
+    "how-to-correct-a-paid-invoice": {
+      "title": "Jak skorygować fakturę, która jest już opłacona",
+      "excerpt": "Nie edytuj wystawionej faktury. Wystaw fakturę korygującą: własny numer, powód korekty, a klient dopłaca tylko różnicę.",
+      "readTime": "4 min czytania",
+      "content": [
+        "Wydarzenie zmienia się po wystawieniu faktury. Dochodzi drugi dzień, scena jest mniejsza, klient prosi o więcej mikrofonów. Faktura jest już wysłana, może nawet opłacona. Co teraz?",
+        "Każdy księgowy powie to samo: nie edytuje się wystawionej faktury. Klient ma jej kopię, jego księgowość mogła ją już zaksięgować, a w Polsce może już być w KSeF. Cicha zmiana oznacza dwa różne dokumenty z tym samym numerem. Zamiast tego wystawia się fakturę korygującą.",
+        "[IMAGE:/blog/how-to-correct-paid-invoice-corrective-invoice.jpg|Opłacona faktura INV-0008 i faktura korygująca, która wskazuje do zapłaty tylko różnicę 1 800,00]",
+        "Korekta to osobny dokument z własnym numerem. Wskazuje korygowaną fakturę i jej datę, pokazuje wszystkie pozycje w obecnym kształcie i podaje powód. Faktura pierwotna pozostaje dokładnie taka, jak została wystawiona, a oba dokumenty są powiązane. W CueQuote korekty firm z Polski, Niemiec, Austrii i Szwajcarii mają numery KOR-0001, a w pozostałych krajach COR-0001.",
+        "Najczęściej problem dotyczy pieniędzy. Klient zapłacił 10 000,00 do faktury pierwotnej, a suma po korekcie to 11 800,00. Korekta musi wskazywać do zapłaty 1 800,00, a nie 11 800,00, a 10 000,00 nie może zostać policzone dwa razy. CueQuote automatycznie przenosi wpłaty z faktury pierwotnej: podsumowanie pokazuje Zapłacono w ramach INV-0008, a Kwota do zapłaty to tylko różnica. Jeśli nowa suma jest niższa od wpłaty, korekta pokazuje kwotę do zwrotu dla klienta.",
+        "W CueQuote otwórz opłaconą fakturę, kliknij Koryguj fakturę i podaj powód. Edytuj pozycje w tym samym edytorze co w ofertach. Zmienione pozycje mają oznaczenie ZMIENIONE i przekreśloną starą kwotę, nowe oznaczenie NOWE, a usunięte zostają na dokumencie jako USUNIĘTE. Wyślij korektę, a gdy klient zapłaci różnicę, zapisz tę płatność na korekcie. Faktura pierwotna przestaje wysyłać przypomnienia.",
+        "Dwie dobre praktyki. Pozycje faktury powinny być krótkie: nazwa i to, co ją identyfikuje, np. ekran LED 5x3 m, 2 dni. Długi opis handlowy należy do oferty, którą faktura teraz wskazuje. I podawaj prawdziwy powód, np. \"Dodatkowe mikrofony, scena zmniejszona do 8x4 m\": audytor czyta go jako pierwszy.",
+        "Korekt nie można jeszcze wysłać do KSeF z CueQuote. Utwórz i wyślij korektę w CueQuote, a następnie prześlij ją do KSeF swoją zwykłą drogą. Szczegółowy przewodnik jest w dokumentacji, w części Faktury korygujące."
+      ]
     }
   },
   "tutorials": {

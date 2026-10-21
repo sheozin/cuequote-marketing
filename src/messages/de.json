@@ -1883,6 +1883,18 @@
         "Der Planer-Modus funktioniert genauso, nur mit einer anderen Einheit. Ein Veranstalter vergibt selten drei Positionen; er vergibt Catering, Produktion oder Transport an einen Dienstleister auf einmal. Abschnitt wählen, und der Umfangstext schreibt sich aus allem darunter selbst.",
         "Verfügbar in jedem Tarif. Gratis-Konten halten zwei Aufträge gleichzeitig aktiv, Starter zehn, Pro und höher unbegrenzt — ein Widerruf gibt den Platz frei, das Limit betrifft also das Offene und nicht alles, was Sie je gesendet haben."
       ]
+    },
+    "how-to-correct-a-paid-invoice": {
+      "title": "Eine bereits bezahlte Rechnung richtig korrigieren",
+      "excerpt": "Ausgestellte Rechnungen nie bearbeiten. Eine Korrekturrechnung mit eigener Nummer und Grund ausstellen; der Kunde zahlt nur die Differenz.",
+      "readTime": "4 Min. Lesezeit",
+      "content": [
+        "Eine Veranstaltung ändert sich, nachdem sie abgerechnet wurde. Die Rechnung ist schon versendet, vielleicht schon bezahlt. Was nun?",
+        "Bearbeiten Sie nie eine ausgestellte Rechnung. Stellen Sie stattdessen eine Korrekturrechnung aus: ein eigenes Dokument mit eigener Nummer, das die korrigierte Rechnung und ihr Datum nennt und den Grund angibt.",
+        "[IMAGE:/blog/how-to-correct-paid-invoice-corrective-invoice.jpg|Eine bezahlte Rechnung und ihre Korrekturrechnung, die nur die Differenz von 1.800,00 anfordert]",
+        "In CueQuote erhalten Korrekturen die Nummern KOR-0001 für Unternehmen in Polen, Deutschland, Österreich und der Schweiz, sonst COR-0001. Was der Kunde auf die ursprüngliche Rechnung gezahlt hat, wird übernommen: Bei 10.000,00 bezahlt und 11.800,00 neu fordert die Korrektur nur 1.800,00 an.",
+        "Öffnen Sie die bezahlte Rechnung, klicken Sie auf Rechnung korrigieren, geben Sie den Grund ein und bearbeiten Sie die Positionen im selben Editor wie bei Angeboten. Zahlt der Kunde die Differenz, erfassen Sie die Zahlung auf der Korrekturrechnung."
+      ]
     }
   },
   "tutorials": {

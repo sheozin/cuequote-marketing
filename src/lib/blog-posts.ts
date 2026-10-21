@@ -21,6 +21,11 @@ export function publishedPosts(now: Date = new Date()): BlogPostSummary[] {
 export const POSTS: BlogPostSummary[] = [
   // Newest first — published every 2-3 days
   {
+    slug: "how-to-correct-a-paid-invoice",
+    category: "Guides",
+    date: "2026-10-21",
+  },
+  {
     slug: "cuequote-v160-whats-new",
     category: "Product Updates",
     date: "2026-10-10",

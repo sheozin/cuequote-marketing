@@ -1885,6 +1885,18 @@
         "Le mode organisateur fonctionne pareil, avec une autre unité. Un organisateur sous-traite rarement trois lignes ; il attribue le Traiteur, la Production ou le Transport à un prestataire d'un seul coup. Choisissez la section et le texte du périmètre s'écrit à partir de tout ce qu'elle contient.",
         "Disponible sur toutes les formules. Les comptes gratuits gardent deux bons actifs à la fois, Starter dix, Pro et au-delà illimité — révoquer en libère un, la limite porte donc sur l'en-cours et non sur tout ce que vous avez envoyé."
       ]
+    },
+    "how-to-correct-a-paid-invoice": {
+      "title": "Corriger une facture déjà payée, dans les règles",
+      "excerpt": "Ne modifiez jamais une facture émise. Émettez une facture rectificative avec son numéro et son motif ; le client ne paie que la différence.",
+      "readTime": "4 min de lecture",
+      "content": [
+        "Un événement change après facturation. La facture est déjà envoyée, peut-être déjà payée. Que faire ?",
+        "Ne modifiez jamais une facture émise. Émettez une facture rectificative : un document à part, avec son propre numéro, qui cite la facture corrigée et sa date et indique le motif.",
+        "[IMAGE:/blog/how-to-correct-paid-invoice-corrective-invoice.jpg|Une facture payée et sa facture rectificative, qui ne demande que la différence de 1 800,00]",
+        "Dans CueQuote, les corrections sont numérotées KOR-0001 pour les entreprises en Pologne, en Allemagne, en Autriche et en Suisse, et COR-0001 ailleurs. Ce que le client a déjà payé est repris : pour 10 000,00 payés et un nouveau total de 11 800,00, la correction ne demande que 1 800,00.",
+        "Ouvrez la facture payée, cliquez sur Corriger la facture, indiquez le motif et modifiez les lignes dans le même éditeur que les propositions. Quand le client paie la différence, enregistrez le paiement sur la facture rectificative."
+      ]
     }
   },
   "tutorials": {
