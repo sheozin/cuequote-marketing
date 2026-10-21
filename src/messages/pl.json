@@ -2023,13 +2023,15 @@
     },
     "correctiveInvoices": {
       "title": "Faktury korygujące",
-      "content1": "Gdy wysłana lub opłacona faktura wymaga poprawek, CueQuote pozwala wystawić fakturę korygującą, która odwołuje się do oryginału. Oryginalna faktura pozostaje nietknięta dla celów audytowych, a korekta pokazuje dokładnie, co się zmieniło z wartościami przed i po.",
-      "content2": "Faktury korygujące spełniają profesjonalne standardy fakturowania stosowane w całej UE i są kompatybilne z polskim systemem e-fakturowania KSeF. Każda korekta jest powiązana z fakturą oryginalną z pełną identyfikowalnością.",
-      "step1": "Otwórz wysłaną, przeczytaną lub opłaconą fakturę i kliknij ikonę korekty (okrągła strzałka) w pasku narzędzi nagłówka",
-      "step2": "System tworzy nową fakturę z przyrostkiem \"/KOR\", wstępnie wypełnioną wszystkimi oryginalnymi pozycjami i ich wartościami zapisanymi jako migawki",
-      "step3": "Edytuj pozycje wymagające korekty — zmienione pozycje pokazują oryginalną sumę przekreśloną obok nowej sumy",
-      "step4": "Wypełnij pole \"Powód korekty\" i wyślij fakturę korygującą do klienta",
-      "tip": "Oryginalna faktura wyświetla bursztynowy baner z linkiem do korekty, a faktura korygująca wyświetla niebieski baner z linkiem do oryginału — tworząc kompletną ścieżkę audytową."
+      "content1": "Gdy wysłana lub opłacona faktura wymaga zmiany, nie edytujesz jej. Wystawiasz fakturę korygującą: nowy dokument z własnym numerem, który pokazuje, co się zmieniło. Faktura pierwotna pozostaje dokładnie taka, jak została wystawiona, a oba dokumenty są ze sobą powiązane.",
+      "content2": "Korekty mają własną serię numerów: KOR-0001 dla firm z Polski, Niemiec, Austrii i Szwajcarii, COR-0001 w pozostałych krajach. Wpłaty klienta do faktury pierwotnej są przenoszone automatycznie, więc korekta wskazuje tylko różnicę do zapłaty albo kwotę do zwrotu, gdy nowa suma jest niższa. Faktura pierwotna przestaje wysyłać przypomnienia o płatności. Korekt nie można jeszcze wysłać do KSeF z CueQuote; prześlij je swoją zwykłą drogą.",
+      "step1": "Otwórz wysłaną lub opłaconą fakturę i kliknij Koryguj fakturę w nagłówku.",
+      "step2": "Podaj powód korekty i kliknij Utwórz korektę. Faktura korygująca otwiera się ze wszystkimi pozycjami faktury pierwotnej.",
+      "step3": "Edytuj pozycje w tym samym edytorze co w ofertach. Zmienione pozycje mają oznaczenie ZMIENIONE i przekreśloną starą kwotę, nowe pozycje oznaczenie NOWE, a usunięte zostają na dokumencie jako USUNIĘTE z przyciskiem Przywróć.",
+      "step4": "Sprawdź Podsumowanie: Zapłacono w ramach INV-xxxx pokazuje, ile klient już zapłacił, a Kwota do zapłaty to tylko różnica.",
+      "step5": "Wyślij fakturę korygującą. PDF i e-mail wskazują korygowaną fakturę wraz z jej datą.",
+      "step6": "Gdy klient zapłaci różnicę, kliknij Zapisz płatność na fakturze korygującej. Nie zapisuj ponownie wcześniejszej wpłaty.",
+      "tip": "Potrzebujesz kolejnej zmiany? Kliknij ponownie Koryguj fakturę na fakturze pierwotnej. Nowa korekta zaczyna się od ostatniej, a wszystkie wpłaty są przenoszone."
     },
     "smartSuggestions": {
       "title": "Inteligentne sugestie",

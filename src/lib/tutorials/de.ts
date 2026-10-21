@@ -495,12 +495,21 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Korrekturrechnung ausstellen',
-        content: 'Für Rechnungen, die bereits gesendet oder bezahlt wurden und Korrekturen benötigen, klicken Sie auf das Korrektursymbol (kreisförmiger Pfeil) in der Kopfzeilen-Toolbar. Bestätigen Sie die Aktion — eine neue Korrekturrechnung wird mit dem Suffix „/COR" erstellt (z. B. INV-0006/COR). Alle Positionen werden vom Original kopiert, wobei die ursprünglichen Werte als Snapshot gespeichert werden.',
+        content: 'Klicken Sie auf einer versendeten oder bezahlten Rechnung oben auf Rechnung korrigieren. Geben Sie den Grund ein (zum Beispiel "Zusätzliche Positionen, ein Preis korrigiert") und klicken Sie auf Korrektur erstellen. Die Korrekturrechnung erhält eine eigene Nummer, KOR-0001 für Unternehmen in Polen, Deutschland, Österreich und der Schweiz (sonst COR-0001), und enthält alle Positionen der ursprünglichen Rechnung.',
       },
       {
         title: 'Korrektur bearbeiten',
-        content: 'Bearbeiten Sie auf der Korrekturrechnung die zu korrigierenden Positionen — ändern Sie Mengen, Preise oder fügen Sie Positionen hinzu/entfernen Sie diese. Geänderte Positionen zeigen automatisch den ursprünglichen Betrag durchgestrichen neben dem neuen Betrag an, sodass der Kunde genau sehen kann, was sich geändert hat. Füllen Sie das Feld „Korrekturgrund" aus, um zu erläutern, warum die Rechnung angepasst wurde (z. B. „Preisanpassung gemäß Kundenvereinbarung"). Senden Sie die Korrekturrechnung an den Kunden.',
-        tip: 'Die Originalrechnung bleibt unverändert mit einem Banner, das auf die Korrektur verweist. Die Korrekturrechnung hat ein Banner, das zurück zum Original verlinkt — vollständiger Prüfpfad.',
+        content: 'Bearbeiten Sie die Positionen genau wie in einem Angebot: Klicken Sie auf eine Position, um Text, Menge, Tage oder Preis zu ändern, fügen Sie Artikel aus dem Katalog hinzu oder löschen Sie eine Position. Geänderte Positionen sind als GEÄNDERT markiert, mit durchgestrichenem alten Betrag, neue als NEU, und entfernte bleiben als ENTFERNT mit der Schaltfläche Wiederherstellen sichtbar.',
+        tip: 'In ein Zahlenfeld klicken und wieder hinaus ändert nichts. Gespeichert wird nur, was Sie eintippen.',
+      },
+      {
+        title: 'Prüfen, was der Kunde zahlt',
+        content: 'In der Zusammenfassung zeigt Bezahlt unter INV-xxxx, was der Kunde auf die ursprüngliche Rechnung bereits gezahlt hat, und der offene Betrag ist nur die Differenz. Ist die neue Summe niedriger als das Bezahlte, zeigt die Rechnung stattdessen ein Guthaben für den Kunden.',
+      },
+      {
+        title: 'Versenden und Zahlung erfassen',
+        content: 'Versenden Sie die Korrekturrechnung. PDF und E-Mail nennen die korrigierte Rechnung mit Datum, und die ursprüngliche Rechnung verschickt keine Erinnerungen mehr. Zahlt der Kunde die Differenz, klicken Sie auf der Korrekturrechnung auf Zahlung erfassen. Erfassen Sie die Zahlung auf die ursprüngliche Rechnung nie ein zweites Mal.',
+        tip: 'Polen: Korrekturen können noch nicht aus CueQuote an KSeF gesendet werden. Bitte wie gewohnt übermitteln.',
       },
     ],
   },

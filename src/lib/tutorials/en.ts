@@ -496,12 +496,21 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Issue a corrective invoice',
-        content: 'For invoices that have already been sent or paid and need corrections, click the correction icon (circular arrow) in the header toolbar. Confirm the action — a new corrective invoice is created with a "/COR" suffix (e.g., INV-0006/COR). All line items are copied from the original with their original values stored as a snapshot.',
+        content: 'On an invoice that has been sent or paid, click Correct invoice in the header. Enter the reason (for example "Extra items added, one price corrected") and click Create correction. The corrective invoice gets its own number, COR-0001 (KOR-0001 for companies in Poland, Germany, Austria and Switzerland), and starts with all the lines of the original.',
       },
       {
         title: 'Edit the correction',
-        content: 'On the corrective invoice, edit the items that need correcting — change quantities, prices, or add/remove items. Modified items automatically show the original total with a strikethrough next to the new total, so the client can see exactly what changed. Fill in the "Reason for Correction" field to explain why the invoice was adjusted (e.g., "Price adjusted per client agreement"). Send the corrective invoice to the client.',
-        tip: 'The original invoice stays untouched with a banner linking to the correction. The corrective invoice has a banner linking back to the original — full audit trail.',
+        content: 'Edit the lines exactly as in a proposal: click a line to change its text, change the quantity, days or price, add items from your catalog, or delete a line. Lines you change are marked EDITED with the old total struck through, new lines are marked NEW, and lines you remove stay visible as REMOVED with a Restore button.',
+        tip: 'Clicking into a number and out again never changes it. Only what you type is saved.',
+      },
+      {
+        title: 'Check what the client pays',
+        content: 'In the Summary, Paid under INV-xxxx shows what the client already paid on the original, and Amount Due is only the difference. If the corrected total is lower than what was paid, the invoice shows Credit due to client instead.',
+      },
+      {
+        title: 'Send it and record the payment',
+        content: 'Send the corrective invoice. The PDF and the email name the invoice it corrects, with its date, and the original stops sending payment reminders. When the client pays the difference, click Record Payment on the corrective invoice. Never re-enter the payment already made on the original.',
+        tip: 'Poland: corrections cannot be sent to KSeF from CueQuote yet. Submit them through your usual KSeF route.',
       },
     ],
   },

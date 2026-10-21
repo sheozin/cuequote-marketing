@@ -494,13 +494,22 @@ export const TUTORIALS_FR: Tutorial[] = [
         tip: 'Utilisez cette fonction pour marquer manuellement les factures comme « En retard » ou pour rétablir un statut si nécessaire.',
       },
       {
-        title: 'Émettre une facture corrective',
-        content: 'Pour les factures déjà envoyées ou payées nécessitant des corrections, cliquez sur l\'icône de correction (flèche circulaire) dans la barre d\'outils de l\'en-tête. Confirmez l\'action — une nouvelle facture corrective est créée avec le suffixe « /COR » (par ex. INV-0006/COR). Tous les postes sont copiés de l\'original avec leurs valeurs d\'origine conservées comme instantané.',
+        title: 'Émettre une facture rectificative',
+        content: 'Sur une facture envoyée ou payée, cliquez sur Corriger la facture dans l\'en-tête. Indiquez le motif (par exemple "Articles ajoutés, un prix corrigé") et cliquez sur Créer la correction. La facture rectificative reçoit son propre numéro, COR-0001 (KOR-0001 pour les entreprises en Pologne, en Allemagne, en Autriche et en Suisse), et reprend toutes les lignes de la facture d\'origine.',
       },
       {
         title: 'Modifier la correction',
-        content: 'Sur la facture corrective, modifiez les postes nécessitant une correction — changez les quantités, les prix, ou ajoutez/supprimez des articles. Les postes modifiés affichent automatiquement le total original barré à côté du nouveau total, pour que le client voie exactement ce qui a changé. Renseignez le champ « Motif de la correction » pour expliquer pourquoi la facture a été ajustée (par ex. « Prix ajusté selon accord client »). Envoyez la facture corrective au client.',
-        tip: 'La facture originale reste intacte avec une bannière renvoyant vers la correction. La facture corrective comporte une bannière renvoyant vers l\'originale — traçabilité complète.',
+        content: 'Modifiez les lignes exactement comme dans une proposition : cliquez sur une ligne pour changer son texte, la quantité, les jours ou le prix, ajoutez des articles de votre catalogue ou supprimez une ligne. Les lignes modifiées portent la mention MODIFIÉ avec l\'ancien total barré, les nouvelles la mention NOUVEAU, et les lignes retirées restent visibles comme SUPPRIMÉ avec un bouton Restaurer.',
+        tip: 'Cliquer dans un nombre puis en sortir ne le modifie jamais. Seul ce que vous tapez est enregistré.',
+      },
+      {
+        title: 'Vérifier ce que paie le client',
+        content: 'Dans le Récapitulatif, Payé au titre de INV-xxxx indique ce que le client a déjà payé sur la facture d\'origine, et le Montant dû n\'est que la différence. Si le nouveau total est inférieur à ce qui a été payé, la facture affiche un avoir en faveur du client.',
+      },
+      {
+        title: 'Envoyer et enregistrer le paiement',
+        content: 'Envoyez la facture rectificative. Le PDF et l\'e-mail indiquent la facture corrigée et sa date, et la facture d\'origine n\'envoie plus de relances. Quand le client paie la différence, cliquez sur Enregistrer un paiement sur la facture rectificative. Ne saisissez jamais une seconde fois le paiement fait sur la facture d\'origine.',
+        tip: 'Pologne : les corrections ne peuvent pas encore être envoyées à KSeF depuis CueQuote. Transmettez-les par votre voie habituelle.',
       },
     ],
   },

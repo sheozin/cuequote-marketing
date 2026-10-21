@@ -146,7 +146,7 @@ const ARTICLE_KEYS = [
     id: "corrective-invoices",
     key: "correctiveInvoices",
     contentKeys: ["content1", "content2"],
-    stepKeys: ["step1", "step2", "step3", "step4"],
+    stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
   },
   {
     id: "smart-suggestions",

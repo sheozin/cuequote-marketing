@@ -2059,13 +2059,15 @@
     },
     "correctiveInvoices": {
       "title": "Corrective Invoices",
-      "content1": "When a sent or paid invoice needs corrections, CueQuote lets you issue a corrective invoice that references the original. The original stays untouched for audit purposes, and the correction shows exactly what changed with before/after values.",
-      "content2": "Corrective invoices follow professional invoicing standards used across the EU and are compatible with Poland's KSeF e-invoicing system. Each correction is linked to its original invoice with full traceability.",
-      "step1": "Open a sent, viewed, or paid invoice and click the correction icon (circular arrow) in the header toolbar",
-      "step2": "The system creates a new invoice with \"/COR\" suffix, pre-filled with all original line items and their values stored as snapshots",
-      "step3": "Edit the items that need correcting — modified items show the original total struck through next to the new total",
-      "step4": "Fill in the \"Reason for Correction\" field and send the corrective invoice to your client",
-      "tip": "The original invoice shows an amber banner linking to the correction, and the corrective invoice shows a blue banner linking back to the original — creating a complete audit trail."
+      "content1": "When an invoice you have already sent, or been paid for, needs to change, you do not edit it. You issue a corrective invoice: a new document with its own number that states what changed. The original stays exactly as it was issued, and the two are linked.",
+      "content2": "Corrections have their own number series: KOR-0001 for companies in Poland, Germany, Austria and Switzerland, COR-0001 elsewhere. Anything the client already paid on the original is carried over automatically, so the correction asks only for the difference, or shows a credit when the new total is lower. The original stops sending payment reminders. Corrections cannot be sent to KSeF from CueQuote yet; submit them through your usual KSeF route.",
+      "step1": "Open the sent or paid invoice and click Correct invoice in the header.",
+      "step2": "Enter the reason for the correction and click Create correction. The corrective invoice opens with all the lines of the original.",
+      "step3": "Edit the lines in the same editor as proposals. Changed lines are marked EDITED with the old total struck through, new lines are marked NEW, and removed lines stay on the document as REMOVED with a Restore button.",
+      "step4": "Check the Summary: Paid under INV-xxxx shows what the client already paid, and Amount Due is only the difference.",
+      "step5": "Send the corrective invoice. The PDF and the email name the invoice it corrects, with its date.",
+      "step6": "When the client pays the difference, click Record Payment on the corrective invoice. Do not record the earlier payment again.",
+      "tip": "Need another change later? Click Correct invoice on the original again. The new correction starts from the latest one, and everything already paid is carried over."
     },
     "smartSuggestions": {
       "title": "Smart Suggestions",

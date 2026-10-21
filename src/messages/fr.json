@@ -2050,14 +2050,16 @@
       "tip": "Utilisez le menu déroulant de statut pour marquer manuellement les factures en retard. Le bouton \"Enregistrer un paiement\" dans la barre latérale est le moyen le plus rapide de consigner les fonds reçus."
     },
     "correctiveInvoices": {
-      "title": "Factures correctives",
-      "content1": "Lorsqu'une facture envoyée ou payée nécessite des corrections, CueQuote vous permet d'émettre une facture corrective qui fait référence à l'originale. L'originale reste intacte à des fins d'audit, et la correction montre exactement ce qui a changé avec les valeurs avant/après.",
-      "content2": "Les factures correctives respectent les normes professionnelles de facturation utilisées dans toute l'UE et sont compatibles avec le système de facturation électronique KSeF de la Pologne. Chaque correction est liée à sa facture originale avec une traçabilité complète.",
-      "step1": "Ouvrez une facture envoyée, vue ou payée et cliquez sur l'icône de correction (flèche circulaire) dans la barre d'outils de l'en-tête",
-      "step2": "Le système crée une nouvelle facture avec le suffixe \"/COR\", pré-remplie avec toutes les lignes originales et leurs valeurs enregistrées comme instantanés",
-      "step3": "Modifiez les lignes à corriger — les lignes modifiées affichent le total original barré à côté du nouveau total",
-      "step4": "Remplissez le champ \"Motif de la correction\" et envoyez la facture corrective à votre client",
-      "tip": "La facture originale affiche une bannière ambrée avec un lien vers la correction, et la facture corrective affiche une bannière bleue avec un lien vers l'originale — créant ainsi une piste d'audit complète."
+      "title": "Factures rectificatives",
+      "content1": "Lorsqu'une facture déjà envoyée ou payée doit changer, vous ne la modifiez pas. Vous émettez une facture rectificative : un nouveau document avec son propre numéro, qui indique ce qui a changé. La facture d'origine reste exactement telle qu'elle a été émise, et les deux sont liées.",
+      "content2": "Les corrections ont leur propre série de numéros : KOR-0001 pour les entreprises en Pologne, en Allemagne, en Autriche et en Suisse, COR-0001 ailleurs. Ce que le client a déjà payé sur la facture d'origine est repris automatiquement : la correction ne demande que la différence, ou indique un avoir si le nouveau total est inférieur. La facture d'origine n'envoie plus de relances. Les corrections ne peuvent pas encore être envoyées à KSeF depuis CueQuote.",
+      "step1": "Ouvrez la facture envoyée ou payée et cliquez sur Corriger la facture dans l'en-tête.",
+      "step2": "Indiquez le motif de la correction et cliquez sur Créer la correction. La facture rectificative s'ouvre avec toutes les lignes de la facture d'origine.",
+      "step3": "Modifiez les lignes dans le même éditeur que les propositions. Les lignes modifiées portent la mention MODIFIÉ avec l'ancien total barré, les nouvelles la mention NOUVEAU, et les lignes retirées restent sur le document comme SUPPRIMÉ avec un bouton Restaurer.",
+      "step4": "Vérifiez le Récapitulatif : Payé au titre de INV-xxxx indique ce que le client a déjà payé, et le Montant dû n'est que la différence.",
+      "step5": "Envoyez la facture rectificative. Le PDF et l'e-mail indiquent la facture corrigée et sa date.",
+      "step6": "Quand le client paie la différence, cliquez sur Enregistrer un paiement sur la facture rectificative. N'enregistrez pas une seconde fois le paiement précédent.",
+      "tip": "Besoin d'une autre modification plus tard ? Cliquez à nouveau sur Corriger la facture sur la facture d'origine. La nouvelle correction part de la dernière, et tout ce qui a été payé est repris."
     },
     "smartSuggestions": {
       "title": "Suggestions intelligentes",
