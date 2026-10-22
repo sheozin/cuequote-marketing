@@ -17,13 +17,13 @@
     "@swc/helpers": "^0.5.23",
     "@vercel/analytics": "^2.0.1",
     "lucide-react": "^0.577.0",
-    "next": "^16.2.12",
+    "next": "^16.4.1",
     "next-intl": "^4.9.0",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^16.3.0",
+    "@next/eslint-plugin-next": "^16.4.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
