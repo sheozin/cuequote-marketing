@@ -127,13 +127,13 @@ const ARTICLE_KEYS = [
   {
     id: "sharing-tracking",
     key: "sharingTracking",
-    contentKeys: ["content1", "content2", "content3"],
+    contentKeys: ["content1", "content2", "content3", "content4"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6"],
   },
   {
     id: "invoicing",
     key: "invoicing",
-    contentKeys: ["content1", "content2", "content3", "content4"],
+    contentKeys: ["content1", "content2", "content3", "content4", "content5"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5", "step6", "step7", "step8"],
   },
   {

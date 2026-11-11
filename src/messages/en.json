@@ -127,7 +127,7 @@
     "freeDesc": "Try CueQuote with no commitment.",
     "freeF1": "3 proposals/month",
     "freeF2": "Basic PDF (with watermark)",
-    "freeF3": "Share links",
+    "freeF3": "PDF download (sending to clients on paid plans)",
     "freeF4": "1 user",
     "starterName": "Starter",
     "starterDesc": "For freelancers and small teams.",
@@ -138,6 +138,8 @@
     "starterF5": "1 user",
     "starterF6": "Email support",
     "starterF7": "Basic risk assessment",
+    "starterF8": "Email proposals and invoices to clients",
+    "starterF9": "Online client links (view, accept and sign)",
     "starterSave": "Most chosen by production professionals",
     "proName": "Pro",
     "proDesc": "For growing production companies.",
@@ -199,7 +201,7 @@
     "faqQ5": "What happens when I hit my monthly limit?",
     "faqA5": "On paid plans the limit counts AI generations only (generating, regenerating or a risk plan), so you can keep building proposals from your catalog or a template. For more AI generations, upgrade your plan or purchase a 5-pack for €29. On the Free plan every proposal counts toward the 3.",
     "faqQ6": "Is there a free plan?",
-    "faqA6": "CueQuote offers a free plan with 3 proposals per month — no credit card, no time limit. When you're ready for more, upgrade to a paid plan.",
+    "faqA6": "Yes. CueQuote offers a free plan with 3 proposals per month, with no credit card and no time limit. You can build proposals and download the PDF. Sending to clients, by email or through an online link, is part of the paid plans.",
     "faqQ7": "What are credit packs?",
     "faqA7": "Credit packs let you buy extra proposals on top of your monthly limit. A 5-pack costs €29 (€5.80 each). Credits are valid for 12 months and include branded PDFs.",
     "compareTitle": "Compare all features",
@@ -212,7 +214,8 @@
     "compTemplates": "PDF templates",
     "compRecurring": "Recurring proposals",
     "compClientExp": "Client Experience",
-    "compShareLinks": "Share links + tracking",
+    "compShareLinks": "Online client links (view, accept and sign)",
+    "compEmailClients": "Email proposals and invoices to clients",
     "compEsig": "E-signatures",
     "compNameOnly": "Name only",
     "compFull": "Full",
@@ -280,12 +283,14 @@
   "homePricing": {
     "freeF1": "3 proposals/month",
     "freeF2": "Basic PDF (with watermark)",
-    "freeF3": "Share links",
+    "freeF3": "PDF download (sending to clients on paid plans)",
     "freeF4": "1 user",
     "starterF1": "10 AI generations/month, unlimited proposals",
     "starterF2": "Full branding (logo + colors)",
     "starterF3": "Client management",
     "starterF4": "E-signatures (canvas + terms)",
+    "starterF5": "Email proposals and invoices to clients",
+    "starterF6": "Online client links (view, accept and sign)",
     "proF1": "40 AI generations/month, unlimited proposals",
     "proF2": "Everything in Starter",
     "proF3": "Proposal analytics",
@@ -308,7 +313,7 @@
     "q5": "Can I use my own branding?",
     "a5": "Yes. Upload your logo, set your brand colors, and all PDFs and share pages will use your branding. Your clients see your company, not CueQuote.",
     "q6": "Do you offer a free plan?",
-    "a6": "Yes. The free plan includes 3 proposals per month with basic PDF export and share links. No credit card required.",
+    "a6": "Yes. The free plan includes 3 proposals per month with basic PDF export. Sending to clients, by email or through an online link, is part of the paid plans. No credit card required.",
     "q7": "Is there a free plan?",
     "a7": "CueQuote offers a free plan with 3 proposals per month — no credit card, no time limit. When you're ready for more, upgrade to a paid plan.",
     "q8": "What happens when I hit my proposal limit?",
@@ -1980,7 +1985,7 @@
       "step2": "Enter the event description — be as specific as possible about the venue and requirements",
       "step3": "CueQuote's AI generates a complete equipment list with quantities and pricing. Or click \"Build from catalog\" to skip the AI and add items from your catalog yourself",
       "step4": "Review and edit: add, remove, or adjust any line items; start typing an item name to pick it from your catalog with its price",
-      "step5": "Download as a branded PDF or share via a unique link",
+      "step5": "Download as a PDF, or on a paid plan email it to your client or share it via a unique link",
       "tip": "Use the share link feature to let clients view proposals online — they can approve directly from the link.",
       "content3": "Every line has a Days column. A line's total is quantity × unit price × days, so the unit price stays your catalogue daily rate and changing how long an item is hired means changing one number. Setup or strike days charged at a reduced rate show as a decimal, for example 2.5 for two show days plus one setup day at half rate. On the PDF, the share link and invoices, the Days column only appears when at least one item runs longer than a day. Each line also has a Disc. % field for a discount on that item alone. The unit price stays your catalogue price, the client sees the percentage off, and a discount on the whole proposal still applies on top. The Discount column only appears on the PDF, the share link and Excel when a line has one."
     },
@@ -2028,8 +2033,8 @@
     "billingPlans": {
       "title": "Billing & Plans",
       "content1": "CueQuote offers flexible plans to match your business size. Start free and upgrade as you grow.",
-      "step1": "Free — 3 proposals/month, 1 user, basic PDF template",
-      "step2": "Starter (€29/mo) — 10 AI generations/month, unlimited proposals, 1 user, full branding, client management",
+      "step1": "Free: 3 proposals/month, 1 user, basic PDF template. Download the PDF and send it yourself; emailing clients and online client links are on the paid plans",
+      "step2": "Starter (€29/mo): 10 AI generations/month, unlimited proposals, 1 user, full branding, client management, email proposals and invoices to clients, online client links (view, accept and sign)",
       "step3": "Pro (€79/mo) — 40 AI generations/month, unlimited proposals, 5 users, custom templates, priority support",
       "step4": "Business (€179/mo) — 120 AI generations/month, unlimited proposals, 20 users, API access, dedicated support",
       "tip": "You can upgrade or downgrade at any time from Settings → Billing. Changes take effect at the start of the next billing cycle."
@@ -2060,7 +2065,8 @@
       "content3": "A proforma is a request for payment, not a tax invoice. Click New Proforma on the Invoices page to raise one from scratch, or convert a proposal into one. It takes its own PI- number so your INV- series stays gapless, it will not accept payments, and it is never sent to KSeF, because none of those would be correct for a document that is not an invoice. When the client confirms, one click issues a real invoice with the next number in your series and today's date; the proforma is kept and the two stay linked, so the copy your client holds is still retrievable.",
       "step7": "For a deposit request on work you have not formally quoted, click New Proforma on the Invoices page, then convert it to a real invoice once the client confirms",
       "content4": "Every invoice and proforma has its own currency, set in Details. It starts at the default from Settings, but you can pick another for one document without changing your default, for example USD for one client while your accounts stay in EGP. On a draft you can still change it: CueQuote shows every line converted at today's rate and changes nothing until you confirm. An invoice created from a proposal keeps the proposal's currency, so change the proposal instead.",
-      "step8": "Invoice lines show each item by its name, and the PDF names the proposal it bills. To also copy the proposal descriptions onto new invoices, turn on Include item descriptions on invoices in Settings, Payments."
+      "step8": "Invoice lines show each item by its name, and the PDF names the proposal it bills. To also copy the proposal descriptions onto new invoices, turn on Include item descriptions on invoices in Settings, Payments.",
+      "content5": "Invoicing is part of the paid plans, from Starter up, and that includes emailing an invoice to your client and sharing it through an online link. On the Free plan you can build proposals and download them as PDFs."
     },
     "paymentTracking": {
       "title": "Payment Tracking",
@@ -2106,7 +2112,8 @@
       "step5": "Follow up strategically — if a client viewed but hasn't responded within 48 hours, it's time to reach out",
       "tip": "Use the \"Send Proposal\" button to email the share link directly from CueQuote with a personal message. The email includes a summary of the proposal with a branded CTA button.",
       "content3": "Quotes expire on their own. Every new proposal carries a valid-until date, 30 days ahead by default, which you can change or clear in the Terms & Details tab. Three days before that date CueQuote emails your client a reminder with the share link, sent in your company name with replies coming back to you, and notifies you in the app at the same time. If the date passes with no response, the proposal moves to Expired and the client is told that too.",
-      "step6": "Set or clear the valid-until date in Terms & Details — the expiry reminder three days out, and the expiry notice itself, both run from it"
+      "step6": "Set or clear the valid-until date in Terms & Details — the expiry reminder three days out, and the expiry notice itself, both run from it",
+      "content4": "Sending proposals by email and sharing them through an online link are part of the paid plans, from Starter up. On the Free plan you can still build the proposal and download the PDF to send yourself."
     },
     "teamManagement": {
       "title": "Team Management",

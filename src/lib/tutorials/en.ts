@@ -333,6 +333,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       {
         title: 'Open the Send dialog',
         content: 'From the proposal editor, click the green "Send" button in the top-right corner. A modal opens where you can compose the email that accompanies your proposal. If a client is linked, their email is pre-filled.',
+        tip: 'Sending by email and sharing a link are part of the paid plans. On the Free plan, download the PDF and send it yourself.',
       },
       {
         title: 'Personalized greeting — auto-filled',
@@ -406,6 +407,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       {
         title: 'Compare plans',
         content: 'Four plans are available: Free (3 proposals/month, basic PDF), Starter at 29 per month (10 AI generations/month, unlimited proposals, full branding, client management), Pro at 79 per month (40 AI generations/month, unlimited proposals, custom templates, analytics), and Business at 179 per month (120 AI generations/month, unlimited proposals, API access, dedicated support). Toggle between monthly and annual billing — annual saves 20%.',
+        tip: 'Emailing proposals and invoices to clients, and online client links where they view, accept and sign, are included from Starter up. The Free plan lets you build proposals and download the PDF.',
       },
       {
         title: 'Upgrade to a paid plan',

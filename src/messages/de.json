@@ -127,7 +127,7 @@
     "freeDesc": "Testen Sie CueQuote ohne Verpflichtung.",
     "freeF1": "3 Angebote/Monat",
     "freeF2": "Basis-PDF (mit Wasserzeichen)",
-    "freeF3": "Freigabelinks",
+    "freeF3": "PDF-Download (Versand an Kunden in den kostenpflichtigen Tarifen)",
     "freeF4": "1 Benutzer",
     "starterName": "Starter",
     "starterDesc": "Für Freiberufler und kleine Teams.",
@@ -138,6 +138,8 @@
     "starterF5": "1 Benutzer",
     "starterF6": "E-Mail-Support",
     "starterF7": "Grundlegende Risikobewertung",
+    "starterF8": "Angebote und Rechnungen per E-Mail an Kunden senden",
+    "starterF9": "Online-Kundenlinks (ansehen, annehmen und unterschreiben)",
     "starterSave": "Am häufigsten von Produktionsprofis gewählt",
     "proName": "Pro",
     "proDesc": "Für wachsende Produktionsfirmen.",
@@ -199,7 +201,7 @@
     "faqQ5": "Was passiert, wenn ich mein Monatslimit erreiche?",
     "faqA5": "In bezahlten Tarifen zählt das Limit nur KI-Generierungen (Generieren, Neugenerieren oder ein Risikoplan), Angebote aus Ihrem Katalog oder einer Vorlage können Sie also weiter erstellen. Für mehr KI-Generierungen upgraden Sie Ihren Tarif oder kaufen ein 5er-Paket für 29 €. Im Free-Tarif zählt jedes Angebot zu den 3.",
     "faqQ6": "Gibt es einen kostenlosen Plan?",
-    "faqA6": "CueQuote bietet einen kostenlosen Plan mit 3 Angeboten pro Monat — ohne Kreditkarte, ohne Zeitlimit. Wenn Sie mehr benötigen, wechseln Sie zu einem kostenpflichtigen Plan.",
+    "faqA6": "Ja. CueQuote bietet einen kostenlosen Tarif mit 3 Angeboten pro Monat, ohne Kreditkarte und ohne Zeitlimit. Sie können Angebote erstellen und als PDF herunterladen. Der Versand an Kunden, per E-Mail oder über einen Online-Link, ist Teil der kostenpflichtigen Tarife.",
     "faqQ7": "Was sind Guthaben-Pakete?",
     "faqA7": "Guthaben-Pakete ermöglichen es Ihnen, zusätzliche Angebote über Ihr Monatslimit hinaus zu kaufen. Ein 5er-Paket kostet 29 € (5,80 € pro Stück). Guthaben ist 12 Monate gültig und enthält gebrandete PDFs.",
     "compareTitle": "Alle Funktionen vergleichen",
@@ -212,7 +214,8 @@
     "compTemplates": "PDF-Vorlagen",
     "compRecurring": "Wiederkehrende Angebote",
     "compClientExp": "Kundenerlebnis",
-    "compShareLinks": "Freigabelinks + Tracking",
+    "compShareLinks": "Online-Kundenlinks (ansehen, annehmen und unterschreiben)",
+    "compEmailClients": "Angebote und Rechnungen per E-Mail an Kunden senden",
     "compEsig": "E-Signaturen",
     "compNameOnly": "Nur Name",
     "compFull": "Vollständig",
@@ -280,12 +283,14 @@
   "homePricing": {
     "freeF1": "3 Angebote/Monat",
     "freeF2": "Basis-PDF (mit Wasserzeichen)",
-    "freeF3": "Freigabelinks",
+    "freeF3": "PDF-Download (Versand an Kunden in den kostenpflichtigen Tarifen)",
     "freeF4": "1 Benutzer",
     "starterF1": "10 KI-Generierungen/Monat, unbegrenzt Angebote",
     "starterF2": "Volles Branding (Logo + Farben)",
     "starterF3": "Kundenverwaltung",
     "starterF4": "E-Signaturen (Canvas + Bedingungen)",
+    "starterF5": "Angebote und Rechnungen per E-Mail an Kunden senden",
+    "starterF6": "Online-Kundenlinks (ansehen, annehmen und unterschreiben)",
     "proF1": "40 KI-Generierungen/Monat, unbegrenzt Angebote",
     "proF2": "Alles aus Starter",
     "proF3": "Angebotsanalysen",
@@ -308,7 +313,7 @@
     "q5": "Kann ich mein eigenes Branding verwenden?",
     "a5": "Ja. Laden Sie Ihr Logo hoch, setzen Sie Ihre Markenfarben, und alle PDFs und Freigabeseiten verwenden Ihr Branding. Ihre Kunden sehen Ihr Unternehmen, nicht CueQuote.",
     "q6": "Bieten Sie einen kostenlosen Tarif an?",
-    "a6": "Ja. Der kostenlose Tarif beinhaltet 3 Angebote pro Monat mit Basis-PDF-Export und Freigabelinks. Keine Kreditkarte erforderlich.",
+    "a6": "Ja. Der kostenlose Tarif beinhaltet 3 Angebote pro Monat mit Basis-PDF-Export. Der Versand an Kunden, per E-Mail oder über einen Online-Link, ist Teil der kostenpflichtigen Tarife. Keine Kreditkarte erforderlich.",
     "q7": "Gibt es einen kostenlosen Plan?",
     "a7": "CueQuote bietet einen kostenlosen Plan mit 3 Angeboten pro Monat — ohne Kreditkarte, ohne Zeitlimit. Wenn Sie mehr benötigen, wechseln Sie zu einem kostenpflichtigen Plan.",
     "q8": "Was passiert, wenn ich mein Angebotslimit erreiche?",
@@ -1967,7 +1972,7 @@
       "step2": "Geben Sie die Veranstaltungsbeschreibung ein — seien Sie so spezifisch wie möglich über den Veranstaltungsort und die Anforderungen",
       "step3": "CueQuotes KI generiert eine vollständige Ausrüstungsliste mit Mengen und Preisen. Oder klicken Sie auf „Aus dem Katalog erstellen“, um die KI zu überspringen und Positionen selbst aus Ihrem Katalog hinzuzufügen",
       "step4": "Überprüfen und bearbeiten: Positionen hinzufügen, entfernen oder anpassen; beginnen Sie, einen Positionsnamen einzugeben, um ihn mit Preis aus Ihrem Katalog zu wählen",
-      "step5": "Als gebrandetes PDF herunterladen oder über einen einzigartigen Link teilen",
+      "step5": "Als PDF herunterladen oder, in einem kostenpflichtigen Tarif, per E-Mail an Ihren Kunden senden oder über einen eindeutigen Link teilen",
       "tip": "Nutzen Sie die Teilen-Link-Funktion, damit Kunden Angebote online einsehen können — sie können direkt über den Link genehmigen.",
       "content3": "Jede Position hat eine Spalte Tage. Der Positionsbetrag ist Menge × Einzelpreis × Tage, sodass der Einzelpreis Ihr Tagessatz aus dem Katalog bleibt und eine längere Miete nur eine Zahl ändert. Auf- oder Abbautage zu einem reduzierten Satz erscheinen als Dezimalzahl, zum Beispiel 2,5 für zwei Veranstaltungstage plus einen Aufbautag zum halben Satz. Im PDF, im Freigabelink und auf Rechnungen erscheint die Spalte Tage nur, wenn mindestens eine Position länger als einen Tag läuft. Jede Position hat außerdem ein Feld Rabatt % für einen Rabatt nur auf diese Position. Der Einzelpreis bleibt Ihr Katalogpreis, der Kunde sieht den Prozentsatz, und ein Rabatt auf das ganze Angebot gilt weiterhin zusätzlich. Die Rabattspalte erscheint im PDF, im Freigabelink und in Excel nur, wenn eine Position einen Rabatt hat."
     },
@@ -2015,8 +2020,8 @@
     "billingPlans": {
       "title": "Abrechnung & Pläne",
       "content1": "CueQuote bietet flexible Pläne passend zu Ihrer Unternehmensgröße. Starten Sie kostenlos und wachsen Sie.",
-      "step1": "Free — 3 Angebote/Monat, 1 Benutzer, einfache PDF-Vorlage",
-      "step2": "Starter (29 €/Monat) — 10 KI-Generierungen/Monat, unbegrenzt Angebote, 1 Benutzer, vollständiges Branding, Kundenverwaltung",
+      "step1": "Free: 3 Angebote/Monat, 1 Benutzer, einfache PDF-Vorlage. Laden Sie das PDF herunter und versenden Sie es selbst; E-Mail-Versand an Kunden und Online-Kundenlinks gibt es in den kostenpflichtigen Tarifen",
+      "step2": "Starter (29 €/Monat): 10 KI-Generierungen/Monat, unbegrenzt Angebote, 1 Benutzer, vollständiges Branding, Kundenverwaltung, Angebote und Rechnungen per E-Mail an Kunden senden, Online-Kundenlinks (ansehen, annehmen und unterschreiben)",
       "step3": "Pro (79 €/Monat) — 40 KI-Generierungen/Monat, unbegrenzt Angebote, 5 Benutzer, individuelle Vorlagen, Prioritäts-Support",
       "step4": "Business (179 €/Monat) — 120 KI-Generierungen/Monat, unbegrenzt Angebote, 20 Benutzer, API-Zugang, dedizierter Support",
       "tip": "Sie können Ihren Plan jederzeit unter Einstellungen → Abrechnung ändern. Änderungen treten zu Beginn des nächsten Abrechnungszyklus in Kraft."
@@ -2047,7 +2052,8 @@
       "content3": "Eine Proforma ist eine Zahlungsaufforderung, keine Steuerrechnung. Klicken Sie auf der Rechnungsseite auf Neue Proforma, um eine von Grund auf zu erstellen, oder wandeln Sie ein Angebot um. Sie erhält eine eigene PI-Nummer, damit Ihre INV-Serie lückenlos bleibt, sie nimmt keine Zahlungen an und geht nie an KSeF, weil nichts davon für ein Dokument richtig wäre, das keine Rechnung ist. Bestätigt der Kunde, erstellt ein Klick eine echte Rechnung mit der nächsten Nummer Ihrer Serie und dem heutigen Datum; die Proforma bleibt erhalten und beide bleiben verknüpft, sodass die Kopie beim Kunden weiterhin abrufbar ist.",
       "step7": "Für eine Anzahlungsanforderung zu Arbeit ohne förmliches Angebot klicken Sie auf der Rechnungsseite auf Neue Proforma und wandeln sie um, sobald der Kunde bestätigt",
       "content4": "Jede Rechnung und Proforma hat eine eigene Währung, festgelegt unter Details. Sie beginnt mit der Standardwährung aus den Einstellungen, aber Sie können für ein Dokument eine andere wählen, ohne Ihren Standard zu ändern, etwa USD für einen Kunden, während Ihre Buchhaltung in EGP bleibt. Im Entwurf können Sie sie noch ändern: CueQuote zeigt jede Position zum heutigen Kurs umgerechnet und ändert nichts, bevor Sie bestätigen. Eine aus einem Angebot erstellte Rechnung behält dessen Währung, ändern Sie also das Angebot.",
-      "step8": "Rechnungspositionen zeigen jeden Artikel mit seinem Namen, und das PDF nennt das abgerechnete Angebot. Um auch die Beschreibungen aus dem Angebot auf neue Rechnungen zu übernehmen, aktivieren Sie Positionsbeschreibungen auf Rechnungen übernehmen unter Einstellungen, Zahlungen."
+      "step8": "Rechnungspositionen zeigen jeden Artikel mit seinem Namen, und das PDF nennt das abgerechnete Angebot. Um auch die Beschreibungen aus dem Angebot auf neue Rechnungen zu übernehmen, aktivieren Sie Positionsbeschreibungen auf Rechnungen übernehmen unter Einstellungen, Zahlungen.",
+      "content5": "Rechnungsstellung ist Teil der kostenpflichtigen Tarife, ab Starter, einschließlich des E-Mail-Versands einer Rechnung an Ihren Kunden und der Freigabe über einen Online-Link. Im Free-Tarif können Sie Angebote erstellen und als PDF herunterladen."
     },
     "paymentTracking": {
       "title": "Zahlungsverfolgung",
@@ -2093,7 +2099,8 @@
       "step5": "Handeln Sie strategisch — wenn ein Kunde das Angebot angesehen, aber innerhalb von 48 Stunden nicht geantwortet hat, ist es Zeit nachzufassen",
       "tip": "Verwenden Sie die Schaltfläche \"Angebot senden\", um den Teilen-Link direkt aus CueQuote mit einer persönlichen Nachricht zu versenden. Die E-Mail enthält eine Zusammenfassung des Angebots mit einer gebrandeten CTA-Schaltfläche.",
       "content3": "Angebote laufen von selbst ab. Jedes neue Angebot hat ein Gültigkeitsdatum, standardmäßig 30 Tage im Voraus, das Sie im Reiter Bedingungen & Details ändern oder löschen können. Drei Tage vor diesem Datum schickt CueQuote Ihrem Kunden eine Erinnerung mit dem Freigabelink, im Namen Ihres Unternehmens und mit Antworten zurück an Sie, und benachrichtigt Sie gleichzeitig in der App. Verstreicht das Datum ohne Antwort, wechselt das Angebot auf Abgelaufen und der Kunde erfährt auch das.",
-      "step6": "Setzen oder löschen Sie das Gültigkeitsdatum unter Bedingungen & Details: daraus ergeben sich die Erinnerung drei Tage vorher und der Ablaufhinweis selbst"
+      "step6": "Setzen oder löschen Sie das Gültigkeitsdatum unter Bedingungen & Details: daraus ergeben sich die Erinnerung drei Tage vorher und der Ablaufhinweis selbst",
+      "content4": "Angebote per E-Mail senden und über einen Online-Link teilen ist Teil der kostenpflichtigen Tarife, ab Starter. Im Free-Tarif können Sie das Angebot trotzdem erstellen und das PDF herunterladen, um es selbst zu versenden."
     },
     "teamManagement": {
       "title": "Teamverwaltung",

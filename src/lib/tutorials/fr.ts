@@ -333,6 +333,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       {
         title: 'Ouvrez la boîte de dialogue Envoyer',
         content: 'Depuis l\'éditeur de devis, cliquez sur le bouton vert « Envoyer » dans le coin supérieur droit. Une fenêtre s\'ouvre dans laquelle vous pouvez composer l\'e-mail qui accompagnera votre devis. Si un client est associé, son e-mail est pré-rempli.',
+        tip: 'L\'envoi par e-mail et le partage par lien font partie des plans payants. Avec le plan Free, téléchargez le PDF et envoyez-le vous-même.',
       },
       {
         title: 'Message d\'accueil personnalisé — pré-rempli',
@@ -405,6 +406,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       {
         title: 'Comparez les plans',
         content: 'Quatre plans sont disponibles : Free (3 devis/mois, PDF basique), Starter à €29 par mois (10 générations IA/mois, devis illimités, image de marque complète, gestion des clients), Pro à €79 par mois (40 générations IA/mois, devis illimités, modèles personnalisés, analytics) et Business à €179 par mois (120 générations IA/mois, devis illimités, accès API, support dédié). Basculez entre facturation mensuelle et annuelle — l\'annuel vous fait économiser 20 %.',
+        tip: 'L\'envoi des devis et des factures aux clients par e-mail, ainsi que les liens client en ligne où ils consultent, acceptent et signent, sont inclus à partir de Starter. Le plan Free vous permet de créer des devis et de télécharger le PDF.',
       },
       {
         title: 'Passez à un plan payant',

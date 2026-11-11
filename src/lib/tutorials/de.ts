@@ -333,6 +333,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       {
         title: 'Senden-Dialog öffnen',
         content: 'Klicken Sie im Angebots-Editor oben rechts auf die grüne Schaltfläche "Senden". Es öffnet sich ein Dialog, in dem Sie die E-Mail zu Ihrem Angebot verfassen können. Ist ein Kunde verknüpft, wird dessen E-Mail-Adresse vorausgefüllt.',
+        tip: 'Der Versand per E-Mail und das Teilen per Link sind Teil der kostenpflichtigen Tarife. Im Free-Tarif laden Sie das PDF herunter und versenden es selbst.',
       },
       {
         title: 'Personalisierte Begrüßung — automatisch ausgefüllt',
@@ -405,6 +406,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       {
         title: 'Tarife vergleichen',
         content: 'Vier Tarife stehen zur Auswahl: Free (3 Angebote/Monat, Basis-PDF), Starter für €29 pro Monat (10 KI-Generierungen/Monat, unbegrenzt Angebote, vollständiges Branding, Kundenverwaltung), Pro für €79 pro Monat (40 KI-Generierungen/Monat, unbegrenzt Angebote, individuelle Vorlagen, Analytics) und Business für €179 pro Monat (120 KI-Generierungen/Monat, unbegrenzt Angebote, API-Zugriff, Premium-Support). Wechseln Sie zwischen monatlicher und jährlicher Abrechnung — die jährliche spart 20 %.',
+        tip: 'Der E-Mail-Versand von Angeboten und Rechnungen an Kunden sowie Online-Kundenlinks, über die Kunden ansehen, annehmen und unterschreiben, sind ab Starter enthalten. Im Free-Tarif erstellen Sie Angebote und laden das PDF herunter.',
       },
       {
         title: 'Auf einen kostenpflichtigen Tarif upgraden',

@@ -127,7 +127,7 @@
     "freeDesc": "Wypróbuj CueQuote bez zobowiązań.",
     "freeF1": "3 oferty/miesiąc",
     "freeF2": "Podstawowy PDF (ze znakiem wodnym)",
-    "freeF3": "Linki do udostępniania",
+    "freeF3": "Pobieranie PDF (wysyłka do klientów w planach płatnych)",
     "freeF4": "1 użytkownik",
     "starterName": "Starter",
     "starterDesc": "Dla freelancerów i małych zespołów.",
@@ -138,6 +138,8 @@
     "starterF5": "1 użytkownik",
     "starterF6": "Wsparcie e-mail",
     "starterF7": "Podstawowa ocena ryzyka",
+    "starterF8": "Wysyłka ofert i faktur do klientów e-mailem",
+    "starterF9": "Linki online dla klientów (podgląd, akceptacja i podpis)",
     "starterSave": "Najczęściej wybierany przez profesjonalistów produkcji",
     "proName": "Pro",
     "proDesc": "Dla rosnących firm produkcyjnych.",
@@ -199,7 +201,7 @@
     "faqQ5": "Co się stanie, gdy wyczerpię miesięczny limit?",
     "faqA5": "Na planach płatnych limit liczy tylko generacje AI (generowanie, ponowne generowanie lub plan ryzyka), więc nadal możesz budować oferty z katalogu lub szablonu. Po więcej generacji AI przejdź na wyższy plan lub kup pakiet 5 za 29 €. Na planie Free do limitu 3 liczy się każda oferta.",
     "faqQ6": "Czy jest darmowy plan?",
-    "faqA6": "CueQuote oferuje darmowy plan z 3 ofertami miesięcznie — bez karty kredytowej, bez limitu czasowego. Gdy potrzebujesz więcej, przejdź na płatny plan.",
+    "faqA6": "Tak. CueQuote oferuje darmowy plan z 3 ofertami miesięcznie, bez karty kredytowej i bez limitu czasowego. Możesz tworzyć oferty i pobierać je jako PDF. Wysyłka do klientów, e-mailem lub przez link online, jest dostępna w planach płatnych.",
     "faqQ7": "Czym są pakiety kredytów?",
     "faqA7": "Pakiety kredytów pozwalają kupić dodatkowe oferty ponad miesięczny limit. Pakiet 5 kosztuje 29 € (5,80 € za szt.). Kredyty ważne 12 miesięcy i zawierają markowe PDF-y.",
     "compareTitle": "Porównaj wszystkie funkcje",
@@ -212,7 +214,8 @@
     "compTemplates": "Szablony PDF",
     "compRecurring": "Oferty cykliczne",
     "compClientExp": "Doświadczenie klienta",
-    "compShareLinks": "Linki do udostępniania + śledzenie",
+    "compShareLinks": "Linki online dla klientów (podgląd, akceptacja i podpis)",
+    "compEmailClients": "Wysyłka ofert i faktur do klientów e-mailem",
     "compEsig": "E-podpisy",
     "compNameOnly": "Tylko imię",
     "compFull": "Pełny",
@@ -280,12 +283,14 @@
   "homePricing": {
     "freeF1": "3 oferty/miesiąc",
     "freeF2": "Podstawowy PDF (ze znakiem wodnym)",
-    "freeF3": "Linki do udostępniania",
+    "freeF3": "Pobieranie PDF (wysyłka do klientów w planach płatnych)",
     "freeF4": "1 użytkownik",
     "starterF1": "10 generacji AI/miesiąc, oferty bez limitu",
     "starterF2": "Pełny branding (logo + kolory)",
     "starterF3": "Zarządzanie klientami",
     "starterF4": "E-podpisy (canvas + warunki)",
+    "starterF5": "Wysyłka ofert i faktur do klientów e-mailem",
+    "starterF6": "Linki online dla klientów (podgląd, akceptacja i podpis)",
     "proF1": "40 generacji AI/miesiąc, oferty bez limitu",
     "proF2": "Wszystko ze Startera",
     "proF3": "Analityka ofert",
@@ -308,7 +313,7 @@
     "q5": "Czy mogę używać własnego brandingu?",
     "a5": "Tak. Prześlij logo, ustaw kolory marki, a wszystkie PDF-y i strony udostępniania będą używać Twojego brandingu. Klienci widzą Twoją firmę, nie CueQuote.",
     "q6": "Czy oferujecie darmowy plan?",
-    "a6": "Tak. Darmowy plan obejmuje 3 oferty miesięcznie z podstawowym eksportem PDF i linkami do udostępniania. Bez karty kredytowej.",
+    "a6": "Tak. Darmowy plan obejmuje 3 oferty miesięcznie z podstawowym eksportem PDF. Wysyłka do klientów, e-mailem lub przez link online, jest dostępna w planach płatnych. Bez karty kredytowej.",
     "q7": "Czy jest darmowy plan?",
     "a7": "CueQuote oferuje darmowy plan z 3 ofertami miesięcznie — bez karty kredytowej, bez limitu czasowego. Gdy potrzebujesz więcej, przejdź na płatny plan.",
     "q8": "Co się stanie, gdy wyczerpię limit ofert?",
@@ -1944,7 +1949,7 @@
       "step2": "Wpisz opis wydarzenia — podaj jak najwięcej szczegółów o miejscu i wymaganiach",
       "step3": "AI CueQuote generuje kompletną listę sprzętu z ilościami i cenami. Albo kliknij „Zbuduj z katalogu”, aby pominąć AI i samodzielnie dodać pozycje z katalogu",
       "step4": "Przejrzyj i edytuj: dodaj, usuń lub zmień dowolne pozycje; zacznij wpisywać nazwę pozycji, aby wybrać ją z katalogu razem z ceną",
-      "step5": "Pobierz jako markowy PDF lub udostępnij przez unikalny link",
+      "step5": "Pobierz jako PDF lub, w planie płatnym, wyślij klientowi e-mailem albo udostępnij przez unikalny link",
       "tip": "Użyj funkcji linku udostępniania, aby klienci mogli przeglądać oferty online — mogą zatwierdzić je bezpośrednio z linku.",
       "content3": "Każda pozycja ma kolumnę Dni. Wartość pozycji to ilość × cena jednostkowa × dni, więc cena jednostkowa pozostaje Twoją dzienną stawką z katalogu, a zmiana czasu wynajmu to zmiana jednej liczby. Dni montażu lub demontażu liczone po obniżonej stawce widać jako ułamek, na przykład 2,5 dla dwóch dni wydarzenia i jednego dnia montażu za połowę stawki. W PDF, w linku udostępniania i na fakturach kolumna Dni pojawia się tylko wtedy, gdy co najmniej jedna pozycja trwa dłużej niż jeden dzień. Każda pozycja ma też pole Rabat % na rabat tylko dla tej pozycji. Cena jednostkowa zostaje ceną z katalogu, klient widzi procent rabatu, a rabat na całą ofertę nadal działa dodatkowo. Kolumna Rabat pojawia się w PDF, linku udostępniania i Excelu tylko wtedy, gdy któraś pozycja ma rabat."
     },
@@ -1992,8 +1997,8 @@
     "billingPlans": {
       "title": "Rozliczenia i plany",
       "content1": "CueQuote oferuje elastyczne plany dopasowane do wielkości Twojej firmy. Zacznij za darmo i rozwijaj się.",
-      "step1": "Free — 3 oferty/miesiąc, 1 użytkownik, podstawowy szablon PDF",
-      "step2": "Starter (29 €/mies.) — 10 generacji AI/miesiąc, oferty bez limitu, 1 użytkownik, pełny branding, zarządzanie klientami",
+      "step1": "Free: 3 oferty/miesiąc, 1 użytkownik, podstawowy szablon PDF. Pobierz PDF i wyślij go samodzielnie; wysyłka e-mailem do klientów i linki online dla klientów są w planach płatnych",
+      "step2": "Starter (29 €/mies.): 10 generacji AI/miesiąc, oferty bez limitu, 1 użytkownik, pełny branding, zarządzanie klientami, wysyłka ofert i faktur do klientów e-mailem, linki online dla klientów (podgląd, akceptacja i podpis)",
       "step3": "Pro (79 €/mies.) — 40 generacji AI/miesiąc, oferty bez limitu, 5 użytkowników, niestandardowe szablony, priorytetowe wsparcie",
       "step4": "Business (179 €/mies.) — 120 generacji AI/miesiąc, oferty bez limitu, 20 użytkowników, dostęp do API, dedykowane wsparcie",
       "tip": "Możesz zmienić plan w dowolnym momencie w Ustawienia → Rozliczenia. Zmiany wchodzą w życie na początku następnego cyklu rozliczeniowego."
@@ -2024,7 +2029,8 @@
       "content3": "Pro forma to prośba o zapłatę, nie faktura podatkowa. Kliknij Nowa pro forma na stronie Faktury, aby wystawić ją od zera, albo skonwertuj ofertę. Dostaje własny numer PI-, więc seria INV- pozostaje bez luk, nie przyjmuje płatności i nigdy nie trafia do KSeF, bo żadna z tych rzeczy nie byłaby właściwa dla dokumentu, który nie jest fakturą. Gdy klient potwierdzi, jedno kliknięcie wystawia prawdziwą fakturę z kolejnym numerem serii i dzisiejszą datą; pro forma zostaje zachowana i obie pozostają powiązane, więc kopia, którą ma klient, nadal jest dostępna.",
       "step7": "Aby poprosić o zaliczkę za pracę bez formalnej oferty, kliknij Nowa pro forma na stronie Faktury, a po potwierdzeniu przez klienta skonwertuj ją na prawdziwą fakturę",
       "content4": "Każda faktura i proforma ma własną walutę, ustawianą w Szczegółach. Domyślnie jest to waluta z Ustawień, ale możesz wybrać inną dla jednego dokumentu bez zmiany waluty domyślnej, na przykład USD dla jednego klienta, gdy Twoje księgi są w EGP. W wersji roboczej nadal możesz ją zmienić: CueQuote pokazuje każdą pozycję przeliczoną po dzisiejszym kursie i niczego nie zmienia przed zatwierdzeniem. Faktura utworzona z oferty zachowuje walutę oferty, więc zmień ją w ofercie.",
-      "step8": "Pozycje faktury pokazują nazwę każdej pozycji, a PDF wskazuje ofertę, której dotyczy faktura. Aby kopiować także opisy z oferty na nowe faktury, włącz Dodawaj opisy pozycji na fakturach w Ustawieniach, w zakładce Płatności."
+      "step8": "Pozycje faktury pokazują nazwę każdej pozycji, a PDF wskazuje ofertę, której dotyczy faktura. Aby kopiować także opisy z oferty na nowe faktury, włącz Dodawaj opisy pozycji na fakturach w Ustawieniach, w zakładce Płatności.",
+      "content5": "Fakturowanie jest dostępne w planach płatnych, od planu Starter wzwyż, łącznie z wysyłką faktury do klienta e-mailem i udostępnianiem jej przez link online. W planie Free możesz tworzyć oferty i pobierać je jako PDF."
     },
     "paymentTracking": {
       "title": "Śledzenie płatności",
@@ -2070,7 +2076,8 @@
       "step5": "Działaj strategicznie — jeśli klient obejrzał ofertę, ale nie odpowiedział w ciągu 48 godzin, pora się z nim skontaktować",
       "tip": "Użyj przycisku \"Wyślij ofertę\", aby wysłać link udostępniania bezpośrednio z CueQuote wraz z osobistą wiadomością. E-mail zawiera podsumowanie oferty z markowym przyciskiem CTA.",
       "content3": "Oferty wygasają same. Każda nowa oferta ma datę ważności, domyślnie 30 dni do przodu, którą możesz zmienić lub wyczyścić w zakładce Warunki i szczegóły. Trzy dni przed tą datą CueQuote wysyła klientowi przypomnienie z linkiem, w imieniu Twojej firmy, a odpowiedzi wracają do Ciebie; w tym samym momencie dostajesz powiadomienie w aplikacji. Jeśli termin minie bez odpowiedzi, oferta zmienia status na Wygasła i klient również zostaje o tym poinformowany.",
-      "step6": "Ustaw lub wyczyść datę ważności w zakładce Warunki i szczegóły: to z niej wynika przypomnienie na trzy dni przed oraz samo powiadomienie o wygaśnięciu"
+      "step6": "Ustaw lub wyczyść datę ważności w zakładce Warunki i szczegóły: to z niej wynika przypomnienie na trzy dni przed oraz samo powiadomienie o wygaśnięciu",
+      "content4": "Wysyłanie ofert e-mailem i udostępnianie ich przez link online to funkcje planów płatnych, od planu Starter wzwyż. W planie Free nadal możesz przygotować ofertę i pobrać PDF, aby wysłać go samodzielnie."
     },
     "teamManagement": {
       "title": "Zarządzanie zespołem",

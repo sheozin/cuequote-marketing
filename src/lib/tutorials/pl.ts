@@ -333,6 +333,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       {
         title: 'Otwórz okno Wyślij',
         content: 'W edytorze oferty kliknij zielony przycisk „Wyślij” w prawym górnym rogu. Otworzy się okno, w którym możesz napisać e-mail towarzyszący ofercie. Jeśli klient jest powiązany, jego adres e-mail zostanie wstępnie wpisany.',
+        tip: 'Wysyłka e-mailem i udostępnianie linku są dostępne w planach płatnych. W planie Free pobierz PDF i wyślij go samodzielnie.',
       },
       {
         title: 'Spersonalizowane powitanie — wypełniane automatycznie',
@@ -405,6 +406,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       {
         title: 'Porównaj plany',
         content: 'Dostępne są cztery plany: Free (3 oferty/mies., podstawowy PDF), Starter za €29 miesięcznie (10 generacji AI/miesiąc, oferty bez limitu, pełny branding, zarządzanie klientami), Pro za €79 miesięcznie (40 generacji AI/miesiąc, oferty bez limitu, niestandardowe szablony, analityka) oraz Business za €179 miesięcznie (120 generacji AI/miesiąc, oferty bez limitu, dostęp do API, dedykowane wsparcie). Przełączaj między rozliczeniem miesięcznym i rocznym — rocznie oszczędzasz 20%.',
+        tip: 'Wysyłka ofert i faktur do klientów e-mailem oraz linki online, w których klienci przeglądają, akceptują i podpisują oferty, są dostępne od planu Starter. Plan Free pozwala tworzyć oferty i pobierać je jako PDF.',
       },
       {
         title: 'Ulepsz do planu płatnego',
