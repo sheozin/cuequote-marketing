@@ -2873,6 +2873,6 @@
     "q3": "Where is my data stored?",
     "a3": "In a Supabase database hosted on AWS in Ireland (EU), encrypted at rest and in transit. We also use Vercel (hosting), Stripe (payments), Resend (email), Cloudflare (the security check at signup) and Anthropic (AI, which processes your event description to write the proposal).",
     "q4": "How do I export or delete my data?",
-    "a4": "Export: in the app, go to Settings and choose Export My Data. You get a file with your proposals, clients, catalogue and company details. Delete: in Settings, choose Delete Account and type your email to confirm. You are signed out at once, and your account and its data are erased after 30 days, except anything we must keep by law."
+    "a4": "Export: in the app, go to Settings and choose Export My Data. You get a file with your proposals, invoices and payments, clients, catalogue and company details. Delete: in Settings, choose Delete Account and type your email to confirm. You are signed out at once, and your account and its data are erased after 30 days, except anything we must keep by law."
   }
 }

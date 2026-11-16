@@ -2862,6 +2862,6 @@
     "q3": "Où sont stockées mes données ?",
     "a3": "Dans une base de données Supabase hébergée chez AWS en Irlande (UE), chiffrée au repos et en transit. Nous utilisons aussi Vercel (hébergement), Stripe (paiements), Resend (e-mail), Cloudflare (contrôle de sécurité à l'inscription) et Anthropic (IA, qui traite la description de votre événement pour rédiger le devis).",
     "q4": "Comment exporter ou supprimer mes données ?",
-    "a4": "Export : dans l'application, allez dans Paramètres et choisissez Exporter mes données. Vous obtenez un fichier avec vos devis, clients, catalogue et informations d'entreprise. Suppression : dans Paramètres, choisissez Supprimer le compte et saisissez votre e-mail pour confirmer. Vous êtes déconnecté immédiatement, et votre compte et ses données sont effacés après 30 jours, sauf ce que la loi nous oblige à conserver."
+    "a4": "Export : dans l'application, allez dans Paramètres et choisissez Exporter mes données. Vous obtenez un fichier avec vos devis, factures et paiements, clients, catalogue et informations d'entreprise. Suppression : dans Paramètres, choisissez Supprimer le compte et saisissez votre e-mail pour confirmer. Vous êtes déconnecté immédiatement, et votre compte et ses données sont effacés après 30 jours, sauf ce que la loi nous oblige à conserver."
   }
 }

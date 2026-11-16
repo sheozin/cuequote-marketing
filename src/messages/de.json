@@ -2860,6 +2860,6 @@
     "q3": "Wo werden meine Daten gespeichert?",
     "a3": "In einer Supabase-Datenbank bei AWS in Irland (EU), verschlüsselt im Ruhezustand und bei der Übertragung. Außerdem nutzen wir Vercel (Hosting), Stripe (Zahlungen), Resend (E-Mail), Cloudflare (Sicherheitsprüfung bei der Registrierung) und Anthropic (KI, die Ihre Veranstaltungsbeschreibung verarbeitet, um das Angebot zu schreiben).",
     "q4": "Wie exportiere oder lösche ich meine Daten?",
-    "a4": "Export: Gehen Sie in der App zu Einstellungen und wählen Sie Meine Daten exportieren. Sie erhalten eine Datei mit Ihren Angeboten, Kunden, Ihrem Katalog und Ihren Firmendaten. Löschen: Wählen Sie in den Einstellungen Konto löschen und geben Sie zur Bestätigung Ihre E-Mail-Adresse ein. Sie werden sofort abgemeldet, und Ihr Konto und seine Daten werden nach 30 Tagen gelöscht, außer was wir gesetzlich aufbewahren müssen."
+    "a4": "Export: Gehen Sie in der App zu Einstellungen und wählen Sie Meine Daten exportieren. Sie erhalten eine Datei mit Ihren Angeboten, Rechnungen und Zahlungen, Kunden, Ihrem Katalog und Ihren Firmendaten. Löschen: Wählen Sie in den Einstellungen Konto löschen und geben Sie zur Bestätigung Ihre E-Mail-Adresse ein. Sie werden sofort abgemeldet, und Ihr Konto und seine Daten werden nach 30 Tagen gelöscht, außer was wir gesetzlich aufbewahren müssen."
   }
 }

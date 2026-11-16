@@ -2837,6 +2837,6 @@
     "q3": "Gdzie przechowywane są moje dane?",
     "a3": "W bazie danych Supabase hostowanej w AWS w Irlandii (UE), szyfrowanej w spoczynku i podczas przesyłania. Korzystamy też z Vercel (hosting), Stripe (płatności), Resend (e-mail), Cloudflare (weryfikacja bezpieczeństwa przy rejestracji) i Anthropic (AI, które przetwarza opis wydarzenia, aby przygotować ofertę).",
     "q4": "Jak wyeksportować lub usunąć moje dane?",
-    "a4": "Eksport: w aplikacji przejdź do Ustawień i wybierz Eksportuj moje dane. Otrzymasz plik z ofertami, klientami, katalogiem i danymi firmy. Usunięcie: w Ustawieniach wybierz Usuń konto i wpisz swój e-mail, aby potwierdzić. Zostaniesz od razu wylogowany, a konto i jego dane zostaną usunięte po 30 dniach, z wyjątkiem tego, co musimy przechowywać zgodnie z prawem."
+    "a4": "Eksport: w aplikacji przejdź do Ustawień i wybierz Eksportuj moje dane. Otrzymasz plik z ofertami, fakturami i płatnościami, klientami, katalogiem i danymi firmy. Usunięcie: w Ustawieniach wybierz Usuń konto i wpisz swój e-mail, aby potwierdzić. Zostaniesz od razu wylogowany, a konto i jego dane zostaną usunięte po 30 dniach, z wyjątkiem tego, co musimy przechowywać zgodnie z prawem."
   }
 }
