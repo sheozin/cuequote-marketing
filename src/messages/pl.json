@@ -1962,7 +1962,8 @@
       "step2": "Dodaj pozycje ręcznie lub zaimportuj z arkusza CSV",
       "step3": "Ustaw domyślne ceny wynajmu dla każdego elementu — będą one używane przy generowaniu ofert przez AI",
       "step4": "Uporządkuj elementy w kategorie dla łatwego przeglądania",
-      "tip": "Podczas importu z CSV użyj kolumn: Nazwa, Kategoria, Cena, Opis. CueQuote zmapuje je automatycznie."
+      "tip": "Podczas importu z CSV użyj kolumn: Nazwa, Kategoria, Cena, Opis. CueQuote zmapuje je automatycznie.",
+      "content3": "Nowe firmy AV zaczynają z katalogiem startowym w cenach referencyjnych CueQuote dla swojego rynku (sprzęt i ekipa są dostosowywane osobno, bo stawki ekip różnią się między krajami znacznie bardziej niż ceny sprzętu). Każda taka cena jest oznaczona jako „Cena referencyjna” w katalogu i w edytorze oferty, dopóki jej nie zmienisz, a klient nigdy nie widzi tego oznaczenia. Zmień cenę, aby stała się Twoja."
     },
     "clients": {
       "title": "Klienci",

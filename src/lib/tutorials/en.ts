@@ -182,7 +182,7 @@ export const TUTORIALS_EN: Tutorial[] = [
     steps: [
       {
         title: 'Navigate to the Catalog',
-        content: 'Click "Catalog" in the sidebar. You\'ll see your equipment list organized by category. If you\'re just starting, it will be empty — that\'s normal. The catalog is your company\'s equipment database that the AI uses when generating proposals.',
+        content: 'Click "Catalog" in the sidebar. You\'ll see your equipment list organized by category. A new AV company starts with a starter catalog priced at CueQuote reference prices for its market, each marked "Reference price", so you can generate and send a first proposal straight away. Change any price to your own rate and its label disappears; from then on the AI quotes your price.',
       },
       {
         title: 'Add your first item',

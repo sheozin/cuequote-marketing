@@ -1987,7 +1987,8 @@
       "step2": "Ajoutez des éléments manuellement ou importez depuis un fichier CSV",
       "step3": "Définissez les prix de location par défaut par élément — ils seront utilisés lors de la génération de devis par l'IA",
       "step4": "Organisez les éléments en catégories pour faciliter la navigation",
-      "tip": "Lors de l'import CSV, utilisez les colonnes : Nom, Catégorie, Prix, Description. CueQuote les associera automatiquement."
+      "tip": "Lors de l'import CSV, utilisez les colonnes : Nom, Catégorie, Prix, Description. CueQuote les associera automatiquement.",
+      "content3": "Les nouvelles sociétés AV démarrent avec un catalogue de départ aux prix de référence CueQuote pour leur marché (l'équipement et le personnel sont ajustés séparément, car les tarifs du personnel varient bien plus d'un pays à l'autre que ceux du matériel). Chacun porte la mention « Prix de référence » dans le catalogue et dans l'éditeur de proposition jusqu'à ce que vous le modifiiez, et le client ne voit jamais cette mention. Modifiez un prix pour qu'il devienne le vôtre."
     },
     "clients": {
       "title": "Clients",

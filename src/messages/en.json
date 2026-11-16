@@ -1998,7 +1998,8 @@
       "step2": "Add items manually or import from a CSV spreadsheet",
       "step3": "Set default rental prices per item — these will be used when AI generates proposals",
       "step4": "Organize items into categories for easy browsing",
-      "tip": "When you import from CSV, use columns: Name, Category, Price, Description. CueQuote will map them automatically."
+      "tip": "When you import from CSV, use columns: Name, Category, Price, Description. CueQuote will map them automatically.",
+      "content3": "New AV companies start with a starter catalog at CueQuote reference prices for their market (equipment and crew are adjusted separately, because crew rates vary far more between countries than equipment does). Each one is labelled \"Reference price\" in the catalog and in the proposal editor until you change it, and the client never sees the label. Edit a price to make it yours."
     },
     "clients": {
       "title": "Clients",

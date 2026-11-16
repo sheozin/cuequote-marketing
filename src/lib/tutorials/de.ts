@@ -182,7 +182,7 @@ export const TUTORIALS_DE: Tutorial[] = [
     steps: [
       {
         title: 'Zum Katalog navigieren',
-        content: 'Klicken Sie in der Seitenleiste auf "Katalog". Sie sehen Ihre Equipment-Liste nach Kategorien geordnet. Wenn Sie gerade erst anfangen, ist sie leer — das ist normal. Der Katalog ist die Equipment-Datenbank Ihres Unternehmens, die die KI bei der Angebotserstellung nutzt.',
+        content: 'Klicken Sie in der Seitenleiste auf „Katalog“. Sie sehen Ihre Geräteliste nach Kategorien geordnet. Ein neues AV-Unternehmen startet mit einem Starterkatalog zu CueQuote-Referenzpreisen für seinen Markt, jeder als „Referenzpreis“ markiert, damit Sie sofort ein erstes Angebot erstellen und senden können. Ändern Sie einen Preis auf Ihren eigenen Satz, und die Markierung verschwindet; ab dann kalkuliert die KI mit Ihrem Preis.',
       },
       {
         title: 'Ersten Artikel hinzufügen',

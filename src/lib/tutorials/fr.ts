@@ -182,7 +182,7 @@ export const TUTORIALS_FR: Tutorial[] = [
     steps: [
       {
         title: 'Accédez au Catalogue',
-        content: 'Cliquez sur « Catalogue » dans la barre latérale. Vous verrez la liste de votre matériel organisée par catégorie. Si vous débutez, elle sera vide — c\'est normal. Le catalogue est la base de matériel de votre entreprise que l\'IA utilise lors de la génération des devis.',
+        content: 'Cliquez sur « Catalogue » dans la barre latérale. Vous verrez votre liste d\'équipements classée par catégorie. Une nouvelle société AV démarre avec un catalogue de départ au prix de référence CueQuote pour son marché, chacun marqué « Prix de référence », pour générer et envoyer une première proposition tout de suite. Remplacez un prix par votre tarif et la mention disparaît ; dès lors, l\'IA utilise votre prix.',
       },
       {
         title: 'Ajoutez votre premier article',

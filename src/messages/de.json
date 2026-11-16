@@ -1985,7 +1985,8 @@
       "step2": "Fügen Sie Elemente manuell hinzu oder importieren Sie sie aus einer CSV-Tabelle",
       "step3": "Legen Sie Standard-Mietpreise pro Artikel fest — diese werden bei der KI-Angebotserstellung verwendet",
       "step4": "Organisieren Sie Elemente in Kategorien für einfaches Durchsuchen",
-      "tip": "Beim CSV-Import verwenden Sie die Spalten: Name, Kategorie, Preis, Beschreibung. CueQuote ordnet sie automatisch zu."
+      "tip": "Beim CSV-Import verwenden Sie die Spalten: Name, Kategorie, Preis, Beschreibung. CueQuote ordnet sie automatisch zu.",
+      "content3": "Neue AV-Unternehmen starten mit einem Starterkatalog zu CueQuote-Referenzpreisen für ihren Markt (Geräte und Personal werden getrennt angepasst, weil Personalsätze zwischen Ländern weit stärker schwanken als Gerätepreise). Jeder ist im Katalog und im Angebotseditor als „Referenzpreis“ markiert, bis Sie ihn ändern, und der Kunde sieht diese Markierung nie. Ändern Sie einen Preis, damit er Ihrer wird."
     },
     "clients": {
       "title": "Kunden",

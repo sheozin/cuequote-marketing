@@ -182,7 +182,7 @@ export const TUTORIALS_PL: Tutorial[] = [
     steps: [
       {
         title: 'Przejdź do Katalogu',
-        content: 'Kliknij „Katalog” na pasku bocznym. Zobaczysz listę sprzętu pogrupowaną według kategorii. Jeśli dopiero zaczynasz, będzie pusta — to normalne. Katalog to baza sprzętu Twojej firmy, z której AI korzysta przy generowaniu ofert.',
+        content: 'Kliknij „Katalog” na pasku bocznym. Zobaczysz listę sprzętu pogrupowaną według kategorii. Nowa firma AV zaczyna z katalogiem startowym wycenionym według cen referencyjnych CueQuote dla swojego rynku, każda oznaczona jako „Cena referencyjna”, więc możesz od razu wygenerować i wysłać pierwszą ofertę. Zmień dowolną cenę na swoją stawkę, a oznaczenie zniknie; od tej pory AI używa Twojej ceny.',
       },
       {
         title: 'Dodaj pierwszą pozycję',
