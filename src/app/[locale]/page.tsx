@@ -8,11 +8,10 @@ import { publishedPosts } from "../../lib/blog-posts";
 import { getTranslations, getLocale } from "next-intl/server";
 import {
   Sparkles, FileText, Share2, Package, Globe, TrendingUp,
-  MessageSquare, Mic, MonitorPlay, Zap, ArrowRight,
-  Check, ChevronDown, CreditCard, Crown, Rocket, Calendar, CalendarCheck,
+  MessageSquare, Mic, Zap, ArrowRight,
+  Check, ChevronDown, CreditCard, Crown, Rocket,
 } from "lucide-react";
-import { PricingToggle } from "../../components/PricingToggle";
-import { HeroMockupSlider } from "../../components/HeroMockupSlider";
+import { HeroInquiry } from "../../components/HeroInquiry";
 import { Testimonials } from "../../components/Testimonials";
 import { ProductShowcase } from "../../components/ProductShowcase";
 import { jsonLd } from "@/lib/json-ld";
@@ -130,12 +129,13 @@ export default async function HomePage() {
   const tHomePricing = await getTranslations("homePricing");
   const tHomeFaq = await getTranslations("homeFaq");
   // One list feeds both the visible FAQ and its structured data. q7 ("Is there a
-  // free plan?") duplicated q6 and is left out.
-  const homeFaqs = [1, 2, 3, 4, 5, 6, 8, 9, 10].map(n => ({ q: tHomeFaq(`q${n}`), a: tHomeFaq(`a${n}`) }));
+  // free plan?") duplicated q6 and is left out; q10 ("Do I need technical AV
+  // knowledge?") is a planner question and lives with them since the homepage
+  // went single-audience (2026-11-16). q3 still points planners to their page.
+  const homeFaqs = [1, 2, 3, 4, 5, 6, 8, 9].map(n => ({ q: tHomeFaq(`q${n}`), a: tHomeFaq(`a${n}`) }));
   const tHomeBlog = await getTranslations("homeBlog");
   const tPosts = await getTranslations("posts");
   const tHomeCta = await getTranslations("homeCta");
-  const tWhoFor = await getTranslations("whoFor");
   const tShowcase = await getTranslations("homeShowcase");
 
   return (
@@ -157,24 +157,14 @@ export default async function HomePage() {
         }} />
 
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }} className="hero-grid">
-          <HeroMockupSlider
-            avSubtitle={t("subtitle")}
-            plannerSubtitle={t("plannerSubtitle")}
-            avCta={t("cta")}
-            plannerCta={t("plannerCta")}
+          <HeroInquiry
             ctaLink={`${APP_URL}/signup?lang=${locale}`}
             t={{
               title: t("title"), titleHighlight: t("titleHighlight"), titleEnd: t("titleEnd"),
-              plannerHeadline1: t("plannerHeadline1"), plannerHeadline2: t("plannerHeadline2"), plannerHeadline3: t("plannerHeadline3"),
-              plannerNoCreditCard: t("plannerNoCreditCard"), freeProposals: t("freeProposals"), plannerFreePlans: t("plannerFreePlans"),
-              heroAvGenerated: t("heroAvGenerated"), heroAvEvent: t("heroAvEvent"),
-              heroPlannerGenerated: t("heroPlannerGenerated"), heroPlannerEvent: t("heroPlannerEvent"),
-              heroPlannerEstimated: t("heroPlannerEstimated"), heroPlannerScope: t("heroPlannerScope"),
-              heroPlannerTip: t("heroPlannerTip"), heroAvFooter: t("heroAvFooter"), heroPlannerFooter: t("heroPlannerFooter"),
-              heroCatAudio: t("heroCatAudio"), heroCatLighting: t("heroCatLighting"),
-              heroCatVideo: t("heroCatVideo"), heroCatCrew: t("heroCatCrew"),
-              heroCatAudioItems: t("heroCatAudioItems"), heroCatLightingItems: t("heroCatLightingItems"),
-              heroCatVideoItems: t("heroCatVideoItems"), heroCatCrewItems: t("heroCatCrewItems"),
+              subtitle: t("subtitle"), cta: t("cta"),
+              noCreditCard: t("noCreditCard"), freeProposals: t("freeProposals"), plannerLink: t("plannerLink"),
+              inquiryLabel: t("inquiryLabel"), inquiryText: t("inquiryText"),
+              generated: t("heroAvGenerated"), event: t("heroAvEvent"), footer: t("heroAvFooter"),
             }}
           />
         </div>
@@ -202,76 +192,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── Who is CueQuote for ──────────────────────────────────────────── */}
-      <section style={{ padding: "80px 24px", background: "#fff" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontSize: 12, fontWeight: 700, color: "#10b981", textTransform: "uppercase", letterSpacing: 1.5, marginBottom: 12 }}>
-            {tWhoFor("label")}
-          </p>
-          <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 36, color: "#08172E", marginBottom: 8 }}>
-            {tWhoFor("title")}
-          </h2>
-          <p style={{ fontSize: 16, color: "#64748b", marginBottom: 48 }}>
-            {tWhoFor("subtitle")}
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="who-for-grid">
-            <Link href="/for-av-companies" style={{
-              textDecoration: "none", display: "flex", flexDirection: "column", alignItems: "center",
-              background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 16, padding: "40px 28px",
-              transition: "box-shadow 0.3s, border-color 0.3s",
-            }}>
-              <div style={{
-                width: 56, height: 56, borderRadius: 14, background: "#ecfdf5",
-                display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981", marginBottom: 20,
-              }}>
-                <Mic size={28} />
-              </div>
-              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 22, color: "#08172E", marginBottom: 8 }}>
-                {tWhoFor("avTitle")}
-              </h3>
-              <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6, marginBottom: 20 }}>
-                {tWhoFor("avDesc")}
-              </p>
-              <span style={{
-                display: "inline-flex", alignItems: "center", gap: 6,
-                fontSize: 14, fontWeight: 600, color: "#10b981",
-              }}>
-                {tWhoFor("avCta")} <ArrowRight size={14} />
-              </span>
-            </Link>
-            <Link href="/for-event-planners" style={{
-              textDecoration: "none", display: "flex", flexDirection: "column", alignItems: "center",
-              background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 16, padding: "40px 28px",
-              transition: "box-shadow 0.3s, border-color 0.3s",
-            }}>
-              <div style={{
-                width: 56, height: 56, borderRadius: 14, background: "#ecfdf5",
-                display: "flex", alignItems: "center", justifyContent: "center", color: "#10b981", marginBottom: 20,
-              }}>
-                <Calendar size={28} />
-              </div>
-              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 22, color: "#08172E", marginBottom: 8 }}>
-                {tWhoFor("plannerTitle")}
-              </h3>
-              <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.6, marginBottom: 20 }}>
-                {tWhoFor("plannerDesc")}
-              </p>
-              <span style={{
-                display: "inline-flex", alignItems: "center", gap: 6,
-                fontSize: 14, fontWeight: 600, color: "#10b981",
-              }}>
-                {tWhoFor("plannerCta")} <ArrowRight size={14} />
-              </span>
-            </Link>
-          </div>
-        </div>
-        <style>{`
-          @media (max-width: 640px) {
-            .who-for-grid { grid-template-columns: 1fr !important; }
-          }
-        `}</style>
-      </section>
-
       {/* ── 3. Use Cases ────────────────────────────────────────────────────── */}
       <section style={{ padding: "96px 24px", background: "#fff", position: "relative", overflow: "hidden" }}>
         {/* Subtle background accent */}
@@ -297,8 +217,6 @@ export default async function HomePage() {
             {[
               { icon: <Mic size={24} />, titleKey: "avProductionTitle" as const, descKey: "avProductionDesc" as const, accent: "#10b981", accentBg: "#ecfdf5" },
               { icon: <Zap size={24} />, titleKey: "freelanceTitle" as const, descKey: "freelanceDesc" as const, accent: "#3b82f6", accentBg: "#eff6ff" },
-              { icon: <MonitorPlay size={24} />, titleKey: "agencyTitle" as const, descKey: "agencyDesc" as const, accent: "#8b5cf6", accentBg: "#f5f3ff" },
-              { icon: <CalendarCheck size={24} />, titleKey: "case4Title" as const, descKey: "case4Desc" as const, accent: "#f59e0b", accentBg: "#fffbeb" },
             ].map(({ icon, titleKey, descKey, accent, accentBg }) => (
               <div key={titleKey} className="use-case-card" style={{
                 background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 16, padding: "32px 28px",
@@ -430,12 +348,11 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Section 2: Your Toolkit — Toggle between Catalog (AV) and Templates (Planner) */}
+      {/* Section 2: Your Toolkit (AV catalogue) */}
       <ProductShowcase
         variant="light"
         textSide="right"
         id="toolkit"
-        toggleLabels={{ av: tShowcase("toggleAv"), planner: tShowcase("togglePlanner"), hint: tShowcase("toggleHint") }}
         av={{
           badge: { icon: 'av', label: tShowcase("toolkitAvBadge") },
           heading: tShowcase("toolkitAvHeading"),
@@ -447,25 +364,12 @@ export default async function HomePage() {
           ],
           screenshot: { src: '/screenshots/03-catalog.png', alt: 'Equipment catalog with categories, pricing, and cost tracking' },
         }}
-        planner={{
-          badge: { icon: 'planner', label: tShowcase("toolkitPlannerBadge") },
-          heading: tShowcase("toolkitPlannerHeading"),
-          description: tShowcase("toolkitPlannerDesc"),
-          bullets: [
-            tShowcase("toolkitPlannerBullet1"),
-            tShowcase("toolkitPlannerBullet2"),
-            tShowcase("toolkitPlannerBullet3"),
-            tShowcase("toolkitPlannerBullet4"),
-          ],
-          screenshot: { src: '/screenshots/planner-02-templates.png', alt: 'Event type templates — conference, wedding, product launch, gala' },
-        }}
       />
 
-      {/* Section 3: Professional Documents — Toggle between Branded Proposal (AV) and Production Budget (Planner) */}
+      {/* Section 3: Professional Documents (branded proposal) */}
       <ProductShowcase
         variant="dark"
         id="documents"
-        toggleLabels={{ av: tShowcase("toggleAv"), planner: tShowcase("togglePlanner"), hint: tShowcase("toggleHint") }}
         av={{
           badge: { icon: 'av', label: tShowcase("docsAvBadge") },
           heading: tShowcase("docsAvHeading"),
@@ -476,17 +380,6 @@ export default async function HomePage() {
             tShowcase("docsAvBullet3"),
           ],
           screenshot: { src: '/screenshots/13-proposal-share-top.png', alt: 'Branded proposal with company logo, equipment list, and accept button' },
-        }}
-        planner={{
-          badge: { icon: 'planner', label: tShowcase("docsPlannerBadge") },
-          heading: tShowcase("docsPlannerHeading"),
-          description: tShowcase("docsPlannerDesc"),
-          bullets: [
-            tShowcase("docsPlannerBullet1"),
-            tShowcase("docsPlannerBullet2"),
-            tShowcase("docsPlannerBullet3"),
-          ],
-          screenshot: { src: '/screenshots/planner-11-proposal-top.png', alt: 'Branded event production budget as vendors see it' },
         }}
       />
 
@@ -538,74 +431,12 @@ export default async function HomePage() {
             <p style={{ fontSize: 18, color: "#6b7280" }}>{tPricing("subtitle")}</p>
           </div>
 
-          <PricingToggle
-            avLabel={tPricing("forAvCompanies", { defaultValue: "For AV Companies" })}
-            plannerLabel={tPricing("forEventPlanners", { defaultValue: "For Event Planners" })}
-          />
-
           <div id="pricing-av" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
             {[
               { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tHomePricing("freeF1"), tHomePricing("freeF2"), tHomePricing("freeF3"), tHomePricing("freeF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: FEATURED_PLAN === "free" },
               { name: "Starter", price: "€29", period: "/mo", icon: <CreditCard size={20} />, features: [tHomePricing("starterF1"), tHomePricing("starterF2"), tHomePricing("starterF3"), tHomePricing("starterF4"), tHomePricing("starterF5"), tHomePricing("starterF6")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: FEATURED_PLAN === "starter" },
               { name: "Pro", price: "€79", period: "/mo", icon: <Crown size={20} />, features: [tHomePricing("proF1"), tHomePricing("proF2"), tHomePricing("proF3"), tHomePricing("proF4")], cta: tPricing("startTrial"), ctaStyle: "featured" as const, popular: FEATURED_PLAN === "pro" },
               { name: "Business", price: "€179", period: "/mo", icon: <Rocket size={20} />, features: [tHomePricing("businessF1"), tHomePricing("businessF2"), tHomePricing("businessF3"), tHomePricing("businessF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: FEATURED_PLAN === "business" },
-            ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
-              <div key={name} style={{
-                background: "#fff", borderRadius: 20, padding: "32px 28px",
-                border: popular ? "2px solid #10b981" : "1px solid #e5e7eb",
-                position: "relative",
-                boxShadow: popular ? "0 8px 24px rgba(16,185,129,0.15)" : "0 2px 12px rgba(0,0,0,0.04)",
-                display: "flex", flexDirection: "column",
-                zIndex: popular ? 2 : 1,
-              }}>
-                {popular && (
-                  <div style={{
-                    position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)",
-                    background: "linear-gradient(135deg, #10b981, #059669)", color: "#fff", fontSize: 12, fontWeight: 700,
-                    padding: "6px 20px", borderRadius: 20, whiteSpace: "nowrap",
-                  }}>
-                    {tPricing("popular")}
-                  </div>
-                )}
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                  <div style={{ color: "#10b981" }}>{icon}</div>
-                  <h3 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 700, fontSize: 20, color: "#08172E" }}>{name}</h3>
-                </div>
-                <div style={{ marginBottom: 24 }}>
-                  <span style={{ fontSize: 44, fontWeight: 800, color: "#08172E", letterSpacing: -1 }}>{price}</span>
-                  <span style={{ fontSize: 15, color: "#6b7280", fontWeight: 500 }}>{period}</span>
-                </div>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
-                  {features.map((f) => (
-                    <li key={f} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#4b5563", marginBottom: 13 }}>
-                      <div style={{ width: 20, height: 20, borderRadius: "50%", background: "#ecfdf5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                        <Check size={12} style={{ color: "#10b981" }} />
-                      </div>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <Link href={`${APP_URL}/signup?lang=${locale}`} style={{
-                  textDecoration: "none", display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
-                  padding: "14px 24px", borderRadius: 10, fontWeight: 600, fontSize: 15, marginTop: 24,
-                  background: (ctaStyle === "primary" || ctaStyle === "featured") ? "#10b981" : "transparent",
-                  color: (ctaStyle === "primary" || ctaStyle === "featured") ? "#fff" : "#08172E",
-                  border: (ctaStyle === "primary" || ctaStyle === "featured") ? "none" : "1px solid #e5e7eb",
-                  transition: "all 0.2s",
-                }}>
-                  {cta}
-                  {(ctaStyle === "primary" || ctaStyle === "featured") && <ArrowRight size={16} />}
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          <div id="pricing-planner" style={{ display: "none", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
-            {[
-              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tPricing("freePlannerF1"), tPricing("freePlannerF2"), tPricing("freePlannerF3"), tPricing("freePlannerF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: FEATURED_PLAN === "free" },
-              { name: "Starter", price: "€29", period: "/mo", icon: <CreditCard size={20} />, features: [tPricing("starterPlannerF1"), tPricing("starterPlannerF2"), tPricing("starterPlannerF3"), tPricing("starterPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: FEATURED_PLAN === "starter" },
-              { name: "Pro", price: "€79", period: "/mo", icon: <Crown size={20} />, features: [tPricing("proPlannerF1"), tPricing("proPlannerF2"), tPricing("proPlannerF3"), tPricing("proPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "featured" as const, popular: FEATURED_PLAN === "pro" },
-              { name: "Business", price: "€179", period: "/mo", icon: <Rocket size={20} />, features: [tPricing("businessPlannerF1"), tPricing("businessPlannerF2"), tPricing("businessPlannerF3"), tPricing("businessPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: FEATURED_PLAN === "business" },
             ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
               <div key={name} style={{
                 background: "#fff", borderRadius: 20, padding: "32px 28px",

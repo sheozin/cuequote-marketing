@@ -37,7 +37,7 @@ export default function SubscribeForm() {
             className="email-form"
           >
             {/* Honeypot field — hidden from real users */}
-            <div style={{ position: "absolute", left: "-9999px", opacity: 0, height: 0 }} aria-hidden="true">
+            <div style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clipPath: "inset(50%)", whiteSpace: "nowrap", opacity: 0 }} aria-hidden="true">
               <input
                 type="text"
                 name="company_url"

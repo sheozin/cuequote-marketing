@@ -12,7 +12,8 @@ interface ShowcaseContent {
 
 interface ProductShowcaseProps {
   av: ShowcaseContent
-  planner: ShowcaseContent
+  /** Optional: without it the section shows the AV side only, with no toggle. */
+  planner?: ShowcaseContent
   /** 'light' = white bg side-by-side | 'dark' = dark bg centered */
   variant: 'light' | 'dark'
   /** For light variant: 'text-left' or 'text-right' */
@@ -42,8 +43,8 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
     }, 200)
   }
 
-  const content = mode === 'av' ? av : planner
-  const inactiveContent = mode === 'av' ? planner : av
+  // Active variant first; the inactive one (if any) only reserves no space.
+  const variants = !planner ? [av] : mode === 'av' ? [av, planner] : [planner, av]
   const accentColor = mode === 'av' ? '#10b981' : '#8B5CF6'
   const accentColorLight = mode === 'av' ? '#ecfdf5' : '#f5f3ff'
   const accentColorDark = mode === 'av' ? '#34d399' : '#C4B5FD'
@@ -139,11 +140,11 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
         }} />
 
         <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          {toggle}
+          {planner && toggle}
 
           {/* Grid overlay: active child is relative, inactive is absolute (no height contribution) */}
           <div style={{ display: 'grid', position: 'relative' }}>
-            {[content, inactiveContent].map((c, idx) => {
+            {variants.map((c, idx) => {
               const isActive = idx === 0
               const cAccentDark = c === av ? '#34d399' : '#C4B5FD'
               const cPillBg = c === av ? 'rgba(16,185,129,0.15)' : 'rgba(139,92,246,0.15)'
@@ -250,13 +251,15 @@ export function ProductShowcase({ av, planner, variant, textSide = 'left', id, t
     }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         {/* Toggle — centered above content */}
-        <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          {toggle}
-        </div>
+        {planner && (
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+            {toggle}
+          </div>
+        )}
 
         {/* Grid overlay: both variants rendered, container = taller child height */}
         <div style={{ display: 'grid' }}>
-          {[content, inactiveContent].map((c, idx) => {
+          {variants.map((c, idx) => {
             const isActive = idx === 0
             const cAccent = c === av ? '#10b981' : '#8B5CF6'
             const cAccentLight = c === av ? '#ecfdf5' : '#f5f3ff'
