@@ -121,7 +121,7 @@
     "vatNote": "Hors TVA — la taxe est ajoutée au paiement",
     "startFree": "Commencer gratuitement",
     "startTrial": "Commencer gratuitement",
-    "popular": "Le plus populaire",
+    "popular": "Recommandé",
     "faq": "Questions fréquentes",
     "freeName": "Gratuit",
     "freeDesc": "Essayez CueQuote sans engagement.",
@@ -2851,5 +2851,17 @@
     },
     "budgetNoteTitle": "Un outil de budgétisation, pas un devis.",
     "budgetNote": "Utilisez-le pour fixer un montant réaliste avant de consulter des prestataires. Le prix réel dépend du lieu, du dispositif, des dates et des tarifs de chaque société — confirmez-le auprès de prestataires AV avant d'arrêter un budget."
+  },
+  "dataHandling": {
+    "title": "Vos données, en termes simples",
+    "intro": "Quatre questions que chaque entreprise se pose avant de confier ses prix à un nouvel outil.",
+    "q1": "Qui peut voir mes prix ?",
+    "a1": "Les personnes de votre espace de travail CueQuote. Au sein de votre équipe, les prix de revient ne sont visibles que par les rôles autorisés. Vos clients ne voient que ce que vous leur envoyez : les prix de vente du devis, jamais vos coûts. Un petit nombre de membres de l'équipe CueQuote peut accéder aux comptes pour assurer le support et la sécurité du service. Nous ne montrons jamais les prix d'une entreprise à une autre.",
+    "q2": "Mes données servent-elles à entraîner l'IA ?",
+    "a2": "CueQuote n'entraîne jamais d'IA avec vos données. Les devis sont générés par Claude d'Anthropic selon ses conditions commerciales d'API, qui excluent les données des clients de l'entraînement des modèles. CueQuote utilise vos propres devis et modifications passés pour adapter ses suggestions à votre compte, et cela reste dans votre compte. Une règle apprise de vos modifications ne s'applique qu'après votre validation dans les Paramètres.",
+    "q3": "Où sont stockées mes données ?",
+    "a3": "Dans une base de données Supabase hébergée chez AWS en Irlande (UE), chiffrée au repos et en transit. Nous utilisons aussi Vercel (hébergement), Stripe (paiements), Resend (e-mail), Cloudflare (contrôle de sécurité à l'inscription) et Anthropic (IA, qui traite la description de votre événement pour rédiger le devis).",
+    "q4": "Comment exporter ou supprimer mes données ?",
+    "a4": "Export : dans l'application, allez dans Paramètres et choisissez Exporter mes données. Vous obtenez un fichier avec vos devis, clients, catalogue et informations d'entreprise. Suppression : dans Paramètres, choisissez Supprimer le compte et saisissez votre e-mail pour confirmer. Vous êtes déconnecté immédiatement, et votre compte et ses données sont effacés après 30 jours, sauf ce que la loi nous oblige à conserver."
   }
 }

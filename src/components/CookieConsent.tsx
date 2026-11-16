@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import PageTracker from './PageTracker'
-import SmartPopup from './SmartPopup'
 
 const CONSENT_KEY = 'cq_analytics_consent'
 
@@ -35,8 +34,8 @@ export default function CookieConsent() {
 
   return (
     <>
-      {/* SmartPopup always runs — it's a site feature, not tracking */}
-      <SmartPopup />
+      {/* SmartPopup (promo-code popup) is unmounted: no promo codes on the site
+          (owner, 15 Nov 2026). The component is kept for a future campaign. */}
 
       {/* PageTracker always loads — basic page views are first-party analytics.
           When user declines, PageTracker skips the external geolocation API call

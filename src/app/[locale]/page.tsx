@@ -1,3 +1,4 @@
+import { FEATURED_PLAN } from "@/lib/plans";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Nav from "../../components/Nav";
@@ -128,6 +129,9 @@ export default async function HomePage() {
   const tHowItWorks = await getTranslations("howItWorks");
   const tHomePricing = await getTranslations("homePricing");
   const tHomeFaq = await getTranslations("homeFaq");
+  // One list feeds both the visible FAQ and its structured data. q7 ("Is there a
+  // free plan?") duplicated q6 and is left out.
+  const homeFaqs = [1, 2, 3, 4, 5, 6, 8, 9, 10].map(n => ({ q: tHomeFaq(`q${n}`), a: tHomeFaq(`a${n}`) }));
   const tHomeBlog = await getTranslations("homeBlog");
   const tPosts = await getTranslations("posts");
   const tHomeCta = await getTranslations("homeCta");
@@ -541,10 +545,10 @@ export default async function HomePage() {
 
           <div id="pricing-av" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
             {[
-              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tHomePricing("freeF1"), tHomePricing("freeF2"), tHomePricing("freeF3"), tHomePricing("freeF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: false },
-              { name: "Starter", price: "€29", period: "/mo", icon: <CreditCard size={20} />, features: [tHomePricing("starterF1"), tHomePricing("starterF2"), tHomePricing("starterF3"), tHomePricing("starterF4"), tHomePricing("starterF5"), tHomePricing("starterF6")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
-              { name: "Pro", price: "€79", period: "/mo", icon: <Crown size={20} />, features: [tHomePricing("proF1"), tHomePricing("proF2"), tHomePricing("proF3"), tHomePricing("proF4")], cta: tPricing("startTrial"), ctaStyle: "featured" as const, popular: true },
-              { name: "Business", price: "€179", period: "/mo", icon: <Rocket size={20} />, features: [tHomePricing("businessF1"), tHomePricing("businessF2"), tHomePricing("businessF3"), tHomePricing("businessF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
+              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tHomePricing("freeF1"), tHomePricing("freeF2"), tHomePricing("freeF3"), tHomePricing("freeF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: FEATURED_PLAN === "free" },
+              { name: "Starter", price: "€29", period: "/mo", icon: <CreditCard size={20} />, features: [tHomePricing("starterF1"), tHomePricing("starterF2"), tHomePricing("starterF3"), tHomePricing("starterF4"), tHomePricing("starterF5"), tHomePricing("starterF6")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: FEATURED_PLAN === "starter" },
+              { name: "Pro", price: "€79", period: "/mo", icon: <Crown size={20} />, features: [tHomePricing("proF1"), tHomePricing("proF2"), tHomePricing("proF3"), tHomePricing("proF4")], cta: tPricing("startTrial"), ctaStyle: "featured" as const, popular: FEATURED_PLAN === "pro" },
+              { name: "Business", price: "€179", period: "/mo", icon: <Rocket size={20} />, features: [tHomePricing("businessF1"), tHomePricing("businessF2"), tHomePricing("businessF3"), tHomePricing("businessF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: FEATURED_PLAN === "business" },
             ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
               <div key={name} style={{
                 background: "#fff", borderRadius: 20, padding: "32px 28px",
@@ -598,10 +602,10 @@ export default async function HomePage() {
 
           <div id="pricing-planner" style={{ display: "none", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, maxWidth: 1100, margin: "0 auto" }} className="home-pricing-grid">
             {[
-              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tPricing("freePlannerF1"), tPricing("freePlannerF2"), tPricing("freePlannerF3"), tPricing("freePlannerF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: false },
-              { name: "Starter", price: "€29", period: "/mo", icon: <CreditCard size={20} />, features: [tPricing("starterPlannerF1"), tPricing("starterPlannerF2"), tPricing("starterPlannerF3"), tPricing("starterPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
-              { name: "Pro", price: "€79", period: "/mo", icon: <Crown size={20} />, features: [tPricing("proPlannerF1"), tPricing("proPlannerF2"), tPricing("proPlannerF3"), tPricing("proPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "featured" as const, popular: true },
-              { name: "Business", price: "€179", period: "/mo", icon: <Rocket size={20} />, features: [tPricing("businessPlannerF1"), tPricing("businessPlannerF2"), tPricing("businessPlannerF3"), tPricing("businessPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: false },
+              { name: "Free", price: "€0", period: "", icon: <Zap size={20} />, features: [tPricing("freePlannerF1"), tPricing("freePlannerF2"), tPricing("freePlannerF3"), tPricing("freePlannerF4")], cta: tPricing("startFree"), ctaStyle: "outline" as const, popular: FEATURED_PLAN === "free" },
+              { name: "Starter", price: "€29", period: "/mo", icon: <CreditCard size={20} />, features: [tPricing("starterPlannerF1"), tPricing("starterPlannerF2"), tPricing("starterPlannerF3"), tPricing("starterPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: FEATURED_PLAN === "starter" },
+              { name: "Pro", price: "€79", period: "/mo", icon: <Crown size={20} />, features: [tPricing("proPlannerF1"), tPricing("proPlannerF2"), tPricing("proPlannerF3"), tPricing("proPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "featured" as const, popular: FEATURED_PLAN === "pro" },
+              { name: "Business", price: "€179", period: "/mo", icon: <Rocket size={20} />, features: [tPricing("businessPlannerF1"), tPricing("businessPlannerF2"), tPricing("businessPlannerF3"), tPricing("businessPlannerF4")], cta: tPricing("startTrial"), ctaStyle: "primary" as const, popular: FEATURED_PLAN === "business" },
             ].map(({ name, price, period, icon, features, cta, ctaStyle, popular }) => (
               <div key={name} style={{
                 background: "#fff", borderRadius: 20, padding: "32px 28px",
@@ -707,18 +711,7 @@ export default async function HomePage() {
             </h2>
           </div>
 
-          {[
-            { q: tHomeFaq("q1"), a: tHomeFaq("a1") },
-            { q: tHomeFaq("q2"), a: tHomeFaq("a2") },
-            { q: tHomeFaq("q3"), a: tHomeFaq("a3") },
-            { q: tHomeFaq("q4"), a: tHomeFaq("a4") },
-            { q: tHomeFaq("q5"), a: tHomeFaq("a5") },
-            { q: tHomeFaq("q6"), a: tHomeFaq("a6") },
-            { q: tHomeFaq("q7"), a: tHomeFaq("a7") },
-            { q: tHomeFaq("q8"), a: tHomeFaq("a8") },
-            { q: tHomeFaq("q9"), a: tHomeFaq("a9") },
-            { q: tHomeFaq("q10"), a: tHomeFaq("a10") },
-          ].map(({ q, a }, i) => (
+          {homeFaqs.map(({ q, a }, i) => (
             <details key={i} style={{
               borderBottom: "1px solid #e5e7eb", padding: "20px 0",
             }}>
@@ -738,10 +731,10 @@ export default async function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd({
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: Array.from({ length: 10 }, (_, i) => ({
+        mainEntity: homeFaqs.map(({ q, a }) => ({
           "@type": "Question",
-          name: tHomeFaq(`q${i + 1}`),
-          acceptedAnswer: { "@type": "Answer", text: tHomeFaq(`a${i + 1}`) },
+          name: q,
+          acceptedAnswer: { "@type": "Answer", text: a },
         })),
       }) }} />
 

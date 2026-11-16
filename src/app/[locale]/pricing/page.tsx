@@ -1,3 +1,4 @@
+import { FEATURED_PLAN } from "@/lib/plans";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Nav from "../../../components/Nav";
@@ -70,6 +71,7 @@ export default async function PricingPage() {
       features: [t("freeF1"), t("freeF2"), t("freeF3"), t("freeF4")],
       cta: t("startFree"),
       ctaStyle: "outline" as const,
+      popular: FEATURED_PLAN === "free",
     },
     {
       name: t("starterName"),
@@ -81,6 +83,7 @@ export default async function PricingPage() {
       cta: t("startTrial"),
       ctaStyle: "primary" as const,
       save: t("starterSave"),
+      popular: FEATURED_PLAN === "starter",
     },
     {
       name: t("proName"),
@@ -91,7 +94,7 @@ export default async function PricingPage() {
       features: [t("proF1"), t("proF2"), t("proF3"), t("proF4"), t("proF5"), t("proF6"), t("proF7"), t("proF8"), t("proF9")],
       cta: t("startTrial"),
       ctaStyle: "featured" as const,
-      popular: true,
+      popular: FEATURED_PLAN === "pro",
       note: t("proNote", { defaultValue: "Best value for teams" }),
     },
     {
@@ -103,6 +106,7 @@ export default async function PricingPage() {
       features: [t("businessF1"), t("businessF2"), t("businessF3"), t("businessF4"), t("businessF5"), t("businessF6")],
       cta: t("startTrial"),
       ctaStyle: "primary" as const,
+      popular: FEATURED_PLAN === "business",
     },
   ];
 
@@ -116,6 +120,7 @@ export default async function PricingPage() {
       features: [t("freePlannerF1"), t("freePlannerF2"), t("freePlannerF3"), t("freePlannerF4")],
       cta: t("startFree"),
       ctaStyle: "outline" as const,
+      popular: FEATURED_PLAN === "free",
     },
     {
       name: t("starterName"),
@@ -127,6 +132,7 @@ export default async function PricingPage() {
       cta: t("startTrial"),
       ctaStyle: "primary" as const,
       save: t("starterSave"),
+      popular: FEATURED_PLAN === "starter",
     },
     {
       name: t("proName"),
@@ -137,7 +143,7 @@ export default async function PricingPage() {
       features: [t("proPlannerF1"), t("proPlannerF2"), t("proPlannerF3"), t("proPlannerF4"), t("proPlannerF5"), t("proPlannerF6"), t("proPlannerF7"), t("proPlannerF8")],
       cta: t("startTrial"),
       ctaStyle: "featured" as const,
-      popular: true,
+      popular: FEATURED_PLAN === "pro",
       note: t("proNote", { defaultValue: "Best value for teams" }),
     },
     {
@@ -149,6 +155,7 @@ export default async function PricingPage() {
       features: [t("businessPlannerF1"), t("businessPlannerF2"), t("businessPlannerF3"), t("businessPlannerF4"), t("businessPlannerF5"), t("businessPlannerF6")],
       cta: t("startTrial"),
       ctaStyle: "primary" as const,
+      popular: FEATURED_PLAN === "business",
     },
   ];
 

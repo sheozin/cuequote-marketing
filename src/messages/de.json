@@ -121,7 +121,7 @@
     "vatNote": "Zzgl. MwSt. — die Steuer wird beim Checkout berechnet",
     "startFree": "Kostenlos starten",
     "startTrial": "Kostenlos starten",
-    "popular": "Am beliebtesten",
+    "popular": "Empfohlen",
     "faq": "Häufig gestellte Fragen",
     "freeName": "Kostenlos",
     "freeDesc": "Testen Sie CueQuote ohne Verpflichtung.",
@@ -2849,5 +2849,17 @@
     },
     "budgetNoteTitle": "Ein Budgetierungswerkzeug, kein Angebot.",
     "budgetNote": "Damit setzen Sie eine realistische Zahl an, bevor Sie Anbieter anfragen. Der tatsächliche Preis hängt von Venue, Setup, Terminen und den Sätzen des jeweiligen Unternehmens ab — bestätigen Sie ihn bei AV-Firmen, bevor Sie ein Budget freigeben."
+  },
+  "dataHandling": {
+    "title": "Ihre Daten, klar erklärt",
+    "intro": "Vier Fragen, die jedes Unternehmen stellt, bevor es seine Preise in ein neues Tool eingibt.",
+    "q1": "Wer kann meine Preise sehen?",
+    "a1": "Die Personen in Ihrem CueQuote-Arbeitsbereich. Innerhalb Ihres Teams sehen nur berechtigte Rollen die Einkaufspreise. Ihre Kunden sehen nur, was Sie ihnen senden: die Verkaufspreise im Angebot, niemals Ihre Kosten. Eine kleine Zahl von CueQuote-Mitarbeitenden kann auf Konten zugreifen, um Support zu leisten und den Dienst zu schützen. Wir zeigen die Preise eines Unternehmens niemals einem anderen.",
+    "q2": "Werden meine Daten zum Training von KI verwendet?",
+    "a2": "CueQuote trainiert niemals KI mit Ihren Daten. Angebote werden mit Claude von Anthropic unter dessen kommerziellen API-Bedingungen erstellt, die Kundendaten vom Modelltraining ausschließen. CueQuote nutzt Ihre eigenen früheren Angebote und Änderungen, um Vorschläge auf Ihr Konto zuzuschneiden, und das bleibt in Ihrem Konto. Eine aus Ihren Änderungen gelernte Regel gilt erst, wenn Sie sie in den Einstellungen freigeben.",
+    "q3": "Wo werden meine Daten gespeichert?",
+    "a3": "In einer Supabase-Datenbank bei AWS in Irland (EU), verschlüsselt im Ruhezustand und bei der Übertragung. Außerdem nutzen wir Vercel (Hosting), Stripe (Zahlungen), Resend (E-Mail), Cloudflare (Sicherheitsprüfung bei der Registrierung) und Anthropic (KI, die Ihre Veranstaltungsbeschreibung verarbeitet, um das Angebot zu schreiben).",
+    "q4": "Wie exportiere oder lösche ich meine Daten?",
+    "a4": "Export: Gehen Sie in der App zu Einstellungen und wählen Sie Meine Daten exportieren. Sie erhalten eine Datei mit Ihren Angeboten, Kunden, Ihrem Katalog und Ihren Firmendaten. Löschen: Wählen Sie in den Einstellungen Konto löschen und geben Sie zur Bestätigung Ihre E-Mail-Adresse ein. Sie werden sofort abgemeldet, und Ihr Konto und seine Daten werden nach 30 Tagen gelöscht, außer was wir gesetzlich aufbewahren müssen."
   }
 }

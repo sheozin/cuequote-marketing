@@ -62,7 +62,7 @@ const SECTIONS = [
   {
     id: "third-party",
     title: "4. Third-Party Services",
-    content: `CueQuote uses the following third-party services: Supabase (database & authentication), Stripe (payment processing), Vercel (hosting), Anthropic (AI proposal generation), and Cloudflare (the security check on the signup page). Each service has its own privacy policy and processes data according to their terms.`,
+    content: `CueQuote uses the following third-party services: Supabase (database & authentication), Stripe (payment processing), Vercel (hosting), Resend (email delivery), Anthropic (AI proposal generation), and Cloudflare (the security check on the signup page). Each service has its own privacy policy and processes data according to their terms.`,
   },
   {
     id: "ai-content",
@@ -96,7 +96,8 @@ const SECTIONS = [
   },
 ];
 
-export default function PrivacyPage() {
+export default async function PrivacyPage() {
+  const tData = await getTranslations("dataHandling");
   return (
     <>
       <Nav />
@@ -125,8 +126,27 @@ export default function PrivacyPage() {
             How we collect, use, and protect your data at CueQuote.
           </p>
           <p style={{ fontSize: 14, color: "#6b7280" }}>
-            Last updated: September 30, 2026
+            Last updated: November 15, 2026
           </p>
+        </div>
+      </section>
+
+      {/* Plain-language data answers. Linked from the app's signup page as #your-data.
+          Every sentence is backed by code or vendor terms (docs/agent-team, Phase 1.5). */}
+      <section id="your-data" style={{ padding: "56px 24px 8px", scrollMarginTop: 80 }}>
+        <div style={{ maxWidth: 820, margin: "0 auto" }}>
+          <h2 style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 28, color: "#08172E", marginBottom: 8 }}>
+            {tData("title")}
+          </h2>
+          <p style={{ fontSize: 15, color: "#6b7280", marginBottom: 24 }}>{tData("intro")}</p>
+          <div style={{ display: "grid", gap: 16 }}>
+            {[1, 2, 3, 4].map(n => (
+              <div key={n} style={{ background: "#f9fafb", border: "1px solid #f3f4f6", borderRadius: 12, padding: "18px 20px" }}>
+                <h3 style={{ fontSize: 16, fontWeight: 700, color: "#08172E", margin: "0 0 6px" }}>{tData(`q${n}`)}</h3>
+                <p style={{ fontSize: 15, color: "#374151", lineHeight: 1.7, margin: 0 }}>{tData(`a${n}`)}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

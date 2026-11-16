@@ -10,6 +10,20 @@ const avItems = [
   { cat: "Labor", name: "AV Technician", qty: 2, price: 450, color: "#10b981" },
 ]
 
+// Header totals are derived from the rows so the sample always adds up.
+const euro = (n: number) => `€${n.toLocaleString('en-US')}`
+const euroK = (n: number) => `€${Number((n / 1000).toFixed(1))}K`
+const avTotal = avItems.reduce((sum, item) => sum + item.qty * item.price, 0)
+
+const plannerCategories = [
+  { key: "audio", min: 4500, max: 6800 },
+  { key: "lighting", min: 3200, max: 5400 },
+  { key: "video", min: 3500, max: 5000 },
+  { key: "crew", min: 2500, max: 4000 },
+]
+const plannerMin = plannerCategories.reduce((sum, c) => sum + c.min, 0)
+const plannerMax = plannerCategories.reduce((sum, c) => sum + c.max, 0)
+
 // Lucide SVG paths for categories (matching app icons)
 const catIcons: Record<string, { color: string; bg: string; path: string }> = {
   audio: { color: "#7c3aed", bg: "#f3e8ff", path: "M11 5L6 9H2v6h4l5 4V5z M19.07 4.93a10 10 0 0 1 0 14.14 M15.54 8.46a5 5 0 0 1 0 7.07" },
@@ -54,12 +68,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
     setTimeout(() => { setActive(idx); setFading(false) }, 400)
   }
 
-  const categories = [
-    { key: "audio", range: "€4,500 — €6,800" },
-    { key: "lighting", range: "€3,200 — €5,400" },
-    { key: "video", range: "€3,500 — €5,000" },
-    { key: "crew", range: "€2,500 — €4,000" },
-  ]
+  const categories = plannerCategories.map(c => ({ key: c.key, range: `${euro(c.min)} — ${euro(c.max)}` }))
 
   return (
     <div className="hero-slider-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}>
@@ -106,7 +115,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
                   <div style={{ fontSize: 11, color: "#10b981", fontWeight: 600, textTransform: "uppercase", letterSpacing: 1 }}>{t.heroAvGenerated || 'AI Generated Proposal'}</div>
                   <div style={{ fontSize: 14, fontWeight: 700, color: "#08172E", marginTop: 2 }}>{t.heroAvEvent || 'Corporate Conference 2026'}</div>
                 </div>
-                <div style={{ fontSize: 14, color: "#10b981", fontWeight: 700 }}>€8,540</div>
+                <div style={{ fontSize: 14, color: "#10b981", fontWeight: 700 }}>{euro(avTotal)}</div>
               </div>
               <div style={{ padding: "8px 0" }}>
                 {avItems.map((item, i) => (
@@ -119,8 +128,8 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
                       </div>
                     </div>
                     <div style={{ textAlign: "end" }}>
-                      <div style={{ fontWeight: 600, color: "#111827" }}>€{(item.qty * item.price).toLocaleString()}</div>
-                      <div style={{ fontSize: 11, color: "#6b7280" }}>{item.qty} × €{item.price}</div>
+                      <div style={{ fontWeight: 600, color: "#111827" }}>{euro(item.qty * item.price)}</div>
+                      <div style={{ fontSize: 11, color: "#6b7280" }}>{item.qty} × {euro(item.price)}</div>
                     </div>
                   </div>
                 ))}
@@ -137,7 +146,7 @@ export function HeroMockupSlider({ avSubtitle, plannerSubtitle, avCta, plannerCt
                   <div style={{ fontSize: 14, fontWeight: 700, color: "#08172E", marginTop: 2 }}>{t.heroPlannerEvent || 'Annual Gala — 350 Guests'}</div>
                 </div>
                 <div style={{ textAlign: "right" }}>
-                  <div style={{ fontSize: 13, color: "#059669", fontWeight: 700 }}>€15K — €22K</div>
+                  <div style={{ fontSize: 13, color: "#059669", fontWeight: 700 }}>{euroK(plannerMin)} — {euroK(plannerMax)}</div>
                   <div style={{ fontSize: 9, color: "#6b7280" }}>{t.heroPlannerEstimated || 'estimated budget'}</div>
                 </div>
               </div>
