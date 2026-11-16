@@ -127,7 +127,7 @@
     "freeDesc": "Wypróbuj CueQuote bez zobowiązań.",
     "freeF1": "3 oferty/miesiąc",
     "freeF2": "Podstawowy PDF (ze znakiem wodnym)",
-    "freeF3": "Pobieranie PDF (wysyłka do klientów w planach płatnych)",
+    "freeF3": "Wysyłka 3 ofert do klientów (ze znakiem wodnym CueQuote)",
     "freeF4": "1 użytkownik",
     "starterName": "Starter",
     "starterDesc": "Dla freelancerów i małych zespołów.",
@@ -201,7 +201,7 @@
     "faqQ5": "Co się stanie, gdy wyczerpię miesięczny limit?",
     "faqA5": "Na planach płatnych limit liczy tylko generacje AI (generowanie, ponowne generowanie lub plan ryzyka), więc nadal możesz budować oferty z katalogu lub szablonu. Po więcej generacji AI przejdź na wyższy plan lub kup pakiet 5 za 29 €. Na planie Free do limitu 3 liczy się każda oferta.",
     "faqQ6": "Czy jest darmowy plan?",
-    "faqA6": "Tak. CueQuote oferuje darmowy plan z 3 ofertami miesięcznie, bez karty kredytowej i bez limitu czasowego. Możesz tworzyć oferty i pobierać je jako PDF. Wysyłka do klientów, e-mailem lub przez link online, jest dostępna w planach płatnych.",
+    "faqA6": "Tak. CueQuote oferuje plan Free z 3 ofertami miesięcznie, bez karty kredytowej i bez limitu czasu. Możesz wysłać klientom 3 oferty, e-mailem lub linkiem online, ze znakiem wodnym CueQuote, i zobaczyć, kiedy je otworzą. Plany płatne znoszą limit i znak wodny.",
     "faqQ7": "Czym są pakiety kredytów?",
     "faqA7": "Pakiety kredytów pozwalają kupić dodatkowe oferty ponad miesięczny limit. Pakiet 5 kosztuje 29 € (5,80 € za szt.). Kredyty ważne 12 miesięcy i zawierają markowe PDF-y.",
     "compareTitle": "Porównaj wszystkie funkcje",
@@ -278,12 +278,13 @@
     "businessPlannerF3": "Nieograniczone możliwości",
     "businessPlannerF4": "Dostęp do API",
     "businessPlannerF5": "Dedykowany opiekun konta",
-    "businessPlannerF6": "Własne integracje"
+    "businessPlannerF6": "Własne integracje",
+    "compFreeSends": "3 oferty"
   },
   "homePricing": {
     "freeF1": "3 oferty/miesiąc",
     "freeF2": "Podstawowy PDF (ze znakiem wodnym)",
-    "freeF3": "Pobieranie PDF (wysyłka do klientów w planach płatnych)",
+    "freeF3": "Wysyłka 3 ofert do klientów (ze znakiem wodnym CueQuote)",
     "freeF4": "1 użytkownik",
     "starterF1": "10 generacji AI/miesiąc, oferty bez limitu",
     "starterF2": "Pełny branding (logo + kolory)",
@@ -313,7 +314,7 @@
     "q5": "Czy mogę używać własnego brandingu?",
     "a5": "Tak. Prześlij logo, ustaw kolory marki, a wszystkie PDF-y i strony udostępniania będą używać Twojego brandingu. Klienci widzą Twoją firmę, nie CueQuote.",
     "q6": "Czy oferujecie darmowy plan?",
-    "a6": "Tak. Darmowy plan obejmuje 3 oferty miesięcznie z podstawowym eksportem PDF. Wysyłka do klientów, e-mailem lub przez link online, jest dostępna w planach płatnych. Bez karty kredytowej.",
+    "a6": "Tak. Plan Free obejmuje 3 oferty miesięcznie z podstawowym eksportem PDF, a klientom możesz wysłać 3 oferty e-mailem lub linkiem online, ze znakiem wodnym CueQuote. Bez karty kredytowej.",
     "q7": "Czy jest darmowy plan?",
     "a7": "CueQuote oferuje darmowy plan z 3 ofertami miesięcznie — bez karty kredytowej, bez limitu czasowego. Gdy potrzebujesz więcej, przejdź na płatny plan.",
     "q8": "Co się stanie, gdy wyczerpię limit ofert?",
@@ -1949,7 +1950,7 @@
       "step2": "Wpisz opis wydarzenia — podaj jak najwięcej szczegółów o miejscu i wymaganiach",
       "step3": "AI CueQuote generuje kompletną listę sprzętu z ilościami i cenami. Albo kliknij „Zbuduj z katalogu”, aby pominąć AI i samodzielnie dodać pozycje z katalogu",
       "step4": "Przejrzyj i edytuj: dodaj, usuń lub zmień dowolne pozycje; zacznij wpisywać nazwę pozycji, aby wybrać ją z katalogu razem z ceną",
-      "step5": "Pobierz jako PDF lub, w planie płatnym, wyślij klientowi e-mailem albo udostępnij przez unikalny link",
+      "step5": "Pobierz jako PDF albo wyślij klientowi e-mailem lub udostępnij unikalnym linkiem (3 wysyłki w planie Free, bez limitu w planach płatnych)",
       "tip": "Użyj funkcji linku udostępniania, aby klienci mogli przeglądać oferty online — mogą zatwierdzić je bezpośrednio z linku.",
       "content3": "Każda pozycja ma kolumnę Dni. Wartość pozycji to ilość × cena jednostkowa × dni, więc cena jednostkowa pozostaje Twoją dzienną stawką z katalogu, a zmiana czasu wynajmu to zmiana jednej liczby. Dni montażu lub demontażu liczone po obniżonej stawce widać jako ułamek, na przykład 2,5 dla dwóch dni wydarzenia i jednego dnia montażu za połowę stawki. W PDF, w linku udostępniania i na fakturach kolumna Dni pojawia się tylko wtedy, gdy co najmniej jedna pozycja trwa dłużej niż jeden dzień. Każda pozycja ma też pole Rabat % na rabat tylko dla tej pozycji. Cena jednostkowa zostaje ceną z katalogu, klient widzi procent rabatu, a rabat na całą ofertę nadal działa dodatkowo. Kolumna Rabat pojawia się w PDF, linku udostępniania i Excelu tylko wtedy, gdy któraś pozycja ma rabat."
     },
@@ -1997,7 +1998,7 @@
     "billingPlans": {
       "title": "Rozliczenia i plany",
       "content1": "CueQuote oferuje elastyczne plany dopasowane do wielkości Twojej firmy. Zacznij za darmo i rozwijaj się.",
-      "step1": "Free: 3 oferty/miesiąc, 1 użytkownik, podstawowy szablon PDF. Pobierz PDF i wyślij go samodzielnie; wysyłka e-mailem do klientów i linki online dla klientów są w planach płatnych",
+      "step1": "Free: 3 oferty/miesiąc, 1 użytkownik, podstawowy szablon PDF. Wysyłka 3 ofert do klientów e-mailem lub linkiem online, ze znakiem wodnym CueQuote; PDF możesz pobrać zawsze",
       "step2": "Starter (29 €/mies.): 10 generacji AI/miesiąc, oferty bez limitu, 1 użytkownik, pełny branding, zarządzanie klientami, wysyłka ofert i faktur do klientów e-mailem, linki online dla klientów (podgląd, akceptacja i podpis)",
       "step3": "Pro (79 €/mies.) — 40 generacji AI/miesiąc, oferty bez limitu, 5 użytkowników, niestandardowe szablony, priorytetowe wsparcie",
       "step4": "Business (179 €/mies.) — 120 generacji AI/miesiąc, oferty bez limitu, 20 użytkowników, dostęp do API, dedykowane wsparcie",
@@ -2077,7 +2078,7 @@
       "tip": "Użyj przycisku \"Wyślij ofertę\", aby wysłać link udostępniania bezpośrednio z CueQuote wraz z osobistą wiadomością. E-mail zawiera podsumowanie oferty z markowym przyciskiem CTA.",
       "content3": "Oferty wygasają same. Każda nowa oferta ma datę ważności, domyślnie 30 dni do przodu, którą możesz zmienić lub wyczyścić w zakładce Warunki i szczegóły. Trzy dni przed tą datą CueQuote wysyła klientowi przypomnienie z linkiem, w imieniu Twojej firmy, a odpowiedzi wracają do Ciebie; w tym samym momencie dostajesz powiadomienie w aplikacji. Jeśli termin minie bez odpowiedzi, oferta zmienia status na Wygasła i klient również zostaje o tym poinformowany.",
       "step6": "Ustaw lub wyczyść datę ważności w zakładce Warunki i szczegóły: to z niej wynika przypomnienie na trzy dni przed oraz samo powiadomienie o wygaśnięciu",
-      "content4": "Wysyłanie ofert e-mailem i udostępnianie ich przez link online to funkcje planów płatnych, od planu Starter wzwyż. W planie Free nadal możesz przygotować ofertę i pobrać PDF, aby wysłać go samodzielnie."
+      "content4": "W planie Free możesz wysłać klientom 3 oferty, e-mailem lub linkiem online. Mają znak wodny CueQuote, widzisz, kiedy klient je otworzy, a klient może je zaakceptować online. Ponowne wysłanie tej samej oferty nie zużywa kolejnej wysyłki. Plany płatne, od Starter, znoszą limit i znak wodny."
     },
     "teamManagement": {
       "title": "Zarządzanie zespołem",

@@ -127,7 +127,7 @@
     "freeDesc": "Testen Sie CueQuote ohne Verpflichtung.",
     "freeF1": "3 Angebote/Monat",
     "freeF2": "Basis-PDF (mit Wasserzeichen)",
-    "freeF3": "PDF-Download (Versand an Kunden in den kostenpflichtigen Tarifen)",
+    "freeF3": "3 Angebote an Kunden senden (mit CueQuote-Wasserzeichen)",
     "freeF4": "1 Benutzer",
     "starterName": "Starter",
     "starterDesc": "Für Freiberufler und kleine Teams.",
@@ -201,7 +201,7 @@
     "faqQ5": "Was passiert, wenn ich mein Monatslimit erreiche?",
     "faqA5": "In bezahlten Tarifen zählt das Limit nur KI-Generierungen (Generieren, Neugenerieren oder ein Risikoplan), Angebote aus Ihrem Katalog oder einer Vorlage können Sie also weiter erstellen. Für mehr KI-Generierungen upgraden Sie Ihren Tarif oder kaufen ein 5er-Paket für 29 €. Im Free-Tarif zählt jedes Angebot zu den 3.",
     "faqQ6": "Gibt es einen kostenlosen Plan?",
-    "faqA6": "Ja. CueQuote bietet einen kostenlosen Tarif mit 3 Angeboten pro Monat, ohne Kreditkarte und ohne Zeitlimit. Sie können Angebote erstellen und als PDF herunterladen. Der Versand an Kunden, per E-Mail oder über einen Online-Link, ist Teil der kostenpflichtigen Tarife.",
+    "faqA6": "Ja. CueQuote bietet einen Free-Tarif mit 3 Angeboten pro Monat, ohne Kreditkarte und ohne Zeitlimit. Sie können 3 Angebote per E-Mail oder Online-Link an Kunden senden, mit dem CueQuote-Wasserzeichen, und sehen, wann sie geöffnet werden. Die kostenpflichtigen Tarife heben Limit und Wasserzeichen auf.",
     "faqQ7": "Was sind Guthaben-Pakete?",
     "faqA7": "Guthaben-Pakete ermöglichen es Ihnen, zusätzliche Angebote über Ihr Monatslimit hinaus zu kaufen. Ein 5er-Paket kostet 29 € (5,80 € pro Stück). Guthaben ist 12 Monate gültig und enthält gebrandete PDFs.",
     "compareTitle": "Alle Funktionen vergleichen",
@@ -278,12 +278,13 @@
     "businessPlannerF3": "Unbegrenzt alles",
     "businessPlannerF4": "API-Zugang",
     "businessPlannerF5": "Persönlicher Account-Manager",
-    "businessPlannerF6": "Individuelle Integrationen"
+    "businessPlannerF6": "Individuelle Integrationen",
+    "compFreeSends": "3 Angebote"
   },
   "homePricing": {
     "freeF1": "3 Angebote/Monat",
     "freeF2": "Basis-PDF (mit Wasserzeichen)",
-    "freeF3": "PDF-Download (Versand an Kunden in den kostenpflichtigen Tarifen)",
+    "freeF3": "3 Angebote an Kunden senden (mit CueQuote-Wasserzeichen)",
     "freeF4": "1 Benutzer",
     "starterF1": "10 KI-Generierungen/Monat, unbegrenzt Angebote",
     "starterF2": "Volles Branding (Logo + Farben)",
@@ -313,7 +314,7 @@
     "q5": "Kann ich mein eigenes Branding verwenden?",
     "a5": "Ja. Laden Sie Ihr Logo hoch, setzen Sie Ihre Markenfarben, und alle PDFs und Freigabeseiten verwenden Ihr Branding. Ihre Kunden sehen Ihr Unternehmen, nicht CueQuote.",
     "q6": "Bieten Sie einen kostenlosen Tarif an?",
-    "a6": "Ja. Der kostenlose Tarif beinhaltet 3 Angebote pro Monat mit Basis-PDF-Export. Der Versand an Kunden, per E-Mail oder über einen Online-Link, ist Teil der kostenpflichtigen Tarife. Keine Kreditkarte erforderlich.",
+    "a6": "Ja. Der Free-Tarif umfasst 3 Angebote pro Monat mit einfachem PDF-Export, und Sie können 3 Angebote per E-Mail oder Online-Link an Kunden senden, mit dem CueQuote-Wasserzeichen. Keine Kreditkarte erforderlich.",
     "q7": "Gibt es einen kostenlosen Plan?",
     "a7": "CueQuote bietet einen kostenlosen Plan mit 3 Angeboten pro Monat — ohne Kreditkarte, ohne Zeitlimit. Wenn Sie mehr benötigen, wechseln Sie zu einem kostenpflichtigen Plan.",
     "q8": "Was passiert, wenn ich mein Angebotslimit erreiche?",
@@ -1972,7 +1973,7 @@
       "step2": "Geben Sie die Veranstaltungsbeschreibung ein — seien Sie so spezifisch wie möglich über den Veranstaltungsort und die Anforderungen",
       "step3": "CueQuotes KI generiert eine vollständige Ausrüstungsliste mit Mengen und Preisen. Oder klicken Sie auf „Aus dem Katalog erstellen“, um die KI zu überspringen und Positionen selbst aus Ihrem Katalog hinzuzufügen",
       "step4": "Überprüfen und bearbeiten: Positionen hinzufügen, entfernen oder anpassen; beginnen Sie, einen Positionsnamen einzugeben, um ihn mit Preis aus Ihrem Katalog zu wählen",
-      "step5": "Als PDF herunterladen oder, in einem kostenpflichtigen Tarif, per E-Mail an Ihren Kunden senden oder über einen eindeutigen Link teilen",
+      "step5": "Als PDF herunterladen, oder per E-Mail an den Kunden senden bzw. über einen eindeutigen Link teilen (3 Sendungen im Free-Tarif, unbegrenzt in den kostenpflichtigen Tarifen)",
       "tip": "Nutzen Sie die Teilen-Link-Funktion, damit Kunden Angebote online einsehen können — sie können direkt über den Link genehmigen.",
       "content3": "Jede Position hat eine Spalte Tage. Der Positionsbetrag ist Menge × Einzelpreis × Tage, sodass der Einzelpreis Ihr Tagessatz aus dem Katalog bleibt und eine längere Miete nur eine Zahl ändert. Auf- oder Abbautage zu einem reduzierten Satz erscheinen als Dezimalzahl, zum Beispiel 2,5 für zwei Veranstaltungstage plus einen Aufbautag zum halben Satz. Im PDF, im Freigabelink und auf Rechnungen erscheint die Spalte Tage nur, wenn mindestens eine Position länger als einen Tag läuft. Jede Position hat außerdem ein Feld Rabatt % für einen Rabatt nur auf diese Position. Der Einzelpreis bleibt Ihr Katalogpreis, der Kunde sieht den Prozentsatz, und ein Rabatt auf das ganze Angebot gilt weiterhin zusätzlich. Die Rabattspalte erscheint im PDF, im Freigabelink und in Excel nur, wenn eine Position einen Rabatt hat."
     },
@@ -2020,7 +2021,7 @@
     "billingPlans": {
       "title": "Abrechnung & Pläne",
       "content1": "CueQuote bietet flexible Pläne passend zu Ihrer Unternehmensgröße. Starten Sie kostenlos und wachsen Sie.",
-      "step1": "Free: 3 Angebote/Monat, 1 Benutzer, einfache PDF-Vorlage. Laden Sie das PDF herunter und versenden Sie es selbst; E-Mail-Versand an Kunden und Online-Kundenlinks gibt es in den kostenpflichtigen Tarifen",
+      "step1": "Free: 3 Angebote/Monat, 1 Nutzer, einfache PDF-Vorlage. 3 Angebote per E-Mail oder Online-Link an Kunden senden, mit CueQuote-Wasserzeichen; das PDF jederzeit herunterladen",
       "step2": "Starter (29 €/Monat): 10 KI-Generierungen/Monat, unbegrenzt Angebote, 1 Benutzer, vollständiges Branding, Kundenverwaltung, Angebote und Rechnungen per E-Mail an Kunden senden, Online-Kundenlinks (ansehen, annehmen und unterschreiben)",
       "step3": "Pro (79 €/Monat) — 40 KI-Generierungen/Monat, unbegrenzt Angebote, 5 Benutzer, individuelle Vorlagen, Prioritäts-Support",
       "step4": "Business (179 €/Monat) — 120 KI-Generierungen/Monat, unbegrenzt Angebote, 20 Benutzer, API-Zugang, dedizierter Support",
@@ -2100,7 +2101,7 @@
       "tip": "Verwenden Sie die Schaltfläche \"Angebot senden\", um den Teilen-Link direkt aus CueQuote mit einer persönlichen Nachricht zu versenden. Die E-Mail enthält eine Zusammenfassung des Angebots mit einer gebrandeten CTA-Schaltfläche.",
       "content3": "Angebote laufen von selbst ab. Jedes neue Angebot hat ein Gültigkeitsdatum, standardmäßig 30 Tage im Voraus, das Sie im Reiter Bedingungen & Details ändern oder löschen können. Drei Tage vor diesem Datum schickt CueQuote Ihrem Kunden eine Erinnerung mit dem Freigabelink, im Namen Ihres Unternehmens und mit Antworten zurück an Sie, und benachrichtigt Sie gleichzeitig in der App. Verstreicht das Datum ohne Antwort, wechselt das Angebot auf Abgelaufen und der Kunde erfährt auch das.",
       "step6": "Setzen oder löschen Sie das Gültigkeitsdatum unter Bedingungen & Details: daraus ergeben sich die Erinnerung drei Tage vorher und der Ablaufhinweis selbst",
-      "content4": "Angebote per E-Mail senden und über einen Online-Link teilen ist Teil der kostenpflichtigen Tarife, ab Starter. Im Free-Tarif können Sie das Angebot trotzdem erstellen und das PDF herunterladen, um es selbst zu versenden."
+      "content4": "Im Free-Tarif können Sie 3 Angebote per E-Mail oder Online-Link an Kunden senden. Sie tragen das CueQuote-Wasserzeichen, Sie sehen, wann der Kunde sie öffnet, und der Kunde kann online annehmen. Dasselbe Angebot erneut zu senden verbraucht keine weitere Sendung. Die kostenpflichtigen Tarife ab Starter heben Limit und Wasserzeichen auf."
     },
     "teamManagement": {
       "title": "Teamverwaltung",

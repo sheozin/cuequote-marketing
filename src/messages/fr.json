@@ -127,7 +127,7 @@
     "freeDesc": "Essayez CueQuote sans engagement.",
     "freeF1": "3 devis/mois",
     "freeF2": "PDF basique (avec filigrane)",
-    "freeF3": "Téléchargement du PDF (envoi aux clients avec les plans payants)",
+    "freeF3": "Envoi de 3 propositions aux clients (avec le filigrane CueQuote)",
     "freeF4": "1 utilisateur",
     "starterName": "Starter",
     "starterDesc": "Pour les indépendants et les petites équipes.",
@@ -201,7 +201,7 @@
     "faqQ5": "Que se passe-t-il quand j'atteins ma limite mensuelle ?",
     "faqA5": "Dans les forfaits payants, la limite ne compte que les générations IA (génération, régénération ou plan de risques) : vous pouvez donc continuer à créer des devis depuis votre catalogue ou un modèle. Pour plus de générations IA, passez à un forfait supérieur ou achetez un pack de 5 pour 29 €. Avec le forfait Free, chaque devis compte dans les 3.",
     "faqQ6": "Y a-t-il un plan gratuit ?",
-    "faqA6": "Oui. CueQuote propose un plan gratuit avec 3 devis par mois, sans carte de crédit et sans limite de durée. Vous pouvez créer des devis et télécharger le PDF. L'envoi aux clients, par e-mail ou via un lien en ligne, fait partie des plans payants.",
+    "faqA6": "Oui. CueQuote propose une offre Free avec 3 propositions par mois, sans carte bancaire et sans limite de durée. Vous pouvez envoyer 3 propositions à vos clients, par e-mail ou lien en ligne, avec le filigrane CueQuote, et voir quand ils les ouvrent. Les offres payantes suppriment la limite et le filigrane.",
     "faqQ7": "Que sont les packs de crédits ?",
     "faqA7": "Les packs de crédits vous permettent d'acheter des devis supplémentaires au-delà de votre limite mensuelle. Un pack de 5 coûte 29 € (5,80 € chacun). Les crédits sont valables 12 mois et incluent les PDF personnalisés.",
     "compareTitle": "Comparer toutes les fonctionnalités",
@@ -278,12 +278,13 @@
     "businessPlannerF3": "Tout illimité",
     "businessPlannerF4": "Accès API",
     "businessPlannerF5": "Chargé de compte dédié",
-    "businessPlannerF6": "Intégrations personnalisées"
+    "businessPlannerF6": "Intégrations personnalisées",
+    "compFreeSends": "3 propositions"
   },
   "homePricing": {
     "freeF1": "3 devis/mois",
     "freeF2": "PDF basique (avec filigrane)",
-    "freeF3": "Téléchargement du PDF (envoi aux clients avec les plans payants)",
+    "freeF3": "Envoi de 3 propositions aux clients (avec le filigrane CueQuote)",
     "freeF4": "1 utilisateur",
     "starterF1": "10 générations IA/mois, devis illimités",
     "starterF2": "Branding complet (logo + couleurs)",
@@ -313,7 +314,7 @@
     "q5": "Puis-je utiliser ma propre image de marque ?",
     "a5": "Oui. Téléchargez votre logo, définissez vos couleurs de marque, et tous les PDF et pages de partage utiliseront votre image de marque. Vos clients voient votre entreprise, pas CueQuote.",
     "q6": "Proposez-vous un forfait gratuit ?",
-    "a6": "Oui. Le forfait gratuit inclut 3 devis par mois avec export PDF basique. L'envoi aux clients, par e-mail ou via un lien en ligne, fait partie des plans payants. Aucune carte de crédit requise.",
+    "a6": "Oui. L'offre Free comprend 3 propositions par mois avec un export PDF de base, et vous pouvez envoyer 3 propositions à vos clients par e-mail ou lien en ligne, avec le filigrane CueQuote. Aucune carte bancaire requise.",
     "q7": "Y a-t-il un plan gratuit ?",
     "a7": "CueQuote propose un plan gratuit avec 3 devis par mois — sans carte de crédit, sans limite de temps. Quand vous avez besoin de plus, passez à un plan payant.",
     "q8": "Que se passe-t-il quand j'atteins ma limite de devis ?",
@@ -1974,7 +1975,7 @@
       "step2": "Saisissez la description de l'événement — soyez aussi précis que possible sur le lieu et les exigences",
       "step3": "L'IA de CueQuote génère une liste complète d'équipements avec quantités et prix. Ou cliquez sur « Créer depuis le catalogue » pour passer l'IA et ajouter vous-même les éléments de votre catalogue",
       "step4": "Vérifiez et modifiez : ajoutez, supprimez ou ajustez les lignes ; commencez à saisir le nom d'un élément pour le choisir dans votre catalogue avec son prix",
-      "step5": "Téléchargez-le en PDF ou, avec un plan payant, envoyez-le à votre client par e-mail ou partagez-le via un lien unique",
+      "step5": "Téléchargez-la en PDF, ou envoyez-la à votre client par e-mail ou partagez-la via un lien unique (3 envois avec l'offre Free, sans limite avec les offres payantes)",
       "tip": "Utilisez la fonction de lien de partage pour permettre aux clients de consulter les devis en ligne — ils peuvent approuver directement depuis le lien.",
       "content3": "Chaque ligne a une colonne Jours. Le total d'une ligne est quantité × prix unitaire × jours : le prix unitaire reste votre tarif journalier du catalogue, et changer la durée de location revient à modifier un seul chiffre. Les jours de montage ou de démontage facturés à un tarif réduit s'affichent en décimal, par exemple 2,5 pour deux jours d'événement et un jour de montage à demi-tarif. Dans le PDF, le lien de partage et les factures, la colonne Jours n'apparaît que si au moins une ligne dure plus d'une journée. Chaque ligne a aussi un champ Remise % pour une remise sur cet article seul. Le prix unitaire reste celui du catalogue, le client voit le pourcentage, et une remise sur tout le devis s'applique toujours en plus. La colonne Remise n'apparaît dans le PDF, le lien de partage et Excel que lorsqu'une ligne en a une."
     },
@@ -2022,7 +2023,7 @@
     "billingPlans": {
       "title": "Facturation et forfaits",
       "content1": "CueQuote propose des forfaits flexibles adaptés à la taille de votre entreprise. Commencez gratuitement et évoluez selon vos besoins.",
-      "step1": "Gratuit : 3 devis/mois, 1 utilisateur, modèle PDF de base. Téléchargez le PDF et envoyez-le vous-même ; l'envoi par e-mail aux clients et les liens client en ligne sont inclus dans les plans payants",
+      "step1": "Free : 3 propositions/mois, 1 utilisateur, modèle PDF de base. Envoi de 3 propositions aux clients par e-mail ou lien en ligne, avec le filigrane CueQuote ; téléchargement du PDF à tout moment",
       "step2": "Starter (29 €/mois) : 10 générations IA/mois, devis illimités, 1 utilisateur, branding complet, gestion des clients, envoi des devis et des factures aux clients par e-mail, liens client en ligne (consulter, accepter et signer)",
       "step3": "Pro (79 €/mois) — 40 générations IA/mois, devis illimités, 5 utilisateurs, modèles personnalisés, support prioritaire",
       "step4": "Business (179 €/mois) — 120 générations IA/mois, devis illimités, 20 utilisateurs, accès API, support dédié",
@@ -2102,7 +2103,7 @@
       "tip": "Utilisez le bouton \"Envoyer le devis\" pour envoyer le lien de partage directement depuis CueQuote avec un message personnalisé. L'e-mail contient un résumé du devis avec un bouton CTA à votre image.",
       "content3": "Les devis expirent d'eux-mêmes. Chaque nouveau devis porte une date de validité, fixée à 30 jours par défaut, que vous pouvez modifier ou effacer dans l'onglet Conditions & Détails. Trois jours avant cette date, CueQuote envoie à votre client un rappel avec le lien de partage, au nom de votre société et avec les réponses qui vous reviennent, et vous prévient dans l'application au même moment. Si la date passe sans réponse, le devis bascule en Expiré et le client en est informé également.",
       "step6": "Définissez ou effacez la date de validité dans Conditions & Détails : le rappel trois jours avant et l'avis d'expiration en découlent tous les deux",
-      "content4": "L'envoi des devis par e-mail et leur partage via un lien en ligne font partie des plans payants, à partir de Starter. Avec le plan Free, vous pouvez toujours créer le devis et télécharger le PDF pour l'envoyer vous-même."
+      "content4": "Avec l'offre Free, vous pouvez envoyer 3 propositions à vos clients, par e-mail ou lien en ligne. Elles portent le filigrane CueQuote, vous voyez quand le client les ouvre, et le client peut accepter en ligne. Renvoyer la même proposition ne consomme pas d'envoi supplémentaire. Les offres payantes, à partir de Starter, suppriment la limite et le filigrane."
     },
     "teamManagement": {
       "title": "Gestion d'équipe",
