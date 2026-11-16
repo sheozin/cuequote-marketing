@@ -419,8 +419,8 @@ export const TUTORIALS_DE: Tutorial[] = [
         tip: 'Nach dem Upgrade erhalten Sie eine Bestätigungs-E-Mail mit Ihren Tarifdetails und Funktionen.',
       },
       {
-        title: 'Geschenkcode einlösen',
-        content: 'Sie haben einen Geschenkcode von CueQuote? Geben Sie ihn auf der Seite Abrechnung unter Geschenkcode ein und klicken Sie auf Einlösen, oder tragen Sie ihn bei der Registrierung unter Haben Sie einen Geschenkcode? ein. Der Tarif startet sofort, und die Karte zeigt, bis wann er läuft; danach wechselt das Konto zurück zu Free, sofern Sie kein Abo abschließen.',
+        title: 'Geschenk- oder Startcode einlösen',
+        content: 'Sie haben einen Geschenk- oder Startcode von CueQuote? Geben Sie ihn auf der Seite Abrechnung unter Geschenk- oder Startcode ein und klicken Sie auf Einlösen, oder tragen Sie ihn bei der Registrierung unter Haben Sie einen Geschenk- oder Startcode? ein. Der Tarif startet sofort, und die Karte zeigt, bis wann er läuft; danach wechselt das Konto zurück zu Free, sofern Sie kein Abo abschließen. Ein Startcode gilt nur für Unternehmen in seinem Land, tragen Sie also zuerst das Land Ihres Unternehmens unter Einstellungen, Firma ein.',
       },
       {
         title: 'Abonnement verwalten',

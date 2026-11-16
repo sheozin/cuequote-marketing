@@ -419,8 +419,8 @@ export const TUTORIALS_FR: Tutorial[] = [
         tip: 'Vous recevrez un e-mail de confirmation détaillant votre plan et ses fonctionnalités après la mise à niveau.',
       },
       {
-        title: 'Utiliser un code cadeau',
-        content: 'Vous avez un code cadeau de CueQuote ? Saisissez-le sur la page Facturation sous Code cadeau et cliquez sur Utiliser, ou indiquez-le à l\'inscription sous Vous avez un code cadeau ?. L\'offre démarre immédiatement et la carte indique sa date de fin ; ensuite, le compte repasse à l\'offre Free, sauf si vous vous abonnez.',
+        title: 'Utiliser un code cadeau ou de lancement',
+        content: 'Vous avez un code cadeau ou un code de lancement CueQuote ? Saisissez-le sur la page Facturation sous Code cadeau ou de lancement et cliquez sur Utiliser, ou indiquez-le à l\'inscription sous Vous avez un code cadeau ou de lancement ?. L\'offre démarre immédiatement et la carte indique sa date de fin ; ensuite, le compte repasse à l\'offre Free, sauf si vous vous abonnez. Un code de lancement ne fonctionne que pour les entreprises de son pays : renseignez d\'abord le pays de votre entreprise dans Paramètres, Entreprise.',
       },
       {
         title: 'Gérez votre abonnement',

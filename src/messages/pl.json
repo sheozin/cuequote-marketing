@@ -1967,7 +1967,7 @@
       "step3": "Pro (79 €/mies.) — 40 generacji AI/miesiąc, oferty bez limitu, 5 użytkowników, niestandardowe szablony, priorytetowe wsparcie",
       "step4": "Business (179 €/mies.) — 120 generacji AI/miesiąc, oferty bez limitu, 20 użytkowników, dostęp do API, dedykowane wsparcie",
       "tip": "Możesz zmienić plan w dowolnym momencie w Ustawienia → Rozliczenia. Zmiany wchodzą w życie na początku następnego cyklu rozliczeniowego.",
-      "content2": "Masz kod podarunkowy od CueQuote? Wpisz go podczas rejestracji, w polu Masz kod podarunkowy?, albo później w zakładce Rozliczenia. Jego plan zaczyna działać od razu po utworzeniu przestrzeni roboczej i trwa tyle miesięcy, ile obejmuje kod; potem konto wraca do planu Free, chyba że wykupisz subskrypcję. Kodu nie można dodać do przestrzeni, która już płaci kartą."
+      "content2": "Masz kod prezentowy lub startowy od CueQuote? Wpisz go podczas rejestracji, w polu Masz kod prezentowy lub startowy?, albo później w zakładce Płatności. Plan z kodu prezentowego zaczyna działać od razu po utworzeniu przestrzeni roboczej i trwa tyle miesięcy, ile obejmuje kod. Kod startowy daje 60 dni planu Starter firmom z kraju, dla którego został utworzony: kraj firmy (Ustawienia, Firma) i kraj, z którego się łączysz, muszą być tym krajem. W obu przypadkach konto wraca potem do planu Free, chyba że wykupisz subskrypcję, i żadnego kodu nie można dodać do przestrzeni, która już płaci kartą."
     },
     "settings": {
       "title": "Ustawienia",

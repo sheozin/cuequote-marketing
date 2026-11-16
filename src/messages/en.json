@@ -2003,7 +2003,7 @@
       "step3": "Pro (€79/mo) — 40 AI generations/month, unlimited proposals, 5 users, custom templates, priority support",
       "step4": "Business (€179/mo) — 120 AI generations/month, unlimited proposals, 20 users, API access, dedicated support",
       "tip": "You can upgrade or downgrade at any time from Settings → Billing. Changes take effect at the start of the next billing cycle.",
-      "content2": "Have a gift code from CueQuote? Enter it when you sign up, under Have a gift code?, or later in Billing. Its plan starts as soon as your workspace is set up and runs for the months the code includes, then the account returns to Free unless you subscribe. A gift code cannot be added to a workspace that already pays by card."
+      "content2": "Have a gift code or a launch code from CueQuote? Enter it when you sign up, under Have a gift or launch code?, or later in Billing. A gift code's plan starts as soon as your workspace is set up and runs for the months the code includes. A launch code gives 60 days of Starter to companies in the country it was made for: your company's country (Settings, Company) and the country you connect from must both be that country. Either way the account returns to Free at the end unless you subscribe, and neither can be added to a workspace that already pays by card."
     },
     "settings": {
       "title": "Settings",

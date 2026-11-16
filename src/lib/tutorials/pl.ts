@@ -419,8 +419,8 @@ export const TUTORIALS_PL: Tutorial[] = [
         tip: 'Po ulepszeniu planu otrzymasz e-mail potwierdzający z danymi planu i funkcjami.',
       },
       {
-        title: 'Zrealizuj kod podarunkowy',
-        content: 'Masz kod podarunkowy od CueQuote? Wpisz go na stronie Rozliczenia w polu Kod podarunkowy i kliknij Zrealizuj albo podaj go podczas rejestracji w polu Masz kod podarunkowy?. Plan zaczyna działać od razu, a karta pokazuje datę jego zakończenia; potem konto wraca do planu Free, chyba że wykupisz subskrypcję.',
+        title: 'Zrealizuj kod prezentowy lub startowy',
+        content: 'Masz kod prezentowy lub startowy od CueQuote? Wpisz go na stronie Płatności w polu Kod prezentowy lub startowy i kliknij Zrealizuj albo podaj go podczas rejestracji w polu Masz kod prezentowy lub startowy?. Plan zaczyna działać od razu, a karta pokazuje datę jego zakończenia; potem konto wraca do planu Free, chyba że wykupisz subskrypcję. Kod startowy działa tylko dla firm z jego kraju, więc najpierw ustaw kraj firmy w Ustawienia, Firma.',
       },
       {
         title: 'Zarządzaj subskrypcją',

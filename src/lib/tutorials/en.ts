@@ -420,8 +420,8 @@ export const TUTORIALS_EN: Tutorial[] = [
         tip: 'You\'ll receive a confirmation email with your plan details and features after upgrading.',
       },
       {
-        title: 'Redeem a gift code',
-        content: 'Have a gift code from CueQuote? Enter it on the Billing page under Gift code and click Redeem, or type it when you sign up under Have a gift code?. The plan starts straight away and the card shows the date it runs until; after that the account returns to Free unless you subscribe.',
+        title: 'Redeem a gift or launch code',
+        content: 'Have a gift code or a launch code from CueQuote? Enter it on the Billing page under Gift or launch code and click Redeem, or type it when you sign up under Have a gift or launch code?. The plan starts straight away and the card shows the date it runs until; after that the account returns to Free unless you subscribe. A launch code only works for companies in its country, so set your company\'s country in Settings, Company first.',
       },
       {
         title: 'Manage your subscription',
