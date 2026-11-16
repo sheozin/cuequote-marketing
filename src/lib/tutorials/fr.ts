@@ -185,6 +185,11 @@ export const TUTORIALS_FR: Tutorial[] = [
         content: 'Cliquez sur « Catalogue » dans la barre latérale. Vous verrez votre liste d\'équipements classée par catégorie. Une nouvelle société AV démarre avec un catalogue de départ au prix de référence CueQuote pour son marché, chacun marqué « Prix de référence », pour générer et envoyer une première proposition tout de suite. Remplacez un prix par votre tarif et la mention disparaît ; dès lors, l\'IA utilise votre prix.',
       },
       {
+        title: 'Laissez-nous charger votre liste de prix',
+        content: 'Cliquez sur « Importer une liste de prix » et ajoutez votre liste sous forme de tableur, PDF, fichier Word ou photo. Nous relevons chaque article, sa catégorie, son unité et son prix, et vous montrons un brouillon, généralement en une minute et toujours sous 24 heures. Vous pouvez fermer la fenêtre entre-temps : un bandeau sur la page Catalogue vous prévient quand c\'est prêt. Vérifiez les noms, unités et prix, décochez ce que vous ne voulez pas et cliquez sur « Ajouter au catalogue ». Rien n\'est ajouté sans votre confirmation.',
+        tip: 'Si votre catalogue contient encore les articles de référence CueQuote, cochez « Supprimer les articles de référence CueQuote que cette liste ne remplace pas » pour ne garder que vos propres prix.',
+      },
+      {
         title: 'Ajoutez votre premier article',
         content: 'Cliquez sur « Ajouter un article » (ou sur le bouton « + »). Renseignez le nom de l\'article (par exemple, « Micro-cravate Sennheiser EW-D »), sélectionnez une catégorie (Audio), choisissez l\'unité par défaut (pcs, jour, lot, m², mètre, événement, déplacement) et saisissez votre prix de location par défaut. C\'est le prix que l\'IA utilisera lorsqu\'elle inclura cet article dans un devis.',
         tip: 'Utilisez des noms de modèles précis. « Sennheiser EW-D cravate » est préférable à « Micro sans fil » — cela montre à vos clients que vous disposez de matériel de qualité.',

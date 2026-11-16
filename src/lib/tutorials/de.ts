@@ -185,6 +185,11 @@ export const TUTORIALS_DE: Tutorial[] = [
         content: 'Klicken Sie in der Seitenleiste auf „Katalog“. Sie sehen Ihre Geräteliste nach Kategorien geordnet. Ein neues AV-Unternehmen startet mit einem Starterkatalog zu CueQuote-Referenzpreisen für seinen Markt, jeder als „Referenzpreis“ markiert, damit Sie sofort ein erstes Angebot erstellen und senden können. Ändern Sie einen Preis auf Ihren eigenen Satz, und die Markierung verschwindet; ab dann kalkuliert die KI mit Ihrem Preis.',
       },
       {
+        title: 'Lassen Sie uns Ihre Preisliste laden',
+        content: 'Klicken Sie auf „Preisliste hochladen“ und fügen Sie Ihre Preisliste als Tabelle, PDF, Word-Datei oder Foto hinzu. Wir lesen jeden Artikel mit Kategorie, Einheit und Preis aus und zeigen Ihnen einen Entwurf, meist in einer Minute, immer innerhalb von 24 Stunden. Sie können das Fenster solange schließen: Ein Hinweis auf der Katalogseite meldet, wenn er bereit ist. Prüfen Sie Namen, Einheiten und Preise, entfernen Sie Unerwünschtes und klicken Sie auf „Zum Katalog hinzufügen“. Nichts wird ohne Ihre Bestätigung hinzugefügt.',
+        tip: 'Enthält Ihr Katalog noch die CueQuote-Referenzartikel, setzen Sie den Haken bei „CueQuote-Referenzartikel entfernen, die diese Liste nicht ersetzt“, damit nur Ihre eigenen Preise bleiben.',
+      },
+      {
         title: 'Ersten Artikel hinzufügen',
         content: 'Klicken Sie auf "Artikel hinzufügen" (oder die "+"-Schaltfläche). Geben Sie den Artikelnamen ein (z. B. "Sennheiser EW-D Lavaliermikrofon"), wählen Sie eine Kategorie (Audio), die Standardeinheit (Stk., Tag, Set, qm, Meter, Event, Fahrt) und den Standardmietpreis. Dies ist der Preis, den die KI verwendet, wenn sie diesen Artikel in ein Angebot aufnimmt.',
         tip: 'Verwenden Sie konkrete Modellbezeichnungen. "Sennheiser EW-D Lavalier" ist besser als "Funkmikrofon" — es zeigt Kunden, dass Sie hochwertiges Equipment haben.',

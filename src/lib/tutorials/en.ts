@@ -185,6 +185,11 @@ export const TUTORIALS_EN: Tutorial[] = [
         content: 'Click "Catalog" in the sidebar. You\'ll see your equipment list organized by category. A new AV company starts with a starter catalog priced at CueQuote reference prices for its market, each marked "Reference price", so you can generate and send a first proposal straight away. Change any price to your own rate and its label disappears; from then on the AI quotes your price.',
       },
       {
+        title: 'Let us load your price list',
+        content: 'Click "Upload price list" and add your price list as a spreadsheet, PDF, Word file or photo. We pick out every item, its category, unit and price, and show you a draft, usually within a minute and always within 24 hours. You can close the window meanwhile: a banner on the Catalog page tells you when it\'s ready. Check the names, units and prices, untick anything you don\'t want, and click "Add to catalogue". Nothing is added until you confirm.',
+        tip: 'If your catalog still holds the CueQuote reference items, tick "Remove the CueQuote reference items this list doesn\'t replace" so only your own prices remain.',
+      },
+      {
         title: 'Add your first item',
         content: 'Click "Add Item" (or the "+" button). Fill in the item name (e.g., "Sennheiser EW-D Lapel Microphone"), select a category (Audio), choose the default unit (pcs, day, set, sqm, meter, event, trip), and enter your default rental price. This is the price the AI will use when it includes this item in a proposal.',
         tip: 'Use specific model names. "Sennheiser EW-D Lapel" is better than "Wireless Mic" — it shows clients you have quality gear.',

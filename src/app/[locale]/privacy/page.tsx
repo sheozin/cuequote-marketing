@@ -67,7 +67,7 @@ const SECTIONS = [
   {
     id: "ai-content",
     title: "5. AI-Generated Content",
-    content: `When you generate proposals using CueQuote's AI features, your event descriptions are sent to our AI provider (Anthropic) for processing. We do not store or use your event descriptions for training AI models. Generated proposals are stored in your account and accessible only to you and anyone you share them with.`,
+    content: `When you generate proposals using CueQuote's AI features, your event descriptions are sent to our AI provider (Anthropic) for processing. We do not store or use your event descriptions for training AI models. If you upload a price list to load your catalogue, its text is sent to the same provider to extract the items, kept only until you confirm or discard the import and deleted from our servers a day after that (and after 30 days at the latest), and never used for training. Generated proposals are stored in your account and accessible only to you and anyone you share them with.`,
   },
   {
     id: "cookies",

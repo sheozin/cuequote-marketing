@@ -185,6 +185,11 @@ export const TUTORIALS_PL: Tutorial[] = [
         content: 'Kliknij „Katalog” na pasku bocznym. Zobaczysz listę sprzętu pogrupowaną według kategorii. Nowa firma AV zaczyna z katalogiem startowym wycenionym według cen referencyjnych CueQuote dla swojego rynku, każda oznaczona jako „Cena referencyjna”, więc możesz od razu wygenerować i wysłać pierwszą ofertę. Zmień dowolną cenę na swoją stawkę, a oznaczenie zniknie; od tej pory AI używa Twojej ceny.',
       },
       {
+        title: 'Pozwól nam wczytać Twój cennik',
+        content: 'Kliknij „Wgraj cennik” i dodaj cennik jako arkusz, PDF, plik Word lub zdjęcie. Wyodrębnimy każdą pozycję, jej kategorię, jednostkę i cenę i pokażemy wersję roboczą, zwykle w minutę, zawsze w ciągu 24 godzin. W tym czasie możesz zamknąć okno: baner na stronie Katalog poinformuje, gdy będzie gotowe. Sprawdź nazwy, jednostki i ceny, odznacz zbędne pozycje i kliknij „Dodaj do katalogu”. Nic nie zostanie dodane bez Twojego zatwierdzenia.',
+        tip: 'Jeśli katalog nadal zawiera pozycje referencyjne CueQuote, zaznacz „Usuń pozycje referencyjne CueQuote, których ten cennik nie zastępuje”, aby zostały tylko Twoje ceny.',
+      },
+      {
         title: 'Dodaj pierwszą pozycję',
         content: 'Kliknij „Dodaj element” (lub przycisk „+”). Uzupełnij nazwę pozycji (np. „Sennheiser EW-D mikrofon krawatowy”), wybierz kategorię (Audio), wybierz domyślną jednostkę (szt., dzień, komplet, m², metr, wydarzenie, wyjazd) i wpisz domyślną cenę wynajmu. To cena, której AI użyje, gdy włączy tę pozycję do oferty.',
         tip: 'Używaj konkretnych nazw modeli. „Sennheiser EW-D krawatowy” jest lepsze niż „Mikrofon bezprzewodowy” — pokazuje klientom, że masz wysokiej jakości sprzęt.',

@@ -69,7 +69,7 @@ const ARTICLE_KEYS = [
   {
     id: "equipment-catalog",
     key: "equipmentCatalog",
-    contentKeys: ["content1", "content2", "content3"],
+    contentKeys: ["content1", "content2", "content3", "content4"],
     stepKeys: ["step1", "step2", "step3", "step4"],
   },
   {
