@@ -2027,7 +2027,8 @@
       "step2": "Starter (29 €/mois) : 10 générations IA/mois, devis illimités, 1 utilisateur, branding complet, gestion des clients, envoi des devis et des factures aux clients par e-mail, liens client en ligne (consulter, accepter et signer)",
       "step3": "Pro (79 €/mois) — 40 générations IA/mois, devis illimités, 5 utilisateurs, modèles personnalisés, support prioritaire",
       "step4": "Business (179 €/mois) — 120 générations IA/mois, devis illimités, 20 utilisateurs, accès API, support dédié",
-      "tip": "Vous pouvez changer de forfait à tout moment depuis Paramètres → Facturation. Les modifications prennent effet au début du prochain cycle de facturation."
+      "tip": "Vous pouvez changer de forfait à tout moment depuis Paramètres → Facturation. Les modifications prennent effet au début du prochain cycle de facturation.",
+      "content2": "Vous avez un code cadeau de CueQuote ? Saisissez-le à l'inscription, sous Vous avez un code cadeau ?, ou plus tard dans Facturation. Son offre démarre dès que votre espace de travail est configuré et dure le nombre de mois inclus dans le code ; ensuite, le compte repasse à l'offre Free, sauf si vous vous abonnez. Un code cadeau ne peut pas être ajouté à un espace qui paie déjà par carte."
     },
     "settings": {
       "title": "Paramètres",

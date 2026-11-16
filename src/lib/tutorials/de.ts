@@ -414,6 +414,10 @@ export const TUTORIALS_DE: Tutorial[] = [
         tip: 'Nach dem Upgrade erhalten Sie eine Bestätigungs-E-Mail mit Ihren Tarifdetails und Funktionen.',
       },
       {
+        title: 'Geschenkcode einlösen',
+        content: 'Sie haben einen Geschenkcode von CueQuote? Geben Sie ihn auf der Seite Abrechnung unter Geschenkcode ein und klicken Sie auf Einlösen, oder tragen Sie ihn bei der Registrierung unter Haben Sie einen Geschenkcode? ein. Der Tarif startet sofort, und die Karte zeigt, bis wann er läuft; danach wechselt das Konto zurück zu Free, sofern Sie kein Abo abschließen.',
+      },
+      {
         title: 'Abonnement verwalten',
         content: 'Nach Abschluss des Abos klicken Sie auf "Abrechnung verwalten", um das Stripe Customer Portal zu öffnen. Hier können Sie Ihre Zahlungsmethode aktualisieren, frühere Rechnungen einsehen und herunterladen, zwischen Tarifen wechseln oder Ihr Abonnement kündigen. Alle Änderungen werden zum Ende des aktuellen Abrechnungszeitraums wirksam.',
       },

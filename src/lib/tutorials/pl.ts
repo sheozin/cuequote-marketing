@@ -414,6 +414,10 @@ export const TUTORIALS_PL: Tutorial[] = [
         tip: 'Po ulepszeniu planu otrzymasz e-mail potwierdzający z danymi planu i funkcjami.',
       },
       {
+        title: 'Zrealizuj kod podarunkowy',
+        content: 'Masz kod podarunkowy od CueQuote? Wpisz go na stronie Rozliczenia w polu Kod podarunkowy i kliknij Zrealizuj albo podaj go podczas rejestracji w polu Masz kod podarunkowy?. Plan zaczyna działać od razu, a karta pokazuje datę jego zakończenia; potem konto wraca do planu Free, chyba że wykupisz subskrypcję.',
+      },
+      {
         title: 'Zarządzaj subskrypcją',
         content: 'Po subskrypcji kliknij „Zarządzaj rozliczeniami”, aby przejść do Portalu Klienta Stripe. Tutaj możesz zaktualizować metodę płatności, zobaczyć i pobrać dotychczasowe faktury, zmienić plan lub anulować subskrypcję. Wszystkie zmiany obowiązują od końca bieżącego cyklu rozliczeniowego.',
       },

@@ -2025,7 +2025,8 @@
       "step2": "Starter (29 €/Monat): 10 KI-Generierungen/Monat, unbegrenzt Angebote, 1 Benutzer, vollständiges Branding, Kundenverwaltung, Angebote und Rechnungen per E-Mail an Kunden senden, Online-Kundenlinks (ansehen, annehmen und unterschreiben)",
       "step3": "Pro (79 €/Monat) — 40 KI-Generierungen/Monat, unbegrenzt Angebote, 5 Benutzer, individuelle Vorlagen, Prioritäts-Support",
       "step4": "Business (179 €/Monat) — 120 KI-Generierungen/Monat, unbegrenzt Angebote, 20 Benutzer, API-Zugang, dedizierter Support",
-      "tip": "Sie können Ihren Plan jederzeit unter Einstellungen → Abrechnung ändern. Änderungen treten zu Beginn des nächsten Abrechnungszyklus in Kraft."
+      "tip": "Sie können Ihren Plan jederzeit unter Einstellungen → Abrechnung ändern. Änderungen treten zu Beginn des nächsten Abrechnungszyklus in Kraft.",
+      "content2": "Sie haben einen Geschenkcode von CueQuote? Geben Sie ihn bei der Registrierung unter Haben Sie einen Geschenkcode? ein oder später unter Abrechnung. Sein Tarif startet, sobald Ihr Arbeitsbereich eingerichtet ist, und läuft so viele Monate, wie der Code umfasst; danach wechselt das Konto zurück zu Free, sofern Sie kein Abo abschließen. Ein Arbeitsbereich, der bereits per Karte zahlt, kann keinen Geschenkcode hinzufügen."
     },
     "settings": {
       "title": "Einstellungen",

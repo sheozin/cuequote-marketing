@@ -414,6 +414,10 @@ export const TUTORIALS_FR: Tutorial[] = [
         tip: 'Vous recevrez un e-mail de confirmation détaillant votre plan et ses fonctionnalités après la mise à niveau.',
       },
       {
+        title: 'Utiliser un code cadeau',
+        content: 'Vous avez un code cadeau de CueQuote ? Saisissez-le sur la page Facturation sous Code cadeau et cliquez sur Utiliser, ou indiquez-le à l\'inscription sous Vous avez un code cadeau ?. L\'offre démarre immédiatement et la carte indique sa date de fin ; ensuite, le compte repasse à l\'offre Free, sauf si vous vous abonnez.',
+      },
+      {
         title: 'Gérez votre abonnement',
         content: 'Une fois abonné, cliquez sur « Gérer la facturation » pour accéder au Portail Client Stripe. Vous pouvez y mettre à jour votre moyen de paiement, consulter et télécharger les factures passées, changer de plan ou annuler votre abonnement. Toutes les modifications prennent effet à la fin de votre cycle de facturation en cours.',
       },

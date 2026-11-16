@@ -182,7 +182,7 @@ const ARTICLE_KEYS = [
   {
     id: "billing-plans",
     key: "billingPlans",
-    contentKeys: ["content1"],
+    contentKeys: ["content1", "content2"],
     stepKeys: ["step1", "step2", "step3", "step4"],
   },
   {
