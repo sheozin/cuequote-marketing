@@ -2820,7 +2820,7 @@
     "a4": "Export : dans l'application, allez dans Paramètres et choisissez Exporter mes données. Vous obtenez un fichier avec vos devis, factures et paiements, clients, catalogue et informations d'entreprise. Suppression : dans Paramètres, choisissez Supprimer le compte et saisissez votre e-mail pour confirmer. Vous êtes déconnecté immédiatement, et votre compte et ses données sont effacés après 30 jours, sauf ce que la loi nous oblige à conserver."
   },
   "featuresPage": {
-    "metaTitle": "Fonctionnalités CueQuote : chaque écran de l'app AV",
+    "metaTitle": "Fonctionnalités CueQuote : tous les écrans",
     "metaDescription": "Toutes les fonctionnalités CueQuote en vraies captures : devis, factures, fournisseurs, missions, stock, équipe technique et badges pour les sociétés AV.",
     "badge": "Toutes les fonctionnalités, vrais écrans",
     "heroTitle": "Tout ce que fait CueQuote, écran par écran",
