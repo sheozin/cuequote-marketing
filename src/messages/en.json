@@ -2829,5 +2829,166 @@
     "a3": "In a Supabase database hosted on AWS in Ireland (EU), encrypted at rest and in transit. We also use Vercel (hosting), Stripe (payments), Resend (email), Cloudflare (the security check at signup) and Anthropic (AI, which processes your event description to write the proposal, and the text of any price list you upload to turn it into catalogue items for you to review; that text is deleted from our servers a day after you confirm or discard the import).",
     "q4": "How do I export or delete my data?",
     "a4": "Export: in the app, go to Settings and choose Export My Data. You get a file with your proposals, invoices and payments, clients, catalogue and company details. Delete: in Settings, choose Delete Account and type your email to confirm. You are signed out at once, and your account and its data are erased after 30 days, except anything we must keep by law."
+  },
+  "featuresPage": {
+    "metaTitle": "CueQuote features: every screen of the AV app",
+    "metaDescription": "See every CueQuote feature in real screenshots: proposals, invoices, suppliers, jobs, inventory, crew and badges for AV and event production companies.",
+    "badge": "Every feature, real screens",
+    "heroTitle": "Everything CueQuote does, screen by screen",
+    "heroSubtitle": "Real screenshots from the app, refreshed every week. One place for quotes, invoices, suppliers, warehouse and crew.",
+    "ctaStart": "Start free",
+    "ctaPricing": "See pricing",
+    "planNote": "Some features need a paid plan. See Pricing for what each plan includes.",
+    "screenshotAlt": "CueQuote screenshot: {title}",
+    "ctaTitle": "Try it on your next quote",
+    "ctaSubtitle": "Start on the Free plan. No card needed.",
+    "sections": {
+      "quote": {
+        "title": "Quote and win",
+        "subtitle": "Build proposals fast and send them the way clients like to read them."
+      },
+      "invoice": {
+        "title": "Clients and invoicing",
+        "subtitle": "From accepted proposal to paid invoice without retyping anything."
+      },
+      "suppliers": {
+        "title": "Suppliers and subhire",
+        "subtitle": "Ask suppliers for prices, compare them and book with a signed order."
+      },
+      "warehouse": {
+        "title": "Jobs and warehouse",
+        "subtitle": "Know what you own, where it is and what each job still needs."
+      },
+      "crew": {
+        "title": "Crew",
+        "subtitle": "Book crew, send them the job details and print their badges."
+      },
+      "team": {
+        "title": "Team",
+        "subtitle": "Work on the same quotes and jobs with your colleagues."
+      }
+    },
+    "items": {
+      "dashboard": {
+        "title": "Dashboard",
+        "desc": "See your pipeline, won value and margins at a glance."
+      },
+      "proposals": {
+        "title": "Proposals",
+        "desc": "Track every proposal from draft to won, and see when a client opens it."
+      },
+      "proposal-editor": {
+        "title": "Proposal editor",
+        "desc": "Build a quote by department with quantity, days and price, or let AI draft the equipment list from your event brief."
+      },
+      "catalog": {
+        "title": "Equipment catalogue",
+        "desc": "Keep your gear and crew prices in one catalogue, or upload your existing price list and CueQuote imports it."
+      },
+      "templates": {
+        "title": "Quote templates",
+        "desc": "Start a new proposal from a ready-made template instead of a blank page."
+      },
+      "proposal-terms": {
+        "title": "Terms and payment schedule",
+        "desc": "Set what is and is not included and your deposit terms once, and reuse them on every proposal."
+      },
+      "risk-plan": {
+        "title": "Risk plan",
+        "desc": "Show the client you have planned for what can go wrong, printed on the proposal."
+      },
+      "client-proposal": {
+        "title": "Online proposal for your client",
+        "desc": "Send a branded online proposal your client can read on any device and accept online."
+      },
+      "clients": {
+        "title": "Clients",
+        "desc": "Keep every client and their contacts in one list."
+      },
+      "client-detail": {
+        "title": "Client page",
+        "desc": "See the full history and value of a client in one place."
+      },
+      "invoices": {
+        "title": "Invoices",
+        "desc": "Invoice straight from a won proposal and see at a glance what is paid and what is overdue."
+      },
+      "invoice-editor": {
+        "title": "Payments on invoices",
+        "desc": "Record payments as they arrive and the balance and status update themselves."
+      },
+      "proforma": {
+        "title": "Proforma invoices",
+        "desc": "Send a proforma first and convert it into the VAT invoice with one click."
+      },
+      "suppliers": {
+        "title": "Suppliers",
+        "desc": "Keep subhire partners in one list and see whose insurance has lapsed."
+      },
+      "supplier-quotes": {
+        "title": "Supplier quote requests",
+        "desc": "Chase supplier prices in one inbox."
+      },
+      "supplier-compare": {
+        "title": "Compare supplier quotes",
+        "desc": "Ask several suppliers for prices, compare them side by side and award the job without leaving the proposal."
+      },
+      "work-order": {
+        "title": "Work orders suppliers sign",
+        "desc": "Book subhire with a signed order instead of an email thread."
+      },
+      "jobs": {
+        "title": "Jobs",
+        "desc": "See every job coming up and how far the warehouse is with each one."
+      },
+      "job-pack-list": {
+        "title": "Pack lists",
+        "desc": "Scan gear out and back in against the job, and see what is short before the truck leaves."
+      },
+      "job-without-quote": {
+        "title": "Jobs without a quote",
+        "desc": "Track loans, repairs and internal jobs that never had a quote."
+      },
+      "inventory": {
+        "title": "Inventory register",
+        "desc": "Know what you own and where it is: available, out, in repair or lost."
+      },
+      "inventory-availability": {
+        "title": "Availability calendar",
+        "desc": "Check gear is free before you say yes to a date."
+      },
+      "inventory-unit": {
+        "title": "Unit history",
+        "desc": "Scan any unit and see where it has been: jobs, damage and repairs."
+      },
+      "crew": {
+        "title": "Crew list",
+        "desc": "Keep your crew list, rates and paperwork in one place."
+      },
+      "crew-events": {
+        "title": "Crew events",
+        "desc": "Plan crew for events that are not tied to a single quote."
+      },
+      "crew-badges": {
+        "title": "Crew roster and badges",
+        "desc": "Print crew badges with zones and colours for any label printer."
+      },
+      "crew-sheet": {
+        "title": "Crew sheet",
+        "desc": "Send every crew member the job details with one link they open on their phone."
+      },
+      "crew-contracts": {
+        "title": "Crew contracts and NDAs",
+        "desc": "Send crew a contract or NDA to sign online."
+      },
+      "badge-settings": {
+        "title": "Badge settings",
+        "desc": "Design crew and guest badges once and print them for every event."
+      },
+      "team": {
+        "title": "Team",
+        "desc": "Invite colleagues as admin, sales or viewer."
+      }
+    }
   }
 }

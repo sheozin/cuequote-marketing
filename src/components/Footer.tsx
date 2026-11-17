@@ -8,7 +8,7 @@ export default async function Footer() {
     {
       title: t("product"),
       links: [
-        { label: t("features"), href: "/#features" },
+        { label: t("features"), href: "/features" },
         { label: t("howItWorks"), href: "/#how-it-works" },
         { label: t("forAvCompanies"), href: "/for-av-companies" },
         { label: t("forEventPlanners"), href: "/for-event-planners" },

@@ -16,7 +16,7 @@ export default function Nav() {
   const [showSolutions, setShowSolutions] = useState(false);
 
   const links = [
-    { label: t("features"), href: "/#features" },
+    { label: t("features"), href: "/features" },
     { label: t("pricing"), href: "/pricing" },
     { label: t("about"), href: "/about" },
     { label: t("contact"), href: "/contact" },
@@ -36,7 +36,8 @@ export default function Nav() {
         height: 64,
       }}>
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 2 }}>
+        {/* dir="ltr": a flex row reverses in Arabic and read "QuoteCue". */}
+        <Link href="/" dir="ltr" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 2 }}>
           <span style={{ fontFamily: "var(--font-dm-sans)", fontWeight: 800, fontSize: 24, color: "#08172E" }}>
             Cue
           </span>
@@ -47,7 +48,7 @@ export default function Nav() {
 
         {/* Desktop links */}
         <div style={{ display: "flex", alignItems: "center", gap: 28 }} className="hide-mobile">
-          <Link href="/#features" style={{ textDecoration: "none", fontSize: 14, fontWeight: 500, color: "#4b5563" }}>
+          <Link href="/features" style={{ textDecoration: "none", fontSize: 14, fontWeight: 500, color: "#4b5563" }}>
             {t("features")}
           </Link>
 
@@ -183,7 +184,7 @@ export default function Nav() {
           padding: "16px 24px", borderTop: "1px solid #e5e7eb",
           display: "flex", flexDirection: "column", gap: 16,
         }}>
-          <Link href="/#features" onClick={() => setOpen(false)} style={{ textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#08172E" }}>{t("features")}</Link>
+          <Link href="/features" onClick={() => setOpen(false)} style={{ textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#08172E" }}>{t("features")}</Link>
           <Link href="/for-av-companies" onClick={() => setOpen(false)} style={{ textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#08172E" }}>{t("forAv")}</Link>
           <Link href="/for-event-planners" onClick={() => setOpen(false)} style={{ textDecoration: "none", fontSize: 16, fontWeight: 500, color: "#08172E", display: "flex", alignItems: "center", gap: 6 }}>
             {t("forPlanners")}

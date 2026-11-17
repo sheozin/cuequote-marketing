@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { path: '', changeFrequency: 'weekly' as const, priority: 1 },
     { path: '/pricing', changeFrequency: 'monthly' as const, priority: 0.8 },
+    { path: '/features', changeFrequency: 'weekly' as const, priority: 0.8 },
     { path: '/about', changeFrequency: 'monthly' as const, priority: 0.7 },
     { path: '/blog', changeFrequency: 'weekly' as const, priority: 0.7 },
     { path: '/for-av-companies', changeFrequency: 'monthly' as const, priority: 0.8 },

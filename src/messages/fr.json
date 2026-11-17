@@ -2818,5 +2818,166 @@
     "a3": "Dans une base de données Supabase hébergée chez AWS en Irlande (UE), chiffrée au repos et en transit. Nous utilisons aussi Vercel (hébergement), Stripe (paiements), Resend (e-mail), Cloudflare (contrôle de sécurité à l'inscription) et Anthropic (IA, qui traite la description de votre événement pour rédiger le devis, ainsi que le texte de toute liste de prix importée pour en faire des articles de catalogue à vérifier ; ce texte est supprimé de nos serveurs un jour après la confirmation ou l'abandon de l'import).",
     "q4": "Comment exporter ou supprimer mes données ?",
     "a4": "Export : dans l'application, allez dans Paramètres et choisissez Exporter mes données. Vous obtenez un fichier avec vos devis, factures et paiements, clients, catalogue et informations d'entreprise. Suppression : dans Paramètres, choisissez Supprimer le compte et saisissez votre e-mail pour confirmer. Vous êtes déconnecté immédiatement, et votre compte et ses données sont effacés après 30 jours, sauf ce que la loi nous oblige à conserver."
+  },
+  "featuresPage": {
+    "metaTitle": "Fonctionnalités CueQuote : chaque écran de l'app AV",
+    "metaDescription": "Toutes les fonctionnalités CueQuote en vraies captures : devis, factures, fournisseurs, missions, stock, équipe technique et badges pour les sociétés AV.",
+    "badge": "Toutes les fonctionnalités, vrais écrans",
+    "heroTitle": "Tout ce que fait CueQuote, écran par écran",
+    "heroSubtitle": "De vraies captures de l'application, actualisées chaque semaine. Devis, factures, fournisseurs, stock et équipe au même endroit.",
+    "ctaStart": "Commencer gratuitement",
+    "ctaPricing": "Voir les tarifs",
+    "planNote": "Certaines fonctionnalités nécessitent un forfait payant. Consultez les tarifs pour le détail de chaque forfait.",
+    "screenshotAlt": "Capture d'écran CueQuote : {title}",
+    "ctaTitle": "Essayez-le sur votre prochain devis",
+    "ctaSubtitle": "Commencez avec le forfait Free. Sans carte bancaire.",
+    "sections": {
+      "quote": {
+        "title": "Devis",
+        "subtitle": "Créez vos devis vite et envoyez-les comme les clients aiment les lire."
+      },
+      "invoice": {
+        "title": "Clients et facturation",
+        "subtitle": "Du devis accepté à la facture payée, sans rien ressaisir."
+      },
+      "suppliers": {
+        "title": "Fournisseurs et sous-location",
+        "subtitle": "Demandez des prix aux fournisseurs, comparez-les et réservez avec un bon de commande signé."
+      },
+      "warehouse": {
+        "title": "Missions et entrepôt",
+        "subtitle": "Sachez ce que vous possédez, où il se trouve et ce qu'il manque à chaque mission."
+      },
+      "crew": {
+        "title": "Équipe technique",
+        "subtitle": "Réservez vos techniciens, envoyez-leur les détails et imprimez leurs badges."
+      },
+      "team": {
+        "title": "Équipe",
+        "subtitle": "Travaillez sur les mêmes devis et missions avec vos collègues."
+      }
+    },
+    "items": {
+      "dashboard": {
+        "title": "Tableau de bord",
+        "desc": "Voyez votre pipeline, le chiffre gagné et vos marges en un coup d'œil."
+      },
+      "proposals": {
+        "title": "Devis",
+        "desc": "Suivez chaque devis du brouillon à la signature et voyez quand le client l'ouvre."
+      },
+      "proposal-editor": {
+        "title": "Éditeur de devis",
+        "desc": "Construisez un devis par département avec quantité, jours et prix, ou laissez l'IA rédiger la liste de matériel à partir du brief."
+      },
+      "catalog": {
+        "title": "Catalogue de matériel",
+        "desc": "Gardez vos prix de matériel et de personnel dans un catalogue, ou importez votre grille tarifaire existante."
+      },
+      "templates": {
+        "title": "Modèles de devis",
+        "desc": "Démarrez un devis à partir d'un modèle prêt à l'emploi plutôt que d'une page blanche."
+      },
+      "proposal-terms": {
+        "title": "Conditions et échéancier",
+        "desc": "Définissez une fois ce qui est inclus ou non et vos conditions d'acompte, puis réutilisez-les sur chaque devis."
+      },
+      "risk-plan": {
+        "title": "Plan de risques",
+        "desc": "Montrez au client que vous avez prévu ce qui peut mal tourner, directement dans le devis."
+      },
+      "client-proposal": {
+        "title": "Devis en ligne pour le client",
+        "desc": "Envoyez un devis en ligne à vos couleurs que le client lit sur tout appareil et accepte en ligne."
+      },
+      "clients": {
+        "title": "Clients",
+        "desc": "Tous vos clients et leurs contacts dans une seule liste."
+      },
+      "client-detail": {
+        "title": "Fiche client",
+        "desc": "L'historique complet et la valeur d'un client au même endroit."
+      },
+      "invoices": {
+        "title": "Factures",
+        "desc": "Facturez directement depuis un devis gagné et voyez ce qui est payé et ce qui est en retard."
+      },
+      "invoice-editor": {
+        "title": "Paiements sur facture",
+        "desc": "Enregistrez les paiements à réception, le solde et le statut se mettent à jour seuls."
+      },
+      "proforma": {
+        "title": "Factures proforma",
+        "desc": "Envoyez d'abord une proforma et convertissez-la en facture en un clic."
+      },
+      "suppliers": {
+        "title": "Fournisseurs",
+        "desc": "Vos partenaires de sous-location dans une liste, avec les assurances expirées signalées."
+      },
+      "supplier-quotes": {
+        "title": "Demandes de prix fournisseurs",
+        "desc": "Suivez les prix des fournisseurs dans une seule boîte de réception."
+      },
+      "supplier-compare": {
+        "title": "Comparer les offres fournisseurs",
+        "desc": "Consultez plusieurs fournisseurs, comparez les prix côte à côte et attribuez la mission sans quitter le devis."
+      },
+      "work-order": {
+        "title": "Bons de commande signés",
+        "desc": "Réservez la sous-location avec un bon signé plutôt qu'un fil d'e-mails."
+      },
+      "jobs": {
+        "title": "Missions",
+        "desc": "Voyez toutes les missions à venir et l'avancement de l'entrepôt pour chacune."
+      },
+      "job-pack-list": {
+        "title": "Listes de colisage",
+        "desc": "Scannez le matériel à la sortie et au retour, et voyez ce qui manque avant le départ du camion."
+      },
+      "job-without-quote": {
+        "title": "Missions sans devis",
+        "desc": "Suivez prêts, réparations et missions internes sans devis."
+      },
+      "inventory": {
+        "title": "Registre du stock",
+        "desc": "Sachez ce que vous possédez et où il est : disponible, sorti, en réparation ou perdu."
+      },
+      "inventory-availability": {
+        "title": "Calendrier de disponibilité",
+        "desc": "Vérifiez que le matériel est libre avant de confirmer une date."
+      },
+      "inventory-unit": {
+        "title": "Historique d'un appareil",
+        "desc": "Scannez un appareil et voyez où il est passé : missions, dégâts et réparations."
+      },
+      "crew": {
+        "title": "Liste des techniciens",
+        "desc": "Techniciens, tarifs et documents au même endroit."
+      },
+      "crew-events": {
+        "title": "Événements équipe",
+        "desc": "Planifiez l'équipe pour des événements qui ne dépendent pas d'un seul devis."
+      },
+      "crew-badges": {
+        "title": "Équipe et badges",
+        "desc": "Imprimez des badges avec zones et couleurs sur n'importe quelle imprimante d'étiquettes."
+      },
+      "crew-sheet": {
+        "title": "Feuille de mission",
+        "desc": "Envoyez à chaque technicien les détails de la mission via un lien qu'il ouvre sur son téléphone."
+      },
+      "crew-contracts": {
+        "title": "Contrats et NDA",
+        "desc": "Envoyez un contrat ou un NDA à signer en ligne."
+      },
+      "badge-settings": {
+        "title": "Réglages des badges",
+        "desc": "Concevez une fois les badges équipe et invités et imprimez-les à chaque événement."
+      },
+      "team": {
+        "title": "Équipe",
+        "desc": "Invitez vos collègues comme administrateur, commercial ou lecteur."
+      }
+    }
   }
 }

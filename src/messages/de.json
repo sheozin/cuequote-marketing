@@ -2816,5 +2816,166 @@
     "a3": "In einer Supabase-Datenbank bei AWS in Irland (EU), verschlüsselt im Ruhezustand und bei der Übertragung. Außerdem nutzen wir Vercel (Hosting), Stripe (Zahlungen), Resend (E-Mail), Cloudflare (Sicherheitsprüfung bei der Registrierung) und Anthropic (KI, die Ihre Veranstaltungsbeschreibung verarbeitet, um das Angebot zu schreiben, sowie den Text einer hochgeladenen Preisliste, um daraus Katalogartikel zu Ihrer Prüfung zu machen; dieser Text wird einen Tag nach Bestätigen oder Verwerfen des Imports von unseren Servern gelöscht).",
     "q4": "Wie exportiere oder lösche ich meine Daten?",
     "a4": "Export: Gehen Sie in der App zu Einstellungen und wählen Sie Meine Daten exportieren. Sie erhalten eine Datei mit Ihren Angeboten, Rechnungen und Zahlungen, Kunden, Ihrem Katalog und Ihren Firmendaten. Löschen: Wählen Sie in den Einstellungen Konto löschen und geben Sie zur Bestätigung Ihre E-Mail-Adresse ein. Sie werden sofort abgemeldet, und Ihr Konto und seine Daten werden nach 30 Tagen gelöscht, außer was wir gesetzlich aufbewahren müssen."
+  },
+  "featuresPage": {
+    "metaTitle": "CueQuote Funktionen: jeder Bildschirm der AV-App",
+    "metaDescription": "Alle CueQuote Funktionen in echten Screenshots: Angebote, Rechnungen, Lieferanten, Aufträge, Lager, Crew und Badges für AV- und Eventtechnikfirmen.",
+    "badge": "Alle Funktionen, echte Screens",
+    "heroTitle": "Alles, was CueQuote kann, Bildschirm für Bildschirm",
+    "heroSubtitle": "Echte Screenshots aus der App, jede Woche aktualisiert. Angebote, Rechnungen, Lieferanten, Lager und Crew an einem Ort.",
+    "ctaStart": "Kostenlos starten",
+    "ctaPricing": "Preise ansehen",
+    "planNote": "Einige Funktionen erfordern einen kostenpflichtigen Plan. Was jeder Plan enthält, steht unter Preise.",
+    "screenshotAlt": "CueQuote Screenshot: {title}",
+    "ctaTitle": "Testen Sie es beim nächsten Angebot",
+    "ctaSubtitle": "Starten Sie mit dem Free-Plan. Keine Karte nötig.",
+    "sections": {
+      "quote": {
+        "title": "Angebote",
+        "subtitle": "Angebote schnell erstellen und so senden, wie Kunden sie gern lesen."
+      },
+      "invoice": {
+        "title": "Kunden und Rechnungen",
+        "subtitle": "Vom angenommenen Angebot zur bezahlten Rechnung, ohne etwas abzutippen."
+      },
+      "suppliers": {
+        "title": "Lieferanten und Zumiete",
+        "subtitle": "Preise bei Lieferanten anfragen, vergleichen und mit unterschriebenem Auftrag buchen."
+      },
+      "warehouse": {
+        "title": "Aufträge und Lager",
+        "subtitle": "Wissen, was Sie besitzen, wo es ist und was jeder Auftrag noch braucht."
+      },
+      "crew": {
+        "title": "Crew",
+        "subtitle": "Crew buchen, ihr die Auftragsdetails senden und Badges drucken."
+      },
+      "team": {
+        "title": "Team",
+        "subtitle": "Mit Kollegen an denselben Angeboten und Aufträgen arbeiten."
+      }
+    },
+    "items": {
+      "dashboard": {
+        "title": "Dashboard",
+        "desc": "Pipeline, gewonnenen Umsatz und Margen auf einen Blick sehen."
+      },
+      "proposals": {
+        "title": "Angebote",
+        "desc": "Jedes Angebot vom Entwurf bis zum Auftrag verfolgen und sehen, wann der Kunde es öffnet."
+      },
+      "proposal-editor": {
+        "title": "Angebotseditor",
+        "desc": "Ein Angebot nach Gewerken mit Menge, Tagen und Preis erstellen oder die Geräteliste von der KI aus dem Event-Briefing entwerfen lassen."
+      },
+      "catalog": {
+        "title": "Gerätekatalog",
+        "desc": "Preise für Technik und Crew in einem Katalog pflegen oder die bestehende Preisliste hochladen, CueQuote importiert sie."
+      },
+      "templates": {
+        "title": "Angebotsvorlagen",
+        "desc": "Ein neues Angebot mit einer fertigen Vorlage beginnen statt mit einer leeren Seite."
+      },
+      "proposal-terms": {
+        "title": "Bedingungen und Zahlungsplan",
+        "desc": "Leistungsumfang, Ausschlüsse und Anzahlung einmal festlegen und in jedem Angebot wiederverwenden."
+      },
+      "risk-plan": {
+        "title": "Risikoplan",
+        "desc": "Dem Kunden zeigen, dass Sie geplant haben, was schiefgehen kann, direkt im Angebot."
+      },
+      "client-proposal": {
+        "title": "Online-Angebot für den Kunden",
+        "desc": "Ein Online-Angebot mit Ihrem Branding senden, das der Kunde auf jedem Gerät lesen und online annehmen kann."
+      },
+      "clients": {
+        "title": "Kunden",
+        "desc": "Alle Kunden und ihre Kontakte in einer Liste."
+      },
+      "client-detail": {
+        "title": "Kundenseite",
+        "desc": "Die gesamte Historie und den Wert eines Kunden an einem Ort sehen."
+      },
+      "invoices": {
+        "title": "Rechnungen",
+        "desc": "Direkt aus einem gewonnenen Angebot abrechnen und sofort sehen, was bezahlt und was überfällig ist."
+      },
+      "invoice-editor": {
+        "title": "Zahlungen auf Rechnungen",
+        "desc": "Zahlungen bei Eingang erfassen, Saldo und Status aktualisieren sich selbst."
+      },
+      "proforma": {
+        "title": "Proforma-Rechnungen",
+        "desc": "Zuerst eine Proforma senden und sie mit einem Klick in die Rechnung umwandeln."
+      },
+      "suppliers": {
+        "title": "Lieferanten",
+        "desc": "Zumietpartner in einer Liste führen und sehen, wessen Versicherung abgelaufen ist."
+      },
+      "supplier-quotes": {
+        "title": "Lieferantenanfragen",
+        "desc": "Lieferantenpreise in einem Posteingang nachverfolgen."
+      },
+      "supplier-compare": {
+        "title": "Lieferantenangebote vergleichen",
+        "desc": "Mehrere Lieferanten anfragen, Preise nebeneinander vergleichen und den Auftrag vergeben, ohne das Angebot zu verlassen."
+      },
+      "work-order": {
+        "title": "Aufträge, die Lieferanten unterschreiben",
+        "desc": "Zumiete mit einem unterschriebenen Auftrag buchen statt per E-Mail-Verlauf."
+      },
+      "jobs": {
+        "title": "Aufträge",
+        "desc": "Alle anstehenden Aufträge sehen und wie weit das Lager mit jedem ist."
+      },
+      "job-pack-list": {
+        "title": "Packlisten",
+        "desc": "Technik beim Aus- und Einchecken gegen den Auftrag scannen und Fehlmengen sehen, bevor der LKW losfährt."
+      },
+      "job-without-quote": {
+        "title": "Aufträge ohne Angebot",
+        "desc": "Verleih, Reparaturen und interne Aufträge ohne Angebot verfolgen."
+      },
+      "inventory": {
+        "title": "Lagerbestand",
+        "desc": "Wissen, was Sie besitzen und wo es ist: verfügbar, unterwegs, in Reparatur oder verloren."
+      },
+      "inventory-availability": {
+        "title": "Verfügbarkeitskalender",
+        "desc": "Prüfen, ob Technik frei ist, bevor Sie einen Termin zusagen."
+      },
+      "inventory-unit": {
+        "title": "Gerätehistorie",
+        "desc": "Jedes Gerät scannen und sehen, wo es war: Aufträge, Schäden und Reparaturen."
+      },
+      "crew": {
+        "title": "Crewliste",
+        "desc": "Crew, Tagessätze und Unterlagen an einem Ort."
+      },
+      "crew-events": {
+        "title": "Crew-Events",
+        "desc": "Crew für Events planen, die nicht an ein einzelnes Angebot gebunden sind."
+      },
+      "crew-badges": {
+        "title": "Crew-Besetzung und Badges",
+        "desc": "Crew-Badges mit Zonen und Farben auf jedem Etikettendrucker drucken."
+      },
+      "crew-sheet": {
+        "title": "Crew-Sheet",
+        "desc": "Jedem Crewmitglied die Auftragsdetails mit einem Link senden, den es auf dem Handy öffnet."
+      },
+      "crew-contracts": {
+        "title": "Crew-Verträge und NDAs",
+        "desc": "Der Crew einen Vertrag oder ein NDA zur Online-Unterschrift senden."
+      },
+      "badge-settings": {
+        "title": "Badge-Einstellungen",
+        "desc": "Crew- und Gäste-Badges einmal gestalten und für jedes Event drucken."
+      },
+      "team": {
+        "title": "Team",
+        "desc": "Kollegen als Admin, Vertrieb oder Leser einladen."
+      }
+    }
   }
 }

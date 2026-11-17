@@ -50,10 +50,8 @@ const nextConfig: NextConfig = {
         destination: "https://cuequote.com/:path*",
         permanent: true,
       },
-      // /features is not a standalone page — features live as a section on the homepage.
-      // Catch stale inbound links (external sites, old social shares, mistyped app-side
-      // layout links) and send them to the homepage features anchor.
-      { source: "/features", destination: "/#features", permanent: true },
+      // /features was redirected to /#features (a463b39) while no page existed.
+      // It is a real page since 2026-11-17 (every feature with a live screenshot).
       // Blog slug renames — old non-English slugs → new English slugs
       // Merged 2026-08-09, not renamed: this post and av-proposal-template-guide
       // were near-duplicates targeting "AV proposal template", and the query sat
