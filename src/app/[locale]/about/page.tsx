@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const pagePath = '/about';
   const title = t("metaTitle", { defaultValue: "About" });
-  const description = t("metaDescription", { defaultValue: "CueQuote is built by AVE Event Solutions — a team that has been in the AV production trenches. We built the tool we wished existed." });
+  const description = t("metaDescription", { defaultValue: "CueQuote is built by AVE Events, a team that has been in the AV production trenches. We built the tool we wished existed." });
   return {
     title,
     description,
@@ -147,7 +147,7 @@ export default async function AboutPage() {
               { label: t("statIndustry", { defaultValue: "Industry" }), value: t("statIndustryValue", { defaultValue: "AV & Event Production" }) },
               { label: t("statEventsQuoted", { defaultValue: "Events Quoted" }), value: "10,000+" },
               { label: t("statCountries", { defaultValue: "Countries Served" }), value: "15+" },
-              { label: t("statTeam", { defaultValue: "Team" }), value: "AVE Event Solutions" },
+              { label: t("statTeam", { defaultValue: "Team" }), value: "AVE Events" },
             ].map((stat, i) => (
               <div key={i} style={{
                 display: "flex", justifyContent: "space-between", alignItems: "center",

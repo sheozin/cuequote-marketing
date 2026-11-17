@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const pagePath = '/terms';
   const title = t("metaTitle", { defaultValue: "Terms of Service" });
-  const description = t("metaDescription", { defaultValue: "CueQuote terms of service — the rules and guidelines for using our platform." });
+  const description = t("metaDescription", { defaultValue: "CueQuote terms of service: the rules and guidelines for using our platform." });
   return {
     title,
     description,
@@ -47,7 +47,7 @@ const SECTIONS = [
   {
     id: "acceptance",
     title: "1. Acceptance of Terms",
-    content: `By accessing or using CueQuote ("the Service"), you agree to be bound by these Terms of Service. If you are using CueQuote on behalf of an organization, you represent that you have authority to bind that organization to these terms.`,
+    content: `CueQuote ("the Service") is a product of AVE Events, ul. Hoża 86/410, Warszawa, Poland ("AVE Events", "we", "us"). By accessing or using the Service, you agree to be bound by these Terms of Service. If you are using CueQuote on behalf of an organization, you represent that you have authority to bind that organization to these terms.`,
   },
   {
     id: "description",
@@ -62,7 +62,7 @@ const SECTIONS = [
   {
     id: "billing",
     title: "4. Subscriptions & Billing",
-    content: `CueQuote offers free and paid plans. Paid subscriptions are billed monthly or annually via Stripe. You may cancel at any time — cancellation takes effect at the end of the current billing period. Refunds are not provided for partial billing periods. We reserve the right to change pricing with 30 days notice.`,
+    content: `CueQuote offers free and paid plans. Paid subscriptions are billed monthly or annually via Stripe. You may cancel at any time; cancellation takes effect at the end of the current billing period. Refunds are not provided for partial billing periods. We reserve the right to change pricing with 30 days notice.`,
   },
   {
     id: "your-data",
@@ -102,7 +102,7 @@ const SECTIONS = [
   {
     id: "governing-law",
     title: "12. Governing Law",
-    content: `These terms are governed by the laws of the European Union and the applicable member state where AVE Event Solutions is established. Any disputes shall be resolved in the courts of that jurisdiction.`,
+    content: `These terms are governed by the laws of Poland. Disputes shall be resolved by the courts competent for the registered office of AVE Events in Warsaw, unless mandatory law gives you the right to bring a claim elsewhere.`,
   },
   {
     id: "contact",
@@ -140,7 +140,7 @@ export default function TermsPage() {
             The rules and guidelines for using CueQuote.
           </p>
           <p style={{ fontSize: 14, color: "#6b7280" }}>
-            Last updated: March 16, 2026
+            Last updated: November 17, 2026
           </p>
         </div>
       </section>
