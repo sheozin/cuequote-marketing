@@ -2515,11 +2515,133 @@
   },
   "privacy": {
     "metaTitle": "Polityka prywatności",
-    "metaDescription": "Jak CueQuote przetwarza Twoje dane."
+    "metaDescription": "Jak CueQuote przetwarza Twoje dane.",
+    "page": {
+      "badge": "Polityka prywatności",
+      "heroTitle": "Twoja prywatność jest dla nas ważna",
+      "heroSubtitle": "Jak zbieramy, wykorzystujemy i chronimy Twoje dane w CueQuote.",
+      "lastUpdated": "Ostatnia aktualizacja: {date}",
+      "contents": "Spis treści",
+      "ctaTitle": "Masz pytania dotyczące prywatności?",
+      "ctaSubtitle": "Traktujemy ochronę Twoich danych poważnie. Skontaktuj się z nami w dowolnym momencie.",
+      "ctaButton": "Skontaktuj się z zespołem ds. prywatności",
+      "languageNote": "To tłumaczenie zostało udostępnione dla wygody. W przypadku rozbieżności z wersją angielską obowiązuje wersja angielska."
+    },
+    "sections": {
+      "information-we-collect": {
+        "title": "1. Jakie informacje zbieramy",
+        "content": "Podczas korzystania z CueQuote zbieramy informacje przekazywane nam bezpośrednio, takie jak imię i nazwisko, adres e-mail, nazwa firmy oraz dane ofert. Automatycznie zbieramy również dane o korzystaniu z usługi, w tym rodzaj przeglądarki, informacje o urządzeniu, adres IP oraz sposób korzystania z funkcji aplikacji."
+      },
+      "how-we-use": {
+        "title": "2. W jaki sposób i na jakiej podstawie wykorzystujemy Twoje informacje",
+        "content": "Wykorzystujemy Twoje informacje, aby świadczyć usługę CueQuote, przetwarzać płatności, wysyłać wiadomości transakcyjne (potwierdzenia konta, powiadomienia o ofertach) oraz informować Cię o aktualizacjach produktu. Nigdy nie sprzedajemy Twoich danych osobowych. Podstawami prawnymi przetwarzania są: wykonanie zawartej z Tobą umowy (Twoje konto, oferty, faktury i rozliczenia); obowiązki prawne (przechowywanie faktur i dokumentacji podatkowej); nasz prawnie uzasadniony interes (zapewnienie bezpieczeństwa usługi i zapobieganie nadużyciom, ulepszanie CueQuote, wiadomości e-mail o aktualizacjach produktu, z których możesz się wypisać, oraz kontakt z firmami w sposób opisany w punkcie 6); a także Twoja zgoda, jeżeli o nią prosimy."
+      },
+      "data-storage": {
+        "title": "3. Przechowywanie i bezpieczeństwo danych",
+        "content": "Twoje dane są przechowywane w bazie danych Supabase hostowanej w AWS w Irlandii (UE) i są szyfrowane zarówno w spoczynku, jak i podczas przesyłania. Dane ofert, informacje o klientach oraz katalogi sprzętu są chronione zabezpieczeniami na poziomie wierszy (row-level security), dzięki czemu każda firma ma dostęp wyłącznie do własnych rekordów. Stosujemy powszechnie uznane w branży środki bezpieczeństwa w celu ochrony Twoich informacji."
+      },
+      "third-party": {
+        "title": "4. Usługi podmiotów trzecich i przekazywanie danych poza UE",
+        "content": "CueQuote korzysta z następujących dostawców usług: Supabase (baza danych i uwierzytelnianie), Stripe (przetwarzanie płatności), Vercel (hosting), Resend (dostarczanie wiadomości e-mail), Anthropic (generowanie ofert z użyciem AI) oraz Cloudflare (weryfikacja bezpieczeństwa na stronie rejestracji oraz obsługa poczty przychodzącej). Każdy z nich przetwarza dane wyłącznie w celu świadczenia na naszą rzecz swojej usługi. Stripe, Vercel, Resend, Anthropic i Cloudflare mają siedzibę w Stanach Zjednoczonych, w związku z czym niektóre dane mogą być tam przetwarzane. Takie przekazanie danych jest chronione zabezpieczeniami przewidzianymi w umowach powierzenia przetwarzania danych zawartych z poszczególnymi dostawcami, takimi jak standardowe klauzule umowne Komisji Europejskiej lub ramy ochrony danych UE-USA (EU-US Data Privacy Framework)."
+      },
+      "ai-content": {
+        "title": "5. Treści generowane przez AI",
+        "content": "Gdy generujesz oferty za pomocą funkcji AI w CueQuote, opisy Twoich wydarzeń są przesyłane do naszego dostawcy AI (Anthropic) w celu przetworzenia. Nie przechowujemy opisów Twoich wydarzeń ani nie wykorzystujemy ich do trenowania modeli AI. Jeżeli przesyłasz cennik w celu załadowania katalogu, jego treść jest przesyłana do tego samego dostawcy w celu wyodrębnienia pozycji, przechowywana wyłącznie do momentu zatwierdzenia lub odrzucenia importu, usuwana z naszych serwerów dzień później (a najpóźniej po 30 dniach) i nigdy nie jest wykorzystywana do trenowania. Wygenerowane oferty są przechowywane na Twoim koncie i dostępne wyłącznie dla Ciebie oraz dla osób, którym je udostępnisz."
+      },
+      "business-contacts": {
+        "title": "6. Firmy, z którymi się kontaktujemy",
+        "content": "Czasami wysyłamy wiadomości e-mail do firm z branży audiowizualnej i eventowej, które nie są użytkownikami CueQuote, aby przedstawić im nasz produkt. Korzystamy z firmowych danych kontaktowych publikowanych przez samą firmę, takich jak adres podany na jej własnej stronie internetowej, odnalezionych za pośrednictwem publicznych katalogów firm. Przechowujemy nazwę firmy, adres kontaktowy oraz informację o tym, co zostało wysłane, na podstawie naszego prawnie uzasadnionego interesu polegającego na oferowaniu przydatnego narzędzia biznesowego. Każda taka wiadomość zawiera informację, jak zrezygnować z dalszych wiadomości: wystarczy odpowiedzieć „stop”, a nie wyślemy już do Ciebie żadnej wiadomości. Następnie przechowujemy ten adres wyłącznie na liście adresów wyłączonych z kontaktu, aby pozostał on wykluczony. Możesz również napisać na adres privacy@cuequote.com, aby zapytać, jakie dane posiadamy, lub zażądać ich usunięcia."
+      },
+      "cookies": {
+        "title": "7. Pliki cookie",
+        "content": "CueQuote używa niezbędnych plików cookie, aby utrzymać Twoje zalogowanie i obsługiwać Twoją sesję. Nasza strona internetowa mierzy odwiedziny za pomocą Vercel Web Analytics, które nie korzysta z plików cookie i nie identyfikuje poszczególnych odwiedzających. Możesz zarządzać plikami cookie w ustawieniach swojej przeglądarki."
+      },
+      "gdpr": {
+        "title": "8. Twoje prawa (RODO)",
+        "content": "Przysługuje Ci prawo dostępu do swoich danych osobowych, ich sprostowania, usunięcia lub przeniesienia, prawo wniesienia sprzeciwu wobec przetwarzania lub żądania jego ograniczenia, a także prawo do wycofania udzielonej zgody. Aby skorzystać z tych praw, skontaktuj się z nami pod adresem privacy@cuequote.com. Przysługuje Ci również prawo wniesienia skargi do organu nadzorczego ds. ochrony danych osobowych. W Polsce, gdzie mamy siedzibę, jest nim Prezes Urzędu Ochrony Danych Osobowych (UODO, uodo.gov.pl); możesz również zwrócić się do organu nadzorczego w państwie, w którym mieszkasz lub pracujesz."
+      },
+      "data-retention": {
+        "title": "9. Okres przechowywania danych",
+        "content": "Przechowujemy dane Twojego konta tak długo, jak Twoje konto jest aktywne. Jeżeli usuniesz konto, usuniemy Twoje dane osobowe w ciągu 30 dni, z wyjątkiem sytuacji, w których jesteśmy zobowiązani do ich przechowywania ze względów prawnych lub w celu zapewnienia zgodności z przepisami, na przykład w przypadku faktur. Podczas rejestracji zapisujemy adres IP oraz przeglądarkę, z których dokonano rejestracji, aby chronić CueQuote i jego użytkowników przed oszustwami i nadużyciami. Dane te są automatycznie usuwane po 30 dniach."
+      },
+      "changes": {
+        "title": "10. Zmiany niniejszej polityki",
+        "content": "Możemy od czasu do czasu aktualizować niniejszą politykę prywatności. O istotnych zmianach poinformujemy Cię za pośrednictwem wiadomości e-mail lub komunikatu w aplikacji. Dalsze korzystanie z CueQuote po wprowadzeniu zmian oznacza akceptację zaktualizowanej polityki."
+      },
+      "contact": {
+        "title": "11. Kontakt i administrator danych",
+        "content": "CueQuote jest produktem AVE Events, ul. Hoża 86/410, Warszawa, Polska, która jest administratorem danych osobowych opisanych w niniejszej polityce. W sprawach pytań lub wniosków dotyczących prywatności skontaktuj się z nami pod adresem privacy@cuequote.com."
+      }
+    }
   },
   "terms": {
     "metaTitle": "Regulamin",
-    "metaDescription": "Warunki korzystania z CueQuote."
+    "metaDescription": "Warunki korzystania z CueQuote.",
+    "page": {
+      "badge": "Regulamin",
+      "heroTitle": "Regulamin świadczenia usług",
+      "heroSubtitle": "Zasady i wytyczne korzystania z CueQuote.",
+      "lastUpdated": "Ostatnia aktualizacja: {date}",
+      "contents": "Spis treści",
+      "ctaTitle": "Masz pytania dotyczące regulaminu?",
+      "ctaSubtitle": "Nasz zespół chętnie wyjaśni wszelkie wątpliwości.",
+      "ctaButton": "Skontaktuj się z działem prawnym",
+      "languageNote": "To tłumaczenie zostało udostępnione dla wygody. W przypadku rozbieżności z wersją angielską obowiązuje wersja angielska."
+    },
+    "sections": {
+      "acceptance": {
+        "title": "1. Akceptacja regulaminu",
+        "content": "CueQuote (\"Usługa\") jest produktem AVE Events, ul. Hoża 86/410, Warszawa, Polska (\"AVE Events\", \"my\", \"nas\"). Uzyskując dostęp do Usługi lub korzystając z niej, zgadzasz się przestrzegać niniejszego Regulaminu. Jeżeli korzystasz z CueQuote w imieniu organizacji, oświadczasz, że jesteś upoważniony do zaciągania w jej imieniu zobowiązań wynikających z niniejszego Regulaminu."
+      },
+      "description": {
+        "title": "2. Opis Usługi",
+        "content": "CueQuote to platforma w modelu software-as-a-service, która pomaga firmom zajmującym się produkcją AV, agencjom eventowym oraz niezależnym technikom tworzyć profesjonalne oferty sprzętowe z wykorzystaniem AI. Usługa obejmuje generowanie ofert, zarządzanie katalogiem sprzętu, eksport do PDF, udostępnianie klientom oraz powiązane funkcje."
+      },
+      "accounts": {
+        "title": "3. Konta",
+        "content": "Aby korzystać z CueQuote, musisz założyć konto. Odpowiadasz za zachowanie bezpieczeństwa danych logowania do swojego konta oraz za wszelkie działania podejmowane w ramach Twojego konta. Podczas rejestracji musisz podać dokładne i kompletne informacje oraz dbać o ich aktualność."
+      },
+      "billing": {
+        "title": "4. Subskrypcje i rozliczenia",
+        "content": "CueQuote oferuje plany bezpłatne i płatne. Płatne subskrypcje są rozliczane miesięcznie lub rocznie za pośrednictwem Stripe. Możesz zrezygnować w dowolnym momencie; rezygnacja staje się skuteczna z końcem bieżącego okresu rozliczeniowego. Nie zwracamy opłat za niepełne okresy rozliczeniowe. Zastrzegamy sobie prawo do zmiany cen z 30-dniowym wyprzedzeniem."
+      },
+      "your-data": {
+        "title": "5. Twoje dane",
+        "content": "Zachowujesz wszelkie prawa do danych wprowadzanych do CueQuote, w tym opisów wydarzeń, informacji o klientach, katalogów sprzętu oraz wygenerowanych ofert. Nie rościmy sobie praw własności do Twoich treści. Udzielasz nam ograniczonej licencji na przetwarzanie Twoich danych wyłącznie w celu świadczenia Usługi."
+      },
+      "ai-content": {
+        "title": "6. Treści generowane przez AI",
+        "content": "Oferty generowane przez AI w CueQuote mają charakter sugestii. Odpowiadasz za przejrzenie, edycję i weryfikację wszystkich treści wygenerowanych przez AI przed ich udostępnieniem klientom. CueQuote nie gwarantuje dokładności, kompletności ani przydatności ofert wygenerowanych przez AI dla jakiegokolwiek konkretnego wydarzenia."
+      },
+      "acceptable-use": {
+        "title": "7. Dopuszczalne korzystanie",
+        "content": "Zobowiązujesz się nie: wykorzystywać CueQuote w jakimkolwiek celu niezgodnym z prawem; podejmować prób uzyskania nieuprawnionego dostępu do Usługi; zakłócać działania Usługi; odsprzedawać ani dalej rozpowszechniać Usługi bez upoważnienia; ani używać zautomatyzowanych narzędzi do pobierania (scrapingu) lub wydobywania danych z Usługi."
+      },
+      "availability": {
+        "title": "8. Dostępność i wsparcie",
+        "content": "Dążymy do zapewnienia wysokiej dostępności, ale nie gwarantujemy nieprzerwanego dostępu. Możemy przeprowadzać prace konserwacyjne, które czasowo wpływają na dostępność. Wsparcie jest świadczone za pośrednictwem poczty e-mail w godzinach pracy (CET). Czas odpowiedzi zależy od Twojego planu subskrypcji."
+      },
+      "liability": {
+        "title": "9. Ograniczenie odpowiedzialności",
+        "content": "W najszerszym zakresie dopuszczalnym przez prawo CueQuote i podmioty go prowadzące nie ponoszą odpowiedzialności za jakiekolwiek szkody pośrednie, przypadkowe, szczególne lub następcze wynikające z korzystania przez Ciebie z Usługi. Nasza łączna odpowiedzialność nie przekroczy kwoty zapłaconej przez Ciebie za Usługę w okresie 12 miesięcy poprzedzających zgłoszenie roszczenia."
+      },
+      "termination": {
+        "title": "10. Rozwiązanie umowy",
+        "content": "Możemy zawiesić lub zamknąć Twoje konto, jeżeli naruszysz niniejszy Regulamin. Możesz w dowolnym momencie usunąć swoje konto na stronie Ustawienia. Po rozwiązaniu umowy Twoje dane zostaną usunięte zgodnie z naszą Polityką prywatności."
+      },
+      "changes": {
+        "title": "11. Zmiany Regulaminu",
+        "content": "Możemy w dowolnym momencie zmienić niniejszy Regulamin. O istotnych zmianach poinformujemy za pośrednictwem wiadomości e-mail lub powiadomienia w aplikacji co najmniej 14 dni przed ich wejściem w życie. Dalsze korzystanie z CueQuote po wprowadzeniu zmian oznacza ich akceptację."
+      },
+      "governing-law": {
+        "title": "12. Prawo właściwe",
+        "content": "Niniejszy Regulamin podlega prawu polskiemu. Spory będą rozstrzygane przez sądy właściwe dla siedziby AVE Events w Warszawie, chyba że bezwzględnie obowiązujące przepisy prawa przyznają Ci prawo do dochodzenia roszczeń przed innym sądem."
+      },
+      "contact": {
+        "title": "13. Kontakt",
+        "content": "W sprawie pytań dotyczących niniejszego Regulaminu skontaktuj się z nami pod adresem legal@cuequote.com."
+      }
+    }
   },
   "avPage": {
     "metaTitle": "CueQuote dla firm AV — Generowanie ofert z AI",
