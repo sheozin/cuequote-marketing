@@ -294,7 +294,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Zahlungsbedingungen festlegen',
-        content: 'Zwei Wege, die Anzahlung festzulegen: als Prozentsatz (0-100) oder als vereinbarter Betrag, umschaltbar mit dem kleinen Auswahlfeld daneben. Ein fester Betrag ist richtig, wenn die Zahl verhandelt und nicht berechnet wurde, und er bleibt unveraendert, wenn sich Positionen aendern. In beiden Faellen werden Anzahlung und Restbetrag als Geld neben Ihren Summen angezeigt, und die Zahlungsklausel in Ihren AGB schreibt sich selbst passend um, sodass ein Angebot nie zwei verschiedene Zahlen nennt. Haben Sie die Klausel selbst formuliert, bleibt sie unangetastet und ein Hinweis bietet die Aktualisierung an.',
+        content: "Zwei Wege, die Anzahlung festzulegen: als Prozentsatz (0-100) oder als vereinbarter Betrag, umschaltbar mit dem kleinen Auswahlfeld daneben. Ein fester Betrag ist richtig, wenn die Zahl verhandelt und nicht berechnet wurde, und er bleibt unveraendert, wenn sich Positionen aendern. In beiden Faellen werden Anzahlung und Restbetrag als Geld neben Ihren Summen angezeigt, und die Zahlungsklausel in Ihren AGB schreibt sich selbst passend um, sodass ein Angebot nie zwei verschiedene Zahlen nennt. Haben Sie die Klausel selbst formuliert, bleibt sie unangetastet und ein Hinweis bietet die Aktualisierung an. Um den Preis auf mehr als zwei Zahlungen aufzuteilen, klicken Sie auf „Zahlung hinzufügen“. Jede Zahlung nach der Anzahlung hat einen eigenen Prozentsatz und Termin: eine Anzahl Tage vor der Veranstaltung, am Veranstaltungstag oder eine Anzahl Tage danach. Die Prozentsätze müssen 100 % ergeben, bevor etwas gespeichert wird; PDF, Freigabeseite und die Klausel Zahlungsbedingungen führen dann jede Zahlung mit ihrem Betrag auf. Ein Zahlungsplan funktioniert mit einer prozentualen Anzahlung; eine Anzahlung als fester Betrag behält die Aufteilung in zwei Zahlungen.",
       },
       {
         title: 'Auf-/Abbautage-Preisgestaltung',
@@ -548,7 +548,7 @@ export const TUTORIALS_DE: Tutorial[] = [
       },
       {
         title: 'Rechnung aus einem Angebot erstellen',
-        content: 'Öffnen Sie ein beliebiges Angebot, das gesendet oder angenommen wurde. Klicken Sie auf die Schaltfläche „Rechnung erstellen" in der Kopfzeile. Sie werden gefragt, ob eine Anzahlungsrechnung (basierend auf Ihrem Anzahlungsprozentsatz) oder eine Gesamtrechnung (100 % der Summe) erstellt werden soll. CueQuote übernimmt alle Positionen, Kundendaten und Preise aus dem Angebot.',
+        content: "Öffnen Sie ein gesendetes oder angenommenes Angebot und klicken Sie im Kopfbereich auf „Rechnung erstellen“. Wählen Sie „Anzahlungsrechnung erstellen“ für die festgelegte Anzahlung (Prozentsatz oder fester Betrag), „Restbetragsrechnung erstellen“ für alles danach oder eine Proforma-Rechnung. Hat das Angebot einen Zahlungsplan, erhält jede spätere Zahlung eine eigene Schaltfläche, etwa „Rechnung für Zahlung 2 von 3 erstellen“, und die Rechnung trägt die abgerechnete Zahlung im Titel, damit der Kunde weiß, welchen Teil er bezahlt. CueQuote übernimmt alle Positionen, Kundendaten und Preise aus dem Angebot.",
       },
       {
         title: 'Rechnung prüfen und anpassen',

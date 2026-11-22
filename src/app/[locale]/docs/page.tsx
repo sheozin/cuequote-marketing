@@ -100,7 +100,7 @@ const ARTICLE_KEYS = [
   {
     id: "terms-details",
     key: "termsDetails",
-    contentKeys: ["content1", "content2"],
+    contentKeys: ["content1", "content2", "content3"],
     stepKeys: ["step1", "step2", "step3", "step4", "step5"],
   },
   {

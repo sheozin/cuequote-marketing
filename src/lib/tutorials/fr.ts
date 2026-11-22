@@ -294,7 +294,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Définissez les conditions de paiement',
-        content: 'Deux facons de definir l acompte : en pourcentage (0-100) ou en montant convenu, via le petit selecteur a cote du champ. Un montant fixe convient lorsque le chiffre a ete negocie plutot que calcule, et il ne bouge pas quand les lignes changent. Dans les deux cas, l acompte et le solde sont affiches en euros a cote de vos totaux, et la clause de paiement de vos CGV se reecrit pour correspondre, afin qu un devis n annonce jamais deux chiffres differents. Si vous avez redige cette clause vous-meme, elle reste intacte et une note propose de la mettre a jour.',
+        content: "Deux facons de definir l acompte : en pourcentage (0-100) ou en montant convenu, via le petit selecteur a cote du champ. Un montant fixe convient lorsque le chiffre a ete negocie plutot que calcule, et il ne bouge pas quand les lignes changent. Dans les deux cas, l acompte et le solde sont affiches en euros a cote de vos totaux, et la clause de paiement de vos CGV se reecrit pour correspondre, afin qu un devis n annonce jamais deux chiffres differents. Si vous avez redige cette clause vous-meme, elle reste intacte et une note propose de la mettre a jour. Pour répartir le prix en plus de deux paiements, cliquez sur « Ajouter un paiement ». Chaque paiement après l'acompte a son propre pourcentage et sa propre échéance : un nombre de jours avant l'événement, le jour de l'événement, ou un nombre de jours après. Les pourcentages doivent totaliser 100 % avant tout enregistrement ; le PDF, la page de partage et la clause Conditions de paiement listent alors chaque paiement avec son montant. Un échéancier fonctionne avec un acompte en pourcentage ; un acompte à montant fixe conserve la répartition en deux paiements.",
       },
       {
         title: 'Tarification des jours de montage et démontage',
@@ -548,7 +548,7 @@ export const TUTORIALS_FR: Tutorial[] = [
       },
       {
         title: 'Créez une facture à partir d\'un devis',
-        content: 'Ouvrez n\'importe quel devis qui a été envoyé ou accepté. Cliquez sur le bouton « Créer une facture » dans l\'en-tête. On vous demandera de choisir entre une facture d\'acompte (basée sur votre pourcentage d\'acompte) ou une facture complète (100 % du total). CueQuote copie tous les postes, les informations client et les prix depuis le devis.',
+        content: "Ouvrez n'importe quel devis envoyé ou accepté et cliquez sur « Créer une facture » dans l'en-tête. Choisissez « Créer une facture d'acompte » pour l'acompte défini (pourcentage ou montant fixe), « Créer la facture de solde » pour tout le reste, ou une facture proforma. Si le devis comporte un échéancier, chaque paiement suivant a son propre bouton, par exemple « Créer la facture du paiement 2 sur 3 », et la facture porte dans son titre le paiement qu'elle réclame, pour que le client sache quelle part il règle. CueQuote copie toutes les lignes, les coordonnées du client et les prix depuis le devis.",
       },
       {
         title: 'Vérifiez et personnalisez la facture',

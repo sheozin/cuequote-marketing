@@ -294,7 +294,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Ustaw warunki płatności',
-        content: 'Dwa sposoby ustawienia zaliczki: jako procent (0-100) albo jako uzgodniona kwota, przelaczane malym selektorem obok pola. Stala kwota przydaje sie, gdy wartosc byla negocjowana, a nie wyliczona, i nie zmienia sie przy edycji pozycji. W obu przypadkach zaliczka i saldo sa pokazane jako kwoty obok podsumowania, a klauzula warunkow platnosci w regulaminie sama sie aktualizuje, wiec oferta nigdy nie podaje dwoch roznych kwot. Jesli napisales te klauzule samodzielnie, pozostaje nietknieta, a system proponuje jej aktualizacje.',
+        content: "Dwa sposoby ustawienia zaliczki: jako procent (0-100) albo jako uzgodniona kwota, przelaczane malym selektorem obok pola. Stala kwota przydaje sie, gdy wartosc byla negocjowana, a nie wyliczona, i nie zmienia sie przy edycji pozycji. W obu przypadkach zaliczka i saldo sa pokazane jako kwoty obok podsumowania, a klauzula warunkow platnosci w regulaminie sama sie aktualizuje, wiec oferta nigdy nie podaje dwoch roznych kwot. Jesli napisales te klauzule samodzielnie, pozostaje nietknieta, a system proponuje jej aktualizacje. Aby podzielić cenę na więcej niż dwie płatności, kliknij „Dodaj płatność”. Każda płatność po zaliczce ma własny procent i termin: określoną liczbę dni przed wydarzeniem, w dniu wydarzenia lub określoną liczbę dni po nim. Procenty muszą sumować się do 100%, zanim cokolwiek zostanie zapisane, a PDF, strona udostępniania i klauzula Warunki płatności wymieniają wtedy każdą płatność z kwotą. Harmonogram działa z zaliczką procentową; zaliczka w stałej kwocie zachowuje podział na dwie płatności.",
       },
       {
         title: 'Wycena dni montażu i demontażu',
@@ -520,7 +520,7 @@ export const TUTORIALS_PL: Tutorial[] = [
       },
       {
         title: 'Utwórz fakturę z oferty',
-        content: 'Otwórz dowolną ofertę, która została wysłana lub zaakceptowana. Kliknij przycisk „Utwórz fakturę" w nagłówku. Zostaniesz zapytany o wybór między fakturą zaliczkową (na podstawie procentu zaliczki) a fakturą pełną (100% kwoty). CueQuote kopiuje wszystkie pozycje, dane klienta i ceny z oferty.',
+        content: "Otwórz dowolną ofertę, która została wysłana lub zaakceptowana, i kliknij „Utwórz fakturę” w nagłówku. Wybierz „Utwórz fakturę zaliczkową” dla ustawionej zaliczki (procentowej lub w stałej kwocie), „Utwórz fakturę końcową” dla całej reszty albo fakturę proforma. Jeśli oferta ma harmonogram płatności, każda kolejna płatność ma własny przycisk, np. „Utwórz fakturę za płatność 2 z 3”, a faktura nosi w tytule płatność, której dotyczy, więc klient wie, którą część opłaca. CueQuote kopiuje z oferty wszystkie pozycje, dane klienta i ceny.",
       },
       {
         title: 'Przejrzyj i dostosuj fakturę',

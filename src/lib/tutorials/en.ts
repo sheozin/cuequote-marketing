@@ -294,7 +294,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Set payment terms',
-        content: 'Two ways to set the deposit: as a percentage (0-100), or as an agreed amount, using the small selector beside the field. A fixed amount is what you want when the figure was negotiated rather than calculated, and it stays put when line items change. Either way the deposit and the balance are shown as money next to your totals, and the Payment Terms clause in your T&C rewrites itself to match, so a proposal never states two different figures. If you have written that clause yourself it is left alone, and a note offers to update it for you.',
+        content: "Two ways to set the deposit: as a percentage (0-100), or as an agreed amount, using the small selector beside the field. A fixed amount is what you want when the figure was negotiated rather than calculated, and it stays put when line items change. Either way the deposit and the balance are shown as money next to your totals, and the Payment Terms clause in your T&C rewrites itself to match, so a proposal never states two different figures. If you have written that clause yourself it is left alone, and a note offers to update it for you. To split the price into more than two payments, click \"Add payment\". Each payment after the deposit has its own percentage and timing: a number of days before the event, on the event day, or a number of days after it. The percentages must add up to 100% before anything is saved, and the PDF, the share page and the Payment Terms clause then list every payment with its amount. A schedule works with a percentage deposit; a fixed-amount deposit keeps the two-payment split.",
       },
       {
         title: 'Setup & strike day pricing',
@@ -549,7 +549,7 @@ export const TUTORIALS_EN: Tutorial[] = [
       },
       {
         title: 'Create an invoice from a proposal',
-        content: 'Open any proposal that has been sent or accepted. Click the "Create Invoice" button in the header. You\'ll be asked to choose between a Deposit Invoice (for the deposit you set, whether a percentage or a fixed amount) or a Full Invoice (100% of the total). CueQuote copies all line items, client details, and pricing from the proposal.',
+        content: "Open any proposal that has been sent or accepted and click \"Create Invoice\" in the header. Choose \"Create Deposit Invoice\" for the deposit you set (a percentage or a fixed amount), \"Create Balance Invoice\" for everything after it, or a proforma. If the proposal has a payment schedule, each later payment gets its own button, such as \"Create invoice for payment 2 of 3\", and that invoice is titled with the payment it bills, so the client knows which part they are paying. CueQuote copies all line items, client details, and pricing from the proposal.",
       },
       {
         title: 'Review and customize the invoice',
