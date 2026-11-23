@@ -1,0 +1,94 @@
+name: Blog Publish
+
+# Publishes owner-approved blog drafts from the app's blog-feed edge function.
+# scripts/publish-approved-posts.mjs writes new posts into blog-posts.ts and the
+# 5 message files; nothing is pushed unless translations, typecheck and build
+# all pass on the result. Any failure fails the job and pushes nothing.
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+# Never two runs at once: a second run would publish the same posts again.
+concurrency:
+  group: blog-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Publish approved posts
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      # --ignore-scripts prevents postinstall RCE from malicious packages,
+      # matching build-check.yml and security-audit.yml.
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      # Exits non-zero if the feed is unreachable or malformed, so a dead feed
+      # is a red run rather than an endless "nothing to publish".
+      - name: Fetch and write approved posts
+        id: publish
+        run: node scripts/publish-approved-posts.mjs
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git status --short
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check translations
+        if: steps.changes.outputs.changed == 'true'
+        run: npm run check-translations
+
+      - name: Typecheck
+        if: steps.changes.outputs.changed == 'true'
+        run: npx tsc --noEmit
+
+      - name: Build
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder-anon-key
+        run: npm run build
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          SLUGS: ${{ steps.publish.outputs.slugs }}
+        run: |
+          if [ -z "$SLUGS" ]; then
+            echo "Files changed but the script reported no published slugs" >&2
+            git status --short >&2
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/blog-posts.ts src/messages/en.json src/messages/pl.json src/messages/de.json src/messages/fr.json src/messages/ar.json
+          if [ -n "$(git status --porcelain --untracked-files=no -- . ':!src/lib/blog-posts.ts' ':!src/messages')" ]; then
+            echo "Unexpected changes outside the blog files; refusing to commit" >&2
+            git status --short >&2
+            exit 1
+          fi
+          git commit -m "Blog: publish ${SLUGS}"
+          git push origin HEAD:main
