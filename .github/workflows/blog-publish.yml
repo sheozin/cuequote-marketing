@@ -2,7 +2,8 @@ name: Blog Publish
 
 # Publishes owner-approved blog drafts from the app's blog-feed edge function.
 # scripts/publish-approved-posts.mjs writes new posts into blog-posts.ts and the
-# 5 message files; nothing is pushed unless translations, typecheck and build
+# 5 message files, and applies approved refreshes (mode "update") to en.json
+# only; nothing is pushed unless translations, typecheck and build
 # all pass on the result. Any failure fails the job and pushes nothing.
 
 on:
@@ -75,10 +76,10 @@ jobs:
       - name: Commit and push
         if: steps.changes.outputs.changed == 'true'
         env:
-          SLUGS: ${{ steps.publish.outputs.slugs }}
+          SUMMARY: ${{ steps.publish.outputs.summary }}
         run: |
-          if [ -z "$SLUGS" ]; then
-            echo "Files changed but the script reported no published slugs" >&2
+          if [ -z "$SUMMARY" ]; then
+            echo "Files changed but the script reported nothing published or refreshed" >&2
             git status --short >&2
             exit 1
           fi
@@ -90,5 +91,5 @@ jobs:
             git status --short >&2
             exit 1
           fi
-          git commit -m "Blog: publish ${SLUGS}"
+          git commit -m "Blog: ${SUMMARY}"
           git push origin HEAD:main

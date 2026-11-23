@@ -5,6 +5,14 @@
  * For each feed post whose slug is not already in POSTS: validate it, insert the
  * POSTS entry at the top of src/lib/blog-posts.ts and add posts.<slug> to all 5
  * message files (same English text everywhere; de/fr/ar long-tail is noindexed).
+ *
+ * Feed posts with "mode":"update" are refreshes of a post already on the site:
+ * the slug must exist in POSTS and en.json, and only en.json posts.<slug> title,
+ * excerpt, readTime and content are replaced. The POSTS entry (date, category)
+ * and the other locale files are left alone. A refresh whose text already
+ * matches en.json is a no-op, since the feed keeps listing it until the app
+ * sees it live.
+ *
  * Invalid posts are skipped with a log line. Every file is computed in memory
  * first and only then written, so a post is never half-written.
  *
@@ -12,8 +20,8 @@
  * Exit 0 on success or nothing to publish; 1 on real errors (feed unreachable,
  * malformed feed, repo files not in the expected shape).
  *
- * Run by .github/workflows/blog-publish.yml. When GITHUB_OUTPUT is set, the
- * published slugs are written there as `slugs=<a> <b>`.
+ * Run by .github/workflows/blog-publish.yml. When GITHUB_OUTPUT is set, a
+ * commit summary is written there as `summary=publish <a>, <b>; refresh <c>`.
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -27,6 +35,8 @@ const LANGS = ['en', 'pl', 'de', 'fr', 'ar']
 const CATEGORIES = ['Guides', 'Business', 'Product Updates', 'Technology', 'Industry']
 const SLUG_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/
 const POSTS_START = 'export const POSTS: BlogPostSummary[] = ['
+const MODES = [undefined, 'new', 'update']
+const COPY_FIELDS = ['title', 'excerpt', 'readTime', 'content']
 
 function fail(msg) {
   console.error(`ERROR: ${msg}`)
@@ -135,9 +145,28 @@ async function main() {
   }
 
   const accepted = []
+  const refreshed = []
   const seen = new Set()
   for (const post of feedPosts) {
     const label = typeof post?.slug === 'string' ? post.slug : JSON.stringify(post?.slug)
+    if (!MODES.includes(post?.mode)) {
+      console.log(`SKIP ${label}: unknown mode ${JSON.stringify(post.mode)}`)
+      continue
+    }
+    if (post?.mode === 'update') {
+      const problems = validate(post)
+      const current = typeof post.slug === 'string' && Object.hasOwn(messages.en.json.posts, post.slug) ? messages.en.json.posts[post.slug] : null
+      if (!known.has(post.slug) || !current) problems.push('refresh of a post that is not on the site (needs a POSTS entry and en.json posts.<slug>)')
+      if (seen.has(post.slug)) problems.push('duplicate slug in feed')
+      if (problems.length) {
+        console.log(`SKIP ${label}: ${problems.join('; ')}`)
+        continue
+      }
+      seen.add(post.slug)
+      if (COPY_FIELDS.every((f) => JSON.stringify(current[f]) === JSON.stringify(post[f]))) continue // already live
+      refreshed.push(post)
+      continue
+    }
     if (known.has(post?.slug)) continue // already on the site
     const problems = validate(post)
     if (seen.has(post?.slug)) problems.push('duplicate slug in feed')
@@ -151,23 +180,27 @@ async function main() {
     accepted.push(post)
   }
 
-  if (accepted.length === 0) {
+  if (accepted.length === 0 && refreshed.length === 0) {
     console.log('nothing to publish')
     return
   }
 
   // Newest first in POSTS; message files append, so the newest ends up last (their convention).
   accepted.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
-  const writes = [[POSTS_FILE, insertPostsEntries(postsSource, accepted)]]
+  const writes = []
+  if (accepted.length) writes.push([POSTS_FILE, insertPostsEntries(postsSource, accepted)])
   for (const lang of LANGS) {
     const { file, json } = messages[lang]
     for (const p of [...accepted].reverse()) {
       json.posts[p.slug] = { title: p.title, excerpt: p.excerpt, readTime: p.readTime, content: p.content }
     }
-    writes.push([file, JSON.stringify(json, null, 2) + '\n'])
+    // Refreshes are English only; assigning the existing key keeps its position in the file.
+    if (lang === 'en') for (const p of refreshed) json.posts[p.slug] = { title: p.title, excerpt: p.excerpt, readTime: p.readTime, content: p.content }
+    if (accepted.length || (lang === 'en' && refreshed.length)) writes.push([file, JSON.stringify(json, null, 2) + '\n'])
   }
 
   for (const p of accepted) console.log(`PUBLISH ${p.slug} (${p.category}, ${p.date}): ${p.title}`)
+  for (const p of refreshed) console.log(`REFRESH ${p.slug}: ${p.title}`)
   if (args.dryRun) {
     console.log(`dry run: would write ${writes.map(([f]) => path.relative(ROOT, f)).join(', ')}`)
     return
@@ -179,7 +212,10 @@ async function main() {
   console.log(`wrote ${writes.map(([f]) => path.relative(ROOT, f)).join(', ')}`)
 
   if (process.env.GITHUB_OUTPUT) {
-    fs.appendFileSync(process.env.GITHUB_OUTPUT, `slugs=${accepted.map((p) => p.slug).join(' ')}\n`)
+    const parts = []
+    if (accepted.length) parts.push(`publish ${accepted.map((p) => p.slug).join(', ')}`)
+    if (refreshed.length) parts.push(`refresh ${refreshed.map((p) => p.slug).join(', ')}`)
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, `summary=${parts.join('; ')}\n`)
   }
 }
 
