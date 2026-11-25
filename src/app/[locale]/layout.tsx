@@ -73,6 +73,7 @@ const jsonLdString = jsonLd({
       url: BASE_URL,
       logo: { "@type": "ImageObject", url: `${BASE_URL}/logo.svg` },
       foundingDate: "2026",
+      sameAs: ["https://www.facebook.com/cuequote", "https://www.instagram.com/cue.quote/"],
       description: "The AI platform for event professionals — proposals, production planning, and more.",
     },
     {

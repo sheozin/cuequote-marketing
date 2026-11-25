@@ -31,6 +31,7 @@ export default async function Footer() {
       links: [
         { label: t("about"), href: "/about" },
         { label: t("contact"), href: "/contact" },
+        { label: "Facebook", href: "https://www.facebook.com/cuequote" },
       ],
     },
     {
@@ -62,7 +63,11 @@ export default async function Footer() {
             <div key={section.title}>
               <h2 className="footer-heading">{section.title}</h2>
               {section.links.map(({ label, href }) => (
-                <Link key={href} href={href} className="footer-link">{label}</Link>
+                href.startsWith("http") ? (
+                  <a key={href} href={href} className="footer-link" target="_blank" rel="noopener">{label}</a>
+                ) : (
+                  <Link key={href} href={href} className="footer-link">{label}</Link>
+                )
               ))}
             </div>
           ))}
