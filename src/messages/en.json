@@ -2579,7 +2579,7 @@
       },
       "third-party": {
         "title": "4. Third-Party Services and Transfers Outside the EU",
-        "content": "CueQuote uses the following service providers: Supabase (database and authentication), Stripe (payment processing), Vercel (hosting), Resend (email delivery), Anthropic (AI proposal generation), and Cloudflare (the security check on the signup page and our incoming email). Each processes data only to provide its service to us. Stripe, Vercel, Resend, Anthropic and Cloudflare are based in the United States, so some data may be processed there. Those transfers are protected by the safeguards in each provider's data processing terms, such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework."
+        "content": "CueQuote uses the following service providers: Supabase (database and authentication), Stripe (payment processing), Vercel (hosting), Resend (email delivery), Anthropic (AI proposal generation), Cloudflare (the security check on the signup page) and Microsoft (our email inboxes). Each processes data only to provide its service to us. Stripe, Vercel, Resend, Anthropic, Cloudflare and Microsoft are based in the United States, so some data may be processed there. Those transfers are protected by the safeguards in each provider's data processing terms, such as the European Commission's Standard Contractual Clauses or the EU-US Data Privacy Framework."
       },
       "ai-content": {
         "title": "5. AI-Generated Content",
@@ -2591,7 +2591,7 @@
       },
       "cookies": {
         "title": "7. Cookies",
-        "content": "CueQuote uses essential cookies to keep you signed in and to run your session. Our website measures visits with Vercel Web Analytics, which does not use cookies and does not identify individual visitors. You can manage cookies through your browser settings."
+        "content": "CueQuote uses essential cookies to keep you signed in and to run your session. Our website measures visits with Vercel Web Analytics, which does not use cookies and does not identify individual visitors. If you arrive at our signup page from one of our Facebook or Instagram ads, we ask whether you allow the Meta Pixel. Only if you choose Allow does your browser load it; it sets a Meta cookie and tells Meta (Meta Platforms Ireland) that you visited the page and, if you sign up, that a sign-up happened, so we can see which ads work. We do not send your name or email address. If you choose No thanks, nothing is sent to Meta. You can manage cookies through your browser settings."
       },
       "gdpr": {
         "title": "8. Your Rights (GDPR)",

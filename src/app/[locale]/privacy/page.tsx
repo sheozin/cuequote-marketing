@@ -52,7 +52,7 @@ export default async function PrivacyPage() {
   const t = await getTranslations("privacy");
   const locale = await getLocale();
   const SECTIONS = SECTION_IDS.map((id) => ({ id, title: t(`sections.${id}.title`), content: t(`sections.${id}.content`) }));
-  const updated = new Intl.DateTimeFormat(locale, { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }).format(new Date("2026-11-17"));
+  const updated = new Intl.DateTimeFormat(locale, { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }).format(new Date("2026-11-25"));
   return (
     <>
       <Nav />

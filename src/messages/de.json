@@ -2566,7 +2566,7 @@
       },
       "third-party": {
         "title": "4. Drittanbieter und Übermittlungen außerhalb der EU",
-        "content": "CueQuote nutzt die folgenden Dienstleister: Supabase (Datenbank und Authentifizierung), Stripe (Zahlungsabwicklung), Vercel (Hosting), Resend (E-Mail-Versand), Anthropic (KI-gestützte Angebotserstellung) und Cloudflare (die Sicherheitsprüfung auf der Registrierungsseite und unsere eingehenden E-Mails). Jeder Anbieter verarbeitet Daten ausschließlich, um uns seinen Dienst bereitzustellen. Stripe, Vercel, Resend, Anthropic und Cloudflare haben ihren Sitz in den Vereinigten Staaten, sodass einige Daten dort verarbeitet werden können. Diese Übermittlungen sind durch die Garantien in den Auftragsverarbeitungsbedingungen des jeweiligen Anbieters abgesichert, etwa durch die Standardvertragsklauseln der Europäischen Kommission oder das EU-US Data Privacy Framework."
+        "content": "CueQuote nutzt die folgenden Dienstleister: Supabase (Datenbank und Authentifizierung), Stripe (Zahlungsabwicklung), Vercel (Hosting), Resend (E-Mail-Versand), Anthropic (KI-gestützte Angebotserstellung) Cloudflare (die Sicherheitsprüfung auf der Registrierungsseite) und Microsoft (unsere E-Mail-Postfächer). Jeder Anbieter verarbeitet Daten ausschließlich, um uns seinen Dienst bereitzustellen. Stripe, Vercel, Resend, Anthropic, Cloudflare und Microsoft haben ihren Sitz in den Vereinigten Staaten, sodass einige Daten dort verarbeitet werden können. Diese Übermittlungen sind durch die Garantien in den Auftragsverarbeitungsbedingungen des jeweiligen Anbieters abgesichert, etwa durch die Standardvertragsklauseln der Europäischen Kommission oder das EU-US Data Privacy Framework."
       },
       "ai-content": {
         "title": "5. KI-generierte Inhalte",
@@ -2578,7 +2578,7 @@
       },
       "cookies": {
         "title": "7. Cookies",
-        "content": "CueQuote verwendet technisch notwendige Cookies, um Sie angemeldet zu halten und Ihre Sitzung zu betreiben. Unsere Website misst Besuche mit Vercel Web Analytics, das keine Cookies verwendet und einzelne Besucher nicht identifiziert. Sie können Cookies über Ihre Browsereinstellungen verwalten."
+        "content": "CueQuote verwendet technisch notwendige Cookies, um Sie angemeldet zu halten und Ihre Sitzung zu betreiben. Unsere Website misst Besuche mit Vercel Web Analytics, das keine Cookies verwendet und einzelne Besucher nicht identifiziert. Wenn Sie über eine unserer Facebook- oder Instagram-Anzeigen auf unsere Registrierungsseite kommen, fragen wir, ob Sie das Meta-Pixel erlauben. Nur wenn Sie Erlauben wählen, lädt Ihr Browser es; es setzt ein Meta-Cookie und teilt Meta (Meta Platforms Ireland) mit, dass Sie die Seite besucht haben und, falls Sie sich registrieren, dass eine Anmeldung erfolgt ist, damit wir sehen, welche Anzeigen wirken. Ihren Namen oder Ihre E-Mail-Adresse senden wir nicht. Wenn Sie Nein, danke wählen, wird nichts an Meta gesendet. Sie können Cookies über Ihre Browsereinstellungen verwalten."
       },
       "gdpr": {
         "title": "8. Ihre Rechte (DSGVO)",

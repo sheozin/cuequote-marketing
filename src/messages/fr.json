@@ -2568,7 +2568,7 @@
       },
       "third-party": {
         "title": "4. Services tiers et transferts hors de l'UE",
-        "content": "CueQuote fait appel aux prestataires de services suivants : Supabase (base de données et authentification), Stripe (traitement des paiements), Vercel (hébergement), Resend (envoi des e-mails), Anthropic (génération de propositions par IA) et Cloudflare (contrôle de sécurité sur la page d'inscription et nos e-mails entrants). Chacun traite les données uniquement pour nous fournir son service. Stripe, Vercel, Resend, Anthropic et Cloudflare sont établis aux États-Unis, de sorte que certaines données peuvent y être traitées. Ces transferts sont encadrés par les garanties prévues dans les conditions de traitement des données de chaque prestataire, telles que les clauses contractuelles types de la Commission européenne ou le cadre de protection des données UE-États-Unis (EU-US Data Privacy Framework)."
+        "content": "CueQuote fait appel aux prestataires de services suivants : Supabase (base de données et authentification), Stripe (traitement des paiements), Vercel (hébergement), Resend (envoi des e-mails), Anthropic (génération de propositions par IA) Cloudflare (contrôle de sécurité sur la page d'inscription) et Microsoft (nos boîtes e-mail). Chacun traite les données uniquement pour nous fournir son service. Stripe, Vercel, Resend, Anthropic, Cloudflare et Microsoft sont établis aux États-Unis, de sorte que certaines données peuvent y être traitées. Ces transferts sont encadrés par les garanties prévues dans les conditions de traitement des données de chaque prestataire, telles que les clauses contractuelles types de la Commission européenne ou le cadre de protection des données UE-États-Unis (EU-US Data Privacy Framework)."
       },
       "ai-content": {
         "title": "5. Contenu généré par IA",
@@ -2580,7 +2580,7 @@
       },
       "cookies": {
         "title": "7. Cookies",
-        "content": "CueQuote utilise des cookies essentiels pour maintenir votre connexion et assurer le fonctionnement de votre session. Notre site web mesure les visites avec Vercel Web Analytics, qui n'utilise pas de cookies et n'identifie pas les visiteurs individuels. Vous pouvez gérer les cookies via les paramètres de votre navigateur."
+        "content": "CueQuote utilise des cookies essentiels pour maintenir votre connexion et assurer le fonctionnement de votre session. Notre site web mesure les visites avec Vercel Web Analytics, qui n'utilise pas de cookies et n'identifie pas les visiteurs individuels. Si vous arrivez sur notre page d'inscription depuis l'une de nos publicités Facebook ou Instagram, nous vous demandons si vous autorisez le Pixel Meta. Votre navigateur ne le charge que si vous choisissez Autoriser ; il dépose un cookie Meta et indique à Meta (Meta Platforms Ireland) que vous avez visité la page et, si vous vous inscrivez, qu'une inscription a eu lieu, afin que nous sachions quelles publicités fonctionnent. Nous n'envoyons ni votre nom ni votre adresse e-mail. Si vous choisissez Non merci, rien n'est envoyé à Meta. Vous pouvez gérer les cookies via les paramètres de votre navigateur."
       },
       "gdpr": {
         "title": "8. Vos droits (RGPD)",
