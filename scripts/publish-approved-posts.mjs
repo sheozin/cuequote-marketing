@@ -16,6 +16,11 @@
  * Invalid posts are skipped with a log line. Every file is computed in memory
  * first and only then written, so a post is never half-written.
  *
+ * Screens (feed "images": [{id, url, alt, after}], app mig 487) are copied into
+ * public/blog/<slug>-<id>.<ext> and placed as "[IMAGE:/blog/<file>|<alt>]"
+ * entries after content index `after`. Merging happens before the refresh
+ * comparison, so a refreshed post with screens is still recognised as live.
+ *
  * Usage: node scripts/publish-approved-posts.mjs [--feed-file <path>] [--dry-run]
  * Exit 0 on success or nothing to publish; 1 on real errors (feed unreachable,
  * malformed feed, repo files not in the expected shape).
@@ -37,6 +42,46 @@ const SLUG_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/
 const POSTS_START = 'export const POSTS: BlogPostSummary[] = ['
 const MODES = [undefined, 'new', 'update']
 const COPY_FIELDS = ['title', 'excerpt', 'readTime', 'content']
+const PUBLIC_BLOG = path.join(ROOT, 'public', 'blog')
+// Screens only ever come from our own storage or site.
+const IMAGE_HOSTS = ['rurazinghbfskuoeikwi.supabase.co', 'cuequote.com', 'www.cuequote.com']
+
+/** Feed images -> [{file, url, alt, after}], or a list of problems. */
+function planImages(post) {
+  const images = post.images ?? []
+  const problems = []
+  if (!Array.isArray(images)) return { problems: ['images is not an array'] }
+  const plan = []
+  for (const im of images) {
+    let u
+    try { u = new URL(im?.url) } catch { problems.push(`image ${im?.id}: bad url`); continue }
+    if (u.protocol !== 'https:' || !IMAGE_HOSTS.includes(u.hostname)) { problems.push(`image ${im?.id}: host ${u.hostname} not allowed`); continue }
+    const ext = (u.pathname.match(/\.(jpe?g|png|webp)$/i)?.[1] ?? '').toLowerCase().replace('jpeg', 'jpg')
+    if (!ext) { problems.push(`image ${im?.id}: not a jpg, png or webp`); continue }
+    if (typeof im.id !== 'string' || !SLUG_RE.test(im.id)) { problems.push('image with a bad id'); continue }
+    if (!Number.isInteger(im.after) || im.after < 0 || im.after >= (post.content?.length ?? 0)) { problems.push(`image ${im.id}: position ${im.after} outside the content`); continue }
+    if (!isNonEmptyString(im.alt)) { problems.push(`image ${im.id}: no alt text`); continue }
+    plan.push({ file: `${post.slug}-${im.id}.${ext}`, url: u.href, alt: im.alt.replace(/[\]|]/g, ' ').trim(), after: im.after })
+  }
+  return { plan, problems }
+}
+
+/** Content with each screen inserted after its entry (highest position first, so indexes stay valid). */
+function withImages(content, plan) {
+  const out = [...content]
+  for (const im of [...plan].sort((a, b) => b.after - a.after)) out.splice(im.after + 1, 0, `[IMAGE:/blog/${im.file}|${im.alt}]`)
+  return out
+}
+
+async function download(im) {
+  const res = await fetch(im.url, { signal: AbortSignal.timeout(30000) })
+  if (!res.ok) fail(`image ${im.url} returned HTTP ${res.status}`)
+  const type = res.headers.get('content-type') ?? ''
+  if (!type.startsWith('image/')) fail(`image ${im.url} is ${type}, not an image`)
+  const buf = Buffer.from(await res.arrayBuffer())
+  if (buf.length > 1_500_000) fail(`image ${im.url} is ${buf.length} bytes; compress it in the library first`)
+  return buf
+}
 
 function fail(msg) {
   console.error(`ERROR: ${msg}`)
@@ -153,6 +198,14 @@ async function main() {
       console.log(`SKIP ${label}: unknown mode ${JSON.stringify(post.mode)}`)
       continue
     }
+    // Screens are merged into content before anything compares or writes it.
+    const { plan: imagePlan = [], problems: imageProblems } = planImages(post ?? {})
+    if (imageProblems.length) {
+      console.log(`SKIP ${label}: ${imageProblems.join('; ')}`)
+      continue
+    }
+    if (Array.isArray(post.content)) post.content = withImages(post.content, imagePlan)
+    post.imagePlan = imagePlan
     if (post?.mode === 'update') {
       const problems = validate(post)
       const current = typeof post.slug === 'string' && Object.hasOwn(messages.en.json.posts, post.slug) ? messages.en.json.posts[post.slug] : null
@@ -199,12 +252,18 @@ async function main() {
     if (accepted.length || (lang === 'en' && refreshed.length)) writes.push([file, JSON.stringify(json, null, 2) + '\n'])
   }
 
+  const imageWrites = [...accepted, ...refreshed].flatMap((p) => p.imagePlan)
+  for (const im of imageWrites) console.log(`IMAGE ${im.file} from ${im.url}`)
   for (const p of accepted) console.log(`PUBLISH ${p.slug} (${p.category}, ${p.date}): ${p.title}`)
   for (const p of refreshed) console.log(`REFRESH ${p.slug}: ${p.title}`)
   if (args.dryRun) {
     console.log(`dry run: would write ${writes.map(([f]) => path.relative(ROOT, f)).join(', ')}`)
     return
   }
+
+  // Download every screen before writing anything, so a failed download publishes nothing.
+  fs.mkdirSync(PUBLIC_BLOG, { recursive: true })
+  for (const im of imageWrites) writes.push([path.join(PUBLIC_BLOG, im.file), await download(im)])
 
   // Write to temp files first, then rename, so a failure cannot leave some files updated.
   for (const [file, content] of writes) fs.writeFileSync(`${file}.tmp`, content)

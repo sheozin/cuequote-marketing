@@ -1886,6 +1886,7 @@
         "- Lighting: LED stage wash fixtures on two lighting stands in front of the stage at either side, qty 8, 2 days. Lighting console, qty 1, 2 days.",
         "- Staging and power: stage deck around 8 by 4 metres at about 60 centimetres high, with steps, handrail and front skirting, qty 1 set, 2 days. Panel chairs, qty 5, with a low table, qty 1, 2 days. Lectern, qty 1, 2 days. Cabling, stands and power distribution, qty 1 set, 2 days.",
         "- Crew: audio engineer, qty 1, 2 days. Video and playback technician, qty 1, 2 days. Lighting technician, qty 1, 2 days. Stagehands for load-in, stage build and strike, qty 2, 2 days.",
+        "[IMAGE:/blog/audio-visual-proposal-example-what-to-include-app-proposal-editor.jpg|A conference proposal in the CueQuote editor, with equipment grouped by category and quantity and days on every line]",
         "## Schedule the client can check against the day",
         "- Load-in, stage build and setup: 18:00 to 23:00 the evening before",
         "- Technical rehearsal and sound check: 07:30 to 08:15",
@@ -1899,6 +1900,7 @@
         "- Not included: venue power supply, internet connection, rigging points and any venue charges, unless agreed in writing",
         "- Valid until: a stated date, after which availability and rates are confirmed again",
         "- Changes and cancellation: what happens if the date, room or scope changes, written for this event rather than copied from the last proposal",
+        "[IMAGE:/blog/audio-visual-proposal-example-what-to-include-app-proposal-terms.jpg|The Terms and Details tab of a CueQuote proposal, listing what is included alongside the payment terms]",
         "These terms sit inside the proposal, close to the items they apply to, so the client does not have to open a separate attachment to find the deposit date. The proposal then ends with one clear action: a link the client can open to read everything and accept online, rather than a request to print, sign and scan.",
         "## Scaling the example: adding a breakout room",
         "If the same conference added a breakout room for around 40 people, that room would get its own group of lines under its own name, sized for the smaller space rather than copied from the ballroom. A typical group would be a pair of compact speakers on stands with a small mixer, qty 1 set; wireless handheld microphones, qty 2; a projector and screen sized to the room, qty 1 set; and a breakout technician, qty 1, all for 2 days. Every space the client pays to cover belongs in the line items, not only in the summary.",
@@ -1907,7 +1909,8 @@
         "- Leaving crew off the proposal, which makes labour look free or hides it inside equipment prices",
         "- Naming a room or stage in the summary without listing any equipment or crew against it",
         "## Turning this example into your own proposal",
-        "Once this structure works for you, there is no need to rebuild it for every event. In CueQuote you can build a proposal from your own catalog, where picking an item fills in its name, description, unit and price, or generate one with AI from an event description. Every line has its own quantity, days and line discount, and both routes start with your default terms, deposit and payment settings. You then send the proposal as a link your client can open and accept online. You can try it on CueQuote's Free plan at cuequote.com."
+        "Once this structure works for you, there is no need to rebuild it for every event. In CueQuote you can build a proposal from your own catalog, where picking an item fills in its name, description, unit and price, or generate one with AI from an event description. Every line has its own quantity, days and line discount, and both routes start with your default terms, deposit and payment settings. You then send the proposal as a link your client can open and accept online. You can try it on CueQuote's Free plan at cuequote.com.",
+        "[IMAGE:/blog/audio-visual-proposal-example-what-to-include-app-client-proposal.jpg|The online proposal a client opens from the link, with event details and equipment grouped by category]"
       ]
     },
     "av-quoting-automation-build-from-catalog-or-ai": {
@@ -1934,6 +1937,7 @@
         "After generating, a check lists things your attached brief mentions that the proposal does not cover, so you can add them before sending. This matters because briefs often bury requests that are easy to miss when quoting quickly, such as a confidence monitor, a recording feed or an extra setup day mentioned in passing.",
         "## How each path handles pricing",
         "On Build from catalog, each item you pick fills in at the price saved in your catalog. On Generate with AI, the AI is given your catalog with your prices and is instructed to use catalog items at their exact catalog price, adding a non-catalog item only when nothing fits, marked as estimated. Those items are listed on the review screen and again in the editor, where people allowed to change the catalog can add each one to it. Generated lines are linked back to the catalog item they came from, so cost prices and margin tracking carry over.",
+        "[IMAGE:/blog/av-quoting-automation-build-from-catalog-or-ai-app-catalog.jpg|The CueQuote equipment catalogue with audio, crew and lighting items, each saved with its default price, cost and margin]",
         "New AV companies can start with a catalog priced at CueQuote reference prices for their market. Each one is marked Reference price in the catalog and on proposal lines until you change it, so you can send a first proposal straight away and swap in your own rates as you go. Your client never sees the label.",
         "## Typing an item finds it on either path",
         "In any proposal, typing the start of an item's name brings up matching items from your catalog. Pick one and CueQuote fills in its name, description, unit, price and cost price, and links the line to that catalog item. If what you need is not there, keep typing and it becomes a custom line.",
@@ -1941,10 +1945,12 @@
         "Because both paths lean on the catalog, getting your rates in comes first. You can upload your price list as a spreadsheet, PDF, Word file or photo, or tick the option when you sign up. CueQuote picks out every item with its category, unit and price and shows you a draft to check. Nothing reaches the catalog until you confirm, and an item with the same name as an existing one updates its price.",
         "## Templates for packages you quote often",
         "Any proposal can be saved as a template, and a template can be used to start a new proposal directly, without AI. If you quote the same conference package or breakout room setup for a regular client, saving it once means the next quote starts from that template instead of a blank page.",
+        "[IMAGE:/blog/av-quoting-automation-build-from-catalog-or-ai-app-templates.jpg|Ready-made CueQuote quote templates for awards nights, conferences, gala dinners and trade fair stands, each able to start a new proposal]",
         "## Corrections that become rules",
         "CueQuote records the difference between what the AI wrote and what you actually sent. Repeated corrections become suggested rules, but a suggested rule does nothing on its own: it only affects future generations after an owner or admin approves it on the Learned rules page. Your team's habits can shape later drafts, but only once someone with authority has agreed.",
         "## Every line stays editable before you send",
         "Every job has its own venue, client budget and on-site constraints, so no quote should go out unchecked. Whichever way a proposal starts, it opens in the same full proposal editor, where you can change any line's name, description, category, quantity, days, line discount and unit price, add or delete lines and mark lines optional. Lines linked to your inventory warn you if you would be short of stock on the event days. The warning never blocks sending, so the decision to cross-hire or adjust the quote stays with you.",
+        "[IMAGE:/blog/av-quoting-automation-build-from-catalog-or-ai-app-proposal-editor.jpg|The CueQuote proposal editor with equipment grouped by category and quantity, days, discount and unit price editable on every line]",
         "## Where the AI usage limit applies",
         "On Starter, Pro and Business, the monthly limit counts AI generations only: generating a proposal, regenerating one, or generating a risk plan. Proposals built from the catalog or a template are free and unlimited on those plans. On the Free plan, every proposal counts, whichever way you build it.",
         "## Getting the most out of it",

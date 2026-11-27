@@ -85,8 +85,8 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/lib/blog-posts.ts src/messages/en.json src/messages/pl.json src/messages/de.json src/messages/fr.json src/messages/ar.json
-          if [ -n "$(git status --porcelain --untracked-files=no -- . ':!src/lib/blog-posts.ts' ':!src/messages')" ]; then
+          git add src/lib/blog-posts.ts src/messages/en.json src/messages/pl.json src/messages/de.json src/messages/fr.json src/messages/ar.json public/blog
+          if [ -n "$(git status --porcelain --untracked-files=no -- . ':!src/lib/blog-posts.ts' ':!src/messages' ':!public/blog')" ]; then
             echo "Unexpected changes outside the blog files; refusing to commit" >&2
             git status --short >&2
             exit 1
