@@ -147,6 +147,8 @@ export default async function BlogPostPage({
   // Insert inline CTA after ~40% of content
   const ctaInsertIndex = Math.floor(contentArray.length * 0.4);
 
+  const isTeam = post.author === 'team';
+  const authorName = isTeam ? t('teamAuthor', { defaultValue: 'CueQuote Team' }) : 'Sherif Abdalazeem';
   // Structured data — built from trusted static data (post titles/dates), not user input
   const structuredData = jsonLd([
     {
@@ -156,7 +158,9 @@ export default async function BlogPostPage({
       description: excerpt,
       datePublished: post.date,
       dateModified: post.date,
-      author: { '@type': 'Person', name: 'Sherif Abdalazeem', url: 'https://cuequote.com/about' },
+      author: isTeam
+        ? { '@type': 'Organization', name: 'CueQuote', url: 'https://cuequote.com' }
+        : { '@type': 'Person', name: 'Sherif Abdalazeem', url: 'https://cuequote.com/about' },
       publisher: { '@type': 'Organization', name: 'CueQuote', url: 'https://cuequote.com', logo: { '@type': 'ImageObject', url: 'https://cuequote.com/icon.png' } },
       mainEntityOfPage: { '@type': 'WebPage', '@id': `https://cuequote.com/blog/${slug}` },
       articleSection: post.category,
@@ -224,10 +228,10 @@ export default async function BlogPostPage({
               display: "flex", alignItems: "center", justifyContent: "center",
               color: "#fff", fontWeight: 700, fontSize: 16,
             }}>
-              SA
+              {isTeam ? 'CQ' : 'SA'}
             </div>
             <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)" }}>
-              <span style={{ color: "#fff", fontWeight: 600 }}>Sherif Abdalazeem</span>
+              <span style={{ color: "#fff", fontWeight: 600 }}>{authorName}</span>
               <br />
               <span style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
                 <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>

@@ -2,6 +2,8 @@ export interface BlogPostSummary {
   slug: string;
   category: string;
   date: string;
+  /** "team": written by the content team (agents), bylined CueQuote Team. Absent: Sherif. */
+  author?: "team";
 }
 
 /**
@@ -24,11 +26,13 @@ export const POSTS: BlogPostSummary[] = [
     slug: "av-quoting-automation-build-from-catalog-or-ai",
     category: "Product Updates",
     date: "2026-11-24",
+    author: "team",
   },
   {
     slug: "audio-visual-proposal-example-what-to-include",
     category: "Guides",
     date: "2026-11-26",
+    author: "team",
   },
   {
     slug: "how-to-correct-a-paid-invoice",

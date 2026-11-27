@@ -121,7 +121,7 @@ function insertPostsEntries(postsSource, posts) {
   const firstEntry = postsSource.indexOf('\n  {\n', start)
   if (firstEntry === -1) fail(`cannot find the first POSTS entry in ${POSTS_FILE}`)
   const block = posts
-    .map((p) => `  {\n    slug: ${JSON.stringify(p.slug)},\n    category: ${JSON.stringify(p.category)},\n    date: ${JSON.stringify(p.date)},\n  },`)
+    .map((p) => `  {\n    slug: ${JSON.stringify(p.slug)},\n    category: ${JSON.stringify(p.category)},\n    date: ${JSON.stringify(p.date)},\n    author: "team",\n  },`)
     .join('\n')
   return postsSource.slice(0, firstEntry + 1) + block + '\n' + postsSource.slice(firstEntry + 1)
 }
