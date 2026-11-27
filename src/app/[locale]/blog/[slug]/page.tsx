@@ -104,7 +104,27 @@ export default async function BlogPostPage({
   // Extract key takeaways. Glossary paragraphs start with "1. TERM: ..." — handle separately.
   const isGlossaryParagraph = (p: string) => /^\d+\.\s[A-Z]{2,}/.test(p);
 
-  const nonGlossaryParagraphs = contentArray.filter((p, i) => i % 2 === 0 && !isGlossaryParagraph(p) && !p.startsWith('[IMAGE:'));
+  // Content-team posts (blog-draft) structure the article with "## " headings and
+  // "- " list items. They render as real <h2> sections and <ul> lists; before
+  // 27 Nov both printed as plain paragraphs with the markers showing.
+  const isHeading = (p: string) => p.startsWith('## ');
+  const isListItem = (p: string) => p.startsWith('- ');
+  const isPlain = (p: string) => !isHeading(p) && !isListItem(p) && !p.startsWith('[IMAGE:') && !isGlossaryParagraph(p);
+  const usedIds = new Set<string>();
+  const headingIds = contentArray.map((p) => {
+    if (!isHeading(p)) return '';
+    const base = p.slice(3).toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-').slice(0, 60) || 'section';
+    let id = base;
+    for (let n = 2; usedIds.has(id); n++) id = `${base}-${n}`;
+    usedIds.add(id);
+    return id;
+  });
+  const toc = contentArray.map((p, i) => ({ text: p.slice(3), id: headingIds[i] })).filter((h) => h.id);
+
+  // Sectioned posts: one takeaway per section, its first paragraph. Older posts keep alternating paragraphs.
+  const nonGlossaryParagraphs = toc.length
+    ? contentArray.filter((p, i) => isPlain(p) && i > 0 && isHeading(contentArray[i - 1]))
+    : contentArray.filter((p, i) => i % 2 === 0 && !isGlossaryParagraph(p) && !p.startsWith('[IMAGE:'));
   const normalTakeaways = nonGlossaryParagraphs.slice(0, 5).map(p => {
     // A sentence ends at . ! ? followed by a space or the end, so a decimal
     // ("Version 1.57", "2.5 days") does not cut it off: the v1.57 post's first
@@ -145,7 +165,9 @@ export default async function BlogPostPage({
     .slice(0, 3);
 
   // Insert inline CTA after ~40% of content
-  const ctaInsertIndex = Math.floor(contentArray.length * 0.4);
+  // On a plain paragraph only, so it never lands between a heading and its section.
+  const ctaFrom = Math.floor(contentArray.length * 0.4);
+  const ctaInsertIndex = contentArray.findIndex((p, i) => i >= ctaFrom && isPlain(p));
 
   const isTeam = post.author === 'team';
   const authorName = isTeam ? t('teamAuthor', { defaultValue: 'CueQuote Team' }) : 'Sherif Abdalazeem';
@@ -255,7 +277,50 @@ export default async function BlogPostPage({
           display: "grid", gridTemplateColumns: "1fr 300px", gap: 60,
         }}>
           <div>
+            {toc.length >= 3 && (
+              <nav aria-label={t("tocTitle", { defaultValue: "In this article" })} className="blog-toc" style={{
+                background: "#f9fafb", border: "1px solid #e5e7eb", borderRadius: 12,
+                padding: "20px 24px", marginBottom: 40,
+              }}>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "#08172E", textTransform: "uppercase", letterSpacing: 0.6, marginBottom: 12 }}>
+                  {t("tocTitle", { defaultValue: "In this article" })}
+                </div>
+                <ol style={{ margin: 0, paddingLeft: 20, display: "grid", gap: 8 }}>
+                  {toc.map((h) => (
+                    <li key={h.id} style={{ fontSize: 15, lineHeight: 1.5, color: "#6b7280" }}>
+                      <a href={`#${h.id}`} style={{ color: "#374151", textDecoration: "none" }}>{h.text}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )}
             {contentArray.map((paragraph, i) => {
+              if (isHeading(paragraph)) {
+                return (
+                  <h2 key={i} id={headingIds[i]} className="blog-h2" style={{
+                    fontSize: 28, fontWeight: 700, color: "#08172E", lineHeight: 1.3,
+                    letterSpacing: -0.3, margin: "48px 0 16px", scrollMarginTop: 96,
+                  }}>
+                    {paragraph.slice(3)}
+                  </h2>
+                );
+              }
+
+              // Consecutive "- " entries form one list, rendered at its first item.
+              if (isListItem(paragraph)) {
+                if (i > 0 && isListItem(contentArray[i - 1])) return null;
+                const items: string[] = [];
+                for (let j = i; j < contentArray.length && isListItem(contentArray[j]); j++) items.push(contentArray[j].slice(2));
+                return (
+                  <ul key={i} className="blog-list" style={{ margin: "0 0 28px", paddingLeft: 24, display: "grid", gap: 10, listStyleType: "disc" }}>
+                    {items.map((item, j) => (
+                      <li key={j} style={{ fontSize: 17, color: "#374151", lineHeight: 1.7, paddingLeft: 4 }}
+                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(item) }} />
+                    ))}
+                  </ul>
+                );
+              }
+
               // Detect glossary paragraphs with numbered terms (e.g. "1. AMPLIFIER: ...")
               const isGlossary = /^\d+\.\s[A-Z]{2,}.*:\s/.test(paragraph);
 
@@ -520,7 +585,11 @@ export default async function BlogPostPage({
           section:first-of-type h1 { font-size: 28px !important; }
           section:first-of-type > div > p { font-size: 15px !important; }
           .related-grid { grid-template-columns: 1fr !important; }
+          .blog-h2 { font-size: 22px !important; margin: 36px 0 12px !important; }
+          .blog-toc { padding: 16px 18px !important; margin-bottom: 32px !important; }
         }
+        .blog-list li::marker { color: #10b981; }
+        .blog-toc a:hover { color: #10b981 !important; text-decoration: underline !important; }
       `}</style>
     </>
   );
