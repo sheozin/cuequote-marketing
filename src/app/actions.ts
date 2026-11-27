@@ -42,7 +42,14 @@ export async function subscribeEmail(
     if (error) {
       // Unique constraint violation = already subscribed
       if (error.code === "23505") {
-        return { success: true, message: "You're already subscribed!" };
+        // Signed up again after unsubscribing: reactivate (mig 495). A no-op
+        // for an address that is still active.
+        const { error: reErr } = await supabase.rpc("newsletter_resubscribe", { p_email: email });
+        if (reErr) {
+          console.error("[Subscribe Error]", reErr);
+          return { success: false, message: "Something went wrong. Please try again." };
+        }
+        return { success: true, message: "You're subscribed! We'll keep you in the loop." };
       }
       console.error("[Subscribe Error]", error);
       return { success: false, message: "Something went wrong. Please try again." };
